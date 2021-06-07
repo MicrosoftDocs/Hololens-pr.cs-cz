@@ -1,0 +1,152 @@
+### YamlMime:Landing
+title: Microsoft HoloLens
+summary: Microsoft HoloLens je první plně samostatný holografický počítač, na Windows 10. Se zavedením HoloLens 2 teď každé zařízení HoloLens poskytuje funkce připravené pro komerční správu, které jsou vylepšené spolehlivostí, zabezpečením a škálovatelností cloudových služeb a služeb AI od Microsoftu.
+metadata:
+  title: Microsoft HoloLens
+  description: Vstupní stránka pro Microsoft HoloLens.
+  ms.prod: hololens
+  ms.subservice: subservice
+  ms.topic: landing-page
+  author: mccoybot
+  ms.author: v-todmc
+  ms.date: 5/22/2020
+  ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
+  ms.openlocfilehash: 040e353d42c97aa6387e5611a3479464cf5ae2e8
+  ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 05/25/2021
+  ms.locfileid: "111377627"
+landingContent:
+- title: HoloLens – přehled
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: HoloLens 2 – přehled
+      url: hololens2-options.md
+    - text: Hardware HoloLens 2
+      url: hololens2-hardware.md
+    - text: Microsoft Mesh (Preview)
+      url: /mesh/overview
+    - text: Použití domova nabídka Start hybridní reality
+      url: holographic-home.md
+    - text: Vyhledání, instalace a odinstalace aplikací
+      url: holographic-store-apps.md
+    - text: Vylepšení vizuální kvality a komfortu
+      url: hololens-calibration.md
+    - text: Jak aktualizovat HoloLens
+      url: hololens-update-hololens.md
+- title: Průvodci nasazením
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Obvyklé scénáře nasazení
+      url: common-scenarios.md
+    - text: Škálování nasazení HoloLens 2 připojené ke cloudu s remote assistem
+      url: hololens2-cloud-connected-overview.md
+    - text: Firemní nasazení HoloLens 2 pomocí průvodců Dynamics 365
+      url: hololens2-corp-connected-overview.md
+    - text: Průvodce nasazením externích klientů
+      url: hololens2-deployment-guide.md
+    - text: Offline zabezpečené nasazení
+      url: hololens-common-scenarios-offline-secure.md
+- title: Příprava
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Nasazení HoloLens v komerčním prostředí
+      url: hololens-requirements.md
+    - text: Přehled zabezpečení
+      url: security-overview.md
+    - text: Licenční požadavky
+      url: hololens-licenses-requirements.md
+    - text: Aspekty prostředí HoloLens
+      url: hololens-environment-considerations.md
+    - text: Komerční funkce
+      url: hololens-commercial-features.md
+- title: Konfigurace
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Správa identity uživatele a přihlašování pro HoloLens
+      url: hololens-identity.md
+    - text: Konfigurace sítě pro HoloLens
+      url: hololens-commercial-infrastructure.md
+    - text: Připojení HoloLens k síti
+      url: hololens-network.md
+    - text: Správa koncových bodů připojení pro HoloLens
+      url: hololens-offline.md
+    - text: Konfigurace HoloLens pomocí zřizovací balíčky
+      url: hololens-provisioning.md
+    - text: Nastavení HoloLens jako veřejného terminálu
+      url: hololens-kiosk.md
+- title: Nasadit
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Registrace HoloLens v MDM
+      url: hololens-enroll-mdm.md
+    - text: Windows Autopilot pro HoloLens 2
+      url: hololens2-autopilot.md
+    - text: Přehled správy aplikací
+      url: app-deploy-overview.md
+    - text: Intune & Portál společnosti
+      url: app-deploy-intune.md
+    - text: Microsoft Store pro firmy
+      url: app-deploy-store-business.md
+    - text: Zřizovací balíček
+      url: app-deploy-provisioning-package.md
+- title: Průvodce údržbou a odstraňováním potíží
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Řešení potíží s HoloLens
+      url: hololens-troubleshooting.md
+    - text: Restartování, resetování nebo obnovení HoloLens 2
+      url: hololens-recovery.md
+    - text: Restartování, resetování nebo obnovení HoloLens (1. generace)
+      url: hololens1-recovery.md
+    - text: Známé problémy s HoloLens
+      url: hololens-known-issues.md
+    - text: Shromažďování a používání diagnostických informací ze zařízení HoloLens
+      url: hololens-diagnostic-logs.md
+    - text: Správa aktualizací HoloLens
+      url: hololens-updates.md
+- title: Poznámky k verzi & názory
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Poznámky k verzi HoloLens 2
+      url: hololens-release-notes.md
+    - text: Insider preview pro Microsoft HoloLens
+      url: hololens-insider.md
+    - text: Sdělte nám svůj názor
+      url: hololens-feedback.md
+- title: Další služby
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Dokumentace k Dynamics 365 Remote Assistu
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview
+    - text: Informace o Dynamics 365 Remote Assistu
+      url: https://docs.microsoft.com/learn/browse/?products=dynamics-remote-assist
+    - text: Průvodci Dynamics 365
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/guides/
+    - text: Microsoft Dynamics 365 Mixed Reality
+      url: https://docs.microsoft.com/dynamics365/mixed-reality/
+  - linkListType: how-to-guide
+    links:
+    - text: Co je hybridní realita?
+      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality
+    - text: Zahájení návrhu a vytváření prototypů
+      url: https://docs.microsoft.com/windows/mixed-reality/design
+    - text: Úvod do Mixed Reality aplikací
+      url: https://docs.microsoft.com/windows/mixed-reality/development?tabs=unity
+    - text: Cloud Services přehledu
+      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality-cloud-services#overview
+- title: Příručka s postupy
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Možnosti podpory a nápovědy pro HoloLens2
+      url: hololens2-support.md
