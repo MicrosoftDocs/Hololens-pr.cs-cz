@@ -1,7 +1,7 @@
 ---
-title: Přehled připojení HoloLens 2 ke cloudu s funkcí Remote Assist
-description: Naučte se registrovat zařízení HoloLens 2 přes cloudovou propojenou síť pomocí programu Vzdálená pomoc pro Dynamics 365.
-keywords: HoloLens, Správa, připojení k cloudu, Vzdálená pomoc, AAD, Azure AD, MDM, Správa mobilních zařízení
+title: Přehled HoloLens 2 připojeného ke cloudu s remote assistem
+description: Zjistěte, jak zaregistrovat zařízení HoloLens 2 přes síť připojenou ke cloudu pomocí Dynamics 365 Remote Assistu.
+keywords: HoloLens, management, cloud connected, Remote Assist, AAD, Azure AD, MDM, Mobile Správa zařízení
 author: evmill
 ms.author: v-evmill
 ms.reviewer: aboeger
@@ -14,72 +14,87 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 43fbcc3a841f6c3f15006f285188e55d22f10599
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: a44247b4afea747e4b75c974fcae344380909989
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111377536"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112923529"
 ---
-# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Průvodce nasazením – Cloud s připojením HoloLens 2 s funkcí Remote Assist – přehled
+# <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Průvodce nasazením – HoloLens 2 připojený ke cloudu se vzdáleným asistencí – přehled
 
-Tato příručka pomáhá odborníkům v oblasti IT plánovat a nasazovat zařízení Microsoft HoloLens 2 do své organizace s cílem zajistit, aby byla tato zařízení připojená k vaší organizaci pomocí programu Remote Assist služby Dynamics 365, který je připravený k použití. Mějte na paměti, že tato akce bude sloužit jako model nasazení pro účely konceptu do vaší organizace v rámci nejrůznějších případů použití HoloLens 2.
+Tato příručka pomůže IT specialistům plánovat a nasazovat Microsoft HoloLens 2 zařízení s Remote Assistem v organizaci. To bude sloužit jako model pro nasazení do vaší organizace v rámci různých případů použití HoloLens 2. Nastavení se podobá [scénáři A: Nasazení do zařízení s připojením ke cloudu.](https://docs.microsoft.com/hololens/common-scenarios#scenario-a) 
 
-V této příručce se dozvíte, jak zaregistrovat vaše zařízení do správy zařízení, použít licence podle potřeby a ověřit, jestli koncoví uživatelé můžou hned po nastavení zařízení hned používat vzdálenou pomoc. Pokud to chcete provést, přejdeme na důležité části infrastruktury potřebné k tomu, aby se daly nastavit a spustit – dosahování nasazení ve velkém měřítku s využitím HoloLens 2.
+V této příručce se budeme řídit tím, jak zaregistrovat zařízení do správy zařízení, jak podle potřeby použít licence a ověřit, že koncoví uživatelé mohou vzdálenou pomoc při nastavení zařízení okamžitě používat. Za tímto účelem si projdeme důležité části infrastruktury potřebné k nastavení a z provozu – k dosažení nasazení ve velkém měřítku pomocí HoloLens 2. V tomto průvodci se nebudou používat žádná další omezení ani konfigurace zařízení, ale doporučujeme vám tyto možnosti prozkoumat po dokončení.
 
-[![Scénář ](./images/deployment-guides-revised-scenario-a.png) připojení ke cloudu](./images/deployment-guides-revised-scenario-a.png#lightbox)
-## <a name="in-this-guide"></a>V této příručce
+## <a name="prerequisites"></a>Požadavky
 
-Tato příručka má konkrétní cíl nastavení vzdáleného asistence v rámci vaší organizace na zařízeních HoloLens. Pokryjeme Necessities potřebný k dosažení tohoto cíle. Aby se zajistilo zaměření na tento cíl, některá příprava a konfigurace se předem vybere, aby se optimalizoval pro toto nasazení, nebo aby se snížily položky potřebné ke konfiguraci. O těchto volbách budete informováni a můžete přizpůsobit nasazení na základě vašich obchodních potřeb.
+Aby bylo možné nasadit HoloLens 2, měla by být zavedena následující infrastruktura. Pokud ne, nastavení Azure a Intune je součástí tohoto průvodce:
 
-Toto nastavení se podobá [scénáři a: nasazení do cloudových připojení](https://docs.microsoft.com/hololens/common-scenarios#scenario-a), což je dobrá možnost pro spoustu nasazení konceptů, která budou zahrnovat:
+- Wi-Fi
+    - Sítě jsou obvykle otevřené pro internet a cloudové služby.
+- Azure Active Directory (Azure AD) Join s automatickou registrací MDM[(je potřeba předplatné Azure AD P1)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+- Správa MDM (Intune)
+    - Jedna nebo více aplikací se nasadí přes MDM.
+- Uživatelé se přihlašují pomocí vlastního podnikového účtu (Azure AD).
+    - Podporuje se jeden nebo více uživatelů na zařízení.
 
-- Wi-Fi sítě jsou obvykle plně otevřené pro Internet a cloudové služby.
-- Připojení Azure AD k automatické registraci MDM – spravovaná MDM (Intune)
-- Uživatelé se přihlásí pomocí vlastního podnikového účtu (Azure AD).
-  - Podporuje se jeden nebo víc uživatelů na zařízení.
-- Na základě specifických případů použití se aplikují různé úrovně konfigurací uzamčení zařízení, od úplného otevření do veřejného terminálu s jednou aplikací.
+:::image type="content" alt-text="Scénář připojení ke cloudu" source="./images/deployment-guides-revised-scenario-a.png" lightbox="./images/deployment-guides-revised-scenario-a.png":::
 
 
+## <a name="learn-about-remote-assist"></a>Další informace o vzdálené pomoci
 
-V této příručce se nepoužijí žádná další omezení zařízení ani konfigurace, ale doporučujeme vám, abyste tyto možnosti prozkoumali po dokončení.
-
-## <a name="learn-about-remote-assist"></a>Další informace o funkci Remote Assist
-
-Vzdálená pomoc umožňuje spolupráci a opravy, vzdálenou kontrolu a také sdílení a školení ve znalostní bázi. Propojením lidí s různými rolemi a umístěním se technik, který používá vzdálenou pomoc, může připojit se vzdáleným spolupracovníka v Microsoft Teams. Můžou kombinovat video, snímky obrazovky a poznámky a vyřešit problémy v reálném čase, i když&#39;t ve stejném umístění. Vzdálení spolupracovníci můžou vkládat referenční obrázky, schémata a další užitečné informace, které&#39;pracovník s fyzickým prostorem.
+Remote Assist umožňuje spolupráci s údržbou a opravami, vzdálenou kontrolu a také sdílení znalostí a školení. Propojením lidí v různých rolích a umístěních se technik pomocí vzdálené pomoci může spojit se vzdáleným spolupracovníkem v Microsoft Teams. Mohou kombinovat video, snímky obrazovky a poznámky k řešení problémů v reálném čase, i když&#39;nejsou na stejném místě. Vzdálení spolupracovníci mohou vkládat referenční obrázky, schémata&#39;další užitečné informace technikovi fyzický prostor, aby mohli při práci na HoloLensu bez rukou odkazovat na schéma.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d3YT8j0yYl0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="in-this-guide-you-will"></a>V této příručce budete:
+### <a name="remote-assist-licensing-and-requirements"></a>Licencování a požadavky služby Remote Assist
 
-Systém
+- Účet Azure AD (vyžadované pro nákup předplatného a přiřazení licencí)
+- [Předplatné Remote Assistu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist) (nebo [zkušební verze Remote Assistu)](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/try-remote-assist)
+    
+#### <a name="dynamics-365-remote-assist-user"></a>Uživatel Dynamics 365 Remote Assistu
+
+- Licence Remote Assistu
+- Připojení k síti
+
+#### <a name="microsoft-teams-user"></a>Uživatel Microsoft Teams
+
+- Microsoft Teams nebo [Teams Freemium](https://products.office.com/microsoft-teams/free).
+- Připojení k síti
+
+Pokud plánujete implementaci tohoto scénáře [napříč tenanty,](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)možná budete potřebovat licenci Information Barriers. Informace [o tom,](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) jestli se vyžaduje licence Information Barrier, najdete v tomto článku.
+
+## <a name="in-this-guide-you-will"></a>V této příručce:
+
+Připravit:
 
 > [!div class="checklist"]
 > - [Seznamte se se základy infrastruktury pro zařízení HoloLens 2.](hololens2-cloud-connected-prepare.md#infrastructure-essentials)
-> - [Přečtěte si další informace o službě Azure AD a nastavte ji, pokud ji&#39;t.](hololens2-cloud-connected-prepare.md#azure-active-directory)
+> - [Přečtěte si další informace o Službě Azure AD a nastavte ji,&#39;ji nemáte.](hololens2-cloud-connected-prepare.md#azure-active-directory)
 > - [Přečtěte si o správě identit a o tom, jak nejlépe nastavit účty Azure AD.](hololens2-cloud-connected-prepare.md#identity-management)
-> - [Přečtěte si další informace o MDM a nastavte Intune, pokud&#39;t už máte připravený.](hololens2-cloud-connected-prepare.md#mobile-device-management)
-> - [Seznamte se s požadavky na síť pro vzdálenou pomoc.](hololens2-cloud-connected-prepare.md#network)
-> - [Volitelně: připojení k prostředkům organizace pomocí sítě VPN](/hololens2-cloud-connected-prepare.md#optional-connect-your-hololens-to-vpn)
+> - [Přečtěte si další informace o MDM a nastavte intune, pokud&#39;ještě nemáte připravenou.](hololens2-cloud-connected-prepare.md#mobile-device-management)
+> - [Seznamte se s požadavky funkce Remote Assist na síť.](hololens2-cloud-connected-prepare.md#network)
+> - [Volitelně: Síť VPN pro připojení k prostředkům organizace](hololens2-cloud-connected-prepare.md#optional-connect-your-hololens-to-vpn)
 
-Konfigurace
+Konfigurace:
 
 > [!div class="checklist"]
-> - [Vytváření uživatelů a skupin.](hololens2-cloud-connected-configure.md#azure-users-and-groups)
-> - [Jak nastavit automatickou registraci v rámci služby Azure AD.](hololens2-cloud-connected-configure.md#auto-enrollment-on-hololens-2)
-> - [Jak přiřadit licence k aplikacím.](hololens2-cloud-connected-configure.md#application-licenses)
+> - [Vytvoření uživatelů a skupin](hololens2-cloud-connected-configure.md#azure-users-and-groups)
+> - [Jak nastavit automatickou registraci v rámci Azure AD](hololens2-cloud-connected-configure.md#auto-enrollment-on-hololens-2)
+> - [Postup přiřazení licencí aplikace](hololens2-cloud-connected-configure.md#application-licenses)
 
 Nasazení:
 
 > [!div class="checklist"]
-> - [Nastavte svůj HoloLens 2 a ověřte registraci.](hololens2-cloud-connected-deploy.md#enrollment-validation)
-> - [Ověřte, že můžete provést volání vzdáleného asistence.](hololens2-cloud-connected-deploy.md#remote-assist-call-validation)
+> - [Nastavte holoLens 2 a ověřte registraci.](hololens2-cloud-connected-deploy.md#enrollment-validation)
+> - [Ověřte, že můžete provést volání vzdálené pomoci.](hololens2-cloud-connected-deploy.md#remote-assist-call-validation)
 
-Vést
+Udržovat:
 
 > [!div class="checklist"]
-> - [Jak aktualizovat vzdálenou pomoc pomocí aplikace Microsoft Store.](hololens2-cloud-connected-maintain.md#updates)
-> - [Vytváří se plán podpory.](hololens2-cloud-connected-maintain.md#support-plan)
+> - [Jak aktualizovat remote assist pomocí Microsoft Store aplikace.](hololens2-cloud-connected-maintain.md#updates)
+> - [Vytvoření plánu podpory](hololens2-cloud-connected-maintain.md#support-plan)
 > - [Plán vývoje.](hololens2-cloud-connected-maintain.md#development-plan)
 
 ## <a name="next-step"></a>Další krok

@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f8dcc8619715871db0aaba306dd19d252d73ac47
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: fbef357053900f6495cb59f52cba8669f0d0a3db
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111377714"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924413"
 ---
 # <a name="manage-user-identity-and-sign-in-for-hololens"></a>Správa identity a přihlášení uživatelů pro HoloLens
 
@@ -36,20 +36,22 @@ HoloLens podporuje několik druhů identit uživatelů. K přihlášení můžet
 
 | Typ identity | Účty na zařízení | Možnosti ověřování |
 | --- | --- | --- |
-| [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/) (vyžaduje Azure AD Premium) | 64 | <ul><li>Poskytovatel přihlašovacích údajů webu Azure</li><li>Aplikace Azure Authenticator</li><li>Biometrika (IRIS) &ndash; HoloLens 2 pouze<sup>1</sup> </li><li>PIN kód &ndash; volitelný pro HoloLens (1. generace), vyžadovaný pro HoloLens 2</li><li>Heslo</li></ul> |
+| [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/)<sup>1</sup>  | 64 | <ul><li>Poskytovatel přihlašovacích údajů webu Azure</li><li>Aplikace Azure Authenticator</li><li>Biometrika (IRIS) &ndash; HoloLens 2 pouze<sup>2</sup> </li><li>PIN kód &ndash; volitelný pro HoloLens (1. generace), vyžadovaný pro HoloLens 2</li><li>Heslo</li></ul> |
 | [Účet Microsoft (MSA)](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>Biometrika (IRIS) – &ndash; pouze HoloLens 2</li><li>PIN kód &ndash; volitelný pro HoloLens (1. generace), vyžadovaný pro HoloLens 2</li><li>Heslo</li></ul> |
 | [Místní účet](https://docs.microsoft.com/windows/security/identity-protection/access-control/local-accounts) | 1 | Heslo |
 
 Účty propojené s cloudem (Azure AD a MSA) nabízejí více funkcí, protože můžou používat služby Azure.  
+> [!IMPORTANT]
+> 1 Azure AD Premium se k přihlášení k zařízení nevyžaduje. Vyžaduje se ale pro jiné funkce cloudového nasazení s nízkým dotykem, jako je automatické registrace a autopilot.
 
 > [!NOTE]
-> 1 – zatímco zařízení HoloLens 2 může podporovat až 64 účtů Azure AD, v ověřování Iris se můžou zaregistrovat jenom 10 těchto účtů. To je zarovnáno s dalšími [možnostmi biometrik ověřování pro Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer).
+> 2 – zatímco zařízení HoloLens 2 může podporovat až 64 účtů Azure AD, v ověřování Iris se můžou zaregistrovat jenom 10 těchto účtů. To je zarovnáno s dalšími [možnostmi biometrik ověřování pro Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer).
 
 ## <a name="setting-up-users"></a>Nastavení uživatelů
 
 Nejběžnější způsob, jak nastavit nového uživatele, je během předběžného prostředí (OOBE) HoloLens. Během instalace se zobrazí výzva pro uživatele, aby se přihlásili pomocí účtu, který chtějí na zařízení použít. Tento účet může být příjemcem účet Microsoft nebo podnikovým účtem, který je nakonfigurovaný v Azure. Viz nastavení [HoloLens (1. generace)](hololens1-start.md) nebo [HoloLens 2](hololens2-start.md).
 
-Stejně jako Windows na jiných zařízeních se při přihlášení během instalace vytvoří na zařízení profil uživatele. Profil uživatele ukládá aplikace a data. Stejný účet taky poskytuje jednotné přihlašování pro aplikace, jako je Edge nebo Skype, pomocí rozhraní API Správce účtů systému Windows.  
+Stejně jako Windows na jiných zařízeních se při přihlášení během instalace vytvoří na zařízení profil uživatele. Profil uživatele ukládá aplikace a data. Stejný účet také poskytuje jednotné přihlašování pro aplikace, jako je například Edge nebo Microsoft Store, pomocí rozhraní API Správce účtů systému Windows.  
 
 Pokud k přihlášení k HoloLens použijete podnikový nebo organizační účet, zaregistruje se HoloLens v infrastruktuře IT organizace. Tato registrace umožňuje správci IT nakonfigurovat správu mobilních zařízení (MDM), aby odesílala zásady skupiny na HoloLens.
 

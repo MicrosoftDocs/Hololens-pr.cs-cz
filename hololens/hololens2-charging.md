@@ -1,5 +1,5 @@
 ---
-title: Baterie a dobíjení
+title: HoloLens 2 Battery and Charging
 description: Jak naúčtovat zařízení HoloLens a jak používat externí balíčky baterie
 ms.assetid: E0AB903E-454E-46F6-AB25-4DFA0A475B0C
 ms.prod: hololens
@@ -12,40 +12,56 @@ ms.date: 05/14/2021
 manager: evmill
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 15ecc698a515987857f556fed97d74f861cd6b20
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: acbc3e52240f420d384fa372684966d7220d53c6
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379336"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112923580"
 ---
-# <a name="battery-and-charging"></a>Baterie a dobíjení
+# <a name="hololens-2-battery-and-charging"></a>HoloLens 2 Battery and Charging
 
 Tato stránka nabízí podrobnosti o účtování HoloLens 2 a používání externích sad baterie.
 
-## <a name="included-charger"></a>Included Neschádka
+## <a name="charging-the-device"></a>Účtování zařízení
 
-Zařízení, které je součástí HoloLens 2, poskytuje až 9V @ 2A (18 W). Pokud je to možné, důrazně doporučujeme účtovat pomocí zahrnutých poplatků.  
-
-## <a name="specifications"></a>Specifikace
-
-HoloLens 2 se může naúčtovat pomocí [zdrojů NAPÁJENÍ USB](https://www.usb.org/usb-charger-pd) o výkonu až 27 wattů. Pokud zdroj dokáže dodat alespoň 10 wattů, může být doba provozu HoloLens delší (u některých úloh potenciálně po neomezenou dobu). 
+Použijte kabel USB typu [C,](https://www.microsoft.com/en-us/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5?rtc=1) který se dodá s HoloLens 2, protože to je nejlepší způsob, jak zařízení naúčtovat. Zařízení, které je součástí HoloLens 2, poskytuje až 9V @ 2A (18 W). Zařízení HoloLens 2 mohou společně se dodanou zdi naplno nabít za méně než 65 minut, když je zařízení v pohotovostním režimu. Pokud tyto příslušenství není k dispozici, ujistěte se, že dostupné příslušenství podporuje alespoň 15 W energie.
 
 > [!NOTE]
-> Použitím usb-A-C a usb-c se tento poplatek omezí na 7,5 W. Doba provozu bude stále delší, ale ne tak dlouho, dokud se USB-C až C bude používat.
+> Pokud je to možné, nepoužívejte počítač k nabílení zařízení přes USB, což je pomalé.
 
-Když je HoloLens v pohotovostním režimu, stačí 18 wattů k dosažení maximální frekvence nabíjet interní baterie. Když se HoloLens používá, může se snížit sazba za poplatky, protože HoloLens upřednostňuje provoz před účtováním.
+## <a name="checking-the-battery-charge-level"></a>Kontrola úrovně baterie
+Pokud je zařízení správně spuštěné a spuštěné, existují tři způsoby, jak zkontrolovat úroveň baterie:
+
+- V hlavní nabídce uživatelského rozhraní zařízení HoloLens.
+- Led diodu si prohlédněte blízko tlačítka napájení (při 40procentní poplatek byste měli vidět alespoň dvě plné LED diody).
+    - Když se zařízení nabíjí, indikátor baterie se rozsvítí, aby indikuje aktuální úroveň poplatku.  Poslední světlo postupně zeslábne a bude indikovat aktivní zpoplatnění.
+    - Když je holoLens v systému, indikátor baterie zobrazí stav baterie v pěti přírůstcích.
+    - Když je jen jedna z pěti světel rozsvícená, je úroveň baterie nižší než 20 procent.
+    - Pokud je úroveň baterie kriticky nízká a pokusíte se zařízení zapnout, jedno světlo krátce blikne a pak vypadne.
+- Na hostitelském počítači otevřete **Průzkumník souborů** vyhledejte zařízení HoloLens 2 na levé straně pod **položkou Tento počítač.** Klikněte pravým tlačítkem na zařízení a vyberte **Vlastnosti**. V dialogovém okně se zobrazí úroveň baterie.
+
+   ![Obrazovka vlastností HoloLens 2 zobrazuje úroveň změny baterie](images/ResetRecovery2.png)
+
+## <a name="alternative-charging-specifications"></a>Alternativní specifikace poplatků
+
+HoloLens 2 se může účtovat pomocí [zdrojů NAPÁJENÍ USB](https://www.usb.org/usb-charger-pd) do 27 wattů. Pokud zdroj dokáže dodat alespoň 10 wattů, může být doba provozu HoloLens delší (u některých úloh potenciálně po neomezenou dobu). 
+
+> [!NOTE]
+> Použitím usb-A-C usb-c se poplatek omezí na 7,5 W. Doba provozu bude stále delší, ale ne tak dlouho, dokud se USB-C až C bude používat.
+
+Když je HoloLens v pohotovostním režimu, stačí 18 wattů k dosažení maximální frekvence nabíjet interní baterie. Když se HoloLens používá, může být sazba za poplatek snížená, protože HoloLens upřednostňuje provoz před účtováním.
 
 > [!IMPORTANT]
-> Doporučuje se, aby se HoloLens 2 účtuje minimálně při 5V/1,5A. Neměly by se používat adaptéry, které dodávají alespoň 5V/1,5A. 
+> Doporučuje se, aby se HoloLens 2 účtuje minimálně při 5V/1,5A. Neměly by se používat sítě, které dodávají alespoň 5V/1,5A. 
 
-## <a name="external-battery-packs"></a>Externí sady baterie
+### <a name="external-battery-packs"></a>Externí sady baterie
 
 Sady baterie, které splňují výše uvedené specifikace, je možné použít s HoloLens 2. Všimněte si ale, že některé baterie USB-C se dobíjejí a poskytují napájení prostřednictvím stejného portu USB-C. Je důležité, aby tyto sady baterie implementují [TRY. SRC,](https://usb.org/document-library/usb-type-cr-cable-and-connector-specification-revision-20) aby se zajistilo, že místo poplatků z ní účtují HoloLens. 
 
-## <a name="managing-heat"></a>Správa heat služby
+### <a name="managing-heat"></a>Správa heat služby
 
-Stejně jako u jakéhokoli zařízení i při účtování HoloLens generuje teplo. Čím je poplatek rychlejší, tím více se generuje teplo. Při spuštění poplatku na nižší úrovni baterie se navíc vygeneruje více teplo než při spuštění, když je baterie většinou plná. Zákazníci, kteří potřebují provozovat HoloLens po delší dobu v horkých prostředích, mohou používat následující techniky:
+Stejně jako u jakéhokoli zařízení i při účtování HoloLens generuje teplo. Čím je poplatek rychlejší, tím více se generuje teplo. Při spuštění poplatek na nižší úrovni baterie se navíc vygeneruje větší teplo než při spuštění, když je baterie převážně plná. Zákazníci, kteří potřebují provozovat HoloLens po delší dobu v horkých prostředích, mohou používat následující techniky:
 
 - HoloLens 2 můžete připojit k externímu zdroji napájení i v případě, že je interní baterie plně nabitá.
 - Při vyčerpání externí baterie bude HoloLens pokračovat v práci s interním bateriem.    

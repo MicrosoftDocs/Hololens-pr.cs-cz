@@ -14,16 +14,16 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 067917396631f9a89a50b13ef1b7dcca8b631f52
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 21132ed5d1e84d92a877747ac9a4c090b177ca08
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377597"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924566"
 ---
 # <a name="prepare---cloud-connected-guide"></a>Příprava – Průvodce připojeným ke cloudu
 
-Na konci tohoto článku nastavíte Azure AD, MDM a lépe pochopíte použití účtů Azure AD a požadavků na síť. Tato část průvodce vám a vaší organizaci pomůže připravit se na nasazení HoloLens 2 do cloudu a použití Dynamics 365 Remote Assistu. Projdeme si důležitost jednotlivých částí infrastruktury a také poskytne odkazy na příručky, které vám pomůžou tyto části podle potřeby nastavit.
+Na konci tohoto článku nastavíte Azure AD, MDM a lépe pochopíte použití účtů Azure AD a požadavků na síť. Tato část průvodce vám a vaší organizaci pomůže připravit se na nasazení HoloLens 2 do cloudu a použití Dynamics 365 Remote Assistu. Projdeme si význam jednotlivých částí infrastruktury a také poskytne odkazy na příručky, které vám pomůžou tyto části podle potřeby nastavit.
 
 ## <a name="infrastructure-essentials"></a>Základy infrastruktury
 
@@ -34,7 +34,7 @@ Pro osobní i firemní nasazení je systém MDM základní infrastrukturou, kter
 Azure AD je cloudová adresářová služba, která poskytuje správu identit a přístupu. Organizace, které používají systém Microsoft Office 365 nebo Intune, už používají Azure AD se třemi edicemi: Free, Premium P1 a Premium P2 (viz edice [Azure Active Directory).](https://azure.microsoft.com/documentation/articles/active-directory-editions) Všechny edice podporují registraci zařízení v Azure AD, ale k povolení automatické registrace MDM, kterou budeme později používat v této příručce, se vyžaduje Premium P1.
 
 > [!IMPORTANT]
-> Je nezbytné mít základní Azure Active Directory protože zařízení HoloLens nepodporují připojení k místní službě AD. Pokud ještě&#39;nemáte nastavený Azure Active Directory postupujte podle pokynů na tomto odkazu, abyste začali a vytvořili nového [tenanta](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)v Azure Active Directory .
+> Je nezbytné mít základní Azure Active Directory protože zařízení HoloLens nepodporují připojení k místní službě AD. Pokud ještě&#39;nemáte nastavený Azure Active Directory, přejděte do části Vytvoření nového [tenanta](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)v Azure Active Directory .
 
 ## <a name="identity-management"></a>Správa identit
 
@@ -44,14 +44,14 @@ V této příručce jsme zvolili, že pro použitou [identitu](https://docs.micr
 
 - Zaměstnanci používají svůj účet Azure AD k registraci zařízení v Azure AD&#39;jeho automatické registraci v řešení MDM organizace (Azure AD + MDM – vyžaduje Azure AD Premium).
 - Účty Azure AD podporují [jednotné přihlašování.](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on) Když se uživatel přihlásí ke vzdálenému pomoci, rozpozná se jeho identita od přihlášené uživatele Azure AD a uživatel se přihlásí do aplikace, aby se zjednodušil.
-- Účty Azure AD mají další [možnosti ověřování](https://docs.microsoft.com/hololens/hololens-identity) prostřednictvím [Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification). Kromě přihlášení Iris se uživatelé mohou přihlašovat z jiného zařízení nebo používat klíče zabezpečení FIDO.
+- Účty Azure AD mají další [možnosti ověřování](https://docs.microsoft.com/hololens/hololens-identity) prostřednictvím [Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification). Kromě Přihlášení Iris se uživatelé mohou přihlašovat z jiného zařízení nebo používat klíče zabezpečení FIDO.
 
 ### <a name="mobile-device-management"></a>Správa mobilních zařízení
 
 Microsoft [Intune](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune), součást Enterprise Mobility + Security, je cloudový systém MDM, který spravuje zařízení připojená k vašemu tenantovi. Stejně jako Office 365 používá Intune ke správě identit Azure AD, takže zaměstnanci používají stejné přihlašovací údaje k registraci zařízení v Intune, která používají pro přihlášení k Office 365. Intune také podporuje zařízení s jinými operačními systémy, jako je iOS a Android, a poskytuje tak kompletní řešení MDM. Pro účely této příručky se zaměříme&#39;intune pro povolení škálování cloudového nasazení pomocí HoloLens 2.
 
 > [!IMPORTANT]
-> Je nezbytné mít Mobile Správa zařízení. Pokud ho ještě&#39;, postupujte podle pokynů v této příručce a [v příručce Začínáme s Intune.](https://docs.microsoft.com/mem/intune/fundamentals/free-trial-sign-up)
+> Je nezbytné mít Mobile Správa zařízení. Pokud ho ještě&#39;, postupujte podle této příručky a [začínáme s Intune.](https://docs.microsoft.com/mem/intune/fundamentals/free-trial-sign-up)
 
 > [!NOTE]
 > Několik systémů MDM podporuje Windows 10 většina podporuje scénáře nasazení osobních a firemních zařízení. Mezi poskytovatele MDM, kteří Windows 10 Holographic v současné době patří: AirWatch, MobileIron a další. Většina špičkových dodavatelů MDM už integraci s Azure AD podporuje. Dodavatele MDM, kteří podporují Azure AD, najdete v [Azure Marketplace](https://azure.microsoft.com/marketplace/).
@@ -73,7 +73,7 @@ Další informace:
 
 ### <a name="optional-connect-your-hololens-to-vpn"></a>Volitelné: Připojení HoloLens k síti VPN
 
-Zařízení připojená k této příručce se budou připojovat k síti přes externí cloudovou síť. Je možné, že pro přístup k prostředkům společnosti&#39;budete muset připojit zařízení přes síť VPN. Existuje několik různých způsobů připojení zařízení k síti VPN, kde se koncový uživatel může připojit přes uživatelské rozhraní zařízení, nebo zařízení lze spravovat a přijímat profil VPN z PPKG nebo MDM. Informace o nastavení sítě VPN&#39;, které tento článek nepokryje, takže pokud chcete získat další informace o různých protokolech VPN nebo způsobech správy sítě VPN&#39;, přečtěte si tyto příručky o [HoloLens](https://docs.microsoft.com/hololens/hololens-network#vpn) a VPN.
+Zařízení připojená k této příručce se budou připojovat k síti přes externí cloudovou síť. Je možné, že pro přístup k prostředkům společnosti&#39;budete muset připojit zařízení přes síť VPN. Existuje několik různých způsobů připojení zařízení k síti VPN, kde se koncový uživatel může připojit přes uživatelské rozhraní zařízení, nebo zařízení lze spravovat a přijímat profil VPN z PPKG nebo MDM. Informace o nastavení sítě VPN&#39;v tomto článku nepokryté, takže pokud se chcete dozvědět více o různých protokolech VPN nebo způsobech správy sítě VPN&#39;, přečtěte si tyto příručky o [HoloLens](https://docs.microsoft.com/hololens/hololens-network#vpn) a VPN.
 
 ## <a name="next-step"></a>Další krok
 

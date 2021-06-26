@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9a1d9eaccb212474f47fd277c77fb41784f9ddc5
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 22b3dad817260175bccdb89faac0bbae7b210038
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379183"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924430"
 ---
 # <a name="get-your-hololens-2-ready-to-use"></a>Získejte svůj HoloLens 2 připravený k použití
 
@@ -34,7 +34,7 @@ Rychlost nabíjení a rychlost se můžou lišit v závislosti na prostředí, v
 - Pokud je zapnutá jenom jedna z pěti světel, úroveň baterie je nižší než 20 procent.
 - Pokud je úroveň baterie kriticky nízká a pokusíte se zařízení zapnout, bude se krátce rozsvítit v jednom světle a pak se vrátí.
 
-Pokud potřebujete další informace, [můžete si přečíst úplné podrobnosti o zpoplatnění zařízení](hololens-recovery.md#charge-the-device) . 
+Pokud potřebujete další informace, [můžete si přečíst úplné podrobnosti o zpoplatnění zařízení](hololens2-charging.md#charging-the-device) . 
 
 ## <a name="adjust-fit"></a>Přizpůsobit
 
@@ -98,31 +98,31 @@ Nejste si jistí, jak indikátory na vaší funkci HoloLens znamenají? Chcete z
 
 ### <a name="sleep-behavior"></a>Chování režimu spánku
 
-| Stav zařízení | Akce | HoloLens 2 to provede |
+| Stav zařízení | Akce | HoloLens 2 to bude |
 | - | - | - |
-| ON | Stisknutí jednoho tlačítka napájení | Zařízení přejde do režimu spánku a vypne všechna indikátory indikátorů. |
-| ON | Žádný přesun na 3 minuty | Přechod zařízení do režimu spánku a vypnutí všech indikátorů indikátorů |
-| SPAT | Stisknutí jednoho tlačítka napájení | Zařízení přejde na ZAPNUTo a zapne indikátor světla. |
+| ON | Stisknutí jediného tlačítka napájení | Přechod zařízení do režimu SPÁNKU a vypnutí všech indikátorů |
+| ON | Žádný pohyb po dobu 3 minut | Přechod zařízení do režimu SPÁNKU a vypnutí všech indikátorů |
+| Spát | Jednosměnné tlačítko napájení – stisknutí | Přechody zařízení na on (Zapíná) a zapíná indikátory |
 
-### <a name="lights-to-indicate-problems"></a>Světla indikující problémy
+### <a name="lights-to-indicate-problems"></a>Indikátory značí problémy
 
-| Když to uděláte, | Tato světla | To znamená |
+| Když to | To dělají světla. | To znamená, že |
 | - | - | - |
-| Stisknete tlačítko napájení. | Jedno světlo se potěší pětkrát a pak se vypne. | Baterie HoloLens je kriticky nízká. Naúčtujete HoloLens. |
-| Stisknete tlačítko napájení. | Všechna pět světel za špičku a potom vypnout. |  HoloLens nejde správně spustit a je v chybovém stavu. [Přeinstalujte operační systém](hololens-recovery.md) a obnovte své zařízení. |
-| Stisknete tlačítko napájení. | Indikátory 1., 3 a 5 se pohromadě blikají. |  HoloLens může mít selhání hardwaru. Obraťte se na [podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb). |
+| Stisknete tlačítko Napájení. | Jedno světlo pětkrát blikne a pak se vypne. | Baterie HoloLens je kriticky nízká. Poplatek za HoloLens |
+| Stisknete tlačítko Napájení. | Všech pět světel pětkrát blikne a pak se vypne. |  HoloLens se nemůže správně spustit a je v chybovém stavu. [Přeinstalujte operační systém a](hololens-recovery.md) obnovte zařízení. |
+| Stisknete tlačítko Napájení. | 1., 3. a 5. světla nepřetržitě blikají dohromady. |  HoloLens může mít selhání hardwaru. Kontaktujte [podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb). |
 
-## <a name="safety-and-comfort"></a>Bezpečnost a pohodlí
+## <a name="safety-and-comfort"></a>Zabezpečení a komfort
 
 ### <a name="use-hololens-in-safe-surroundings"></a>Použití HoloLens v bezpečném okolí
 
-Využijte HoloLens v bezpečném prostoru, bez překážek a Trip nebezpečí. Nepoužívejte ji, pokud potřebujete jasné pole zobrazení nebo nemůžete potvrdit plnou pozornost, například když pracujete na vozidle nebo máte jiné potenciálně nebezpečné aktivity.
+HoloLens používejte v bezpečném prostoru bez překážek a nebezpečí zahlcených. Nepoužívejte ho, když potřebujete jasné zorné pole nebo nemůžete věnovat plnou pozornost, například při provozu vozidla nebo při jiných potenciálně nebezpečných aktivitách.
 
-### <a name="stay-comfortable"></a>Buďte pohodlné
+### <a name="stay-comfortable"></a>Zůstaňte v dobrém pohodlí
 
-Ponechte si několik prvních relací s HoloLens a ujistěte se, že se přeruší. Pokud budete mít možnost nepohodlí, zastavte a počkejte, dokud nebudete lepší. To může zahrnovat dočasné nálady nausea, nemoci, dizziness, reorientation, starostí, únavy, očí nebo suchého oči.
+Udržujte prvních pár relací s HoloLens krátkými a nezapomeňte si pohovovat. Pokud se s tím pocítíte, zastavte se a odpočíváte, dokud se nebude cítit lépe. To může zahrnovat dočasné záchudky migrovat, pohyb, nehybnost, deorientaci, únavu, únavu, zatěžování očí nebo suché oči.
 
-Další informace najdete v tématu [Upozornění a pokyny pro zabezpečení produktu](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions).
+Viz [bezpečnostní upozornění a pokyny k produktu.](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions)
 
 > [!div class="nextstepaction"]
-> [Spuštění a konfigurace HoloLens 2](hololens2-start.md)
+> [Nastavení HoloLens 2](hololens2-start.md)

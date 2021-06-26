@@ -14,12 +14,12 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: dfa3096f40dab02357409b05c1fc4c0d44a46a6d
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: dc5e6a731fb02adab9ef8223313cac52710b6272
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379184"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112923495"
 ---
 # <a name="compare-hololens-2-options"></a>Porovnání možností HoloLens 2
 
@@ -45,7 +45,7 @@ Ať už jste [IT](https://www.microsoft.com/hololens/apps) profesionál [a](http
 
 - <sup>1</sup> – Zahrnuje kredit Azure ve výši 500 USD a 3měsíční zkušební verze pro Unity Pro a plug-in Pixyz.
 - <sup>2</sup> – Dostávat náhradní zařízení přes noc nebo zrychlit expedici (rychlejší z dostupných možností) před tím, než Microsoft obdrží vadné zařízení.
-- <sup>3</sup> – Pokud máte dotazy k záruce, podpoře a certifikaci edice Trimble XR10 s HoloLens 2, kontaktujte [společnost Trimble.](https://fieldtech.trimble.com/en/contact-support)
+- <sup>3</sup> – V případě záruky, podpory a certifikace edice Trimble XR10 s HoloLens 2 se obraťte na [společnost Trimble.](https://fieldtech.trimble.com/en/contact-support)
 
 ## <a name="countries-where-hololens-2-is-available"></a>Země, kde je holoLens 2 k dispozici
 
@@ -87,10 +87,10 @@ Prozkoumejte tato další řešení vytvořená pro zařízení hybridní realit
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokud chcete začít, podívejte se na přehled [základního využití pro](hololens2-setup.md) koncové uživatele zařízení.
+Informace o koncových uživatelích zařízení [najdete v tématu získejte HoloLens 2 připravený k](hololens2-setup.md) použití.
 
 > [!div class="nextstepaction"]
-> [Přehled základního využití](hololens2-setup.md)
+> [Připravte HoloLens 2 k použití.](hololens2-setup.md)
 
 Pro správce IT nasazení zařízení do vaší organizace odemkne výkonná prostředí hybridní reality. Seznamte se s požadavky a scénáři nasazení HoloLens 2 v celé řadě konfigurací IT infrastruktury.
 

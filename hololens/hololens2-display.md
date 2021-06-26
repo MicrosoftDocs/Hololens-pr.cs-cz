@@ -1,101 +1,102 @@
 ---
-title: HoloLens 2 Displays
-description: Zobrazí se očekávání pro HoloLens 2. Pokyny ke konfiguraci zobrazení pro zajištění nejlepší kvality obrázků
+title: Řešení potíží s displejem HoloLens 2
+description: Zobrazí se očekávání pro HoloLens 2. Pokyny pro konfiguraci displeje pro nejlepší kvalitu obrazu.
 author: BrandonBray
 ms.author: branbray
 ms.date: 8/13/2020
 ms.topic: article
-keywords: display, utěšování, komfort, vizuály, kvalita, IPD
+keywords: zobrazení, kalibrace, pohodlí, vizuály, kvalita, IPD
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 71dff00ff75feea4408979d2ce69fb14bf9bf3b7
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 96bacd79d559bc0adcd42665c4a8b4af856b58b0
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379305"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112923614"
 ---
-# <a name="hololens-2-display"></a>HoloLens 2 Display
+# <a name="hololens-2-display-troubleshooting"></a>Řešení potíží s displejem HoloLens 2
 
-Displej HoloLens 2 je kombinací vlnovek a projektorů. Uživatelé při používání náhlavní soupravy prohledali vlnovkou ( objektivy uvnitř visoru). Projektory jsou uvnitř skříně nad brow. HoloLens 2 používá k osvětlení displeje žárovku.
+## <a name="overview"></a>Přehled
+Displej HoloLens 2 je kombinací waveguides a Light projektorů. Uživatelé procházejí waveguides – rozptylová skla v rámci hypervisoru – při používání náhlavní soupravy. Nejsvětlejší projektory jsou uvnitř skříně nad prohlížeč. HoloLens 2 používá k osvětlení displeje laserovou světlo.
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-V případě HoloLens 2 postupujte následovně, abyste zajistili nejvyšší vizuální kvalitu hologramů prezentovaných na displejích:
+Proveďte následující kroky, aby se zajistila nejvyšší vizuální kvalita hologramů zobrazených v zobrazení:
 
-* **Zvyšte jas displeje.** Hologramy vypadají nejlépe, když je zobrazení na nejjasnější úrovni.
-* **Přiblížte si zorník k zoru.** Umístěte zorník dolů na nejbližší pozici k zoru.
-* **Posun visoru dolů** Zkuste si zorný panel na čediči hýbat dolů, což bude mít za následek, že se zorný objekt posune blíž k nosu.
-* **Pouštět zrak.** K optimalizaci obrázků na displeji se na displeji používá vaše interpupilární vzdálenost (IPD) a pohled do očí. Pokud nezadáte zrak, může se kvalita obrázku ještě zhoršit. Pokud chcete spustit zrak, přejděte do části **Nastavení**  >  **Systém**  >  **Propouštění**  >  **zraku.**
-* **Spusťte zobrazení barevného pozadí.** Na [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) **a** novější můžete vybrat alternativní profil barev pro zobrazení HoloLens 2. Barvy se tak můžou zdát přesnější, zejména při nižších úrovních jasu zobrazení. Informace o zobrazení barev najdete v aplikaci **Nastavení** na stránce **System > Ádro.**
+* **Zvyšte jas displeje.** Hologramy vypadají nejlépe, když je zobrazení na jeho nejsvětlejší úrovni. Při používání HoloLens jsou tlačítka jasu na levé straně rozhraní rozcestníku poblíž vaší Temple.
+* **Přiblížte rozcestník k vašemu oči.** Přiblíží clonu k nejbližší pozici vašim očí.
+* **Rozcestník Shift + šipka dolů** Zkuste prohlížeč panel posunout na Forehead dolů, což způsobí, že se clona posune dolů blíž k vašemu nos.
+* **[Spusťte kalibraci očí.](hololens-calibration.md#calibrating-your-hololens-2)** Zobrazení používá interpupillary vzdálenost (IPD) a oka pohledu k optimalizaci obrázků na obrazovce. Pokud nespustíte kalibraci očí, může být kvalita obrázku horší. Chcete-li spustit kalibraci očí, pokračujte v **Nastavení** kalibrace  >  **systému**  >    >  **spuštění kalibrace očí**.
+* **Spustit kalibraci barev displeje** Ve [Windows holografických verzích 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a vyšší můžete **vybrat alternativní barevný profil** pro displej HoloLens 2. To může mít za přesnější vzhled barev, zejména při nižších úrovních jasu displeje. Kalibraci barev displeje můžete najít v aplikaci **Nastavení** na stránce **kalibrace systému >** .
 
     > [!NOTE]
-    > Vzhledem k tomu, že toto nastavení ukládá nový profil barev do firmwaru zobrazení, jedná se o nastavení pro jednotlivá zařízení (a není jedinečné pro každý uživatelský účet).
+    > Vzhledem k tomu, že toto nastavení uloží nový profil barev do firmwaru zobrazení, jedná se o nastavení podle zařízení (a není jedinečné pro každý uživatelský účet).
 
-### <a name="how-to-use-display-color-calibration"></a>Jak používat barvu zobrazení
-1. Spusťte aplikaci **Settings (Nastavení)** a přejděte **na System > Uchovat.**
-1. V **části Zobrazit barevné pozadí** vyberte tlačítko Spustit barvu pro **zobrazení.**
-1. Spustí se prostředí zobrazení barev a budete se muset ujistit, že je zorník ve správné pozici.
-1. Po pokračování v dialogových oknech s pokyny se vaše zobrazení automaticky ztmaní na 30% jas.
+### <a name="how-to-use-display-color-calibration"></a>Jak používat kalibraci barev displeje
+1. Spusťte aplikaci **Nastavení** a přejděte do části **System > kalibrace**.
+1. V části **kalibrace barev displeje** vyberte tlačítko **kalibrace barev displeje spustit** .
+1. Spustí se prostředí kalibrace barev displeje a doporuče vám, abyste se ujistili, že je váš hypervisor ve správné pozici.
+1. Až budete pokračovat v dialogových oknech instrukce, zobrazí se automaticky ztlumení jasu na 30%.
     > [!TIP]
-    > Pokud máte potíže se zobrazením tlumené scény ve vašem prostředí, můžete ručně upravit úroveň jasu HoloLens 2 pomocí tlačítek brightness na levé straně zařízení.
-1. Výběrem tlačítek 1–6 můžete okamžitě vyzkoušet každý profil barev a najít ten, který vám vypadá nejlépe do očí (obvykle to znamená profil, který pomáhá scéně zdát se nejneužívnější, se vzorem stupňů šedé a barevnými odstíny, které vypadají podle očekávání).)
+    > Pokud máte potíže se zobrazením ztlumené scény ve vašem prostředí, můžete ručně upravit úroveň jasu HoloLens 2 pomocí tlačítek jas na levé straně zařízení.
+1. Vyberte tlačítka 1-6, abyste si mohli okamžitě vyzkoušet jednotlivé profily barev, a najít jeden, který vypadá nejlépe pro vaši oči. (to obvykle znamená, že profil, který pomáhá scénu, se jeví jako neneutrální, se vzorkem stupňů šedi a tónům skinu, které vypadají podle očekávání.)
 
-    ![Zobrazení scény barevného pozadí](images/color-cal-ui.png)
+    ![Zobrazit scénu kalibrace barev](images/color-cal-ui.png)
     
-6. Až budete s vybraným profilem spokojeni, vyberte tlačítko **Save & Exit (Uložit** a ukončit).
-1. Pokud nechcete provádět změny, vyberte tlačítko **Zrušit & Ukončit** a změny se vrátí zpět.
+6. Až budete s vybraným profilem spokojeni, vyberte tlačítko **uložit & tlačítko Storno** .
+1. Pokud nechcete provádět změny, vyberte tlačítko **zrušit & ukončení** a změny se vrátí.
 
 > [!TIP]
-> Tady je několik užitečných tipů, které je dobré mít na paměti při používání nastavení barev zobrazení:
-> - Kdykoli budete chtít, můžete v Nastavení znovu spustit barevné zobrazování.
-> - Pokud někdo v zařízení dříve použil nastavení ke změně profilů barev, datum a čas poslední změny se projeví na stránce Nastavení.
-> - Když znovu spustíte barevné zvýraznění zobrazení, profil barev, který byl dříve uložen, se zvýrazní a profil 0 se nezobrazí (protože Profil 0 představuje původní profil barvy zobrazení).
-> - Pokud se chcete vrátit k původnímu profilu barev zobrazení, můžete to udělat na stránce Nastavení (viz postup [resetování profilu barev).](#how-to-reset-color-profile)
+> Tady jsou některé užitečné tipy, které vám pomůžou při používání nastavení kalibrace barev displeje:
+> - Můžete znovu spustit kalibraci barev displeje z nastavení, kdykoli budete chtít.
+> - Pokud někdo na zařízení dřív používal nastavení pro změnu profilů barev, datum a čas poslední změny se projeví na stránce nastavení.
+> - Když znovu spustíte kalibraci barev displeje, bude zvýrazněný profil barev zvýrazněný a profil 0 se nezobrazí (jako profil 0 představuje původní barevný profil displeje).
+> - Pokud se chcete vrátit k původnímu profilu barev zobrazení, můžete tak učinit na stránce nastavení (viz [Postup resetování barevného profilu](#how-to-reset-color-profile)).
 
-### <a name="how-to-reset-color-profile"></a>Resetování profilu barev
+### <a name="how-to-reset-color-profile"></a>Jak obnovit barevný profil
 
-Pokud nejste spokojeni s vlastním profilem barev uloženým v HoloLens 2, můžete obnovit původní profil barvy zařízení:
-1. Spusťte aplikaci **Settings (Nastavení)** a přejděte **na System > Uchovat.**
-1. V **části Zobrazit barevné pozadí** vyberte tlačítko Obnovit výchozí **profil** barev.
-1. Po otevření dialogového okna vyberte **Restartovat,** pokud jste připraveni restartovat HoloLens 2 a použít změny.
+Pokud si nejste spokojeni s vlastním profilem barev uloženým do HoloLens 2, můžete obnovit původní barevný profil zařízení:
+1. Spusťte aplikaci **Nastavení** a přejděte do části **System > kalibrace**.
+1. V části **kalibrace barev displeje** vyberte tlačítko **Obnovit výchozí barevný profil** .
+1. Po otevření dialogového okna vyberte **restartovat** , pokud jste připraveni restartovat HoloLens 2 a použít změny.
 
-### <a name="top-display-color-calibration-known-issues"></a>Známé problémy s nejvyšším zobrazováním barev
+### <a name="top-display-color-calibration-known-issues"></a>Známé problémy při kalibraci horních displejů
 
-- Na stránce Nastavení bude stavový řetězec, který vás informuje o tom, kdy byl profil barev naposledy změněn, aktuální, dokud tuto stránku Nastavení znovu nenačtete. 
-    - **Alternativní** řešení: Vyberte jinou stránku Nastavení a pak znovu vyberte stránku Uchovat.
-- Pokud holoLens 2 přejde do režimu spánku při spuštění barevného pozadí displeje, později se obnoví do domova hybridní reality a úroveň jasu displeje bude stále tlumená.
-- Možná budete muset několikrát vyzkoušet stisknutí tlačítek brightness na levé straně zařízení nahoru nebo dolů, než budou fungovat podle očekávání.
-- Lokalizace není dokončená pro všechny trhy
+- Na stránce nastavení se stavový řetězec, který oznamuje, že se naposledy změnil barevný profil, bude zastaralá, dokud znovu nenačtete tuto stránku nastavení. 
+    - **Alternativní řešení**: Vyberte jinou stránku nastavení a pak znovu vyberte stránku kalibrace.
+- Pokud má vaše HoloLens 2 přejít do režimu spánku při běhu kalibrace barev displeje, bude později pokračovat na domovskou stránku smíšené reality a vaše úroveň jasu displeje bude stále ztlumená.
+- Možná budete muset několikrát zkusit stisknout tlačítka jasu na levé straně zařízení, aby fungovala podle očekávání.
+- Lokalizace není dokončena pro všechny trhy.
 
 ## <a name="faq"></a>Časté otázky
 
-### <a name="what-are-the-patterns-that-occasionally-flash-in-the-bottom-corners-of-the-display"></a>Jaké vzory občas blikají v dolních rozích displeje?
+### <a name="what-are-the-patterns-that-occasionally-flash-in-the-bottom-corners-of-the-display"></a>Jaké jsou vzory, které občas blikají v dolních rozích zobrazení?
 
-V některých případech bude HoloLens 2 zobrazovat různé vzory v levém dolním a pravém rohu obrazovky. Příklady jsou uvedeny níže (animované GIFy). Tento vzor je součástí normálního provozu zařízení HoloLens 2 ke zkalibrování displeje za účelem optimálního prostředí.
+V některých případech bude vaše HoloLens 2 zobrazovat různé vzory v dolním levém a pravém rohu obrazovky. Níže jsou uvedené příklady (animované soubory GIF). Tento model je součástí běžné operace zařízení HoloLens 2, aby se zobrazila kalibrace displeje pro optimální prostředí.
 
-![Vzor biphase](./images/DAT-Biphase-Fiducial.gif) ![Geografický model](./images/DAT-GEO-Fiducial.gif)
+![Vzor Biphase](./images/DAT-Biphase-Fiducial.gif) ![GEOGRAFICKÝ vzor](./images/DAT-GEO-Fiducial.gif)
 
-### <a name="why-am-i-unable-to-take-an-accurate-photograph-of-my-hololens-2-display"></a>Proč nemůžu pofotografovat přesnou fotografii displeje HoloLens 2?
+### <a name="why-am-i-unable-to-take-an-accurate-photograph-of-my-hololens-2-display"></a>Proč mi nejde pořizovat přesnou fotografii mého displeje HoloLens 2?
 
-Displej HoloLens 2 je navržený tak, aby ho bylo možné zobrazit lidským okem. Zařízení má aktivní systém opravy barev, který se přizpůsobuje pohledu uživatele. V porovnání s lidským okem fotoaparáty vidí prostředí odlišně a níže jsou některé faktory, které mohou ovlivnit jakoukoli nekonzistence mezi tím, co fotoaparát zachycuje a co vidí uživatel.
+Displej HoloLens 2 je navržený tak, aby si ho mohl prohlédnout lidské oči. Zařízení má aktivní systém korekce barev, který se přizpůsobí oči uživatele. V porovnání s lidským okem kamery vidí v prostředích odlišně a níže je několik faktorů, které mohou mít vliv na nekonzistenci mezi tím, co kamera zachytí a co uživatel uvidí.
 
-* **Pozice oka.** Displej HoloLens 2 je navržený speciálně pro pozici uživatele. HoloLens 2 využívá technologii sledování očí, aby se přizpůsobily pozici uživatele. Kamera, která je přemístěná o několik milimetrů, může vést k poruchám obrázků. Přesné umístění fotoaparátu je obtížné a musí přesně odpovídat poloze a odlehčení zraku, pro které zařízení provádí opravu barev.
-* **Pohyb oka.** Zobrazení se přizpůsobí pohybu oka uživatele, aby se upravily barvy. To, co se zobrazuje na displeji, se může lišit v závislosti na tom, jestli se uživatel dívá na střed, okraj nebo roh displeje. Při jednom zachytávání obrázků by se v nejlepším případě mohlo zobrazit jen to, jak zobrazení vypadá pro osu, která odpovídá směru pohledu oka.
-* **Binocular viewing.** Displej HoloLens 2 je navržený tak, aby ho bylo možné zobrazit oběma pohledy. Mozek se přizpůsobuje zobrazení dvou obrázků a spojuje je dohromady. Obrázky pouze jednoho zobrazení ignorují informace z druhého zobrazení.
-* **Doba vystavení kamery.** Doba vystavení kamery musí být přesně násobek 1/120 sekundy. HoloLens zobrazuje snímkovou frekvenci 120 Hz. Vzhledem ke způsobu, jakým HoloLens 2 nakreslí obrázky, nestačí zachytit jeden snímek, aby odpovídal vizuálnímu prostředí člověka. Zároveň platí, že pokud se zařízení vůbec přesune – i mikromovements – systém přeprojektuje obrázek na displeji, aby se hologramy stabilizoval. Zachycení více snímků při zachování pohybu zařízení HoloLens obvykle vyžaduje laboratorní nastavení.
-* **Velikost apertury fotoaparátu.** Aby bylo možné zachytit přesný obrázek, musí mít velikost clony fotoaparátu alespoň 3 mm. Fotoaparáty mobilních telefonů s malými clonami integrují světlo z menší oblasti než lidské oko. Zařízení aplikuje barevné opravy pro vzory pozorované většími clonami. V malých aperturech jsou vzory jednotnosti ostřejší a zůstávají viditelné i přes barevné opravy, které systém používá.
-* **Vstup do kamery.** Vstup do kamery by měl mít průměr alespoň 3 mm, aby se zachytil přesný obrázek. Jinak fotoaparát zaznamená některé vzory s vysokou frekvencí, které nejsou viditelné pro oko. Pozice vstupního zornice musí být před kamerou a musí být umístěná v odlehčení oka, aby nedocházelo ke vzniku aberací a dalších variací zachyceného obrázku.
-* **Pozice kamery.** Kamery, které splňují požadavky na zobrazení displeje HoloLens 2, jsou větší a je obtížné umístit fotoaparát dostatečně blízko k displeji HoloLens 2, aby bylo možné sledovat obrázek opravený barvou. Pokud je kamera na nesprávném místě, může oprava barev negativně ovlivnit zachycení obrazovky HoloLens 2.
-* **Oprava obrázku.** Typické digitální fotoaparáty a fotoaparáty na smartphonech používají křivku pro reprodukci tónu (TRC), která zvyšuje kontrast a barvu a poskytuje lepší výsledek. Při použití na zobrazení HoloLens 2 tato tonusová křivka zesílí nejednotnosti.
+* **Pozice oka.** Displej HoloLens 2 je navržený speciálně pro polohu oka uživatele. HoloLens 2 využívá technologii sledování očí, aby se přizpůsobila k umístění očí uživatele. Fotoaparát, který je omylem umístěn v několika milimetrech, může způsobit zkreslení obrazu. Přesné umístění kamery je obtížné a musí odpovídat přesnému místu a přípravku očí, pro které zařízení provádí korekci barev.
+* **Pohyb očí.** Zobrazení se přizpůsobí přesunutí oka uživatele, aby bylo možné upravovat barvy. To, co se zobrazuje na displeji, se může lišit v závislosti na tom, jestli se uživatel díváte na střed, okraj nebo na roh zobrazení. Jedna zachytávání imagí může nejlépe zobrazit jenom to, jak vypadá zobrazení pro osu, která odpovídá směru pohledua oka.
+* **Binokulární zobrazení.** Displej HoloLens 2 je navržený tak, aby se zobrazil s použitím očí. Mozek se přizpůsobí pro zobrazení dvou imagí a pořadí je dohromady. Obrázky pouze jednoho zobrazení ignorují informace z druhého zobrazení.
+* **Doba expozice kamery.** Doba expozice kamery musí být přesným násobkem 1/120th sekundy. Frekvence zobrazení snímků HoloLens je 120 Hz. Z důvodu způsobu, jakým ovládací prvky HoloLens 2 kreslí obrázky, není zachytávání jednoho rámce dostačující, aby se shodovalo s vizuálními lidmi. Ve stejnou chvíli platí, že pokud se zařízení přesune na všechno – dokonce i mikropřesuny – systém reprojektuje image na displeji pro stabilizaci hologramů. Zaznamenávání více rámců a zachování neklouzavých přenosů dat obvykle vyžaduje laboratorní instalaci.
+* **Velikost otvoru kamery** Velikost clony kamery musí být alespoň 3 mm, aby bylo možné zachytit přesnou bitovou kopii. Fotoaparáty na mobilní telefon s malými clonami integrují světlo od menší oblasti, než je lidské oko. Zařízení aplikuje korekci barev pro vzory zjištěné většími otvory. V malých otvorech jsou vzory jednotnosti ostřejší a zůstávají viditelné i navzdory korekci barev používané systémem.
+* **Úvodní žákům kamery.** Vchod z vchodu kamery by měl být nejméně 3 mm v průměru, aby bylo možné zachytit přesnou image. V opačném případě fotoaparát zachytí některé modely vysoké frekvence, které nejsou viditelné pro oči. Pozice vchodu na začátku musí být před fotoaparátem a umístěna na dálku, aby nedocházelo k zavlečení aberací a dalším variacím zaznamenané image.
+* **Pozice kamery.** Kamery, které splňují požadavky pro zobrazení displeje HoloLens 2, jsou větší a je obtížné umístit kameru dostatečně blízko k zobrazení HoloLens 2, aby se zobrazila barva korigovaného obrazu. Pokud je fotoaparát na špatném místě, může korekce barev negativně ovlivnit zachycení displeje HoloLens 2.
+* **Korekce obrázku** Typické digitální fotoaparáty a kamery smartphone používají křivku reprodukce tónů (TRC), která zvyšuje kontrast a barvu, aby poskytovala snappier výsledek. Při použití na displej HoloLens 2 se tato křivka rozsadí bez jednotnosti.
 
-Přesto je stále možné, aby specializované průmyslové kamery zachytily reprezentativní obrázky z displeje HoloLens 2. Smartphony, spotřebitelské a profesionální fotoaparáty bohužel nezachytí obrázky, které odpovídají tomu, co uživatel vidí na HoloLens 2.
+Všechny uvedené, je stále možné, aby se specializované průmyslové kamery daly zachytit reprezentativní obrázky ze displeje HoloLens 2. Kamery smartphone, Consumer a Professional nezachycují image, které se shodují s tím, co uživatel vidí na HoloLens 2.
 
-### <a name="what-does-eye-calibration-do-to-display-image-quality"></a>Co dělá pohled na kvalitu obrázku?
+### <a name="what-does-eye-calibration-do-to-display-image-quality"></a>Co dělá kalibrace očí k zobrazení kvality obrazu?
 
 Funkce HoloLens 2 zobrazuje aktivně barevně barvy obrázků na základě pozice oči uživatele. [Kalibrace očí](hololens-calibration.md) nabízí dva důležité vstupy: (1) interpupillary vzdálenost uživatele (IPD) a (2) směr hledání každého oka. Bez kalibrace očí systém standardně vyhodnotí jmenovitou polohu očí bez nutnosti přesunu očí. Rozdíl mezi aktivní korekcí barvy a bez korekce závisí na Physiology uživatele. Například uživatelé, kteří mají stejné IPD jako výchozí systém, uvidí méně vylepšení barev. Zatímco uživatelé, kteří mají mnohem užší nebo širší IPD než výchozí systém, uvidí další změny zobrazení obrázku.
 

@@ -16,16 +16,14 @@ ms.localizationpriority: high
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: afd782df1c68e8441b14823e0d961317914140e3
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: be33eb5d06ee7d63f1f598792ff75605b0eb4424
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379263"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112923631"
 ---
 # <a name="restart-reset-or-recover-hololens-2"></a>Restartování, resetování nebo obnovení HoloLens 2
-
-## <a name="charge-the-device"></a>Naúčtovat zařízení
 
 >[!IMPORTANT]
 > Než začnete s postupem řešení potíží, ujistěte se, že se na zařízení účtuje **20 až 40 procent** kapacity baterie, pokud je to možné. [Indikátory baterie](hololens2-setup.md#lights-that-indicate-the-battery-level) umístěné pod tlačítkem napájení jsou rychlým způsobem, jak ověřit kapacitu baterie bez přihlášení do zařízení.
@@ -154,7 +152,7 @@ Pokud chcete povolit cestu nasazení, postupujte podle těchto kroků:
 
 1. Přejít na [Microsoft Store pro firmy](https://businessstore.microsoft.com) a přihlaste se pomocí Azure Active Directory identity.
 
-1. Přejít na **Správa – nastavení**. V části **Nákupní prostředí zapněte Zobrazit offline** **aplikace.**
+1. Přejít na **Správa – nastavení**. Zapnutí možnosti **Zobrazit offline aplikace** v rámci **nakupování**
 
 1. Přejděte do **obchodu pro moji skupinu a** vyhledejte Advanced Recovery [**_Companion_**](https://businessstore.microsoft.com/store/details/advanced-recovery-companion/9P74Z35SFRS8).
 
@@ -176,7 +174,7 @@ Pokud chcete povolit cestu nasazení, postupujte podle těchto kroků:
           > Číslo verze v tomto příkladu kódu nemusí odpovídat aktuálně dostupné verzi. Možná jste také zvolili jiné umístění pro stahování než v tomto příkladu. Proveďte všechny změny příkazu podle potřeby.
 
 > [!TIP]
-> Pokud máte v plánu použít Advanced Recovery Companion k offline instalaci FFU, může být užitečné stáhnout si flash image. [**Stáhněte si aktuální image pro HoloLens 2.**](https://aka.ms/hololens2download)
+> Když plánujete použít Advanced Recovery Companion k offline instalaci FFU, může být užitečné stáhnout si image flash. [**Stáhněte si aktuální image pro HoloLens 2.**](https://aka.ms/hololens2download)
 
 
 Další zdroje informací:

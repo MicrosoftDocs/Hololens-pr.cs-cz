@@ -1,7 +1,7 @@
 ---
-title: Boční načtení a instalace aplikací přes HoloLens 2 Instalační program aplikací
-description: Naučte se instalovat a řešit potíže s aplikacemi pomocí instalačního programu aplikací a instalace aplikací bokem a pomocí uživatelského rozhraní.
-keywords: app management, app, hololens, app installer
+title: Jak na straně načíst a nainstalovat aplikace přes instalační program aplikace pro HoloLens 2
+description: Naučte se instalovat a řešit potíže s aplikacemi pomocí instalačního programu aplikace a na straně zátěže a instalovat aplikace přes uživatelské rozhraní.
+keywords: Správa aplikací, aplikace, HoloLens, instalační program aplikace
 author: evmill
 ms.author: v-evmill
 ms.reviewer: qizho
@@ -14,101 +14,99 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9e413963dbf34dd071fc9603487590065b967ee7
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: d8be5c2ed7fba38b6710aba9c122557a36073a79
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377577"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924124"
 ---
-# <a name="install-apps-on-hololens-2-via-app-installer"></a>Instalace aplikací na HoloLens 2 prostřednictvím Instalační program aplikací
+# <a name="install-apps-on-hololens-2-via-app-installer"></a>Instalace aplikací na HoloLens 2 prostřednictvím instalačního programu aplikace
 
 > [!NOTE]
-> Tato funkce byla dostupná ve [Windows Holographic verze 20H2 –prosinec 2020 Update.](hololens-release-notes.md) Ujistěte se, že je [zařízení aktualizované](hololens-update-hololens.md) tak, aby tuto funkci bylo možné používat.
+> Tato funkce byla dostupná ve [Windows holografickém systému, verze 20H2 – prosinec 2020 Update](hololens-release-notes.md). Ujistěte se, že je vaše zařízení [aktualizované](hololens-update-hololens.md) , aby tuto funkci používalo.
 
-Přidali **jsme novou funkci (Instalační program aplikací),** která umožňuje hladce instalovat aplikace na zařízení HoloLens 2. Tato funkce bude ve **výchozím nastavení pro nespravovaná zařízení povolená.** Aby se zabránilo přerušení služeb podnikům, instalační program aplikací nebude v tuto chvíli dostupný **pro spravovaná** zařízení.  
+Přidali jsme **novou funkci (instalační program aplikace), která vám umožní na zařízeních HoloLens 2 plynule instalovat aplikace** . Tato funkce bude **ve výchozím nastavení zapnutá pro nespravovaná zařízení**. Aby nedošlo k narušení podniků, instalační program aplikace nebude v tuto chvíli **k dispozici pro spravovaná zařízení** .  
 
-Zařízení se považuje za "spravované", **pokud** platí kterákoli z následujících podmínek:
+Zařízení se považuje za spravované, pokud platí **některá** z následujících podmínek:
 
-- Zaregistrované [](hololens-enroll-mdm.md) MDM
-- Konfigurace se [zřizovacím balíčkem](hololens-provisioning.md)
-- Identita [uživatele](hololens-identity.md) je Azure AD
+- [Zaregistrované](hololens-enroll-mdm.md) MDM
+- Nakonfigurováno pomocí [zřizovacího balíčku](hololens-provisioning.md)
+- [Identita](hololens-identity.md) uživatele je Azure AD
 
-Teď můžete instalovat aplikace bez nutnosti povolit vývojářský režim nebo používat Portál zařízení.  Stáhněte si do zařízení (přes USB nebo přes Microsoft Edge) sadu Appx a přejděte do sady Appx v Průzkumník souborů, abyste se vyzváni k instalaci.  Případně můžete [zahájit instalaci z webové stránky](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web).  Stejně jako aplikace, které instalujete z Microsoft Store nebo bokem s využitím funkce nasazení obchodní [](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) aplikace MDM, musí být aplikace digitálně podepsané pomocí nástroje sign a certifikát použitý k podepsání musí být pro zařízení HoloLens důvěryhodný, aby bylo možné aplikaci nasadit. [](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations)
+Nyní je možné instalovat aplikace bez nutnosti povolit vývojářský režim ani používat portál zařízení.  Stáhněte si do svého zařízení (přes USB nebo přes Microsoft Edge) sadu appx a přejděte do sady appx v Průzkumníkovi souborů, kde se zobrazí výzva k ukončení instalace.  Případně můžete [zahájit instalaci z webové stránky](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web).  Stejně jako aplikace, které instalujete z Microsoft Store nebo bokem pomocí možnosti nasazení aplikace LOB pro správu mobilních aplikací, musí být aplikace digitálně podepsané pomocí [nástroje Signer](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) a [certifikát použitý k podepsání musí být](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) před nasazením aplikace důvěryhodný pro zařízení HoloLens.
 
 ## <a name="requirements"></a>Požadavky
 
 ### <a name="for-your-devices"></a>Pro vaše zařízení:
 
-Tato funkce je aktuálně dostupná v buildech Windows Holographic 20H2 pro zařízení HoloLens 2. Ujistěte se, že jsou aktualizovaná všechna zařízení používající tuto [metodu.](hololens-update-hololens.md)
+Tato funkce je aktuálně dostupná ve Windows holografické 20H2 buildech pro zařízení HoloLens 2. Zajistěte, aby všechna zařízení používající tuto metodu byla [aktualizovaná](hololens-update-hololens.md).
 
 ### <a name="for-your-apps"></a>Pro vaše aplikace:
 
-Konfigurace řešení vaší aplikace musí  být  buď hlavní, nebo vy vydání, protože Instalační program aplikací bude používat závislosti z obchodu. Další informace o [vytváření balíčků aplikací najdete v tématu](https://docs.microsoft.com/windows/msix/app-installer/create-appinstallerfile-vs).
+Konfigurace řešení vaší aplikace musí být buď **Hlavní** , nebo **verze** , protože instalační program aplikace bude používat závislosti ze Storu. Přečtěte si další informace o [vytváření balíčků aplikací](https://docs.microsoft.com/windows/msix/app-installer/create-appinstallerfile-vs).
 
-Aplikace nainstalované touto metodou musí být digitálně podepsané. K podepsání aplikace budete muset použít certifikát. Můžete buď získat certifikát ze seznamu důvěryhodných certifikačních autority [ms,](https://ccadb-public.secure.force.com/microsoft/IncludedCACertificateReportForMSFT)v takovém případě nebudete muset provést žádnou další akci. Nebo můžete podepsat vlastní certifikát, ale tento certifikát se bude muset do zařízení nasučit.
+Aplikace, které jsou nainstalované přes tuto metodu, musí být digitálně podepsané. K podepsání aplikace budete muset použít certifikát. Můžete buď získat certifikát ze [seznamu důvěryhodných certifikačních autorit MS](https://ccadb-public.secure.force.com/microsoft/IncludedCACertificateReportForMSFT). v takovém případě nebudete muset provádět žádnou další akci. Případně můžete podepsat vlastní certifikát, ale tento certifikát bude nutné do zařízení vložit.
 
-- Jak podepisovat [aplikace pomocí nástroje pro podpis](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool)
+- Jak podepisovat aplikace [pomocí nástroje Sign Tool](https://docs.microsoft.com/windows/win32/appxpkg/how-to-sign-a-package-using-signtool)
 
 **Možnosti certifikátu:**
 
-- [Seznam důvěryhodných certifikačních autorit ms](https://ccadb-public.secure.force.com/microsoft/IncludedCACertificateReportForMSFT)
+- [Seznam důvěryhodných certifikačních autorit MS](https://ccadb-public.secure.force.com/microsoft/IncludedCACertificateReportForMSFT)
 
 **Vyberte metodu nasazení certifikátu.**
 
-- [Zřizovací balíčky](hololens-provisioning.md) je možné použít na místní zařízení.
-- MDM lze použít k [použití certifikátů s konfiguracemi zařízení.](https://docs.microsoft.com/mem/intune/protect/certificates-configure)
-- Použijte ve Správci [certifikátů zařízení](certificate-manager.md).
+- [Balíčky zřizování](hololens-provisioning.md) se dají použít na místní zařízení.
+- MDM se dá použít k [aplikování certifikátů s konfiguracemi zařízení](https://docs.microsoft.com/mem/intune/protect/certificates-configure).
+- Použijte [Správce certifikátů](certificate-manager.md)zařízení.
 
 ## <a name="installation-method"></a>Metoda instalace
 
-1. Zkontrolujte, že se vaše zařízení nepovažuje za spravované.
-1. Zkontrolujte, že je zařízení HoloLens 2 zapnuté a že jste přihlášeni.
-1. Na počítači přejděte do vlastní aplikace a zkopírujte yourapp.appxbundle do složky název_vašeho_zařízení\Interní úložiště\Soubory ke stažení.
-    Po zkopírování souboru můžete zařízení odpojit a instalaci dokončit později.
-1. Na zařízení HoloLens 2 otevřete **nabídku Start,** vyberte **Všechny aplikace** a spusťte **Průzkumník souborů** aplikaci.
-1. Přejděte do složky Stažené soubory. Možná budete muset na levém panelu aplikace nejprve vybrat **Toto zařízení** a pak přejít na Položky ke stažení.
-1. Vyberte soubor yourapp.appxbundle.
-1. Spustí Instalační program aplikací. Vyberte **tlačítko Install** (Nainstalovat) a nainstalujte aplikaci.
+1. Ověřte, že se zařízení nepovažuje za spravované.
+1. Ověřte, že je zařízení HoloLens 2 zapnuté a že jste přihlášení.
+1. Na svém počítači přejděte do vlastní aplikace a zkopírujte yourapp. appxbundle do yourdevicename\Internal Storage\Downloads..
+    Po dokončení kopírování souboru můžete zařízení odpojit a instalaci dokončit později.
+1. V zařízení HoloLens 2 Otevřete **nabídku Start**, vyberte **všechny aplikace** a spusťte aplikaci **Průzkumník souborů** .
+1. Přejděte do složky Stažené soubory. Možná budete muset na levém panelu aplikace vybrat **Toto zařízení** jako první a pak přejít na soubory ke stažení.
+1. Vyberte soubor yourapp. appxbundle.
+1. Spustí se instalační program aplikace. Vyberte tlačítko **nainstalovat** a nainstalujte svou aplikaci.
 
 Nainstalovaná aplikace se automaticky spustí po dokončení instalace.
 
-![Instalace příkladů MRTK prostřednictvím Instalační program aplikací](images/hololens-app-installer-picture.jpg)
+![Instalace příkladů MRTK prostřednictvím instalačního programu aplikace](images/hololens-app-installer-picture.jpg)
 
-### <a name="troubleshooting-installs"></a>Řešení potíží s instalacemi
+### <a name="troubleshooting-installs"></a>Řešení potíží s instalací
 
-Pokud se vaší aplikaci nepodařilo nainstalovat, při řešení potíží zkontrolujte následující:
+Pokud se aplikaci nepovedlo nainstalovat, Projděte si následující problémy:
 
-- Vaše aplikace je buď sestavení hlavní verze, nebo sestavení verze.
-- Vaše zařízení se aktualizuje na sestavení, na kterém je tato funkce dostupná.
-- Jste [připojení k internetu.](hololens-network.md)
+- Vaše aplikace je buď hlavní Build, nebo sestavení pro vydání.
+- Vaše zařízení je aktualizováno na sestavení, ve kterém je tato funkce k dispozici.
+- Jste [připojení k Internetu](hololens-network.md).
 - Vaše [koncové body pro Microsoft Store](hololens-offline.md) jsou správně nakonfigurované.  
 
 ## <a name="web-installer"></a>Webový instalační program
 
-Uživatelé instalují aplikaci přímo z webového serveru. Tento tok využívá metodu Instalační program aplikací v kombinaci se snadnou metodou distribuce stahování a instalace.
+Uživatelé můžou aplikaci nainstalovat přímo z webového serveru. Tento tok využívá instalační program aplikace v kombinaci s snadnou metodou stažení a instalace pro distribuci.
 
 ### <a name="how-to-set-up-web-install"></a>Jak nastavit webovou instalaci:
 
-1. Ujistěte se, že je aplikace správně nakonfigurovaná k instalaci.
-1. Pokud chcete [povolit instalaci z webové stránky, postupujte podle těchto kroků.](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web#how-to-enable-this-on-a-webpage)
+1. Ujistěte se, že je aplikace správně nakonfigurovaná pro instalaci.
+1. Pomocí těchto [kroků Povolte instalaci z webové stránky](https://docs.microsoft.com/windows/msix/app-installer/installing-windows10-apps-web#how-to-enable-this-on-a-webpage).
 
-### <a name="end-user-experience"></a>Prostředí koncového uživatele:
+### <a name="end-user-experience"></a>Činnost koncového uživatele:
 
-1. Uživatel obdrží a nainstaluje certifikát do zařízení pomocí metody dříve zvolené výše.
-1. Uživatel navštíví adresu URL vytvořenou v kroku výše.
+1. Uživatel obdrží certifikát do zařízení a nainstaluje ho pomocí metody výše zvolené výše.
+1. Uživatel navštíví adresu URL vytvořenou z výše uvedeného kroku.
 
-Aplikace se teď nainstaluje do zařízení. Aplikaci najdete tak, že otevřete **nabídka Start** a výběrem tlačítka **Všechny aplikace** aplikaci najdete.
+Aplikace se teď nainstaluje do zařízení. Pokud chcete aplikaci najít, otevřete **nabídku Start** a vyberte tlačítko **všechny aplikace** a vyhledejte svou aplikaci.
 
-- Další pomoc s řešením potíží s metodou instalace instalačního programu aplikace najdete v tématu Řešení [potíží s instalačním programem aplikací.](https://docs.microsoft.com/windows/msix/app-installer/troubleshoot-appinstaller-issues)
+- Další pomoc při řešení potíží s metodou instalace instalačního programu aplikace najdete v tématu [řešení potíží s instalačním programem aplikace](https://docs.microsoft.com/windows/msix/app-installer/troubleshoot-appinstaller-issues).
 
 > [!NOTE]
-> Uživatelské rozhraní během procesu aktualizace se nepodporuje. Možnost ShowPrompt na [této stránce](https://docs.microsoft.com/windows/msix/app-installer/update-settings) a související možnosti se proto nepodporují.
+> Uživatelské rozhraní není během procesu aktualizace podporováno. Proto není možnost ShowPrompt na [této stránce](https://docs.microsoft.com/windows/msix/app-installer/update-settings) a související možnosti podporována.
 
 ## <a name="sample-apps"></a>Ukázkové aplikace
 
-Pokud si chcete Instalační program aplikací ukázkové aplikace, podívejte se na některé z našich dostupných ukázek:
-
-- [MRTK Examples Hub](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ExampleHub.html)
-- [Povrchy](https://docs.microsoft.com/windows/mixed-reality/develop/unity/sampleapp-surfaces)
-- [Ukázkové aplikace pro UPW, které je možné použít k testování](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples)
+Vyzkoušejte si instalační program aplikace s některou z našich dostupných ukázkových aplikací. 
+> [!div class="nextstepaction"]
+> [Ukázkové aplikace](https://docs.microsoft.com/windows/mixed-reality/develop/features-and-samples?tabs=unity#sample-apps)

@@ -13,12 +13,12 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b5779ffa1de1700b4fcd17fc17b8ae3a82a45c22
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: d28994d911532a940d82756aa45609571ee80ac3
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379253"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924328"
 ---
 # <a name="page-settings-visibility"></a>Viditelnost nastavení stránky
 
@@ -32,7 +32,7 @@ Následující příklad znázorňuje zásadu, která by umožnila přístup jen
 
 Nastavení prostřednictvím zřizovacího balíčku:
 
-1. Při vytváření balíčku v nástroji Windows Configuration Designer přejděte do části **Zásady > nastavení > PageVisibilityList.**
+1. Při vytváření balíčku v nástroji Windows Configuration Designer přejděte do **části Zásady > nastavení > PageVisibilityList.**
 1. Zadejte řetězec: **`showonly:network-wifi;network-proxy;bluetooth`**
 1. Exportujte zřizovací balíček.
 1. Použijte balíček na zařízení.
@@ -158,11 +158,11 @@ Zařízení HoloLens a Windows 10 zařízení mají v aplikaci Nastavení jiný 
 | služba Windows Update – Kontroluje aktualizace. | `ms-settings:windowsupdate-action`          |
 
 
->  <sup>1</sup> Ve verzích starších než Windows Holographic verze 21H1 vás následující dvě  identifikátory URI ve skutečnosti nesmídí na stránky Upřesnit možnosti **nebo** Možnosti. Zablokují nebo zobrazí jenom hlavní služba Windows Update stránky.
-> - ms-settings:windowsupdate-options
-> - ms-settings:windowsupdate-restartoptions
- 
-> <sup>2</sup> – K dispozici ve Windows Holographic 21H1 nebo novějším.
+- <sup>1</sup> – U verzí starších než Windows Holographic verze 21H1 vás následující dvě  identifikátory URI ve skutečnosti nesmídí na stránky Upřesnit možnosti **nebo** Možnosti. Zablokují nebo zobrazí jenom hlavní služba Windows Update stránky.
+  -  ms-settings:windowsupdate-options
+  -  ms-settings:windowsupdate-restartoptions
+
+- <sup>2</sup> – K dispozici ve Windows Holographic 21H1 nebo novějším.
 
 
 Úplný seznam identifikátorů URI Windows 10 najdete v dokumentaci ke [spouštěcím nastavením.](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)

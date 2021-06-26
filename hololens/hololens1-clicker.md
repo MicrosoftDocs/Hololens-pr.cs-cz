@@ -13,12 +13,12 @@ ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 4b17fc134846a66046a819c56755d87206c5643e
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 83e5a746b6900c547778c71a0855426563458032
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377737"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924056"
 ---
 # <a name="use-the-hololens-1st-gen-clicker"></a>Použití kliknutí HoloLens (1. generace)
 
@@ -26,7 +26,7 @@ Kliknutí bylo navrženo speciálně pro HoloLens (1. generace) a nabízí dalš
 
 Použijte ho místo ručních gest k výběru, posouvání, přesouvání a změně velikosti aplikací.
 
-## <a name="clicker-hardware-and-pairing"></a>Hardware a párování klikání
+## <a name="clicker-hardware-and-pairing"></a>Hardware a párování clickeru
 
 Kliknutí HoloLens (1. generace) má smyčku prstu, která usnadňuje podržení, a indikátorové světlo.
 
@@ -44,7 +44,7 @@ Toto znamenají světla na klikateli.
 
 ### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>Spárování kliknutí s HoloLens (1. generace)
 
-1. Pomocí gesta bloom přejděte na **Start (Spustit),** vyberte Settings Devices   >  **(Nastavení) Devices (Nastavení) Devices (Zařízení)** a ověřte, že je zapnuté Bluetooth.
+1. Pomocí gesta bloom přejděte na **Start (Spustit),** vyberte Settings Devices   >  **(Nastavení zařízení)** a ověřte, že je zapnuté Bluetooth.
 1. Na klikání stiskněte a podržte tlačítko párování, dokud stavové světlo nebude blikat bíle.
 1. Na obrazovce párování vyberte **Pár kliknutí**  >  .
 
@@ -66,7 +66,7 @@ Gesta klikacích zařízení jsou malá otočení, nikoli větší pohyby použ�
 
 - **Vyberte**. Pokud chcete vybrat hologram, tlačítko nebo jiný prvek, upřete na něj pohled a klikněte na něj.
 
-- **Klikněte na a podržte .** Kliknutím a podržením palce dolů na tlačítku můžete klepnutím a podržením provést některé z věcí, jako je přesunutí nebo změna velikosti hologramu.
+- **Klikněte na a podržte .** Kliknutím a podržením palcem na tlačítku můžete klepnutím a podržením provést některé z věcí, jako je přesunutí nebo změna velikosti hologramu.
 
 - **Posuňte se na**. Na panelu aplikace vyberte Scroll **Tool (Nástroj pro posouvání).** Klikněte a podržte a pak klikejte nahoru, dolů, doleva nebo doprava. Pokud se chcete posouvat rychleji, přesuňte svou rukou dál od středu nástroje pro posouvání.
 
@@ -75,6 +75,15 @@ Gesta klikacích zařízení jsou malá otočení, nikoli větší pohyby použ�
 > [!TIP]
 > Pokud chcete zobrazení přiblížit nebo oddálit Microsoft Edge, nahlédněte na stránku a poklikejte na něj.
 
+## <a name="im-having-problems-using-the-hololens-clicker"></a>Mám potíže s používáním klikače HoloLens
+
+Pomocí kliknutí [můžete vybrat,](hololens1-clicker.md) posouvat, přesunout a změnit velikost hologramů. Jednotlivé aplikace mohou podporovat další gesta kliknutí.
+
+Pokud máte potíže s používáním klikače, ujistěte se, že se účtuje a spáruje s HoloLens. Pokud je baterie nízká, světlo indikátoru blikne žlutou. Pokud chcete ověřit, že je clicker spárovaný, přejděte na **Nastavení** Zařízení a podívejte  >   se, jestli se tam zobrazuje. Další informace najdete v tématu [Párování klikače](hololens1-clicker.md).
+
+Pokud se kliknutí naúčtuje a spáruje a stále máte problémy, resetujte ho tak, že podržíte hlavní tlačítko a tlačítko párování po dobu 15 sekund. Pak znovu spárujte klikací tlačítko se svým HoloLensem.
+
+Pokud resetování kliknutí nepomůže, podívejte se na [stránku Restart or recover the HoloLens clicker](hololens1-clicker.md#restart-or-recover-the-clicker)(Restartování nebo obnovení kliknutí HoloLens).
 ## <a name="restart-or-recover-the-clicker"></a>Restartování nebo obnovení kliknutí
 
 Tady je několik věcí, které můžete vyzkoušet, pokud kliknutí na HoloLens nereaguje nebo nefunguje dobře.
@@ -89,7 +98,7 @@ Pokud se kliknutí nezačne zapnout nebo restartovat, zkuste ho zapnout pomocí 
 
 Vyberte **Nastavení**  >  **Zařízení** a klikněte na něj. Vyberte **Odebrat,** počkejte několik sekund a pak znovu spárujte kliknutí.
 
-### <a name="recover-the-clicker"></a>Obnovení klikače
+### <a name="recover-the-clicker"></a>Obnovení kliknutí
 
 Pokud restartováním a znovu spárováním klikacího nástroje problém nevyřešíte, může vám s jeho obnovením pomoct nástroj Windows Device Recovery. Proces obnovení může nějakou dobu trvat a nainstaluje nejnovější verzi softwaru klikače. K použití tohoto nástroje budete potřebovat počítač se systémem Windows 10 nebo novějším, který má alespoň 4 GB volného místa v úložišti.
 
@@ -100,3 +109,4 @@ Obnovení klikače:
 1. Spusťte nástroj Windows Device Recovery Tool a postupujte podle pokynů.
 
 Pokud se kliknutí nezjistne  automaticky, vyberte Moje zařízení nebylo zjištěno a postupujte podle pokynů k nastavení zařízení do režimu obnovení.
+

@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2df71baf36d45f0f4737b9c3b6f4eabb1e5e8c4c
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: 6ecb881f694ca919f9c37a9d6094a708eafcb414
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379327"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924464"
 ---
 # <a name="hololens-2-development-edition"></a>HoloLens 2 Development Edition
 
@@ -28,7 +28,7 @@ Začněte budovat pro hybridní realitu s touto nabídkou, která kombinuje Holo
 ## <a name="learn-about-the-development-edition"></a>Další informace o edici Development Edition
 
 > [!NOTE]
-> Edice Development Edition není povolená k nasazení s komerčně distribuovanou řešením. Edice Development Edition se může nasadit za pomoci vývoje nebo testování aplikací v komerčním prostředí.  
+> Edice Development Edition se nesmí nasazovat s komerčně distribuovanou řešením. Edice Development Edition se může nasadit za pomoci vývoje nebo testování aplikací v komerčním prostředí.  
 
 HoloLens 2 Development Edition zahrnuje HoloLens 2, 500 USD v kreditech Azure, 3měsíční zkušební verzi Unity Pro a 3měsíční zkušební modul plug-in PiXYZ:
 
@@ -73,22 +73,23 @@ Zvolte modul, stáhněte si nástroje a odemknou klávesnici. Vítá vás Mixed 
 |     CheckPoint                              |     Výsledek                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 |     [Zahájení návrhu a vytváření prototypů](https://docs.microsoft.com/windows/mixed-reality/design/design)         |     Začněte s návrhem aplikací Mixed Reality napříč základními koncepty, modely interakce a prvky uživatelského prostředí.     |
-|     [Zahájení vývoje pro Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity)    |     Vyberte si modul, stáhněte si nástroje, přidejte základní stavební bloky a začněte s vytvářením ještě dnes.                                  |
+|     [Zahájení vývoje pro Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity)    |     Zvolte modul, stáhněte si nástroje, přidejte základní stavební bloky a začněte s vytvářením ještě dnes.                                  |
 |     [Prozkoumání Azure Cloud Services](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Vytvářejte poutavé prostředí s Azure Remote Rendering a Azure Spatial Anchors.                                 |
 
 ## <a name="developer-edition-additional-resources"></a>Další zdroje informací k edici Developer Edition
 
+- [Nejčastější dotazy k HoloLens 2 Development Edition](hololens2-development-edition-faq.md)
 - [Nezapomeňte nainstalovat nástroje pro vývoj pro HoloLens.](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
 - [Seznamte se s vývojem pro HoloLens 2 pomocí Unity.](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2)
 - [Zjistěte, jak kombinovat MRTK s Unity.](https://docs.microsoft.com/windows/mixed-reality/develop/unity/mrtk-getting-started)
-- [Naučte se nasazovat sestavené aplikace.](https://docs.microsoft.com/hololens/app-deploy-overview)
+- [Naučte se nasazovat sestavené aplikace.](app-deploy-overview.md)
 - [Prozkoumejte všechny možnosti pro Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/).
 - [Seznamte se s vývojem pro HoloLens 2 s unreal.](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
 - [Oslovte ostatní vývojáře na našem kanálu HoloDevelopers Slack.](https://holodevelopersslack.azurewebsites.net/)
 
 ## <a name="next-steps"></a>Další kroky
 
-1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 holoLens – podívejte se  na aplikaci Tipy, ve které najdete návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
+1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte  se na aplikaci Tipy, ve které najdete návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
 1. Klikněte níže a pokračujte ve čtení o použití HoloLens 2.
 
 > [!div class="nextstepaction"]

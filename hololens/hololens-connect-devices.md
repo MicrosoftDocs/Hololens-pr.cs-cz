@@ -1,6 +1,6 @@
 ---
-title: Připojení k zařízením Bluetooth a USB-C
-description: Začněte s připojením k zařízením Bluetooth a USB-C a příslušenstvím ze zařízení s technologií HoloLens hybridních realit.
+title: Připojení k Bluetooth a zařízením USB-C
+description: Začínáme s připojením k zařízením Bluetooth a USB-C a příslušenstvím ze zařízení hybridní reality HoloLens
 ms.assetid: 01af0848-3b36-4c13-b797-f38ad3977e30
 ms.prod: hololens
 ms.sitesec: library
@@ -13,130 +13,123 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ffae65a6e1c096242ae7a28c488896c65df1c62d
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: e02950bf6cb70e381e3bc5850509bc65267759c1
+ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379283"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924175"
 ---
-# <a name="connect-to-bluetooth-and-usb-c-devices"></a>Připojení k zařízením Bluetooth a USB-C
+# <a name="connect-to-bluetooth-and-usb-c-devices"></a>Připojení k Bluetooth a zařízením USB-C
 
-## <a name="pair-bluetooth-devices"></a>Párování zařízení Bluetooth
+## <a name="pair-bluetooth-devices"></a>Spárování zařízení Bluetooth
 
 HoloLens 2 podporuje následující třídy zařízení Bluetooth:
 
-- [HID](https://docs.microsoft.com/windows-hardware/drivers/hid/):
+- [HID:](https://docs.microsoft.com/windows-hardware/drivers/hid/)
     - Myš
     - Klávesnice
-- Výstupní zvukové zařízení (A2DP)
+- Výstupní zvuková zařízení (A2DP)
 
 HoloLens 2 podporuje následující rozhraní API Bluetooth:
-- [Server](https://docs.microsoft.com/windows/uwp/devices-sensors/gatt-server) a [klient](https://docs.microsoft.com/windows/uwp/devices-sensors/gatt-client) GATT
+- Server [a klient](https://docs.microsoft.com/windows/uwp/devices-sensors/gatt-server) [POS](https://docs.microsoft.com/windows/uwp/devices-sensors/gatt-client)
 - [RFCOMM](https://docs.microsoft.com/windows/uwp/devices-sensors/send-or-receive-files-with-rfcomm)
 >[!IMPORTANT]
-> Možná budete muset nainstalovat odpovídající doprovodné aplikace z Microsoft Store ke skutečnému používání zařízení se standardem HID a GATT.
+> Možná budete muset nainstalovat odpovídající doprovodné aplikace z Microsoft Store, aby bylo možné skutečně používat zařízení HID a
 
 HoloLens (1. generace) podporuje následující třídy zařízení Bluetooth:
 
 - Myš
 - Klávesnice
-- [HoloLens (1. generace) – kliknutí](https://docs.microsoft.com/hololens/hololens1-clicker)
+- [HoloLens (1. generace) clicker](https://docs.microsoft.com/hololens/hololens1-clicker)
 
 > [!NOTE]
-> Další typy zařízení Bluetooth, jako jsou například reproduktory, sluchátka s mikrofony, smartphony a Game pad, mohou být v nastaveních HoloLens uvedeny jako dostupné. Tato zařízení ale nejsou podporovaná na HoloLens (1. generace). Další informace najdete v tématu [Nastavení HoloLens seznam zařízení, která jsou k dispozici, ale zařízení nefungují](hololens-FAQ.md#hololens-settings-lists-devices-as-available-but-the-devices-dont-work).
+> Další typy zařízení Bluetooth, jako jsou mluvčí, náhlavní soupravy, smartphony a herní pady, mohou být uvedené jako dostupné v nastavení HoloLens. Tato zařízení ale nejsou v HoloLens (1. generace) podporovaná. Další informace najdete v článku [HoloLens Settings (Nastavení HoloLens)](hololens-troubleshooting.md#devices-listed-as-available-in-settings-dont-work)uvádí zařízení jako dostupná, ale zařízení nefungují.
 
-### <a name="pair-a-bluetooth-keyboard-or-mouse"></a>Párování klávesnice nebo myši Bluetooth
+### <a name="pair-a-bluetooth-keyboard-or-mouse"></a>Spárování klávesnice nebo myši Bluetooth
 
-1. Zapněte klávesnici nebo myš a nastavte ji jako zjistitelnou. Pokud se chcete dozvědět, jak zařízení zjistit, vyhledejte informace na zařízení (nebo jeho dokumentaci) nebo navštivte web výrobce.
+1. Zapněte klávesnici nebo myš a zajistěte, aby byla zjistitelná. Pokud chcete zjistit, jak zajistit, aby bylo zařízení zjistitelné, vyhledejte informace o zařízení (nebo jeho dokumentaci) nebo navštivte web výrobce.
 
-1. Použijte gesto Bloom (HoloLens (1. gen)) nebo gesto Start (HoloLens 2), abyste mohli přejít na **Start** a pak vybrat **Nastavení**.
+1. Pomocí gesta bloom (HoloLens (1. generace) nebo gesta spuštění (HoloLens 2) přejděte na **Start** a pak vyberte **Nastavení**.
 
-1. Vyberte **zařízení** a ujistěte se, že je Bluetooth zapnuté.  
+1. Vyberte **Zařízení** a ujistěte se, že je zapnuté Bluetooth.  
 
-1. Když se zobrazí název zařízení, vyberte **spárovat** a pak postupujte podle pokynů.
+1. Až se zobrazí název zařízení, vyberte **Spárovat** a postupujte podle pokynů.
 
-## <a name="disable-bluetooth"></a>Zakázat Bluetooth
+## <a name="disable-bluetooth"></a>Zakázání Bluetooth
 
-Tento postup vypne součásti RF v přepínači Bluetooth a zakáže všechny funkce Bluetooth na Microsoft HoloLens.
+Tento postup vypne komponenty RF rádia Bluetooth a zakáže všechny funkce Bluetooth na Microsoft HoloLens.
 
-1. Použijte gesto Bloom (HoloLens (1. generace)) nebo gesto Start (HoloLens 2), abyste mohli přejít na **Start** a pak vybrat **Nastavení**  >  **zařízení**.
+1. Pomocí gesta bloom (HoloLens (1. generace)) nebo gesta spuštění (HoloLens 2) přejděte na **Start** a pak vyberte **Nastavení**  >  **Zařízení.**
 
-1. Přesuňte přepínač posuvníku pro **Bluetooth** do **vypnuté** polohy.
+1. Přesuňte posuvník  pro Bluetooth **do** pozice Vypnuto.
 
-## <a name="hololens-2-connect-usb-c-devices"></a>HoloLens 2: připojení zařízení USB-C
+## <a name="hololens-2-connect-usb-c-devices"></a>HoloLens 2: Připojení zařízení USB-C
 
 HoloLens 2 podporuje následující třídy zařízení USB-C:
 
-- Velkokapacitní úložná zařízení (například jednotky s palec)
-- Adaptéry sítě Ethernet (včetně zpoplatnění Ethernet Plus)
-- Digitální zvukové adaptéry USB-C-do-3.5 mm
-- Sluchátka s digitálním zvukem USB-C (včetně adaptérů sluchátek a zpoplatnění)
-- Externí mikrotelefony USB-C ([Windows holografick, verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a vyšší)
-- Kabelová myš
+- Velkokapamová úložná zařízení (například kryptografický disk)
+- Ethernetové adaptéry (včetně ethernetového a zpoplatnění)
+- Digitální zvukové adaptéry USB-C-to-3,5mm
+- Digitální zvukové náhlavní soupravy USB-C (včetně adaptérů náhlavní soupravy a zpoplatnění)
+- Externí mikrofony USB-C ([Windows Holographic, verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a novější)
+- Drátová myš
 - Drátová klávesnice
-- Kombinovaná centra PD (USB A Plus PD zpoplatněná)
+- Kombinované rozbočovače PD (USB A a PD)
 
 
 > [!NOTE]
-> V reakci na zpětnou vazbu od zákazníků jsme povolili omezené podpory pro mobilní připojení, které jsou připojené přímo k HoloLens přes USB-C. Další informace najdete v tématu [připojení k mobilním a 5g](hololens-cellular.md) .
+> V reakci na zpětnou vazbu od zákazníků jsme povolili omezenou podporu mobilního připojení, které je připojeno přímo k HoloLens přes USB-C. Další informace najdete v tématu Připojení k mobilní síti a [5G.](hololens-cellular.md)
 
-### <a name="usb-c-external-microphone-support"></a>Podpora externích mikrofonů USB-C
+### <a name="usb-c-external-microphone-support"></a>Podpora externího mikrofonu USB-C
 
 > [!IMPORTANT]
-> Zapojení do **USB MIC se automaticky nenastaví jako vstupní zařízení**. Při zapojení do sady sluchátek USB-C se uživatelům zobrazí, že se zvuk z sluchátka automaticky přesměruje na sluchátka, ale operační systém HoloLens nastaví prioritu interního pole mikrofonu nad jakékoli jiné vstupní zařízení. **Pokud chcete použít mikrofon USB-C, postupujte podle následujících kroků.**
+> Když zapojíte mikrofon USB, nenastaví **se automaticky jako vstupní zařízení.** Při zapojení do sady konektorů USB-C uživatelé sledují, že zvuk této kabeláže se automaticky přesměruje na konektory, ale operační systém HoloLens upřednostňuje interní mikrofonní pole nad libovolným jiným vstupním zařízením. **Pokud chcete použít mikrofon USB-C, postupujte podle následujících kroků.**
 
 > [!NOTE]
-> Externí mikrotelefony nejde v buildech použít před [Windows holografickou verzí 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a vyšší. 
+> Externí mikrofony není možné používat v buildech před [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) nebo vyšší. 
 
-Uživatelé můžou pomocí panelu nastavení **zvuku** vybrat připojení externích mikrofonů USB-C. Mikrofony USB-C lze použít pro volání, záznam atd.
+Uživatelé mohou vybrat externí mikrofony připojené přes USB-C pomocí panelu **nastavení** Zvuk. Mikrofony USB-C je možné použít k volání, nahrávání atd.
 
-Otevřete aplikaci **Nastavení** a vyberte **systémové**  >  **zvuky**.
+Otevřete aplikaci **Nastavení** a vyberte **Systémový**  >  **zvuk.**
 
 ![Nastavení zvuku](images/usbc-mic-1.jpg)
 
 > [!IMPORTANT]
-> Pokud chcete používat externí mikrotelefony s nástrojem **Remote Assist**, uživatelé budou muset kliknout na hypertextový odkaz Spravovat zvuková zařízení.
+> Pokud uživatelé budou s remote **assistem** používat externí mikrofony, budou muset kliknout na hypertextový odkaz Spravovat zvuková zařízení.
 >
-> Pak použijte rozevírací **nabídku a nastavte** externí mikrofon jako výchozí nebo **komunikační výchozí.** Volba **výchozí** znamená, že se externí mikrofon bude používat všude.
+> Potom pomocí rozevíracího seznamu nastavte externí mikrofon na **Výchozí** nebo **Výchozí komunikace.** Volba Výchozí **znamená,** že externí mikrofon se bude používat všude.
 >
-> Zvolíte-li možnost **komunikace výchozí** , znamená to, že se externí mikrofon bude používat ve vzdálené pomoci a v dalších komunikačních aplikacích, ale pro jiné úkoly se může používat i pole mikrofonu HoloLens.
+> Volba Výchozí **komunikace** znamená, že externí mikrofon se použije ve vzdáleném asistenci a dalších komunikačních aplikacích, ale pole Mikrofon HoloLens se může používat i pro jiné úlohy.
 
 ![Správa zvukových zařízení](images/usbc-mic-2.png)
 
 <br>
 
-![Nastavit výchozí mikrofon](images/usbc-mic-3.jpg)
+![Nastavení výchozího nastavení mikrofonu](images/usbc-mic-3.jpg)
 
-#### <a name="what-about-bluetooth-microphone-support"></a>Co je podpora mikrofonu Bluetooth?
+#### <a name="what-about-bluetooth-microphone-support"></a>A co podpora mikrofonu Bluetooth?
 
-Technologie HoloLens 2 bohužel v současné době nepodporuje mikrofony Bluetooth.
+Na HoloLens 2 se bohužel stále nepodporují mikrofony Bluetooth.
 
-#### <a name="troubleshooting-usb-c-microphones"></a>Řešení potíží s mikrofony USB-C
-
-Uvědomte si, že někteří mikrotelefony USB-C nesprávně hlásí jako mikrofon *i* mluvčí. Jedná se o problém s mikrofonem a ne s HoloLens. Při zapojení jednoho z těchto mikrofonů do HoloLens může dojít ke ztrátě zvuku. Naštěstí je jednoduchá oprava.  
-
-V **Nastavení**  ->    ->  **zvuk** systému explicitně nastavte Vestavěné reproduktory **(zvukový ovladač analogové funkce)** jako **výchozí zařízení**. HoloLens by si mělo pamatovat toto nastavení i v případě, že mikrofon odeberete a znovu připojíte později.
-
-![Řešení potíží s mikrofony USB-C](images/usbc-mic-4.png)
 ### <a name="usb-c-hubs"></a>Rozbočovače USB-C
 
-Někteří uživatelé možná potřebují připojit více zařízení najednou. Pro uživatele, kteří chtějí používat [mikrofon USB-c](#usb-c-external-microphone-support) spolu s jiným připojeným zařízením, můžou rozbočovače USB-c odpovídat potřebám zákazníka. Společnost Microsoft tato zařízení netestovala, a proto nemůžeme doporučit žádné konkrétní značky.
+Někteří uživatelé možná budou muset připojit více zařízení najednou. Pro uživatele, kteří chtějí používat mikrofon [USB-C](#usb-c-external-microphone-support) společně s jiným připojeným zařízením, mohou být rozbočovače USB-C vhodné pro potřeby zákazníka. Microsoft tato zařízení netestoval, ani nemůžeme doporučit konkrétní značky.
 
 **Požadavky na rozbočovač USB-C a připojená zařízení:**
 
 - Připojená zařízení nesmí vyžadovat instalaci ovladače.
-- Celkový výkon vykreslování všech připojených zařízení musí být nižší než 4,5 wattů.
+- Celkový příkon všech připojených zařízení musí být nižší než 4,5 W.
 
-## <a name="connect-to-miracast"></a>Připojení k Miracast
+## <a name="connect-to-miracast"></a>Připojení k Miracastu
 
-Chcete-li použít Miracast, postupujte podle následujících kroků:
+Pokud chcete použít Miracast, postupujte takto:
 
 1. Proveďte některou z následujících akcí:  
 
-   - Otevřete nabídku **Start** a vyberte ikonu **Zobrazit** .
-   - Řekněme, že při pohledui v nabídce **Start** Vydáte "připojit".  
+   - Otevřete **nabídku Start** a vyberte **ikonu** Zobrazit.
+   - Při pohledu na nabídku **Start** řekněte "Připojit".  
 
 1. V seznamu zařízení, která se zobrazí, vyberte dostupné zařízení.
 
-1. Zahajte párování pro zahájení projekce.
+1. Dokončete párování a zahajte projektování.
