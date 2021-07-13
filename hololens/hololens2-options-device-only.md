@@ -1,8 +1,8 @@
 ---
-title: jenom zařízení HoloLens 2
-description: přečtěte si o tom, jak HoloLens 2 jenom zařízení, a co dělat, když máte jednu ze svých vlastních.
-keywords: HoloLens 2 možnosti nákupu, možnosti HoloLens, Developer Edition
-author: bogenera
+title: HoloLens 2 zařízení
+description: Přečtěte si HoloLens 2 zařízení a o tom, co dělat po získání vlastního zařízení.
+keywords: HoloLens 2 možnosti nákupu, HoloLens, Developer Edition
+author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
 ms.date: 4/12/2021
@@ -14,34 +14,34 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 9c2ef3c71ad7c67da66391c68f302983e876cef4
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: bbb99b37ab20d6ac8c593045265de29c0481a0d5
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636278"
+ms.locfileid: "113639603"
 ---
-# <a name="hololens-2-device-only-edition"></a><span data-ttu-id="b236d-104">edice HoloLens 2 jenom pro zařízení</span><span class="sxs-lookup"><span data-stu-id="b236d-104">HoloLens 2 Device-only Edition</span></span>
+# <a name="hololens-2-device-only-edition"></a><span data-ttu-id="ba062-104">HoloLens 2 edice pouze pro zařízení</span><span class="sxs-lookup"><span data-stu-id="ba062-104">HoloLens 2 Device-only Edition</span></span>
 
-<span data-ttu-id="b236d-105">HoloLens 2 nabízí nejpohodlnější a moderní prostředí realit, které je k dispozici – vylepšené spolehlivostí, zabezpečením a škálovatelností služeb cloud a AI od microsoftu.</span><span class="sxs-lookup"><span data-stu-id="b236d-105">HoloLens 2 offers the most comfortable and immersive mixed reality experience available—enhanced by the reliability, security, and scalability of cloud and AI services from Microsoft.</span></span>
+<span data-ttu-id="ba062-105">HoloLens 2 nabízí nejpohodlnější a imerzivní prostředí hybridní reality, které je vylepšené spolehlivostí, zabezpečením a škálovatelností cloudových služeb a služeb AI od Microsoftu.</span><span class="sxs-lookup"><span data-stu-id="ba062-105">HoloLens 2 offers the most comfortable and immersive mixed reality experience available—enhanced by the reliability, security, and scalability of cloud and AI services from Microsoft.</span></span>
 
-## <a name="learn-about-hololens-2"></a><span data-ttu-id="b236d-106">další informace o HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="b236d-106">Learn about HoloLens 2</span></span>
-<span data-ttu-id="b236d-107">použití zařízení HoloLens 2 v komerčním prostředí může být výkonným nástrojem pro vaši firmu nebo organizaci.</span><span class="sxs-lookup"><span data-stu-id="b236d-107">Using your HoloLens 2 devices in a commercial environment can be a powerful tool for your business or organization.</span></span> <span data-ttu-id="b236d-108">pro vytváření hybridních aplikací pro realitu může vývojář použít taky HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="b236d-108">Any HoloLens 2 can also be used by a developer to create mixed reality apps.</span></span>
+## <a name="learn-about-hololens-2"></a><span data-ttu-id="ba062-106">Další informace o HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="ba062-106">Learn about HoloLens 2</span></span>
+<span data-ttu-id="ba062-107">Použití HoloLens 2 zařízení v komerčním prostředí může být výkonným nástrojem pro vaši firmu nebo organizaci.</span><span class="sxs-lookup"><span data-stu-id="ba062-107">Using your HoloLens 2 devices in a commercial environment can be a powerful tool for your business or organization.</span></span> <span data-ttu-id="ba062-108">Každý HoloLens 2 může vývojář také použít k vytváření aplikací hybridní reality.</span><span class="sxs-lookup"><span data-stu-id="ba062-108">Any HoloLens 2 can also be used by a developer to create mixed reality apps.</span></span>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XwOnHqiNAeU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="heres-what-to-do-next-with-the-hololens-2"></a><span data-ttu-id="b236d-109">tady je postup s HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="b236d-109">Here's what to do next with the HoloLens 2</span></span>
+## <a name="heres-what-to-do-next-with-the-hololens-2"></a><span data-ttu-id="ba062-109">Tady je další krok s HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="ba062-109">Here's what to do next with the HoloLens 2</span></span>
 
-1. <span data-ttu-id="b236d-110">podívejte se na toto video o [použití a péči HoloLens 2](/hololens/hololens2-maintenance##HoloLens-2-Use-and-Care).</span><span class="sxs-lookup"><span data-stu-id="b236d-110">Watch this video on [HoloLens 2 Use and Care](/hololens/hololens2-maintenance##HoloLens-2-Use-and-Care).</span></span>
-1. <span data-ttu-id="b236d-111">Příprava [zařízení na používání](/hololens/hololens2-setup) a [nastavování](/hololens/hololens2-start)</span><span class="sxs-lookup"><span data-stu-id="b236d-111">[Get your device ready to use](/hololens/hololens2-setup) and then [get set up](/hololens/hololens2-start)</span></span>
-1. <span data-ttu-id="b236d-112">[přečtěte si, jak HoloLens 2 získat](/hololens/holographic-home).</span><span class="sxs-lookup"><span data-stu-id="b236d-112">[Learn how to get around HoloLens 2](/hololens/holographic-home).</span></span>
-1. <span data-ttu-id="b236d-113">Jakmile budete spokojeni, [Využijte některé fotky nebo videa ve smíšené realitě](/hololens/holographic-photos-and-videos).</span><span class="sxs-lookup"><span data-stu-id="b236d-113">Once you're comfortable, [take some mixed reality photos or videos](/hololens/holographic-photos-and-videos).</span></span>
-1. <span data-ttu-id="b236d-114">prohlédněte si všechny dostupné [aplikace pro HoloLens 2 na webu Microsoft app store](/hololens/holographic-store-apps).</span><span class="sxs-lookup"><span data-stu-id="b236d-114">Look through all the available [apps for HoloLens 2 on the the Microsoft app store](/hololens/holographic-store-apps).</span></span>
+1. <span data-ttu-id="ba062-110">Podívejte se na toto video [na HoloLens 2 Use and Care](/hololens/hololens2-maintenance##HoloLens-2-Use-and-Care).</span><span class="sxs-lookup"><span data-stu-id="ba062-110">Watch this video on [HoloLens 2 Use and Care](/hololens/hololens2-maintenance##HoloLens-2-Use-and-Care).</span></span>
+1. <span data-ttu-id="ba062-111">[Připravte zařízení k použití a](/hololens/hololens2-setup) pak [nastavte.](/hololens/hololens2-start)</span><span class="sxs-lookup"><span data-stu-id="ba062-111">[Get your device ready to use](/hololens/hololens2-setup) and then [get set up](/hololens/hololens2-start)</span></span>
+1. <span data-ttu-id="ba062-112">[Zjistěte, jak získat informace o HoloLens 2.](/hololens/holographic-home)</span><span class="sxs-lookup"><span data-stu-id="ba062-112">[Learn how to get around HoloLens 2](/hololens/holographic-home).</span></span>
+1. <span data-ttu-id="ba062-113">Jakmile se vám to bude dobře, [posít několik fotek nebo videí hybridní reality.](/hololens/holographic-photos-and-videos)</span><span class="sxs-lookup"><span data-stu-id="ba062-113">Once you're comfortable, [take some mixed reality photos or videos](/hololens/holographic-photos-and-videos).</span></span>
+1. <span data-ttu-id="ba062-114">Prohlédněte si všechny dostupné [aplikace pro HoloLens 2 v Microsoft App Storu.](/hololens/holographic-store-apps)</span><span class="sxs-lookup"><span data-stu-id="ba062-114">Look through all the available [apps for HoloLens 2 on the the Microsoft app store](/hololens/holographic-store-apps).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="b236d-115">Další kroky</span><span class="sxs-lookup"><span data-stu-id="b236d-115">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="ba062-115">Další kroky</span><span class="sxs-lookup"><span data-stu-id="ba062-115">Next steps</span></span>
 
-1. <span data-ttu-id="b236d-116">začněte pracovat hned se smíšenými realitami a projděte si Windows 10 v HoloLens – podívejte se na **Tipy** aplikaci, kde najdete praktická cvičení pro interakce.</span><span class="sxs-lookup"><span data-stu-id="b236d-116">Start interacting right away with Mixed Reality and navigating Windows 10 on your HoloLens - check out the **Tips** app for hands-on tutorials for hand interactions.</span></span> <span data-ttu-id="b236d-117">Použijte gesto Start, pokud chcete přejít na Start nebo vyslovit příkaz "Přejít na začátek" a vybrat Tipy.</span><span class="sxs-lookup"><span data-stu-id="b236d-117">Use the start gesture to go to Start or say "Go to Start" and select Tips.</span></span>
-1. <span data-ttu-id="b236d-118">kliknutím dole můžete pokračovat v čtení HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="b236d-118">Click below to continue reading about getting around HoloLens 2.</span></span>
+1. <span data-ttu-id="ba062-116">Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** ve které se můžete podívat na návody k interakcím pomocí rukou.</span><span class="sxs-lookup"><span data-stu-id="ba062-116">Start interacting right away with Mixed Reality and navigating Windows 10 on your HoloLens - check out the **Tips** app for hands-on tutorials for hand interactions.</span></span> <span data-ttu-id="ba062-117">Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.</span><span class="sxs-lookup"><span data-stu-id="ba062-117">Use the start gesture to go to Start or say "Go to Start" and select Tips.</span></span>
+1. <span data-ttu-id="ba062-118">Klikněte níže a pokračujte ve čtení o tom, jak se dostat HoloLens 2.</span><span class="sxs-lookup"><span data-stu-id="ba062-118">Click below to continue reading about getting around HoloLens 2.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="b236d-119">začínáme s HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="b236d-119">Get started with HoloLens 2</span></span>](hololens2-basic-usage.md)
+> [<span data-ttu-id="ba062-119">Začínáme s HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="ba062-119">Get started with HoloLens 2</span></span>](hololens2-basic-usage.md)
