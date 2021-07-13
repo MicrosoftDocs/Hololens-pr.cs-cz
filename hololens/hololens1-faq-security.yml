@@ -1,0 +1,131 @@
+### YamlMime:FAQ
+metadata:
+  title: Nejčastější dotazy týkající se zabezpečení
+  description: mějte přehled o běžných dotazech na zabezpečení a odpovědi týkající se HoloLens zařízení se smíšenými realitami.
+  ms.assetid: bd55ecd1-697a-4b09-8274-48d1499fcb0b
+  author: pawinfie
+  ms.author: pawinfie
+  ms.date: 02/19/2020
+  keywords: hololens, Windows Mixed Reality, security
+  ms.prod: hololens
+  ms.sitesec: library
+  ms.topic: article
+  audience: ITPro
+  ms.localizationpriority: medium
+  ms.custom:
+  - CI 111456
+  - CSSTroubleshooting
+  manager: bradke
+  ms.openlocfilehash: 108f2e4c0aa9af251ecb6bc5185c7803ae51b5f7
+  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 07/12/2021
+  ms.locfileid: "113637255"
+title: nejčastější dotazy týkající se zabezpečení HoloLens (1. generace)
+summary: ''
+sections:
+- name: Ignorováno
+  questions:
+  - question: >
+      jakou úroveň ochrany dat HoloLens 1 nabídka?
+    answer: >
+      * viz [HoloLens (1. generace) šifrování bitlockeru](hololens1-encryption.md) .
+  - question: >
+      Jaký typ bezdrátové sítě se používá?
+    answer: >
+      * 802.11 ac a Bluetooth 4,1 LE
+  - question: >
+      Jaký typ architektury je zahrnutý?  Například: Ukázat na Point, OK nebo něco jiného?
+    answer: >
+      * Wi-Fi lze použít v režimu infrastruktury ke komunikaci s dalšími bezdrátovými přístupovými body.
+
+      * Bluetooth lze použít pro rozhovor mezi několika HoloLensy partnerských uzlů, pokud je aplikace zákazníkům podporuje nebo jiné Bluetooth zařízení.
+  - question: >
+      Co je FCC ID?
+    answer: >
+      * C3K1688
+  - question: >
+      Jaký rozsah frekvencí a kanály pracuje na zařízení a je konfigurovatelná?
+    answer: >
+      * Wi-Fi: Rozsah frekvence není uživatelsky konfigurovatelné a závisí na zemi použití. V USA Wi-Fi používá kanály 2,4 GHz (1-11) i 5 GHz (36-64, 100-165).
+
+      * Bluetooth: Bluetooth používá standardní rozsah 2.4-2.48 GHz.
+  - question: >
+      Může zařízení povolovat nebo blokovat určité četnosti?
+    answer: >
+      * To není ovladatelné uživatelem nebo zařízením.
+  - question: >
+      Jaká je úroveň napájení pro přenos i příjem? Je přizpůsobitelná? Jaký je rozsah provozu?
+    answer: >
+      * Naše standardy testování emisí lze nalézt [zde](https://fccid.io/C3K1688). Rozsah operace je vysoce závislý na přístupovém bodu a prostředí, ale je zhruba stejný jako ostatní vysoce kvalitní telefony, tablety nebo počítače.
+  - question: >
+      Jaký je funkční cyklus/životnost pro normální provoz?
+    answer: >
+      * 2-3 hodin aktivního používání a až dvou týdnů v pohotovostním čase
+
+      * Životnost baterie není k dispozici.
+  - question: >
+      Co je chování při odesílání a přijímání, když není nástroj v dosahu?
+    answer: >
+      * HoloLens přenos/příjem se řídí standardním modelem Wi-Fi/Bluetooth. Na okraji svého rozsahu si pravděpodobně všimnete, že vstup bude trhaný až do úplného odpojení, ale po návratu do rozsahu by se mělo rychle znovu připojit.
+  - question: >
+      Co je hustota nasazení na čtvereční chodidla?
+    answer: >
+      * To závisí na infrastruktuře vaší sítě.
+  - question: >
+      Může zařízení používat infrastrukturu jako klienta?
+    answer: >
+      * Yes
+  - question: >
+      Který protokol se používá?
+    answer: >
+      * HoloLens nepoužívá žádné proprietární protokoly.
+  - question: >
+      Frekvence aktualizací operačního systému – jaká je frekvence aktualizací operačního systému pro HL?  Máte nastavený plán?  Jsou podle potřeby vydány opravy zabezpečení společnosti Microsoft atd.
+    answer: >
+      * společnost Microsoft poskytuje aktualizace operačního systému HoloLens přesně stejným způsobem jako Windows 10. K dispozici jsou obvykle dvě hlavní aktualizace za rok, jedna na jaře, jedna v rámci. HoloLens je Windows zařízení, koncept aktualizace je stejný jako u jakéhokoli jiného Windowsho zařízení. společnost Microsoft podle potřeby vydává opravy zabezpečení a řídí stejný koncept jako v jakémkoli jiném Windowsovém zařízení.
+  - question: >
+      Posílení zabezpečení operačního systému – jaké možnosti má posílit zabezpečení operačního systému?  Je možné odebrat nebo vypnout nepotřebné aplikace nebo služby?
+    answer: >
+      * HoloLens se chová jako smartphone. je porovnatelný z jiných moderních Windows zařízení. HoloLens můžete spravovat buď pomocí Microsoft Intune nebo jiných řešení pro správu zařízení, jako je MobileIron, Soti nebo. Existují zásady, které můžete v těchto systémech pro správu nastavit k umístění zásad zabezpečení na zařízení a k posílení zabezpečení zařízení. V případě potřeby je také k dispozici možnost odstraňování všech nepotřebných aplikací.
+  - question: >
+      Jak budou softwarové aplikace spravovány a aktualizovány? Jaký ovládací prvek je potřeba definovat, jaké aplikace se načítají, a proces aktualizace aplikací pro aplikace, které jsou ve službě Microsoft Store živé?
+    answer: >
+      * HoloLens získá softwarové aplikace pouze prostřednictvím úložiště Windows. Nainstalovat lze pouze balíčky aplikací appx, které jsou vyvíjeny pro použití HoloLens. můžete to zobrazit v Microsoft Store s malým logem vedle aplikace, která zobrazuje HoloLens zařízení. Všechny ovládací prvky, které máte nad správou aplikací pro Store, platí také pro HoloLens. Můžete použít koncept oficiálního úložiště nebo úložiště pro firmy. aplikace můžou být nahrané po straně (ruční proces načtení aplikace na zařízení Windows) nebo je můžete spravovat přes MDM, aby se aplikace v případě potřeby automaticky vyžádaly z obchodu.
+  - question: >
+      Jaká je frekvence aktualizací aplikací v úložišti pro HoloLens?
+    answer: >
+      * jak budeme postupovat podle stejného konceptu Microsoft Store a získávat z něj aplikace, je cyklus aktualizace určen vývojářem aplikace. všechny možnosti správy, které jsou nutné pro řízení mechanismu aktualizace ve storu, se vztahují také na HoloLens.
+  - question: >
+      Je pro HoloLens k dispozici zabezpečená možnost spouštění?
+    answer: >
+      * Yes
+  - question: >
+      Je možné zakázat nebo odpojit podporu periferních zařízení ze zařízení?
+    answer: >
+      * Yes
+  - question: >
+      Je možné řídit nebo zakázat používání portů v zařízení?
+    answer: >
+      * HoloLens obsahuje jenom dva porty (jeden pro sluchátka a jeden pro zpoplatnění nebo připojení k počítačům). Z důvodu funkcí a obnovení není možné port zakázat.
+  - question: >
+      Antivirová ochrana, zjišťování koncových bodů, IP adresy, seznam povolených řízení aplikací – libovolná možnost spouštění antivirové ochrany, zjišťování koncových bodů, IP adresy, seznam povolených řízení aplikací atd.
+    answer: >
+      * Windows Holographic for Business (komerční sada) podporuje Windows Defenderou inteligentní obrazovku. pokud by antivirová společnost vytvořila aplikaci do Univerzální platforma Windows a publikovala ji, mohla by se stáhnout na HoloLens. V současnosti neudělaly žádné společnosti pro HoloLens.
+
+      * povolení aplikací je možné pomocí Microsoft Enterprise storu, kde si můžete vybrat jenom to, jaké konkrétní aplikace je možné stáhnout. Přes MDM taky můžete uzamknout, které konkrétní aplikace můžete v zařízení spouštět nebo dokonce vidět.
+  - question: >
+      Můžeme zařízení umístit do karantény, dokud se zařízení neaktualizuje, pokud je delší dobu offline?  Například Zařízení se sedí v zásobníku, který se nespotřebovává po dobu (šest měsíců), a nepřijal žádné aktualizace, opravy atd.  Když se aplikace pokusí o připojení k síti, může ji označit a před tím, než se připojí k síti, musíte aktualizovat jinou síť.
+    answer: >
+      * To je něco, co můžete spravovat na úrovni infrastruktury buď pomocí MDM, nebo na serveru Prem. Zařízení může být označeno jako nedodržující předpisy, pokud nesplňuje zadanou verzi aktualizace.
+  - question: >
+      Zahrnuje společnost Microsoft jakékoli záložní dveře nebo přístup ke službám, které společnosti Microsoft umožňují připojit se k zařízení pro sdílení obrazovky nebo vzdálenou podporu v programu.
+    answer: >
+      * No
+  - question: >
+      Když se pro důvěryhodnou komunikaci vygeneruje certifikát PKI, chceme, aby se na zařízení vygeneroval certifikát, aby věděl, že je jenom na tomto zařízení, které je pro toto zařízení jedinečné, a nedá se vyexportovat ani použít k zosobnění zařízení. Je to u HoloLens true? Pokud se nejedná o potenciální zmírnění?
+    answer: >-
+      * CSR pro SCEP se generuje na samotném zařízení. Intune a místní konektor SCEP vám pomohou zabezpečit požadavky sami přidáním a ověřením řetězce výzvy, který je odeslán klientovi.
+
+      * vzhledem k tomu, že HoloLens (1. generace a 2. generace) mají modul tpm, budou tyto certifikáty uloženy v modulu tpm a nelze je extrahovat. Kromě toho i v případě, že by ho bylo možné extrahovat, nebylo možné ověřit řetězce výzvy na jiném zařízení a vykreslovat certifikáty nebo klíče nepoužitelné na různých zařízeních.

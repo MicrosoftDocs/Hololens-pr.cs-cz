@@ -1,0 +1,193 @@
+### YamlMime:FAQ
+metadata:
+  title: Nejčastější dotazy k edici HoloLens 2 Development Edition
+  description: Získejte aktuální informace o nejčastějších dotazech k zařízení hybridní reality HoloLens 2 Development Edition.
+  keywords: Hololens 2 purchasing options, HoloLens options, Developer Edition
+  author: evmill
+  ms.author: v-evmill
+  ms.reviewer: sekerawa
+  ms.date: 11/02/2020
+  ms.prod: hololens
+  ms.topic: article
+  ms.sitesec: library
+  ms.localizationpriority: medium
+  audience: HoloLens
+  manager: yannisle
+  appliesto:
+  - HoloLens 2
+  ms.openlocfilehash: 97f3bbdfec85e64d2895dfb5482ee9dc692c5e4c
+  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 07/12/2021
+  ms.locfileid: "113637273"
+title: Nejčastější HoloLens 2 Development Edition
+summary: ''
+sections:
+- name: Obecné otázky
+  questions:
+  - question: >
+      Co mám získat s edicí HoloLens 2 Development Edition?
+    answer: >
+      Edice HoloLens 2 Development Edition zahrnuje kredity Azure HoloLens 2, 500 USD, 3měsíční zkušební verzi Unity Pro a zkušební verzi modulu plug-in Pixyz na 3 měsíce.
+  - question: >
+      Jaký je rozdíl mezi verzemi HoloLens 2 a HoloLens 2 Development Edition?
+    answer: >
+      K sestavení a testování interních podnikových aplikací, které se mají používat s verzí HoloLens 2 (komerční edice) v produkčním nastavení, můžete použít pouze HoloLens 2 Development Edition. V rámci nákupu edice Development Edition vám Microsoft může podle vlastního uvážení poskytnout určitá oprávnění identifikovaná během procesu pokladny. Mezi tyto nároky patří právo uplatnit určité slevové kredity nebo zkušební přístup k určitým službám nebo nástrojům společnosti Microsoft nebo třetích stran po omezenou dobu. [Další informace](hololens2-options-dev-edition.md)
+  - question: >
+      Je možné k vývoji HoloLens verzi 2?
+    answer: >
+      Ano. K vývoji aplikací HoloLens libovolnou edici sady HoloLens 2.
+  - question: >
+      Jak a získám 500 USD v kreditech Azure, 3měsíční zkušební verzi Unity Pro a zkušební verzi modulu Pixyz na 3 měsíce?
+    answer: >
+      Slevové kredity nebo přístup ke zkušební verzi se budou zasílat na e-mail použitý při nákupu do 2 pracovních dnů od odeslání produktu.
+  - question: >
+      Můžu své zařízení se HoloLens 2 (jenom zařízení) upgradovat na verzi HoloLens 2 Development Edition a získat tak zkušební kredity?
+    answer: >
+      Ne, plány přenosu zařízení nenabízíme. Neexistuje žádná možnost přenosu z jakékoli edice na jinou edici.
+  - question: >
+      Co je Unity Pro?
+    answer: >
+      Unity Pro je 3D platforma v reálném čase pro malá/střední studia/firmy. Je určená pro týmy s kombinací technických a netechnických dovedností. [Další informace](https://store.unity.com/products/unity-pro)
+  - question: >
+      Co je modul plug-in Pixyz?
+    answer: >
+      Modul plug-in Pixyz čte a převádí téměř jakýkoli formát, optimalizuje ho a převede do Unity a připraví ho tak, aby poskytoval prostředky připravené k použití pro aplikace v reálném čase. [Další informace](https://unity.com/products/pixyz)
+  - question: >
+      Je dostupná edice HoloLens 2 Development Edition?
+    answer: "Ano, [pro HoloLens 2 Development Edition](https://ms.liftforward.com/hololens?product=hololens-development-edition) je nyní k dispozici pouze v USA. \n"
+  - question: >
+      Kdo mám dotazy ohledně nároků na HoloLens 2 Development Edition?
+    answer: >
+      S dotazy souvisejícími s nároky se obraťte na svého prodejního specialistu na 866-425-4709, Po až Pátek, 6:00 až 18:00, PST.
+  - question: "Může moje společnost koupit několik zařízení HoloLens 2 Development Edition? \n"
+    answer: "Toto zařízení je pro vývojáře, kteří budou vytvářet řešení hybridní reality. Omezíme jeden nákup na transakci zákazníka. Pokud vaše společnost chce koupit několik zařízení Development Edition, bude vyžadovat samostatné transakce k nákupu HoloLens 2 Development Edition jménem společnosti. \n"
+  - question: "Můžu svým zákazníkům HoloLens 2 Development Edition? \n"
+    answer: >
+      Ano, toto zařízení je určené k použití pro vytváření prototypů a testování řešení hybridní reality.
+  - question: "Kde si můžu koupit HoloLens 2 Development Edition? \n"
+    answer: "HoloLens 2 Development Edition se prodává výhradně na Microsoft Store.  \n"
+  - question: "Můžu vrátit svou edici HoloLens 2 Development Edition?  \n"
+    answer: >
+      Všechny prodeje jsou konečné a na verzi HoloLens 2 Development Edition nejsou k dispozici žádné refundace.
+  - question: >
+      Má Developer Edition jiné požadavky na hardware než HoloLens 2?
+    answer: "Ne, toto zařízení je stejné z hlediska požadavků na hardware. Edice Development Edition se může nasadit za pomoci vývoje nebo testování aplikací v komerčním prostředí. \n"
+  - question: >
+      Jak můžu použít Mixed Reality Toolkit – Unity pro vývoj v edici HoloLens 2 Development Edition?
+    answer: >
+      MRTK-Unity je projekt založený na Microsoftu, který obsahuje sadu komponent a funkcí urychlujících vývoj aplikací s hybridní realitou v Unity pro různé platformy. [Další informace](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
+  - question: >
+      Jak můžu používat Mixed Reality Toolkit – Unreal UXT pro vývoj v edici HoloLens 2 Development Edition?
+    answer: >
+      MRTK-Unreal je první komponenta nástrojů uživatelského rozhraní, která se vydává, a v současné době se podporuje pouze v HoloLens 2. Modul plug-in komponent zahrnuje kód, podrobné plány a příklady prostředků běžných funkcí uživatelského prostředí pro simulaci vstupu, aktéry interakce s rukou, komponenty tlačítek s možností stisknutí, komponenty manipulátoru a součásti chování. [Další informace](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/WelcomeToUXTools.html)
+  - question: >
+      Jsou verze operačního systému HoloLens 2 Development Edition stejné jako HoloLens 2?
+    answer: >
+      Ano.
+  - question: >
+      Můžu na zařízení s verzí HoloLens 2 Development Edition spouštět vydané aplikace (bokem načtené nebo uložit)?
+    answer: >
+      Pokud se budete řídit podmínkami a podmínkami HoloLens 2 Development Edition, ano, můžete libovolnou vydanou aplikaci spustit v edici Developer Edition. Použití aplikací předinstalovaných bokem nebo uložených aplikací pro tuto skladovou část nesmezují.
+  - question: >
+      Kde se dozvím další informace o HoloLens 2 Development Edition?
+    answer: >
+      Přejděte na stránku HoloLens 2 Development Edition. [Další informace](https://docs.microsoft.com/hololens/hololens2-options?tabs=device)
+  - question: >
+      Kde se dozvím další informace o vývoji Mixed Reality řešení?
+    answer: >
+      Další informace najdete v Mixed Reality dokumentaci k vývoji. [Další informace](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unityhttps://docs.microsoft.com/en-us/windows/mixed-reality/develop/development?tabs=unity)
+  - question: >
+      Kde se dozvím další informace o navrhování Mixed Reality řešení?
+    answer: >
+      Přejděte do dokumentace úvodu Mixed Reality návrhu. [Další informace](https://docs.microsoft.com/windows/mixed-reality/design/design)
+  - question: >
+      Kde můžu získat podporu pro HoloLens Developer Edition?
+    answer: >
+      Podporu získáte [tady.](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=96bfb202-bc79-741b-bf7a-774d8b767782)
+- name: Unity
+  questions:
+  - question: >
+      Co je součástí zkušební verze Unity?
+    answer: >
+      Zkušební verze Unity s třemi kalendářními Pro umožňuje přístup k kompletnímu řešení Unity&#39;, které mohou profesionálové vytvářet, provozovat a monetizovat. Související zkušební verze Pro Unity nemá žádný termín pro uplatnění.
+
+
+      Tato nabídka je pro nové uživatele a nevztahuje se na zavedená předplatná Unity Pro předplatné. Na zkušební Pro Unity se mohou podléhat dodatečným podmínkám, které budou k dispozici při uplatnění. Zkontrolujte příslušné podmínky [a &amp; zásady](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) ochrany [osobních údajů.](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)
+  - question: >
+      Jak můžu uplatnit svou zkušební verzi Unity Pro verzi?
+    answer: >
+      Pokyny k uplatnění
+
+
+      1. Navštivte id.unity.com
+
+      2. Přihlaste se pomocí svého ID Unity nebo si vytvořte účet.
+
+      3. Vyberte &#39;Uplatnit kód produktu&#39;
+
+      4. Zadejte kód produktu a vyberte &#39;Uplatnit kód produktu&#39;
+
+
+      Další informace najdete v dokumentaci k edici HoloLens 2 Development [Edition.](https://docs.microsoft.com/hololens/hololens2-options?tabs=device)
+  - question: >
+      Můžu vytvářet aplikace s jinými verzemi Unity než s licencí PRO?
+    answer: >
+      Ano, můžete vytvářet aplikace se všemi kompatibilními verzemi Unity.
+  - question: >
+      Návody se obrátit na podporu Unity?
+    answer: >
+      Pokud chcete získat pomoc s dotazy ohledně vašeho ID Unity, účtu, organizace nebo předplatných, navštivte support.unity3d.com.
+- name: Pixyz
+  questions:
+  - question: >
+      Co je součástí zkušební verze modulu plug-in Pixyz?
+    answer: >
+      Tříkaná měsíční zkušební verze modulu plug-in Pixyz, která umožňuje přístup k Pixyzovi a vytváření připravených prostředků s dokonalými filtrované sítěmi, omezeným početem mnohoúhelníků a automatickým UV. Související zkušební verze modulu plug-in Pixyz nemá žádný termín pro uplatnění.
+
+
+      Tato nabídka je pro nové uživatele a nenabízela se k zavedeným předplatným Pixyz. Modul plug-in Pixyz může podléhat dodatečným podmínkám, které budou při uplatnění. Zkontrolujte příslušné podmínky [a &amp; zásady](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fterms-of-service&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=VKL3asd8TjWONsqhzj%2BzjQhkBnY81aa2P5YE8%2BJRecE%3D&amp;reserved=0) ochrany [osobních údajů.](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Funity3d.com%2Flegal%2Fprivacy-policy%3F_ga%3D2.6941362.1885447993.1600097102-915351856.1592845189%26_gac%3D1.157951432.1600400000.CjwKCAjwkoz7BRBPEiwAeKw3q-QDTrYufD7wCV6bND3hfqI2SP07k7V4VvIBjFvGsBWu4cZaibnn2hoC7oMQAvD_BwE&amp;data=04%7C01%7CRonan.Jenkins%40microsoft.com%7C65a23c756bcb49a003ef08d86bb16132%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637377756872930038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=RHyvW2qY4DdFpz3QYhB6D2tx4t%2BiMnm58hIacMeFEPk%3D&amp;reserved=0)
+  - question: >
+      Jak můžu uplatnit zkušební verzi modulu plug-in Pixyz?
+    answer: >
+      Pokyny k uplatnění
+
+
+      1. Navštivte id.unity.com
+
+      2. Přihlášení pomocí Pixyz nebo vytvoření účtu
+
+      3. Klikněte &#39;Uplatnit kód produktu&#39;
+
+      4. Zadejte kód produktu a klikněte na &#39;uplatnit kód produktu&#39;
+
+
+      Další informace najdete v dokumentaci k edici HoloLens 2 Development [Edition.](https://docs.microsoft.com/hololens/hololens2-options?tabs=device)
+  - question: >
+      Návody se obrátit na podporu Pixyz?
+    answer: >
+      Pokud chcete získat pomoc s dotazy ohledně vašeho ID Unity, účtu, organizace nebo předplatných, navštivte support.unity3d.com
+
+
+      Pokud chcete podporu specifickou pro Pixyz (po uplatnění zkušební verze), navštivte [Pixyz-software.com/support](http://pixyz-software.com/support)
+- name: Azure
+  questions:
+  - question: >
+      Jak můžu uplatnit svůj kredit Azure ve výši 500 USD?
+    answer: >
+      Pokud chcete uplatnit 500 USD v kreditech Azure, Azure Pass propagační kód a aktivujte své předplatné. [Další informace](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
+
+
+      Zkontrolujte smlouvu Azure Pass [předplatného a](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) [podrobnosti o nabídce.](https://azure.microsoft.com/en-us/offers/azure-pass/)
+  - question: >
+      Kdy vyprší platnost mého kreditu Azure ve výši 500 USD?
+    answer: >
+      Platnost vašeho kreditu Azure 500 USD vyprší 90 dní po aktivaci vašeho kódu klíče Azure.
+  - question: >
+      Co můžu dělat s kredity Azure?
+    answer: >
+      S kredity Azure můžete začít vytvářet s neustále se rozšiřující&#39;cloudových služeb od Microsoftu. Kredity Azure, které jsou součástí edice HoloLens 2 Development Edition, umožňují zákazníkům rychle začít s vytvářením a testováním aplikací hybridní reality v Azure. Úplné podrobnosti o sestavování v Azure najdete v tématu [Zdroje informací o Azure.](https://azure.microsoft.com/en-us/resources/)
+  - question: >
+      Kde se dozvím další informace o službách Azure hybridní reality?
+    answer: Microsoft nabízí sadu služeb hybridní reality, které vývojářům umožňují vytvářet a testovat řešení hybridní reality. [Další informace](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)
