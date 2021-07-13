@@ -1,11 +1,11 @@
 ---
-title: Viditelnost nastavení stránky
-description: Seznam podporovaných identifikátorů URI pro PageVisibilityList a Průvodce pro zařízení s hybridní realitou HoloLens
+title: Nastavení viditelnost stránky
+description: udržujte si přehled o našich podporovaných identifikátorech uri pro PageVisibilityList a průvodce na HoloLens hybridních hybridních zařízení.
 author: evmill
 ms.author: v-evmill
 ms.date: 10/13/2020
 ms.topic: article
-keywords: hololens, hololens 2, přiřazený přístup, kiosk, stránka nastavení
+keywords: HoloLens, HoloLens 2, přiřazený přístup, veřejný terminál, stránka nastavení
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
@@ -13,156 +13,180 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d28994d911532a940d82756aa45609571ee80ac3
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 5ac3ff27085fd2f7c5bc1de0e461079a673bbb23
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924328"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113637162"
 ---
-# <a name="page-settings-visibility"></a>Viditelnost nastavení stránky
+# <a name="page-settings-visibility"></a>Nastavení viditelnost stránky
 
-Jednou ze spravovatelných funkcí pro zařízení HoloLens je použití zásad [Settings/PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) k omezení stránek, které se zobrazí v aplikaci Nastavení. PageVisibilityList je zásada, která správcům IT umožňuje zabránit zobrazení nebo přístupu konkrétních stránek v aplikaci Nastavení systému, nebo to provést pro všechny stránky kromě těch, které jsou zadané.
+jedna z spravovatelných funkcí pro HoloLens zařízení používá [zásady Nastavení/PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) k omezení stránek zobrazených v rámci aplikace Nastavení. PageVisibilityList je zásada, která správcům IT umožňuje zabránit tomu, aby určité stránky v systémové Nastavení aplikaci byly viditelné nebo přístupné, nebo aby tak učinily pro všechny stránky kromě těch, které jsou uvedené.
 
 > [!NOTE]
-> Tato funkce je k dispozici pouze ve [Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo novější pro zařízení HoloLens 2. Ujistěte se, že jsou aktualizovaná zařízení, pro která ho chcete použít.
+> tato funkce je dostupné jenom v [Windows holografická, verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo vyšší pro zařízení HoloLens 2. Ujistěte se, že zařízení, která hodláte použít, se aktualizují.
 
-Následující příklad znázorňuje zásadu, která by umožnila přístup jenom ke stránkám about a bluetooth, které mají identifikátory URI ms-settings:network-wifi a ms-settings:bluetooth:
+
+## <a name="examples"></a>Příklady
+Stránky jsou označeny zkrácenou verzí publikovaných identifikátorů URI, což je identifikátor URI mínus předpona MS-Settings:.
+
+Následující příklad ilustruje zásadu, která by povolovala přístup jenom na stránky o technologii Bluetooth, které mají identifikátor URI "síť-WiFi" a "Bluetooth":
 - `showonly:network-wifi;network-proxy;bluetooth`
 
-Nastavení prostřednictvím zřizovacího balíčku:
+Následující příklad ilustruje zásadu, která by mohla skrýt stránku pro obnovení operačního systému:
+- `hide:reset`
 
-1. Při vytváření balíčku v nástroji Windows Configuration Designer přejděte do **části Zásady > nastavení > PageVisibilityList.**
-1. Zadejte řetězec: **`showonly:network-wifi;network-proxy;bluetooth`**
-1. Exportujte zřizovací balíček.
-1. Použijte balíček na zařízení.
-Úplné podrobnosti o vytvoření a použití zřizovacího balíčku najdete na [této stránce.](hololens-provisioning.md)
 
-Můžete to udělat přes Intune pomocí OMA-URI:
+## <a name="deploying-this-policy-via-intune"></a>Nasazení této zásady prostřednictvím Intune
+
+Jedná se o konfigurační hodnoty, které se dodávají do Intune:
+
+- **Název:** Zobrazovaný název preferovaného správce pro profil.
+- **OMA-URI:** Plně kvalifikovaný identifikátor URI stránky nastavení, včetně jejího [oboru](/windows/client-management/mdm/policy-configuration-service-provider). Tento příklad na této stránce používá `./Device` obor.
+- **Hodnota:** Řetězcová hodnota, která označuje, zda se mají skrýt nebo zobrazit *pouze* zadané stránky. Možné hodnoty jsou `hide:<pagename>` a `showonly:<pagename>` . 
+ 
+Více stránek je možné zadat tak, že je oddělíte středníkem, a seznam běžných stránek najdete níže.
 
 1. Vytvořte **vlastní zásadu**.
-1. Při nastavování OMA-URI použijte řetězec: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
-1. Při výběru dat zvolte: **Řetězec**
-1. Při zadávání hodnoty použijte: **`showonly:network-wifi;network-proxy;bluetooth`**
-1. Nezapomeňte přiřadit vlastní konfiguraci zařízení ke skupině, ve které má být zařízení.
+1. Při nastavování **OMA-URI** zadejte plně vymezený identifikátor URI. Například: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
+1. Když vybíráte výběr dat, zvolte: **řetězec** .
+1. Při zadávání **hodnoty** použijte pokyny výše. Například: **`showonly:network-wifi;network-proxy;bluetooth`** nebo **`hide:reset`** 
+> [!IMPORTANT]
+> Ujistěte se, že jste přidělili vlastní konfiguraci zařízení skupině, na kterou má zařízení nacházet. Pokud tento krok není proveden, zásada bude vložena, ale nebude použita.
 
-Další informace o skupinách Intune a konfiguracích zařízení najdete v tématu Konfigurace [HoloLens MDM.](hololens-mdm-configure.md)
+další informace o skupinách a konfiguracích zařízení služby intune najdete v tématu [HoloLens konfigurace MDM](hololens-mdm-configure.md) .
 
-Bez ohledu na zvolenou metodu by teď vaše zařízení mělo přijímat změny a uživatelům se zobrazí následující aplikace nastavení.
 
-![Snímek obrazovky s úpravami aktivních hodin v aplikaci Nastavení](images/hololens-page-visibility-list.jpg)
+## <a name="deploying-this-policy-via-a-provisioning-package"></a>Nasazení této zásady prostřednictvím zřizovacího balíčku
 
-Pokud chcete nakonfigurovat stránky aplikace Nastavení tak, aby se ve vašem výběru stránek zobrazují nebo skryly vlastní výběry, podívejte se na identifikátory URI nastavení dostupné na HoloLens.
+jedná se o konfigurační hodnoty, které budou zadány v nástroji Windows configuration Designer:
 
-## <a name="settings-uris"></a>Identifikátory URI nastavení
+**Hodnota:** Řetězcová hodnota, která označuje, zda se mají skrýt nebo zobrazit *pouze* zadané stránky. Možné hodnoty jsou `hide:<pagename>` a `showonly:<pagename>` . Více stránek je možné zadat tak, že je oddělíte středníkem, a seznam běžných stránek najdete níže.
 
-Zařízení HoloLens a Windows 10 zařízení mají v aplikaci Nastavení jiný výběr stránek. Na této stránce najdete pouze nastavení, která existují na HoloLens.
+
+1. při vytváření balíčku v návrháři konfigurace Windows přejděte na **zásady > Nastavení > PageVisibilityList**
+1. Zadejte řetězec: **`showonly:network-wifi;network-proxy;bluetooth`**
+1. Exportujte zřizovací balíček.
+1. Použijte balíček pro vaše zařízení.
+úplné informace o tom, jak vytvořit a použít zřizovací balíček, najdete [na stránce věnovaném zřizování HoloLens](hololens-provisioning.md).
+
+
+bez ohledu na zvolenou metodu by vaše zařízení nyní mělo přijímat změny a uživatelům se zobrazí následující aplikace Nastavení.
+
+![snímek obrazovky s aktivními hodinami upravovanými v aplikaci Nastavení](images/hololens-page-visibility-list.jpg)
+
+pokud chcete nakonfigurovat stránky aplikace Nastavení tak, aby zobrazovaly nebo skryly vlastní výběr stránek, podívejte se na Nastavení identifikátory uri, které jsou k dispozici na HoloLens.
+
+## <a name="settings-uris"></a>Nastavení Identifikátory URI
+
+HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení jinou možnost výběru stránek. Na této stránce najdete pouze nastavení, která existují na HoloLens.
 
 ### <a name="accounts"></a>Účty
 | Stránka Nastavení           | Identifikátor URI                                            |
 |-------------------------|------------------------------------------------|
-| Přístup do práce nebo do školy | `ms-settings:workplace`                         |
-| Registrace Iris       | `ms-settings:signinoptions-launchirisenrollment` |
-| Možnosti přihlášení         | ` ms-settings:signinoptions `                   |
+| Přístup do práce nebo do školy | `workplace`                         |
+| Registrace Iris       | `signinoptions-launchirisenrollment` |
+| Možnosti přihlášení         | ` signinoptions `                   |
 
 ### <a name="apps"></a>Aplikace
 | Stránka Nastavení | Identifikátor URI                          |
 |---------------|------------------------------|
-| Aplikace & funkce<sup>2</sup>     | `ms-settings:appsfeatures` <br> |
-| Aplikace & funkce > Upřesnit možnosti <sup>2</sup>     | `ms-settings::appsfeatures-app` <br> |
-| Aplikace & funkcemi > Offline Maps <sup>2</sup>     | `ms-settings:maps-maps` <br> |
-| Aplikace & funkcemi > Offline Maps > Stažení map <sup>2</sup>     | `ms-settings:maps-downloadmaps` <br> |
+| Aplikace & funkce <sup>2</sup>     | `appsfeatures` <br> |
+| Aplikace & funkce > pokročilé možnosti <sup>2</sup>     | `appsfeatures-app` <br> |
+| aplikace & funkce > Offline Mapy <sup>2</sup>     | `maps-maps` <br> |
+| aplikace & funkce > Offline Mapy > stáhnout mapy <sup>2</sup>     | `maps-downloadmaps` <br> |
 
 ### <a name="devices"></a>Zařízení
 | Stránka Nastavení | Identifikátor URI                          |
 |---------------|------------------------------|
-| Bluetooth     | `ms-settings:bluetooth` <br> `ms-settings:connecteddevices` |
-| Myš <sup>2</sup>      | `ms-settings:mouse` <br>  |
-| USB <sup>2</sup>      | `ms-settings:usb` <br>  |
+| Bluetooth     | `bluetooth` <br> `connecteddevices` |
+| Myš <sup>2</sup>      | `mouse` <br>  |
+| USB <sup>2</sup>      | `usb` <br>  |
 
 ### <a name="privacy"></a>Ochrana osobních údajů
 | Stránka Nastavení            | Identifikátor URI                                             |
 |--------------------------|-------------------------------------------------|
-| Informace o účtu             | `ms-settings:privacy-accountinfo`              |
-| Diagnostika aplikací        | `ms-settings:privacy-appdiagnostics`              |
-| Aplikace na pozadí        | `ms-settings:privacy-backgroundapps`              |
-| Kalendář                 | `ms-settings:privacy-calendar`                    |
-| Historie volání             | `ms-settings:privacy-callhistory`                 |
-| Camera                   | `ms-settings:privacy-webcam`                      |
-| Kontakty                 | `ms-settings:privacy-contacts`                    |
-| Zpětná vazba & diagnostiky | `ms-settings:privacy-feedback`                    |
-| dokumenty.                | `ms-settings:privacy-documents`                   |
-| E-mail                    | `ms-settings:privacy-email`                       |
-| Systém souborů              | `ms-settings:privacy-broadfilesystemaccess`       |
-| Obecné <sup>2</sup>             | `ms-settings:privacy-general`       |
-| Psaní & rukopisu <sup>2</sup>             | `ms-settings:privacy-speechtyping`       |
-| Umístění                 | `ms-settings:privacy-location`                    |
-| Zasílání zpráv                | `ms-settings:privacy-messaging`                   |
-| Mikrofon               | `ms-settings:privacy-microphone`                  |
-| Pohyb <sup>2</sup>               | `ms-settings:privacy-motion`                  |
-| Oznámení            | `ms-settings:privacy-notifications`               |
-| Další zařízení            | `ms-settings:privacy-customdevices`               |
-| Obrázky                 | `ms-settings:privacy-pictures`                    |
-| Rádia                   | `ms-settings:privacy-radios`                      |
-| Snímek obrazovky s <sup>ohraničením 2</sup>             | `ms-settings:privacy-graphicsCaptureWithoutBorder`       |
-| Snímky obrazovky a aplikace <sup>2</sup>             | `ms-settings:privacy-graphicsCaptureProgrammatic`       |
-| Řeč                   | `ms-settings:privacy-speech`                      |
-| Úlohy                    | `ms-settings:privacy-tasks`                       |
-| Pohyby uživatelů           | `ms-settings:privacy-backgroundspatialperception` |
-| Videa                   | `ms-settings:privacy-videos`                      |
-| Hlasová aktivace       | `ms-settings:privacy-voiceactivation`             |
+| Informace o účtu             | `privacy-accountinfo`              |
+| Diagnostika aplikací        | `privacy-appdiagnostics`              |
+| Aplikace na pozadí        | `privacy-backgroundapps`              |
+| Kalendář                 | `privacy-calendar`                    |
+| Historie volání             | `privacy-callhistory`                 |
+| Camera                   | `privacy-webcam`                      |
+| Kontakty                 | `privacy-contacts`                    |
+| Diagnostika & zpětná vazba | `privacy-feedback`                    |
+| dokumenty.                | `privacy-documents`                   |
+| E-mail                    | `privacy-email`                       |
+| Systém souborů              | `privacy-broadfilesystemaccess`       |
+| Obecné <sup>2</sup>             | `privacy-general`       |
+| Ink & – přizpůsobení textu <sup>2</sup>             | `privacy-speechtyping`       |
+| Umístění                 | `privacy-location`                    |
+| Zasílání zpráv                | `privacy-messaging`                   |
+| Mikrofon               | `privacy-microphone`                  |
+| Pohyb <sup>2</sup>               | `privacy-motion`                  |
+| Oznámení            | `privacy-notifications`               |
+| Jiná zařízení            | `privacy-customdevices`               |
+| Obrázky                 | `privacy-pictures`                    |
+| Radiostanicím                   | `privacy-radios`                      |
+| Snímek obrazovky s ohraničením <sup>2</sup>             | `privacy-graphicsCaptureWithoutBorder`       |
+| Snímky obrazovky a aplikace <sup>2</sup>             | `privacy-graphicsCaptureProgrammatic`       |
+| Řeč                   | `privacy-speech`                      |
+| Úkoly                    | `privacy-tasks`                       |
+| Pohyby uživatelů           | `privacy-backgroundspatialperception` |
+| Videa                   | `privacy-videos`                      |
+| Aktivace hlasu       | `privacy-voiceactivation`             |
 
 ### <a name="network--internet"></a>Síť a internet
 | Stránka Nastavení | Identifikátor URI                              |
 |---------------|----------------------------------|
-| Režim v <sup>letadle 2</sup> | `ms-settings:network-airplanemode`        |
-| Proxy server | `ms-settings:network-proxy`        |
-| Síť VPN   | `ms-settings:network-vpn`          |
-| Wi-Fi  | `ms-settings:network-wifi`<br>`ms-settings:network-wifisettings`<br>`ms-settings:network-status`<br>`ms-settings:wifi-provisioning`    |
+| Režim v letadle <sup>2</sup> | `network-airplanemode`        |
+| Proxy server | `network-proxy`        |
+| Síť VPN   | `network-vpn`          |
+| Wi-Fi  | `network-wifi`<br>`network-wifisettings`<br>`network-status`<br>`wifi-provisioning`    |
 
 
 
 ### <a name="system"></a>Systémový
 | Stránka Nastavení      | Identifikátor URI                                |
 |--------------------|------------------------------------|
-| Baterie <sup>2</sup>           | `ms-settings:batterysaver`<br>|
-| Baterie <sup>2</sup>           | `ms-settings:batterysaver-settings`<br>|
-| Barvy             | `ms-settings:colors`<br>`ms-settings:personalization-colors` |
-| Hologramy <sup>2</sup>  |  `ms-settings:holograms`  |
-| <sup>Uchýlovací 2</sup> |  `ms-settings:calibration` |
-| Oznámení & akce  | `ms-settings:notifications`          |
-| Sdílená prostředí | `ms-settings:crossdevice` 
-| Zvuk <sup>2</sup>           | `ms-settings:sound`<br>|
-| Zvuk > Svazek aplikace a předvolba zařízení <sup>2</sup>           | `ms-settings:apps-volume`<br>|
-| Sound > Správa zvukových zařízení <sup>2</sup>           | `ms-settings:sound-devices`<br>|
-| Storage            | `ms-settings:storagesense`           |
-| Konfigurace > úložiště Inteligentní úložiště <sup>2</sup>           | `ms-settings:storagepolicies`<br>|
+| Baterie <sup>2</sup>           | `batterysaver`<br>|
+| Baterie <sup>2</sup>           | `batterysaver-settings`<br>|
+| Barvy             | `colors`<br>`personalization-colors` |
+| Hologramy <sup>2</sup>  |  `holograms`  |
+| <sup>Uchýlovací 2</sup> |  `calibration` |
+| Oznámení & akcích  | `notifications`          |
+| Sdílená prostředí | `crossdevice` 
+| Zvuk <sup>2</sup>           | `sound`<br>|
+| Zvuk > Svazek aplikace a předvolba zařízení <sup>2</sup>           | `apps-volume`<br>|
+| Sound > Správa zvukových zařízení <sup>2</sup>           | `sound-devices`<br>|
+| Storage            | `storagesense`           |
+| Storage > konfigurace Storage Sense <sup>2</sup>           | `storagepolicies`<br>|
 
 ### <a name="time--language"></a>Time & Language
 | Stránka Nastavení | Identifikátor URI                                           |
 |---------------|-----------------------------------------------|
-| Datum & čas <sup>2</sup> | `ms-settings:dateandtime`                  |
-| Klávesnice <sup>2</sup> | `ms-settings:keyboard`                  |
-| Jazyk <sup>2</sup> | `ms-settings:language`                  |
-| Jazyk <sup>2</sup> | `ms-settings:regionlanguage-languageoptions`                  |
-| Jazyk      | `ms-settings:regionlanguage`<br>`ms-settings:regionlanguage-adddisplaylanguage`<br>`ms-settings:regionlanguage-setdisplaylanguage` |
-| Oblast        | `ms-settings:regionformatting`                  |
+| Datum & čas <sup>2</sup> | `dateandtime`                  |
+| Klávesnice <sup>2</sup> | `keyboard`                  |
+| Jazyk <sup>2</sup> | `language`                  |
+| Jazyk <sup>2</sup> | `regionlanguage-languageoptions`                  |
+| Jazyk      | `regionlanguage`<br>`regionlanguage-adddisplaylanguage`<br>`regionlanguage-setdisplaylanguage` |
+| Oblast        | `regionformatting`                  |
 
 ### <a name="update--security"></a>Zabezpečení & aktualizací
 | Stránka Nastavení                         | Identifikátor URI                                       |
 |---------------------------------------|-------------------------------------------|
-| Rozšířené možnosti                    | `ms-settings:windowsupdate-options`         |
-| Obnovení & obnovení <sup>2</sup>      | `ms-settings:reset`         |
-| Program Windows Insider               | `ms-settings:windowsinsider` <br>`ms-settings:windowsinsider-optin`          |
-| Windows Update                        | `ms-settings:windowsupdate`<br> `ms-settings:windowsupdate-activehours`  <br> `ms-settings:windowsupdate-history` <br> `ms-settings:windowsupdate-optionalupdates` <br><sup>1</sup>`ms-settings:windowsupdate-options`<br><sup>1</sup>`ms-settings:windowsupdate-restartoptions` |
-| služba Windows Update – Kontroluje aktualizace. | `ms-settings:windowsupdate-action`          |
+| Rozšířené možnosti                    | `windowsupdate-options`         |
+| Obnovení & obnovení <sup>2</sup>      | `reset`         |
+| Program Windows Insider               | `windowsinsider` <br>`windowsinsider-optin`          |
+| Windows Update                        | `windowsupdate`<br> `windowsupdate-activehours`  <br> `windowsupdate-history` <br> `windowsupdate-optionalupdates` <br><sup>1</sup>`windowsupdate-options`<br><sup>1</sup>`windowsupdate-restartoptions` |
+| Windows Aktualizace – kontroluje aktualizace. | `windowsupdate-action`          |
 
 
-- <sup>1</sup> – U verzí starších než Windows Holographic verze 21H1 vás následující dvě  identifikátory URI ve skutečnosti nesmídí na stránky Upřesnit možnosti **nebo** Možnosti. Zablokují nebo zobrazí jenom hlavní služba Windows Update stránky.
-  -  ms-settings:windowsupdate-options
-  -  ms-settings:windowsupdate-restartoptions
+- <sup>1</sup> – Ve verzích starších než Windows Holographic verze 21H1 vás následující dvě  identifikátory URI ve skutečnosti nesmídí na stránky Upřesnit možnosti nebo **Možnosti.** Zablokují nebo zobrazí jenom hlavní stránku Windows Aktualizace.
+  -  windowsupdate-options
+  -  windowsupdate-restartoptions
 
-- <sup>2</sup> – K dispozici ve Windows Holographic 21H1 nebo novějším.
+- <sup>2</sup> – K dispozici Windows Holographic 21H1 nebo novějším.
 
 
-Úplný seznam identifikátorů URI Windows 10 najdete v dokumentaci ke [spouštěcím nastavením.](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)
+Úplný seznam identifikátorů URI Windows 10 Nastavení najdete v dokumentaci [ke spouštěcím nastavením.](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)

@@ -1,23 +1,23 @@
 ---
 title: Pokyny pro přispívání
-description: Přečtěte si, jak přispívat do dokumentů HoloLens na platformě docs.microsoft.com pomocí Markdownu s charakterem GitHubu.
+description: naučte se, jak přispívat do HoloLens dokumentů na platformě docs.microsoft.com pomocí GitHub s charakterem markdownu.
 author: hferrone
 ms.author: mattwoj
 ms.date: 01/04/2021
 ms.topic: article
 ms.prod: hololens
-ms.openlocfilehash: dd205ab1fe399d6612be982136c80733a5eb087e
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 73b6e8bcd634cb4d45171bda0a85f2e991a977c9
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377560"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635666"
 ---
-# <a name="contributing-to-the-hololens-documentation"></a>Přispívání do dokumentace k HoloLens
+# <a name="contributing-to-the-hololens-documentation"></a>přispívání do dokumentace k HoloLens
 
-Vítejte v [dokumentaci k HoloLens](https://github.com/MicrosoftDocs/Hololens). Všechny články, které v tomto úložišti vytváříte nebo upravujete, **budou přístupné veřejnosti.** 
+vítejte v [dokumentaci k HoloLens](https://github.com/MicrosoftDocs/Hololens). Všechny články, které v tomto úložišti vytváříte nebo upravujete, **budou přístupné veřejnosti.** 
 
-Dokumenty HoloLens se zobrazují na platformě docs.microsoft.com, která využívá Markdownu s funkcemi Markdig s využitím GitHubu. Obsah, který upravíte v tomto úložišti, se naformátuje na stylizované stránky, které se zobrazují na https://docs.microsoft.com/hololens . 
+dokumentace HoloLens se zobrazují na platformě docs.microsoft.com, která GitHub používá markdownu s funkcemi Markdig. Obsah, který upravíte v tomto úložišti, se naformátuje na stylizované stránky, které se zobrazují na/HoloLens.
 
 Tato stránka obsahuje základní kroky a pokyny pro přispívání a odkazy na základy Markdownu. Děkujeme za váš příspěvek!
 
@@ -26,18 +26,18 @@ Tato stránka obsahuje základní kroky a pokyny pro přispívání a odkazy na 
 | Název úložiště | URL |
 | --- | --- |
 | HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
-| Hybridní realita | [MicrosoftDocs/Mixed – realita](https://docs.microsoft.com/windows/mixed-reality) |
+| Hybridní realita | [MicrosoftDocs/Mixed – realita](/windows/mixed-reality) |
 | Průvodce nadšenci VR | [MicrosoftDocs/smíšený – realita/patříte mezi fanoušky – příručka](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
 
 ## <a name="before-you-start"></a>Než začnete
 
-Pokud ho ještě nemáte, budete muset [vytvořit účet GitHub](https://github.com/join).
+pokud ho ještě nemáte, budete muset [vytvořit účet GitHub](https://github.com/join).
 
 >[!NOTE]
->Pokud jste zaměstnancem Microsoftu, propojte svůj účet GitHub s aliasem Microsoftu na [portálu Microsoft Open Source Portal](https://repos.opensource.microsoft.com/). Připojte se ke organizacím **"Microsoft"** a **"MicrosoftDocs"** .
+>pokud jste zaměstnancem microsoftu, propojte svůj účet GitHub s aliasem microsoftu na [portálu microsoft Open Source portal](https://repos.opensource.microsoft.com/). Připojte se ke organizacím **"Microsoft"** a **"MicrosoftDocs"** .
 
-Při nastavování účtu GitHub doporučujeme také tato bezpečnostní opatření:
-- Vytvořte [pro svůj účet GitHub silné heslo](https://github.com/settings/admin).
+při nastavování účtu GitHub doporučujeme také tato bezpečnostní opatření:
+- vytvořte [pro účet GitHub silné heslo](https://github.com/settings/admin).
 - Povolte [dvojúrovňové ověřování](https://github.com/settings/two_factor_authentication/configure).
 - Uložte si [kódy obnovení](https://github.com/settings/auth/recovery-codes) na bezpečné místo.
 - Aktualizujte [Nastavení veřejného profilu](https://github.com/settings/profile).
@@ -45,11 +45,11 @@ Při nastavování účtu GitHub doporučujeme také tato bezpečnostní opatře
    - Doporučujeme nahrát profilový obrázek, protože Miniatura se zobrazuje na stránkách docs, na které přispějete.
 - Pokud plánujete použití příkazového řádku, zvažte nastavení [Správce přihlašovacích údajů Git pro Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest). Tímto způsobem nebudete muset zadávat heslo pokaždé, když provedete příspěvek.
 
-Systém publikování je svázán s GitHubem, takže tyto kroky jsou důležité. Pomocí vašeho aliasu GitHubu budete mít k jednotlivým článkům v seznamu buď autora, nebo přispěvatele.
+systém publikování je vázaný na GitHub, takže tyto kroky jsou důležité. pomocí aliasu GitHub budete mít v každém článku možnost autor nebo přispěvatel.
 
 ## <a name="editing-an-existing-article"></a>Úprava existujícího článku
 
-Pomocí následujícího pracovního postupu můžete provést aktualizace *existujícího článku* přes GitHub ve webovém prohlížeči:
+pomocí následujícího pracovního postupu proveďte aktualizace *existujícího článku* prostřednictvím GitHub ve webovém prohlížeči:
 
 1. Ve složce Mixed-reality-docs přejděte k článku, který chcete upravit.
 
@@ -63,7 +63,7 @@ Pomocí následujícího pracovního postupu můžete provést aktualizace *exis
 
    * **title**: nadpis stránky, který se zobrazí na kartě prohlížeče při prohlížení článku. Nadpisy stránek se používají pro SEO a indexování, takže neměňte název, pokud není potřeba (ale to je méně důležité, než se dokumentace zveřejní).
    * **Popis**: Napište stručný popis obsahu článku, který zvyšuje SEO a zjišťování.
-   * **Autor**: Pokud jste primárním vlastníkem stránky, přidejte sem svůj alias GitHubu.
+   * **autor**: pokud jste primárním vlastníkem stránky, přidejte sem svůj alias GitHub.
    * **MS. Author**: Pokud jste primárním vlastníkem stránky, přidejte sem svůj alias Microsoftu (nepotřebujete @microsoft.com , jenom alias).
    * **MS. Date**: aktualizujte datum, pokud přidáváte hlavní obsah stránky, ale ne pro opravy, jako je například vyjasnění, formátování, gramatika nebo pravopis.
    * **klíčová slova**: pomocná klíčová slova v SEO (optimalizace vyhledávacích strojů). Přidejte klíčová slova, která jsou oddělená čárkou a mezerou, která jsou specifická pro váš článek, ale za poslední klíčová slova v seznamu se nezaokrouhlí žádné interpunkční znaménko. Nemusíte přidávat globální klíčová slova, která platí pro všechny články, protože jsou spravovaná jinde. 
@@ -100,7 +100,7 @@ Pokud přidáte přesměrování, nezapomeňte odstranit i starý soubor.
 
 ## <a name="creating-a-new-article"></a>Vytváření nového článku
 
-Pomocí následujícího pracovního postupu můžete *vytvářet nové články* v úložišti dokumentace přes GitHub ve webovém prohlížeči:
+pomocí následujícího pracovního postupu můžete *vytvářet nové články* v úložišti dokumentace prostřednictvím GitHub ve webovém prohlížeči:
 
 1. Vytvořte rozvětvení s větví "Master" MicrosoftDocs/Mixed-reality (pomocí tlačítka **rozvětvení** v pravém horním rohu).
 
@@ -146,36 +146,36 @@ Pomocí následujícího pracovního postupu můžete *vytvářet nové články
 Následující materiály vám pomůžou naučit se, jak upravovat dokumentaci pomocí jazyka Markdownu:
 
 - [Základy formátu Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-- [Další zdroje informací pro zápis Markdownu pro docs.microsoft.com](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [Další zdroje informací pro zápis Markdownu pro docs.microsoft.com](/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>Přidávání tabulek
 
 Vzhledem k tomu, že tabulky stylů docs.microsoft.com, nemají ohraničení ani vlastní styly, ani když se pokusíte o vloženou šablonu stylů CSS. Zdá se, že bude fungovat po krátké době, ale nakonec bude tato platforma oddělit styly z tabulky. Proto Plánujte dopředu a udržujte své tabulky jednoduché. [Tady je web, který usnadňuje Markdownu tabulek](https://www.tablesgenerator.com/markdown_tables).
 
-[Rozšíření docs Markdownu pro Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) také usnadňuje generování tabulek, pokud používáte [Visual Studio Code (viz níže)](#using-visual-studio-code) , chcete-li upravit dokumentaci.
+[rozšíření Docs markdownu pro Visual Studio Code](/teamblog/docs-extension) také usnadňuje generování tabulek, pokud používáte [Visual Studio Code (viz níže)](#using-visual-studio-code) , chcete-li upravit dokumentaci.
 
 ### <a name="adding-images"></a>Přidávání imagí
 
 Vaše image budete muset nahrát do složky "Mixed-realit-docs/images" v úložišti a pak je podle potřeby odkázat v článku. Obrázky se automaticky zobrazí v plné velikosti, což znamená, že velké obrázky budou vyplnit celou šířku článku. Před odesláním imagí doporučujeme předem nastavovat jejich změny. Doporučená šířka je mezi 600 a 700 pixelů, ale pokud se jedná o hustý snímek obrazovky nebo zlomek snímku obrazovky, měli byste velikost navýšit nebo snížit.
 
 >[!IMPORTANT]
->Obrázky můžete do svého forku nahrát jenom před sloučením. Pokud tedy plánujete přidat obrázky do článku, budete muset pomocí [nástroje Visual Studio Code](#using-visual-studio-code) nejprve přidat obrázky do složky "images" forku nebo se ujistit, že jste ve webovém prohlížeči provedli následující:
+>Obrázky můžete do svého forku nahrát jenom před sloučením. Pokud tedy plánujete přidat obrázky do článku, budete muset obrázky nejprve přidat do složky images forku pomocí nástroje [Visual Studio Code](#using-visual-studio-code) nebo se ujistit, že jste ve webovém prohlížeči provedli následující akce:
 >
 >1. Fork je v microsoftdocs/hybridním reality.
 >2. Upravoval jste článek ve forku.
->3. Nahráli jste obrázky, na které odkazujete ve svém článku, do složky mixed-reality-docs/images ve forku.
+>3. Nahráli jste obrázky, na které odkazujete v článku, do složky mixed-reality-docs/images ve forku.
 >4. Vytvořili jste **žádost o stažení** pro sloučení vašeho forku do hlavní větve MicrosoftDocs/mixed-reality.
 >
 >Pokud chcete zjistit, jak nastavit vlastní roz fork, postupujte podle pokynů k [vytvoření nového článku.](#creating-a-new-article)
 
 ## <a name="previewing-your-work"></a>Náhled práce
 
-Při úpravách na GitHubu prostřednictvím webového prohlížeče můžete vybrat kartu **Náhled** v horní části stránky a před potvrzením zobrazit náhled své práce. 
+Při úpravách GitHub ve webovém prohlížeči můžete vybrat kartu **Náhled** v horní části stránky a před potvrzením zobrazit náhled své práce. 
 
 >[!NOTE]
 >Náhled změn na webu review.docs.microsoft.com je k dispozici pouze zaměstnancům Microsoftu.
 
-Zaměstnanci Microsoftu: Po sloučení příspěvků do hlavní větve můžete obsah zkontrolovat předtím, než se zveřejní na https://review.docs.microsoft.com/hololens?branch=master adrese . Najděte svůj článek pomocí obsahu v levém sloupci.
+Zaměstnanci Microsoftu: Po sloučení příspěvků do hlavní větve můžete obsah zkontrolovat předtím, než se zveřejní na </hololens?branch=master>. Najděte svůj článek pomocí obsahu v levém sloupci.
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Úpravy v prohlížeči vs. úpravy pomocí desktopových klientů
 
@@ -183,9 +183,9 @@ Zaměstnanci Microsoftu: Po sloučení příspěvků do hlavní větve můžete 
 
 - Kontrola pravopisu se vám neschová.
 - S jinými články nemáte žádné inteligentní propojení (název souboru článku musíte zadat ručně).
-- Nahrávání obrázků a odkazování na obrázky může být problém.
+- Nahrávání obrázků a odkazování na obrázky může být obměná.
 
-Pokud se těmto problémům těmto problémům chytáte raději, použijte desktopového klienta, jako [je Visual Studio Code](https://code.visualstudio.com/) s [několika](#useful-extensions) užitečnými rozšířeními při přispívání.
+Pokud se těmto problémům těmto problémům chytáte, použijte desktopového klienta, jako [je Visual Studio Code](https://code.visualstudio.com/) s [několika](#useful-extensions) užitečnými rozšířeními při přispívání.
 
 ## <a name="using-visual-studio-code"></a>Používání nástroje Visual Studio Code
 
@@ -209,7 +209,7 @@ Postupujte podle těchto kroků a Visual Studio Code pro práci s tímto repo:
 
 ### <a name="editing-documentation"></a>Úprava dokumentace
 
-Pomocí následujícího pracovního postupu můžete provádět změny v dokumentaci pomocí Visual Studio Code:
+Pomocí následujícího pracovního postupu můžete provádět změny v dokumentaci s Visual Studio Code:
 
 >[!NOTE]
 >Všechny pokyny k [úpravám](#editing-an-existing-article) a vytváření [článků](#creating-a-new-article) a základy úprav [Markdownu](#markdown-basics)uvedené výše platí i při Visual Studio Code kódu.
@@ -222,9 +222,9 @@ Pomocí následujícího pracovního postupu můžete provádět změny v dokume
       
    2. V Visual Studio Code tlačítko Synchronizovat, aby se nový aktualizovaný fork synchronizoval s místním klonem.
       
-      ![Klikněte na obrázek tlačítka Synchronizace.](images/sync-clone.png)
+      ![Klikněte na obrázek tlačítka Synchronizovat.](images/sync-clone.png)
       
-2. Články můžete vytvářet nebo upravovat v naklonovaném Visual Studio Code.
+2. Vytvářejte nebo upravovat články v naklonovaném Visual Studio Code.
 
    1. Upravte jeden nebo více článků (v případě potřeby přidejte obrázky do složky images).
    
@@ -236,7 +236,7 @@ Pomocí následujícího pracovního postupu můžete provádět změny v dokume
    
       ![Volba možnosti Potvrdit vše ve správy zdrojového kódu](images/source-control-commit.png)
       
-   4. Výběrem **tlačítka synchronizovat** synchronizujte změny zpět do původního zdroje (váš fork na GitHubu).
+   4. Výběrem **tlačítka synchronizovat** synchronizujte změny zpět do původního zdroje (váš fork na GitHub).
       
       ![Klikněte na tlačítko Synchronizovat.](images/sync-back.png)
       
@@ -248,9 +248,9 @@ Pomocí následujícího pracovního postupu můžete provádět změny v dokume
 
 Při úpravách Visual Studio Code jsou užitečná následující rozšíření:
 
-- [Rozšíření Docs Markdown pro Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) – pomocí **kombinace alt+M** zobrazíte nabídku možností vytváření dokumentů, jako jsou:
+- [Rozšíření Docs Markdown pro Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) – pomocí **kombinace alt+M** zobrazíte nabídku možností vytváření na docs, jako jsou:
    - Prohledat a odkazovat na obrázky, které jste nahráli.
    - Přidejte formátování, jako jsou seznamy, tabulky a volání specifická pro docs, jako `>[!NOTE]` je .
    - Můžete vyhledávat interní odkazy a záložky a odkazovat na je (odkazy na konkrétní oddíly na stránce).
-   - Chyby formátování jsou zvýrazněné (pokud se chcete dozvědět více, najeďte myší na chybu).
+   - Chyby formátování jsou zvýrazněné (pokud se chcete dozvědět víc, najeďte myší na chybu).
 - [Kontrola pravopisu kódu](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) – chybně napsaná slova budou podtržena. klikněte pravým tlačítkem na chybně napsané slovo a změňte ho nebo ho uložte do slovníku.

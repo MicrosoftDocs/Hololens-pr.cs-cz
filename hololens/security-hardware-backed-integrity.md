@@ -1,57 +1,57 @@
 ---
-title: Integrita a ověření modulu runtime s hardwarovou zálohou
-description: Integrita a ověření modulu runtime s hardwarovou zálohou
+title: Integrita zálohovaná hardwarem a ověření identity za běhu
+description: Integrita zálohovaná hardwarem a ověření identity za běhu
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.prod: hololens
 ms.topic: article
-keywords: security, hololens, Hardware backed integrity, runtime attestation, UEFI, UEFI secure boot, secure boot, TPM, threat protection, Windows Anti-Persistence Assurance, code integrity, code protection,
+keywords: zabezpečení, hololens, integrita zálohovaných hardwaru, ověření identity za běhu, rozhraní uefi, zabezpečené spouštění uefi, zabezpečené spouštění, TPM, ochrana před hrozbami, Windows Assurance proti persistenci, integrita kódu, ochrana kódu,
 ms.sitesec: library
 ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0a89fa5e61e560f629444efd2728f6dd41db60d3
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 037f9325555244314518c81d7814bf983c345af6
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379254"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639331"
 ---
-# <a name="hardware-backed-integrity-and-runtime-attestation"></a>Integrita s hardwarovým zabezpečením a ověření modulu runtime
+# <a name="hardware-backed-integrity-and-runtime-attestation"></a>Integrita zálohovaná hardwarem a ověření identity za běhu
 
-Integrita a ověřování modulu runtime s hardwarovým zabezpečením chrání před hrozbami, které vznikly před spuštěním operačního systému, za běhu, kdy zařízení používá hardware a služby vzdáleného ověření, aby se zajistila integrita při spuštění a během doby běhu.
+Integrita zálohovaná v rámci hardwaru a ověřování za běhu chrání před hrozbami, které vznikly před začátkem operačního systému, během modulu runtime, když zařízení používá hardware a služby vzdáleného ověření identity, aby se zajistila integrita při spuštění a v celé době běhu.
 
 ## <a name="uefi-secure-boot"></a>Zabezpečené spouštění UEFI
 
-HoloLens 2 vynucuje zabezpečené spouštění rozhraní UEFI (Unified Extensible Firmware Interface) vždy a rozhraní UEFI se Windows Holographic for Business.
-Zabezpečené spouštění zajišťuje, že celý řetěz spouštění je ověřený z bezpečnostních systémů a že se systém Windows vždy spustí se správnými použitými zásadami zabezpečení. Přečtěte si další informace [o zabezpečeném spouštění.](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-secure-boot)
+HoloLens 2 vynutila vždy zabezpečené spouštění rozhraní UEFI (Unified Extensible Firmware Interface) (uefi) a rozhraní uefi se spustí jenom Windows Holographic for Business.
+zabezpečené spouštění zajišťuje, že se u celého spouštěcího řetězu ověří integrita a že se Windows vždycky spustí se správnými zásadami zabezpečení, které se na něj vztahují. Přečtěte si další informace o [zabezpečeném spouštění](/windows-hardware/design/device-experiences/oem-secure-boot).
 
 ## <a name="tpm"></a>TPM
 
-Čip specifikace TPM (Trusted Platform Module) (TPM) je specializovaný čip na zařízení koncového bodu. HoloLens 2 používá čip TPM 2.0, který poskytuje hardwarově vynucenou izolaci klíčů. Přečtěte si další [informace o základech čipu TPM.](https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-fundamentals)
+ČIP TPM (Trusted Platform Module) je specializovaný čip na zařízení koncového bodu. HoloLens 2 používá čip TPM 2,0, který zajišťuje izolaci klíčů vynucované hardwarem. Přečtěte si další informace o [základních modulech TPM](/windows/security/information-protection/tpm/tpm-fundamentals).
 
-## <a name="persistence-access-threat-protection"></a>Ochrana před internetovou hrozbou pro trvalost přístupu
+## <a name="persistence-access-threat-protection"></a>Ochrana před hrozbami pro zajištění trvalého přístupu
 
-Cílem většiny kybernetických útoků je udržovat trvalý přístup k zařízení. V případě kyberzlomyslné ochrany umožňuje udržování této trvalosti ohrožené zařízení s Windows připojit se k botnetu, prodávat přístup k zařízení nebo jiným nekalé uživatele nebo umožnit opakované krádeže dat. Ve světě cílených útoků je trvalost nezbytná pro úspěšný kybernetický útok – ať už na zařízení nebo (častěji) v celé síti.  
+Cílem většiny kyberútokům je zachovat trvalý přístup k zařízení. v případě kybernetická zachovávání této trvalosti umožňuje napadené zařízení Windows připojit se k botnetu, prodávat přístup k zařízení nebo jiným uživatelům nekalé nebo povolit opakovanou krádeži dat. V rámci cílených útoků je trvalá trvalá úspěšná cyberattack – ať už na zařízení nebo (častěji), celou síť.  
 
-Cílené útoky se ve skutečnosti považují za "pokročilé trvalé hrozby", protože jejich strategická potřeba udržovat přístup k cílovému zařízení nebo síti. Z tohoto důvodu Windows Holographic for Business bránit trvalosti, která je naprosto nezbytná, a používá technologii odolnosti proti trvalosti k tomu, aby se přisliboval pro zabezpečení zákazníků.
+Ve skutečnosti se cílené útoky považují za "rozšířené trvalé hrozby", protože jejich strategické potřeby udržují přístup k cílovému zařízení nebo síti. z tohoto důvodu Windows Holographic for Business považuje ochranu proti trvalosti naprosto zásadní a používá technologii ochrany před trvalým zajištěním, aby ironclad zákazníky provedli příslib zabezpečení.
 
 ### <a name="secure-boot"></a>Zabezpečené spuštění
 
-HoloLens 2 vynucuje zabezpečené spouštění rozhraní UEFI (Unified Extensible Firmware Interface) ve všech stavech základního operačního systému. Rozhraní UEFI spustí jenom důvěryhodné platformy Microsoftu, které zajistí, aby byl celý řetěz spouštění ověřený z integrity a systém Windows se vždy spustí se správnými použitými zásadami zabezpečení. HoloLens 2 neumožňuje vypnout zabezpečené spouštění ani neumožňuje zavaděče spouštění třetích stran.
+HoloLens 2 vynutilo zabezpečené spouštění rozhraní UEFI (Unified Extensible Firmware Interface) (UEFI) ve všech základních stavech operačního systému. rozhraní UEFI spustí jenom důvěryhodné platformy microsoftu, což zajistí, že se u celého spouštěcího řetězu ověří integrita a že se Windows vždycky spustí se správnými zásadami zabezpečení, které se na něj vztahují. HoloLens 2 neprovádí zabezpečené spouštění, které není vypnuté, ani nepovoluje spouštěcí zavaděč třetích stran.
 
 > [!Tip]
-> Další informace o [zabezpečeném spouštění.](https://docs.microsoft.com/windows-hardware/design/device-experiences/oem-secure-boot)
+> Přečtěte si další informace o [zabezpečeném spouštění](/windows-hardware/design/device-experiences/oem-secure-boot).
 
-### <a name="windows-anti-persistence-assurance"></a>Ochrana proti trvalosti Windows
+### <a name="windows-anti-persistence-assurance"></a>Windows Záruka proti trvalosti
 
-Ochrana proti holoLens 2 zaručuje svým uživatelům, že i ve výjimečných situacích, kdy k ohrožení systému dojde za běhu – například při vzdáleném zneužití – se taková událost zmírní odstraněním veškerého škodlivého kódu ze systému pouhým vypnutím zařízení. K dalšímu posílení své odolnosti proti trvalosti přidal HoloLens 2 výkonnou ochranu integrity a zasadil ochranu jen pro čtení.
+HoloLens 2 ochrana proti perzistenci zaručuje, že uživatelé i v vzácných situacích, kdy došlo k narušení běhu systému, jako je vzdálené zneužití – taková událost by byla zmírněna se zachováním veškerého škodlivého kódu ze systému pouhým vypnutím zařízení. aby bylo možné lépe posílit ochranu proti perzistenci, HoloLens 2 přizpůsobila výkonnou ochranu integrity a na základě nich byly vloženy ochrany jen pro čtení.
 
-Trvalost dat operačního systému ve formě dat je stále možná, pokud uživatel nezačlení resetování tlačítkem (PBR) zařízení, které vymaže všechny upravitelné oddíly. Trvalost neměnných oddílů je sice mnohem obtížnější, ale aby uživatel odstranil jakoukoli možnou trvalost hrozeb z neměnných částí, musí zařízení HoloLens 2 přebírat z PBR.
+Trvalá data operačního systému ve formě dat jsou stále možná, pokud uživatel neprovede resetování zařízení (PBR) na tlačítku, které vymaže všechny proměnlivé oddíly. i když je trvalá trvalá i neproměnlivé oddíly, musí uživatel vytvořit PBR HoloLens 2, aby bylo možné z proměnlivých částí odstranit případná trvalá trvalá hrozba.
 
 ## <a name="code-integrity-protection"></a>Ochrana integrity kódu
 
-Integrita kódu (CI) je klíčovou vlastností zabezpečení moderního operačního systému. Vynucování CI umožňuje zvuková rozhodnutí o zabezpečení, protože zaručuje, že původ kódu bude pro uživatele i operační systém transparentní. Úplná integrita kódu musí rozšířit minulé podepisování binárních obrázků a zahrnout vynucení modulu runtime, jako je integrita toku řízení a dynamická omezení kódu. CI je důležité k tomu, aby se zabránilo více třídám útoků, včetně socialy inženýrovaných malwaru, jako je ransomware, zneužití vzdáleného spouštění kódu a různé další třídy útoku.
+Integrita kódu (CI) je klíčovou vlastností zabezpečení moderního operačního systému. Vynucování CI umožňuje rozhodování o zabezpečení, protože zaručuje, že provenience kódu je transparentní jak pro uživatele, tak pro operační systém. Úplná integrita kódu musí být rozšířena o poslední podepsání binárního obrázku a zahrnovat vynucení modulu runtime, jako je integrita toku řízení a dynamické omezení kódu. CI je důležité, aby se zabránilo více třídám útoků, včetně sociálních techniků, jako je ransomwarem, zneužití vzdáleného spouštění kódu a různých dalších tříd útoku.

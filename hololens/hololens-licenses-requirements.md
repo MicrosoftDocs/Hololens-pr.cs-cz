@@ -12,49 +12,102 @@ ms.date: 1/23/2020
 ms.reviewer: ''
 manager: bradke
 appliesto:
-- HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 2f7af532d2172dcaa6514ee11dbb0d6ab5631929
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: d0d8aa648df7901dec8636942e43aa549e626d7e
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379273"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113635887"
 ---
 # <a name="license-requirements"></a>Licenční požadavky
 
-## <a name="mobile-device-management-mdm-licenses-guidance"></a>Pokyny Správa zařízení k licencím pro Mobile Správa zařízení (MDM)
+## <a name="hololens-2-device-managed"></a>HoloLens 2 Zařízení (spravované)
 
-Pokud máte v plánu spravovat zařízení HoloLens, budete potřebovat Azure AD a MDM. Active Director (AD) není možné použít ke správě zařízení HoloLens.
-Pokud plánujete používat jiný MDM než Intune, vyžaduje [se Azure Active Directory licence.](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
-Pokud máte v plánu používat Intune jako MDM, přečtěte si seznam sad, [které](https://docs.microsoft.com/intune/fundamentals/licenses) obsahují licence Intune. **Upozorňujeme, že služba Azure AD je součástí většiny těchto sad.**
+[Účet Azure AD](https://docs.microsoft.com/azure/active-directory/)
 
-## <a name="identify-the-licenses-needed-for-your-scenario-and-products"></a>Identifikace licencí potřebných pro váš scénář a produkty
+> [!IMPORTANT]
+> Službu Active Directory (AD) nelze použít ke správě HoloLens zařízení.
 
-### <a name="hololens-1st-gen-licenses-requirements"></a>HoloLens (1. generace) – požadavky na licence
+[Microsoft Intune](https://docs.microsoft.com/mem/intune/fundamentals/what-is-intune) nebo jiný MDM.
+- [Windows Autopilot pro HoloLens 2](hololens2-autopilot.md)– zjednodušuje zřizování pro správce IT i koncové uživatele. Správci IT mohou předem HoloLens 2 zásady a při prvním spuštění se zařízení nasadí ve stavu připraveném pro firmy s nulovou interakcí koncových uživatelů. 
 
-Možná budete muset upgradovat zařízení HoloLens (1. generace) na Windows Holographic for Business. (Pokud chcete zjistit, jestli potřebujete upgradovat, podívejte se na komerční funkce [HoloLens.](holoLens-commercial-features.md#feature-comparison-between-editions)
+  > [!NOTE]
+  > Windows Autopilot vyžaduje, aby [](https://docs.microsoft.com/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) [se azure P1](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis) a automatická registrace nakonfigurovali jako první pro tok Autopilotu a nasazení zařízení s nízkými funkcemi. 
 
- Pokud ano, budete muset provést následující:
+### <a name="business-use-case"></a>Případ obchodního použití: 
 
-- Získání souboru XML s licencí HoloLens Enterprise
-- Použijte soubor XML na HoloLens. Můžete to provést prostřednictvím [zřizovacího balíčku nebo](hololens-provisioning.md) přes [Mobile Správce zařízení](https://docs.microsoft.com/intune/configuration/holographic-upgrade)
+- [Scénář nasazení A](hololens-requirements.md#scenario-a-deploy-to-cloud-connected-devices) – potvrzení konceptu nebo pilotní nasazení.
 
-### <a name="remote-assist-license-requirements"></a>Licenční požadavky pro Remote Assist
+- [Scénář nasazení B](hololens-requirements.md#scenario-b-deploy-inside-your-organizations-network) – nasazení ve velkém měřítku
 
-Ujistěte se, že máte požadované licence a zařízení, které můžete zkontrolovat v [dokumentaci k požadavkům.](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/requirements)
+## <a name="hololens-2-device-only-non-managed"></a>HoloLens 2 Pouze zařízení (nespravovaná)
 
-1. [Licence Remote Assistu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist)
-    1. Nebo zkuste zkušební [verzi vzdálené pomoci.](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/try-remote-assist)
-1. [Teams Freemium/Teams](https://products.office.com/microsoft-teams/free)
-1. [Azure Active Directory (Azure AD) License](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+Při použití účtu Microsoft (MSA) nebo místního účtu nejsou pro tyto účty vyžadovány žádné další licence.
 
-Pokud plánujete implementaci tohoto **[scénáře napříč tenanty,](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)** možná budete potřebovat licenci Information Barriers. Pokud chcete [zjistit, jestli](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) se vyžaduje licence Information Barrier, přečtěte si tento článek.
+[Místní účet](https://docs.microsoft.com/windows/security/identity-protection/access-control/local-accounts)
 
-### <a name="guides-license-requirements"></a>Průvodci licenčními požadavky
+- Tento účet je nutné [zřídit](hololens-provisioning.md#provisioning-package-hololens-wizard) předem pomocí Windows Configuration Designer (WCD).
 
-Podívejte se na [aktualizované licenční požadavky a požadavky na zařízení.](https://docs.microsoft.com/dynamics365/mixed-reality/guides/requirements)
+[Účet Microsoft (MSA)](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)
 
-1. [Azure Active Directory (Azure AD) License](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
-1. [Power BI](https://powerbi.microsoft.com/desktop/)
-1. [Příručky](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup)
+> [!WARNING]
+> Pro zařízení používající některý z těchto účtů není podporováno více uživatelů.
+
+### <a name="business-use-case"></a>Případ obchodního použití: 
+
+- [Scénář nasazení C –](hololens-requirements.md#scenario-c-deploy-in-secure-offline-environment) offline nebo zabezpečené nasazení.
+ 
+## <a name="dynamics-365-licensing-and-requirements"></a>Licencování a požadavky Dynamics 365
+
+### <a name="dynamics-365-remote-assist"></a>Dynamics 365 Remote Assist 
+
+#### <a name="admin"></a>správce
+
+- Účet Azure AD (vyžadované pro nákup předplatného a přiřazení licencí)
+- [Předplatné Remote Assistu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist) (nebo [zkušební verze Remote Assistu)](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/try-remote-assist)
+    
+#### <a name="dynamics-365-remote-assist-user"></a>Uživatel Dynamics 365 Remote Assistu
+
+- Účet Azure AD
+
+- Licence Remote Assistu 
+
+  > [!NOTE]
+  > Microsoft Teams je součástí Remote Assistu.
+
+- Připojení k síti
+
+#### <a name="microsoft-teams-user"></a>Microsoft Teams uživatele
+
+- Účet Azure AD
+
+- Microsoft Teams nebo [Teams Freemium.](https://products.office.com/microsoft-teams/free)
+
+- Připojení k síti
+
+Pokud plánujete implementaci tohoto scénáře [napříč tenanty,](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)možná budete potřebovat licenci Information Barriers. Informace [o tom,](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) jestli se vyžaduje licence Information Barrier, najdete v tomto článku.
+
+### <a name="dynamics-365-guides"></a>Průvodci Dynamics 365 
+
+#### <a name="admin"></a>správce
+
+- Účet Azure AD (vyžadované pro nákup předplatného a přiřazení licencí)
+- Předplatné průvodců Dynamics 365 [nebo bezplatná zkušební verze](https://docs.microsoft.com/dynamics365/mixed-reality/guides/setup-step-one)
+
+#### <a name="guides-author"></a>Autor příručky
+
+1. Účet Azure AD
+1. [Licence průvodců Dynamics 365](/dynamics365/mixed-reality/guides/requirements)
+1. Aplikace Průvodci Dynamics 365 nainstalovanou na počítači nebo HoloLens
+1. [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (slouží k zobrazení řídicího panelu Analýza)
+1. Role autora (pro vytváření průvodců)
+1. Připojení k síti
+
+#### <a name="guides-user"></a>Návody – uživatel
+
+1. Účet Azure AD
+1. [Licence průvodců Dynamics 365](/dynamics365/mixed-reality/guides/requirements)
+1. Aplikace Průvodci Dynamics 365 nainstalovaná na HoloLens
+1. Role operátora (pro testování nebo používání průvodců)
+1. Připojení k síti

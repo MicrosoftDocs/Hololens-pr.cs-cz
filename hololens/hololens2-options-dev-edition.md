@@ -1,7 +1,7 @@
 ---
-title: HoloLens 2 Development Edition
-description: Přečtěte si o HoloLens 2 Development Edition a o tom, co dělat po získání vlastní verze.
-keywords: Možnosti nákupu HoloLens 2, možnosti HoloLens, Developer Edition
+title: HoloLens 2 – vývojová edice
+description: přečtěte si o HoloLens 2 pro vývojovou edici a o tom, co dělat, když máte jednu ze svých potřeb.
+keywords: HoloLens 2 možnosti nákupu, možnosti HoloLens, Developer Edition
 author: bogenera
 ms.author: bogenera
 ms.reviewer: bogenera
@@ -14,83 +14,83 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 6ecb881f694ca919f9c37a9d6094a708eafcb414
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 268e338ad6734b2d951e72dbf8af4d2edf569aae
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924464"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113636363"
 ---
-# <a name="hololens-2-development-edition"></a>HoloLens 2 Development Edition
+# <a name="hololens-2-development-edition"></a>HoloLens 2 – vývojová edice
 
-Začněte budovat pro hybridní realitu s touto nabídkou, která kombinuje HoloLens 2 s bezplatnými zkušebními verzemi softwaru Unity a kredity Azure pro cloudové služby. Zjistěte, jak přejít nad rámec základů a začít s vývojem pro hybridní realitu.
+pomocí této nabídky můžete začít sestavovat směsnou realitu, která kombinuje HoloLens 2 s bezplatnými zkušebními verzemi softwaru Unity a kredity Azure pro cloud services. Naučte se, jak jít nad rámec základních skutečností a začněte vyvíjet pro hybridní realitu.
 
-## <a name="learn-about-the-development-edition"></a>Další informace o edici Development Edition
+## <a name="learn-about-the-development-edition"></a>Další informace o vývojové edici
 
 > [!NOTE]
-> Edice Development Edition se nesmí nasazovat s komerčně distribuovanou řešením. Edice Development Edition se může nasadit za pomoci vývoje nebo testování aplikací v komerčním prostředí.  
+> Edice vývoj není povolená pro nasazení s komerčním distribuovaným řešením. Vývojářská edice se může nasadit v případě vývoje a testování aplikací v komerčním nastavení.  
 
-HoloLens 2 Development Edition zahrnuje HoloLens 2, 500 USD v kreditech Azure, 3měsíční zkušební verzi Unity Pro a 3měsíční zkušební modul plug-in PiXYZ:
+HoloLens 2 Development Edition zahrnuje HoloLens 2, $500 v kreditech Azure, bezplatnou zkušební verzi Unity Pro a PiXYZ zkušební verzi předplatného plug-in.
 
 | Funkce sady prostředků | Description |
 |---|---|
 |  [Unity](https://unity.com/) | 3D vývojová platforma v reálném čase.   |
-|  [Modul plug-in Pixyz pro Unity](https://www.pixyz-software.com/plugin/) | Most pro propojení engineering &amp; CAD worlds se světem vývoje.   |
-| [500 USD v kreditech Azure za služby Azure](https://azure.microsoft.com/resources/) | Kredity Azure, které jsou součástí HoloLens 2 Development Edition, jsou rychlé zahájení sestavování a testování aplikací hybridní reality v Azure. |
+|  [Modul plug-in Pixyz pro Unity](https://www.pixyz-software.com/plugin/) | Most pro propojení technického &amp; světůu CAD s vývojovým světem.   |
+| [$500 v kreditech Azure pro služby Azure](https://azure.microsoft.com/resources/) | kredity Azure, které jsou součástí vývojové edice HoloLens 2, jsou rychle začínáme s vytvářením a testováním aplikací hybridní reality v Azure. |
 
-![HoloLens 2 Development Edition](./images/hololens-2-dev-ed.png)
+![HoloLens 2 – vývojová edice](./images/hololens-2-dev-ed.png)
 
-## <a name="redeem-your-credits"></a>Uplatnění kreditů
+## <a name="redeem-your-credits"></a>Uplatnit své kredity
 
 ### <a name="unity"></a>Unity
-Obdržíte jedinečný kód. Pokyny k uplatnění zkušební verze Unity Pro:
-1. Navštivte [id.unity.com](http://id.unity.com/)
-1. Přihlaste se pomocí svého ID Unity nebo si ho vytvořte.
-1. Klikněte **na Uplatnit kód produktu.**
-1. Zadejte kód produktu a klikněte na **Uplatnit kód produktu.**
+Dostali jste jedinečný kód. pokyny k uplatnění Pro zkušební verze Unity:
+1. Navštívit [ID.Unity.com](http://id.unity.com/)
+1. Přihlaste se pomocí svého ID Unity nebo ho vytvořte.
+1. Klikněte na **uplatnit kód produktu** .
+1. Zadejte kód produktu a klikněte na **uplatnit kód produktu** .
 
-Další podrobnosti najdete [v tématu Postup aktivace licence Unity.](https://support.unity3d.com/hc/articles/211438683-How-do-I-activate-my-license-) Pokud potřebujete pomoc, obraťte se na podporu [Unity.](https://support.unity3d.com/hc)  
+Další podrobnosti o [tom, jak aktivovat licenci Unity](https://support.unity3d.com/hc/articles/211438683-How-do-I-activate-my-license-) Pokud potřebujete pomoc, obraťte se na [podporu Unity](https://support.unity3d.com/hc) .  
 
 ### <a name="pixyz"></a>Pixyz
-Obdržíte jedinečný kód. Pokyny k uplatnění zkušební verze modulu plug-in Pixyz:
-1. Navštivte [id.unity.com](http://id.unity.com/)
-1. Klikněte **na Uplatnit kód produktu.**
-1. Zadejte kód produktu plug-in Pixyz a klikněte na **Uplatnit kód produktu.**
+Dostali jste jedinečný kód. Pokyny k uplatnění zkušební verze modulu plug-in Pixyz:
+1. Navštívit [ID.Unity.com](http://id.unity.com/)
+1. Klikněte na **uplatnit kód produktu** .
+1. Zadejte kód produktu plug-in Pixyz a klikněte na **uplatnit kód produktu** .
 
-Další podrobnosti o uplatnění [licence Pixyz.](https://www.pixyz-software.com/documentations/html/2020.1/review/TrialLicense.html) Pokud potřebujete pomoc, obraťte se na podporu [Pixyz.](https://www.pixyz-software.com/support/)
+Další podrobnosti o [uplatnění licence Pixyz](https://www.pixyz-software.com/documentations/html/2020.1/review/TrialLicense.html) Pokud potřebujete pomoc, obraťte se na [podporu Pixyz](https://www.pixyz-software.com/support/) .
 
 ### <a name="azure"></a>Azure
-Tady je několik běžných [produktů Azure pro Mixed Reality](https://azure.microsoft.com/topic/mixed-reality/) pro které můžete svůj kredit Azure uplatnit.
-Jak uplatnit kredity Azure: Pokud chcete uplatnit 500 USD v kreditech Azure, Azure Pass propagační kód a aktivujte své předplatné. [Další informace](hololens2-development-edition-faq.md#how-can-i-redeem-my-500-azure-credit)
+Zde jsou některé běžné [produkty Azure pro hybridní realitu](https://azure.microsoft.com/topic/mixed-reality/) , pro které můžete uplatnit kredit Azure pro.
+Jak uplatnit kredity Azure: uplatnění kreditů Azure na $500, uplatnění Azure Pass propagačního kódu a Aktivace předplatného [Další informace](hololens2-development-edition-faq.yml#how-can-i-redeem-my--500-azure-credit-)
 
-- [Zjistěte, jak Spatial Anchors Azure vám může pomoct vytvářet aplikace, které mapuje, sdílejí a uchová 3D obsah.](https://azure.microsoft.com/services/spatial-anchors/)
-- [Zjistěte Azure Remote Rendering můžete vykreslit vysoce kvalitní interaktivní 3D obsah a streamovat ho do zařízení v reálném čase.](https://azure.microsoft.com/services/remote-rendering/)
+- [Přečtěte si, jak vám Azure prostorových kotev pomůžou vytvářet aplikace, které mapují, sdílejí a uchovávají 3D obsah.](https://azure.microsoft.com/services/spatial-anchors/)
+- [Přečtěte si, jak vzdálené vykreslování Azure dokáže vykreslovat vysoce kvalitní a interaktivní 3D obsah a streamovat ho na vaše zařízení v reálném čase.](https://azure.microsoft.com/services/remote-rendering/)
 
 ## <a name="get-started-developing"></a>Začínáme s vývojem
 
-Zvolte modul, stáhněte si nástroje a odemknou klávesnici. Vítá vás Mixed Reality ekosystému – je čas vytvořit.
+Vyberte si modul, Stáhněte si nástroje a prach z klávesnice. Vítá vás ekosystém smíšeného realit – je čas vytvořit.
 
 |     CheckPoint                              |     Výsledek                                                                                                                    |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-|     [Zahájení návrhu a vytváření prototypů](https://docs.microsoft.com/windows/mixed-reality/design/design)         |     Začněte s návrhem aplikací Mixed Reality napříč základními koncepty, modely interakce a prvky uživatelského prostředí.     |
-|     [Zahájení vývoje pro Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity)    |     Zvolte modul, stáhněte si nástroje, přidejte základní stavební bloky a začněte s vytvářením ještě dnes.                                  |
-|     [Prozkoumání Azure Cloud Services](https://docs.microsoft.com/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Vytvářejte poutavé prostředí s Azure Remote Rendering a Azure Spatial Anchors.                                 |
+|     [Začínáme navrhovat a vytvářet prototypy](/windows/mixed-reality/design/design)         |     Začněte vytvářet Adventure na návrh hybridních aplikací realit napříč základními koncepty, modely interakce a prvky uživatelského prostředí.     |
+|     [Začněte vyvíjet pro Mixed realitu](/windows/mixed-reality/develop/development?tabs=unity)    |     Vyberte si svůj modul, Stáhněte si nástroje, přidejte základní stavební kameny a začněte sestavovat ještě dnes.                                  |
+|     [Prozkoumejte Azure Cloud Services](/windows/mixed-reality/develop/mixed-reality-cloud-services)            |     Vytvářejte působivé moderní prostředí pomocí Azure pro vzdálené vykreslování a prostorové kotvy Azure.                                 |
 
-## <a name="developer-edition-additional-resources"></a>Další zdroje informací k edici Developer Edition
+## <a name="developer-edition-additional-resources"></a>Další materiály pro vývojáře edice
 
-- [Nejčastější dotazy k HoloLens 2 Development Edition](hololens2-development-edition-faq.md)
-- [Nezapomeňte nainstalovat nástroje pro vývoj pro HoloLens.](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
-- [Seznamte se s vývojem pro HoloLens 2 pomocí Unity.](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2)
-- [Zjistěte, jak kombinovat MRTK s Unity.](https://docs.microsoft.com/windows/mixed-reality/develop/unity/mrtk-getting-started)
-- [Naučte se nasazovat sestavené aplikace.](app-deploy-overview.md)
-- [Prozkoumejte všechny možnosti pro Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/).
-- [Seznamte se s vývojem pro HoloLens 2 s unreal.](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
-- [Oslovte ostatní vývojáře na našem kanálu HoloDevelopers Slack.](https://holodevelopersslack.azurewebsites.net/)
+- [nejčastější dotazy k HoloLens 2 pro vývoj Edition](hololens2-development-edition-faq.yml)
+- [nezapomeňte nainstalovat nástroje pro vývoj HoloLens.](/windows/mixed-reality/develop/install-the-tools?tabs=unity)
+- [seznamte se s vývojem pro HoloLens 2 s Unity](/windows/mixed-reality/develop/unity/unity-development-overview?tabs=mrtk%2Carr%2Chl2).
+- [Přečtěte si, jak kombinovat MRTK s Unity](/windows/mixed-reality/develop/unity/mrtk-getting-started).
+- [Naučte se nasazovat své sestavené aplikace](app-deploy-overview.md).
+- [Prozkoumejte všechny možnosti hybridní reality](/windows/mixed-reality/).
+- [seznamte se s vývojem pro HoloLens 2 pomocí Unreal.](/windows/mixed-reality/develop/unreal/unreal-development-overview?tabs=mrtk%2Casa)
+- [Kontaktujte své kolegy pro vývojáře na našem kanálu pro HoloDevelopers časová rezervu](https://holodevelopersslack.azurewebsites.net/).
 
 ## <a name="next-steps"></a>Další kroky
 
-1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte  se na aplikaci Tipy, ve které najdete návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
-1. Klikněte níže a pokračujte ve čtení o použití HoloLens 2.
+1. začněte pracovat hned se smíšenými realitami a projděte si Windows 10 v HoloLens – podívejte se na **Tipy** aplikaci, kde najdete praktická cvičení pro interakce. Použijte gesto Start, pokud chcete přejít na Start nebo vyslovit příkaz "Přejít na začátek" a vybrat Tipy.
+1. kliknutím dole můžete pokračovat v čtení HoloLens 2.
 
 > [!div class="nextstepaction"]
-> [Začínáme s HoloLens 2](hololens2-basic-usage.md)
+> [začínáme s HoloLens 2](hololens2-basic-usage.md)

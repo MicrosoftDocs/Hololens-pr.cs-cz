@@ -1,6 +1,6 @@
 ---
-title: Podnikový zápis zařízení HoloLens na adrese MAC s omezeným Wi-Fi prostředím
-description: Postup adresy MAC pro síť na zařízeních s HoloLens 2
+title: Enterprise Registrace zařízení HoloLens v prostředí s omezenými adresami MAC Wi-Fi Prostředí
+description: Jak adresou MAC pro síť na zařízeních HoloLens 2
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -13,118 +13,118 @@ audience: ITPro
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a577eace62040e2d48de5d3e4cc99ef108bd006c
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 7938a433921a096913986f5eccff953fd17f1534
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379227"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639433"
 ---
-# <a name="enterprise-enrollment-of-hololens-devices-in-mac-address-restricted-wi-fi-environment"></a>Podnikový zápis zařízení HoloLens na adrese MAC s omezeným Wi-Fi prostředím
+# <a name="enterprise-enrollment-of-hololens-devices-in-mac-address-restricted-wi-fi-environment"></a>Enterprise Registrace zařízení HoloLens v prostředí s omezenými adresami MAC Wi-Fi Prostředí
 
-Tento dokument popisuje běžný scénář, který jsme identifikovali v rámci zákaznických prostředí, kde je Wi-Fi omezen adresami MAC, nebo jsou pro připojení k bezdrátovým sítím vyžadovány certifikáty.
+Tento dokument popisuje běžný scénář, který jsme identifikovali v zákaznických prostředích, kde je Wi-Fi omezený adresami MAC, nebo jsou vyžadovány certifikáty pro připojení k bezdrátovým sítím.
 
 ## <a name="example-scenario"></a>Ukázkový scénář
 
-Mnoho zákazníků v zabezpečených prostředích má omezení pro bezdrátové nebo kabelové sítě, které umožní úspěšně připojit schválená zařízení (na základě adres MAC). To může být vynutilo filtrování adres MAC v bezdrátovém přístupovém bodě nebo prostřednictvím serveru DHCP. Kromě toho je možné některé bezdrátové sítě chránit pomocí protokolu PEAP, což vyžaduje, aby se pro zařízení před ověřením v bezdrátové síti používal certifikát.
+Mnoho zákazníků v zabezpečených prostředích má omezení v bezdrátových nebo drátových sítích, která umožní úspěšné připojení jenom schváleným zařízením (na základě adres MAC). To může být vynuceno prostřednictvím filtrování adres MAC v bezdrátovém přístupového bodu nebo prostřednictvím serveru DHCP. Kromě toho některé bezdrátové sítě mohou být chráněny protokolem PEAP, který vyžaduje, aby certifikát se použil na zařízení před ověřením v bezdrátové síti.
 
-V tomto scénáři můžou dva klíčové požadavky způsobit zpoždění nebo vyžadovat ruční zásah při připojování zařízení s HoloLens k síti:
+V tomto scénáři mohou dva klíčové požadavky způsobit zpoždění nebo vyžadovat ruční zásah HoloLens zařízení k síti:
 
-- Aby se zařízení úspěšně připojilo k bezdrátové síti, musí se k němu použít bezdrátový certifikát protokolu PEAP.
-- Adresa MAC Wi-Fi adaptéru HoloLens musí být zaregistrovaná.
+- Certifikát protokolu PEAP bezdrátové sítě musí být použita na zařízení před úspěšné připojení zařízení k bezdrátové síti.
+- Adresa MAC adaptéru HoloLens Wi-Fi musí být zaregistrovaná.
 
-Základní problémy s výše uvedenými požadavky:
+Základní problémy s výše uvedenými požadavky jsou následující:
 
-1. Adresa MAC se v současnosti dá identifikovat jenom z aplikace nastavení v zařízení nebo z Intune po úspěšné registraci.
+1. Adresu MAC je aktuálně možné identifikovat pouze z Nastavení zařízení nebo z Intune po úspěšné registraci.
 
-2. Bez adresy MAC se nemůže zařízení připojit k síti Wi-Fi, aby bylo možné zahájit registraci.
+2. Bez adresy MAC se zařízení nemůže připojit ke Wi-Fi Network a zahájit registraci.
 
-3. Ruční alternativní řešení těchto problémů vyžadují, aby určitý pracovník komunikoval se zařízením.
+3. Ruční alternativní řešení těchto problémů vyžadují, aby technik se zařízením komunikoval.
 
 ## <a name="solutions"></a>Řešení
 
-Existuje mnoho způsobů, jak tuto situaci zlepšit, v závislosti na infrastruktuře dostupné v rámci prostředí.
+V závislosti na infrastruktuře dostupné v rámci prostředí existuje mnoho způsobů, jak tuto situaci vylepšit.
 
 | Řešení | Výhody | Požadavky |
 | --- | --- | --- |
-| Zřizovací balíček s adaptérem Ethernet | Vylepšuje možnosti počátečního nastavení a umožňuje rychlejší práci v technikech. | Kompatibilní s rozhraním USB – rozbočovač USB-C + adaptér sítě Ethernet a technik bude stále muset pracovat se zařízením pro zachycení počítače MAC a finalizaci počátečního souboru. |
-| Autopilotování pomocí registrace v Intune přes Ethernet | Toto je připojení s jedním krokem a registrace zařízení do prostředí zákazníka. Záznam MAC je možné dokončit, aniž by bylo nutné pracovat se zařízením. | Povolená Intune pro tenanta AAD zákazníka a adaptér Ethernet USB-C kompatibilní s HoloLens |
-| Automatizované vytváření sestav adres MAC | Když jsou zařízení zaregistrovaná v tenantovi Intune, může skript vykázat adresu MAC technikovi. | Rutiny PowerShellu pro Intune |
+| Zřizovací balíček s adaptérem sítě Ethernet | Vylepšuje prostředí pro OOBE a umožňuje rychlejší prostředí techniků. | HoloLens adaptérem USB-C Hub + Ethernet a technik bude muset se zařízením stále pracovat kvůli zachycení mac a finalizaci OOBE. |
+| Autopilot s registrací Přes Ethernet v Intune | Jedná se o jednokrokové připojení a registraci zařízení do prostředí zákazníka. Zachytávání maců je možné dokončit bez nutnosti interakce se zařízením. | Služba Intune povolená pro tenanta AAD zákazníka a HoloLens adaptér sítě Ethernet KOMPATIBILNÍ s USB-C |
+| Automatizované generování sestav adres MAC | Když jsou zařízení zaregistrovaná v tenantovi Intune, skript může adresu MAC nahlásit technikovi. | Rutiny PowerShellu pro Intune |
 
-## <a name="provisioning-package-with-ethernet-adaptor"></a>Zřizovací balíček s adaptérem Ethernet
+## <a name="provisioning-package-with-ethernet-adaptor"></a>Zřizovací balíček s adaptérem sítě Ethernet
 
 > [!NOTE] 
-> Pokud je v drátové síti i v závislosti na omezeních pro MAC, musí být adresa MAC rozbočovače USB-C + adaptér sítě Ethernet také předem schválená. S tímto adaptérem byste měli dbát, protože umožní přístup k síti z jiných zařízení.
+> Pokud se na drátovou síť vztahují také omezení MAC, bude také potřeba předem schválit adresu MAC rozbočovače USB-C a ethernetového adaptéru. Tento adaptér je třeba pečovat, protože umožňuje přístup k síti z jiných zařízení.
 
 ### <a name="requirements"></a>Požadavky
 
 - Port drátové sítě s přístupem k síti zákazníka
-- Rozbočovač USB-C kompatibilní s HoloLens s adaptérem Ethernet – všechny adaptéry, které nevyžadují žádné další ovladače nebo instalace aplikací, by měly být vhodné.
+- HoloLens Kompatibilní rozbočovač USB-C s ethernetovým adaptérem – Jakýkoli adaptér, který nevyžaduje žádné další ovladače nebo instalaci aplikací, by měl být vhodný.
 - Zřizovací balíček obsahující:
   - Obsahující informace o bezdrátové síti a certifikát
   - Volitelně obsahující informace o registraci pro Azure AD organizace
-  - Obsahující všechna další požadovaná nastavení zřizování
+  - Obsahuje další požadovaná nastavení zřizování.
 
 ### <a name="process"></a>Proces
 
-Tento proces se může lišit v závislosti na úrovni softwaru daného zařízení. Pokud má zařízení [aktualizaci květen 2004](hololens-release-notes.md#windows-holographic-version-2004), postupujte podle následujících kroků.
+Proces se může lišit v závislosti na úrovni softwaru zařízení. Pokud má zařízení aktualizaci [z května 2004,](hololens-release-notes.md#windows-holographic-version-2004)postupujte podle následujících kroků.
 
-1. Zřizovací balíček umístěte do kořenového adresáře USB Stick a připojte se k rozbočovači.
-2. Připojte kabel sítě Ethernet k adaptéru rozbočovače + Ethernet.
-3. Připojte rozbočovač USB-C k zařízení HoloLens.
-4. Zapněte HoloLens a vložte ho do zařízení.
-5. Pro použití zřizovacího balíčku stiskněte **tlačítko dolů a vypínač** .
-6. Technik se teď může dodržet na začátku počáteční hodnoty a po dokončení otevřete aplikaci nastavení, která načte adresu MAC zařízení.
+1. Umístěte zřizovací balíček do kořenového adresáře USB flash disku a připojte se k rozbočovači.
+2. Připojení Ethernetový kabel k rozbočovači + ethernetovému adaptéru.
+3. Připojení Rozbočovač USB-C HoloLens zařízení.
+4. Zapněte HoloLens zařízení.
+5. Stisknutím tlačítka **Volume Down (Snížení objemu)** a Power (Napájení) použijte zřizovací balíček.
+6. Technik teď může postupovat podle pokynů pro OOBE a po dokončení otevřít aplikaci Nastavení a načíst adresu MAC zařízení.
 
-Pokud má zařízení Build operačního systému před [aktualizací květen 2004](hololens-release-notes.md#windows-holographic-version-2004), postupujte podle následujících kroků.
+Pokud má zařízení build operačního systému před aktualizací z května [2004,](hololens-release-notes.md#windows-holographic-version-2004)postupujte následovně.
 
-1. Zapněte HoloLens a připojte zařízení k počítači.
-2. Zařízení by se mělo zobrazit na počítači jako zařízení úložiště souborů.
+1. Zapněte počítač HoloLens připojte zařízení k počítači.
+2. Zařízení by se mělo v počítači zobrazit jako zařízení úložiště souborů.
 3. Zkopírování zřizovacího balíčku do zařízení
-4. Připojte kabel Ethernet k rozbočovači.
-5. Připojte rozbočovač USB-C k zařízení HoloLens.
-6. Umístit na HoloLens
-7. Pro použití zřizovacího balíčku stiskněte tlačítko **dolů a vypínač** .
-8. Technik se teď může dodržet na začátku počáteční hodnoty a po dokončení otevřete aplikaci nastavení, která načte adresu MAC zařízení.
+4. Připojení Ethernetový kabel k rozbočovači.
+5. Připojení Rozbočovač USB-C HoloLens zařízení.
+6. Dejte na HoloLens
+7. Stisknutím tlačítka **Volume Down (Snížení objemu)** a Power (Napájení) použijte zřizovací balíček.
+8. Technik teď může postupovat podle pokynů pro OOBE a po dokončení otevřít aplikaci Nastavení a načíst adresu MAC zařízení.
 
 ### <a name="benefits"></a>Výhody
 
-To umožní "jedinému dotyku" zařízení, použít správný zřizovací balíček a shromažďovat adresu MAC zařízení. [Zřizovací balíčky se dají vytvořit podle pokynů uvedených tady.](https://docs.microsoft.com/hololens/hololens-provisioning)
+To umožní jedinému dotykovému ovládání zařízení použít správný zřizovací balíček a shromáždit adresu MAC zařízení. [Zřizovací balíčky můžete vytvořit podle těchto pokynů.](hololens-provisioning.md)
 
-## <a name="autopilot-with-intune-enrollment"></a>Automatický pilotní nasazení pomocí Intune
+## <a name="autopilot-with-intune-enrollment"></a>Autopilot s registrací do Intune
 
 ### <a name="requirements"></a>Požadavky
 
 - Port drátové sítě s přístupem k síti zákazníka
-- Zařízení HoloLens s Windows holografickým 2004
-- Ethernetový adaptér USB-C kompatibilní s HoloLens
+- HoloLens zařízení s Windows Holographic 2004
+- HoloLens Kompatibilní ethernetový adaptér USB-C
 - Nastavení a povolení Intune pro tenanta zákazníka
-- Zařízení zaregistrované pro autopilotování a naimportované do tenanta zákazníka
+- Zařízení zaregistrované pro Autopilot a importované do tenanta zákazníka
 - Zásady Intune definované pro zařízení:
    - Obsahující informace o bezdrátové síti a certifikát
-   - Obsahující všechna další požadovaná nastavení zřizování
+   - Obsahuje další požadovaná nastavení zřizování.
 
-To umožní zákazníkovi s pokročilými požadavky na síť zaregistrovat zařízení v praxi, škálovatelný přístup
+To umožní zákazníkovi s pokročilými požadavky na síť zaregistrovat zařízení pomocí hands-off a škálovatelného přístupu.
 
-Další požadavky budete potřebovat, jak je uvedeno níže:
-1. [Povolte tenanta pro verzi Preview programu autopilot](https://docs.microsoft.com/hololens/hololens2-autopilot).
-1. Vytvořte zásady HoloLens pro nahrazení zřizovacího balíčku v Intune.
-1. Vytvořte zásady pro HoloLens Intune.
+Budete potřebovat další požadavky, jak je uvedeno níže:
+1. [Povolte tenanta pro Autopilot Preview.](hololens2-autopilot.md)
+1. Vytvořte zásady HoloLens, které nahradí zřizovací balíček v Rámci Intune.
+1. Vytvořte HoloLens Intune.
 1. Přiřaďte zařízení ke správné skupině.
 
 ### <a name="process"></a>Proces
 
-1. Připojte kabel sítě Ethernet k adaptéru a připojte adaptér k portu USB-C na zařízení HoloLens 2.
+1. Připojení ethernetový kabel k adaptéru a připojte adaptér k portu USB-C na HoloLens 2.
 
 2. Zapněte HoloLens.
 
-3. Zařízení by se mělo automaticky připojit k Internetu během OOBE přes adaptér sítě Ethernet. Měl by detekovat konfiguraci autopilotu a automaticky se registrovat v Azure AD a Intune.
+3. Zařízení by se mělo automaticky připojit k internetu během OOBE přes ethernetový adaptér. Měla by zjistit konfiguraci Autopilotu a automaticky se zaregistrovat v Azure AD a Intune.
 
-4. Zařízení použije požadované Wi-Fi certifikáty a další konfiguraci podle potřeby prostřednictvím Intune.
+4. Zařízení použije požadované certifikáty Wi-Fi a další konfiguraci podle potřeby prostřednictvím Intune.
 
-5. Po dokončení může technik načíst portál Intune (správce koncových bodů) a přejít na stránku vlastností zařízení na stránce **Domů-> zařízení-> zařízení-> hardware**.
+5. Po dokončení může technik načíst portál Intune (Endpoint Manager) a přejít na stránku vlastností zařízení na domovské stránce **-> Devices -> DeviceName -> Hardware**.
 
-6. Adresa MAC Wi-Fi bude viditelná v portálu Intune.
+6. Adresa MAC Wi-Fi zobrazí na portálu Intune.
 
    ![Adresa MAC přes Intune](images/mac-address-intune.jpg)
 
@@ -132,18 +132,18 @@ Další požadavky budete potřebovat, jak je uvedeno níže:
 
 ### <a name="benefits"></a>Výhody
 
-Tím umožníte, aby se v Technikě v rámci nasazení v nástroji "prošly" možnosti nasazení, které zařízení dokáže přejít do služby Azure AD a Intune, aniž by bylo nutné, aby zařízení využilo zařízení nebo ručně nespolupracovalo s prostředím HoloLens.
+To technikovi umožní nasazení "bez problémů", kdy zařízení může přejít z krabice do Azure AD a Intune, aniž by technik museli zařízení používat nebo ručně pracovat s HoloLens prostředím.
 
-## <a name="reporting-of-mac-addresses-to-the-technician"></a>Hlášení adres MAC technikům
+## <a name="reporting-of-mac-addresses-to-the-technician"></a>Hlášení adres MAC technikovi
 
 ### <a name="requirements"></a>Požadavky
 
-- Autorizace "Intune Graph PowerShellu" proti klientovi zákazníka
-- Instalace prostředí Intune Graph PowerShellu na stroji technici
+- Autorizace "Intune Graph PowerShellu" vůči zákaznickému tenantovi
+- Instalace Intune Graph PowerShellu na počítači techniků.
 - [https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1907.1.0](https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1907.1.0)
-- Přístup pro čtení do prvků spravovaná zařízení v Intune (Operátor helpdesku nebo výše nebo vlastní role)
+- Přístup pro čtení k prvkům "Spravovaná zařízení" v Intune. (Operátor help desky nebo vyšší nebo vlastní role)
 
-V současné době neexistuje jednoduchý způsob, jak aktivovat příkaz automatizace na základě registrace nového zařízení v Intune. Proto tento příkaz poskytne technikovi jednoduchý způsob, jak načíst adresu MAC, aniž by se musela přihlásit na portál a ručně ji načíst.
+V současné době neexistuje žádný "jednoduchý" způsob aktivace příkazu automatizace na základě registrace nového zařízení v Intune. Tento příkaz proto technikovi poskytne jednoduchý způsob, jak získat adresu MAC, aniž by se muset přihlásit k portálu a ručně ji načíst.
 
 ```powershell
 Import-Module Microsoft.Graph.Intune
@@ -153,9 +153,9 @@ Connect-MSGraph
 Get-IntuneManagedDevice -Filter "model eq 'Hololens 2'" | where {$_.enrolledDateTime -gt (get-date).AddDays(-30)}  | select deviceName, wiFiMacAddress 
 ```
 
-Tato akce vrátí název a adresu MAC všech zařízení HoloLens, která byla zaregistrována za posledních 30 dní.
+Vrátí se název a adresa MAC všech zařízení HoloLens která byla zaregistrovaná během posledních 30 dnů.
 
-![Adresa MAC prostřednictvím PowerShellu](images/mac-address-powershell.jpg)
+![Adresa MAC přes PowerShell](images/mac-address-powershell.jpg)
 
 ### <a name="process"></a>Proces
 

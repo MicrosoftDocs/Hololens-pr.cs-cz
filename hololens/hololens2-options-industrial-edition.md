@@ -1,7 +1,7 @@
 ---
 title: HoloLens 2 Industrial Edition
-description: Přečtěte si o HoloLens 2 Industrial Edition a o tom, co dělat po získání vlastní verze.
-keywords: Možnosti nákupu HoloLens 2, možnosti HoloLens, Industrial Edition
+description: Přečtěte si HoloLens 2 Industrial Edition a co dělat po získání vlastní verze.
+keywords: HoloLens 2 možnosti nákupu, HoloLens, Industrial Edition
 author: bogenera
 ms.author: bogenera
 ms.reviewer: bogenera
@@ -14,38 +14,38 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: df18c64487645ebe5381d853de7e32780c4fccad
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: a1b204cdc51ef55230c94d8f71a362549daf6ef4
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379325"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113636329"
 ---
 # <a name="hololens-2-industrial-edition"></a>HoloLens 2 Industrial Edition
 
-HoloLens 2 Industrial Edition je navržený, sestavený a otestovaný tak, aby podporoval prostředí čistých místností se standardy od ISO třídy 6 až po TŘÍDU ISO 8. Edice HoloLens 2 Industrial Edition má certifikaci TŘÍDY I, Divize 2 a podporuje se s 2letou zárukou a programem rychlé výměny.
+Systém HoloLens 2 Industrial Edition je navržený, sestavený a otestovaný tak, aby podporoval prostředí čistých místností se standardy od ISO třídy 6 až po TŘÍDU 8. Edice HoloLens 2 Industrial edition má certifikaci TŘÍDY I, Divize 2 a podporuje se s 2letou zárukou a programem rychlé výměny.
 
 ## <a name="learn-about-hololens-2-industrial-edition"></a>Další informace o HoloLens 2 Industrial Edition
 
-Edice HoloLens 2 Industrial Edition byla vylepšována a přepracována novými materiály a certifikacemi tak, aby podporovala širší sadu průmyslových prostředí, včetně:
+Edice HoloLens 2 Industrial Edition byla vylepšena a přepracována novými materiály a certifikacemi, aby podporovala širší škálu průmyslových prostředí, včetně:
 
-- **Prostředí čistých místností:** HoloLens 2 Industrial Edition podporuje standardy v rozsahu od čistých místností ISO 14644-1 třídy 5, kde je množství cizích částic omezené a objekty v těchto prostorech mají omezení pro prohazování, odlévání a uchování kontaminantů.
-- **Nebezpečné lokality:** HoloLens 2 Industrial Edition podporuje prostředí, ve kterých existují vznětové plyny, páry nebo kapaliny, ale obecně nejsou přítomné v igniablech při normálním provozu a zahrnují certifikaci UL class I, Division 2-Groups A, B, C a D HAZLOC.
+- **Prostředí čistých místností:** Edice HoloLens 2 Industrial Edition podporuje standardy v rozsahu od čistých místností iso 14644-1 třídy 5, kde je množství cizích částic omezené a objekty v těchto prostorech mají omezení pro prohazování, odcizí a uchovávání kontaminantů.
+- **Nebezpečné lokality:** Edice HoloLens 2 Industrial Edition podporuje prostředí, ve kterých existují vznětitelné plyny, páry nebo kapaliny, ale obecně se během normálního provozu nenacházejí v igniablech, a zahrnuje certifikaci UL třídy I, skupiny A, B, C a D HAZLOC ve 2. divizi.
 
-Kromě upgradovaného zařízení nabízí HoloLens 2 Industrial Edition 2letou záruku a & rychlé výměny.
+Kromě upgradovaného zařízení nabízí HoloLens 2 Industrial Edition 2letou záruku pro & rychlé výměny.
 
 ![Edici Industrial edition použitou v čisté místnosti](./images/ie-small-pic.png)
 
-Další informace [najdete v nejčastějších dotazech k HoloLens 2 Industrial Edition.](hololens2-industrial-edition-faq.md)
+Prohlédněte si [nejčastější HoloLens 2 Industrial Edition.](hololens2-industrial-edition-faq.md)
 
 ## <a name="cleaning-and-handling-hololens-2"></a>Čištění a zpracování HoloLens 2
 
-HoloLens 2 Industrial Edition je možné vyčistit pomocí řešení 70% izolace a vody k vyčištění pevných povrchů zařízení, včetně visoru, brow padu a koulí. Další informace najdete v nejčastějších dotazech [k čištění HoloLens 2.](https://docs.microsoft.com/hololens/hololens2-maintenance)
+Edici HoloLens 2 Industrial je možné vyčistit pomocí řešení 70% izolace a vody, které vyčistí pevné povrchy zařízení, včetně visoru, brow padu a koulí. Další informace najdete v nejčastějších [dotazech HoloLens 2 čištění.](/hololens/hololens2-maintenance)
 
 ## <a name="next-steps"></a>Další kroky
 
-1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte  se na aplikaci Tipy, ve které najdete návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
-1. Klikněte níže a pokračujte ve čtení o použití HoloLens 2.
+1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** ve které se můžete podívat na návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
+1. Klikněte níže a pokračujte ve čtení o tom, jak se dostat HoloLens 2.
 
 > [!div class="nextstepaction"]
 > [Začínáme s HoloLens 2](hololens2-basic-usage.md)

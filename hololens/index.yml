@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft HoloLens
-summary: Microsoft HoloLens je první plně samostatný holografický počítač, ve kterém běží Windows 10. Díky zavedení HoloLens 2 pak každé zařízení HoloLens nabízí možnost správy připravené na komerční zařízení, které jsou vylepšené spolehlivostí, zabezpečením a škálovatelností cloudových a AI služeb od Microsoftu.
+summary: Microsoft HoloLens je první plně samostatný holografický počítač ke spuštění Windows 10. díky zavedení HoloLens 2, každé HoloLens zařízení, nabízí možnost správy připravené na komerční správu, která je vylepšená o spolehlivost, zabezpečení a škálovatelnost služeb cloudu a AI od microsoftu.
 metadata:
   title: Microsoft HoloLens
-  description: Cílová stránka pro Microsoft HoloLens
+  description: Cílová stránka pro Microsoft HoloLens.
   ms.prod: hololens
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,21 +11,23 @@ metadata:
   ms.author: v-jjaswinski
   ms.date: 05/24/2021
   ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
-  ms.openlocfilehash: 6c73b6fbad7a2968e1f75b361b2b8a015cb1769c
-  ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+  ms.openlocfilehash: 8cb5b881e880adec2b59bde9b36fa700bfce3a91
+  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "112924311"
+  ms.lasthandoff: 07/12/2021
+  ms.locfileid: "113637145"
 landingContent:
-- title: Seznámení s HoloLens 2
+- title: získejte informace o HoloLens 2
   linkLists:
   - linkListType: learn
     links:
-    - text: O hardwaru HoloLens 2
-      url: hololens2-hardware.md
-    - text: Porovnat možnosti HoloLens 2
+    - text: možnosti a řešení HoloLens 2
+      url: hololens-commercial-features.md
+    - text: možnosti HoloLens 2
       url: hololens2-options.md
+    - text: HoloLens 2 hardware
+      url: hololens2-hardware.md
   - linkListType: overview
     links:
     - text: Pouze zařízení
@@ -46,27 +48,27 @@ landingContent:
       url: hololens2-setup.md
     - text: Denní využití
       url: holographic-home.md
-- title: Plánování nasazení HoloLens 2
+- title: plánování nasazení HoloLens 2
   linkLists:
   - linkListType: architecture
     links:
     - text: Obvyklé scénáře nasazení
       url: common-scenarios.md
-    - text: Plánování nasazení HoloLens 2 v komerčním prostředí
+    - text: plánování nasazení HoloLens 2 v komerčním prostředí
       url: hololens-core-components.md
     - text: Registrace šablony stylů CSS pro autopilot
       url: hololens2-autopilot-registration-support.md
   - linkListType: deploy
     links:
-    - text: Průvodce nasazením – Cloud připojený k HoloLens 2 nasazení ve velkém měřítku s využitím vzdálené pomoci
+    - text: průvodce nasazením – Cloud připojený HoloLens 2 ve velkém měřítku s využitím vzdálené pomoci
       url: hololens2-cloud-connected-overview.md
     - text: Průvodce nasazením – externí klienti (připojení ke cloudu)
       url: hololens2-deployment-guide.md
-    - text: Průvodce nasazením – nasazení HoloLens 2 v podniku s průvodcem Dynamics 365
+    - text: průvodce nasazením – firemní propojení HoloLens 2 – nasazení pomocí průvodců Dynamics 365
       url: hololens2-corp-connected-overview.md
     - text: Průvodce nasazením – zabezpečení offline
       url: hololens-common-scenarios-offline-secure.md
-- title: Řešení potíží
+- title: Poradce při potížích
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -78,15 +80,15 @@ landingContent:
       url: hololens2-display.md
     - text: Implementace a spravovaná zařízení
       url: hololens2-enterprise-troubleshooting.md
-    - text: Shromažďování a používání diagnostických informací ze zařízení HoloLens
+    - text: shromažďování a používání diagnostických informací z HoloLens zařízení
       url: hololens-diagnostic-logs.md
-    - text: Restartování, resetování nebo obnovení HoloLens 2
+    - text: restartování, resetování nebo obnovení HoloLens 2
       url: hololens-recovery.md
 - title: Zdroje informací
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Poznámky k verzi HoloLens 2
+    - text: poznámky k verzi HoloLens 2
       url: hololens-release-notes.md
     - text: Insider Preview
       url: hololens-insider.md
@@ -96,7 +98,7 @@ landingContent:
       url: hololens2-support.md
     - text: Sdělte nám svůj názor
       url: hololens-feedback.md
-- title: Vývoj s využitím HoloLens 2
+- title: vývoj s využitím HoloLens 2
   linkLists:
   - linkListType: how-to-guide
     links:

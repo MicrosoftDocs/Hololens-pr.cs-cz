@@ -1,7 +1,7 @@
 ---
-title: Průvodce nasazením – Firemní zařízení HoloLens 2 s Dynamics 365 – přehled
-description: Zjistěte, jak zaregistrovat zařízení HoloLens 2 pomocí průvodců Dynamics 365 přes podnikovou připojenou síť.
-keywords: HoloLens, management, corporate connected, Dynamics 365 Guides, AAD, Azure AD, MDM, Mobile Správa zařízení
+title: Průvodce nasazením – Průvodci pro firemní HoloLens 2 s Dynamics 365 – přehled
+description: Zjistěte, jak zaregistrovat HoloLens 2 pomocí průvodců Dynamics 365 přes podnikovou připojenou síť.
+keywords: HoloLens, správa, firemní připojení, Průvodci Dynamics 365, AAD, Azure AD, MDM, Mobile Správa zařízení
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: aboeger
@@ -14,26 +14,26 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ee6c24f65e5990f1e84a71d86b24dd782cf9f4cc
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: f2f7e1425a208e1f466d995f66118b7e68984242
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111377692"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113637009"
 ---
-# <a name="deployment-guide---corporate-connected-hololens-2-with-dynamics-365-guides---overview"></a>Průvodce nasazením – Průvodci pro Zařízení HoloLens 2 s Dynamics 365 – přehled
+# <a name="deployment-guide---corporate-connected-hololens-2-with-dynamics-365-guides---overview"></a>Průvodce nasazením – Průvodci podnikovým připojeným HoloLens 2 s Dynamics 365 – přehled
 
-Tato příručka pomůže IT specialistům plánovat a nasazovat Microsoft HoloLens 2 pomocí průvodců Dynamics 365 (průvodci) pro jejich organizaci. Tato příručka je skvělá pro pilotní i produkční nasazení a podobá se scénáři [B: Nasazení](https://docs.microsoft.com/hololens/common-scenarios#scenario-b-deploy-inside-your-organizations-network) v síti vaší organizace. Po otestování testování konceptu můžete pomocí tohoto průvodce pokračovat v integraci HoloLens do vaší organizace.
+Tato příručka pomůže IT specialistům plánovat a nasazovat Microsoft HoloLens 2 pomocí průvodců Dynamics 365 (průvodci) pro jejich organizaci. Tato příručka je skvělá pro pilotní i produkční nasazení a podobá se scénáři [B: Nasazení](/hololens/common-scenarios#scenario-b-deploy-inside-your-organizations-network) v síti vaší organizace. Po otestování testování konceptu můžete pomocí tohoto průvodce pokračovat v integraci HoloLens do vaší organizace.
 
-V této příručce se budeme řídit tím, jak zaregistrovat zařízení do stávající správy zařízení, jak podle potřeby použít licence a ověřit, že koncoví uživatelé po nastavení zařízení budou moct používat příručku k Dynamics 365 a používat vlastní obchodní aplikace. 
+V této příručce se budeme řídit tím, jak zaregistrovat zařízení do stávající správy zařízení, jak podle potřeby použít licence a ověřit, že koncoví uživatelé po nastavení zařízení mohou používat příručku Dynamics 365 a také používat vlastní obchodní aplikace. 
 
 ## <a name="prerequisites"></a>Požadavky
 
 Už by měla být k dispozici následující infrastruktura:
 - Wi-Fi
     - Interní podniková síť s přístupem k interním prostředkům a omezeným přístupem k internetu nebo cloudovým službám
-    - Ověřování pomocí certifikátu na základě zařízení.
-- Azure Active Directory (Azure AD) Join s automatickou registrací MDM[(je potřeba předplatné Azure AD P1)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-whatis)
+    - Ověřování certifikátů na základě zařízení.
+- Azure Active Directory (Azure AD) Join s automatickou registrací MDM[(je potřeba předplatné Azure AD P1)](/azure/active-directory/fundamentals/active-directory-whatis)
 - Správa MDM (Intune)
     - Jedna nebo více aplikací se nasadí prostřednictvím MDM.
 - Síť 
@@ -43,7 +43,8 @@ Už by měla být k dispozici následující infrastruktura:
     - Podporuje se jeden nebo více uživatelů na zařízení.
 - Různé úrovně konfigurace uzamčení zařízení použité na základě konkrétních případů použití, od plně otevřeného až po beznabitový terminál s jednou aplikací
 
-## <a name="guides-licensing-and-requirements"></a>[Průvodci licencování a požadavky](https://docs.microsoft.com/dynamics365/mixed-reality/guides/requirements#licensing-and-product-requirements)
+## <a name="guides-licensing-and-requirements"></a>[Průvodci licencování a požadavky](/dynamics365/mixed-reality/guides/requirements#licensing-and-product-requirements)
+
 - Účet Azure AD
 - Dynamics 365 Guides applications PC and HoloLens
 - Předplatné průvodců Dynamics 365
@@ -52,14 +53,14 @@ Už by měla být k dispozici následující infrastruktura:
 - Power BI Desktop
 - Připojení k síti
 
-[![Diagram propojené sítě společnosti, fáze 1 ](./images/deployment-guides-revised-scenario-b-01-1.png)](./images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
+[![Diagram sítě připojené společnosti, fáze 1 ](./images/deployment-guides-revised-scenario-b-01-1.png)](./images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
 
-[![Diagram propojené sítě společnosti, fáze 2 ](./images/deployment-guides-revised-scenario-b-02-1.png)](./images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
+[![Diagram sítě připojený společnosti, fáze 2 ](./images/deployment-guides-revised-scenario-b-02-1.png)](./images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
 
 ## <a name="in-this-guide-you-will"></a>V této příručce:
 ### <a name="prepare"></a>Příprava
 > [!div class="checklist"]
->- [Seznamte se se základy infrastruktury pro zařízení HoloLens 2.](hololens2-corp-connected-prepare.md#infrastructure-essentials)
+>- [Seznamte se se základy infrastruktury pro HoloLens 2.](hololens2-corp-connected-prepare.md#infrastructure-essentials)
 >- [Přečtěte si další informace o Službě Azure AD a nastavte si ji, pokud ji nemáte.](hololens2-corp-connected-prepare.md#azure-active-directory)
 >- [Přečtěte si o správě identit a o tom, jak nejlépe nastavit účty Azure AD.](hololens2-corp-connected-prepare.md#identity-management)
 >- [Přečtěte si další informace o MDM a nastavení s Intune, pokud ho ještě nemáte připravený.](hololens2-corp-connected-prepare.md#mobile-device-management)
@@ -72,7 +73,7 @@ Už by měla být k dispozici následující infrastruktura:
 >- [Jak vytvářet uživatele a skupiny](hololens2-corp-connected-configure.md#azure-users-and-groups)
 >- [Jak nastavit automatickou registraci](hololens2-corp-connected-configure.md#auto-enrollment-on-hololens-2)
 >- [Jak nastavit Wi-Fi a profily pro připojení Wi-Fi podnikové sítě](hololens2-corp-connected-configure.md#corporate-wi-fi-connectivity)
->- [Nahrání a přiřazení balíčků obchodních aplikací](hololens2-corp-connected-configure.md#app-deployment)
+>- [Upload a přiřadit balíčky obchodních aplikací.](hololens2-corp-connected-configure.md#app-deployment)
 >- [Nastavení průvodců Dynamics 365](hololens2-corp-connected-configure.md#setup-guides-application-licenses-dataverse-and-authoring)
 >- [Konfigurace bezobrazovkového režimu (volitelné)](hololens2-corp-connected-configure.md#optional-kiosk-mode)
 >- [Postup konfigurace nástroje WDAC (volitelné)](hololens2-corp-connected-configure.md#optional-wdac)
@@ -81,11 +82,11 @@ Už by měla být k dispozici následující infrastruktura:
 >-  [Ověření registrace přes zařízení a MDM](hololens2-corp-connected-deploy.md#enrollment-validation)
 >-  [Ověřte Wi-Fi certifikáty.](hololens2-corp-connected-deploy.md#wi-fi-certificate-validation)
 >-  [Ověřte instalaci obchodní aplikace.](hololens2-corp-connected-deploy.md#validate-lob-app-install)
->-  [Ověřte příručky prostřednictvím vytváření a provozu.](hololens2-corp-connected-deploy.md#validate-dynamics-365-guides)
+>-  [Ověření průvodců vytvářením a provozem](hololens2-corp-connected-deploy.md#validate-dynamics-365-guides)
 ### <a name="maintain"></a>Údržba
 > [!div class="checklist"]
 >- [Aktualizujte HoloLens 2.](hololens2-corp-connected-maintain.md#update-hololens)
->- [Jak aktualizovat příručky (aplikace pro Store).](hololens2-corp-connected-maintain.md#how-to-update-dynamics-365-guides-and-other-store-apps)
+>- [Aktualizace průvodců (aplikace pro Store)](hololens2-corp-connected-maintain.md#how-to-update-dynamics-365-guides-and-other-store-apps)
 >- [Jak aktualizovat obchodní aplikace](hololens2-corp-connected-maintain.md#how-to-update-lob-apps) 
 >- [Plán vývoje.](hololens2-corp-connected-maintain.md#development-plan) 
 >- [Vytvoření plánu podpory](hololens2-corp-connected-maintain.md#support-plan)

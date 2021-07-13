@@ -1,7 +1,7 @@
 ---
-title: Dodržování předpisů a NAŘÍZENÍ GDPR pro HoloLens 2
+title: HoloLens 2 – dodržování předpisů a GDPR
 description: Dokumentace k GDPR
-keywords: HoloLens, GDPR, ochrana osobních údajů, PII
+keywords: HoloLens, GDPR, soukromí, PII
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: skerewala, evmiller
@@ -14,54 +14,54 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8b795513d83c9d23f70b8dd8365e703d1fc43a51
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 684a97a4fcdc3aaf830f164c54fb3079e296c78c
+ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377720"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113637111"
 ---
-# <a name="hololens-2-privacy-statement"></a>Prohlášení o zásadách ochrany osobních údajů pro HoloLens 2
+# <a name="hololens-2-privacy-statement"></a>HoloLens 2 – prohlášení o zásadách ochrany osobních údajů
 
-Jedním ze základních prvků nařízení GDPR je "ochrana dat ze návrhu". Tento koncept platí zejména pro mobilní zařízení, jako je HoloLens 2, kvůli jejich přenositelnosti, neomezenému počtu připojení k internetu a otevřeným komunikačním kanálům. V důsledku toho bylo zabezpečení holoLens 2 přepracováno tak, aby poskytovalo pokročilé, inovativní zabezpečení a ochranu osobních údajů, komplexní začlenění přístupu Microsoftu k ochraně osobních údajů a nařízení [GDPR](https://privacy.microsoft.com/). [](https://docs.microsoft.com/hololens/security-architecture)
+Jedním z základních prvků GDPR je ochrana dat podle návrhu. tento koncept se vztahuje hlavně na mobilní zařízení, jako je HoloLens 2, kvůli jejich přenositelnosti, neomezenému připojení k internetu a otevřeným komunikačním kanálům. výsledkem je, že [zabezpečení](/hololens/security-architecture) HoloLens 2 bylo přepracováno, aby poskytovalo pokročilé, inovativní zabezpečení a ochranu osobních údajů, a to včetně přístupu microsoftu k [ochraně osobních údajů a GDPR předpisů](https://privacy.microsoft.com/).
 
  >[!NOTE]
-> Tento dokument se nevztahuje na HoloLens (1. generace).
+> tento dokument se nevztahuje na HoloLens (1. generace).
 
 ## <a name="privacy-overview"></a>Přehled ochrany osobních údajů
 
-HoloLens 2 je samostatný počítač s Windows, na který běží Windows Holographic a který spouští aplikace a řešení v imerzivním prostředí hybridní reality. Můžete ho použít jako zabezpečené offline zařízení nebo ho nasadit jako [spravované zařízení](https://docs.microsoft.com/mem/intune/fundamentals/windows-holographic-for-business) ve vaší organizaci. Na následujících odkazech najdete informace o tom, jak HoloLens 2 a Microsoft používají a chrání vaše data:
-1. [Prohlášení o zásadách ochrany osobních údajů společnosti Microsoft – HoloLens](https://privacy.microsoft.com/privacystatement) – v levé navigační nabídce rozbalte část Enterprise and **developer** a vyberte Enterprise and developer software and appliances (Podnikový **a vývojářský software a zařízení).** Přejděte do **části HoloLens.**
-2.  [Windows 10 a online služby](https://privacy.microsoft.com/windows10privacy)
-3.  [Windows 10 & dodržování předpisů pro ochranu osobních údajů](https://docs.microsoft.com/windows/privacy/windows-10-and-privacy-compliance)
-4.  [Ochrana soukromí a osobní údaje v Intune](https://docs.microsoft.com/mem/intune/protect/privacy-personal-data)
+HoloLens 2 je samostatný Windows počítač se spuštěným Windows holografickým, který spouští aplikace a řešení v moderním prostředí s moderní realitou. Dá se použít jako zabezpečené offline zařízení nebo se nasadí jako [spravované zařízení](/mem/intune/fundamentals/windows-holographic-for-business) v rámci vaší organizace. na následujících odkazech najdete informace o tom, jak HoloLens 2 a Microsoft používá a chrání vaše data:
+
+1. [prohlášení o zásadách ochrany osobních údajů společnosti Microsoft – HoloLens](https://privacy.microsoft.com/privacystatement) – v levé navigační nabídce rozbalte část **Enterprise a vývojář** a vyberte **Enterprise a vývojářský software a zařízení**. přejít na část **HoloLens** .
+2. [Windows 10 a online služby](https://privacy.microsoft.com/windows10privacy)
+3. [průvodce dodržováním předpisů Windows 10 & ochrany osobních údajů](/windows/privacy/windows-10-and-privacy-compliance)
+4. [Ochrana soukromí a osobní údaje v Intune](/mem/intune/protect/privacy-personal-data)
 
 ## <a name="network-security"></a>Zabezpečení sítě
-V souladu s běžnými scénáři nasazení HoloLens [2](https://docs.microsoft.com/hololens/common-scenarios)budou vaše data chráněna prvotřídním dodržováním předpisů [Azure](https://docs.microsoft.com/azure/compliance/) spolu s integrací právních a zákonných standardů. Pokud s Azure AD a Dynamics 365 Remote Assistem je pro vás novinka, přečtěte si kontrolní seznam připravenosti na odpovědnost v Azure a [Dynamics 365 pro GDPR.](https://docs.microsoft.com/compliance/regulatory/gdpr-arc-azure-dynamics)
+po [použití běžných scénářů nasazení](/hololens/common-scenarios)HoloLens 2 budou vaše data chráněna [špičkovým dodržováním předpisů Azure](/azure/compliance/) spolu s právními a zákonnými integrací standardů. Pokud s Azure AD a Dynamics 365 Remote Assist začínáte, [Projděte si kontrolní seznam připravenosti na odpovědnost Azure a dynamics 365 pro GDPR](/compliance/regulatory/gdpr-arc-azure-dynamics).
 
-Kromě toho Firewall v programu Windows Defender poskytuje důležité funkce pro zabezpečení připojení zařízení. U HoloLens 2 je brána firewall vždycky povolená a neexistuje žádný způsob, jak ji programově nebo prostřednictvím uživatelského rozhraní zakázat. Když se HoloLens 2 nasadí jako spravované zařízení pomocí [Intune,](https://docs.microsoft.com/mem/intune/protect/device-compliance-get-started)je k dispozici další funkce dodržování předpisů s integrací koncového bodu se [službou Microsoft Intune](https://docs.microsoft.com/mem/intune/protect/advanced-threat-protection) jako řešením Mobile Threat Defense. 
+Windows Defender brána Firewall navíc přináší důležité funkce pro zabezpečení připojení zařízení. u HoloLens 2 je brána firewall vždycky zapnutá a neexistuje žádný způsob, jak ho deaktivovat programově nebo prostřednictvím uživatelského rozhraní. pokud je HoloLens 2 nasazena jako spravované zařízení pomocí [intune](/mem/intune/protect/device-compliance-get-started), je k dispozici více funkcí dodržování předpisů s integrací [koncového bodu s Microsoft Intune](/mem/intune/protect/advanced-threat-protection) jako řešení ochrany před mobilními hrozbami.
 
-Přečtěte si další informace o zabezpečení a [architektuře](https://docs.microsoft.com/hololens/security-architecture)HoloLens 2.
+přečtěte si další informace o [architektuře a zabezpečení](/hololens/security-architecture)HoloLens 2.
 
 ## <a name="os-security"></a>Zabezpečení operačního systému
-Aktualizace se provádí automaticky (ve výchozím nastavení), takže holoLens 2 je vždy aktuální s nejnovější verzí Windows Holographic a všech nainstalovaných aplikací. Další informace o tom, jak je náš operační systém bezpečně navržený, najdete v následujících informacích:
-1. [Oddělení a izolace stavu](https://docs.microsoft.com/hololens/security-state-separation-isolation)
-1. [Operační systém bez oprávnění správce](https://docs.microsoft.com/hololens/security-adminless-os)
-1. [Omezení použití hesla](https://docs.microsoft.com/hololens/security-limiting-password-use)
+aktualizace se provádí automaticky (ve výchozím nastavení), takže HoloLens 2 je vždycky aktuální s nejnovější verzí Windows holografickou a nainstalovanými aplikacemi. Další informace o tom, jak je náš operační systém bezpečně navržený, najdete v následujících tématech:
+
+1. [Oddělení a izolace stavu](/hololens/security-state-separation-isolation)
+1. [Správce – less – operační systém](/hololens/security-adminless-os)
+1. [Omezení použití hesla](/hololens/security-limiting-password-use)
 
 ## <a name="physical-security"></a>Fyzické zabezpečení
-HoloLens 2 má flash paměť, která je chráněná [šifrováním BitLockeru.](https://docs.microsoft.com/hololens/security-encryption-data-protection) Zařízení a jeho místní data je možné pomocí [doprovodných](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8#activetab=pivot:overviewtab) funkcí Advanced Recovery Companion blikat do režimu offline nebo vzdáleně vymazat přes MDM, pokud bylo nasazeno jako spravované zařízení.
+HoloLens 2 má flash paměť, která je chráněná [šifrováním pomocí bitlockeru](/hololens/security-encryption-data-protection). Vaše zařízení a jeho místní data může být v režimu offline pomocí [pokročilého Průvodce obnovením](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8#activetab=pivot:overviewtab) nebo vzdáleně smazána přes MDM, pokud byla nasazena jako spravované zařízení.
 
 ## <a name="data-protection"></a>Ochrana dat
-Aktualizace Windows se spouštějí automaticky (ve výchozím nastavení) a [integrace Azure](https://docs.microsoft.com/hololens/security-encryption-data-protection#Azure-integration) chrání data mezi sebou a cloudem. 
+aktualizace Windows se spouští automaticky (ve výchozím nastavení) a [integrace Azure](/hololens/security-encryption-data-protection#Azure-integration) chrání data na cestách mezi sebou a cloudem.
 
-Při nasazování HoloLens 2 na externí klienty [zajišťuje Dynamics 365 Remote Assist,](https://docs.microsoft.com/hololens/hololens2-deployment-guide) aby vaše citlivá firemní data a prostředky byly oddělené a bezpečné. 
+když nasazujete HoloLens 2 externím klientům, zajistí vám aplikace [Dynamics 365 Remote Assist](/hololens/hololens2-deployment-guide) , aby vaše citlivá firemní data a prostředky byly oddělené a bezpečné.
 
-Sdílení diagnostických dat s Microsoftem může při spuštění počítače ručně nakonfigurovat MDM nebo uživatel. Existují dvě možnosti: volitelná diagnostická data a požadovaná diagnostická data. Pokud je potřeba původní nastavení diagnostiky později změnit pro účely řešení potíží, může ho uživatel změnit v Nastavení -> Ochrana osobních údajů **-> Diagnostická & Zpětná** vazba nebo Správce IT (MDM), pokud se jedná o spravované zařízení. Další informace o [diagnostice, zpětné vazbě a ochraně osobních údajů](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-10-28808a2b-a31b-dd73-dcd3-4559a5199319)najdete v Windows 10 .
+Sdílení diagnostických dat s Microsoftem může ručně nakonfigurovat MDM nebo uživatel při počátečním spuštění počítače. K dispozici jsou dvě možnosti: volitelná diagnostická data a požadovaná diagnostická data. pokud je pro účely odstraňování potíží potřeba změnit původní nastavení diagnostiky, může ho uživatel změnit v **Nastavení > ochrany osobních údajů – > diagnostika & zpětná vazba** nebo správce it (MDM), pokud se jedná o spravované zařízení. Další informace o [diagnostice, zpětné vazbě a ochraně osobních údajů najdete v tématu Windows 10](https://support.microsoft.com/windows/diagnostics-feedback-and-privacy-in-windows-10-28808a2b-a31b-dd73-dcd3-4559a5199319).
 
 > [!Important]
-> Diagnostické protokoly zařízení obsahují identifikovatelné osobní údaje ( PII), například o tom, jaké procesy nebo aplikace uživatel spouští během typického provozu. Když zařízení HoloLens sdílí více uživatelů (například uživatelé se přihlásí ke stejnému zařízení pomocí různých účtů Microsoft Azure Active Directory (Azure AD), diagnostické protokoly mohou obsahovat informace o PII, které platí pro více uživatelů.
+> Protokoly diagnostiky zařízení obsahují identifikovatelné osobní údaje (PII), například informace o tom, jaké procesy nebo aplikace uživatel spouští během typických operací. pokud se zařízení HoloLens sdílí více uživatelů (například se uživatelé přihlašují ke stejnému zařízení pomocí různých účtů Microsoft Azure Active Directory (Azure AD)), diagnostické protokoly mohou obsahovat informace PII, které platí pro více uživatelů.
 
- 
-
-Existuje několik [metod shromažďování a zásad uchovávání dat](https://docs.microsoft.com/hololens/hololens-diagnostic-logs) pro shromažďování diagnostických dat z HoloLens 2.  Další informace o tom, jak Microsoft shromažďuje a používá diagnostická data, najdete v tématu [Prohlášení o](https://privacy.microsoft.com/privacystatement) zásadách ochrany osobních údajů společnosti Microsoft – Diagnostika – rozbalte v levé navigační nabídce možnost **Windows** a **vyberte Diagnostika.** Přejděte do **části Diagnostika.**
+pro shromažďování diagnostických dat z HoloLens 2 je k dispozici [několik metod kolekce a zásad uchovávání dat](/hololens/hololens-diagnostic-logs) .  další informace o tom, jak společnost microsoft shromažďuje a používá diagnostická data, naleznete v tématu [prohlášení o zásadách ochrany osobních údajů společnosti microsoft – diagnostika](https://privacy.microsoft.com/privacystatement) -rozbalení **Windows** v levé navigační nabídce a vyberte možnost **diagnostika**. Přejít na část **Diagnostika** .
