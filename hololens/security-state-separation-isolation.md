@@ -1,91 +1,91 @@
 ---
 title: Oddělení a izolace stavu
-description: Seznamte se s aplikacemi pro oddělení stavu, izolaci, podepisování kódu a defender na zařízení s hybridní realitou HoloLens 2.
+description: přečtěte si o odděleních stavu, izolaci, podepisování kódu a aplikacích defenderu na vašem zařízení HoloLens 2 mixed reality.
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.topic: article
-keywords: security, hololens, State Separation, State Separation and Isolation, hololens 2, hololens2 security, security overview, security architecture, architecture, hololens 2 architecture
+keywords: zabezpečení, HoloLens, oddělení stavu, oddělení stavu a izolace, HoloLens 2, hololens2 zabezpečení, Přehled zabezpečení, Architektura zabezpečení, architektura, architektura HoloLens 2
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 60d6d7c0e281395957ce9158144a5f3d60927682
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 0487ea49c706c753f4dfca7da7daa499d1715e9f
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379298"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639790"
 ---
 # <a name="state-separation-and-isolation"></a>Oddělení a izolace stavu
 
-Oddělení a izolace stavu chrání důležité části operačního systému Hololens 2 před změnou – například ty, které jsou nutné pro spuštění operačního systému do důvěryhodného stavu. Díky technologii izolace se nedůvěryhodné aplikace přesunou do izolovaného prostředí sandboxu, aby se zajistilo, že neovlivní zabezpečení systému.
+Oddělení a izolace stavu chrání kritické části operačního systému HoloLens 2, například ty, které jsou potřeba k tomu, aby se operační systém spouštěl do důvěryhodného stavu. Díky technologii izolace jsou nedůvěryhodné aplikace přesunuty do izolovaného prostředí izolovaného prostoru (sandbox), aby se zajistilo, že nebudou mít vliv na zabezpečení systému.
 
 ## <a name="state-separation"></a>Oddělení stavu
 
-Oddělení stavu na HoloLens 2 výrazně zlepšuje zabezpečení a použitelnost (aktualizace) a pomáhá chránit data aplikací.  Oddělení stavu funguje takto:
-  * Základní operační systém je uložený na svazku základního operačního systému (důvěryhodný nebo ověřený operační systém Microsoftu, který aktualizuje operační systém).
-  * Části operačního systému, které je možné změnit za běhu (například ovladače a konfigurace ke stažení), používají další oddělení stavu k rozdělení dat a jejich uložení do zabezpečených samostatných umístění úložiště.
-  * Ke každému zabezpečenému umístění úložiště jsou přidružené odlišné zásady zabezpečení, které nabízejí různé výhody zabezpečení, které jsou podrobně uvedená v následující části.
+oddělení stavu HoloLens 2 značně vylepšuje zabezpečení a použitelnost (aktualizace) a pomáhá chránit data aplikací.  Oddělení stavu funguje následujícím způsobem:
+  * Základní operační systém je uložený ve svazku základního operačního systému (důvěryhodný nebo ověřený operační systém Microsoft pro aktualizaci operačního systému).
+  * Části operačního systému, které se dají změnit za běhu (například ovladače a konfigurace ke stažení), umožňují rozdělit data na oddíly a ukládat je do zabezpečených, oddělených umístění úložiště.
+  * Každé umístění zabezpečeného úložiště má jedinečné zásady zabezpečení, které jsou k němu přidružené, a nabízí různé výhody zabezpečení, jak je popsáno v následující části.
 
-## <a name="state-separation-benefits"></a>Výhody oddělení států
+## <a name="state-separation-benefits"></a>Výhody oddělení stavu
 
-  * Zabezpečení: Oddělení stavu, které je v HoloLens 2, výrazně zlepšuje integritu platformy, odolnost proti malwaru a ochranu uživatelských dat. Oddělením nealterovatelné části operačního systému a zajištěním, že je jen pro čtení nebo chráněná proti integritě, je oddělení stavu velmi obtížné, aby se malware při studeném restartování uchoval. 
-  * Aktualizace: S HoloLens 2 se aktualizace stávají jednoduchými a spolehlivými, jakmile je základní operační systém neupravitelný a je dobře oddělený od ostatních dat v zařízení.  Kromě toho oddělení stavu popisuje zásadní základ pro dramaticky rychlejší aktualizace, které umožňují nahradit operační systém v jednom kroku (atomická jednotka).
-  * Resetování zařízení: Resetování HoloLens 2 vymaže data vygenerovaná uživatelem a data uživatelských aplikací na zařízení – včetně interních a externích umístění úložiště. Zachovává aktuální aplikace operačního systému a aplikace kritické pro zabezpečení a aktuální přizpůsobené aplikace Microsoftu a OEM (předinstalované). Po dokončení resetování je možné tyto předinstalované aplikace do zařízení znovu dosadět.
+  * zabezpečení: oddělení stavu HoloLens 2 významně vylepšuje integritu platformy, odolnost proti malwaru a ochranu uživatelských dat. Oddělením neměnitelné části operačního systému a tím, že je jen pro čtení nebo chráněná integrita, je rozdělení stavu velmi obtížné, aby se malware zachoval po studeném restartování. 
+  * aktualizace: u HoloLens 2 platí, že jakmile je základní operační systém neupravitelný a byl čistě oddělený od zbytku dat v zařízení, aktualizace budou jednoduché a spolehlivé.  Kromě toho oddělení stavu stanoví zásadní základy pro výrazně rychlejší aktualizace, což umožňuje, aby se operační systém nahradil v jednom kroku (atomická jednotka).
+  * resetování zařízení: HoloLens 2 resetuje vymazávání dat generovaných uživatelem a uživatelských aplikací na zařízení – včetně umístění interního a externího úložiště. Zachovává aktuální aplikace pro operační systém a kritické aplikace zabezpečení a aktuální aplikace přizpůsobené od Microsoftu a OEM (předinstalované). Tyto předinstalované aplikace je možné po dokončení resetování znovu zapnout v zařízení.
 
 ### <a name="state-separation-states"></a>Stavy oddělení stavu
 
-Oddělení stavu zajišťuje, aby operační systém mohl být změněn jenom důvěryhodnými komponentami zařízení Microsoftu a aby se po restartování mohl zachovat jenom stav s vysokou hodnotou. Jiný stav systému existuje jenom po dobu trvání relace spuštění a po restartování se zahodí. Oddělení stavu rychle vrátí zařízení zpět do továrního stavu. Windows Holographic for Business stavy lze rozdělit do těchto odlišných kategorií:
-  * Základní operační systém – Nealterovatelný stav
-  * Data operačního systému – měnitelný stav 
-  * Uživatelská data – měnitelný stav
+Oddělení stavu zajišťuje, aby operační systém mohl změnit pouze součásti důvěryhodných zařízení společnosti Microsoft a aby bylo možné zachovat pouze stav vysoké hodnoty v rámci restartování. jiný stav systému existuje jenom po dobu trvání relace spuštění a po restartování se zahodí. Oddělení stavu rychle vrátí zařízení zpátky do továrního stavu. Windows Holographic for Business stavy lze rozdělit do těchto různých kategorií:
+  * Základní operační systém – stav bez úprav
+  * Data operačního systému – měnitelné stavy 
+  * Uživatelská data – měnitelné stavy
 
-Každý z těchto provozních stavů HoloLens 2 je popsán v následující části.
+každý z těchto HoloLens 2 – provozní stavy jsou popsány v následující části.
 
 #### <a name="core-operating-system"></a>Základní operační systém
 
-Neměnný stav se skládá ze spustitelných souborů a dat, které jsou nealterovatelné a mohou být změněny společností Microsoft pouze během instalace aktualizací. Během takové aktualizace základního operačního systému se povolí nová image obsahující nejnovější požadovaný provozní stav.
-Nealterovatelný stav je označený jako jen pro čtení (nebo je jinak chráněný integritou), což brání trvalosti jakéhokoli malwaru se zvýšenými oprávněními. Následující spustitelné soubory a data jsou chráněny v neměnném stavu:
-  * Ovladače doručené pošty s Windows Holographic
+Neproměnlivý stav se skládá ze spustitelných souborů a dat, která nelze měnit a kterou může změnit pouze společnost Microsoft při instalaci aktualizací. Během takové aktualizace základního operačního systému je povolená nová image obsahující nejnovější požadovaný provozní stav.
+Nezměněný stav je označen jako jen pro čtení (nebo je jinak chráněn integritou) a brání tak trvalému malwaru se zvýšenými oprávněními. Následující spustitelné soubory a data jsou chráněny v neměnném stavu:
+  * Windows Ovladače holografické pošty
   * Binární soubory operačního systému
-  * Ovladače doručené pošty ve Windows
-  * Statická nastavení Windows Holographic uložená v podregistru registru Windows (HKLM)
-    * Příklad: HKLM ukládá informace o konfiguraci aplikací nainstalovaných na počítači. Ukládá také informace pro detekci hardwaru a odpovídajících ovladačů.
-Tím, že je chráníme v neměnném stavu (integrity a chráněném jen pro čtení), zajišťujeme, že se základní operační systém vždy spustí do důvěryhodného stavu. Kromě toho můžeme při resetování zařízení zajistit, že se zařízení spustí jenom do komponent, které jsou v této neměnné části. 
+  * ovladače Windows doručených zpráv
+  * nastavení statických Windows holografických uložení v podregistru Windows registru (HKLM)
+    * Příklad: HKLM ukládá informace o konfiguraci aplikací nainstalovaných v počítači. Také ukládá informace k detekci hardwaru a odpovídajících ovladačů.
+Díky ochraně těchto v neměnném stavu (integrita a jen pro čtení) zajišťujeme, aby se základní operační systém vždy spouštěl do důvěryhodného stavu. Když se zařízení resetuje, můžeme se ujistit, že se zařízení spouští jenom na součásti, které jsou v tomto neměnném oddílu. 
 
 #### <a name="operating-system-data"></a>Data operačního systému 
 
-Je důležité si uvědomit, že spustitelné soubory a data, která je možné měnit za běhu (a která nejsou pro funkci operačního systému zásadní), je možné zahodit a znovu vytvořit, když jsou data poškozena nebo ohrožena. Pro zachování operačního systému, nebo se očekává zachování během vypínání operačního systému nebo při různých restartováních podporovaných scénářů operačního systému Windows a zařízení, se vyžaduje funkční stav s vysokou hodnotou. Mezi příklady stavů s vysokou hodnotou, které lze přeměnovat, patří:
-  * Globální nastavení zařízení nakonfigurovaná správcem IT, například zakázání umístění pro všechny uživatele.
-  * Připojení k síti Wi-Fi přistupuje k sítím, které si zařízení zapamatuje, a k přidruženým hesly připojení.
-  * Výpisy stavu systému včetně nastavení a protokolů.
-  * Ovladače stažené na vyžádání pro nově zjištěná zařízení.
-Vysoce hodnotný měnitelný stav v HoloLens 2 se nachází v umístění zabezpečení dat operačního systému, a to buď jako uložený soubor na disku, nebo v trvalém podregistru registru.
+Je důležité si uvědomit, že spustitelné soubory a data, která se mění za běhu (a nejsou důležité pro funkci operačního systému), je možné zahodit a znovu vytvořit, když jsou data poškozená nebo ohrožená. stav, který lze změnit na vysokou hodnotu, je buď funkčně nutný k uchování v operačním systému, nebo v případě výpadku operačního systému a při restartování prostřednictvím podporovaných Windows scénářů operačního systému a zařízení. Příklady proměnlivého stavu vysoké hodnoty jsou:
+  * Správce IT nakonfiguroval globální nastavení zařízení, například zakázání umístění pro všechny uživatele.
+  * Přístup k datům síťového připojení sítě Wi-Fi – zařízení – zapamatovatelné sítě a přidružená hesla připojení
+  * Výpisy stavu systému včetně nastavení, protokolů.
+  * Ovladače stažené na vyžádání nově zjištěných zařízení.
+stav, který může být ve stavu HoloLens 2 v umístění s vysokou hodnotou, se nachází v umístění zabezpečení dat operačního systému, a to buď jako uložený soubor na disku, nebo v trvalém podregistru.
 
 #### <a name="user-data"></a>Uživatelská data
 
-Poslední kategorie stavu představuje uživatelská data vytvořená nebo uchovaná aplikacemi UPW nebo operačním systémem. V tomto umístění jsou uložené také všechny známé složky uživatelů, jako jsou soubory ke stažení, dokumenty, videa, profily HKEY_CURRENT_USER a podregistr. Tato data nelze extrahovat bez správných přihlašovacích údajů. Další informace o tom, jak jsou vaše data chráněná, najdete v tématu Šifrování a [ochrana dat.](security-encryption-data-protection.md)
+Poslední kategorie stavu představuje uživatelská data vytvořená nebo trvalá aplikacemi UWP nebo operačním systémem. V tomto umístění jsou uloženy také všechny známé složky uživatele, například soubory ke stažení, dokumenty, videa, profily uživatelů a HKEY_CURRENT_USER podregistr. Tato data se nedají extrahovat bez správných přihlašovacích údajů. Další informace o tom, jak jsou vaše data chráněná, najdete v tématu [šifrování a ochrana dat](security-encryption-data-protection.md).
 
 ##  <a name="isolation"></a>Izolace
 
-K dosažení této rovnováhy má HoloLens 2 základní operační systém, který se používá pro primární funkce, jako je spouštění, ovládání hardwaru, přihlašování atd. Existují pouze dvě sady aplikací, které běží na základním operačním systému – předinstalovaných aplikací a aplikací pro UPW.
+pro dosažení tohoto zůstatku HoloLens 2 má základní operační systém, který se používá pro primární funkce, jako je spouštění, řízení hardwaru, protokolování atd. Existují jenom dvě sady aplikací, které běží na základním operačním systému – předem nainstalované aplikace a aplikace pro UWP.
 
 ## <a name="code-signing"></a>Podepisování kódu
 
-Digitální podepisování kódu umožňuje určit, že spustitelné soubory a skripty nebyly změněny, protože byly podepsány důvěryhodným zdrojem, a proto poskytují pravost a integritu. Autority, které HoloLens 2 ve výchozím nastavení důvěřuje, jsou microsoft a Microsoft Store. Správci IT můžou do zařízení přidat nové certifikáty prostřednictvím [csP ClientCertificateInstall](https://docs.microsoft.com/windows/client-management/mdm/clientcertificateinstall-csp) a [RootCATrustedCertificates.](https://docs.microsoft.com/windows/client-management/mdm/rootcacertificates-csp) Mohou také použít zásadu [AllowAllTrustedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps) k důvěřování dalším aplikacím s bočním načtením nebo obchodním [aplikacím](https://docs.microsoft.com/intune/apps/lob-apps-windows). Certifikáty se nacházejí v místním počítači úložiště certifikátů, které je uložené v HKLM/Root, pokud používáte "zařízení" nebo v HKCU, pokud používáte "uživatel".
+Digitální podepisování kódu umožňuje odůvodnění, že se spustitelné soubory a skripty nezměnily, protože byly podepsány důvěryhodným zdrojem, proto by poskytovala pravost a integritu. autority, které ve výchozím nastavení HoloLens 2 důvěřují, jsou Microsoft a Microsoft Store. Správci IT můžou do zařízení přidávat nové certifikáty prostřednictvím CSP [ClientCertificateInstall](/windows/client-management/mdm/clientcertificateinstall-csp) a [RootCATrustedCertificates](/windows/client-management/mdm/rootcacertificates-csp) . Můžou taky používat [zásady AllowAllTrustedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps) k tomu, aby důvěřovaly dalším zkušebně načtené nebo [obchodním aplikacím](/intune/apps/lob-apps-windows). Certifikáty se nacházejí v úložišti certifikátů místního počítače, které je uloženo v klíči HKLM/root, pokud používáte "zařízení" nebo "v rozhraní HKCU", pokud používáte "User".
 
-## <a name="defender-protections"></a>Ochrany v programu Defender
-HoloLens 2 služby Microsoft k zajištění pokročilé úrovně zabezpečení:
+## <a name="defender-protections"></a>Ochrana v programu Defender
+HoloLens 2 používá služby Microsoft k poskytnutí pokročilé úrovně zabezpečení pro uživatele:
 
-* [Filtr SmartScreen v](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) programu Defender je automaticky povolený na Zařízení s Windows Holographic operačním systémem a chrání před útoky phishing a malwarem a také stahování potenciálně škodlivých souborů v Edge. Uživatel ho nemůže vypnout, ale může ho zakázat prostřednictvím zásad.
+* [filtr SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) je automaticky povolený pro Windows holografický operačním systémem a chrání před phishingem a malwarem a také stahování potenciálně škodlivých souborů na hraničních zařízeních. Nemůže být vypnutá uživatelem, ale dá se zakázat prostřednictvím zásad.
 
-* [Brána firewall v programu Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) blokuje tok neoprávněného síťového provozu do a z vašeho zařízení. Ve výchozím nastavení je povolená a zákazník ji nemůže konfigurovat prostřednictvím místních akcí nebo zásad. 
+* [Firewall Defenderu](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security) blokuje neoprávněný síťový provoz z vašeho zařízení a z něj. Ve výchozím nastavení je povolená a zákazník ho nemůže konfigurovat prostřednictvím místních akcí nebo zásad. 
 
-* [Windows Defender řízení aplikací:](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview)HoloLens 2 podporuje WDAC, což správci IT umožňuje na zařízení předá zásady řízení aplikací. Další informace najdete v článku Použití [WDAC na zařízeních HoloLens 2 s MSFT Intune.](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens) 
+* [Windows Defender řízení aplikací](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview): HoloLens 2 podporuje WDAC, který umožňuje správci IT zaručovat do zařízení zásady řízení aplikací. další informace najdete v [WDACě v zařízení s HoloLens 2 s použitím protokolu MSFT intune](/mem/intune/configuration/custom-profile-hololens). 
 
-Správci IT mohou chování obrazovky SmartScreen spravovat prostřednictvím [funkce AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) a chování prohlížeče prostřednictvím [těchto zásad.](https://docs.microsoft.com/windows/client-management/mdm/policy-csps-supported-by-hololens2) 
+Správci IT můžou pomocí [těchto zásad](/windows/client-management/mdm/policy-csps-supported-by-hololens2)spravovat chování SmartScreen prostřednictvím [AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) a chování prohlížeče. 
 

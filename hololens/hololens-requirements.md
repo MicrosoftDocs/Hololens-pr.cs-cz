@@ -1,10 +1,10 @@
 ---
 title: Běžné scénáře nasazení
-description: přečtěte si další informace o nasazení a správě HoloLens v podnikovém prostředí, včetně infrastruktury, Azure Active Directory a správy mobilních zařízení.
+description: Další informace o nasazení a správě HoloLens podnikových prostředích, včetně infrastruktury, Azure Active Directory a správy mobilních zařízení.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 88bf50aa-0bac-4142-afa4-20b37c013001
-author: bogenera
+author: bgener
 ms.author: bogenera
 audience: ITPro
 ms.topic: article
@@ -12,97 +12,97 @@ ms.localizationpriority: medium
 ms.date: 11/04/2020
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 72b9e61c52d6f4f08cf5a29baf7b01c29fae7489
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: ccccdcc7d3188919d02eb5855131137415c12d16
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635462"
+ms.locfileid: "113639824"
 ---
 # <a name="common-deployment-scenarios"></a>Běžné scénáře nasazení
 
 ## <a name="overview"></a>Přehled
 
-tato stránka poskytuje přehled architektury vysoké úrovně pro tři běžné scénáře při nasazení a správě zařízení Microsoft HoloLens 2 v rámci podniku.
+Tato stránka poskytuje základní přehled architektury pro tři běžné scénáře nasazení a správy Microsoft HoloLens 2 zařízení v rámci podniku.
 
-Správa zařízení a přístup k prostředkům vaší organizace je často určována podle faktorů, které jsou už na místě. v závislosti na vaší stávající infrastruktuře vás vyzveme ke kontrole společného stylu správy zařízení (MDM) v následujících scénářích a potom si můžete přečíst téma [plánování nasazení HoloLens 2 v komerčním prostředí](hololens-core-components.md) , abyste zjistili, který scénář vyhovuje vašim potřebám. K dispozici jsou také tři odpovídající příručky pro použití během nasazování.
+Způsob správy zařízení a přístupu k prostředkům vaší organizace je často určován z velké části faktory, které už jsou na místě. V závislosti na vaší stávající infrastruktuře si prohlédněte běžný styl správy zařízení (MDM) v následujících scénářích a pak si v článku Plánování nasazení [HoloLens 2](hololens-core-components.md) v komerčním prostředí zjistěte, který scénář vyhovuje vašim potřebám. K dispozici jsou také tři odpovídající příručky, které můžete použít během nasazení.
 
 
- 1. [Průvodce nasazením propojeného prostředí v cloudu](hololens2-cloud-connected-overview.md)
-     1. [Příručka pro nasazení prostředí připojeného k cloudu (externí klienti)](hololens2-deployment-guide.md)
+ 1. [Průvodce nasazením prostředí připojeného ke cloudu](hololens2-cloud-connected-overview.md)
+     1. [Průvodce nasazením prostředí připojeného ke cloudu (externí klienti)](hololens2-deployment-guide.md)
  1. [Průvodce nasazením podnikové sítě](hololens2-corp-connected-overview.md)
  1. [Průvodce nasazením zabezpečeného prostředí offline](hololens-common-scenarios-offline-secure.md)
 
-## <a name="scenario-a-deploy-to-cloud-connected-devices"></a>Scénář A: nasazení na zařízení připojená do cloudu
+## <a name="scenario-a-deploy-to-cloud-connected-devices"></a>Scénář A: Nasazení do zařízení připojených ke cloudu
 
-Tento scénář je porovnatelný z důvodů nasazení spravovaných mobilních zařízení v rámci společnosti. HoloLens 2 je nasazená pro použití primárně v prostředích, která jsou externí pro podnikovou síť. Firemní prostředky nejsou dostupné nebo můžou být omezené prostřednictvím sítě VPN. 
+Tento scénář je srovnatelný s nasazením spravovaných mobilních zařízení v rámci společnosti. HoloLens 2 se nasazovat pro použití primárně v prostředích mimo podnikovou síť. K podnikovým prostředkům se přistupuje nebo je možné, že budou omezené prostřednictvím sítě VPN. 
  * Základní běžné konfigurace
-   * Wi-Fi sítě jsou obvykle plně otevřené pro Internet a cloudové služby.
-   * Připojení k Azure AD pomocí automatického zápisu správy mobilních zařízení (MDM) – spravovaná MDM (Intune)
-   * Uživatelé se přihlásí pomocí vlastního podnikového účtu (Azure AD).
-     * Podporuje se jeden nebo víc uživatelů na zařízení.
-   * Různé úrovně konfigurace uzamčení zařízení se aplikují v závislosti na specifických případech použití, od úplného otevření do veřejného terminálu s jednou aplikací.
-   * Jedna nebo víc aplikací se nasazuje přes MDM.
+   * Wi-Fi sítě jsou obvykle plně otevřené pro internet a cloudové služby.
+   * Připojení ke službě Azure AD s Správa zařízení mobilních zařízení (MDM) – spravovaná pomocí MDM (Intune)
+   * Uživatelé se přihlašují pomocí vlastního podnikového účtu (Azure AD).
+     * Podpora jednoho nebo více uživatelů na zařízení
+   * Na základě konkrétních případů použití, od plně otevřeného až po beznabitový terminál s jednou aplikací, se používají různé úrovně konfigurací uzamčení zařízení.
+   * Jedna nebo více aplikací se nasadí přes MDM.
 
-* Běžné výzvy
-   * určení, které konfigurace MDM se mají použít na HoloLens 2 na základě požadavků na scénář
+* Běžné problémy
+   * Určení konfigurací MDM, které se mají použít pro HoloLens 2 na základě požadavků scénáře
 
-[![Scénář A diagram ](images/deployment-guides-revised-scenario-a.png)](images/deployment-guides-revised-scenario-a.png#lightbox)
+[![Diagram scénáře ](images/deployment-guides-revised-scenario-a.png) A](images/deployment-guides-revised-scenario-a.png#lightbox)
 
-odpovídající průvodce připojeným ke cloudu popisuje, jak zaregistrovat HoloLens 2 do správy zařízení, použít licence podle potřeby a ověřit, že koncoví uživatelé můžou hned používat funkci vzdálená pomoc při instalaci zařízení. Pomocí Průvodce externími klienty nasaďte zařízení do vzdálené lokality pro krátkodobé nebo dlouhodobé externí použití.
+Odpovídající příručka připojená ke cloudu popisuje, jak zaregistrovat HoloLens 2 do správy zařízení, jak podle potřeby použít licence a ověřit, že koncoví uživatelé mohou vzdálenou pomoc při nastavení zařízení okamžitě používat. Pomocí příručky Externí klienti můžete nasadit zařízení do vzdálené lokality pro krátkodobé nebo dlouhodobé externí použití.
 
 > [!div class="nextstepaction"]
-> [Průvodce nasazením propojeného prostředí v cloudu](hololens2-cloud-connected-overview.md)
+> [Průvodce nasazením prostředí připojeného ke cloudu](hololens2-cloud-connected-overview.md)
 
 > [!div class="nextstepaction"]
-> [Příručka pro nasazení prostředí připojeného k cloudu (externí klienti)](hololens2-deployment-guide.md)
+> [Průvodce nasazením prostředí připojeného ke cloudu (externí klienti)](hololens2-deployment-guide.md)
 
-## <a name="scenario-b-deploy-inside-your-organizations-network"></a>Scénář B: nasazení v síti vaší organizace
+## <a name="scenario-b-deploy-inside-your-organizations-network"></a>Scénář B: Nasazení v síti vaší organizace
 
-tento scénář je stejný jako klasický vývoj pro většinu Windows 10 počítačů. HoloLens 2 je nasazená pro použití primárně v podnikové síti s přístupem k interním podnikovým prostředkům. Internetové a cloudové služby můžou být omezené. 
+Tento scénář je stejný jako u klasického nasazení pro většinu Windows 10 počítačů. HoloLens 2 je nasazená pro použití primárně v podnikové síti s přístupem k interním podnikovým prostředkům. Internet a cloudové služby mohou být omezené. 
 
  * Základní běžné konfigurace
-   * Wi-Fi síť je interní podniková síť s přístupem k interním prostředkům a omezeným přístupem k internetovým nebo cloudovým službám.
-   * Připojení k Azure AD s automatickým zápisem MDM
-   * Spravovaná MDM (Intune)
-   * Uživatelé se přihlásí pomocí vlastního podnikového účtu (Azure AD).
-     * Podporuje se jeden nebo víc uživatelů na zařízení.
-   * Různé úrovně konfigurace uzamčení zařízení se aplikují v závislosti na specifických případech použití, od úplného otevření do veřejného terminálu s jednou aplikací.
-   * Jedna nebo víc aplikací se nasazuje přes MDM.
+   * Wi-Fi je interní podniková síť s přístupem k interním prostředkům a omezeným přístupem k internetu nebo cloudovým službám.
+   * Připojení ke službě Azure AD s automatickou registrací MDM
+   * Správa MDM (Intune)
+   * Uživatelé se přihlašují pomocí vlastního podnikového účtu (Azure AD).
+     * Podpora jednoho nebo více uživatelů na zařízení
+   * Na základě konkrétních případů použití, od plně otevřeného až po beznabitový terminál s jednou aplikací, se používají různé úrovně konfigurací uzamčení zařízení.
+   * Jedna nebo více aplikací se nasadí přes MDM.
 
- * Běžné výzvy
-   * HoloLens 2 nepodporuje místní službu AD join ani SCCM. Jenom Azure AD JOIN s MDM. mnoho společností dnes ještě v tomto scénáři nasazuje Windows 10 počítače, jako jsou místní zařízení připojená k AD, spravovaná pomocí System Center Configuration Manager (SCCM) a nemusí mít nasazenou a nakonfigurovanou infrastrukturu pro správu interních Windows 10 zařízení přes cloudová řešení MDM.
-   * jak HoloLens 2 je první cloudové zařízení, spoléhá se na internetovou a cloudovou službu připojenou pro ověřování uživatelů, aktualizace operačního systému, správu MDM a tak dále. při připojování k podnikové síti bude pravděpodobně nutné upravit pravidla Proxy serveru nebo brány Firewall tak, aby povolovala přístup pro HoloLens 2 a aplikace, které na něm běží.
-   * Připojení k podnikovému Wi-Fi obvykle vyžaduje certifikáty k ověření zařízení nebo uživatele v síti. požadovaná infrastruktura nebo nastavení pro nasazení certifikátů do zařízení Windows 10 prostřednictvím MDM může být náročná na konfiguraci.
+ * Běžné problémy
+   * HoloLens 2 nepodporuje připojení k místní službě AD ani SCCM. Pouze připojení k Azure AD pomocí MDM. Mnoho společností v tomto scénáři stále nasazovat počítače Windows 10 jako místní zařízení připojená k AD spravovaná přes System Center Configuration Manager (SCCM) a nemusí mít nasazenou nebo nakonfigurovanou infrastrukturu pro správu interních zařízení Windows 10 prostřednictvím cloudových řešení MDM.
+   * Protože HoloLens 2 je první zařízení v cloudu, spoléhá do značné míry na internetové a cloudové služby pro ověřování uživatelů, aktualizace operačního systému, správu MDM atd. Při připojování k podnikové síti bude pravděpodobně potřeba upravit pravidla proxy serveru nebo brány firewall, aby byl povolen přístup pro HoloLens 2 a aplikace, které na ní běží.
+   * Připojení Wi-Fi podnikové sítě obvykle vyžaduje certifikáty k ověření zařízení nebo uživatele v síti. Konfigurace požadované infrastruktury nebo nastavení pro nasazení certifikátů do Windows 10 zařízení prostřednictvím MDM může být náročná.
 
-[![Diagram ](images/deployment-guides-revised-scenario-b-01-1.png) scénáře B1](images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
+[![Diagram scénáře B1 ](images/deployment-guides-revised-scenario-b-01-1.png)](images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
 
-[![Diagram ](images/deployment-guides-revised-scenario-b-02-1.png) scénáře v B2](images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
+[![Diagram scénáře B2 ](images/deployment-guides-revised-scenario-b-02-1.png)](images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
 
-odpovídající příručka k podnikové síti obsahuje pokyny k tomu, jak zaregistrovat HoloLens 2 do vaší stávající správy zařízení, použít licence podle potřeby a ověřit, že koncoví uživatelé můžou pracovat s průvodcem Dynamics 365 a také používat vlastní obchodní aplikace po nastavení zařízení.
+Odpovídající příručka k podnikové síti instruuje, jak zaregistrovat HoloLens 2 do stávající správy zařízení, jak podle potřeby použít licence a ověřit, jestli koncoví uživatelé po nastavení zařízení mohou používat příručku Dynamics 365 a také používat vlastní obchodní aplikace.
 
 > [!div class="nextstepaction"]
 > [Průvodce nasazením podnikové sítě](hololens2-corp-connected-overview.md)
 
-## <a name="scenario-c-deploy-in-secure-offline-environment"></a>Scénář C: nasazení v zabezpečeném prostředí offline
+## <a name="scenario-c-deploy-in-secure-offline-environment"></a>Scénář C: Nasazení v zabezpečeném offline prostředí
 
-Toto je typické nasazení pro vysoce zabezpečená nebo důvěrná místa. HoloLens 2 je nasazen pro použití primárně v režimu offline bez přístupu k síti nebo internetu. 
+Toto je typické nasazení pro vysoce zabezpečená nebo důvěrná umístění. HoloLens 2 je nasazená pro použití primárně offline bez přístupu k síti nebo internetu. 
  * Základní běžné konfigurace
-   * Připojení Wi-Fi je zakázané. V případě potřeby může být v případě potřeby povolená síť Ethernet přes USB.
-   * Nespravováno
-   * Místní uživatelský účet pro přihlášení zařízení.
+   * Wi-Fi připojení je zakázané. Ethernet přes USB může být v případě potřeby povolený pro připojení k síti LAN.
+   * Nespravovaná.
+   * Místní uživatelský účet pro přihlášení k zařízení.
      * HoloLens 2 podporuje pouze jeden místní účet.
-   * Různé úrovně konfigurace uzamčení zařízení se používají prostřednictvím zřizovacích balíčků na základě konkrétních případů použití. Tyto konfigurace jsou obvykle omezené z důvodu požadavků na zabezpečení prostředí.
-   * Jedna nebo víc aplikací se nasazuje prostřednictvím zřizovacího balíčku.
+   * Prostřednictvím zřizovací balíčky se na základě konkrétních případů použití používají různé úrovně konfigurací uzamčení zařízení. Tyto konfigurace jsou obvykle omezené z důvodu požadavků na zabezpečené prostředí.
+   * Jedna nebo více aplikací se nasadí prostřednictvím zřizovacího balíčku.
 
- * Běžné výzvy
+ * Běžné problémy
    * Prostřednictvím zřizovacích balíčků je k dispozici omezená sada konfigurací.
-   * cloudové služby se nedají použít, proto omezení možností HoloLens 2.
+   * Cloudové služby není možné použít, a proto je možné omezit HoloLens 2.
    * Vyšší režijní náklady na správu, protože tato zařízení musí být nastavená, nakonfigurovaná a aktualizovaná ručně.
 
 [![Offline zabezpečený diagram 1 ](images/deployment-guides-revised-scenario-c-01.png)](images/deployment-guides-revised-scenario-c-01.png#lightbox)
 
-odpovídající průvodce zabezpečenou nápovědou poskytuje pokyny pro použití ukázkového zřizovacího balíčku, který bude uzamknout HoloLens 2 pro použití v zabezpečených prostředích.
+Odpovídající průvodce zabezpečením offline poskytuje pokyny k použití ukázkového zřizovacího balíčku, který uzamkne HoloLens 2 pro použití v zabezpečených prostředích.
 
 > [!div class="nextstepaction"]
 > [Průvodce nasazením zabezpečeného prostředí offline](hololens-common-scenarios-offline-secure.md)

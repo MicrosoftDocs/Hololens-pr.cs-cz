@@ -1,6 +1,6 @@
 ---
-title: Mapování fyzických prostorů pomocí HoloLens
-description: HoloLens zjistí, jak prostor v průběhu času vypadá. Uživatelé mohou tento proces usnadnit přesunutím HoloLens určitým způsobem přes prostor.
+title: Namapujte fyzické mezery pomocí HoloLens
+description: HoloLens se dozvíte, co v průběhu času vypadá prostor. uživatelé můžou tento proces usnadnit přesunutím HoloLens určitým způsobem prostřednictvím prostoru.
 ms.assetid: bd55ecd1-697a-4b09-8274-48d1499fcb0b
 author: dorreneb
 ms.author: dobrown
@@ -8,7 +8,7 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 ms.date: 09/16/2019
-keywords: hololens, Windows Mixed Reality, design, spatial mapping, HoloLens, surface reconstruction, mesh, head tracking, mapping
+keywords: hololens, Windows Mixed Reality, návrh, prostorové mapování, HoloLens, rekonstrukce povrchu, síť, sledování hlav, mapování
 ms.prod: hololens
 ms.sitesec: library
 ms.topic: article
@@ -16,107 +16,107 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens 1 (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 7cedf2af90744477c33736087c85a43168167707
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: b8bda049f0ef4610dcf0ca6fe81d89dd5a316e3e
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379259"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113640036"
 ---
-# <a name="map-physical-spaces-with-hololens"></a>Mapování fyzických prostorů pomocí HoloLens
+# <a name="map-physical-spaces-with-hololens"></a>Namapujte fyzické mezery pomocí HoloLens
 
-HoloLens spojuje hologramy s fyzickým světem. K tomu musí HoloLens získat informace o fyzickém světě kolem vás a pamatovat si, kam do tohoto prostoru umístit hologramy.
+HoloLens blendy s vaším fyzickým světem. aby to bylo možné, HoloLens se musí dozvědět o fyzickém světě kolem vás a zapamatovat si, kam umístíte hologramy v daném prostoru.
 
-V průběhu času holoLens vytvoří prostorovou *mapu* prostředí, které viděl.  HoloLens aktualizuje mapu při změně prostředí. Dokud jste přihlášeni a zařízení je zapnuté, HoloLens vytvoří a aktualizuje prostorové mapy. Pokud zařízení držíte nebo opotřebováte fotoaparáty, které jsou v prostoru, holoLens se pokusí oblast mapovat. I když se HoloLens naučí prostor přirozeně v průběhu času, existují způsoby, jak můžete holoLens pomoct mapovat prostor rychleji a efektivněji.  
+v průběhu času HoloLens vytvoří *prostorovou mapu* prostředí, které viděli.  HoloLens aktualizuje mapu jako změny prostředí. pokud jste přihlášeni a zařízení je zapnuté, HoloLens vytvoří a aktualizuje vaše prostorové mapy. pokud zařízení s kamerami v prostoru podržíte nebo ho chcete používat, HoloLens se pokusí tuto oblast namapovat. i když se HoloLens učí prostor přirozeně v průběhu času, existují způsoby, jak můžete HoloLens lépe namapovat prostor rychleji a efektivně.  
 
 > [!NOTE]
-> Pokud holoLens nemůže mapovat prostor nebo je mimo prostor, může HoloLens vstoupit do omezeného režimu. V omezeném režimu nebudete moct hologramy umístit do svého okolí.
+> pokud vaše HoloLens nemůže namapovat váš prostor nebo se nejedná o kalibraci, HoloLens může vstoupit do omezeného režimu. V omezeném režimu nebudete moci do okolí umístit hologramy.
 
-Tento článek vysvětluje, jak HoloLens mapuje prostory, jak vylepšit prostorové mapování a jak spravovat prostorová data, která HoloLens shromažďuje.
+tento článek vysvětluje, jak HoloLens mapuje prostory, jak vylepšit prostorové mapování a jak spravovat prostorová data, která HoloLens shromažďuje.
 
-## <a name="choosing-and-setting-up-and-your-space"></a>Volba a nastavení a prostor
+## <a name="choosing-and-setting-up-and-your-space"></a>Výběr a nastavení prostoru
 
-Funkce ve vašem prostředí mohou ztížovat interpretaci prostoru pro HoloLens. Úrovně světla, materiály v prostoru, rozložení objektů a další mohou ovlivnit, jak HoloLens mapuje oblast.
+funkce ve vašem prostředí můžou ztížit HoloLens interpretovat místo. světlé úrovně, materiály v prostoru, rozložení objektů a další mohou mít vliv na to, jak HoloLens mapují oblast.
 
-HoloLens funguje nejlépe v určitých typech prostředí. Pokud chcete vytvořit nejlepší prostorovou mapu, zvolte místnost, která má dostatečné světlo a dostatek místa. Vyhněte se tmavým prostorům a místnostem, které mají spoustu tmavých, šišitých nebo průsvitných povrchů (například zrcadla nebo vousy).
+HoloLens nejlépe funguje v určitých druzích prostředí. Chcete-li vytvořit nejlepší prostorovou mapu, vyberte místnost, která má adekvátní světlo a dostatek místa. Vyhněte se tmavém prostorům a místnostem, které mají hodně tmavé, lesklé nebo průsvitné povrchy (např. zrcadle nebo gauzy Curtains).
 
-HoloLens je optimalizovaný pro použití v interiérech. Prostorové mapování také funguje nejlépe Wi-Fi je zapnuté, i když nemusí být připojené k síti. HoloLens může získat Wi-Fi přístupové body, i když není připojený nebo ověřený. Funkce HoloLens nemění, jestli jsou přístupové body připojené k internetu, nebo jenom k intranetu nebo místnímu prostředí.
+HoloLens je optimalizovaná pro použití v interiéru. Prostorové mapování také funguje nejlépe, když je zapnuto Wi-Fi, i když není nutné ho připojit k síti. HoloLens může získat Wi-Fi přístupových bodů i v případě, že není připojený nebo ověřený. funkce HoloLens nemění, jestli jsou přístupové body jenom připojené k internetu nebo intranet/místní.
 
-HoloLens používejte jenom na bezpečných místech bez rizika při vyjetí. [Další informace o bezpečnosti](https://support.microsoft.com/help/4023454/safety-information)
+používejte HoloLens jenom na bezpečných místech bez nebezpečí tripí. [Další informace o zabezpečení](https://support.microsoft.com/help/4023454/safety-information).
 
 ## <a name="mapping-your-space"></a>Mapování prostoru
 
-Teď jste připraveni začít mapovat náhradní.  Když HoloLens začne mapovat vaše okolí, uvidíte grafické rozložení sítě po prostoru.  V domovském prostředí hybridní reality můžete aktivovat zobrazení mapy výběrem na mapované ploše.
+Teď jste připraveni začít s mapováním svého náhradního.  když HoloLens začne namapovat okolí, uvidíte, že se v prostoru rozprostře obrázek.  Na domovské stránce hybridní reality můžete aktivovat mapu, která se zobrazí, když vyberete namapovanou plochu.
 
-Tady jsou pokyny pro vytvoření skvělé prostorové mapy.
+Tady jsou pokyny pro vytvoření Skvělé prostorové mapy.
 
-### <a name="understand-the-scenarios-for-the-area"></a>Pochopení scénářů pro oblast
+### <a name="understand-the-scenarios-for-the-area"></a>Pochopení scénářů oblasti
 
-Je důležité strávený co nejvíce času používáním HoloLens, aby mapa byla relevantní a kompletní. Pokud například uživatelský scénář pro HoloLens zahrnuje přechod z bodu A na bod B, projděte si cestu dvakrát až třikrát a při pohybu se díváte ve všech směrech.  
+je důležité strávit to nejvíce času, kdy budete HoloLens používat, aby byla mapa relevantní a kompletní. pokud například scénář pro uživatele pro HoloLens zahrnuje přesun z bodu a do bodu B, projde se cesta dvě až třikrát a při přesunu se hledají všechny směry.  
 
-### <a name="walk-slowly-around-the-space"></a>Pomalu procházte prostor
+### <a name="walk-slowly-around-the-space"></a>Pomaleji kolem prostoru
 
-Pokud se po této oblasti budete projít příliš rychle, je pravděpodobné, že HoloLens nebude mít k dispozici mapové oblasti. Pomalu si projděte prostor a každých 5 až 8 stop se zastavujte, abyste se podívali na okolí.  
+pokud procházíte příliš rychle kolem oblasti, je pravděpodobný, že HoloLens nepřijde o oblasti mapování. Projděte si pomalu kolem prostoru a zastavte se každých 5-8 metrů, abyste se mohli podívat do okolí.  
 
-Hladké pohyby také pomáhají mapu HoloLens efektivněji.
+plynulé pohyby také pomůžou mapu HoloLens efektivněji.
 
-### <a name="look-in-all-directions"></a>Hledejte ve všech směrech.
+### <a name="look-in-all-directions"></a>Prohlédněte si všechny směry
 
-Při pohledu na mapu prostoru dává HoloLens více dat o tom, kde jsou body vzájemně relativní.  
+při namapování prostoru je HoloLens více dat, kde jsou vzájemně relativní.  
 
-Pokud například nevyhledáte holoLens, nemusí vědět, kde je strop v místnosti.  
+pokud nenajdete například HoloLens nemusí znát, kde je strop v místnosti.  
 
-Při mapování prostoru se nezapomeňte podívat dolů na podlaží.
+Nezapomeňte se podívat na podlahu při mapování prostoru.
 
-### <a name="cover-key-areas-multiple-times"></a>Vícenásobné pokrytí klíčových oblastí
+### <a name="cover-key-areas-multiple-times"></a>Přikrýt klíčové oblasti několikrát
 
-Vícenásobný přesun oblasti vám pomůže vybrat funkce, které jste v prvním názorném postupu vynechali. Pokud chcete vytvořit ideální mapu, zkuste dvakrát až třikrát pro procházení oblasti.
+Pohyb přes oblast několikrát pomůže vybrat funkce, které se vám v prvním návodu nemusely vystavit. Chcete-li vytvořit ideální mapu, zkuste přesměrovat oblast dvě na třikrát.
 
-Pokud je to možné, při opakování těchto pohybů věnujte čas tomu, abyste procházeli oblastí v jednom směru, pak se otočíte a vrátíte se zpět.
+Pokud je to možné, při opakování těchto přesunů tráví čas procházením oblasti v jednom směru a pak se přepíná a vrátí zpět způsob, jakým jste dostali.
 
-### <a name="take-your-time-mapping-the-area"></a>Udělejte si čas namapování oblasti
+### <a name="take-your-time-mapping-the-area"></a>Pořídit čas mapování oblasti
 
-Může trvat 15 až 20 minut, než se HoloLens plně namapuje a přizpůsobí svému okolí. Pokud máte prostor, ve kterém plánujete holoLens často používat, může pozdějšímu namapování prostoru zabraňovat problémům.  
+může trvat 15 až 20 minut, než se HoloLens plně namapuje a upraví na jeho okolí. pokud máte prostor, ve kterém plánujete použít HoloLens často, zajistěte, aby tento čas ještě před tím, než bude možné problémy, nedocházelo k problémům později.  
 
 ## <a name="possible-errors-in-the-spatial-map"></a>Možné chyby v prostorové mapě
 
-Chyby v datech prostorového mapování spadají do několika kategorií:
+Chyby v prostorových mapováních dat spadají do několika kategorií:
 
-- *Otvory:* V datech prostorového mapování chybí povrchy z reálného světa.
-- *Halukuna:* Povrchy existují v datech prostorového mapování, která neexistují ve skutečném světě.
-- *Wormholes*: HoloLens "ztratí" část prostorové mapy tím, že si myslí, že je v jiné části mapy než ve skutečnosti.
-- *Předsudky:* Povrchy v datech prostorového mapování jsou nedokonalě zarovnané s reálnými povrchy, buď nasazované, nebo vytahované.
+- *Díry*: reálné povrchy chybí v datech prostorového mapování.
+- *Hallucinations*: povrchy existují v datech prostorového mapování, která neexistují v reálném světě.
+- *červi děr*: HoloLens ztratí část prostorové mapy tím, že je v jiné části mapy, než je ve skutečnosti.
+- *Bias*: povrchy v datech mapování prostorových dat jsou nedokonalé zarovnané na reálné plochy, ať už jsou, nebo jsou připravené.
 
-Pokud se zobrazí jakákoli z těchto chyb, pošlete nám svůj názor na [FeedbackHub.](hololens-feedback.md)
+Pokud se zobrazí některá z těchto chyb, pošlete nám svůj názor pomocí [FeedbackHub](hololens-feedback.md) .
 
-## <a name="security-and-storage-for-spatial-data"></a>Zabezpečení a úložiště prostorových dat
+## <a name="security-and-storage-for-spatial-data"></a>Zabezpečení a úložiště pro prostorová data
 
-Windows 10 verze 1803 pro Microsoft HoloLens a novější ukládá data mapování v místní databázi (na zařízení).
+Windows 10 aktualizace verze 1803 pro Microsoft HoloLens a novější ukládá data mapování v místní databázi (v zařízení).
 
-Uživatelé HoloLens nemohou získat přímý přístup k databázi mapy, a to ani v případě, že je zařízení připojené k počítači nebo Průzkumník souborů aplikaci. Když je na HoloLens povolený BitLocker, zašifrují se také uložená data mapy společně s celým svazkem.
+HoloLens uživatelé nemají přímý přístup k databázi map, i když je zařízení zapojené do počítače nebo při použití aplikace průzkumník souborů. když je na HoloLens povolený BitLocker, uložená data mapy se taky šifrují spolu s celým svazkem.
 
-### <a name="remove-map-data-and-known-spaces-from-hololens"></a>Odebrání dat mapy a známých prostorů z HoloLens
+### <a name="remove-map-data-and-known-spaces-from-hololens"></a>Odebrat data mapy a známé mezery z HoloLens
 
-Existují dvě možnosti odstranění dat mapy v **Nastavení > System > Hologramy:**
+existují dvě možnosti odstranění dat mapy v **Nastavení > systému > Hologramy**:
 
-- Pokud chcete odstranit hologramy v okolí, vyberte **Odebrat hologramy v okolí.** Tento příkaz vymaže data mapy a ukotvené hologramy pro aktuální prostor. Pokud budete zařízení dál používat ve stejném prostoru, vytvoří a uloží zcela novou sekci mapy, která nahradí odstraněné informace.
+- Pokud chcete odstranit okolní hologramy, vyberte **Odebrat okolní hologramy**. Tento příkaz vymaže data mapy a ukotvené hologramy pro aktuální prostor. Pokud zařízení budete nadále používat ve stejném prostoru, vytvoří a uloží značku nové mapy, která nahradí odstraněné informace.
 
    > [!NOTE]
-   > Hologramy "blízkých" jsou hologramy ukotvené v rámci stejného oddílu mapy v aktuálním prostoru.
+   > "Okolní" hologramy jsou hologramy, které jsou ukotveny v rámci stejné části mapy v aktuálním prostoru.
 
-   Tuto možnost můžete například použít k vymazání dat map souvisejících s prací, aniž by to ovlivnilo jakákoli data mapy související s domovskou stránku.
+   Tuto možnost můžete například použít k vymazání dat mapy, která se vztahují k práci bez vlivu na data map v domácnosti.
 
-- Pokud chcete odstranit všechny hologramy, vyberte **Odebrat všechny hologramy.** Tento příkaz vymaže všechna mapová data uložená v zařízení i všechny ukotvené hologramy. Všechny hologramy budete muset explicitně umístit. Dříve umístěné hologramy nebudete moct znovu najít.
+- Pokud chcete odstranit všechny hologramy, vyberte **Odebrat všechny hologramy**. Tento příkaz vymaže všechna data mapy, která jsou uložená v zařízení, i všechny ukotvené hologramy. Budete muset explicitně umístit všechny hologramy. Nebudete moct znovu zjistit dříve umístěné hologramy.
 
 > [!NOTE]
-> Po odebrání blízkých nebo všech hologramů začne HoloLens okamžitě skenovat a mapovat aktuální prostor.
+> po odebrání okolních nebo všech hologramů HoloLens hned spustit skenování a mapování aktuálního místa.
 
-### <a name="wi-fi-data-in-spatial-maps"></a>Wi-Fi dat v prostorových mapách
+### <a name="wi-fi-data-in-spatial-maps"></a>Data Wi-Fi v prostorových mapách
 
-HoloLens ukládá Wi-Fi, které pomáhají korelovat umístění hologramů a oddíly map, které jsou uložené v databázi HoloLens známých prostorů. Informace o Wi-Fi charakteristiky nejsou uživatelům přístupné a neposílané Microsoftu pomocí cloudu nebo telemetrie.
+HoloLens ukládá Wi-Fi charakteristiky, které vám pomůžou korelovat umístění a mapy na hologramech, které jsou uložené v databázi HoloLens se známými prostory. Informace o vlastnostech Wi-Fi nejsou dostupné pro uživatele a neodesílají se do Microsoftu pomocí cloudu nebo pomocí telemetrie.
 
-Pokud je Wi-Fi povoleno, HoloLens koreluje data map s blízkými Wi-Fi přístupových bodů. Bez ohledu na to, jestli je síť připojená nebo detekována blízko, není v chování žádný rozdíl. Pokud Wi-Fi zakázaná, HoloLens stále prohledá prostor. HoloLens ale musí prohledávat více dat mapy v rámci databáze prostorů a může potřebovat více času na nalezení hologramů. Bez Wi-Fi musí HoloLens porovnat aktivní kontroly se všemi kotvami hologramů a oddíly mapy, které jsou uložené v zařízení, aby bylo možné najít správnou část mapy.
+pokud je povolená Wi-Fi, HoloLens koreluje data map s okolními Wi-Fi přístupovými body. Neexistují žádné rozdíly v chování, ať už je síť připojená nebo jenom zjištěná v blízkosti. pokud je Wi-Fi zakázané, HoloLens pořád vyhledává místo. HoloLens ale musí vyhledat více dat mapy v rámci databáze prostorů a může pro hledání hologramů potřebovat více času. bez Wi-Fi informací musí HoloLens porovnat aktivní kontroly se všemi hologramy na hologramech a mapovat oddíly, které jsou uložené na zařízení, aby bylo možné najít správnou část mapy.
 
 ## <a name="related-topics"></a>Související témata
 
-- [Návrh prostorového mapování](https://docs.microsoft.com/windows/mixed-reality/spatial-mapping)
+- [Návrh prostorového mapování](/windows/mixed-reality/spatial-mapping)

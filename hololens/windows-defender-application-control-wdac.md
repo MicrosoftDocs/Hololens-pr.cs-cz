@@ -1,6 +1,6 @@
 ---
-title: Windows Defender řízení aplikací – WDAC
-description: Přehled toho, Windows Defender řízení aplikací je a jak ho používat ke správě zařízení hybridní reality HoloLens
+title: Windows Defender Řízení aplikací – WDAC
+description: přehled o tom, co Windows Defender Application Control je a jak ho používat ke správě HoloLens zařízení se smíšeným realitou.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -12,75 +12,75 @@ ms.reviewer: ''
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 23c9a274387424e8f084a4729ee621e130820716
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: a27a16913873c5245f734dbe084eb2b7ed007c20
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377611"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113639926"
 ---
-# <a name="windows-defender-application-control---wdac"></a>Windows Defender řízení aplikací – WDAC
+# <a name="windows-defender-application-control---wdac"></a>Windows Defender Řízení aplikací – WDAC
 
-WdAC umožňuje správci IT nakonfigurovat svá zařízení tak, aby blokují spouštění aplikací na zařízeních. To se liší od metod omezení zařízení, jako je třeba režim veřejného terminála, kde se uživateli zobrazí uživatelské rozhraní, které skryje aplikace v zařízení, ale přesto je možné je spustit. I když je nástroj WDAC implementován, aplikace se stále zobrazí v seznamu Všechny aplikace, ale nástroj WDAC zastaví spuštění těchto aplikací a procesů uživatelem zařízení.
+WDAC umožňuje správci IT nakonfigurovat zařízení tak, aby blokovala spuštění aplikací na zařízeních. To se liší od metod omezení zařízení, jako je celoobrazovkový režim, kde se uživatel zobrazuje s uživatelským ROZHRANÍm, které skrývá aplikace na zařízení, ale je možné ho přesto spustit. I když je implementováno WDAC, aplikace jsou stále viditelné v seznamu všechny aplikace, ale WDAC zastaví aplikace a procesy, aby je mohli spustit uživatel zařízení.
 
-Zařízení může mít přiřazeno více než jednu zásadu WDAC. Pokud je v systému nastaveno více zásad WDAC, projeví se většina omezujících zásad. 
+Zařízení může mít přiřazeno více než jednu zásadu WDAC. Pokud je v systému nastaveno více zásad WDAC, většina omezujících se projeví. 
 
 > [!NOTE]
-> Když se koncoví uživatelé pokusí spustit aplikaci, která je blokovaná wdac, na HoloLens neobdrží oznámení o tom, že ji není možné spustit.
+> když se koncoví uživatelé pokusí spustit aplikaci, která je blokovaná službou WDAC HoloLens, neobdrží oznámení o tom, že tuto aplikaci nepůjde spustit.
 
-Následuje průvodce, který uživatelům pomůže naučit se používat funkce WDAC a Windows PowerShell k povolení nebo blokování aplikací na [zařízeních HoloLens 2](https://docs.microsoft.com/mem/intune/configuration/custom-profile-hololens)s Microsoft Intune .
+následuje průvodce pro uživatele, kteří se naučí [používat WDAC a Windows PowerShell k povolení nebo blokování aplikací na zařízeních HoloLens 2 s Microsoft Intune](/mem/intune/configuration/custom-profile-hololens).
 
-Když uživatelé vyhledájí aplikace nainstalované na svém počítači Windows 10 počítači pomocí prvního příkladu, možná budou muset provést několik pokusů o zúžení výsledků.
+když uživatelé hledají aplikace nainstalované na svém Windows 10 počítači pomocí prvního ukázkového kroku, může být potřeba provést několik pokusů o zúžení výsledků.
 
 ```powershell
 $package1 = Get-AppxPackage -name *<applicationname>*
 ``` 
 
-Pokud nevíte úplný název balíčku, možná budete muset několikrát spustit příkaz Get-AppxPackage -name \* YourBestGuess, abyste ho \* našli. Jakmile budete mít název, spusťte $package 1 = Get-AppxPackage -name Actual.PackageName.
+Pokud neznáte úplný název balíčku, možná několikrát spustíte rutinu Get-AppxPackage-name \* YourBestGuess \* . Po zadání názvu spusťte ' $package 1 = Get-AppxPackage-Name skutečnost. název balíčku '
 
-Například spuštění následujícího kódu pro Microsoft Edge vrátí více než jeden výsledek, ale v tomto seznamu můžete zjistit, že úplný název, který potřebujete, je Microsoft.MicrosoftEdge.
+například když Microsoft Edge spustíte následující příkaz, vrátí se více výsledků, ale z tohoto seznamu můžete zjistit, že úplný název, který potřebujete, je Microsoft. MicrosoftEdge.
 
 ```powershell
 Get-AppxPackage -name *edge*
 ``` 
 
-## <a name="package-family-names-for-apps-on-hololens"></a>Názvy rodin balíčků pro aplikace na HoloLens
+## <a name="package-family-names-for-apps-on-hololens"></a>Názvy rodin balíčků pro aplikace v HoloLens
 
-V průvodci propojeném výše můžete ručně upravit newPolicy.xml a přidat pravidla pro aplikace, které jsou nainstalované jenom na HoloLens s názvy jejich skupin balíčků. Někdy můžete použít aplikace, které nejsou na vašem stolním počítači a které chcete přidat do zásad.
+v průvodci výše můžete ručně upravit newPolicy.xml a přidat pravidla pro aplikace, které jsou nainstalovány pouze v HoloLens s názvy jejich rodin balíčků. Někdy existují aplikace, které můžete použít k použití, které nejsou na stolním počítači, které chcete přidat do zásad.
 
-Tady je seznam běžně používaných a In-Box pro zařízení HoloLens 2.
+tady je seznam běžně používaných a In-Box aplikací pro zařízení HoloLens 2.
 
 | Název aplikace                   | Název rodiny balíčků                                |
 |----------------------------|----------------------------------------------------|
-| 3D prohlížeč                  | Microsoft.Microsoft3DViewer_8wekyb3d8bbwe          |
-| Instalační program aplikací              | Microsoft.DesktopAppInstaller_8wekyb3d8bbwe <sup>1</sup>         |
+| Prohlížeč 3D                  | Microsoft.Microsoft3DViewer_8wekyb3d8bbwe          |
+| Instalační program aplikace              | Microsoft.DesktopAppInstaller_8wekyb3d8bbwe <sup>1</sup>         |
 | Kalendář                   | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
 | Camera                     | HoloCamera_cw5n1h2txyewy                           |
 | Cortana                    | Microsoft.549981C3F5F10_8wekyb3d8bbwe              |
-| Průvodci Dynamics 365        | Microsoft.Dynamics365.Guides_8wekyb3d8bbwe         |
-| Dynamics 365 Remote Assist | Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe      |
+| Příručky k Dynamics 365        | Microsoft.Dynamics365.Guides_8wekyb3d8bbwe         |
+| Vzdálená pomoc pro Dynamics 365 | Microsoft.MicrosoftRemoteAssist_8wekyb3d8bbwe      |
 | Centrum Feedback               | Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe         |
 | Průzkumník souborů              | c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy |
 | Poštovní                       | microsoft.windowscommunicationsapps_8wekyb3d8bbwe  |
 | Microsoft Store            | Microsoft.WindowsStore_8wekyb3d8bbwe               |
-| Movies & TV                | Microsoft.ZuneVideo_8wekyb3d8bbwe                  |
+| Filmy & televizor                | Microsoft.ZuneVideo_8wekyb3d8bbwe                  |
 | OneDrive                   | microsoft.microsoftskydrive_8wekyb3d8bbwe          |
-| Fotky                     | Microsoft.Windows.Photos_8wekyb3d8bbwe             |
+| Fotky                     | Microsoft. Windows. Photos_8wekyb3d8bbwe             |
 | Nastavení                   | HolographicSystemSettings_cw5n1h2txyewy            |
 | Tipy                       | Microsoft.HoloLensTips_8wekyb3d8bbwe               |
 
-- 1 – Blokování Instalační program aplikací zablokuje jenom aplikaci Instalační program aplikací, a ne aplikace nainstalované z jiných zdrojů, jako je Microsoft Store nebo z vašeho řešení MDM.
+- 1. blokování instalačního programu aplikace zablokuje jenom aplikaci instalátor aplikace a ne aplikace nainstalované z jiných zdrojů, jako je Microsoft Store nebo z řešení MDM.
 
-### <a name="how-to-find-a-package-family-name"></a>Jak najít rodinu balíčků
+### <a name="how-to-find-a-package-family-name"></a>Jak najít název řady balíčků
 
-Pokud aplikace není v tomto seznamu, může uživatel použít Portál zařízení připojený k HoloLens 2, který má nainstalovanou aplikaci, kterou chcete blokovat, k určení PackageRelativeID a odtud získat PackageFamilyName.
+pokud aplikace není na tomto seznamu, pak uživatel může použít portál zařízení, který je připojený k HoloLens 2, která má nainstalovanou aplikaci, kterou chcete zablokovat, abyste zjistili, jak PackageRelativeID, tak PackageFamilyName.
 
-1. Nainstalujte aplikaci na zařízení HoloLens 2. 
-1. Otevřete Nastavení -> Aktualizace & Zabezpečení -> Pro vývojáře a povolte Vývojářský **režim** a potom **Portál zařízení.** 
-    1. Další podrobnosti najdete v tématu další informace o [nastavení a používání portálu zařízení.](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
-1. Po Portál zařízení připojení přejděte na **Zobrazení a** pak na **Aplikace.** 
-1. Na panelu Nainstalované aplikace vyberte pomocí rozevíracího seznamu nainstalovanou aplikaci. 
+1. nainstalujte aplikaci na zařízení HoloLens 2. 
+1. otevřete Nastavení-> aktualizace & zabezpečení > pro vývojáře a povolte **vývojářský režim** a potom **portál zařízení**. 
+    1. Další podrobnosti najdete [v tématu o nastavení a používání portálu pro zařízení tady](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
+1. Jakmile je portál zařízení připojený, přejděte do **zobrazení** a pak na **aplikace**. 
+1. V panelu nainstalované aplikace vyberte pomocí rozevírací nabídky nainstalovanou aplikaci. 
 1. Vyhledejte PackageRelativeID. 
-1. Zkopírujte znaky aplikace před znakem !, tyto znaky budou vaše PackageFamilyName.
+1. Kopírovat znaky aplikace před!. tyto znaky budou vaší PackageFamilyName.
 
 

@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: Microsoft HoloLens
-summary: Microsoft HoloLens je první plně samostatný holografický počítač ke spuštění Windows 10. díky zavedení HoloLens 2, každé HoloLens zařízení, nabízí možnost správy připravené na komerční správu, která je vylepšená o spolehlivost, zabezpečení a škálovatelnost služeb cloudu a AI od microsoftu.
+summary: Microsoft HoloLens je první plně samostatný holografický počítač, na Windows 10. Se zavedením HoloLens 2 teď každé zařízení HoloLens poskytuje funkce připravené pro komerční správu, které jsou vylepšené spolehlivostí, zabezpečením a škálovatelností cloudových služeb a služeb AI od Microsoftu.
 metadata:
   title: Microsoft HoloLens
-  description: Cílová stránka pro Microsoft HoloLens.
+  description: Vstupní stránka pro Microsoft HoloLens.
   ms.prod: hololens
   ms.subservice: subservice
   ms.topic: landing-page
@@ -11,60 +11,60 @@ metadata:
   ms.author: v-jjaswinski
   ms.date: 05/24/2021
   ms.assetid: 0947f5b3-8f0f-42f0-aa27-6d2cad51d040
-  ms.openlocfilehash: 8cb5b881e880adec2b59bde9b36fa700bfce3a91
-  ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+  ms.openlocfilehash: a37ddd0867a0ea3dfa6f016e01728f2576663aaf
+  ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
   ms.lasthandoff: 07/12/2021
-  ms.locfileid: "113637145"
+  ms.locfileid: "113639416"
 landingContent:
-- title: získejte informace o HoloLens 2
+- title: Se získáním se se HoloLens 2
   linkLists:
   - linkListType: learn
     links:
-    - text: možnosti a řešení HoloLens 2
+    - text: HoloLens 2 možnosti a řešení
       url: hololens-commercial-features.md
-    - text: možnosti HoloLens 2
+    - text: HoloLens 2 možnosti
       url: hololens2-options.md
-    - text: HoloLens 2 hardware
+    - text: HoloLens 2 hardwaru
       url: hololens2-hardware.md
   - linkListType: overview
     links:
-    - text: Pouze zařízení
+    - text: Jen pro zařízení
       url: hololens2-options-device-only.md
     - text: Edice Remote Assist
       url: hololens2-options-remote-assist.md
-    - text: Průmyslový edice
+    - text: Edici Industrial
       url: hololens2-options-industrial-edition.md
     - text: Vývojová edice
       url: hololens2-options-dev-edition.md
-    - text: Trimble XR10 s HoloLens 2
+    - text: Oříznutí XR10 s HoloLens 2
       url: hololens2-options-trimble-xr10-edition.md
 - title: Začínáme
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Využití při prvním použití
+    - text: První použití
       url: hololens2-setup.md
     - text: Denní využití
       url: holographic-home.md
-- title: plánování nasazení HoloLens 2
+- title: Plánování nasazení HoloLens 2
   linkLists:
   - linkListType: architecture
     links:
     - text: Obvyklé scénáře nasazení
       url: common-scenarios.md
-    - text: plánování nasazení HoloLens 2 v komerčním prostředí
+    - text: Plánování HoloLens 2 v komerčním prostředí
       url: hololens-core-components.md
-    - text: Registrace šablony stylů CSS pro autopilot
+    - text: Registrace CSS Autopilotu
       url: hololens2-autopilot-registration-support.md
   - linkListType: deploy
     links:
-    - text: průvodce nasazením – Cloud připojený HoloLens 2 ve velkém měřítku s využitím vzdálené pomoci
+    - text: Průvodce nasazením – nasazení HoloLens 2 ve velkém s asistencí remote assist
       url: hololens2-cloud-connected-overview.md
     - text: Průvodce nasazením – externí klienti (připojení ke cloudu)
       url: hololens2-deployment-guide.md
-    - text: průvodce nasazením – firemní propojení HoloLens 2 – nasazení pomocí průvodců Dynamics 365
+    - text: Průvodce nasazením – Průvodci nasazením řešení HoloLens 2 připojené k podnikové síti pomocí Dynamics 365
       url: hololens2-corp-connected-overview.md
     - text: Průvodce nasazením – zabezpečení offline
       url: hololens-common-scenarios-offline-secure.md
@@ -80,17 +80,17 @@ landingContent:
       url: hololens2-display.md
     - text: Implementace a spravovaná zařízení
       url: hololens2-enterprise-troubleshooting.md
-    - text: shromažďování a používání diagnostických informací z HoloLens zařízení
+    - text: Shromažďování a používání diagnostických informací z HoloLens zařízení
       url: hololens-diagnostic-logs.md
-    - text: restartování, resetování nebo obnovení HoloLens 2
+    - text: Restartování, resetování nebo obnovení HoloLens 2
       url: hololens-recovery.md
 - title: Zdroje informací
   linkLists:
   - linkListType: whats-new
     links:
-    - text: poznámky k verzi HoloLens 2
+    - text: HoloLens 2 k vydání verze
       url: hololens-release-notes.md
-    - text: Insider Preview
+    - text: Insider preview
       url: hololens-insider.md
   - linkListType: reference
     links:
@@ -98,27 +98,27 @@ landingContent:
       url: hololens2-support.md
     - text: Sdělte nám svůj názor
       url: hololens-feedback.md
-- title: vývoj s využitím HoloLens 2
+- title: Vývoj s HoloLens 2
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Co je hybridní realita?
-      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality
-    - text: Začínáme navrhovat a vytvářet prototypy
-      url: https://docs.microsoft.com/windows/mixed-reality/design
-    - text: Seznámení s vývojem ve smíšeném realitě
-      url: https://docs.microsoft.com/windows/mixed-reality/development?tabs=unity
-    - text: Přehled Cloud Services
-      url: https://docs.microsoft.com/windows/mixed-reality/mixed-reality-cloud-services#overview
-    - text: Síť Microsoft (Preview)
-      url: https://docs.microsoft.com/mesh/overview
+      url: /windows/mixed-reality/mixed-reality
+    - text: Zahájení návrhu a vytváření prototypů
+      url: /windows/mixed-reality/design
+    - text: Úvod do Mixed Reality aplikací
+      url: /windows/mixed-reality/development?tabs=unity
+    - text: Cloud Services přehledu
+      url: /windows/mixed-reality/mixed-reality-cloud-services#overview
+    - text: Microsoft Mesh (Preview)
+      url: /mesh/overview
 - title: Další služby
   linkLists:
   - linkListType: reference
     links:
-    - text: Dokumentace ke vzdálené pomoci pro Dynamics 365
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview
-    - text: Příručky k Dynamics 365
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/guides/
-    - text: Microsoft Dynamics 365 – Mixed reality
-      url: https://docs.microsoft.com/dynamics365/mixed-reality/
+    - text: Dokumentace k Dynamics 365 Remote Assistu
+      url: /dynamics365/mixed-reality/remote-assist/ra-overview
+    - text: Průvodci Dynamics 365
+      url: /dynamics365/mixed-reality/guides/
+    - text: Microsoft Dynamics 365 Mixed Reality
+      url: /dynamics365/mixed-reality/

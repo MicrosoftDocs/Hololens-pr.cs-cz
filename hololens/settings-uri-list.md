@@ -13,16 +13,16 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5ac3ff27085fd2f7c5bc1de0e461079a673bbb23
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 454d79e8b719feb73d5a39280794dcd76f134952
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113637162"
+ms.locfileid: "113639229"
 ---
 # <a name="page-settings-visibility"></a>Nastavení viditelnost stránky
 
-jedna z spravovatelných funkcí pro HoloLens zařízení používá [zásady Nastavení/PageVisibilityList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) k omezení stránek zobrazených v rámci aplikace Nastavení. PageVisibilityList je zásada, která správcům IT umožňuje zabránit tomu, aby určité stránky v systémové Nastavení aplikaci byly viditelné nebo přístupné, nebo aby tak učinily pro všechny stránky kromě těch, které jsou uvedené.
+jedna z spravovatelných funkcí pro HoloLens zařízení používá [zásady Nastavení/PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) k omezení stránek zobrazených v rámci aplikace Nastavení. PageVisibilityList je zásada, která správcům IT umožňuje zabránit tomu, aby určité stránky v systémové Nastavení aplikaci byly viditelné nebo přístupné, nebo aby tak učinily pro všechny stránky kromě těch, které jsou uvedené.
 
 > [!NOTE]
 > tato funkce je dostupné jenom v [Windows holografická, verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo vyšší pro zařízení HoloLens 2. Ujistěte se, že zařízení, která hodláte použít, se aktualizují.
@@ -154,7 +154,7 @@ HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení
 | Barvy             | `colors`<br>`personalization-colors` |
 | Hologramy <sup>2</sup>  |  `holograms`  |
 | <sup>Uchýlovací 2</sup> |  `calibration` |
-| Oznámení & akcích  | `notifications`          |
+| Oznámení & akce  | `notifications`          |
 | Sdílená prostředí | `crossdevice` 
 | Zvuk <sup>2</sup>           | `sound`<br>|
 | Zvuk > Svazek aplikace a předvolba zařízení <sup>2</sup>           | `apps-volume`<br>|
@@ -189,4 +189,4 @@ HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení
 - <sup>2</sup> – K dispozici Windows Holographic 21H1 nebo novějším.
 
 
-Úplný seznam identifikátorů URI Windows 10 Nastavení najdete v dokumentaci [ke spouštěcím nastavením.](https://docs.microsoft.com/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)
+Úplný seznam identifikátorů URI Windows 10 Nastavení najdete v dokumentaci [ke spouštěcím nastavením.](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)

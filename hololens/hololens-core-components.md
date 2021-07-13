@@ -12,16 +12,17 @@ ms.localizationpriority: medium
 ms.date: 05/21/2021
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2fb58345f623a0b70c1fda10b9fb550de70f4c6d
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 43162389eae82bc09135c62acd40d71048d14db1
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635785"
+ms.locfileid: "113639076"
 ---
 # <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>plánování nasazení HoloLens 2 v komerčním prostředí
 
 ## <a name="overview"></a>Přehled
+
 > [!NOTE]
 > tento přehled je určený k tomu, aby odborníci v oblasti IT pochopili důležité informace o nasazení a správě zařízení Microsoft HoloLens 2 v rámci organizace. informace o koncových uživatelích zařízení najdete v článku o tom, jak začít [používat HoloLens 2](hololens2-setup.md) .
 
@@ -29,7 +30,7 @@ HoloLens 2 se spouští na Windows 10 Holographic, která poskytuje organizacím
 
 následující kroky a videa vám pomůžou s postupem HoloLens 2 při přijímání v rámci vaší organizace.
 
-| | |
+| &nbsp; | &nbsp; |
 |--|--|
 | ![Krok 1](images/1green.png)| <br/> **[obvyklé scénáře nasazení](hololens-requirements.md)**: pochopení scénářů nasazení a zkoumání základních součástí potřebných k nasazení zařízení HoloLens 2. |
 | ![Krok 2](images/2green.png)| <br/> **[příprava](#prepare)**: seznámení se základy infrastruktury potřebnými pro HoloLens 2. |
@@ -37,11 +38,13 @@ následující kroky a videa vám pomůžou s postupem HoloLens 2 při přijím�
 | ![Krok 4](images/4green.png) | <br/> **[Nasazení](#deploy)**: Zjistěte, jak vaše zařízení nasadit a jak bezpečně a efektivně distribuovat aplikace. |
 | ![Krok 5](images/5green.png) | <br/> **[údržba](#maintain)**: zjistěte, co je potřeba pro správné udržování stavu zařízení HoloLens 2 a zajištění souladu s podnikovými zásadami. |
 
+<br/>
+
 > [!VIDEO https://channel9.msdn.com/Shows/IT-Ops-Talk/HoloLens-2-Deployment-Overview/player]
 
 ## <a name="prepare"></a>Příprava
 
-seznamte se se základními službami infrastruktury potřebnými k podpoře plné sady možností HoloLens 2. 
+seznamte se se základními službami infrastruktury potřebnými k podpoře plné sady možností HoloLens 2.
 
 | Komponenta | Popis |
 |-----------|------------|

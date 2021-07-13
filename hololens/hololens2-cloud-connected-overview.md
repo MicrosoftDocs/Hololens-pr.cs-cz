@@ -14,27 +14,27 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 86d36275d5cf1296ca3e9fec90684a188a29f3f0
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 26fd2def8ce1fa8f960ab930e209c74fb37e2e0a
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635122"
+ms.locfileid: "113639756"
 ---
 # <a name="deployment-guide--cloud-connected-hololens-2-with-remote-assist--overview"></a>Průvodce nasazením – Cloud connected HoloLens 2 with Remote Assist – Přehled
 
-Tato příručka pomůže IT specialistům plánovat a nasazovat Microsoft HoloLens 2 zařízení s Remote Assistem v organizaci. To bude sloužit jako model pro nasazení do vaší organizace v rámci různých scénářů HoloLens 2. Nastavení se podobá [scénáři A: Nasazení do zařízení s připojením ke cloudu.](https://docs.microsoft.com/hololens/common-scenarios#scenario-a) 
+Tato příručka pomůže IT specialistům plánovat a nasazovat Microsoft HoloLens 2 zařízení s Remote Assistem v organizaci. To bude sloužit jako model pro nasazení do vaší organizace v rámci různých scénářů HoloLens 2 případy použití. Nastavení se podobá [scénáři A: Nasazení do zařízení s připojením ke cloudu.](common-scenarios.md#scenario-a) 
 
-V této příručce se budeme řídit tím, jak zaregistrovat zařízení do správy zařízení, jak podle potřeby použít licence a ověřit, že koncoví uživatelé mohou vzdálenou pomoc při nastavení zařízení okamžitě používat. Za tímto účelem si projdeme důležité části infrastruktury potřebné k nastavení a z provozu – a dosáhneme nasazení ve velkém měřítku pomocí HoloLens 2. V tomto průvodci se nebudou používat žádná další omezení ani konfigurace zařízení, ale doporučujeme vám tyto možnosti prozkoumat po dokončení.
+V této příručce se budeme řídit tím, jak zaregistrovat zařízení do správy zařízení, jak podle potřeby použít licence a ověřit, že koncoví uživatelé mohou vzdálenou pomoc při nastavení zařízení okamžitě používat. Za tímto účelem si projdeme důležité části infrastruktury, které jsou potřeba k nastavení a z provozu – k dosažení nasazení ve velkém měřítku s HoloLens 2. V tomto průvodci se nebudou používat žádná další omezení ani konfigurace zařízení, ale doporučujeme vám tyto možnosti prozkoumat po dokončení.
 
 ## <a name="prerequisites"></a>Požadavky
 
 Aby bylo možné nasadit HoloLens 2, měla by být zavedena následující infrastruktura. Pokud ne, nastavení Azure a Intune je součástí tohoto průvodce:
 
-Toto je nastavení podobné scénáři [A:](/hololens/common-scenarios#scenario-a)Nasazení do zařízení s připojením ke cloudu, což je dobrá možnost pro mnoho nasazení s potvrzením konceptu, která bude zahrnovat:
+Jedná se o nastavení podobné scénáři [A:](/hololens/common-scenarios#scenario-a)Nasazení do zařízení s připojením ke cloudu, což je dobrá možnost pro mnoho nasazení s potvrzením konceptu, které bude zahrnovat:
 
 - Wi-Fi sítě jsou obvykle plně otevřené pro internet a cloudové služby.
-- Připojení ke službě Azure AD s automatickou registrací MDM – spravovaná pomocí MDM (Intune)
+- Připojení ke službě Azure AD s automatickou registrací MDM – spravované pomocí MDM (Intune)
 - Uživatelé se přihlašují pomocí vlastního podnikového účtu (Azure AD).
     - Podporuje se jeden nebo více uživatelů na zařízení.
 
@@ -43,14 +43,14 @@ Toto je nastavení podobné scénáři [A:](/hololens/common-scenarios#scenario-
 
 ## <a name="learn-about-remote-assist"></a>Další informace o vzdálené pomoci
 
-Remote Assist umožňuje spolupráci s údržbou a opravami, vzdálenou kontrolu a také sdílení znalostí a školení. Propojením lidí v různých rolích a umístěních se technik pomocí vzdálené pomoci může spojit se vzdáleným spolupracovníkem na Microsoft Teams. Mohou kombinovat video, snímky obrazovky a poznámky k řešení problémů v reálném čase, i když&#39;nejsou na stejném místě. Vzdálení spolupracovníci mohou vkládat referenční obrázky, schémata&#39;další užitečné informace o fyzickém prostoru technika, aby mohli na schéma odkazovat při práci s pannami a bez rukou na HoloLens.
+Remote Assist umožňuje spolupráci s údržbou a opravami, vzdálenou kontrolu a také sdílení znalostí a školení. Technik, který používá vzdálenou pomoc, se může spojit se vzdáleným spolupracovníkem v různých rolích a umístěních a může se spojit se vzdáleným spolupracovníkem Microsoft Teams. Mohou kombinovat video, snímky obrazovky a poznámky k řešení problémů v reálném čase, i když nejsou na stejném místě. Vzdálení spolupracovníci mohou vkládat referenční obrázky, schémata a další užitečné informace o fyzickém prostoru technika, aby mohli odkazovat na schéma při práci s hlavičkou a bez rukou na HoloLens.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d3YT8j0yYl0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### <a name="remote-assist-licensing-and-requirements"></a>Licencování a požadavky služby Remote Assist
 
 - Účet Azure AD (vyžadované pro nákup předplatného a přiřazení licencí)
-- [Předplatné Remote Assistu](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist) (nebo [zkušební verze Remote Assistu)](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/try-remote-assist)
+- [Předplatné Remote Assistu](/dynamics365/mixed-reality/remote-assist/buy-and-deploy-remote-assist) (nebo [zkušební verze Remote Assistu)](/dynamics365/mixed-reality/remote-assist/try-remote-assist)
     
 #### <a name="dynamics-365-remote-assist-user"></a>Uživatel Dynamics 365 Remote Assistu
 
@@ -62,7 +62,7 @@ Remote Assist umožňuje spolupráci s údržbou a opravami, vzdálenou kontrolu
 - Microsoft Teams nebo [Teams Freemium.](https://products.office.com/microsoft-teams/free)
 - Připojení k síti
 
-Pokud plánujete implementaci tohoto scénáře [napříč tenanty,](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)možná budete potřebovat licenci Information Barriers. Informace [o tom,](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation#step-1-determine-if-information-barriers-are-necessary) jestli se vyžaduje licence Information Barrier, najdete v tomto článku.
+Pokud plánujete implementaci tohoto scénáře [napříč tenanty,](/dynamics365/mixed-reality/remote-assist/cross-tenant-overview#scenario-2-leasing-services-to-other-tenants)možná budete potřebovat licenci Information Barriers. Pokud chcete zjistit, jestli se vyžaduje licence Information Barrier, podívejte se na článek Dodavatelé a zákazníci používají úplné funkce [Dynamics 365 Remote Assistu.](/dynamics365/mixed-reality/remote-assist/cross-tenant-licensing-implementation)
 
 ## <a name="in-this-guide-you-will"></a>V této příručce:
 

@@ -1,6 +1,6 @@
 ---
-title: Představujeme novou aplikaci nastavení
-description: Další informace o nové aplikaci nastavení
+title: Představení nové Nastavení aplikace
+description: Další informace o nové Nastavení aplikací
 author: joyjaz
 ms.author: v-jjaswinski
 keywords: HoloLens, nastavení, výběr aplikace, svazek
@@ -9,45 +9,45 @@ ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
-ms.openlocfilehash: bf1a2080c15346843b9ea9b2d0dc93154e185107
-ms.sourcegitcommit: 29573e577381a23891e9557884a6dfdaac0c1c48
+ms.openlocfilehash: e6da84c180ef596b63b6d41229bd094354ab1221
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "111379338"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113640164"
 ---
-# <a name="new-settings-app"></a>Nová aplikace nastavení
+# <a name="new-settings-app"></a>Nová Nastavení aplikace
 
-S [Windows holografickou verzí 21H1](hololens-release-notes.md#windows-holographic-version-21h1)zavádíme novou verzi aplikace nastavení. Nová aplikace nastavení zahrnuje nové funkce a rozšířené nastavení pro HoloLens 2 v následujících oblastech: zvuk, Power & režim spánku, síť & Internetu, aplikace, účty, usnadnění přístupu a další.
+S [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)představujeme novou verzi Nastavení aplikace. Nová aplikace Nastavení obsahuje nové funkce a rozšířená nastavení pro HoloLens 2 v následujících oblastech: Zvuk, Power & režim spánku, Síť & Internet, Aplikace, Účty, Usnadnění přístupu a další.
 
 > [!NOTE]
-> Vzhledem k tomu, že je nová aplikace nastavení odlišná od aplikace se staršími nastaveními, všechna nastavení, která jste předtím umístili do prostředí, se po aktualizaci odeberou.
+> Vzhledem k tomu, Nastavení nová aplikace se liší od starší Nastavení aplikace, při aktualizaci se Nastavení okna, která jste předtím umístili kolem svého prostředí.
 
-![Domovská stránka nové aplikace nastavení](images/new-settings-app.png)
+![Domovská stránka Nastavení nové aplikace](images/new-settings-app.png)
 
 **Nové funkce a nastavení**
-- Hledání nastavení: Vyhledejte nastavení z domovské stránky nastavení pomocí klíčových slov nebo názvu nastavení.
-- Systémová >ová [kalibrace barev](hololens2-display.md#how-to-use-display-color-calibration)
-    - Vyberte alternativní barevný profil pro displej HoloLens 2.
-- Zvuk > systému:
-  - Vstupní a výstupní zvuková zařízení: nezávisle vyberte vstupní a výstupní zvuková zařízení (například poslech zvuku přes sluchátka Bluetooth nebo použití mikrofonu USB-C pro zvukový vstup).
+- Nastavení: Na domovské stránce Nastavení pomocí klíčových slov nebo názvu nastavení vyhledejte nastavení.
+- System > [Color](hololens2-display.md#how-to-use-display-color-calibration)
+    - Vyberte alternativní profil barev pro váš HoloLens 2.
+- System > Sound:
+  - Vstupní a výstupní zvuková zařízení: Nezávisle zvolte vstupní a výstupní zvuková zařízení (například naslouchejte zvuku prostřednictvím Bluetooth nebo použijte mikrofon USB-C pro zvukový vstup).
     > [!NOTE]
-    > Technologie HoloLens 2 nepodporuje mikrofony Bluetooth.
-  - Svazek aplikace: nezávisle upravte hlasitost každé aplikace. Zobrazit [Řízení hlasitosti jednotlivých aplikací](holographic-home.md#per-app-volume-control).
-- Systém > napájení & režimu spánku: vyberte, kdy se má zařízení po určité době nečinnosti přejít do režimu spánku.
-- Systémová > baterie: ručně povolit režim spořiče baterie nebo nastavit prahovou hodnotu baterie, při které se režim spořiče baterie automaticky zapne.
-- Zařízení > USB: ve výchozím nastavení můžete připojení USB zakázat.
-- & sítě Internet:
-  - Adaptéry USB-C Ethernet se nyní zobrazí v síti & Internetu.
-  - K dispozici jsou nyní nastavení adaptéru USB-C Ethernet, včetně jeho IP adresy.
-  - Nyní můžete zapnout režim v letadle na HoloLens 2.
-- Aplikace: můžete obnovit výchozí aplikace používané pro typy souborů a odkazů. Další informace najdete v tématu věnovaném [výchozím ovládacím prvkům aplikace](holographic-home.md#default-app-picker).
-- Účty > jiných uživatelích: vlastníci zařízení můžou přidávat uživatele, upgradovat standardní uživatele na vlastníky zařízení, předowngradovat vlastníky zařízení na standardní uživatele a odebírat uživatele.
-- Usnadnění přístupu: Změna velikosti textu a některých vizuálních efektů.
+    > Bluetooth 2 nepodporuje HoloLens mikrofony.
+  - Objem aplikace: Nezávisle upravte objem každé aplikace. Viz [řízení objemu na aplikaci.](holographic-home.md#per-app-volume-control)
+- System > Power & režim spánku: Zvolte, kdy má zařízení po určité době nečinnosti přejít do režimu spánku.
+- Baterie >: Ručně povolte režim spořič baterie nebo nastavte prahovou hodnotu baterie, po spořič baterie režim zapne automaticky.
+- Zařízení > USB: Ve výchozím nastavení můžete zakázat připojení USB.
+- Network & Internet:
+  - Ethernetové adaptéry USB-C se teď zobrazí v části Síťová & internetu.
+  - K dispozici jsou teď nastavení ethernetového adaptéru USB-C, včetně jeho IP adresy.
+  - Režim v letadle teď můžete povolit na HoloLens 2.
+- Aplikace: Můžete resetovat výchozí aplikace používané pro typy souborů a odkazů. Další informace najdete v tématu [Výběr výchozí aplikace.](holographic-home.md#default-app-picker)
+- Účty > Ostatní uživatelé: Vlastníci zařízení mohou přidávat uživatele, upgradovat standardní uživatele na vlastníky zařízení, downgradovat vlastníky zařízení na standardní uživatele a odebírat uživatele.
+- Usnadnění přístupu: Změna velikosti textu a některých vizuálních efektů
 
 **Známé problémy**
-- Okna dříve umístěná nastavení se odeberou (viz poznámku výše).
-- Zařízení už nemůžete přejmenovat pomocí aplikace nastavení. Správci IT můžou zařízení přejmenovat pomocí šablony [Windows autopilot pro název zařízení HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) nebo uzlu MDM [DevDetail CSP](https://docs.microsoft.com/windows/client-management/mdm/devdetail-csp) EXT/Microsoft/DNSComputerName.
-- Na stránce Ethernet se vždy zobrazuje virtuální síť Ethernet (UsbNcm).
-- Využití baterie pro nové Microsoft Edge nemusí být přesné, vzhledem k jeho povaze jako desktopová aplikace Win32 podporovaná vrstvou adaptéru UWP (zatím se nepředpokládá žádná oprava).
+- Dříve umístěná Nastavení okna budou odebrána (viz poznámka výše).
+- Zařízení už nemůžete přejmenovat pomocí Nastavení aplikace. Správci IT mohou zařízení přejmenovat pomocí šablony [Windows Autopilot pro název](hololens2-autopilot.md) zařízení HoloLens 2 nebo uzlu MDM [DevDetail CSP](/windows/client-management/mdm/devdetail-csp) Ext/Microsoft/DNSComputerName.
+- Na stránce Ethernet se za všech okolností zobrazuje virtuální ethernetové zařízení (UsbNcm).
+- Využití baterie pro nové Microsoft Edge nemusí být přesné, protože je povaha desktopové aplikace Win32 podporované vrstvou adaptéru UPW (brzy se neočekává žádná oprava).
 

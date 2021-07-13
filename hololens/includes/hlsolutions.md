@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 3abc54bc55870ddb31f37164425a9d78a6028eb6
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
-ms.translationtype: HT
+ms.openlocfilehash: 628f30668452846b21c5042b25e8d98ed7a372ad
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635806"
+ms.locfileid: "113659552"
 ---
-## <a name="hololens-2-solutions"></a>řešení HoloLens 2
+## <a name="hololens-2-solutions"></a>HoloLens 2 řešení
 
 | Chci... | Řešení | Description |  
 |---------| ------------|------------|
-| Spolupráce v reálném čase se vzdálenými zaměstnanci | [**Vzdálená pomoc pro Dynamics 365**](https://dynamics.microsoft.com/mixed-reality/remote-assist/) | pomocí pokusů na HoloLens 2 můžete sdílet zobrazení v reálném čase a přijímat rychlé doprovodné materiály v kontextu se vzdálenými spolupracovníky, kteří používají vzdálenou pomoc nebo Microsoft Teams. | 
-| Vytvoření podrobných pokynů pro vizuální práci | [**Příručky k Dynamics 365**](https://dynamics.microsoft.com/mixed-reality/guides/capabilities/) | zaměstnanci můžou vytvářet a učit se pomocí interaktivních holografických instrukcí zobrazených ve svých zařízeních HoloLens 2. |
-| Vývoj pro HoloLens | [**Začínáme**](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity) | naučte se vytvářet a spravovat aplikace a řešení pro HoloLens 2 s přístupem k výkonu služeb Azure mixed reality. Vývojáři mají taky možnost připojit se k našemu [partnerskému programu pro hybridní realitu (MRPP)](https://www.microsoft.com/hololens/mrpp). |
-| Spolupráce v reálném čase prostřednictvím smíšené reality | [**Microsoft Mesh**](https://www.microsoft.com/mesh) | Síť Microsoft v síti umožňuje přítomnost a sdílená prostředí odkudkoli – na jakémkoli zařízení – přes hybridní aplikace realit. |
-| použití aplikací třetích stran pro HoloLens 2 | [**Microsoft Store**](https://docs.microsoft.com/hololens/holographic-store-apps) | HoloLens podporuje mnoho stávajících aplikací z Microsoft Store a nové aplikace sestavené speciálně pro HoloLens.
+| Spolupráce se vzdálenými zaměstnanci v reálném čase | [**Dynamics 365 Remote Assist**](https://dynamics.microsoft.com/mixed-reality/remote-assist/) | Pomocí videohozev s upozorněním na HoloLens 2 můžete sdílet zobrazení v reálném čase a okamžitě dostávat pokyny v kontextu se vzdálenými spolupracovníky, kteří používají vzdálenou pomoc nebo Microsoft Teams. | 
+| Vytvoření podrobných pokynů k práci s vizuály | [**Průvodci Dynamics 365**](https://dynamics.microsoft.com/mixed-reality/guides/capabilities/) | Zaměstnanci mohou vytvářet a učit se pomocí interaktivních holografických instrukcí zobrazených na HoloLens 2 zařízení. |
+| Vývoj pro HoloLens | [**Začínáme**](/windows/mixed-reality/develop/development?tabs=unity) | Naučte se vytvářet a spravovat aplikace a řešení pro HoloLens 2 a získat přístup ke službám hybridní reality Azure. Vývojáři mají také možnost se zapojit do [našeho Mixed Reality programu (MRPP).](https://www.microsoft.com/hololens/mrpp) |
+| Digitální spolupráce prostřednictvím hybridní reality v reálném čase | [**Microsoft Mesh**](https://www.microsoft.com/mesh) | Microsoft Mesh umožňuje přítomnost a sdílení prostředí odkudkoli – na libovolném zařízení – prostřednictvím aplikací hybridní reality. |
+| Použití aplikací třetích stran pro HoloLens 2 | [**Microsoft Store**](../holographic-store-apps.md) | HoloLens podporuje mnoho existujících aplikací z Microsoft Store a nové aplikace vytvořené speciálně pro HoloLens.

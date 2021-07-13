@@ -1,9 +1,9 @@
 ---
-title: HoloLens 2 hardware
-description: seznamte se se součástmi, které tvoří Microsoft HoloLens 2, což je nejnovější vývoj nepřipojeného holografického počítače společnosti Microsoft, na kterém běží Windows 10.
+title: HoloLens 2 hardwaru
+description: Seznamte se s komponentami, které tvoří Microsoft HoloLens 2. Jde o nejnovější vývoj nepouhlého holografického počítače Microsoftu s Windows 10.
 ms.assetid: 651d0430-bfbc-4685-a4fd-db7c33ce9325
 ms.date: 10/20/2020
-keywords: HoloLens
+keywords: hololens
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -12,211 +12,211 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: cfe4206790b12d77a7f5be4267387cdd0299c3fe
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 4c476a2adc8f03c37e17e6324960318b4806534e
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636856"
+ms.locfileid: "113639739"
 ---
-# <a name="about-hololens-2"></a>o HoloLens 2
+# <a name="about-hololens-2"></a>Informace o HoloLens 2
 
-![zobrazení na straně HoloLens 2](images/hololens2-breakdown.png)
+![HoloLens zobrazení na straně 2](images/hololens2-breakdown.png)
 
-Microsoft HoloLens 2 je nepřipojený holografický počítač.  vyhodnotí cestu k holografickým výpočetním činnostem, kterou zahájila HoloLens (1. základ), aby poskytovala pohodlnější a atraktivní prostředí spárované s dalšími možnostmi pro spolupráci ve smíšené realitě. HoloLens 2 se spouští v [Windows holografickém operačním systému](hololens-release-notes.md), který je založený na "charakteru" Windows 10, který poskytuje uživatelům, správcům a vývojářům robustní, výkonnou a zabezpečenou platformu. 
+Microsoft HoloLens 2 je nepouhlé holografické počítače.  Vylepšuje cestu holografického computingu, kterou zahájila HoloLens (1. generace), aby poskytovala pohodlnější a imerzivní prostředí spárované s více možnostmi pro spolupráci v hybridní realitě. HoloLens 2 běží na [Windows Holographic OS,](hololens-release-notes.md)který je založený na "příchutě" systému Windows 10, který poskytuje uživatelům, správcům a vývojářům robustní, výkonnou a zabezpečenou platformu. 
 
 > [!NOTE]
-> nedávné oznámení Windows 11 se zaměřuje na verzi Windows počítače. nedávno jsme spustili [hlavní aktualizaci operačního systému](https://techcommunity.microsoft.com/t5/mixed-reality-blog/what-s-new-in-windows-holographic-version-21h1/ba-p/2337067) HoloLens 2 v květnu 2021 a pracujeme na nadcházející verzi na základě zpětné vazby od zákazníků.
+> Nedávné oznámení Windows 11 se zaměřilo na verzi počítače Windows. Nedávno jsme [](https://techcommunity.microsoft.com/t5/mixed-reality-blog/what-s-new-in-windows-holographic-version-21h1/ba-p/2337067) v květnu 2021 spustili hlavní aktualizaci operačního systému na HoloLens 2. Pracujeme na nadcházející verzi na základě zpětné vazby od zákazníků na tento rok.
 
-pro použití HoloLens 2 se vyžaduje uživatelský účet.
+Uživatelský účet musí používat HoloLens 2.
 
 ## <a name="hololens-components"></a>HoloLens komponenty
 
-- **Rozcestník**. obsahuje senzory HoloLens a displeje. Můžete střídat hypervisory až do HoloLens.
-- **HEADBAND**. chcete-li umístit HoloLens, pomocí kolečka úprav rozbalte headband. když je HoloLens zavedeno, seložte kolečko úprav tak, že zapnete napravo, dokud headband nebude pohodlné.
-- **Tlačítka pro jas** při HoloLens, jsou tlačítka jasu na levé straně rozhraní rozcestníku poblíž temple.
-- **Tlačítka hlasitosti**. při HoloLens, jsou tlačítka hlasitosti na pravé straně rozhraní temple v blízkosti vaší.
-- **Tlačítko napájení**. pokud je HoloLens, tlačítko napájení se nachází na pravé straně vnějšího krytu.
-- **Port USB-C**. při HoloLens, je port USB-C umístěný na pravé straně vnějšího krytu pod tlačítkem napájení.
+- **Visor**. Obsahuje HoloLens senzory a displeje. Visor můžete v době, kdy má HoloLens.
+- **Headband**. Pokud chcete nasa HoloLens, pomocí úpravy rozšiřte pásek. Když je HoloLens, zpřísnit kolečko pro úpravy otočením doprava, dokud není pásek v pořádku.
+- **Tlačítka brightness** Když máte HoloLens, jsou tlačítka brightness na levé straně visoru v blízkosti vašeho zornice.
+- **Tlačítka hlasitosti**. Když máte HoloLens, jsou tlačítka hlasitosti na pravé straně visoru v blízkosti vašeho zornice.
+- **Tlačítko napájení**. Při HoloLens se tlačítko napájení nachází na pravé straně zadního vnějšího pokryje.
+- **Port USB-C**. Když má HoloLens, port USB-C se nachází na pravé straně vnějšího zadního pokryje pod tlačítkem Napájení.
 
 ## <a name="in-the-box"></a>V poli
 
-- **[Prohlížeč panel](https://www.microsoft.com/p/microsoft-hololens-2-brow-pad/90z10rsslqp0)**. Prohlížeč panel můžete podle potřeby odebrat a nahradit.
-- **[Popruh režijních nákladů](https://www.microsoft.com/p/microsoft-hololens-2-overhead-strap/8wxl8wmk1f7z)** pokud při přesouvání nebudete mít k disHoloLens, pomůžete pomocí popruhu režijních nákladů udržet zařízení na svém místě. pokud se po delší dobu rozšíří HoloLens, popruh režie může zajistit, aby bylo zařízení pohodlnější.
-- **[Nabíječka a kabel USB-C](https://www.microsoft.com/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5)**. Napájecí napájení se připojí k napájení z elektrické zásuvky. pomocí kabelu USB-C připojíte HoloLens k napájení k dodávce nebo připojíte HoloLens k počítači.
-- **Microfiber tkanina**. slouží k vyčištění HoloLensového hypervisoru.
+- **[Brow pad](https://www.microsoft.com/p/microsoft-hololens-2-brow-pad/90z10rsslqp0)**. Podle potřeby můžete odebrat a nahradit panel pro ostění.
+- **[Režijní náklady](https://www.microsoft.com/p/microsoft-hololens-2-overhead-strap/8wxl8wmk1f7z)**. Když máte na sobě HoloLens a přitom se pohybujete, použijte režijní návěsí, které vám pomůžou udržet zařízení na místě. Pokud má HoloLens delší dobu, může se režijní návěsí zařízení více opotřebovat.
+- **[Kabel USB-C a kabely](https://www.microsoft.com/p/microsoft-hololens-2-usb-c-charger-cable/8vj21f2z8pk5)**. Napájecí zdroj se zapojte do napájecího zdroje. Pomocí kabelu USB-C připojte HoloLens k napájecímu zdroji pro nabíjení nebo k HoloLens k počítači.
+- **Mikrovlákno .** Pomocí můžete vyčistit HoloLens visor.
 
 ### <a name="power-supply-details"></a>Podrobnosti o zdroji napájení
 
-Zdroj napájení a kabel USB, který je součástí zařízení, je nejlepším podporovaným mechanismem pro zpoplatnění. Zdrojem napájení je 18W nabíječka.  9V dodá na 2A.
+Nejlépe podporovaným mechanismem pro nabíjení je napájecí zdroj a kabel USB, které jsou spolu se zařízením. Napájením je 18W napájení.  Jeho dodávky jsou 9V při 2A.
 
-Rychlost nabíjení a rychlost se můžou lišit v závislosti na prostředí, ve kterém je zařízení spuštěné.
+Rychlost a rychlost zpoplatnění se může lišit v závislosti na prostředí, ve kterém zařízení běží.
 
-Aby se zajistilo, že interní procento poplatků za baterii v době, kdy je zařízení zapnuté, musí být připojení minimálně k 15W nabíječkě.
+Aby bylo možné udržovat/šedě udržovat interní procento poplatku za baterie, když je zařízení v pořádku, musí být připojené minimálně k 15W napájení.
 
 ## <a name="device-specifications"></a>Specifikace zařízení
 
 ### <a name="display"></a>Zobrazení
 
-|   |   |
-| - | - |
-| Optické optiky | Prohlédněte si holografické čočky (waveguides) |
-| Holografické řešení | lehké moduly 2k 3:2 |
-| Holografická hustota | >2.5 k radiants (body světla na Radian) |
-| Vykreslování na základě očí | Zobrazit optimalizaci pozice prostorového oka |
+|   | &nbsp; |
+|---|---|
+| **Optika** | See-through holographic lenses (waveguides) |
+| **Holografické rozlišení** | 2k 3:2 Light Engines |
+| **Holografická hustota** | >2,5 tis. radiánů (světlé body na radián) |
+| **Vykreslování na základě očí** | Optimalizace zobrazení pro pozici 3D oka |
 
-### <a name="sensors"></a>Čidl
+### <a name="sensors"></a>Senzory
 
-|   |   |
-| - | - |
-| Sledování hlav | 4 viditelné světelné kamery |
-| Sledování očí | 2 kamery pro infračervený přenos (IR) |
-| Úrovní | 1. MP časový senzor hloubky |
-| Jednotka měření Inertial (IMU) | Akcelerometr, vybavený gyroskopem, magnetometer |
-| Camera | 8. MP stále 1080p30 video |
+|   | &nbsp; |
+|---|---|
+| **Sledování náhonů** | 4 viditelné světlé kamery |
+| **Sledování očí** | 2 Infračervené (IR) kamery |
+| **Hloubka** | 1 MP senzor hloubky letu |
+| **Inerciální měrné jednotka (IMU)** | Accelerometer,scope, pohotový |
+| **Fotoaparát** | 8 MP stills, video s 1080p30 |
 
-![senzory HoloLens 2](images/hololens2-front-view.png)
+![HoloLens 2 Sensors](images/hololens2-front-view.png)
 
 > [!NOTE]
-> Nekrytí žádných senzorů, které jsou na obrázku vyvolány. Kamery sledující hlavní fotoaparáty mají velmi velký FOV, nic by se kolem nich nemělo dokrýt.
+> Nepokrýjte žádné senzory, které jsou na obrázku. Kamery pro sledování hlavy mají velmi široký FOV. Kromě toho by se kolem nich nemělo nakrývat nic.
 
 ### <a name="audio-and-speech"></a>Zvuk a řeč
 
-|   |   |
-| - | - |
-| Mikrofonní pole | 5 kanálů |
-| Mluvčích | Vestavěný prostorový zvuk |
+|   | &nbsp; |
+|---|---|
+| **Mikrofonní pole** | 5 kanálů |
+| **Reproduktory** | Integrovaný prostorový zvuk |
 
-### <a name="compute-and-connectivity"></a>Výpočetní prostředí a připojení
+### <a name="compute-and-connectivity"></a>Výpočetní prostředky a možnosti připojení
 
-|   |   |
-| - | - |
-| Systém na čipu | [Podrobnosti o](https://www.qualcomm.com/products/snapdragon-850-mobile-compute-platform) výpočetní platformě pro Qualcomm Snapdragon 850 |
-| Holografická jednotka zpracování | Vlastní vytvořená jednotka holografického zpracování druhé generace |
-| Memory (Paměť) | 4 GB LPDDR4x systému paměti DRAM |
-| Storage | 64 GB UFS 2,1 |
-| WiFi | 802.11 AC 2x2 |
-| Bluetooth | 5.0 |
-| USB | Typ USB – DRP C |
+|   | &nbsp; |
+|---|---|
+| **Systém na čipu** | Podrobnosti o výpočetní platformě Qualcomm [](https://www.qualcomm.com/products/snapdragon-850-mobile-compute-platform) Snapdragon 850 |
+| **Holografická procesorová jednotka** | Holografická jednotka vytvořená druhou generací |
+| **Memory (Paměť)** | 4GB systém LPDDR4x DRAM |
+| **Storage** | 64 GB UFS 2.1 |
+| **Wi-Fi** | 802.11ac 2x2 |
+| **Bluetooth** | 5.0 |
+| **USB** | DRP typu USB |
 
 ### <a name="power"></a>Napájení
 
-|   |   |
-| - | - |
-| Výdrž baterie | 2-3 hodin aktivního použití Až dva týdny v pohotovostním čase. |
-| Technologie baterie | [Lithium baterie](https://www.microsoft.com/download/details.aspx?id=43388) |
-| Chování zpoplatnění | Plně funkční při zpoplatnění |
-| Typ chlazení | Prochlazené (bez ventilátorů) |
-| Vykreslování napájení | Aby se zajistilo, že interní procento poplatků za baterii v době, kdy je zařízení zapnuté, musí být připojení minimálně k 15W nabíječkě. |
+|   | &nbsp; |
+|---|---|
+| **Životnost baterie** | 2–3 hodiny aktivního používání. Až dva týdny pohotovostního času. |
+| **Technologie baterie** | [Lithium – baterie](https://www.microsoft.com/download/details.aspx?id=43388) |
+| **Chování při účtování** | Plně funkční při účtování |
+| **Typ chlazení** | Pasivní chlazení (bez ventilátorů) |
+| **Power draw** | Aby bylo možné udržovat/šedě udržovat interní procento poplatku za baterie, když je zařízení v pořádku, musí být připojené minimálně k 15W napájení. |
 
 ### <a name="fit"></a>Vhodnost
 
-|   |   |
-| - | - |
-| Velikosti | Jedna velikost s upravitelným pruhem  Přizpůsobit přes brýlí |
-| Hmotnost | 566 gramů |
+|   | &nbsp; |
+|---|---|
+| **Velikosti** | Jedna velikost s přizpůsobitelným pruhem.  Hodí se ke brýlím. |
+| **Hmotnost** | 566 gramů |
 
 ## <a name="device-capabilities"></a>Možnosti zařízení
 
 ### <a name="human-understanding"></a>Lidské porozumění
 
-|   |   |
-| - | - |
-| Ruční sledování | Oboustranně plně Kloubový model, přímá manipulace |
-| Sledování očí | Sledování v reálném čase |
-| Hlas | Příkazy a ovládací prvky na zařízení; Cortana přirozeného jazyka s připojením k internetu |
+|   | &nbsp; |
+|---|---|
+| **Ruční sledování** | Plně artikulovaný model se dvěma rucemi, přímá manipulace |
+| **Sledování očí** | Sledování v reálném čase |
+| **Hlas** | Příkazy a ovládání na zařízení; Cortana přirozeného jazyka s připojením k internetu |
 
-### <a name="environment-understanding"></a>Porozumění prostředí
+### <a name="environment-understanding"></a>Principy prostředí
 
-|   |   |
-| - | - |
-| Sledování šesti stupňů volnosti (6DoF) | Pozice pro sledování na úrovni světa |
-| Územní mapování | Síť v reálném čase |
-| Zachycení směsné reality | Fotky a videa v kombinaci s hologramem a fyzickým prostředím |
+|   | &nbsp; |
+|---|---|
+| **Sledování šesti stupňů volnosti (6DoF)** | Sledování poziční polohy na světové úrovni |
+| **Prostorové mapování** | Síť prostředí v reálném čase |
+| **Zachycení hybridní reality** | Fotky a videa ve smíšeném hologramu a fyzickém prostředí |
 
 ## <a name="pre-installed-software"></a>Předinstalovaný software
 
-|   |   |
-| - | - |
-| Windows Holografický operační systém | v [Windows holografickém operačním systému](hololens-release-notes.md)budou uživatelé Windows 10 moci využívat některé z svých aplikací a her v prostředí s hybridní realitou prostřednictvím HoloLens 2.
-| Prohlížeč 3D | [prostorový Viewer](https://www.microsoft.com/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab) umožňuje snadno zobrazit 3D modely a animace v reálném čase.|
-| Cortana | [Cortana](https://www.microsoft.com/p/cortana/9nffx4szz23l?activetab=pivot:overviewtab)váš asistent pro osobní produktivitu vám pomůže udržet si přehled o tom, co potřebujete, a ušetřit čas potřebný k hledání.  |
-| Příručky k Dynamics 365 |  [příručky k Dynamics 365](https://www.microsoft.com/p/microsoft-dynamics-365-guides/9n038fb42kkb?activetab=pivot:overviewtab) budou zaměstnancům pomáhat při rychlejším učení nových dovedností na HoloLens zařízeních. |
-| Vzdálená pomoc pro Dynamics 365 | [Microsoft Dynamics 365 remote assist pomáhá](https://www.microsoft.com/p/microsoft-dynamics-365-remote-assist/9p77qgw10k9m?activetab=pivot:overviewtab) technikům spolupracovat a řešit problémy se vzdálenými spolupracovníky pomocí Microsoft Teams nebo programu Dynamics 365 remote assist.  |
-| Centrum Feedback | [centrum Feedback](https://www.microsoft.com/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab) vám umožní poskytovat zpětnou vazbu k Windowsům a aplikacím sdílením návrhů nebo problémů.  |
-| Průzkumník souborů | Průzkumník souborů poskytuje grafické uživatelské rozhraní pro přístup k systémům souborů. |
-| Pošta a kalendář | Aplikace [e-mailu a kalendáře](https://www.microsoft.com/p/mail-and-calendar/9wzdncrfhvqm#activetab=pivot:overviewtab) vám pomůžou s vaším aktuálním e-mailem, spravovat plán a zůstat v kontaktu se svými kontakty. |
-| Microsoft Edge | Microsoft Edge poskytuje špičkový výkon s větším soukromím, vyšší produktivitou a větší hodnotou při procházení. |
-| Microsoft Store | [Microsoft Store](https://www.microsoft.com) je váš zdroj přechodu na aplikace a hry, které pracují s HoloLens.|
-| Filmy & televizor | [Video & TV](https://www.microsoft.com/p/movies-tv/9wzdncrfj3p2?activetab=pivot:overviewtab) přináší nejnovější zábavu v jediné jednoduché, rychlé a elegantní aplikaci. |
-| OneDrive | [OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3?activetab=pivot:overviewtab) vám umožní přístup k souborům a jejich úpravám ze všech zařízení kdekoli.  |
-| Fotky | [Fotky](https://www.microsoft.com/p/microsoft-photos/9wzdncrfjbh4?activetab=pivot:overviewtab) vám umožní zobrazovat a upravovat fotky a videa, dělat filmy a vytvářet alba.  |
-| Nastavení | Nastavení aplikace je místo, kde můžete přizpůsobit, jak Windows holografickě funguje podrobněji.  |
-| Tipy | [Tipy](https://www.microsoft.com/p/microsoft-tips/9wzdncrdtbjj?activetab=pivot:overviewtab) vám umožní hlavní překvapivé a méně známé věci, které můžete dělat Windows holografickě. |
+| &nbsp; | &nbsp; |
+|---|---|
+| **Windows Holographic Operating System** | V [Windows Holographic OS](hololens-release-notes.md)budou uživatelé Windows 10 moct některé své aplikace a hry používat v prostředí hybridní reality prostřednictvím HoloLens 2.
+| **3D prohlížeč** | [3D prohlížeč](https://www.microsoft.com/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab) umožňuje snadno zobrazit 3D modely a animace v reálném čase.|
+| **Cortana** | [Cortana](https://www.microsoft.com/p/cortana/9nffx4szz23l?activetab=pivot:overviewtab), osobním asistentem pro produktivitu, vám pomůže udržovat si informace o tom, co je důležité, a ušetřit čas hledáním toho, co potřebujete.  |
+| **Průvodci Dynamics 365** |  [Průvodci Dynamics 365 pomůžou](https://www.microsoft.com/p/microsoft-dynamics-365-guides/9n038fb42kkb?activetab=pivot:overviewtab) zaměstnancům rychleji se učit nové dovednosti na HoloLens zařízeních. |
+| **Dynamics 365 Remote Assist** | [Microsoft Dynamics 365 Remote Assist](https://www.microsoft.com/p/microsoft-dynamics-365-remote-assist/9p77qgw10k9m?activetab=pivot:overviewtab) umožňuje technikům spolupracovat a řešit problémy se vzdálenými spolupracovníky pomocí Microsoft Teams nebo Dynamics 365 Remote Assist.  |
+| **Centrum Feedback** | [Centrum Feedback](https://www.microsoft.com/p/feedback-hub/9nblggh4r32n?activetab=pivot:overviewtab) vám umožňuje poskytnout zpětnou vazbu k Windows a aplikací tím, že sdílíte své návrhy nebo problémy.  |
+| **Průzkumník souborů** | Průzkumník souborů poskytuje grafické uživatelské rozhraní pro přístup k systémům souborů. |
+| **Pošta a kalendář** | Aplikace Pošta a [Kalendář](https://www.microsoft.com/p/mail-and-calendar/9wzdncrfhvqm#activetab=pivot:overviewtab) vám pomůžou být v e-mailu aktuální, spravovat plán a zůstat v kontaktu s vašimi kontakty. |
+| **Microsoft Edge** | Microsoft Edge poskytuje prvotřídní výkon s větší ochranou osobních údajů, vyšší produktivitou a větší hodnotou při procházení. |
+| **Microsoft Store** | Hlavní [Microsoft Store](https://www.microsoft.com) je vaším zdrojem informací pro aplikace a hry, které pracují s HoloLens.|
+| **Movies & TV** | [Filmy & TV](https://www.microsoft.com/p/movies-tv/9wzdncrfj3p2?activetab=pivot:overviewtab) vám přinášejí nejnovější zábavu v jedné jednoduché, rychlé a elegantní aplikaci. |
+| **OneDrive** | [OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3?activetab=pivot:overviewtab) umožňuje přístup k souborům a jejich úpravy ze všech zařízení odkudkoli.  |
+| **Fotky** | [Fotky](https://www.microsoft.com/p/microsoft-photos/9wzdncrfjbh4?activetab=pivot:overviewtab) umožňují prohlížet a upravovat fotky a videa, vytvářet filmy a vytvářet fotky.  |
+| **Nastavení** | Aplikace Nastavení je místo, kde můžete přizpůsobit, jak Windows Holographic funguje.  |
+| **Tipy** | [Tipy](https://www.microsoft.com/p/microsoft-tips/9wzdncrdtbjj?activetab=pivot:overviewtab) vám umožňuje zvládnout překvapivé a méně známé věci, které můžete dělat v Windows Holographic. |
 
 ## <a name="device-certifications"></a>Certifikace zařízení
 
 ### <a name="safety"></a>Bezpečnost
 
 * [Bezpečnost produktu](https://support.microsoft.com/en-us/help/4023454/safety-information)
-* [Upozornění a pokyny k zabezpečení produktu](https://support.microsoft.com/en-us/help/4558037/product-safety-warnings-and-instructions)
-* bezpečnost očí: HoloLens 2 byla testována a splňuje základní požadavky na ochranu proti změnám ANSI z 87.1, CSA z 94.3 a EN 166.
-* [Informace pro správní oblast](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
+* [Bezpečnostní upozornění a pokyny k produktu](https://support.microsoft.com/en-us/help/4558037/product-safety-warnings-and-instructions)
+* Bezpečnost očí: HoloLens 2 byl otestován a odpovídá základním požadavkům na ochranu proti dopadu pro ANSI Z87.1, CSA Z94.3 a EN 166.
+* [Informace SAR](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
-### <a name="regulatory-information"></a>Regulativní informace
-[HoloLens regulativní](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information): obsahuje informace o teplotě, vyřazení, přepínači a porušování televize a dalších.
+### <a name="regulatory-information"></a>Zákonné informace
+[HoloLens regulační předpisy:](https://support.microsoft.com/en-us/help/13761/hololens-regulatory-information)Zahrnuje informace o teplotě, vyřazení, radioaktivině a televizním rušit a další informace.
 
 ## <a name="warranty-information"></a>Informace o záruce
 
-Microsoft HoloLens 2 se dodává se standardní omezenými [zárukami](https://support.microsoft.com/topic/warranties-extended-service-plans-and-terms-conditions-for-your-device-eedf7a23-84a7-1a47-480b-0e10503eedf5). 
+Microsoft HoloLens 2 se dodává se standardní [omezenou zárukou.](https://support.microsoft.com/topic/warranties-extended-service-plans-and-terms-conditions-for-your-device-eedf7a23-84a7-1a47-480b-0e10503eedf5) 
 
 
-nákup podléhá [Microsoft Store podmínkám použití a prodeje](https://www.microsoft.com/storedocs/terms-of-sale?rtc=1). Veškerý prodej je finální. Žádné refundace.
+Na nákup se [Microsoft Store podmínek použití a prodeje](https://www.microsoft.com/storedocs/terms-of-sale?rtc=1). Všechny prodeje jsou konečné. Žádné refundace.
 
-zakoupením HoloLens 2 souhlasíte s [licenční smlouvou k softwaru](https://www.microsoft.com/Useterms/).
+Zakoupením licence HoloLens 2 souhlasíte s licenční [smlouvou na software](https://www.microsoft.com/Useterms/).
 
-Neurčeno pro použití dětmi mladších než 13.
+Není určeno pro děti mladší než 13 let.
 
 ## <a name="package-dimensions"></a>Rozměry balíčku
 
-|      Měření               |      Metrika jednotek     |      Jednotky – britský     |
+|      Měření               |      Metrika jednotek     |      Units ( Jednotky)     |
 |--------------------------------|-----------------------|-------------------------|
 |     Délka jednotky                |     378,97 mm          |     14,920 palců       |
 |     Šířka jednotky                 |     247,90 mm          |     9,760 palců        |
-|     Hloubka jednotky                 |     163,07 mm          |     6,420 palců        |
-|     Váha jednotky                |     2,878 kg           |     6,344 kg           |
-|     Délka vnějšího přepravce    |     446,00 mm          |     17,559 palců       |
-|     Šířka vnějšího přepravce     |     257,99 mm          |     10,157 palců       |
-|     Hloubka vnějšího přepravce     |     172,01 mm          |     6,772 palců        |
-|     Hmotnost vnějšího přepravce    |     3,284 kg           |     7,240 kg           |
+|     Hloubka jednotek                 |     163,07 mm          |     6,420 palců        |
+|     Hmotnost jednotky                |     2,878 kg           |     6,344 lbs           |
+|     Náplní délky shipperu    |     446,00 mm          |     17,559 palců       |
+|     Přisediní šířka     |     257,99 mm          |     10,157 palců       |
+|     Zamyšlná hloubka lodí     |     172,01 mm          |     6,772 palců        |
+|     Přisoudná hmotnost shipperu    |     3,284 kg           |     7,240 lbs           |
 
 > [!NOTE]
-> - jednotka: černé pole maloobchodního prodeje HoloLens 2 se prodává v.
-> - Vnější přepravce: ochranná expediční balení kolem jednotky.
+> - Jednotka: Černá skříňka ve stylu maloobchodního prodeje HoloLens 2 se prodává.
+> - Přisudce Shipper: Ochranné obaly pro expedici kolem jednotky.
 
-## <a name="finding-the-serial-number"></a>Hledání sériového čísla
+## <a name="finding-the-serial-number"></a>Vyhledání sériového čísla
 
-sériové číslo pro zařízení HoloLens 2 se tiskne pod hypervisorem.
+Pod zorníkem HoloLens sériové číslo všech 2 zařízení.
 
-1. Zvedněte clonu zařízení.
-1. Podívejte se na prohlížeč panel.
-1. Sériové číslo, které se nachází blízko, můžete najít v pantu.
+1. Zdvižte zorník zařízení.
+1. Podívejte se do blízkosti padu brow.
+1. Sériové číslo najdete v blízkosti tohoto zařízení.
 
-<img src="images/serial-number-diagram-hl2.png" alt=Null width="625" height="903" />
+   <img src="images/serial-number-diagram-hl2.png" alt=Null width="625" height="903" />
 
-Sériové číslo lze také najít prostřednictvím připojeného počítače:
+Sériové číslo najdete také na připojeném počítači:
 
-1. Připojit zařízení
-1. Přejít na **Tento počítač** v Průzkumníkovi souborů
-1. klikněte pravým tlačítkem a vyberte **vlastnosti** HoloLensho zařízení.
-1. Zobrazí se číslo série zařízení, jak je znázorněno na snímku obrazovky níže.
+1. Připojení zařízení
+1. V **Průzkumníku souborů přejděte na** tento počítač.
+1. Klikněte pravým tlačítkem **a vyberte Vlastnosti** HoloLens zařízení
+1. Zobrazí se číslo řady zařízení, jak je znázorněno na následujícím snímku obrazovky.
 
-<img src="images/ResetRecovery2.png" alt=null line width="400" height="600" />
+   <br/><img src="images/ResetRecovery2.png" alt=null line width="400" height="600" />
 
-## <a name="next-steps"></a>Další krok (y)
-
-> [!div class="nextstepaction"]
-> [porovnání edicí HoloLens 2](hololens2-options.md)
+## <a name="next-steps"></a>Další kroky
 
 > [!div class="nextstepaction"]
-> [nastavení a spuštění HoloLens 2](hololens2-setup.md)
+> [Porovnání HoloLens 2 edicí](hololens2-options.md)
+
+> [!div class="nextstepaction"]
+> [Nastavení a spuštění HoloLens 2](hololens2-setup.md)

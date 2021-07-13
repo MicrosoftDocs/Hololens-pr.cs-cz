@@ -14,12 +14,12 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b5bb534020fe037576ce1caa3d9cee978dac778d
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 32153fd6f7703347f4fe2f9ad41043fbeb9fab3f
+ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636295"
+ms.locfileid: "113640470"
 ---
 # <a name="compare-hololens-2-options"></a>porovnat možnosti HoloLens 2
 
@@ -31,17 +31,17 @@ ať už jste [profesionálem](https://www.microsoft.com/hololens/apps) v oblasti
 
 |                                                      | HoloLens 2 | HoloLens 2 se vzdálenou asistencí | HoloLens 2 – průmyslový edice | HoloLens 2 – průmyslový edice s nástrojem Remote Assist | Trimble XR10 s HoloLens 2 | HoloLens 2 – vývojová edice |
 |------------------------------------------------------|------------|-------------------------------|-------------------------------|--------------------------------------------------|------------------------------|--------------------------------|
-| zařízení HoloLens 2 (jedno zařízení)                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
-| Dynamics 365 Remote Assist (jedno sedadlo)                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
-| Klasifikace vyčištění místnosti ISO 14644-1 Class 5           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
-| UL Class I, divize 2-skupiny A, B, C a D HAZLOC prostředí                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| Integrovaná do pevného Hat (vyhovuje OOP ve 40 + zemích) |            |                               |                               |                                                  |               ✔️              |                                |
-| Šum – zrušení výstupu zvuku                        |            |                               |                               |                                                  |               ✔️              |                                |
-| Vývojář nároků <sup>1</sup>                             |            |                               |                               |                                                  |                              |                ✔️               |
-| Rychlý nahrazující program <sup>2</sup>                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
-| Práva pro komerční použití                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| [Záruky](hololens2-hardware.md#warranty-information)                                             |   1 rok   |             1 rok            |             dva roky            |                      dva roky                      |            1. rok <sup>3</sup>            |             1 rok             |
-| Limit pro nákup zařízení                                |    Žádná    |              Žádná             |              Žádná             |                       Žádná                       |             Žádná             |       Jedna na transakci      |
+| **zařízení HoloLens 2 (jedno zařízení)**                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
+| **Dynamics 365 Remote Assist (jedno sedadlo)**                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
+| **Klasifikace vyčištění místnosti ISO 14644-1 Class 5**           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **UL Class I, divize 2-skupiny A, B, C a D HAZLOC prostředí**                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
+| **Integrovaná do pevného Hat (vyhovuje OOP ve 40 + zemích)** |            |                               |                               |                                                  |               ✔️              |                                |
+| **Šum – zrušení výstupu zvuku**                        |            |                               |                               |                                                  |               ✔️              |                                |
+| **Vývojář nároků <sup>1</sup>**                             |            |                               |                               |                                                  |                              |                ✔️               |
+| **Rychlý nahrazující program <sup>2</sup>**                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **Práva pro komerční použití**                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
+| [**Záruky**](hololens2-hardware.md#warranty-information)                                             |   1 rok   |             1 rok            |             dva roky            |                      dva roky                      |            1. rok <sup>3</sup>            |             1 rok             |
+| **Limit pro nákup zařízení**                                |    Žádná    |              Žádná             |              Žádná             |                       Žádná                       |             Žádná             |       Jedna na transakci      |
 
 - <sup>1</sup> – obsahuje $500 kreditů a zkušebních období Azure pro Pro Unity a modul plug-in Pixyz.
 - <sup>2</sup> – obdržíte náhradní zařízení v noci nebo na urychlené odeslání (rychlejší z dostupných možností) před tím, než je zařízení od Microsoftu obdrženo vadné.
