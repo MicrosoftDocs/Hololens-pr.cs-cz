@@ -15,12 +15,12 @@ ms.custom:
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1de9687174bf9c1de2e2b15ee03aa841254b0b82
-ms.sourcegitcommit: 2988afb1d7792c9e4bae15485cd52d6eff7e27c8
+ms.openlocfilehash: b7ce9f94fb6d3074f8b7f517af6bd70c78462ddc
+ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "113685044"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "114659535"
 ---
 # <a name="hololens-2-release-notes"></a>poznámky k verzi HoloLens 2
 
@@ -38,7 +38,6 @@ abychom se ujistili, že máte k dispozici produktivní prostředí s HoloLensmi
 Vylepšení a opravy v aktualizaci:
 
 - Portál zařízení má rozšířené metody upozorňování zákazníka, když se v Průzkumníkovi souborů vyskytnou problémy s otevíráním uzamčených souborů.
-- při použití Emulator HoloLens 2 v počítači s integrovanými i diskrétními grafickými adaptéry bude emulátor ve většině případů moci povolit akceleraci hardwarových grafik, i když může používat méně výkonný integrovaný adaptér.  Dříve nebylo možné povolit hardwarovou akceleraci, což často oznamuje selhání grafiky s kódem 43.  V některých případech se emulátor nerestartoval úspěšně, ale teď se spustí.
 - Nahrání souboru, stažení, přejmenování a odstranění je teď opravené při použití protokolu HTTPS ve všech podporovaných prohlížečích.
 - opraven problém, kdy Wi-Fi proxy server nelze uložit při spuštění Wi-Fi vlastností uživatelského rozhraní z **Nastavení-> síťové & > stav-> vlastnosti**.
 - Vyřešili jsme problém s odebráním certifikátů eSIM napříč aktualizacemi operačního systému. Tato oprava zajistí, že se při aktualizaci verze 21H1 odebraly certifikáty eSIM a související součásti.
@@ -49,8 +48,8 @@ Vylepšení a opravy v aktualizaci:
 - Sestavení 19041,1157
 
 Vylepšení a opravy v aktualizaci:
+
 - Portál zařízení má rozšířené metody upozorňování zákazníka, když se v Průzkumníkovi souborů vyskytnou problémy s otevíráním uzamčených souborů. 
-- při použití Emulator HoloLens 2 v počítači s integrovanými i diskrétními grafickými adaptéry bude emulátor ve většině případů moci povolit akceleraci hardwarových grafik, i když může používat méně výkonný integrovaný adaptér.  Dříve nebylo možné povolit hardwarovou akceleraci, což často oznamuje selhání grafiky s kódem 43.  V některých případech se emulátor nespustí úspěšně, ale teď to bude.
 - Nahrání souboru, stažení, přejmenování a odstranění je teď opravené při použití protokolu HTTPS ve všech podporovaných prohlížečích.
 
 ## <a name="windows-holographic-version-21h1---june-2021-update"></a>Windows Holografická verze 21H1, aktualizace od června 2021
@@ -133,211 +132,211 @@ Tato aktualizace obsahuje funkce pro dva cílové skupiny. funkce, které může
 > díky zavedení Windows holografické verze 21H1 **netrváme měsíční aktualizace pro Windows holografické verze 1903**. Díky tomu se můžeme soustředit na další nejnovější verze a dál dodávat cenná vylepšení. 
 
 
-| Název funkce                                              | Krátký popis                                                                      | Cílovou skupinu | 
+| Název funkce                                              | Krátký popis                                                                      | Cílová skupina | 
 |-----------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------|
-| [Nové Microsoft Edge](#introducing-the-new-microsoft-edge)  | Nová aplikace Chromium založená na Microsoft Edge je teď k dispozici pro HoloLens 2. | Koncový uživatel | 
-[WebXR a 360 Viewer](#webxr-and-360-viewer) | Vyzkoušejte imerzivní webová prostředí a přehrávání videa 360. | Koncový uživatel | 
-[Nová Nastavení aplikace](#new-settings-app) | Starší Nastavení nahrazuje aktualizovaná verze novými funkcemi a nastaveními. | Koncový uživatel |
-[Zobrazení barevného pozadí](#display-color-calibration) | Vyberte alternativní profil barev pro váš HoloLens 2. | Koncový uživatel |
-[Výchozí výběr aplikace](#default-app-picker) | Vyberte, která aplikace se má spustit pro každý typ souboru nebo odkazu. | Koncový uživatel |
-[Řízení objemu na aplikaci](#per-app-volume-control) | Objem na úrovni aplikace můžete řídit nezávisle na systémovém svazku. | Koncový uživatel |
-[Instalace webových aplikací](#install-web-apps) | Nainstalujte webové aplikace na HoloLens 2, například Microsoft Office, pomocí nového Microsoft Edge prohlížeče. | Koncový uživatel |
-[Potažením prstem zadejte](#swipe-to-type) | Pomocí špičky prstu potáhněte slova na holografické klávesnici. | Koncový uživatel |
-[Nabídka Napájení z nabídky Start](#power-menu-from-start) | V nabídce Start restartujte a vypněte HoloLens zařízení. | Koncový uživatel |
-[Více uživatelů uvedených na přihlašovací obrazovce](#multiple-users-listed-on-sign-in-screen) | Zobrazení několika uživatelských účtů na přihlašovací obrazovce | Koncový uživatel |
-[Podpora externího mikrofonu USB-C](#usb-c-external-microphone-support) | Pro aplikace a/nebo Remote Assist použijte mikrofony USB-C. | Koncový uživatel |
-[Automatické přihlášení návštěvníka pro terminály](#visitor-auto-logon-for-kiosks) | Povolí použití automatického přihlášení k účtům Návštěvník v bezobrazovkovém režimu. | Správce IT |
-[Nové identifikátory AUMID pro nové aplikace v beznavídkovém režimu](#use-the-new-settings-and-edge-apps-in-kiosk-modes)  | Identifikátory AUMID pro nové Nastavení a aplikace Edge. | Správce IT |
-[Vylepšené předání chyb v bezobrazovkovém režimu](#kiosk-mode-behavior-changes-for-handling-of-failures) | V bezobrazovkovém režimu se před prázdnou nabídkou Start hledá globální přiřazený přístup. | Správce IT |
-[Nová nastaveníURIs pro viditelnost Nastavení zobrazení stránky](#new-settings-uris-for-page-settings-visibility) | Více než 20 nových nastaveníURIs pro Nastavení/PageVisibilityList. | Správce IT |
-[Konfigurace diagnostiky pro záložní prostředky](#configuring-fallback-diagnostics-via-settings-app) | Nastavení chování diagnostiky pro záložní Nastavení aplikaci | Správce IT |
-[Sdílení věcí s blízkými zařízeními](#share-things-with-nearby-devices) | Sdílet soubory nebo adresy URL z HoloLens do počítače. | Vše |
-[Nová diagnostická trasování operačního systému](#new-os-diagnostic-traces) | Nový poradce při potížích Nastavení pro aktualizace operačního systému. | Správce IT |
-[Optimalizace doručení Preview](#delivery-optimization-preview) | Snižte využití šířky pásma pro stahování z více HoloLens zařízení. | Správce IT |
+| [Nový Microsoft Edge](#introducing-the-new-microsoft-edge)  | pro HoloLens 2 je teď k dispozici nový Microsoft Edge založený na Chromium. | Koncový uživatel | 
+[WebXR a 360 Viewer](#webxr-and-360-viewer) | Vyzkoušejte moderní webové prostředí a 360 přehrávání videa. | Koncový uživatel | 
+[nová aplikace Nastavení](#new-settings-app) | starší verze aplikace Nastavení se nahrazuje aktualizovanou verzí s novými funkcemi a nastaveními. | Koncový uživatel |
+[Zobrazit kalibraci barev](#display-color-calibration) | vyberte alternativní barevný profil pro zobrazení HoloLens 2. | Koncový uživatel |
+[Výchozí výběr aplikace](#default-app-picker) | Vyberte aplikaci, která se má spustit pro každý soubor nebo typ odkazu. | Koncový uživatel |
+[Řízení hlasitosti na aplikaci](#per-app-volume-control) | Ovládat svazek na úrovni aplikace nezávisle na systémovém svazku. | Koncový uživatel |
+[Instalace webových aplikací](#install-web-apps) | pomocí nového prohlížeče Microsoft Edge nainstalujte webové aplikace v HoloLens 2, jako je Microsoft Office. | Koncový uživatel |
+[Potáhnutím na typ](#swipe-to-type) | Použijte hrot prstu na potáhnutí slova na holografické klávesnici. | Koncový uživatel |
+[Nabídka napájení z nabídky Start](#power-menu-from-start) | v nabídce Start restartujte a vypněte zařízení HoloLens. | Koncový uživatel |
+[Více uživatelů uvedených na přihlašovací obrazovce](#multiple-users-listed-on-sign-in-screen) | Zobrazit více uživatelských účtů na přihlašovací obrazovce | Koncový uživatel |
+[Podpora externích mikrofonů USB-C](#usb-c-external-microphone-support) | Použijte mikrofony USB-C pro aplikace a/nebo vzdálenou pomoc. | Koncový uživatel |
+[Automatické přihlášení návštěvníka pro veřejné terminály](#visitor-auto-logon-for-kiosks) | Umožňuje, aby se automatické přihlašování na účtech návštěvníka používalo pro beznabídkový režim. | Správce IT |
+[Nový AUMIDs pro nové aplikace v celoobrazovkovém režimu](#use-the-new-settings-and-edge-apps-in-kiosk-modes)  | AUMIDs se na nové aplikace Nastavení a Edge. | Správce IT |
+[Vylepšené zpracování chyb v celoobrazovkovém režimu](#kiosk-mode-behavior-changes-for-handling-of-failures) | Celoobrazovkový režim vyhledá globální přiřazený přístup před prázdnou nabídkou Start. | Správce IT |
+[nový SettingsURIs pro viditelnost stránky Nastavení](#new-settings-uris-for-page-settings-visibility) | 20 + nové SettingsURIs pro zásady Nastavení/PageVisibilityList. | Správce IT |
+[Konfigurace záložní diagnostiky](#configuring-fallback-diagnostics-via-settings-app) | nastavení nouzového diagnostického chování v aplikaci Nastavení App | Správce IT |
+[Sdílení věcí pomocí okolních zařízení](#share-things-with-nearby-devices) | sdílejte soubory nebo adresy url z HoloLens k počítači. | Vše |
+[Nová trasování diagnostiky operačního systému](#new-os-diagnostic-traces) | nový poradce při potížích v Nastavení pro aktualizace operačního systému. | Správce IT |
+[Optimalizace doručování – náhled](#delivery-optimization-preview) | snižte spotřebu šířky pásma pro stahování z více HoloLensch zařízení. | Správce IT |
 
-Projděte si související poznámky k verzi:
+Podívejte se na související poznámky k verzi:
 
-- [Navštivte archiv HoloLens Emulator dat.](/windows/mixed-reality/hololens-emulator-archive)
-- [Dynamics 365 Remote Assist](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
-- [Průvodci Dynamics 365](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
+- [navštívit HoloLens Emulator archivu](/windows/mixed-reality/hololens-emulator-archive)
+- [Vzdálená pomoc pro Dynamics 365](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
+- [Příručky k Dynamics 365](/dynamics365/mixed-reality/remote-assist/version-history-remote-assist-hololens)
 
-### <a name="introducing-the-new-microsoft-edge"></a>Představení nového Microsoft Edge
+### <a name="introducing-the-new-microsoft-edge"></a>Představujeme nový Microsoft Edge
 
-![Animace staršího Microsoft Edge loga na nové Microsoft Edge loga](images/new-edge.gif)
+![animace starší verze Microsoft Edge loga na nové Microsoft Edge logo](images/new-edge.gif)
 
-Nový Microsoft Edge přijme [projekt Chromium open source,](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) aby pro zákazníky vytvořil lepší kompatibilitu a méně fragmentace webu pro webové vývojáře.
+nový Microsoft Edge [přijme projekt Chromium open source](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) , aby vytvořil lepší kompatibilitu pro zákazníky a méně fragmentaci webu pro webové vývojáře.
 
 > [!IMPORTANT]
-> Tato nová Microsoft Edge automaticky nahrazuje starší Microsoft Edge, která [se](https://blogs.windows.com/msedgedev/2021/03/09/microsoft-edge-legacy-end-of-support/) už v nových verzích nepodporuje.
+> tato nová Microsoft Edge automaticky nahrazuje starší Microsoft Edge, která již není v nových verzích [podporována](https://blogs.windows.com/msedgedev/2021/03/09/microsoft-edge-legacy-end-of-support/) .
 
-![Snímek obrazovky Microsoft Edge nového snímku obrazovky](images/new-edge-ui.png)
+![snímek nové Microsoft Edge](images/new-edge-ui.png)
 
-#### <a name="launching-the-new-microsoft-edge"></a>Spuštění nové Microsoft Edge
+#### <a name="launching-the-new-microsoft-edge"></a>Spouští se nový Microsoft Edge.
 
-Nový Microsoft Edge ![Ikona Microsoft Edge nový](images/new_edge_logo.png) (znázorněná ikonou modré a zelené swirl) je připnutá k nabídka Start a automaticky se spustí při aktivaci webového odkazu.
+Nový Microsoft Edge ![ikona nové Microsoft Edge](images/new_edge_logo.png) (reprezentované modrou a zelenou ikonou) jsou připnuté na nabídka Start a automaticky se spustí při aktivaci webového odkazu.
 
 > [!NOTE]
-> Při prvním spuštění nového Microsoft Edge na HoloLens 2 se vaše nastavení a data naimportuje ze starší verze Microsoft Edge. Pokud po spuštění nového Microsoft Edge nadále používáte starší verzi Microsoft Edge, nebudou se tato nová data synchronizovat ze starší verze Microsoft Edge do nového Microsoft Edge.
+> když poprvé spustíte nový Microsoft Edge v HoloLens 2, vaše nastavení a data se naimportují ze starší verze Microsoft Edge. pokud po spuštění nového Microsoft Edge budete nadále používat starší verze Microsoft Edge, nebudou se nová data synchronizovat ze starší verze Microsoft Edge do nového Microsoft Edge.
 
 #### <a name="configuring-policy-settings-for-the-new-microsoft-edge"></a>Konfigurace nastavení zásad pro nové Microsoft Edge
 
-Nový Microsoft Edge nabízí správcům IT mnohem širší sadu zásad prohlížeče pro HoloLens 2, než byly dříve dostupné ve starších verzích Microsoft Edge.
+nový Microsoft Edge nabízí správcům IT mnohem širší sadu zásad prohlížeče pro HoloLens 2, než bylo dříve k dispozici ve starších verzích Microsoft Edge.
 
-Tady je několik užitečných zdrojů informací o správě nastavení zásad pro nové Microsoft Edge:
+Tady je několik užitečných prostředků, které vám pomůžou se správou nastavení zásad pro nové Microsoft Edge:
 
-- [Konfigurace Microsoft Edge zásad pomocí Microsoft Intune](/deployedge/configure-edge-with-intune)
-- [starší verze Microsoft Edge mapování Microsoft Edge zásad](/deployedge/microsoft-edge-policy-map-legacy-to-newedge)
-- [Mapování zásad Microsoft Edge Google Chrome](/deployedge/microsoft-edge-policy-map-chrome-to-newedge)
-- Úplná [Microsoft Edge Enterprise dokumentace](/deployedge/)
+- [konfigurace nastavení zásad Microsoft Edge pomocí Microsoft Intune](/deployedge/configure-edge-with-intune)
+- [mapování zásad starší verze Microsoft Edge Microsoft Edge](/deployedge/microsoft-edge-policy-map-legacy-to-newedge)
+- [mapování zásad Google Chrome na Microsoft Edge](/deployedge/microsoft-edge-policy-map-chrome-to-newedge)
+- úplná [dokumentace k Microsoft Edge Enterprise](/deployedge/)
 
 > [!IMPORTANT]
-> Vzhledem k objemu zásad prohlížeče podporovaných novou Microsoft Edge nemůže náš tým zaručit, že každá nová zásada bude fungovat HoloLens 2. Otestovali a potvrdili jsme ale, že nové zásady Microsoft Edge ekvivalentem každé starší verze zásad Microsoft Edge dříve podporované u HoloLens 2 fungují podle očekávání. V [starší verze Microsoft Edge Microsoft Edge](/deployedge/microsoft-edge-policy-map-legacy-to-newedge) zásad najdete nový ekvivalent Microsoft Edge pro všechny starší zásady prohlížeče Microsoft Edge, které jste s verzí HoloLens 2 HoloLens.
+> vzhledem k tomu, že se jedná o řadu zásad prohlížeče podporovaných novým Microsoft Edge, náš tým nemůže zaručit, že každá nová zásada funguje na HoloLens 2. ale otestovali a potvrdili jsme to, než je nový Microsoft Edge ekvivalent každé starší verze Microsoft Edge zásady, která byla dřív podporovaná na HoloLens 2 fungovala podle očekávání. v tématu [starší verze Microsoft Edge Microsoft Edge mapování zásad](/deployedge/microsoft-edge-policy-map-legacy-to-newedge) najdete nové Microsoft Edge ekvivalent každé starší zásady Microsoft Edge prohlížeče, kterou jste používali s HoloLens 2.
 >
-> Existují alespoň dvě nové zásady Microsoft Edge, o které víme, *že nebudou* fungovat s HoloLens 2:
+> existují alespoň dvě nové zásady Microsoft Edge, které *nebudeme* spolupracovat s HoloLens 2:
 > - EnterpriseModeSiteList
 > - EnterpriseSiteListServiceURL
 
-#### <a name="what-to-expect-from-the-new-microsoft-edge-on-hololens-2"></a>Co očekávat od nového Microsoft Edge na HoloLens 2
+#### <a name="what-to-expect-from-the-new-microsoft-edge-on-hololens-2"></a>co očekávat od nového Microsoft Edge v HoloLens 2
 
-Vzhledem k tomu, že Microsoft Edge je nativní aplikace Win32 s novou vrstvou adaptéru UPW, která umožňuje spuštění na zařízeních jenom pro UPW, jako je HoloLens 2, nemusí být některé funkce okamžitě dostupné. V nadcházejících měsících budeme podporovat nové scénáře a funkce, proto v tomto prostoru najdete aktuální informace.
+vzhledem k tomu, že nový Microsoft Edge je nativní aplikace Win32 s novou vrstvou adaptéru uwp, která umožňuje běžet na zařízeních jenom s uwp, jako je HoloLens 2, některé funkce nemusí být k dispozici okamžitě. V nadcházejících měsících budeme podporovat nové scénáře a funkce, takže na tomto místě najdete aktuální informace.
 
-**Očekávané scénáře a funkce:**
-- Prostředí při prvním spuštění, přihlášení k profilu a synchronizace
-- Weby by se měly vykreslit a chovat podle očekávání
-- Většina funkcí prohlížeče (oblíbené položky, historie atd.) by měla fungovat podle očekávání
+**Očekává se, že scénáře a funkce budou fungovat:**
+- První spuštění, přihlášení k profilování a synchronizace
+- Weby by se měly vykreslovat a chovat podle očekávání
+- Většina funkcí prohlížeče (oblíbená, historie atd.) by měla fungovat podle očekávání.
 - Tmavý režim
 - Instalace webových aplikací do zařízení
-- Instalace rozšíření (dejte nám vědět, pokud používáte rozšíření, která nefungují správně v HoloLens 2)
-- Zobrazení a označení souboru PDF
-- Prostorový zvuk z jednoho okna prohlížeče
+- instalování rozšíření (pokud používáte jakákoli rozšíření, která nefungují správně na HoloLens 2), dejte nám prosím nějaké informace.
+- Zobrazení a označení PDF
+- Prostorové zvuky z jednoho okna prohlížeče
 - Automatická a ruční aktualizace prohlížeče
-- Uložení souboru PDF z nabídky Tisk (pomocí možnosti Uložit do souboru PDF)
-- WebXR a rozšíření 360 Viewer
-- Obnovení obsahu do správného okna při procházení několika oken umístěných ve vašem prostředí
+- Uložení PDF z nabídky tisk (pomocí možnosti Uložit do PDF)
+- Rozšíření prohlížeče WebXR a 360
+- Obnovení obsahu do správného okna při prohlížení mezi několika okny umístěnými ve vašem prostředí
 
-**Scénáře a funkce, u které se neočekává, že budou fungovat:**
-- Prostorový zvuk z několika oken se souběžně zvukovými streamy
-- "See it, say it"
+**Neočekávané scénáře a funkce pro práci:**
+- Prostorový zvuk z více oken se současnými datovými proudy
+- "Podívejte se, jak to znamená"
 - Tisk
 
-**Hlavní známé problémy prohlížeče:**
+**Hlavní známé problémy v prohlížeči:**
 
-- Náhled lupy na holografické klávesnici byl pro novou klávesnici Microsoft Edge. Doufáme, že tuto funkci znovu umožníme v budoucí aktualizaci, jakmile zvětšení bude fungovat správně.
-- Zvuk se může přehrát z nesprávného okna prohlížeče, pokud máte otevřené a aktivní jiné okno prohlížeče. Tento problém můžete vyřešit zavřením druhého aktivního okna, které by nemělo přehrávat zvuk.
-- Při přehrávání zvuku z okna prohlížeče v [režimu Sledovat](hololens2-basic-usage.md#follow-me-stop-following)mě se zvuk bude přehrávat i v případě, že zakážete režim Sledovat mě. Tento problém můžete vyřešit zastavením přehrávání zvuku před zakázáním režimu Sledovat mě nebo zavřením okna **tlačítkem X.**
-- Interakce s aktivními aplikacemi Microsoft Edge windows může způsobit neočekávané neaktivování ostatních 2D oken aplikací. Tato okna můžete znovu aktivovat opětovnou interakcí.
+- Pro nové Microsoft Edge je verze Preview pro lupu vypnutá. Doufáme, že tuto funkci znovu povolíme v budoucí aktualizaci, jakmile bude zvětšení fungovat správně.
+- Zvuk může být přehráván z nesprávného okna prohlížeče, pokud máte otevřeno a aktivní jiné okno prohlížeče. Tento problém můžete obejít tak, že zavřete jiné aktivní okno, které nemá přehrávat zvuk.
+- Při přehrávání zvuku z okna prohlížeče v [režimu "pořídit"](hololens2-basic-usage.md#follow-me-stop-following)bude pokračovat přehrávání zvuku, pokud zakážete režim "pořídit". Tento problém můžete obejít tak, že přehrávání zvuku zastavíte ještě před tím, než zakážete režim "pořídit" nebo zavřením okna tlačítkem **X** .
+- interakce s aktivními Microsoft Edge windows může způsobit neočekávané neočekávané neočekávané ukončení jiných oken aplikace 2d. Tato okna můžete znovu aktivovat pomocí interakce s nimi.
 
 #### <a name="microsoft-edge-insider-channels"></a>Microsoft Edge Kanály Insider
 
-Tým Microsoft Edge komunitě Edge Insider k dispozici tři kanály Preview: Beta, Dev a Canary. Instalace kanálu preview neinstaluje vydanou verzi Microsoft Edge na HoloLens 2 a můžete nainstalovat víc verzí najednou. 
+tým Microsoft Edge zpřístupňuje komunitě programu Edge Insider tři kanály verze preview: Beta, vývojová a kanárské. při instalaci kanálu verze preview nedojde k odinstalaci vydané verze Microsoft Edge v HoloLens 2 a můžete nainstalovat více než jednu současně. 
 
-Další informace [o komunitě Edge Insider najdete na domovské stránce Microsoft Edge Insider.](https://www.microsoftedgeinsider.com) Další informace o různých kanálech Edge Insider a o tom, jak začít, najdete na stránce [pro stažení Aplikace Edge Insider.](https://www.microsoftedgeinsider.com/download)
+další informace o komunitě Edge Insider najdete na [domovské stránce Microsoft Edge Insider](https://www.microsoftedgeinsider.com) . Další informace o různých kanálech Edge Insider a o tom, jak začít, najdete na [stránce pro stažení produktu Edge Insider](https://www.microsoftedgeinsider.com/download).
 
-Pro instalaci kanálů Insider Microsoft Edge několik metod, které HoloLens 2:
+pro instalaci kanálů Microsoft Edge Insider do HoloLens 2 je k dispozici několik metod:
 
-**Přímá instalace na zařízení (aktuálně dostupná pouze pro nespravovaná zařízení)**
-  1. Na stránce HoloLens 2 přejděte na stránku [pro stažení Aplikace Edge Insider.](https://www.microsoftedgeinsider.com/download)
-  1. Vyberte tlačítko **Stáhnout pro HoloLens 2** pro kanál Edge Insider, který chcete nainstalovat.
-  1. Spusťte stažený soubor .msix z fronty pro stahování Edge nebo ze složky Stažené soubory (pomocí příkazu Průzkumník souborů).
-  1. [Spustí se instalační](app-deploy-app-installer.md) program aplikace.
-  1. Vyberte **tlačítko** Nainstalovat.
-  1. Po úspěšné instalaci najdete Microsoft Edge Beta, Dev nebo Canary jako samostatnou položku v **Všechny aplikace** seznamu nabídka Start.
+**Přímá instalace na zařízení (aktuálně dostupná jenom pro nespravovaná zařízení)**
+  1. na HoloLens 2 navštivte [stránku pro stažení aplikace Edge Insider](https://www.microsoftedgeinsider.com/download).
+  1. vyberte tlačítko **stáhnout pro HoloLens 2** pro kanál Edge Insider, který chcete nainstalovat.
+  1. Spusťte stažený soubor. msix z fronty pro stahování z Edge nebo ze složky Ke_stažení vašeho zařízení (pomocí Průzkumníka souborů).
+  1. Spustí se [instalační program aplikace](app-deploy-app-installer.md) .
+  1. Vyberte tlačítko **instalovat** .
+  1. po úspěšné instalaci najdete Microsoft Edge Beta, vývoj nebo kanárské jako samostatnou položku v seznamu **všechny aplikace** nabídka Start.
 
-**Instalace přes počítač s Windows Portál zařízení [(vyžaduje](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) povolení vývojářského režimu na počítači HoloLens 2)**
-  1. Na počítači přejděte na stránku pro stažení [Aplikace Edge Insider.](https://www.microsoftedgeinsider.com/download)
-  1. Vyberte tlačítko **se šipkou rozevíracího** seznamu vedle tlačítka Stáhnout pro Windows 10 pro kanál Edge Insider, který chcete nainstalovat.
-  1. V **HoloLens vyberte 2.**
-  1. Uložte soubor .msix do složky Stažené soubory na počítači (nebo do jiné složky, kterou snadno najdete).
-  1. Pomocí [Windows Portál zařízení](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) na počítači nainstalujte stažený soubor .msix na HoloLens 2.
-  1. Po úspěšné instalaci najdete Microsoft Edge Beta, Dev nebo Canary jako samostatnou položku v **Všechny aplikace** seznamu nabídka Start.
+**instalace prostřednictvím počítače s Windows portálem zařízení (vyžaduje, aby byl v HoloLens 2 povolen [režim pro vývojáře](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) )**
+  1. Na svém počítači navštivte stránku pro [stažení Edge Insider](https://www.microsoftedgeinsider.com/download).
+  1. vyberte **tlačítko se šipkou rozevíracího** seznamu vedle tlačítka stáhnout pro Windows 10 pro kanál Edge Insider, který chcete nainstalovat.
+  1. v rozevírací nabídce vyberte **HoloLens 2** .
+  1. Uložte soubor. msix do složky Ke_stažení vašeho počítače (nebo do jiné složky, kterou můžete snadno najít).
+  1. pomocí [Windows portálu zařízení](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app) na počítači nainstalujte stažený soubor. msix na HoloLens 2.
+  1. po úspěšné instalaci najdete Microsoft Edge Beta, vývoj nebo kanárské jako samostatnou položku v seznamu **všechny aplikace** nabídka Start.
 
-#### <a name="using-wdac-to-block-new-microsoft-edge"></a>Použití nástroje WDAC k blokování nových Microsoft Edge
+#### <a name="using-wdac-to-block-new-microsoft-edge"></a>Blokování nových Microsoft Edge pomocí WDAC
 
-Aby správci IT mohli aktualizovat zásady [WDAC](windows-defender-application-control-wdac.md) tak, aby blokují novou aplikaci Microsoft Edge, musíte do zásad přidat následující položky.
+pro správce IT, kteří chtějí aktualizovat [zásady WDAC](windows-defender-application-control-wdac.md) k blokování nové aplikace Microsoft Edge, budete muset do své zásady přidat následující.
 
 ``` <Deny ID="ID_DENY_D_3_0" FriendlyName="C:\Data\Programs FileRule" PackageVersion="65535.65535.65535.65535" FileName="msedge.exe" /> ```
 
 #### <a name="managing-endpoints-for-the-new-microsoft-edge"></a>Správa koncových bodů pro nové Microsoft Edge
 
-Některá prostředí mohou mít omezení sítě, která je třeba vzít v úvahu. Pokud chcete zajistit bezproblémové prostředí s novým Edgem, [povolte tyto koncové body Microsoftu.](/deployedge/microsoft-edge-security-endpoints)
+Některá prostředí můžou mít k dispozici omezení sítě, aby se mohla brát v úvahu. Chcete-li zajistit hladké prostředí s novým okrajem, [povolte tyto koncové body společnosti Microsoft.](/deployedge/microsoft-edge-security-endpoints)
 
 Přečtěte si další informace o aktuálně dostupných [koncových bodech pro HoloLens](hololens-offline.md).
 
 ### <a name="install-web-apps"></a>Instalace webových aplikací
  > [!Note]
->Od [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)nebude Office webová aplikace předem nainstalovaná.
+>od [Windows holografická verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1), Office webová aplikace už nebude předem nainstalovaná.
 
-Nový Edge můžete použít k instalaci webových aplikací společně s Microsoft Store aplikacemi. Můžete například nainstalovat webovou aplikaci Microsoft Office zobrazit a upravit soubory hostované na SharePoint nebo OneDrive. Pokud chcete nainstalovat Office aplikaci, navštivte a vyberte tlačítko App Available (Aplikace k dispozici) https://www.office.com nebo Install Office **(Nainstalovat** aplikaci) na panelu Adresa.  Potvrďte **výběrem** možnosti Nainstalovat.
+novou hranici můžete použít k instalaci webových aplikací společně s aplikacemi Microsoft Store. můžete například nainstalovat Microsoft Office webové aplikace pro zobrazení a úpravy souborů hostovaných v SharePoint nebo OneDrive. pokud chcete nainstalovat Office webovou aplikaci, přejděte na https://www.office.com adresu a vyberte aplikaci, kterou **máte k dispozici** , nebo si na adresní řádek **nainstalujte Office** tlačítko. Kliknutím na **instalovat** potvrďte.
 
 > [!IMPORTANT]
-> Office webové aplikace je dostupná jenom v případě, že HoloLens 2 má aktivní připojení k internetu.
+> funkce Office webové aplikace je dostupná jenom v případě, že má HoloLens 2 aktivní připojení k internetu.
 
 ### <a name="webxr-and-360-viewer"></a>WebXR a 360 Viewer
 
-Součástí nového Microsoft Edge je podpora WebXR, což je nový standard pro vytváření imerzivních webových prostředí (nahrazení WebVR). Řada imerzivních webových prostředí byla navržena s ohledem na virtuální prostředí (nahradí vaše zorné pole virtuálním prostředím), ale tato prostředí podporuje také virtuální HoloLens 2. Standard WebXR také umožňuje rozšířit imerzivní webová prostředí hybridní reality, která používají vaše fyzické prostředí. S tím, jak vývojáři tráví více času s WebXR, očekáváme, že nová imerzivní prostředí rozšířené reality a hybridní reality budou k dispozici HoloLens 2 zákazníky, kteří si to budou zkoušet!
+nový Microsoft Edge zahrnuje podporu pro WebXR, což je nový standard pro vytváření moderního webového prostředí (nahrazuje WebVR). mnoho poutavých webových prostředí bylo navrženo s ohledem na VR (nahrazuje vaše pole zobrazení virtuálním prostředím), ale tato prostředí jsou také podporována HoloLens 2. Standard WebXR také umožňuje rozšířit a míchat působivá webová prostředí, která využívají vaše fyzické prostředí. protože vývojáři stráví více času s WebXR, předpokládáme, že pro zákazníky HoloLens 2 se dokončí nová rozšířená a smíšená prostředí realit, která vám pomůžou vyzkoušet!
 
-Rozšíření 360 Viewer je postaveno na Aplikaci WebXR a automaticky se nainstaluje společně s novým Microsoft Edge na HoloLens 2. Toto webové rozšíření vám umožňuje ponořit se do videí o 360 stupních. YouTube nabízí největší výběr 360 videí, takže doporučujeme začít tam.
+rozšíření pro program 360 Viewer je postavené na WebXR a automaticky se instaluje společně s novým Microsoft Edge v HoloLens 2. Toto webové rozšíření vám dává možnost ponořit si vaše videa 360 ve stupních. YouTube nabízí největší výběr 360 videí, takže doporučujeme začít tam.
 
 #### <a name="how-to-use-webxr"></a>Jak používat WebXR
 
 1. Přejděte na web s podporou WebXR.
-1. Na webu **vyberte tlačítko Enter VR** (Zadat virtuální realitu). Umístění a vizuální znázornění tohoto tlačítka se může u jednotlivých webových stránek lišit, ale může vypadat podobně jako:
+1. Na webu vyberte tlačítko pro **zadání VR** . Umístění a vizuální znázornění tohoto tlačítka se může na webu lišit, ale může vypadat podobně jako:
 
-    ![Příklad zadání tlačítka VR](images/75px-enter-vr.png)
+    ![Zadejte příklad tlačítka VR.](images/75px-enter-vr.png)
 
-1. Při prvním pokusu o spuštění prostředí WebXR v konkrétní doméně prohlížeč požádá o souhlas se zadáním imerzivního zobrazení a vybere **Povolit.**
-1. K [HoloLens prostředí použijte 2](hololens2-basic-usage.md#the-hand-tracking-frame) gesta.
-1. Pokud prostředí nemá tlačítko Ukončit, **pomocí** gesta [Start](hololens2-basic-usage.md#start-gesture) se vraťte domů.
+1. Při prvním pokusu o spuštění WebXR prostředí v konkrétní doméně bude prohlížeč požádat o souhlas s přechodem do moderního zobrazení, vyberte možnost **Povolení**.
+1. pro práci s prostředím používejte [gesta HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame) .
+1. Pokud prostředí nemá tlačítko **ukončit** , vraťte se domů pomocí [gesta Start](hololens2-basic-usage.md#start-gesture) .
 
 **Doporučené ukázky WebXR**
-- 360 Viewer (viz další část)
-- [XR Užis](https://www.xrdinosaurs.com/)
+- 360 Viewer (viz další oddíl)
+- [XR Dinosaurs](https://www.xrdinosaurs.com/)
 - [Barista Express](https://constructarca.de/game/barista-express/)
-- [WebXR – Malování](https://threejs.org/examples/webxr_vr_paint.html)
+- [WebXR Malování](https://threejs.org/examples/webxr_vr_paint.html)
 
 #### <a name="how-to-use-360-viewer"></a>Jak používat prohlížeč 360
 
-1. Přejděte na video o 360 stupních na YouTube.
-1. V rámečku videa vyberte tlačítko náhlavní soupravy hybridní reality:
+1. Přejděte na YouTube na video o 360.
+1. V snímku videa vyberte tlačítko náhlavní soupravu Mixed reality:
 
-    ![Tlačítko pro aktivaci prohlížeče 360](images/enter-360-viewer.jpg)
+    ![Tlačítko pro aktivaci 360 Viewer](images/enter-360-viewer.jpg)
 
-1. Když se poprvé pokusíte spustit prohlížeč 360 v konkrétní doméně, prohlížeč požádá o souhlas se zadáním imerzivního zobrazení. Vyberte **Povolit.**
-1. [Klepnutím ve vzduchu](hololens2-basic-usage.md#select-using-air-tap) vylepšete ovládací prvky přehrávání. Pomocí [ručních paprsků](hololens2-basic-usage.md#select-using-air-tap) a klepnutí ve vzduchu můžete přehrát/pozastavit, přeskočit dopředu/dozadu, zapnout nebo vypnout titulky nebo ukončit prostředí (které ukončí imerzivní zobrazení). Ovládací prvky přehrávání zmizí po několika sekundách nečinnosti.
+1. Při prvním pokusu o spuštění nástroje 360 Viewer v konkrétní doméně bude prohlížeč požádat o souhlas s přechodem do moderního zobrazení. Vyberte možnost **udělit**.
+1. [Klepnutím na Air](hololens2-basic-usage.md#select-using-air-tap) otevřete ovládací prvky přehrávání. K přehrání a pozastavení použijte [ruky a klepněte na tlačítko Air](hololens2-basic-usage.md#select-using-air-tap) , přeskočte zpátky na pozadí, zapnout nebo vypnout titulky nebo zastavte prostředí (které ukončí moderní zobrazení). Ovládací prvky přehrávání zmizí po několika sekundách nečinnosti.
 
-#### <a name="top-webxr-and-360-viewer-known-issues"></a>Hlavní známé problémy s WebXR a 360 Viewerem
-- V závislosti na složitosti prostředí WebXR může snímková frekvence poklesat nebo se zhoršit.
-- Podpora pro articulated handu v WebXR není ve výchozím nastavení povolená. Vývojáři mohou podporu povolit `edge://flags` prostřednictvím zapnutím funkce "Ruční vstup WebXR".
+#### <a name="top-webxr-and-360-viewer-known-issues"></a>Známé problémy pro WebXR a 360 Viewer
+- V závislosti na složitosti WebXR prostředí může snímkový kmitočet vyřadit nebo Stutter.
+- Podpora kloubových spojek v WebXR není ve výchozím nastavení povolená. Vývojáři můžou povolit podporu prostřednictvím `edge://flags` zapínání "WebXR ruky".
 - 360 videí z jiných webů než YouTube nemusí fungovat podle očekávání.
 
-#### <a name="providing-feedback-on-webxr-and-360-viewer"></a>Poskytnutí zpětné vazby k WebXR a prohlížeči 360
+#### <a name="providing-feedback-on-webxr-and-360-viewer"></a>Poskytnutí zpětné vazby v WebXR a v prohlížeči 360
 
-Podělte se s naším týmem o zpětnou vazbu a chyby prostřednictvím funkce **Poslat** zpětnou vazbu v novém Microsoft Edge.
+Sdílejte prosím svůj názor a chyby pomocí našeho týmu prostřednictvím funkce pro **odeslání zpětné vazby** v novém Microsoft Edge.
 
-### <a name="new-settings-app"></a>Nová Nastavení aplikace
+### <a name="new-settings-app"></a>nová aplikace Nastavení
 
-V této verzi představujeme novou verzi aplikace Nastavení. Nová aplikace Nastavení obsahuje nové funkce a rozšířená nastavení pro HoloLens 2 v následujících oblastech: Zvuk, Power & režim spánku, Síť & Internet, Aplikace, Účty, Usnadnění přístupu a další.
+v této verzi zavádíme novou verzi aplikace Nastavení. nová aplikace Nastavení zahrnuje nové funkce a rozšířené nastavení pro HoloLens 2 v následujících oblastech: zvuk, Power & spánek, síť & Internet, aplikace, účty, usnadnění přístupu a další.
 
 > [!NOTE]
-> Vzhledem k tomu, Nastavení nová aplikace se liší od starší Nastavení aplikace, při aktualizaci se Nastavení okna, která jste předtím umístili kolem svého prostředí.
+> vzhledem k tomu, že je nová aplikace Nastavení odlišná od starší Nastavení aplikace, všechna Nastaveníná okna, která jste předtím umístili do svého prostředí, budou po aktualizaci odebrána.
 
-![Domovská stránka Nastavení nové aplikace](images/new-settings-app.png)
+![nová domovská stránka aplikace Nastavení](images/new-settings-app.png)
 
 **Nové funkce a nastavení**
-- Nastavení: Na domovské stránce Nastavení pomocí klíčových slov nebo názvu nastavení vyhledejte nastavení.
-- System > Sound:
-  - Vstupní a výstupní zvuková zařízení: Nezávisle zvolte vstupní a výstupní zvuková zařízení (například naslouchejte zvuku prostřednictvím Bluetooth nebo použijte mikrofon USB-C pro zvukový vstup).
+- Nastavení search: vyhledejte nastavení z domovské stránky Nastavení pomocí klíčových slov nebo názvu nastavení.
+- Zvuk > systému:
+  - vstupní a výstupní zvuková zařízení: nezávisle vyberte vstupní a výstupní zvuková zařízení (například poslech zvuku prostřednictvím Bluetooth sluchátek nebo použití mikrofonu USB-C pro zvukový vstup).
     > [!NOTE]
-    > Bluetooth 2 nepodporuje HoloLens mikrofony.
-  - Objem aplikace: Nezávisle upravte objem každé aplikace. Viz [řízení objemu na aplikaci.](#per-app-volume-control)
-- System > Power & režim spánku: Zvolte, kdy má zařízení po určité době nečinnosti přejít do režimu spánku.
-- Baterie >: Ručně povolte režim spořič baterie nebo nastavte prahovou hodnotu baterie, po spořič baterie režim zapne automaticky.
-- Zařízení > USB: Ve výchozím nastavení můžete zakázat připojení USB.
-- Network & Internet:
-  - Ethernetové adaptéry USB-C se teď zobrazí v části Síťová & internetu.
-  - K dispozici jsou teď nastavení ethernetového adaptéru USB-C, včetně jeho IP adresy.
-  - Režim v letadle teď můžete povolit na HoloLens 2.
-- Aplikace: Můžete resetovat výchozí aplikace používané pro typy souborů a odkazů. Další informace najdete v tématu [Výběr výchozí aplikace.](#default-app-picker)
+    > HoloLens 2 nepodporuje Bluetooth mikrotelefonů.
+  - Svazek aplikace: nezávisle upravte hlasitost každé aplikace. Zobrazit [Řízení hlasitosti jednotlivých aplikací](#per-app-volume-control).
+- Systém > napájení & režimu spánku: vyberte, kdy se má zařízení po určité době nečinnosti přejít do režimu spánku.
+- Systémová > baterie: ručně povolit režim spořiče baterie nebo nastavit prahovou hodnotu baterie, při které se režim spořiče baterie automaticky zapne.
+- Zařízení > USB: ve výchozím nastavení můžete připojení USB zakázat.
+- & sítě Internet:
+  - Adaptéry USB-C Ethernet se nyní zobrazí v síti & Internetu.
+  - K dispozici jsou nyní nastavení adaptéru USB-C Ethernet, včetně jeho IP adresy.
+  - nyní můžete zapnout režim v letadle HoloLens 2.
+- Aplikace: můžete obnovit výchozí aplikace používané pro typy souborů a odkazů. Další informace najdete v tématu [Výběr výchozí aplikace.](#default-app-picker)
 - Účty > Ostatní uživatelé: Vlastníci zařízení mohou přidávat uživatele, upgradovat standardní uživatele na vlastníky zařízení, downgradovat vlastníky zařízení na standardní uživatele a odebírat uživatele.
 - Usnadnění přístupu: Změna velikosti textu a některých vizuálních efektů
 
@@ -358,18 +357,18 @@ Pomocí tohoto nového nastavení můžete vybrat alternativní profil barev pro
 
 ##### <a name="how-to-use-display-color-calibration"></a>Jak používat barvu zobrazení
 
-1. Spusťte aplikaci **Nastavení** a přejděte na **System > Zakašlovací systém.**
+1. Spusťte aplikaci **Nastavení** a přejděte na **System > Vychytá se.**
 1. V **části Zobrazit barevné pozadí** vyberte tlačítko Spustit barvu pro **zobrazení.**
 1. Spustí se prostředí zobrazení barev a budete se muset ujistit, že je zorník ve správné pozici.
 1. Po pokračování v dialogových oknech s pokyny se vaše zobrazení automaticky ztmaní na 30% jas.
     > [!TIP]
-    > Pokud máte potíže se zobrazením tlumené scény ve vašem prostředí, můžete ručně upravit úroveň jasu HoloLens 2 pomocí tlačítek brightness na levé straně zařízení.
+    > Pokud ve svém prostředí máte potíže se zašedlou scénou, můžete ručně upravit úroveň jasu HoloLens 2 pomocí tlačítek jasu na levé straně zařízení.
 1. Výběrem tlačítek 1–6 můžete okamžitě vyzkoušet každý profil barev a najít ten, který vám vypadá nejlépe do očí (obvykle to znamená profil, který pomáhá scéně zdát se nejneužívnější, se vzorem stupňů šedé a barevnými odstíny, které vypadají podle očekávání).)
 
     ![Zobrazení scény barevného pozadí](images/color-cal-ui.png)
     
 1. Až budete s vybraným profilem spokojeni, vyberte tlačítko **Save & Exit (Uložit** a ukončit).
-1. Pokud nechcete provádět změny, vyberte **tlačítko Zrušit & Ukončit** a změny se vrátí zpět.
+1. Pokud nechcete provádět změny, vyberte tlačítko **Zrušit & Ukončit** a změny se vrátí zpět.
 
 > [!TIP]
 > Tady je několik užitečných tipů, které je dobré mít na paměti při používání nastavení barev zobrazení:
@@ -381,7 +380,7 @@ Pomocí tohoto nového nastavení můžete vybrat alternativní profil barev pro
 ##### <a name="how-to-reset-color-profile"></a>Resetování profilu barev 
 
 Pokud s vlastním profilem barev uloženým v počítači HoloLens 2 nejste spokojeni, můžete původní profil barev zařízení obnovit:
-1. Spusťte aplikaci **Nastavení** a přejděte na **System > Zakašlovací systém.**
+1. Spusťte aplikaci **Nastavení** a přejděte na **System > Vychytá se.**
 1. V **části Zobrazit barevné pozadí** vyberte tlačítko Obnovit výchozí **profil** barev.
 1. Po otevření dialogového okna vyberte **Restartovat,** pokud jste připraveni restartovat počítač HoloLens 2 a použít změny.
 
@@ -406,7 +405,7 @@ Pokud chcete nastavit svazek jednotlivé aplikace, přejděte **na Nastavení** 
 
 #### <a name="swipe-to-type"></a>Potažením prstem zadejte
 
-Někteří zákazníci zjistí, že psaní na virtuálních klávesnicích je rychlejší. Posouváním tvaru slova, které zamýšlejí, zobrazíme náhled této funkce pro holografičovou klávesnici. Potažením prstem po jednom slově můžete procházet špičku prstu rovinou holografické klávesnice, potáhnutím tvaru slova a stažením špičky prstu z roviny klávesnice. Potažením prstem po sledu slov nepotřebujete stisknout mezerník odebráním prstu z klávesnice mezi slovy. Pokud vidíte potažení prstem za pohybem prstu na klávesnici, budete vědět, že tato funkce funguje.
+Někteří zákazníci zjistí, že psaní na virtuálních klávesnicích je rychlejší. Posouváním tvaru slova, které mají v úmyslu zadat, a my tuto funkci zobrazíme ve verzi Preview pro holografičovou klávesnici. Potažením prstem po jednom slově můžete procházet špičku prstu rovinou holografické klávesnice, potáhnutím tvaru slova a stažením špičky prstu z roviny klávesnice. Potažením prstem po sledu slov nepotřebujete stisknout mezerník odebráním prstu z klávesnice mezi slovy. Pokud vidíte potažení prstem za pohybem prstu na klávesnici, budete vědět, že tato funkce funguje.
 
 Upozorňujeme, že použití a ovládání této funkce může být obtížné, protože se jedná o holografický klávesnici, u které nemáte pocit odolnosti proti prstu (na rozdíl od displeje mobilního telefonu). 
 
@@ -482,121 +481,121 @@ V Bluetooth 2 se bohužel stále nepodporují HoloLens mikrofony.
 
 #### <a name="troubleshooting-usb-c-microphones"></a>Řešení potíží s mikrofony USB-C
 
-Uvědomte si, že někteří mikrotelefony USB-C nesprávně hlásí jako mikrofon *i* mluvčí. Jedná se o problém s mikrofonem a nikoli s HoloLens. při zapojení jednoho z těchto telefonů do HoloLens může dojít ke ztrátě zvuku. Naštěstí je jednoduchá oprava.  
+Uvědomte si, že některé mikrofony USB-C se nesprávně hlásí jako *mikrofon* i jako mluvčí. Jedná se o problém s mikrofonem, a ne s HoloLens. Když jeden z těchto mikrofonů zapojíte do HoloLens, může dojít ke ztrátě zvuku. Naštěstí existuje jednoduchá oprava.  
 
-v **Nastavení**  ->  **systémový**  ->  **zvuk** explicitně nastavte integrované reproduktory **(zvukový ovladač analogických funkcí)** jako **výchozí zařízení**. HoloLens by si toto nastavení měli pamatovat i v případě, že mikrofon odeberete a znovu připojíte později.
+V **Nastavení** System Sound (Zvuk systému) explicitně nastavte integrované mluvčí (zvukový ovladač  ->    ->   **analogové funkce)** jako **výchozí zařízení.** HoloLens si toto nastavení zapamatovat, i když se mikrofon později odebere a znovu připojí.
 
 ![Řešení potíží s mikrofony USB-C](images/usbc-mic-4.png)
 
-### <a name="visitor-auto-logon-for-kiosks"></a>Automatické přihlašování návštěvníka pro veřejné terminály
+### <a name="visitor-auto-logon-for-kiosks"></a>Automatické přihlášení návštěvníka pro bezobrazovkové režimy
 
-Tato nová funkce umožňuje, aby se automatické přihlašování na účtech návštěvníka používalo pro beznabídkový režim.
+Tato nová funkce umožňuje použití automatického přihlašování k účtům Návštěvník v bezobrazovkovém režimu.
 
-V případě konfigurace bez AAD se má nakonfigurovat zařízení pro automatické přihlašování návštěvníka:
+Konfigurace bez AAD pro konfiguraci zařízení pro automatické přihlášení návštěvníka:
 
 1. Vytvořte zřizovací balíček, který:
-    1. Nakonfiguruje **nastavení modulu runtime/AssignedAccess** tak, aby umožňoval účty návštěvníků.
-    1. Volitelně můžete zařízení zaregistrovat v MDM **(nastavení modulu runtime/pracoviště/registrace)** , aby se mohlo spravovat později.
-    1. Nevytvářet místní účet
+    1. Nakonfiguruje **nastavení modulu runtime /AssignedAccess tak,** aby povolují účty návštěvníka.
+    1. Volitelně zaregistruje zařízení v MDM (nastavení modulu **runtime, pracoviště/ registrace),** aby ho bylo možné později spravovat.
+    1. Nevytvářejte místní účet.
 1. [Použijte zřizovací balíček](hololens-provisioning.md).
 
-V případě konfigurace AAD můžou uživatelé v dnešní době dosáhnout něco podobného, aniž by tato změna měla. Zařízení připojená k AAD nakonfigurovaná pro celoobrazovkový režim se můžou přihlásit k účtu návštěvníka jediným klepnutím na tlačítko na přihlašovací obrazovce. Po přihlášení k účtu návštěvníka se zařízení nevyzve k opětovnému přihlášení, dokud se návštěvník výslovně odhlásí z nabídky Start nebo když se zařízení nerestartuje.
+V případě konfigurace AAD mohou uživatelé bez této změny dosáhnout něčeho podobného. Zařízení připojená k AAD nakonfigurovaná pro beznarový režim mohou přihlásit účet Návštěvník jediným klepnutím na přihlašovací obrazovku. Jakmile se zařízení přihlásí k účtu návštěvníka, nebude znova vyzváno k přihlášení, dokud se návštěvník z nabídky Start explicitně odhlásit nebo dokud se zařízení nerestartuje.
 
-Automatické přihlašování návštěvníka se dá spravovat pomocí [vlastních zásad OMA-URI](/mem/intune/configuration/custom-settings-windows-10) :
+Automatické přihlášení návštěvníka je možné spravovat [pomocí vlastních zásad OMA-URI:](/mem/intune/configuration/custom-settings-windows-10)
 
-- Hodnota identifikátoru URI:./Device/Vendor/MSFT/MixedReality/VisitorAutoLogon
+- Hodnota URI: ./Device/Vendor/MSFT/MixedReality/VisitorAutoLogon
 
 | Zásady  | Description   | Konfigurace  |
 |---|---|---|
-| MixedReality/VisitorAutoLogon  | Umožňuje návštěvníkovi automatické přihlašování k veřejnému terminálu.   | 1 (Ano), 0 (ne, výchozí)  |
+| MixedReality/VisitorAutoLogon  | Umožňuje návštěvníkovi automaticky se přihlásit k bezobrazovkovému režimu.   | 1 (Ano), 0 (Ne, výchozí.)  |
 
-### <a name="use-the-new-settings-and-edge-apps-in-kiosk-modes"></a>použití nových aplikací Nastavení a Edge v celoobrazovkovém režimu
+### <a name="use-the-new-settings-and-edge-apps-in-kiosk-modes"></a>Použití nových aplikací Nastavení a Edge v režimech veřejného terminálů
 
-Když do veřejného terminálu zahrnete i [aplikace, správce](hololens-kiosk.md)IT tuto aplikaci často přidá do veřejného terminálu, ale pomocí ID uživatelského modelu aplikace (AUMID). vzhledem k tomu, že aplikace Nastavení i aplikace Microsoft Edge jsou považovány za nové aplikace a jiné než veřejné terminály aplikací, které používají AUMIDs pro tyto aplikace, bude nutné aktualizovat, aby používaly nové AUMID.
+Při zahrnutí aplikací do [veřejného terminálu](hololens-kiosk.md)správce IT často přidává aplikaci do veřejného terminálů, ale používá ID modelu uživatele aplikace (AUMID). Vzhledem k tomu, že aplikace Nastavení i aplikace Microsoft Edge se považují za nové aplikace a liší se od starších aplikací, které pro tyto aplikace používají identifikátory AUMID, bude potřeba aktualizovat, aby bylo možné používat nové AUMID.
 
-Při úpravách veřejného terminálu, který bude obsahovat nové aplikace, doporučujeme přidat do nového AUMID a ponechat si ho starý. Tím se vytvoří snadný přechod, když uživatelé aktualizují operační systém a nebudou potřebovat dostávat nové zásady, aby mohli používat veřejný terminál jako zamýšlený.
+Při úpravách veřejného terminálů tak, aby zahrnoval nové aplikace, doporučujeme přidat nový AUMID a nechat starý. Tím se vytvoří snadný přechod, když uživatelé aktualizují operační systém a nebudou muset přijímat nové zásady, aby mohli dál používat beziosk, jak má.
 
 | Aplikace                    | AUMID                                                  |
 |------------------------|--------------------------------------------------------|
-| stará aplikace Nastavení       | HolographicSystemSettings_cw5n1h2txyewy! Aplikace            |
-| nová aplikace Nastavení       | BAEAEF15-9BAB-47FC-800B-ACECAD2AE94B_cw5n1h2txyewy! Aplikace |
-| stará aplikace Microsoft Edge | Microsoft.MicrosoftEdge_8wekyb3d8bbwe! MicrosoftEdge    |
-| nová aplikace Microsoft Edge | Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE    |
+| Stará Nastavení aplikace       | HolographicSystemSettings_cw5n1h2txyewy! App            |
+| Nová Nastavení aplikace       | BAEAEF15-9BE-47FC-800B-ACECAD2AE94B_cw5n1h2txyewy! App |
+| Stará Microsoft Edge aplikace | Microsoft.MicrosoftEdge_8wekyb3d8bbwe! MicrosoftEdge    |
+| Nová Microsoft Edge aplikace | Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE    |
 
-### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Změny chování celoobrazovkového režimu pro zpracování selhání
+### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Změny chování v bezobrazovkovém režimu pro zpracování selhání
 
-Pokud se ve starších buildech zařízení nacházela konfigurace veřejného terminálu, což je kombinace obou uživatelů s přiřazeným přístupem a přiřazeným členem skupiny AAD, v případě neúspěšného určení členství ve skupině AAD by se uživateli zobrazila zpráva "[nic nezobrazuje" v nabídce Start](hololens-kiosk.md#kiosk-mode-behavior-changes-for-handling-of-failures).
+Pokud má zařízení ve starších buildech konfiguraci veřejného terminálů, což je kombinace přístupu přiřazeného globálním i přiřazeným členem skupiny AAD, pokud by se nepodařilo určit členství ve skupině AAD, uživateli se v nabídce[Start](hololens-kiosk.md#kiosk-mode-behavior-changes-for-handling-of-failures)nezobrazí nic.
 
-od tohoto Windows vydané verze se bude beznabídkový režim zaregistrovat do globální konfigurace veřejného terminálu (pokud je k dispozici) v případě selhání během celoobrazovkového režimu skupiny AAD.
+Od této Windows se prostředí veřejného terminálu v případě selhání v beznaiosku skupiny AAD propadne ke globální konfiguraci veřejného terminálu (pokud je k dispozici).
 
-### <a name="new-settings-uris-for-page-settings-visibility"></a>nové identifikátory uri Nastavení pro viditelnost stránky Nastavení
+### <a name="new-settings-uris-for-page-settings-visibility"></a>Nové Nastavení URI pro viditelnost Nastavení stránky
 
-v [Windows holografická verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) jsme přidali [zásady Nastavení/PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) , abyste omezili stránky, které jsou v aplikaci pro Nastavení viditelné. PageVisibilityList je zásada, která správcům IT umožňuje zabránit tomu, aby určité stránky v systémové Nastavení aplikaci byly viditelné nebo přístupné, nebo aby tak učinily pro všechny stránky kromě těch, které jsou uvedené.
+Do Windows Holographic verze [20H2](hololens-release-notes.md#windows-holographic-version-20h2) jsme přidali zásadu [Nastavení/PageVisibilityList,](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) která omezuje stránky, které se zobrazí v Nastavení aplikaci. PageVisibilityList je zásada, která správcům IT umožňuje zabránit zobrazení nebo přístupu konkrétních stránek v aplikaci System Nastavení, nebo to udělat pro všechny stránky kromě těch, které jsou zadané.
 
-pokud navštívíte [stránku Nastavení viditelnost](settings-uri-list.md), najdete pokyny k použití tohoto CSP a seznam identifikátorů uri dostupných v předchozích verzích.
+Pokud navštívíte [stránku s Nastavení viditelnosti,](settings-uri-list.md)najdete pokyny k použití tohoto poskytovatele CSP a seznam identifikátorů URI dostupných v předchozích verzích.
 
-rozšiřujeme seznam dostupných Nastavení identifikátorů uri, které můžou správci IT spravovat. některé z těchto identifikátorů uri jsou pro nově dostupné oblasti v rámci nové aplikace Nastavení. pokud používáte zásady Nastavení/PageVisibilityList, přečtěte si následující seznam a podle potřeby upravte své povolené nebo blokované stránky.
+Rozšiřujeme seznam dostupných identifikátorů URI, Nastavení mohou správci IT spravovat. Některé z těchto identifikátorů URI jsou pro nově dostupné oblasti v rámci nové Nastavení aplikace. Pokud používáte zásady Nastavení/PageVisibilityList, zkontrolujte následující seznam a podle potřeby upravte povolené nebo blokované stránky.
 
 > [!NOTE]
-> **Zastaralé: MS-Settings: Network-proxy**
+> **Zastaralé: ms-settings:network-proxy**
 >
-> Jedna stránka nastavení je v těchto novějších sestaveních zastaralá. Starší **Síťová & proxy stránka internetového**  >  **serveru** již není k dispozici jako globální nastavení. Nové nastavení proxy serveru pro připojení najdete v části **síť &**  >  vlastnosti **Wi-Fi** sítě Internet  >   nebo **síťové &** vlastnosti sítě Internet  >  **Ethernet**  >  .
+> Jedna stránka nastavení je v těchto novějších sestaveních zastaralá. Stará stránka **& proxy** serveru již není  >   dostupná jako globální nastavení. Nové nastavení proxy serveru pro připojení najdete v části **Vlastnosti sítě & internetové**  >  **wi-fi** nebo Vlastnosti  >   **internetového**&  >  **sítě Ethernet.**  >  
 
 <br>
 
 | Stránka Nastavení                                        | Identifikátor URI                                              |
 |------------------------------------------------------|--------------------------------------------------|
-| Aplikace > aplikace & funkce                               | `ms-settings:appsfeatures`                         |
-| Aplikace > aplikací & funkcí > pokročilé možnosti          | `ms-settings:appsfeatures-app`                     |
-| Aplikace > Offlinech mapách                                  | `ms-settings:maps`                                 |
-| Aplikace > offline mapování > stáhnout mapy                  | `ms-settings:maps-downloadmaps`                    |
+| Aplikace > Apps & funkce                               | `ms-settings:appsfeatures`                         |
+| Funkce > Apps & v > Upřesnit možnosti          | `ms-settings:appsfeatures-app`                     |
+| Aplikace > offline mapy                                  | `ms-settings:maps`                                 |
+| Aplikace > offline mapy > stažení map                  | `ms-settings:maps-downloadmaps`                    |
 | Zařízení > myši                                      | `ms-settings:mouse`                                |
 | Zařízení > USB                                        | `ms-settings:usb`                                  |
-| Režim sítě & Internet > v letadle                   | `ms-settings:network-airplanemode`                 |
-| Ochrana osobních údajů > obecné                                    | `ms-settings:privacy-general`                      |
-| Ochrana osobních údajů > rukopisu & psaní             | `ms-settings:privacy-speechtyping`                 |
-| Ochrana osobních údajů > pohyb                                     | `ms-settings:privacy-motion`                       |
-| Ochrana osobních údajů > ohraničení obrazovky                         | `ms-settings:privacy-graphicsCaptureWithoutBorder` |
-| Ochrana osobních údajů > snímky obrazovky a aplikace                       | `ms-settings:privacy-graphicsCaptureProgrammatic`  |
-| Baterie > systému                                     | `ms-settings:batterysaver`                         |
-| Baterie > systému                                     | `ms-settings:batterysaver-settings`                |
-| Zvuk > systému                                       | `ms-settings:sound`                                |
-| Zvuk > zvuku > aplikace a předvolby zařízení | `ms-settings:apps-volume`                          |
-| Systémový > Sound > Správa zvukových zařízení              | `ms-settings:sound-devices`                        |
-| systémová > Storage > konfigurace Storageho rozpoznávání         | `ms-settings:storagepolicies`                      |
-| Čas & jazyka > datum & data                        | `ms-settings:dateandtime`                          |
-| Čas & jazyka > klávesnice                           | `ms-settings:keyboard`                             |
-| Jazyk > jazyka času &                           | `ms-settings:language`                             |
-| Jazyk > jazyka času &                           | `ms-settings:regionlanguage-languageoptions`       |
-| Aktualizace zabezpečení & > resetování & obnovení               | `ms-settings:reset`                                |
+| Připojení & internetové > v režimu v letadle                   | `ms-settings:network-airplanemode`                 |
+| Zásady ochrany > osobních údajů                                    | `ms-settings:privacy-general`                      |
+| Ochrana > osobních & při psaní přizpůsobení             | `ms-settings:privacy-speechtyping`                 |
+| Ochrana osobních > pohybu                                     | `ms-settings:privacy-motion`                       |
+| Ochrana osobních > snímek obrazovky s ohraničením                         | `ms-settings:privacy-graphicsCaptureWithoutBorder` |
+| Ochrana osobních > Snímky obrazovky a aplikace                       | `ms-settings:privacy-graphicsCaptureProgrammatic`  |
+| Systémová > baterie                                     | `ms-settings:batterysaver`                         |
+| Systémová > baterie                                     | `ms-settings:batterysaver-settings`                |
+| System > Sound                                       | `ms-settings:sound`                                |
+| Předvolby > a > aplikace v nástroji Sound > | `ms-settings:apps-volume`                          |
+| System > Sound > Správa zvukových zařízení              | `ms-settings:sound-devices`                        |
+| System > Storage > Configure Storage Sense         | `ms-settings:storagepolicies`                      |
+| Datum & čas > časového &                        | `ms-settings:dateandtime`                          |
+| Time & Language > klávesnice                           | `ms-settings:keyboard`                             |
+| Time & Language > Language                           | `ms-settings:language`                             |
+| Time & Language > Language                           | `ms-settings:regionlanguage-languageoptions`       |
+| Aktualizace & obnovení > obnovení & zabezpečení               | `ms-settings:reset`                                |
 
 #### <a name="updated-uris"></a>Aktualizované identifikátory URI
 
-Předchozí dva identifikátory URI by nemusely uživatele přímo na označené stránky zablokovat, ale jenom zablokovali stránku hlavní aktualizace. Následující položky byly aktualizovány, aby byly na své stránky přesměrovány:
+Dříve by následující dvě identifikátory URI nesly uživatele přímo na uvedené stránky, ale zablokovaly jenom hlavní stránku aktualizací. Následující položky byly aktualizovány tak, aby směrovat na jejich stránky:
 
 - `ms-settings:windowsupdate-options`
 - `ms-settings:windowsupdate-restartoptions`
 
-### <a name="configuring-fallback-diagnostics-via-settings-app"></a>konfigurace záložní diagnostiky prostřednictvím aplikace Nastavení
+### <a name="configuring-fallback-diagnostics-via-settings-app"></a>Konfigurace diagnostiky pro záložní Nastavení aplikací
 
-nyní může uživatel v aplikaci Nastavení nakonfigurovat chování [záložní diagnostiky](hololens-diagnostic-logs.md). v aplikaci Nastavení přejděte na   ->  stránku **poradce při potížích** s nastavením ochrany osobních údajů, abyste mohli nakonfigurovat toto nastavení.
+Teď, Nastavení aplikaci, může uživatel nakonfigurovat chování diagnostiky [pro fallback.](hololens-diagnostic-logs.md) Na stránce Nastavení přejděte na stránku Řešení **potíží** s ochranou  ->  **osobních** údajů a nakonfigurujte toto nastavení.
 
 > [!NOTE]
-> Pokud je pro zařízení nakonfigurovaná zásada MDM, uživatel nebude moct toto chování přepsat.  
+> Pokud jsou pro zařízení nakonfigurované zásady MDM, uživatel nebude moct toto chování přepsat.  
 
-### <a name="share-things-with-nearby-devices"></a>Sdílení věcí pomocí okolních zařízení
+### <a name="share-things-with-nearby-devices"></a>Sdílení věcí s blízkými zařízeními
 
-sdílejte věci s Windows 10 zařízení, včetně počítačů i dalších zařízení HoloLens 2. můžete si to vyzkoušet v **Nastavení**  ->    ->  **sdílených prostředích** , abyste mohli sdílet soubory nebo adresy url od HoloLens k počítači. Další podrobnosti najdete v tématu o tom, jak [sdílet věci s blízkými zařízeními v Windows 10](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9).
+Sdílejte věci s dalšími Windows 10 zařízeními, včetně počítačů a dalších zařízení HoloLens 2. Můžete si ho vyzkoušet v **Nastavení** prostředí pro sdílení souborů nebo adres URL z HoloLens  ->    ->   do počítače. Další podrobnosti najdete v tématu Sdílení věcí s [blízkými](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9)zařízeními v Windows 10 .
 
-Tuto funkci je možné spravovat prostřednictvím [Možnosti připojení/AllowConnectedDevices](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowconnecteddevices).
+Tuto funkci je možné spravovat prostřednictvím [možnosti Připojení/AllowConnectedZařízení.](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowconnecteddevices)
 
-### <a name="new-os-diagnostic-traces"></a>Nová trasování diagnostiky operačního systému
+### <a name="new-os-diagnostic-traces"></a>Nová diagnostická trasování operačního systému
 
-kromě předchozích poradců při potížích v aplikaci Nastavení byla přidána nová poradce při potížích s přidáním nové aplikace Nastavení pro aktualizace operačního systému. přejděte na **Nastavení**  ->  **aktualizace &amp; zabezpečení**  >  **řešit**  >  **web Windows Update** a vyberte **spustit**. Díky tomu můžete shromažďovat trasování a při reprodukci problému s aktualizacemi operačního systému pomoct lépe při řešení problémů s vaším IT nebo podporou.
+Kromě předchozích poradců při potížích v aplikaci Nastavení byl přidán nový poradce při potížích s přidáním nové aplikace Nastavení pro aktualizace operačního systému. Přejděte na **Nastavení**  ->  **update &amp; security**  >  **Windows**  >  **Update a** vyberte **Spustit.** Díky tomu můžete shromažďovat trasování a reprodukovat problém s aktualizacemi operačního systému, což vám pomůže lépe při řešení potíží s IT nebo podporou.
 
-### <a name="delivery-optimization-preview"></a>Optimalizace doručování – náhled
+### <a name="delivery-optimization-preview"></a>Optimalizace doručení Preview
 
-pomocí této HoloLens aktualizace Windows Holographic for Business umožňuje nastavení optimalizace doručení snížit spotřebu šířky pásma pro stahování z více zařízení HoloLens. úplný popis této funkce spolu s doporučenou konfigurací sítě najdete tady: [optimalizace doručení pro Windows 10 aktualizace](/windows/deployment/update/waas-delivery-optimization).
+Díky této HoloLens aktualizace Windows Holographic for Business nastavení optimalizace doručení, aby se snížila spotřeba šířky pásma pro stahování z několika HoloLens zařízení. Úplný popis této funkce spolu s doporučenou konfigurací sítě najdete tady: Optimalizace doručení [pro Windows 10 aktualizace.](/windows/deployment/update/waas-delivery-optimization)
 
 V rámci možností správy jsou povolená následující nastavení, [která je možné nakonfigurovat z Intune:](/mem/intune/configuration/delivery-optimization-settings)
 
@@ -608,154 +607,154 @@ V rámci možností správy jsou povolená následující nastavení, [která je
 - [DOMaxBackgroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxbackgrounddownloadbandwidth)
 - [DOMaxForegroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxforegrounddownloadbandwidth)
 - [DOPercentageMaxBackgroundBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxbackgroundbandwidth)
-- [DoPercentageMaxForegroundBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxforegroundbandwidth)
+- [DOPercentageMaxForegroundBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxforegroundbandwidth)
 - [DOSetHoursToLimitForegroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitforegrounddownloadbandwidth)
 - [DOSetHoursToLimitBackgroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitbackgrounddownloadbandwidth)
 
-Několik upozornění na tuto nabídku Verze Preview:
+Několik aspektů informací o této nabídce Preview:
 
-- HoloLens verze Preview je omezená jenom na aktualizace operačního systému.
-- Windows Holographic for Business podporuje pouze režimy stahování HTTP a stahování z koncového [bodu microsoft Připojená mezipaměť](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache); Režimy stahování peer-to-peer a přiřazení skupin se v HoloLens zařízení nepodporují.
-- HoloLens nepodporuje optimalizaci nasazení nebo doručení pro Windows Server Update Services koncové body.
-- Řešení potíží bude vyžadovat buď diagnostiku na serveru Připojená mezipaměť, nebo shromažďování trasování pro HoloLens v HoloLens prostřednictvím služby **Nastavení**  >  **Update & Security**  >   **Troubleshooting**  >   **Windows Update.**
+- podpora HoloLens je v této verzi preview omezená jenom na aktualizace operačního systému.
+- Windows Holographic for Business podporuje jenom režimy stahování HTTP a stažené soubory z [koncového bodu připojené mezipaměti microsoftu](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache). režimy stahování peer-to-peer a přiřazení skupin se v tuto chvíli nepodporují pro HoloLens zařízení.
+- HoloLens nepodporuje optimalizaci nasazení nebo doručování pro koncové body Windows Server Update Services.
+- poradce při potížích bude vyžadovat buď diagnostiku serveru připojené mezipaměti, nebo shromažďovat trasování na HoloLens HoloLens prostřednictvím **Nastavení**  >  **aktualizace zabezpečení &**  >     >   **web Windows Update**.
 
-### <a name="it-admin---update-checklist"></a>Správce IT – kontrolní seznam aktualizací
+### <a name="it-admin---update-checklist"></a>Správce IT – aktualizovat kontrolní seznam
 
-Tento kontrolní seznam vám pomůže se seznamem nových položek přidaných v této aktualizaci funkcí, které můžou mít vliv na vaši aktuální konfiguraci správy zařízení nebo nové funkce, které můžete chtít začít používat.
+Tento kontrolní seznam vám pomůže zjistit nové položky, které funkce přidávají v této aktualizaci funkcí, které můžou ovlivnit vaše aktuální konfigurace správy zařízení, nebo nové funkce, které můžete chtít začít používat.
 
-#### <a name="updates-to-kiosk-mode"></a>Aktualizace bezobrazovkového režimu
+#### <a name="updates-to-kiosk-mode"></a>Aktualizace pro celoobrazovkový režim
 
-✔️ Nové [**identifikátory AUMID pro nové aplikace v beznaiosku:**](#use-the-new-settings-and-edge-apps-in-kiosk-modes)
+✔️ [**Nový AUMIDs pro nové aplikace v celoobrazovkovém režimu**](#use-the-new-settings-and-edge-apps-in-kiosk-modes):
 
-Pokud jste dříve v beznaiosku Nastavení aplikaci Microsoft Edge, nahradili jsme tyto aplikace novými aplikacemi, které používají jiné ID aplikace. Důrazně doporučujeme, abyste si níže přečetli článek Nové identifikátory AUMID pro nové [aplikace v beznabídkovém](#use-the-new-settings-and-edge-apps-in-kiosk-modes) režimu. Tím zajistíte, že buď budete mít aplikaci Nastavení v bezobrazovkovém okně, nebo zahrnout novou Microsoft Edge aplikace. Tyto změny je možné provést teď a nasadit na všechna zařízení a umožnit plynulejší přechod při aktualizaci.
+pokud jste dřív používali aplikaci Nastavení nebo aplikaci Microsoft Edge na veřejném terminálu, nahradili jsme tyto aplikace novými aplikacemi, které používají jiné ID aplikace. Důrazně doporučujeme, abyste si přečetli [nové AUMIDs pro nové aplikace v celoobrazovkovém režimu](#use-the-new-settings-and-edge-apps-in-kiosk-modes) níže. tím zajistíte, že budete mít v terminálu i nadále aplikaci Nastavení, nebo zadáte novou aplikaci Microsoft Edge. Tyto změny se dají udělat hned a nasazovat na všechna zařízení a v případě aktualizace umožňují hladký přechod.
 
-✔️ [**automatického přihlášení návštěvníka pro bezobrazovkové režimy:**](#visitor-auto-logon-for-kiosks) 
+✔️ [**Automatické přihlášení návštěvníka pro veřejné terminály**](#visitor-auto-logon-for-kiosks): 
 
-Návštěvníci teď mohou být automaticky přihlášení do veřejného terminálu. Toto chování je ve výchozím nastavení aktivní, ale je možné ho spravovat a zakázat.
+Návštěvníci se teď můžou automaticky přihlásit do veřejného terminálu. Toto chování je ve výchozím nastavení zapnuté, ale může být spravované a zakázané.
 
-✔️ [**vylepšené selhání bezobrazovkového režimu:**](#kiosk-mode-behavior-changes-for-handling-of-failures)
+✔️ [**vylepšené zpracování chyb v celoobrazovkovém režimu**](#kiosk-mode-behavior-changes-for-handling-of-failures):
 
-Pokud není členství přihlášených uživatelů AAD ve skupině AAD úspěšné, pak se pro nabídku Start (pokud existuje) použije globální konfigurace veřejného terminálu, jinak se uživateli zobrazí prázdná nabídka Start. I když prázdná nabídka Start není konfigurace, kterou můžete nastavit přímo, toto nové zpracování může být něco, co by vás mělo informovat o vašem oddělení podpory, pokud používáte terminály, protože to může platit pro vaše konfigurace nebo můžete chtít provést nové úpravy konfigurací přiřazeného přístupu.
+Pokud není úspěšně zjištěno členství v rámci skupiny AAD přihlášeného uživatele AAD, pak se globální konfigurace veřejného terminálu používá v nabídce Start (Pokud je k dispozici). v opačném případě se uživateli zobrazí prázdná nabídka Start. I když prázdná nabídka Start není konfigurací, kterou můžete nastavit přímo, může to být tím, že toto nové zpracování bude informovat vaše oddělení podpory, pokud používáte veřejné terminály, protože to může platit pro vaše konfigurace nebo můžete chtít udělat nové úpravy pro vaše přiřazené konfigurace přístupu.
 
-#### <a name="updates-to-page-settings-visibility"></a>Aktualizace viditelnosti Nastavení stránky
+#### <a name="updates-to-page-settings-visibility"></a>aktualizace stránky Nastavení viditelnost
 
-✔️ [**nové identifikátory URI Nastavení pro viditelnost Nastavení stránky**](#new-settings-uris-for-page-settings-visibility)
+✔️ [**nové identifikátory uri Nastavení pro stránku Nastavení viditelnost**](#new-settings-uris-for-page-settings-visibility)
 
-Pokud aktuálně používáte viditelnost [Nastavení,](settings-uri-list.md) možná budete chtít upravit stávající identifikátory URI, které jste buď povoleni, nebo zablokovali.
+pokud aktuálně používáte [stránku Nastavení viditelnost](settings-uri-list.md) , možná budete chtít upravit existující identifikátory uri, které jste buď povolili, nebo zablokovali.
 
 #### <a name="updates-for-your-wdac-policy"></a>Aktualizace zásad WDAC
-✔️ Pokud jste dříve blokovali Microsoft Edge přes WDAC, budete chtít aktualizovat zásady WDAC. Projděte si následující a použijte poskytnutý vzorový kód.
-#### <a name="enable-new-endpoints-for-edge"></a>Povolení nových koncových bodů pro Edge
-✔️ Pokud máte infrastrukturu, která zahrnuje konfiguraci koncových bodů sítě, jako je proxy server nebo brána firewall, povolte tyto nové koncové body pro novou Microsoft Edge aplikace.
+✔️ pokud jste předtím Microsoft Edge přes WDAC, budete chtít zásady WDAC aktualizovat. Zkontrolujte prosím následující a použijte poskytnutý vzorový kód.
+#### <a name="enable-new-endpoints-for-edge"></a>Povolit nové koncové body pro Edge
+✔️ pokud máte infrastrukturu, která zahrnuje konfiguraci koncových bodů sítě, jako je například proxy server nebo brána firewall, povolte tyto nové koncové body pro novou aplikaci Microsoft Edge.
 
 #### <a name="newly-configurable-items"></a>Nově konfigurovatelné položky
 
-✔️ konfigurace [diagnostiky pro záložní prostředky:](#configuring-fallback-diagnostics-via-settings-app)Můžete nakonfigurovat, jestli a kdo může shromažďovat fallback diagnostics.
+✔️ [nakonfigurovat nouzovou diagnostiku](#configuring-fallback-diagnostics-via-settings-app): můžete nakonfigurovat, jestli a kdo může shromažďovat nouzovou diagnostiku.
 
-✔️ Sdílení[věcí s blízkými zařízeními:](#share-things-with-nearby-devices)Novou funkci sdílení v okolí můžete zakázat.
+✔️[sdílet s okolními zařízeními](#share-things-with-nearby-devices): můžete zakázat novou funkci okolního sdílení.
 
-✔️ Konfigurace [nastavení zásad pro](#configuring-policy-settings-for-the-new-microsoft-edge)novou Microsoft Edge: Zkontrolujte nově dostupné konfigurace pro Microsoft Edge.
+✔️ [konfigurace nastavení zásad pro nové Microsoft Edge](#configuring-policy-settings-for-the-new-microsoft-edge): projděte si nově dostupné konfigurace pro Microsoft Edge.
 
 #### <a name="new-diagnostic-tool"></a>Nový diagnostický nástroj
 
-✔️[nová diagnostická trasování operačního systému:](#new-os-diagnostic-traces)Shromáždí protokoly související s aktualizacemi operačního systému.
+✔️[nové trasování diagnostiky operačního systému](#new-os-diagnostic-traces): Shromážděte protokoly související s AKTUALIZACEMI operačního systému.
 
 ### <a name="improvements-and-fixes-in-the-update"></a>Vylepšení a opravy v aktualizaci:
 
-- [Offline diagnostika bude](hololens-diagnostic-logs.md#offline-diagnostics) obsahovat také další informace o zařízení pro sériové číslo a verzi operačního systému.
-- Opravuje problém s nasazování obchodních aplikací prostřednictvím zřizovacích balíčků modulu runtime.
-- Opravuje problém s hlášením stavu instalace obchodních aplikací.
-- Opravuje problém s trvalostmi nových balíčků aplikací napříč resetováním zařízení.
-- Opravuje problém, který mohl vést k zadání nesprávných symbolů v edgi pro japonské zákazníky.
-- Vylepšuje odolnost aktualizací operačního systému u předinstalovaných aplikací, jako je Edge. 
-- Řeší spolehlivost aktualizací, která má vliv na instalaci Microsoft Edge. 
+- [Offline Diagnostika](hololens-diagnostic-logs.md#offline-diagnostics) bude obsahovat také další informace o zařízení pro sériové číslo a verzi operačního systému.
+- Opravuje problém týkající se nasazení obchodních aplikací prostřednictvím zřizovacích balíčků za běhu.
+- Opravuje problém týkající se zasílání zpráv o stavu instalace obchodní aplikace.
+- Opravuje problém týkající se trvalosti nových balíčků aplikací napříč obnovením zařízení.
+- Opravuje problém, který by mohl vést k nesprávným zadávaným symbolům pro japonské zákazníky.
+- Vylepšuje odolnost aktualizací operačního systému u předinstalovaných aplikací, jako je třeba Edge. 
+- Řeší spolehlivost aktualizace, která má vliv na instalaci Microsoft Edge. 
 
 
-## <a name="windows-holographic-version-20h2--may-2021-update"></a>Windows Holographic, verze 20H2 – aktualizace z května 2021
-- Build 19041.1146
-
-Vylepšení a opravy v aktualizaci:
-- Tato měsíční aktualizace kvality neobsahuje žádné citelné změny. Doporučujeme vyzkoušet si náš nejnovější build Windows Holographic verze 21H1.
-
-## <a name="windows-holographic-version-1903---may-2021-update"></a>Windows Holographic, verze 1903 – aktualizace z května 2021
-- Build 18362.1110
+## <a name="windows-holographic-version-20h2--may-2021-update"></a>Windows Holografická verze 20H2 – květen 2021 Update
+- Sestavení 19041,1146
 
 Vylepšení a opravy v aktualizaci:
-- Tato měsíční aktualizace kvality neobsahuje žádné záhodné změny. **Toto sestavení už nebude dostávat měsíční aktualizace služby**. Doporučujeme vám vyzkoušet si náš nejnovější build Windows Holographic verze 21H1.
+- tato měsíční aktualizace kvality neobsahuje žádné významné změny, doporučujeme vám vyzkoušet naše nejnovější buildy Windows holografické 21H1 verze.
 
-
-
-## <a name="windows-holographic-version-20h2---april-2021-update"></a>Windows Holographic, verze 20H2 – aktualizace z dubna 2021
-- Build 19041.1144
+## <a name="windows-holographic-version-1903---may-2021-update"></a>Windows Holografická verze 1903 – květen 2021 Update
+- Sestavení 18362,1110
 
 Vylepšení a opravy v aktualizaci:
+- Tato měsíční aktualizace kvality neobsahuje žádné významné změny. V **tomto sestavení už nebudete dostávat měsíční aktualizace služeb**. doporučujeme, abyste si vyzkoušeli naše nejnovější sestavení Windows holografické 21H1.
 
-- Opravuje problém s hlášením stavu instalace obchodních aplikací.
 
-## <a name="windows-holographic-version-1903---april-2021-update"></a>Windows Holographic, verze 1903 – aktualizace z dubna 2021
-- Build 18362.1108
+
+## <a name="windows-holographic-version-20h2---april-2021-update"></a>Windows Holografická verze 20H2 – duben 2021 Update
+- Sestavení 19041,1144
 
 Vylepšení a opravy v aktualizaci:
 
-- Řeší problém, kdy Nastavení při pokusu o změnu hesla místního účtu dojde k chybě aplikace.
+- Opravuje problém týkající se zasílání zpráv o stavu instalace obchodní aplikace.
 
-
-## <a name="windows-holographic-version-20h2---march-2021-update"></a>Windows Holographic, verze 20H2 – aktualizace z března 2021
-- Build 19041.1140
-
-Vylepšení a opravy v aktualizaci:
-
-- Zákazníci, kteří k pořizování fotek pomocí HoloLens 2 používají AdvancedPhotoCapture nebo LowLagPhotoCapture, teď 3 sekundy po zachycení fotky načítá pozici fotoaparátu.
-- Byl opraven problém s nevrácenou pamětí ve službě Portál zařízení Service, kdy služba vyvolala zvýšené využití paměti, které způsobilo selhání přidělení paměti jinými aplikacemi.
-- Opravili jsme problém, kdy se uživatelé zaregistrovaní ve fázi rolloutu k zařízení nepokusili přihlásit.
-
-## <a name="windows-holographic-version-1903---march-2021-update"></a>Windows Holographic, verze 1903 – aktualizace z března 2021
-- Build 18362.1102
+## <a name="windows-holographic-version-1903---april-2021-update"></a>Windows Holografická verze 1903 – duben 2021 Update
+- Sestavení 18362,1108
 
 Vylepšení a opravy v aktualizaci:
 
-- Byl opraven problém s nevrácenou pamětí ve službě Portál zařízení Service, kdy služba vyvolala zvýšené využití paměti, které způsobilo selhání přidělení paměti jinými aplikacemi.
+- řeší problém, při kterém při pokusu o změnu hesla pro místní účet dojde k chybě aplikace Nastavení.
 
-## <a name="windows-holographic-version-20h2---february-2021-update"></a>Windows Holographic, verze 20H2 – aktualizace z února 2021
-- Build 19041.1136
 
-Vylepšení a opravy v aktualizaci:
-
-- Opravuje problém s počátečním nastavením zařízení a aktualizacemi aplikací pro Store.
-- Řeší problém s upgrady a lety pro pozdější HoloLens verze.
-- Odebrání nepoužívaných předinstalovaných certifikátů z kořenového úložiště eSIM z HoloLens zařízení
-
-## <a name="windows-holographic-version-1903---february-2021-update"></a>Windows Holographic, verze 1903 – aktualizace z února 2021
-- Build 18362.1098
-
-Tato měsíční aktualizace kvality neobsahuje žádné citelné změny. Doporučujeme vyzkoušet si nejnovější buildy pro Windows Holographic verze 2004.
-
-## <a name="windows-holographic-version-20h2---january-2021-update"></a>Windows Holographic, verze 20H2 – aktualizace z ledna 2021
-- Build 19041.1134
+## <a name="windows-holographic-version-20h2---march-2021-update"></a>Windows Holografická verze 20H2 – březen 2021 – aktualizace
+- Sestavení 19041,1140
 
 Vylepšení a opravy v aktualizaci:
 
-- Vylepšený výkon při spouštění, obnovování a přepínání uživatelů, pokud je na zařízení mnoho uživatelů.
-- Přidání podpory arm32 pro [Research Mode](/windows/mixed-reality/develop/platform-capabilities-and-apis/research-mode)
+- zákazníci, kteří používají AdvancedPhotoCapture nebo LowLagPhotoCapture k zachycení fotek pomocí HoloLens 2, teď můžou načítat fotoaparát až 3 sekundy od zachycení fotografie.
+- Oprava pro nevracení paměti ve službě Device Portal: problém způsobil zvýšené využití paměti službou, která způsobila selhání přidělování paměti jiným aplikacím.
+- Opravili jsme problém, kdy se uživatelé zaregistrují do připraveného zavedení, se nemůžou přihlásit k zařízení.
 
-## <a name="windows-holographic-version-1903---january-2021-update"></a>Windows Holographic, verze 1903 – aktualizace z ledna 2021
-- Build 18362.1091
+## <a name="windows-holographic-version-1903---march-2021-update"></a>Windows Holografická verze 1903 – březen 2021 – aktualizace
+- Sestavení 18362,1102
 
-Tato měsíční aktualizace kvality neobsahuje žádné citelné změny. Doporučujeme vyzkoušet si nejnovější buildy pro Windows Holographic verze 2004.
+Vylepšení a opravy v aktualizaci:
 
-## <a name="windows-holographic-version-20h2--december-2020-update"></a>Windows Holographic, verze 20H2 – aktualizace z prosince 2020
-- Build 19041.1131
+- Oprava pro nevracení paměti ve službě Device Portal: problém způsobil zvýšené využití paměti službou, která způsobila selhání přidělování paměti jiným aplikacím.
 
-### <a name="install-apps-on-hololens-2-via-app-installer"></a>Instalace aplikací na HoloLens 2 prostřednictvím Instalační program aplikací
+## <a name="windows-holographic-version-20h2---february-2021-update"></a>Windows Holografická verze 20H2 – únor 2021 Update
+- Sestavení 19041,1136
 
-Přidáváme **novou funkci (Instalační program aplikací),** která vám umožní hladceji instalovat aplikace na zařízení s HoloLens 2. Tato funkce bude ve **výchozím nastavení pro nespravovaná zařízení povolená.** Aby se zabránilo přerušení služeb podnikům, instalační program aplikací nebude v tuto chvíli dostupný **pro spravovaná** zařízení.  
+Vylepšení a opravy v aktualizaci:
 
-Zařízení se považuje za "spravované", **pokud** platí kterákoli z následujících podmínek:
-- Zaregistrované [](hololens-enroll-mdm.md) MDM
+- Opravuje problém týkající se počátečního nastavení zařízení a aktualizací pro aplikace ze Storu.
+- řeší potíže s upgrady a lety pro pozdější HoloLens verze.
+- z kořenového úložiště eSIM se odebraly nepoužívané předinstalované certifikáty z HoloLens zařízení.
+
+## <a name="windows-holographic-version-1903---february-2021-update"></a>Windows Holografická verze 1903 – únor 2021 aktualizace
+- Sestavení 18362,1098
+
+tato měsíční aktualizace kvality neobsahuje žádné významné změny, doporučujeme, abyste si vyzkoušeli naše nejnovější buildy pro Windows holografické verze 2004.
+
+## <a name="windows-holographic-version-20h2---january-2021-update"></a>Windows Holografická verze 20H2 – leden 2021 – aktualizace
+- Sestavení 19041,1134
+
+Vylepšení a opravy v aktualizaci:
+
+- Vylepšený výkon při spuštění, obnovení a přepínání uživatelů v případě, že zařízení obsahuje mnoho uživatelů.
+- Přidání podpory arm32 pro [výzkumný režim](/windows/mixed-reality/develop/platform-capabilities-and-apis/research-mode).
+
+## <a name="windows-holographic-version-1903---january-2021-update"></a>Windows Holografická verze 1903 – leden 2021 – aktualizace
+- Sestavení 18362,1091
+
+tato měsíční aktualizace kvality neobsahuje žádné významné změny, doporučujeme, abyste si vyzkoušeli naše nejnovější buildy pro Windows holografické verze 2004.
+
+## <a name="windows-holographic-version-20h2--december-2020-update"></a>Windows Holografická verze 20H2 – prosince 2020 Update
+- Sestavení 19041,1131
+
+### <a name="install-apps-on-hololens-2-via-app-installer"></a>instalace aplikací na HoloLens 2 prostřednictvím instalačního programu aplikace
+
+**přidáváme novou funkci (instalační program aplikace), která vám umožní na zařízeních HoloLens 2 plynule instalovat aplikace** . Tato funkce bude **ve výchozím nastavení zapnutá pro nespravovaná zařízení**. Aby nedošlo k narušení podniků, instalační program aplikace nebude v tuto chvíli **k dispozici pro spravovaná zařízení** .  
+
+Zařízení se považuje za spravované, pokud platí **některá** z následujících podmínek:
+- [Zaregistrované](hololens-enroll-mdm.md) MDM
 - Konfigurace se [zřizovacím balíčkem](hololens-provisioning.md)
 - Identita [uživatele](hololens-identity.md) je Azure AD
 
-Teď můžete instalovat aplikace bez nutnosti povolit vývojářský režim nebo používat Portál zařízení.  Jednoduše si do svého zařízení stáhněte (přes USB nebo přes Edge) sadu Appx a přejděte do sady Appx v Průzkumník souborů, abyste se vyzváni k instalaci.  Případně můžete [zahájit instalaci z webové stránky](/windows/msix/app-installer/installing-windows10-apps-web).  Stejně jako aplikace, které instalujete z Microsoft Store nebo bokem s využitím funkce nasazení obchodní aplikace [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) MDM, [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) musí být aplikace digitálně podepsané pomocí nástroje sign a certifikát použitý k podepsání musí být pro zařízení HoloLens před nasazením aplikace důvěryhodný.
+Teď můžete instalovat aplikace bez nutnosti povolit vývojářský režim nebo používat Portál zařízení.  Jednoduše si do svého zařízení stáhněte (přes USB nebo přes Edge) sadu Appx a přejděte do sady Appx v Průzkumník souborů, abyste se vyzváni k instalaci.  Případně můžete [zahájit instalaci z webové stránky](/windows/msix/app-installer/installing-windows10-apps-web).  Stejně jako aplikace, které instalujete z Microsoft Store nebo bokem nasazování pomocí funkce nasazení [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool) obchodní aplikace [](/windows/win32/appxpkg/how-to-sign-a-package-using-signtool#security-considerations) MDM, musí být aplikace digitálně podepsané pomocí nástroje sign a certifikát použitý k podepsání musí být pro zařízení HoloLens před nasazením aplikace důvěryhodný.
 
 **Pokyny k instalaci aplikace.**
 
@@ -825,122 +824,122 @@ V HoloLens 2 umožňují pozice očí přesné umístění hologramu, pohodlné 
 
 **Funkce Auto Eye Position (AEP)** umožňuje tyto scénáře s bez interakcí vypočítat pozice oka pro uživatele. Funkce Auto Eye Position začne automaticky pracovat na pozadí od okamžiku, kdy uživatel zařízení spustí. Pokud uživatel nemá předchozí sledování očí, funkce Auto Eye Position začne poskytovat uživateli pohled na zobrazovací systém po 20 až 30 sekundách. Uživatelská data se v zařízení neuchová, a proto se tento proces opakuje, když uživatel odstartuje a zařízení znovu zapíná nebo pokud se zařízení restartuje nebo vzbudí ze spánku.
 
-Když na zařízení nasádá nezabý uživatel, existuje několik změn chování systému pomocí funkce Automatické umístění oka. V tomto kontextu se nekalibrovaný uživatel odkazuje na někoho, kdo předtím neprošlý procesem kalibrace sledování očí na zařízení.
+Když na zařízení nasádá nezabý uživatel, existuje několik změn chování systému pomocí funkce Automatické umístění oka. V tomto kontextu neomešlený uživatel odkazuje na někoho, kdo předtím neprošel procesem sledování zraku na zařízení.
 
-| Aktivní aplikace | Předchozí chování | chování z Windows holografické verze 20H2 Update |
+| Aktivní aplikace | Předchozí chování | Chování z Windows Holographic verze 20H2 Update |
 |:-------------------|:-----------------|:-----------------------------------|
-| Aplikace, která není povolená pohledu, nebo holografické prostředí |Zobrazí se dialogové okno výzvy k kalibraci sledování očí. | Nezobrazí se žádná výzva. |
-| Aplikace s podporou pohledu | Zobrazí se dialogové okno výzvy k kalibraci sledování očí. | Výzva k kalibraci sledování očí se zobrazí jenom v případě, že aplikace přistupuje ke pohledumu streamu očí. |
+| Aplikace bez pohledu nebo Holographic Shell |Zobrazí se dialogové okno příkazového řádku sledování očí. | Nezobrazí se žádná výzva. |
+| Aplikace s podporou pohledu | Zobrazí se dialogové okno příkazového řádku sledování očí. | Výzva ke sledování očí se zobrazí jenom v případě, že aplikace přistupuje ke streamu pohledu do oka. |
 
-Pokud uživatel přejde z aplikace s povoleným pohledu na jednu, která přistupuje k datům pohledu, zobrazí se výzva k kalibraci. 
+Pokud uživatel přechází z aplikace, která není pohledem povolená, na aplikaci, která přistupuje k pohledným datům, zobrazí se výzva k zadání hledaní. 
 
-Všechny ostatní chování systému budou podobné jako v případě, kdy aktuální uživatel nemá aktivní sledování očí. Například ruční gesto spuštění nebude povoleno. Při počátečním nastavení se neprojeví žádné změny v prostředí před prvním nastavením.
+Veškeré ostatní chování systému bude podobné, jako když aktuální uživatel nemá aktivní sledování očí. Například gesto Jednoručné spuštění nebude povoleno. Při počátečním nastavení se prostředí prvního spuštění nezmění.
 
-Pro prostředí, která vyžadují pohledu data nebo velmi přesné umístění na hologram, doporučujeme nekalibrovaným uživatelům spustit kalibraci sledování očí. je přístupná z výzvy k kalibraci sledování očí nebo spuštěním aplikace Nastavení z nabídky start a následným výběrem kalibrace **> systému > kalibraci očí > kalibraci běhu**.
+Pro prostředí, která vyžadují pohled na data nebo velmi přesné umístění hologramu, doporučujeme necibrovaným uživatelům spustit sledování očí. Je přístupný z příkazového řádku pro sledování očí nebo spuštěním aplikace Nastavení z nabídky Start a výběrem možnosti System > Vychytávání oka > Eye **Nespouštět**> Spuštění oka.
 
-Tyto informace se dají najít později s [dalšími informacemi o kalibraci](hololens-calibration.md#auto-eye-position-support). 
+Tyto informace najdete později spolu s dalšími [informacemi o produktu](hololens-calibration.md#auto-eye-position-support). 
 
 ### <a name="certificate-manager"></a>Správce certifikátů
 
-- Vylepšené auditování, diagnostika a nástroje ověřování pro zabezpečení zařízení a dodržování předpisů prostřednictvím nového správce certifikátů. Tato funkce vám umožní nasadit, řešit potíže a ověřit škálování vašich certifikátů v komerčních prostředích.
+- Vylepšené nástroje pro auditování, diagnostiku a ověřování pro zabezpečení a dodržování předpisů zařízení prostřednictvím nového Správce certifikátů Tato funkce vám umožní nasazovat, řešit potíže a ověřovat certifikáty ve velkém měřítku v komerčních prostředích.
 
-v Windows holografické verze 20H2 přidáváme do aplikace HoloLens 2 Nastavení správce certifikátů. přejít na **Nastavení > aktualizace & certifikátů zabezpečení >**. Tato funkce poskytuje jednoduchý a uživatelsky přívětivý způsob zobrazení, instalace a odebrání certifikátů na vašem zařízení. Díky novému Správci certifikátů a správcům a uživatelům teď vylepšili Nástroj pro auditování, diagnostiku a ověřování, aby zařízení zůstala zabezpečená a kompatibilní. 
+V Windows Holographic verze 20H2 přidáváme Správce certifikátů do HoloLens 2 Nastavení aplikace. Přejděte na **Nastavení > Update & Security > Certificates**. Tato funkce poskytuje jednoduchý a uživatelsky přívětivý způsob zobrazení, instalace a odebrání certifikátů v zařízení. S novým Správcem certifikátů teď správci a uživatelé vylepšili auditování, diagnostiku a ověřování, aby zajistili, že zařízení zůstanou zabezpečená a vyhovující. 
 
--   **Auditování:** Možnost ověřit, jestli je certifikát správně nasazený, nebo ověřit, že se certifikát odebral správně. 
--   **Diagnostika:** V případě problémů se ověří, že na zařízení existují vhodné certifikáty, které šetří čas a pomáhají při řešení problémů. 
--   **Ověření:** Ověření, že certifikát slouží k zamýšlenému účelu a je funkční, může ušetřit značný čas, zejména v komerčních prostředích před nasazením certifikátů ve větším měřítku.
+-   **Auditování:** Možnost ověřit, že je certifikát správně nasazený, nebo ověřit, že byl správně odebrán. 
+-   **Diagnostika:** Když nastanou problémy, ověření, že v zařízení existují příslušné certifikáty, šetří čas a pomáhá s řešením potíží. 
+-   **Ověření:** Ověření, že certifikát slouží zamýšlenému účelu a je funkční, může ušetřit značný čas, zejména v komerčních prostředích před nasazením certifikátů ve větším měřítku.
 
-Chcete-li v seznamu rychle najít konkrétní certifikát, existují možnosti řazení podle názvu, úložiště nebo data vypršení platnosti. Uživatelé můžou taky certifikát vyhledat přímo. Chcete-li zobrazit vlastnosti jednotlivých certifikátů, vyberte certifikát a klikněte na tlačítko **informace**. 
+Pokud chcete rychle najít konkrétní certifikát v seznamu, existují možnosti řazení podle názvu, úložiště nebo data vypršení platnosti. Uživatelé mohou také přímo vyhledat certifikát. Pokud chcete zobrazit vlastnosti jednotlivých certifikátů, vyberte certifikát a klikněte na **Informace.** 
 
-Instalace certifikátu v současné době podporuje soubory. cer a. CRT. Vlastníci zařízení mohou instalovat certifikáty v místním počítači a aktuálním uživateli.  všechny ostatní uživatele lze instalovat pouze do aktuálního uživatele. uživatelé můžou odebrat jenom certifikáty nainstalované přímo z uživatelského rozhraní Nastavení. Pokud byl certifikát nainstalován jiným způsobem, musí být také odebrán stejným mechanismem.
+Instalace certifikátu aktuálně podporuje soubory .cer a .crt. Vlastníci zařízení mohou instalovat certifikáty v místním počítači a aktuálním uživateli.  Všichni ostatní uživatelé se instaluje jenom do aktuálního uživatele. Uživatelé instalují certifikáty jenom přímo z uživatelského rozhraní Nastavení počítače. Pokud byl certifikát nainstalován jiným způsobem, musí být také odebrán stejným mechanismem.
 
 #### <a name="to-install-a-certificate"></a>Instalace certifikátu: 
 
-1.  Připojení HoloLens 2 k počítači.
-1.  soubor certifikátu, který chcete nainstalovat, umístěte do umístění na vašem HoloLens 2.
-1.  přejděte na **Nastavení > aktualizace & > certifikátů zabezpečení** a vyberte nainstalovat certifikát.
-1.  Klikněte na **importovat soubor** a přejděte do umístění, kam jste certifikát uložili.
-1.  Vyberte **umístění úložiště**.
-1.  Vyberte **úložiště certifikátů**.
+1.  Připojení počítač HoloLens 2.
+1.  Soubor certifikátu, který chcete nainstalovat, umístěte do umístění na HoloLens 2.
+1.  Přejděte na **Nastavení App > Update & Security > Certificates** a vyberte Nainstalovat certifikát.
+1.  Klikněte **na Importovat** soubor a přejděte do umístění, do něj které jste certifikát uložili.
+1.  Vyberte **Store Location (Umístění obchodu).**
+1.  Vyberte **Úložiště certifikátů.**
 1.  Klikněte na **Install** (Nainstalovat).
 
-Certifikát by se teď měl nainstalovat na zařízení.
+Certifikát by teď měl být nainstalovaný na zařízení.
 
 #### <a name="to-remove-a-certificate"></a>Odebrání certifikátu: 
-1. přejděte na **Nastavení App > aktualizace a > certifikáty zabezpečení**.
+1. Přejděte na **Nastavení App > Update and Security > Certificates**.
 1. Ve vyhledávacím poli vyhledejte certifikát podle názvu.
 1. Vyberte certifikát.
-1. Klikněte na **Odebrat** .
-1. Po zobrazení výzvy k potvrzení vyberte **Ano** .
+1. Klikněte na **Odebrat.**
+1. Po **zobrazení** výzvy k potvrzení vyberte Ano.
 
-![prohlížeč certifikátů v aplikaci Nastavení](images/certificate-viewer-device.jpg)
+![Prohlížeč certifikátů v Nastavení aplikaci](images/certificate-viewer-device.jpg)
 
-![Obrázek ukazující použití uživatelského rozhraní certifikátu k instalaci certifikátu](images/certificate-device-install.jpg)
+![Obrázek znázorňující, jak pomocí uživatelského rozhraní certifikátu nainstalovat certifikát](images/certificate-device-install.jpg)
 
-Tyto informace se dají najít později [na nové stránce Správce certifikátů](certificate-manager.md).
+Tyto informace najdete později [na nové stránce Správce certifikátů](certificate-manager.md).
 
 ### <a name="auto-launch-provisioning-from-usb"></a>Automatické spuštění zřizování z USB
 
-- Automatizované procesy umožňují menší interakci s uživatelem, když se při počátečním spuštění počítače použijí jednotky USB s Zřizovacími balíčky.
+- Automatizované procesy umožňující menší interakci uživatelů, když se během spuštění počítače používají jednotky USB se zřizovacími balíčky.
 
-Předtím, než uživatelé této verze museli při zřizování pomocí kombinace tlačítek znovu spustit zřizování obrazovky během vytváření POČÁTEČNÍch hodnot. Uživatelé teď můžou kombinaci tlačítek přeskočit pomocí zřizovacího balíčku na USB paměťové jednotce. 
+Před touto verzí museli uživatelé při zřizování pomocí kombinace tlačítek ručně spustit obrazovku zřizování během spuštění při spuštění počítače. Uživatelé teď mohou kombinaci tlačítek přeskočit pomocí zřizovacího balíčku na jednotce úložiště USB. 
 
-1. Připojte se k jednotce USB pomocí zřizovacího balíčku během prvního prozatím Provisioning OOBE
-1. Když je zařízení připravené k zřízení, automaticky se otevře výzva se stránkou zřizování. 
+1. Připojte jednotku USB se zřizovacím balíčkem během prvního interagovatelného okamžiku prvního ZOBE.
+1. Až bude zařízení připravené ke zřízení, automaticky se otevře výzva se stránkou zřizování. 
 
-Poznámka: Pokud se jednotka USB v době, kdy se zařízení spouští, dokončí, vytvoří OOBE výčet existujícího úložného zařízení USB a sledujte další zařízení, která jsou zapojená do sítě.
+Poznámka: Pokud je usb flash disk při spouštění zařízení připojený k napájení, OOBE provede výčet stávajícího paměťového zařízení USB a bude sledovat, jestli se neschytí další zařízení.
 
-další informace o použití zřizovacích balíčků při spuštění OOBE najdete v dokumentaci pro [zřizování HoloLens](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup) .
+Další informace o použití zřizovacích balíčků během OOBE najdete v [dokumentaci HoloLens zřizování.](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup)
 
-další informace o [automatickém spuštění zřizování z USB](hololens-provisioning.md#auto-launch-provisioning-from-usb) najdete v dokumentaci pro zřizování HoloLens.
+Další informace o [automatickém spouštění zřizování](hololens-provisioning.md#auto-launch-provisioning-from-usb) z USB najdete v dokumentaci HoloLens zřizování.
 
-### <a name="auto-confirm-provisioning-packages-in-oobe"></a>Automatické potvrzení zřizovacích balíčků v OOBE
-- Automatizovaný proces – při zobrazení stránky zřizovacího balíčku se automaticky použije všechny uvedené balíčky.
+### <a name="auto-confirm-provisioning-packages-in-oobe"></a>Automatické potvrzení zřizovacího balíčku v OOBE
+- Automatizovaný proces, který umožňuje menší interakci uživatelů, a když se zobrazí stránka zřizovací balíček, automaticky použije všechny uvedené balíčky.
 
-Když se objeví hlavní obrazovka zřizování, počáteční čas se bude počítat 10 sekund, než se automaticky začnou používat všechny zřizovací balíčky. Po ověření balíčků, které se očekávají, můžou uživatelé tuto dobu 10 sekund [potvrdit i zrušit](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe) .
+Když se zobrazí hlavní obrazovka zřizování, OOBE odpočítá 10 sekund, než automaticky začne používat všechny zřizovací balíčky. Do 10 sekund od ověření [balíčků,](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe) které očekávali, je uživatelé stále mohou potvrdit nebo zrušit.
 
 ### <a name="automatic-provisioning-without-using-ui"></a>Automatické zřizování bez použití uživatelského rozhraní
-- Kombinované automatické procesy pro zajištění omezeného počtu interakcí zařízení pro zřizování. 
+- Kombinované automatické procesy pro menší interakce zařízení pro zřizování 
 
-díky kombinaci automatického spuštění zřizování ze zařízení USB a automatického potvrzení zřizovacích balíčků může uživatel zřídit zařízení HoloLens 2 automaticky bez použití uživatelského rozhraní zařízení nebo dokonce zařízení. Můžete nadále používat stejnou jednotku USB a zřizovací balíček pro více zařízení. To je užitečné pro nasazení několika zařízení najednou ve stejné oblasti. 
+Kombinací automatického spuštění zřizování ze zařízení USB a automatického potvrzení zřizovacího balíčku může uživatel zřídit zařízení HoloLens 2 automaticky bez použití uživatelského rozhraní zařízení nebo dokonce s jeho používáním. Můžete dál používat stejnou jednotku USB a zřizovací balíček pro více zařízení. To je užitečné pro nasazení více zařízení najednou ve stejné oblasti. 
 
-1. [vytvořte zřizovací balíček](hololens-provisioning.md) pomocí [návrháře konfigurace Windows](https://www.microsoft.com/store/productId/9NBLGGH4TX22). 
+1. [Pomocí nástroje Windows](hololens-provisioning.md) [Configuration Designer vytvořte zřizovací balíček.](https://www.microsoft.com/store/productId/9NBLGGH4TX22) 
 1. Zkopírujte balíček na jednotku úložiště USB.
-1. [Flash HoloLens 2](hololens-insider.md#ffu-download-and-flash-directions) až [19041,1361 nebo novější sestavení](https://aka.ms/hololens2previewdownload). 
-1. Až [Průvodce pokročilým obnovením](https://www.microsoft.com/store/productId/9P74Z35SFRS8) dokončí blikání vašeho zařízení, odpojte kabel USB-C. 
+1. [Flash váš HoloLens 2](hololens-insider.md#ffu-download-and-flash-directions) až [19041.1361 nebo novější build](https://aka.ms/hololens2previewdownload). 
+1. Po [dokončení rozšířeného](https://www.microsoft.com/store/productId/9P74Z35SFRS8) průvodce obnovením zařízení odpojte kabel USB-C. 
 1. Připojte jednotku USB k zařízení.
-1. když se zařízení HoloLens 2 spustí do režimu OOBE, automaticky rozpozná zřizovací balíček na jednotce USB a spustí stránku zřizování.
-1. Po 10 sekundách bude zařízení automaticky používat zřizovací balíček. 
+1. Když se HoloLens 2 spustí do OOBE, automaticky zjistí zřizovací balíček na USB disku a spustí stránku zřizování.
+1. Po 10 sekundách zařízení automaticky použije zřizovací balíček. 
 
-Vaše zařízení je teď nakonfigurované a [zobrazí se úspěšná obrazovka zřizování](hololens-provisioning.md#automatic-provisioning-without-using-ui).
+Vaše zařízení je teď nakonfigurované a [zobrazí obrazovku Provisioning Successful (Úspěšné zřizování).](hololens-provisioning.md#automatic-provisioning-without-using-ui)
 
-### <a name="using-autopilot-with-wi-fi-connection"></a>Použití autopilotu pomocí Wi-Fiho připojení
-- Odebráním potřebných adaptérů USB-C pro ethernetové snížení potřeb hardwaru umožníte funkci autopilotu fungovat na Wi-Fi připojených zařízeních.
+### <a name="using-autopilot-with-wi-fi-connection"></a>Použití Autopilotu s Wi-Fi připojením
+- Odebrání potřeby adaptérů USB-C k ethernetovému omezení hardwarových potřeb tím, že umožňuje, aby Autopilot fungoval Wi-Fi připojených zařízeních.
 
-po připojení HoloLens 2 k síti Wi-Fi teď při spuštění nástroje oobe zkontroluje profil automatického pilotního nasazení pro zařízení. Pokud se najde, použije se k dokončení připojení AAD a toku registrace. Jinými slovy, použití sítě Ethernet pro USB-C nebo Wi-Fi do adaptéru USB-C ještě není požadavkem, ale budou fungovat i v případě, že jsou k dispozici na začátku počátečního nastavení. přečtěte si další informace o [autopilotu pro zařízení HoloLens 2](hololens2-autopilot.md).
+Teď, když se během OOBE připojíte k HoloLens 2 pomocí Wi-Fi, OOBE zkontroluje profil Autopilotu pro zařízení. Pokud ho najdete, použije se k dokončení zbývající části toku připojení a registrace AAD. Jinými slovy, použití ethernetu na USB-C nebo Wi-Fi na adaptér USB-C už není povinné, ale i nadále fungují, pokud jsou k dispozici na začátku OOBE. Další informace o [Autopilotu pro HoloLens 2.](hololens2-autopilot.md)
 
-### <a name="tenantlockdown-csp-and-autopilot"></a>Tenantlockdown CSP a autopilot
-- Zachovává zařízení v tenantovi organizace tím, že je zamkne na tenanta i přes resetování nebo reflash zařízení. Díky dalšímu zabezpečení zakážete vytváření účtů prostřednictvím zřizování. 
+### <a name="tenantlockdown-csp-and-autopilot"></a>Tenantlockdown CSP a Autopilot
+- Udržuje zařízení v tenantovi organizace tím, že je uzamyká pro tenanta i přes resetování zařízení nebo koliázi. S dalším zabezpečením tím, že prostřednictvím zřizování neumožníte vytvoření účtu v . 
 
-HoloLens 2 zařízení nyní podporují zprostředkovatele CSP pro [Windows holografické verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2). 
+HoloLens 2 teď podporují TenantLockdown CSP od [Windows Holographic verze 20H2.](hololens-release-notes.md#windows-holographic-version-20h2) 
 
-[TenantLockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP umožňuje, aby HoloLens 2 byly vázané jenom na registraci MDM jenom pomocí autopilotu. jakmile se uzel RequireNetworkInOOBE poskytovatele TenantLockdown CSP nastaví na hodnotu true nebo false (zpočátku nastavená) na HoloLens 2, tato hodnota zůstane na zařízení i bez ohledu na to, jestli se jedná o opětovné spuštění, aktualizace operačního systému atd. 
+[TenantLockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP umožňuje, HoloLens 2 k registraci MDM pouze pomocí Autopilotu. Jakmile je u uzlu RequireNetworkInOOBE tenantaLockdown CSP nastavená hodnota true nebo false (počáteční nastavení) na HoloLens 2, zůstane tato hodnota na zařízení i přes znovu blikající, aktualizace operačního systému atd. 
 
-jakmile je uzel TenantLockdown csp ' RequireNetworkInOOBE ' nastaven na hodnotu true v HoloLens 2, bude po připojení k síti znovu čekat na neomezenou dobu pro stažení a použití profilu autopilotu. 
+Jakmile je u uzlu RequireNetworkInOOBE tenantaLockdown CSP nastavená hodnota true na HoloLens 2, po připojení k síti počká OOBE po neomezenou dobu na úspěšné stažení a použití profilu Autopilot. 
 
-jakmile je uzel TenantLockdown csp ' RequireNetworkInOOBE ' nastaven na hodnotu true u HoloLens 2, v počátečním souboru OOBE nejsou povoleny následující operace: 
-- Vytváření místního uživatele pomocí zřizování za běhu 
-- Provádění operace připojení ke službě Azure AD prostřednictvím zřizování za běhu 
-- Výběr toho, kdo zařízení vlastní v prostředí OOBE 
+Po nastavení uzlu RequireNetworkInOOBE u tenantaLockdown CSP na úrovni HoloLens 2 jsou v OOBE zakázané následující operace: 
+- Vytvoření místního uživatele pomocí zřizování modulu runtime 
+- Provádění operace připojení k Azure AD prostřednictvím zřizování modulu runtime 
+- Výběr vlastníka zařízení v prostředí pro OOBE 
 
-#### <a name="how-to-set-this-using-intune"></a>Jak ho nastavit pomocí Intune? 
-1. Vytvořte vlastní konfigurační profil zařízení OMA URI a zadejte hodnotu true pro uzel RequireNetworkInOOBE, jak je znázorněno níže.
-Hodnota OMA-URI by měla být./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
+#### <a name="how-to-set-this-using-intune"></a>Jak to nastavit pomocí Intune? 
+1. Vytvořte vlastní konfigurační profil zařízení OMA URI a jako uzel RequireNetworkInOOBE zadejte true, jak je znázorněno níže.
+Hodnota OMA-URI by měla být ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE.
 
    > [!div class="mx-imgBorder"]
-   > ![Nastavení uzamčení klienta pomocí OMA-URI](images/hololens-tenant-lockdown.png)
+   > ![Nastavení uzamykací funkce tennant přes OMA-URI](images/hololens-tenant-lockdown.png)
 
-1. Vytvořte skupinu a přiřaďte k této skupině zařízení profil konfigurace zařízení. 
+1. Vytvořte skupinu a přiřaďte k této skupině zařízení konfigurační profil zařízení. 
 
 1. Napřed HoloLens 2 člena skupiny vytvořené v předchozím kroku a aktivujte synchronizaci.  
 
@@ -949,114 +948,114 @@ Na portálu Intune ověřte, že se konfigurace zařízení úspěšně použila
 #### <a name="how-to-unset-tenantlockdowns-requirenetworkinoobe-on-hololens-2-using-intune"></a>Jak pomocí Intune zrušit nastavení nastavení TenantLockdown RequireNetworkInOOBE HoloLens 2? 
 1. Odeberte HoloLens 2 ze skupiny zařízení, ke které byla dříve přiřazena konfigurace zařízení vytvořená výše. 
 
-1. Vytvořte vlastní konfigurační profil zařízení založený na OMA URI a jako RequireNetworkInOOBE zadejte false, jak je znázorněno níže. Hodnota OMA-URI by měla být ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE.
+1. Vytvořte vlastní konfigurační profil zařízení založený na OMA URI a jako RequireNetworkInOOBE zadejte false, jak je znázorněno níže. Hodnota OMA-URI by měla být./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
 
    > [!div class="mx-imgBorder"]
-   > ![Snímek obrazovky s nastavením RequireNetworkInOOBE na hodnotu false prostřednictvím OMA URI v Intune](images/hololens-tenant-lockdown-false.png)
+   > ![Snímek obrazovky s nastavením RequireNetworkInOOBE na hodnotu false prostřednictvím identifikátoru URI OMA v Intune](images/hololens-tenant-lockdown-false.png)
 
-1. Vytvořte skupinu a přiřaďte k této skupině zařízení konfigurační profil zařízení. 
+1. Vytvořte skupinu a přiřaďte k této skupině zařízení profil konfigurace zařízení. 
 
-1. Napřed HoloLens 2 člena skupiny vytvořené v předchozím kroku a aktivujte synchronizaci.
+1. nastavte jako člena zařízení HoloLens 2 skupinu vytvořenou v předchozím kroku a spusťte synchronizaci.
 
-Na portálu Intune ověřte, že se konfigurace zařízení úspěšně použila. Jakmile se tato konfigurace zařízení úspěšně použije na zařízení HoloLens 2, účinky tenantaLockdown budou neaktivní. 
+Na portálu Intune ověřte, že se konfigurace zařízení úspěšně nastavila. jakmile se tato konfigurace zařízení úspěšně použije na zařízení HoloLens 2, účinky TenantLockdown budou neaktivní. 
 
-#### <a name="what-would-happen-during-oobe-if-autopilot-profile-is-unassigned-on-a-hololens-after-tenantlockdown-was-set-to-true"></a>Co by se stalo při OOBE, pokud profil Autopilotu není přiřazený v HoloLens po nastavení tenantaLockdown na hodnotu true? 
-OOBE bude čekat po neomezenou dobu, než se profil Autopilot stáhne, a zobrazí se následující dialogové okno. Aby bylo možné odebrat účinky tenantaLockdown, musí být zařízení zaregistrované v původním tenantovi jenom pomocí Autopilotu a RequireNetworkInOOBE musí být nenastavované, jak je popsáno v předchozím kroku, než se odeberou omezení zavedená poskytovatelem csP TenantLockdown. 
+#### <a name="what-would-happen-during-oobe-if-autopilot-profile-is-unassigned-on-a-hololens-after-tenantlockdown-was-set-to-true"></a>co se stane při počátečním spuštění, pokud je profil autopilotu nepřiřazený u HoloLens po nastavení TenantLockdown na hodnotu true? 
+Při POČÁTEČNÍm navýšení bude profil pro autopilot čekat na neomezenou dobu stahování a zobrazí se dialogové okno. Aby se odstranily účinky TenantLockdown, musí být zařízení zaregistrované v původním tenantovi jenom pomocí jenom autopilotu a RequireNetworkInOOBE musí být nastavené tak, jak je popsané v předchozím kroku, než se odeberou omezení zavedená poskytovatelem CSP pro TenantLockdown. 
 
-![Zobrazení v zařízení, kdy se na zařízení vynucuje zásada](images/hololens-autopilot-lockdown.png)
+![Zobrazení v zařízení pro dobu, kdy se na zařízení vynutila zásada.](images/hololens-autopilot-lockdown.png)
 
-Tyto informace teď najdete společně se zbytkem Autopilotu v části [Tenantlockdown CSP a Autopilot.](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot)
+Tyto informace se teď dají najít spolu se zbytkem autopilotu v rámci [TENANTLOCKDOWN CSP a autopilotu](hololens2-autopilot.md#tenantlockdown-csp-and-autopilot).
 
-### <a name="global-assigned-access--kiosk-mode"></a>Globální přiřazený přístup – Bezobrazovový režim
-- Snížená správa identit pro bezobrazovkové režimy tím, že se povolí nová metoda veřejného terminálu, která na úrovni systému použije režim veřejného terminálu.
+### <a name="global-assigned-access--kiosk-mode"></a>Globální přiřazený přístup – celoobrazovkový režim
+- Omezená Správa identit pro veřejný terminál tím, že povolíte novou metodu veřejného terminálu, která na úrovni systému aplikuje celoobrazovkový režim.
 
-Tato nová funkce umožňuje správci IT nakonfigurovat zařízení HoloLens 2 pro režim veřejného terminálů s více aplikacemi, který je použitelný na úrovni systému, nemá žádné spřažení s žádnou identitou v systému a vztahuje se na všechny uživatele, kteří se k zařízení přihlásí. Podrobné informace o této nové funkci najdete v HoloLens veřejného terminálu s [globálním přiřazeným přístupem.](hololens-global-assigned-access-kiosk.md)
+tato nová funkce umožňuje správci IT nakonfigurovat zařízení HoloLens 2 pro celoobrazovkový celoobrazovkový režim, který je použitelný na úrovni systému, nemá žádné spřažení s žádnou identitou v systému a vztahuje se na všechny uživatele, kteří se k zařízení přihlásí. podrobněji si přečtěte informace o této nové funkci v [HoloLens globálním terminálu s přístupem k globálním přiřazeným](hololens-global-assigned-access-kiosk.md).
 
-### <a name="automatic-launch-of-an-application-in-multiple-app-kiosk-mode"></a>Automatické spuštění aplikace v bezobrazovkovém režimu s více aplikacemi 
-- Cílené prostředí s automatickým spouštěním aplikací, které dále zvyšuje výběr uživatelského rozhraní a aplikací zvolených pro prostředí v bezobrazovkovém režimu.
+### <a name="automatic-launch-of-an-application-in-multiple-app-kiosk-mode"></a>Automatické spuštění aplikace v celoobrazovkovém režimu s více aplikacemi 
+- Cílené prostředí s automatickým spouštěním aplikací, další zvyšování uživatelského rozhraní a výběrů aplikací vybraných pro prostředí v celoobrazovkovém režimu.
 
-Platí jenom pro beznarový režim s více aplikacemi a jenom 1 aplikaci je možné pomocí zvýrazněných atributů níže v konfiguraci Přiřazený přístup určená k automatickému spuštění. 
+Platí jenom pro celoobrazovkový režim s více aplikacemi a jenom jedna aplikace může být určená k automatickému spuštění pomocí zvýrazněného atributu v konfiguraci přiřazeného přístupu. 
 
-Aplikace se automaticky spustí při přihlášení uživatele. 
+Aplikace se automaticky spustí, když se uživatel přihlásí. 
 
 ```xml
 <AllowedApps>                     
     <!--TODO: Add AUMIDs of apps you want to be shown here, e.g. <App AppUserModelId="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" rs5:AutoLaunch="true"/> --> 
 ```
 
-### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Změny chování v bezobrazovkovém režimu pro zpracování selhání
-- Bezpečnější bezobrazovkové režimy eliminují selhání dostupných aplikací v bezobrazovkovém režimu. 
+### <a name="kiosk-mode-behavior-changes-for-handling-of-failures"></a>Změny chování celoobrazovkového režimu pro zpracování selhání
+- Bezpečnější celoobrazovkový režim tím, že eliminuje dostupné aplikace v případě výpadků celoobrazovkového režimu. 
 
-Dříve v případě selhání při použití bezobrazovkovém režimu se HoloLens k zobrazení všech aplikací v nabídce Start. Nyní Windows Holographic verze 20H2 v případě selhání se v nabídce Start nezobrazí žádné aplikace, jak je znázorněno níže: 
+dříve při selhání při použití celoobrazovkového režimu HoloLens použít k zobrazení všech aplikací v nabídce start. nyní v Windows holografické verze 20H2 v případě selhání nebudou v nabídce start zobrazeny žádné aplikace, jak je uvedeno níže: 
 
-![Obrázek toho, jak vypadá bezobrazovový režim, když selže](images/hololens-kiosk-failure-behavior.png )
+![Obrázek, který celoobrazovkový režim teď vypadá, když se nezdařil.](images/hololens-kiosk-failure-behavior.png )
 
-### <a name="hololens-policies"></a>HoloLens Politiky
-- Možnosti správy zařízení speciálně pro HoloLens pro správu zařízení. 
+### <a name="hololens-policies"></a>HoloLens Konfigurovaný
+- možnosti správy zařízení specificky pro HoloLens vytvořené pro správu zařízení. 
 
-Nové zásady hybridní reality byly vytvořeny pro HoloLens 2 zařízení na Windows Holographic verze 20H2. Mezi nová říditelná nastavení patří nastavení jasu, nastavení hlasitosti, zakázání záznamu zvuku v záznamech hybridní reality, nastavení, kdy je možné shromažďovat diagnostiku, a mezipaměť členství ve skupinách AAD.  
+pro Windows holografické verze 20H2 se vytvořily nové zásady hybridních realit pro zařízení HoloLens 2. Mezi nová poříditelné nastavení patří: nastavení jasu, nastavení hlasitosti, zakázání záznamu zvuku v hybridních zachyceních realit, nastavení, kdy se dá shromáždit Diagnostika a mezipaměť členství skupiny AAD.  
 
-| Nové HoloLens zásad                                | Description                                                                               | Poznámky                                                                |
+| nové zásady HoloLens                                | Description                                                                               | Poznámky                                                                |
 |----------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| MixedReality\BrightnessButtonDisabled              | Umožňuje zakázat tlačítka jasu, takže se jeho stisknutí nezmění na brightness.       | 1 Ano, 0 Ne (výchozí)                                                |
-| MixedReality\VolumeButtonDisabled                  | Umožňuje zakázat tlačítka hlasitosti, aby se po stisknutí tlačítka neměňte svazek.               | 1 Ano, 0 Ne (výchozí)                                                |
-| MixedReality\MicrophoneDisabled                    | Zakáže mikrofon, takže na počítači s HoloLens 2 není možný žádný zvukový záznam.                      | 1 Ano, 0 Ne (výchozí)                                                |
-| MixedReality\FallbackDiagnostics                   | Řídí chování, kdy je možné shromažďovat diagnostické protokoly.                               | 0 Zakázáno, 1 Povoleno pro vlastníky zařízení, 2 Povoleno pro všechny (výchozí) |
+| MixedReality\BrightnessButtonDisabled              | Povolí vypnutí tlačítek jasu, takže se nemění jas.       | 1 Ano, 0 No (výchozí)                                                |
+| MixedReality\VolumeButtonDisabled                  | Povolí vypnutí tlačítek hlasitosti, aby se při stisknutí této klávesy nezměnila hlasitost.               | 1 Ano, 0 No (výchozí)                                                |
+| MixedReality\MicrophoneDisabled                    | zakáže mikrofon, takže není možné nahrávat zvuk na HoloLens 2.                      | 1 Ano, 0 No (výchozí)                                                |
+| MixedReality\FallbackDiagnostics                   | Řídí chování, kdy se můžou shromažďovat diagnostické protokoly.                               | 0 zakázané, 1 povoleno pro vlastníky zařízení, 2 povoleno pro všechny (výchozí) |
 | MixedReality\HeadTrackingMode                      | Vyhrazeno pro budoucí použití.                                                                  |                                                                      |
-| MixedReality\AADGroupMembershipCacheValidityInDays | Určuje, kolik dní se mezipaměť členství ve skupinách Azure AD používá pro bezobrazovkové režimy cílené na skupiny Azure AD. | Viz níže.                                                           |
+| MixedReality\AADGroupMembershipCacheValidityInDays | Určuje, kolik dní se mezipaměť členství ve skupině Azure AD používá pro veřejné terminály, které cílí na skupiny Azure AD. | Viz níže.                                                           |
 
-### <a name="cache-azure-ad-group-membership-for-offline-kiosk"></a>Ukládání členství ve skupině Azure AD do mezipaměti pro offline bezobrazovkové režimy
-- Povolili jste použití offline terminálů se skupinami AAD po dobu až 60 dnů.
+### <a name="cache-azure-ad-group-membership-for-offline-kiosk"></a>Ukládání členství ve skupině Azure AD do mezipaměti pro celoobrazovkový terminál
+- Povolené offline veřejné terminály, které se mají používat se skupinami AAD po dobu až 60 dnů.
 
-Tato zásada určuje, kolik dní může být mezipaměť členství ve skupinách Azure AD použita pro konfigurace přiřazeného přístupu, které cílí na skupiny Azure AD pro přihlášené uživatele. Jakmile je hodnota této zásady nastavená na hodnotu větší než 0, použije se mezipaměť, jinak se tato hodnota nenastaví.  
+Tato zásada určuje, kolik dní se má pro přihlášeného uživatele použít mezipaměť členství ve skupině Azure AD pro přiřazené konfigurace přístupu, které cílí na skupiny Azure AD. Jakmile je tato hodnota zásad nastavená na hodnotu větší než 0, použije se mezipaměť v opačném případě.  
 
-Název: AADGroupMembershipCacheValidityInDays Hodnota identifikátoru URI: ./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+Název: hodnota identifikátoru URI AADGroupMembershipCacheValidityInDays:./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
 
-Min – 0 dní  
-Max. – 60 dnů 
+Min-0 dnů  
+Max. 60 dní 
 
-Postup správných použití těchto zásad: 
-1. Vytvořte profil konfigurace zařízení pro beznaiosk cílení na skupiny Azure AD a přiřaďte ho HoloLens zařízením. 
-1. Vytvořte vlastní konfiguraci zařízení založenou na OMA URI, která nastaví tuto hodnotu zásady na požadovaný počet dní (> 0) a přiřadí ji HoloLens zařízením. 
-    1. Do textového pole OMA-URI by se měla zadat hodnota URI ./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays.
-    1. Hodnota může být v rozmezí od minimálního do maximálního povoleného.
-1. Zaregistrujte HoloLens zařízení a ověřte, že se na zařízení použijí obě konfigurace. 
-1. Nechte uživatele Azure AD 1 přihlásit se, když je k dispozici internet, po úspěšném potvrzení přihlášení uživatele a úspěšného členství ve skupině Azure AD se vytvoří mezipaměť. 
-1. Uživatel Azure AD 1 teď může HoloLens režim offline a použít ho pro bezioskový režim, pokud hodnota zásad umožňuje počet dní X. 
-1. Kroky 4 a 5 je možné opakovat pro libovolného jiného uživatele Azure AD N. Klíčovým bodem je, že každý uživatel Azure AD se musí přihlásit k zařízení pomocí internetu, takže aspoň jednou můžeme určit, že jsou členem skupiny Azure AD, na kterou je cílem konfigurace veřejného terminálu. 
+Postup pro správné použití této zásady: 
+1. vytvořte profil konfigurace zařízení pro webdirectory cílící na skupiny Azure AD a přiřaďte ho k HoloLens zařízením. 
+1. vytvořte vlastní konfiguraci zařízení založenou na identifikátoru OMA URI, která nastaví hodnotu této zásady na požadovaný počet dní (> 0) a přiřaďte ji do HoloLens zařízení. 
+    1. Do textového pole OMA-URI by se měla zadat hodnota identifikátoru URI jako./Vendor/MSFT/Policy/Config/MixedReality/AADGroupMembershipCacheValidityInDays
+    1. Hodnota může být mezi minimální a maximální povolenou hodnotou.
+1. zaregistrujte zařízení HoloLens a ověřte, že se obě konfigurace na zařízení nastavily. 
+1. Umožněte uživateli Azure AD 1 přihlášení, když je dostupný internet, po přihlášení uživatele a členství ve skupině Azure AD se vytvoří mezipaměť. 
+1. uživatel Azure AD 1 teď může HoloLens offline a používat ho pro celoobrazovkový režim, pokud hodnota zásady umožňuje X počet dnů. 
+1. Kroky 4 a 5 se můžou opakovat pro všechny ostatní uživatele Azure AD N. klíčovým bodem, který tady znamená, že se musí přihlásit k zařízení přes Internet, aby aspoň jednou bylo možné určit, že jsou členy skupiny Azure AD, na kterou cílí konfigurace veřejného terminálu. 
  
 > [!NOTE]
-> Dokud se pro uživatele Azure AD neprovádí krok 4, bude docházet k chování při selhání uvedeném v odpojených prostředích. 
+> Dokud se krok 4 neprovede pro uživatele Azure AD, dojde k chování při selhání zmíněném v "odpojeném" prostředí. 
 
-### <a name="new-device-restriction-policies-for-hololens-2"></a>Nové zásady omezení zařízení pro HoloLens 2
-- Umožňuje uživatelům spravovat konkrétní zásady správy zařízení, jako je blokování přidávání nebo odebírání zřizových balíčků.
+### <a name="new-device-restriction-policies-for-hololens-2"></a>nové zásady omezení pro zařízení HoloLens 2
+- Umožňuje uživatelům spravovat konkrétní zásady správy zařízení, jako je například blokování přidávání nebo odebírání zřizovacích balíčků.
 
-Nově povolené zásady, které umožňují více možností správy HoloLens 2 zařízení. 
+nově povolené zásady, které umožňují více možností správy zařízení HoloLens 2. 
 - [AllowAddProvisioningPackage](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage)
 - [AllowRemoveProvisioningPackage](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) 
 - [ConfigureTimeZone](/windows/client-management/mdm/policy-csp-timelanguagesettings#timelanguagesettings-configuretimezone)
-- [Vzdálené zamykací zařízení](/windows/client-management/mdm/remotelock-csp)
+- [RemoteLock](/windows/client-management/mdm/remotelock-csp)
 
-Tyto dvě nové zásad pro AllowAddProvisioningPackage a AllowRemoveProvisioningPackage se přidávají do našich [běžných omezení zařízení](hololens-common-device-restrictions.md).
+Tyto dvě nové zásady pro AllowAddProvisioningPackage a AllowRemoveProvisioningPackage se přidávají do našich [běžných omezení zařízení](hololens-common-device-restrictions.md).
 
 > [!NOTE]
-> Pokud jde o [RemoteLock,](/windows/client-management/mdm/remotelock-csp)HoloLens podporuje jenom konfiguraci ./Vendor/MSFT/RemoteLock/Lock. Konfigurace týkající se kódu PIN, jako je resetování a obnovení, se nepodporují.
+> v souvislosti s [RemoteLock](/windows/client-management/mdm/remotelock-csp)bude HoloLens podporovat jenom konfiguraci./Vendor/MSFT/RemoteLock/Lock. Konfigurace, které se týkají kódu PIN, jako je resetování a obnovení, se nepodporují.
 
-### <a name="new-power-policies-for-hololens-2"></a>Nové zásady napájení pro HoloLens 2
-- Další možnosti pro HoloLens režimu spánku nebo uzamčení prostřednictvím zásad napájení. 
+### <a name="new-power-policies-for-hololens-2"></a>nové zásady napájení pro HoloLens 2
+- další možnosti při HoloLens režimu spánku nebo zámků prostřednictvím zásad napájení. 
 
-Tyto nově přidané zásady umožňují správcům řídit stavy napájení, jako je časový limit nečinnosti. Další informace o jednotlivých zásadách si můžete přečíst kliknutím na odkaz pro jednotlivé zásady.
+Tyto nově přidané zásady umožňují správcům řídit stavy napájení, jako je například časový limit nečinnosti. Pokud si chcete přečíst více o jednotlivých zásadách, klikněte prosím na odkaz pro tuto zásadu.
 
 |     Odkaz na dokumentaci k zásadám                |     Poznámky                                                                                                                                       |
 |----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-|     [DisplayOffTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery)               |     Příklad hodnoty, která se Windows návrháři konfigurace, tj.`<enabled/><data   id="EnterVideoDCPowerDownTimeOut" value="100"/>`     |
-|     [DisplayOffTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)               |     Příklad hodnoty, která se Windows návrháři konfigurace, tj.`<enabled/><data   id="EnterVideoACPowerDownTimeOut" value="100"/>`     |
-|     [EnergySaverBatteryThresholdOnBattery](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)     |  Příklad hodnoty, která se má Windows Návrháři konfigurace, tj. 100                                                                             |
-|     [EnergySaverBatteryThresholdPluggedIn](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)     |     Příklad hodnoty, která se má Windows Návrháři konfigurace, tj. 100                                                                          |
-|     [StandbyTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)                  |     Příklad hodnoty, která se Windows návrháři konfigurace, tj.`<enabled/><data   id="EnterDCStandbyTimeOut" value="100"/>`          |
-|     [PohotovostníTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)                  |     Příklad hodnoty, která se Windows návrháři konfigurace, tj.`<enabled/><data   id="EnterACStandbyTimeOut" value="100"/>`           |
+|     [DisplayOffTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery)               |     ukázková hodnota, která se má použít v návrháři konfigurace Windows, tj.`<enabled/><data   id="EnterVideoDCPowerDownTimeOut" value="100"/>`     |
+|     [DisplayOffTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)               |     ukázková hodnota, která se má použít v návrháři konfigurace Windows, tj.`<enabled/><data   id="EnterVideoACPowerDownTimeOut" value="100"/>`     |
+|     [EnergySaverBatteryThresholdOnBattery](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)     |  ukázková hodnota, která se má použít v návrháři konfigurace Windows, tj. 100                                                                             |
+|     [EnergySaverBatteryThresholdPluggedIn](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)     |     ukázková hodnota, která se má použít v návrháři konfigurace Windows, tj. 100                                                                          |
+|     [StandbyTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)                  |     ukázková hodnota, která se má použít v návrháři konfigurace Windows, tj.`<enabled/><data   id="EnterDCStandbyTimeOut" value="100"/>`          |
+|     [StandbyTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)                  |     ukázková hodnota, která se má použít v návrháři konfigurace Windows, tj.`<enabled/><data   id="EnterACStandbyTimeOut" value="100"/>`           |
 
-Tyto dvě nové služby pro DisplayOffTimeoutOnBattery a DisplayOffTimeoutPluggedIn se přidávají do našich [běžných omezení zařízení](hololens-common-device-restrictions.md).
+Tyto dvě nové zásady pro DisplayOffTimeoutOnBattery a DisplayOffTimeoutPluggedIn se přidávají do našich [běžných omezení zařízení](hololens-common-device-restrictions.md).
 
 > [!NOTE]
 > pro konzistentní prostředí HoloLens 2 prosím zajistěte, aby byly hodnoty pro obě DisplayOffTimeoutOnBattery a StandbyTimeoutOnBattery nastavené na stejnou hodnotu. Totéž platí pro DisplayOffTimeoutPluggedIn a StandbyTimeoutPluggedIn. Další podrobnosti o moderním pohotovostním režimu najdete v tématu o [časovačích nečinných pro zobrazení, přechod do režimu spánku a hibernace](/windows-hardware/design/device-experiences/display--sleep--and-hibernate-idle-timers) .
@@ -1065,221 +1064,221 @@ Tyto dvě nové služby pro DisplayOffTimeoutOnBattery a DisplayOffTimeoutPlugge
 - Další možnosti pro instalaci aktualizací nebo zakázání tlačítka pozastavit aktualizace, aby se zajistila aktualizace.
 
 v zařízeních HoloLens 2 jsou teď povolené tyto zásady aktualizace:
--   [Aktualizovat/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)
--   [Aktualizovat/ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange)
--   [Aktualizovat/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)
--   [Aktualizovat/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)
+-   [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)
+-   [Update/ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange)
+-   [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)
+-   [Aktualizace/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)
 
-úplné podrobnosti o těchto zásadách aktualizace a jejich použití pro HoloLens zařízení je možné číst v tématu [správa aktualizací HoloLens](hololens-updates.md).
+Úplné podrobnosti o těchto zásadách aktualizací a jejich použití pro HoloLens si můžete přečíst tady v tématu Správa [HoloLens aktualizací.](hololens-updates.md)
 
-### <a name="enabled-settings-page-visibility-for-hololens-2"></a>povolená Nastavení viditelnost stránky pro HoloLens 2
-- vylepšené řízení uživatelského rozhraní v aplikaci Nastavení, které může být zaměňováno k zobrazení omezeného výběru stránek.
+### <a name="enabled-settings-page-visibility-for-hololens-2"></a>Povolení Nastavení viditelnosti stránky pro HoloLens 2
+- Větší ovládací prvek uživatelského rozhraní v Nastavení App, který může být zaměnit za zobrazení omezeného výběru stránek.
 
-nyní jsme povolili zásadu, která správcům IT umožňuje zabránit tomu, aby určité stránky v systémové Nastavení aplikaci byly viditelné nebo přístupné, nebo aby tak učinily pro všechny stránky kromě těch, které jsou uvedené. Informace o tom, jak tuto funkci plně přizpůsobit, získáte kliknutím na odkaz níže.
+Teď jsme povolili zásadu, která správcům IT umožňuje zabránit tomu, aby byly konkrétní stránky v aplikaci System Nastavení viditelné nebo přístupné, nebo to dělat pro všechny stránky kromě těch, které jsou zadané. Pokud chcete zjistit, jak tuto funkci plně přizpůsobit, klikněte na následující odkaz.
 
 - [PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist)
 
-pokud chcete zjistit, která nastavení stránky můžete přizpůsobit HoloLens 2, navštivte prosím naši [Nastavení na stránce identifikátory uri](settings-uri-list.md). 
+Informace o tom, která nastavení stránky můžete přizpůsobit na HoloLens 2, najdete na [naší Nastavení identifikátory URI.](settings-uri-list.md) 
  
-![snímek obrazovky s aktivními hodinami upravovanými v aplikaci Nastavení](images/hololens-page-visibility-list.jpg)
+![Snímek obrazovky s úpravami aktivních hodin v Nastavení aplikaci](images/hololens-page-visibility-list.jpg)
 
 ### <a name="research-mode"></a>Režim výzkumu
-v rámci výzkumného režimu se HoloLens 2 stal nástrojem potent pro výzkum počítačových visionů. v porovnání s předchozími edicemi má výzkumný režim pro HoloLens 2 následující výhody:
--   kromě senzorů vystavených v HoloLens (1.1. generace) průzkumu teď poskytujeme přístup ke senzorům IMU, včetně měřičů akcelerometr, vybavený gyroskopem a magnetometer.
--   HoloLens 2 poskytuje nové funkce, které se dají použít společně s výzkumným režimem. Konkrétně přístup k rozhraním API pro sledování kloubů a sledování očí, který může poskytovat bohatší sadu experimentů.
+V režimu Research Mode se HoloLens 2 stává nástroj pro výzkum počítačového zpracování obrazu. V porovnání s předchozími edicemi má režim Research Mode pro HoloLens 2 následující výhody:
+-   Kromě senzorů vystavených v režimu výzkumu HoloLens (1. generace) teď poskytujeme přístup senzorů IMU, včetně akcelerometru, krátoboru a krátometru.
+-   HoloLens 2 poskytuje nové možnosti, které je možné používat společně s režimem výzkumu. Konkrétně přístup k rozhraním API pro ruční sledování a sledování očí, která doručují bohatší sadu experimentů.
 
-výzkumníki teď mají možnost povolit výzkumný režim na svých zařízeních HoloLens pro přístup ke všem těmto externím proudům s nezpracovanými obrazci. výzkumný režim pro HoloLens 2 také poskytuje přístup ke čtení akcelerometr, vybavený gyroskopem a magnetometer. V zájmu ochrany osobních údajů uživatelů nejsou k dispozici obrázky z nezpracovaného oka pro sledování očí prostřednictvím výzkumného režimu, ale směr pohledu je k dispozici prostřednictvím existujících rozhraní API.
+Výzkumníci teď mají na svých vlastních zařízeních možnost povolit režim výzkumu HoloLens přístup ke všem těmto externím datovým proudům nezpracovaných obrazových senzorů. Režim výzkumu pro HoloLens 2 také poskytuje přístup k odečtům akcelerometru, krátoboru a krátometru. V rámci ochrany osobních údajů uživatelů nejsou nezpracované obrázky z fotoaparátů pro sledování očí dostupné prostřednictvím režimu výzkumu, ale směr pohledu je k dispozici prostřednictvím stávajících rozhraní API.
 
-Další technické podrobnosti najdete v [dokumentaci ke výzkumnému režimu](/windows/mixed-reality/research-mode) .
+Další technické podrobnosti [najdete v dokumentaci k](/windows/mixed-reality/research-mode) režimu výzkumu.
 
 ### <a name="recording-length-increased"></a>Zvýšení délky záznamu
-Z důvodu zpětné vazby od zákazníků jsme zvýšili délku nahrávání u [hybridních zachycení realit](holographic-photos-and-videos.md). Ve výchozím nastavení se hybridní zachycení realit nebudou standardně omezovat na 5 minut, ale místo toho se vypočítá maximální délka nahrávání na základě dostupného místa na disku. Zařízení bude odhadnout maximální dobu trvání nahrávání videa na základě dostupného místa na disku až do 80% celkového místa na disku.
+Z důvodu zpětné vazby od zákazníků jsme zvýšili délku záznamu zachytávání [hybridní reality.](holographic-photos-and-videos.md) Zachytávání hybridní reality už nebude ve výchozím nastavení omezené na 5 minut, ale místo toho vypočítá maximální délku záznamu na základě dostupného místa na disku. Zařízení odhadne maximální dobu trvání záznamu videa na základě dostupného místa na disku až do 80 % celkového místa na disku.
 
 > [!NOTE]
-> HoloLens použije výchozí délku nahrávání videa (5 minut), pokud dojde k jedné z následujících akcí:
-> - Odhadovaná maximální doba trvání záznamu je menší než výchozí hodnota 5 minut.
-> - Dostupné místo na disku je méně než 20% celkového místa na disku.
+> Pokud HoloLens jedna z následujících možností, bude aplikace používat výchozí délku záznamu videa (5 minut):
+> - Odhadovaná maximální doba trvání záznamu je menší než výchozích 5 minut.
+> - Dostupné místo na disku je méně než 20 % celkového místa na disku.
 
-Plné požadavky najdete v dokumentaci k [holografickým fotografiím a videím](holographic-photos-and-videos.md#maximum-recording-length) . 
+Všechny požadavky najdete v dokumentaci k [holografickým fotografiím a videím.](holographic-photos-and-videos.md#maximum-recording-length) 
 
 ### <a name="improvements-and-fixes-in-the-update"></a>Vylepšení a opravy v aktualizaci:
-- Další obrazovky v OOBE jsou nyní v tmavém režimu.
-- Další obsah by měl odkazovat na nejnovější prohlášení o zásadách ochrany osobních údajů online.
-- Vyřešili jsme problém, kdy uživatelé nemohli zřizovat profily sítě VPN prostřednictvím zřizovacích balíčků.
-- Problémy s konfigurací pevného proxy serveru pro připojení VPN
-- Aktualizované zásady pro zakázání výčtu funkcí USB prostřednictvím MDM pro NCM pro AllowUsbConnection.
-- vyřešili jsme problém, který brání zobrazení zařízení HoloLens v průzkumníkovi souborů přes protokol MTP (Media Transfer Protocol), když se zařízení nastaví jako veřejný [terminál s jednou aplikací](hololens-kiosk.md). Upozorňujeme, že MTP (a připojení USB obecně) je možné dál zakázat pomocí zásad [AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) .
-- opravili jsme problém, kdy se v celoobrazovkovém režimu správně škálují ikony v nabídka Start.
-- Opravili jsme problém, protože mezipaměť HTTP koliduje s režimem celoobrazovkového režimu, který je zaměřený na skupiny Azure AD.
-- Opravili jsme problém, kdy uživatelé nedokázali použít tlačítko dvojice po povolení vývojářského režimu s zřizovacími balíčky, pokud je nezakáže a znovu nepovolí vývojářský režim.
+- Další obrazovky v OOBE jsou teď v tmavém režimu.
+- Další informace by měly odkazovat na nejnovější prohlášení o zásadách ochrany osobních údajů online.
+- Byl vyřešen problém, kdy uživatelé nemohli zřídit profily VPN prostřednictvím zřizovacích balíčků.
+- Opravili jsme problém s konfigurací proxy serveru pro připojení VPN.
+- Aktualizace zásad pro zákaz výčtu funkcí USB prostřednictvím MDM pro NCM pro AllowUsbConnection
+- Byl vyřešen problém, který zabraňoval tomu, aby se zařízení HoloLens v Průzkumník souborů přes protokol MTP (Media Transfer Protocol), když je zařízení nastavené jako bezna terminál s jednou [aplikací.](hololens-kiosk.md) Mějte na paměti, že MTP (a připojení USB obecně) je stále možné zakázat pomocí zásad [AllowUSBConnection.](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+- Opravili jsme problém, kdy se ikony v nabídka Start správně škálují v beznaiosku.
+- Opravili jsme problém kvůli tomu, že ukládání do mezipaměti HTTP narušuje režim veřejného terminálů cílený na skupiny Azure AD.
+- Opravili jsme problém, kdy uživatelé nemohli po povolení vývojářského režimu se zřizovacími balíčky použít tlačítko Párovat, pokud nepovolili a nepovolili vývojářský režim.
 
-## <a name="windows-holographic-version-1903---november-2020-update"></a>Windows Holografická verze 1903 – aktualizace z listopadu 2020
-- Sestavení 18362,1085
+## <a name="windows-holographic-version-1903---november-2020-update"></a>Windows Holographic, verze 1903 – aktualizace z listopadu 2020
+- Build 18362.1085
 
-tato měsíční aktualizace kvality neobsahuje žádné významné změny, doporučujeme vám vyzkoušet naše nejnovější buildy pro vydání funkcí Windows holografické 20H2.
+Tato měsíční aktualizace kvality neobsahuje žádné citelné změny. Doporučujeme vyzkoušet si nejnovější verzi buildu pro Windows Holographic verze 20H2.
 
-## <a name="windows-holographic-version-2004---october-2020-update"></a>Windows Holografická verze 2004 – říjen 2020 – aktualizace
-- Sestavení 19041,1124
+## <a name="windows-holographic-version-2004---october-2020-update"></a>Windows Holographic, verze 2004 – aktualizace z října 2020
+- Build 19041.1124
  
 Vylepšení a opravy v aktualizaci:
 
-- Odstranila se nepotřebná kontrolu, která způsobila chybu běhového systému.
+- Odebrali jsme nepotřebnou kontrolu, která způsobila chybu systému modulu runtime.
 
-## <a name="windows-holographic-version-1903---october-2020-update"></a>Windows Holografická verze 1903 – říjen 2020 – aktualizace
-- Sestavení 18362,1081
+## <a name="windows-holographic-version-1903---october-2020-update"></a>Windows Holographic, verze 1903 – aktualizace z října 2020
+- Build 18362.1081
 
-tato měsíční aktualizace kvality neobsahuje žádné významné změny, doporučujeme, abyste si vyzkoušeli naše nejnovější buildy pro Windows holografické verze 2004.
+Tato měsíční aktualizace kvality neobsahuje žádné citelné změny. Doporučujeme vyzkoušet si nejnovější buildy pro Windows Holographic verze 2004.
 
-## <a name="windows-holographic-version-2004---september-2020-update"></a>Windows Holografická verze 2004 – září 2020 aktualizace
-- Sestavení 19041,1117
-
-Vylepšení a opravy v aktualizaci:
-
-- řeší problém, který zabránil Visual Studio ladění aplikace v případě, že v appxmanifest existuje SupportsMultipleInstances = "true".
-- Tato verze zahrnuje opravu detekce proxy serveru NCSI, která se nezdařila kvůli selhání detekce Internetu prostřednictvím síťového proxy serveru. NCSI může k detekci připojení k Internetu použít proxy server a proxy server pro jednotlivé profily. Proxy server bude v budoucích verzích NCSI podporován pro každého uživatele.
-- u většiny zařízení Windows Mixed Reality je vektor směrového směru rovnoběžný s vozovkou, když je hlavní pozice uživatele v neutrální pozici, kde se nachází. nicméně starší verze HoloLens 2 zarovnaly vektoru, aby byl kolmý na panely zobrazení, což je nakloněné dolů o několik stupňů vzhledem k ideální orientaci. novější verze HoloLens 2 tuto opravu opravily, aby se zajistila sémantická konzistence napříč faktory formuláře.
-- Vylepšená odolnost sledování a výsledkem bude méně sledování ztrát v konkrétních scénářích.
-- Tato verze obsahuje opravu pro zlepšení kvality zvukového časového razítka, která mohla přispět k problémům se zachytáváním videa.
-
-## <a name="windows-holographic-version-1903---september-2020-update"></a>Windows Holografická verze 1903 – září 2020 aktualizace
-- Sestavení 18362,1079
+## <a name="windows-holographic-version-2004---september-2020-update"></a>Windows Holographic, verze 2004 – aktualizace ze září 2020
+- Build 19041.1117
 
 Vylepšení a opravy v aktualizaci:
 
-- u většiny zařízení Windows Mixed Reality je vektor směrového směru rovnoběžný s vozovkou, když je hlavní pozice uživatele v neutrální pozici, kde se nachází. nicméně starší verze HoloLens 2 zarovnaly vektoru, aby byl kolmý na panely zobrazení, což je nakloněné dolů o několik stupňů vzhledem k ideální orientaci. novější verze HoloLens 2 tuto opravu opravily, aby se zajistila sémantická konzistence napříč faktory formuláře.
-- Vylepšená odolnost sledování a výsledkem bude méně sledování ztrát v konkrétních scénářích.
+- Řeší problém, který Visual Studio ladění aplikace, když se v souboru appxmanifest nachází SupportsMultipleInstances="true".
+- Tato verze zahrnuje opravu detekce proxy serveru NCSI, která řeší selhání detekce internetu přes síťový proxy server. NCSI může k detekci připojení k internetu použít proxy server počítače a proxy server pro každý profil. NcSI bude v budoucí verzi podporovat proxy pro uživatele.
+- Ve většině Windows Mixed Reality zařízení je směrový vektor vpřed paralelně k zemi, když je hlavička uživatele v neutrální pozici a hledí dopředu. Starší verze sady HoloLens 2 však zarovnaly vektor tak, aby byl perpenduován k panelům zobrazení, což je o několik stupňů dolů vzhledem k ideální orientaci. Novější verze systému HoloLens 2 tuto chybu opraví, aby se zajistila sémantická konzistence napříč provedeními.
+- Vylepšená odolnost při ručním sledování, která v konkrétních scénářích bude mít za následek menší ztráty sledování.
+- Tato verze obsahuje opravu pro zlepšení kvality časového razítka zvuku, která může přispět k problémům se zachytáváním videa.
 
-## <a name="windows-holographic-version-2004---august-2020-update"></a>Windows Holografická verze 2004 – aktualizace ze srpna 2020
-- Sestavení 19041,1113
-
-Vylepšení a opravy v aktualizaci:
-
-- Nastavení aplikace už nedodržuje možnosti registrace v aplikaci Iris nebo kalibrace sledování očí.
-- Opravili jsme chybu při použití zřizovacího balíčku při spuštění OOBE, který přejmenuje zařízení a provede jiné akce (například připojení k síti), aby se po restartu zařízení v důsledku přejmenování nepodařilo provést další akce.
-- Změněné barevné schéma počátečních toků nastavení zařízení, aby se zlepšila kvalita vizuálů
-
-## <a name="windows-holographic-version-1903---august-2020-update"></a>Windows Holografická verze 1903 – aktualizace ze srpna 2020
-- Sestavení 18362,1074
-
-tato měsíční aktualizace kvality neobsahuje žádné významné změny, doporučujeme, abyste si vyzkoušeli naše nejnovější buildy pro Windows holografické verze 2004.
-
-## <a name="windows-holographic-version-2004---july-2020-update"></a>Windows Holografická verze 2004 – červenec 2020 aktualizace
-- Sestavení 19041,1109
+## <a name="windows-holographic-version-1903---september-2020-update"></a>Windows Holographic, verze 1903 – aktualizace ze září 2020
+- Build 18362.1079
 
 Vylepšení a opravy v aktualizaci:
 
-- Vývojáři si teď můžou vybrat mezi povolením nebo zakázáním portálu pro zařízení vyžadovat zabezpečené připojení.
-- Vylepšení spolehlivosti pro aplikace se spouští po aktualizacích operačního systému.
-- Výchozí jas složky Doručená pošta se změnil na 100 procent.
-- vyřešili jsme problém týkající se předávání HTTPS pro Windows portál zařízení v HoloLens 2.
+- Ve většině Windows Mixed Reality zařízení je směrový vektor vpřed paralelně k zemi, když je hlavička uživatele v neutrální pozici a hledí dopředu. Starší verze sady HoloLens 2 však zarovnaly vektor tak, aby byl perpenduován k panelům zobrazení, což je o několik stupňů dolů vzhledem k ideální orientaci. Novější verze systému HoloLens 2 tuto chybu opraví, aby se zajistila sémantická konzistence napříč provedeními.
+- Vylepšená odolnost při ručním sledování, která v konkrétních scénářích bude mít za následek menší ztráty sledování.
 
-## <a name="windows-holographic-version-1903---july-2020-update"></a>Windows Holografická verze 1903 – červenec 2020 aktualizace
-- Sestavení 18362,1071
+## <a name="windows-holographic-version-2004---august-2020-update"></a>Windows Holographic, verze 2004 – aktualizace ze srpna 2020
+- Build 19041.1113
 
 Vylepšení a opravy v aktualizaci:
 
-- Opravili jsme problém, který by mohl způsobit, že se v aplikacích Unity při ztrátě nebo opětovném sledování ztratí hologramy.
-- opravili jsme problém, který způsobil, že exkluzivní aplikace HoloLens při použití Emulator HoloLens s hardwarovou akcelerací na některých zařízeních vrátila do prostředí chybu.
-- vyřešili jsme problém týkající se předávání HTTPS pro Windows portál zařízení v HoloLens 2.
+- Nastavení aplikace už uživatele nebude sledovat v prostředí registrace Iris nebo sledování očí.
+- Opravili jsme chybu, kdy se při použití zřizovacího balíčku během spuštění počítače, který přejmenovává zařízení a provádí další akce (například připojování k síti), nepodařilo provést další akce po restartování zařízení kvůli přejmenování.
+- Úprava barevného schématu toků počátečního nastavení zařízení za účelem zlepšení vizuální kvality
 
-## <a name="windows-holographic-version-2004---june-2020-update"></a>Windows Holografická verze 2004 – aktualizace od června 2020
-- Sestavení 19041,1106
+## <a name="windows-holographic-version-1903---august-2020-update"></a>Windows Holographic, verze 1903 – aktualizace ze srpna 2020
+- Build 18362.1074
+
+Tato měsíční aktualizace kvality neobsahuje žádné citelné změny. Doporučujeme vyzkoušet si nejnovější buildy pro Windows Holographic verze 2004.
+
+## <a name="windows-holographic-version-2004---july-2020-update"></a>Windows Holographic, verze 2004 – aktualizace z července 2020
+- Build 19041.1109
 
 Vylepšení a opravy v aktualizaci:
 
-- Vlastní zapisovače MRC teď mají nové výchozí hodnoty pro určité vlastnosti, pokud nejsou zadané.
-  - Na *efekt videa MRC*:
+- Vývojáři si teď mohou vybrat mezi povolením nebo zakázáním Portál zařízení vyžadovat zabezpečené připojení.
+- Vylepšili jsme spolehlivost spouštění aplikací po aktualizacích operačního systému.
+- Změna výchozího jasu doručené pošty na 100 %.
+- Byl vyřešen problém s předáváním HTTPS pro Windows Portál zařízení na HoloLens 2.
+
+## <a name="windows-holographic-version-1903---july-2020-update"></a>Windows Holographic, verze 1903 – aktualizace z července 2020
+- Build 18362.1071
+
+Vylepšení a opravy v aktualizaci:
+
+- Opravili jsme problém, který mohl způsobovat, že hologramy při ztrátě nebo obnovení sledování zmizely v aplikacích Unity.
+- Opravili jsme problém, který způsoboval, že HoloLens aplikací do prostředí při použití HoloLens Emulator s hardwarovou akcelerací na určitých zařízeních došlo k chybě.
+- Byl vyřešen problém týkající se předávání HTTPS pro Windows Portál zařízení na HoloLens 2.
+
+## <a name="windows-holographic-version-2004---june-2020-update"></a>Windows Holographic, verze 2004 – aktualizace z června 2020
+- Build 19041.1106
+
+Vylepšení a opravy v aktualizaci:
+
+- Vlastní záznamníky MRC teď mají nové výchozí hodnoty pro určité vlastnosti, pokud nejsou zadané.
+  - On the *MRC Video Effect*:.
     - PreferredHologramPerspective (1 PhotoVideoCamera)
-    - GlobalOpacityCoefficient (0,9 (HoloLens) 1,0 (moderní sluchátka)
-  - U *zvukového efektu MRC*:
-    - LoopbackGain (aktuální hodnota "nárůst zvuku aplikace" na stránce zachycení hybridních realit na portálu zařízení Windows)
-    - MicrophoneGain (aktuální hodnota "mikrofon zvukové úrovně" na stránce zachycení hybridních realit na portálu zařízení Windows)
-- Opravili jsme chybu pro zlepšení kvality zvuku ve scénářích zachycení smíšené reality. Konkrétně by tato oprava měla při zobrazení nabídky **Start** eliminovat zvukové glitching v záznamu.
-- Vylepšená stabilita hologramů v zaznamenaných videích.
-- Vyřešili jsme problém, kdy zachycení hybridní reality nedokázalo nahrávat video, když bylo zařízení ponecháno v pohotovostním stavu po dobu více dní.
-- Rozhraní API HolographicSpace. UserPresence je obecně pro aplikace Unity zakázané. Toto chování zabrání problému, který způsobil, že některé aplikace se při převrácení hypervisoru nemusely pozastavit, i když je povolené nastavení spustit v pozadí. Rozhraní API je teď povolené pro 2018.4.18 verze Unity a novější a 2019.3.4 a novější.
-- Při přístupu k portálu zařízení přes Wi-Fi připojení může webový prohlížeč zabránit přístupu k z důvodu neplatného certifikátu. Prohlížeč může hlásit chybu, jako je například "ERR_SSL_PROTOCOL_ERROR", i když byl certifikát zařízení dříve důvěryhodný. V takovém případě nemůžete postupovat na portálu zařízení, protože nejsou k dispozici žádné možnosti ignorovat upozornění zabezpečení. Tato aktualizace vyřešila problém. Pokud byl certifikát zařízení dřív stažený a důvěryhodný na počítači kvůli odebrání upozornění zabezpečení prohlížeče a dojde k chybě SSL, musí se nový certifikát stáhnout a důvěřovat, aby se využívaly výstrahy zabezpečení prohlížeče.
-- Umožnění vytvoření balíčku pro zřizování za běhu, který může nainstalovat aplikaci pomocí balíčků MSIX.
-- do **Nastavení**  >  **systémových**  >  **Hologramy** bylo přidáno nastavení, které umožňuje uživatelům automaticky odebrat všechny hologramy ze smíšené reality, když se zařízení vypíná.
-- opravili jsme problém, který způsobil, že HoloLens aplikace, které mění formát pixelu, aby se vykreslily černě v emulátoru HoloLens.
-- Opravili jsme chybu, která způsobila selhání během přihlašování Iris.
-- Opravili jsme problém se stahováním opakovaného úložiště pro už aktuální aplikace.
-- opravili jsme chybu, aby se zabránilo otevírání aplikací pro moderní aplikace Microsoft Edge opakovaně.
-- Opravili jsme problém se spuštěním aplikace fotky v počátečním spuštění po aktualizaci verze 1903.
-- Vylepšený výkon a spolehlivost.
+    - GlobalOpacityCoefficient (0.9 (HoloLens) 1.0 (Imerzivní náhlavní souprava))
+  - Zvukový *efekt MRC:*
+    - LoopbackGain (aktuální hodnota "App Audio Gain" na Záznam hybridní reality stránce v Windows Portál zařízení)
+    - MicrophoneGain (aktuální hodnota Mic Audio Gain na Záznam hybridní reality stránce v Windows Portál zařízení)
+- Opravili jsme chybu, která vylepšuje kvalitu zvuku ve scénářích zachycení hybridní reality. Konkrétně by tato oprava měla eliminovat potíže se zvukem v nahrávce, když se **zobrazí** nabídka Start.
+- Vylepšená stabilita hologramů v zaznamenaných videích
+- Vyřešili jsme problém, kdy zachytávání hybridní reality nemohlo po několika dnech v pohotovostním stavu nahrát video.
+- Rozhraní API HolographicSpace.UserPresence je obecně zakázané pro aplikace Unity. Toto chování zabraňuje problému, který způsoboval pozastavení některých aplikací při překlopení visoru, a to i v případě, že bylo povolené nastavení Spustit na pozadí. Rozhraní API je teď povolené pro Unity verze 2018.4.18 a novější a 2019.3.4 a novější.
+- Když k Portál zařízení přes Wi-Fi připojení, webový prohlížeč může přístup k bránit z důvodu neplatného certifikátu. Prohlížeč může nahlásit chybu typu "ERR_SSL_PROTOCOL_ERROR", i když byl certifikát zařízení dříve důvěryhodný. V takovém případě nemůžete postupovat k Portál zařízení, protože neexistuje možnost ignorovat upozornění zabezpečení. Tato aktualizace tento problém vyřešila. Pokud byl certifikát zařízení dříve stažen a na počítači důvěryhodný pro odebrání upozornění zabezpečení prohlížeče a dojde k chybě SSL, je třeba nový certifikát stáhnout a důvěřovat, aby se těmto upozorněním zabezpečení prohlížeče rovnal.
+- Povolili jste možnost vytvořit zřizovací balíček modulu runtime, který může instalovat aplikaci pomocí balíčků MSIX.
+- Přidali jsme nastavení **v Nastavení** System Hologramy, které uživatelům umožňuje automaticky odebrat všechny  >    >   hologramy z Mixed Reality domů, když se zařízení vypne.
+- Opravili jsme problém, který způsob HoloLens, které změnily formát pixelů tak, aby se v emulátoru HoloLens pixelů vykreslují černě.
+- Opravili jsme chybu, která způsoboval chybu při přihlášení Iris.
+- Opravili jsme problém s opakovaným stahováním ze Storu pro již aktuální aplikace.
+- Opravili jsme chybu, která znemožňoval opakovaným otevírání Microsoft Edge aplikací.
+- Opravili jsme problém se spuštěním aplikace Photos při počátečním spuštění po aktualizaci z verze 1903.
+- Vyšší výkon a spolehlivost.
 
-## <a name="windows-holographic-version-1903---june-2020-update"></a>Windows Holografická verze 1903 – aktualizace od června 2020
-- Sestavení 18362,1064
+## <a name="windows-holographic-version-1903---june-2020-update"></a>Windows Holographic, verze 1903 – aktualizace z června 2020
+- Build 18362.1064
 
 Vylepšení a opravy v aktualizaci:
 
-- Vlastní záznamy MRC mají nové výchozí hodnoty pro určité vlastnosti, pokud nejsou zadané.
-  - Na *efekt videa MRC*:
+- Vlastní záznamníky MRC mají nové výchozí hodnoty určitých vlastností, pokud nejsou zadané.
+  - On the *MRC Video Effect*:.
     - PreferredHologramPerspective (1 PhotoVideoCamera)
-    - GlobalOpacityCoefficient (0,9 (HoloLens) 1,0 (moderní sluchátka)
-  - U *zvukového efektu MRC*:
-    - LoopbackGain (aktuální hodnota "nárůst zvuku aplikace" na stránce zachycení hybridních realit na portálu zařízení Windows)
-    - MicrophoneGain (aktuální hodnota "mikrofon zvukové úrovně" na stránce zachycení hybridních realit na portálu zařízení Windows)
-- Rozhraní API HolographicSpace. UserPresence je obecně pro aplikace Unity zakázané. Toto chování zabrání problému, který způsobí, že se některé aplikace při převrácení hypervisoru nespustí, a to i v případě, že je povolené nastavení na pozadí. Rozhraní API je teď povolené pro verze Unity 2018.4.18 a novější a 2019.3.4 a novější.
-- opravili jsme problém, který způsobil, že HoloLens aplikace, které mění formát pixelu, vykreslí černou v HoloLens Emulator.
-- Opravili jsme problém týkající se spuštění aplikace Fotky při počátečním spuštění po aktualizaci verze 1903.
+    - GlobalOpacityCoefficient (0.9 (HoloLens) 1.0 (Imerzivní náhlavní souprava))
+  - Zvukový *efekt MRC:*
+    - LoopbackGain (aktuální hodnota "App Audio Gain" na Záznam hybridní reality stránce v Windows Portál zařízení)
+    - MicrophoneGain (aktuální hodnota Mic Audio Gain na Záznam hybridní reality stránce v Windows Portál zařízení)
+- Rozhraní API HolographicSpace.UserPresence je obecně zakázané pro aplikace Unity. Toto chování zabraňuje problému, který způsobuje, že se některé aplikace po překlopení visoru pozastaví, i když je povolené nastavení pro spuštění na pozadí. Rozhraní API je teď povolené pro Unity verze 2018.4.18 a novější a 2019.3.4 a novější.
+- Opravili jsme problém, který způsob HoloLens, které změnily formát pixelů tak, aby se v HoloLens Emulator.
+- Opravili jsme problém se spuštěním aplikace Photos při počátečním spuštění po aktualizaci z verze 1903.
 
-## <a name="windows-holographic-version-2004"></a>Windows Holografická verze 2004  
-- Build-19041,1103
+## <a name="windows-holographic-version-2004"></a>Windows Holographic, verze 2004  
+- Sestavení – 19041.1103
 
-hlavní aktualizace softwaru HoloLens 2 *Windows holografická verze 2004* obsahuje hostitele zajímavých nových funkcí, jako je například podpora Windowsho autopilotního, tmavého režimu aplikace, podpora sběrnice USB Ethernet pro 5G/LTE a mnoho dalšího. 2020 pokud chcete aktualizovat na nejnovější verzi, otevřete aplikaci **Nastavení**   , pokračujte na  **aktualizace & zabezpečení** a vyberte tlačítko  **vyhledat aktualizace**   . 
+Hlavní aktualizace softwaru pro HoloLens 2, *Windows Holographic, verze 2004* z května 2020 obsahuje řadu zajímavých nových funkcí, jako je podpora Windows Autopilotu, tmavý režim aplikací, podpora sítě USB Ethernet pro hotspoty 5G/LTE a mnoho dalšího. Pokud chcete provést aktualizaci na nejnovější verzi, otevřete **aplikaci Nastavení,** přejděte na Update & Security a vyberte tlačítko    **Zkontrolovat** ****   aktualizace. 
 
 |             Funkce                              |          Popis                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-|       Windows Autopilot                          |          předběžná konfigurace a bezproblémové nastavení nových zařízení pro produkční prostředí pomocí Windowsho automatického pilotního nasazení                 |
-|       Podpora FIDO 2                             |          Podpora klíčů zabezpečení FIDO2 pro zajištění rychlého a zabezpečeného ověřování pro sdílená zařízení            |
-|       Vylepšené zřizování                      |          Bezproblémové použití zřizovacího balíčku z jednotky USB na HoloLens                              |
-|       Stav instalace aplikace                 |          podívejte se na stav instalace v aplikaci Nastavení pro aplikace, které se odeslaly do HoloLens 2 přes MDM.               |
-|       Poskytovatelé konfiguračních služeb (CSP)   |          Přidání nových poskytovatelů konfigurační služby za účelem vylepšení možností řízení správy                 |
-|       Podpora sběrnice USB 5G/LTE                       |          Rozšířená funkce USB Ethernet umožňuje podporu pro 5G/LTE.                                    |
-|       Tmavý režim aplikace                              |          Tmavý režim aplikace dostupný pro aplikace, které podporují tmavé i lehké režimy, což zlepšuje možnosti zobrazení        |
-|       Hlasové příkazy                             |          podpora dalších systémových hlasových příkazů pro řízení HoloLens bez jakýchkoli rukou                           |
-|       Vylepšení sledování ruky                 |          Vylepšení ručního sledování usnadňuje tlačítka a 2D SLAT interakce                        |
+|       Windows Autopilot                          |          Předem nakonfigurujte a bezproblémově nastavte nová zařízení pro produkční prostředí pomocí Windows AutoPilot.                 |
+|       Podpora FIDO 2                             |          Podpora klíčů zabezpečení FIDO2 pro povolení rychlého a zabezpečeného ověřování pro sdílená zařízení            |
+|       Vylepšené zřizování                      |          Bezproblémové použití zřizovacího balíčku z USB flash disku na HoloLens                              |
+|       Stav instalace aplikace                 |          Zkontrolujte stav instalace v Nastavení aplikace pro aplikace se přes MDM nas nabízené HoloLens 2.               |
+|       Poskytovatelé konfiguračních služeb (CSP)   |          Přidání nových poskytovatelů konfiguračních služeb pro vylepšení možností správy                 |
+|       Podpora USB 5G/LTE                       |          Rozšířená schopnost ethernetového připojení USB umožňuje podporu pro 5G/LTE                                    |
+|       Tmavý režim aplikace                              |          Tmavý režim aplikace dostupný pro aplikace, které podporují tmavý i světlý režim, vylepšuje prostředí pro prohlížení.        |
+|       Hlasové příkazy                             |          Podpora dalších systémových hlasových příkazů pro ovládání HoloLens bez rukou                           |
+|       Vylepšení sledování rukou                 |          Vylepšení sledování rukou zpřesní tlačítka a interakce 2D slate.                        |
 |       Vylepšení a opravy kvality                 |          Různá vylepšení výkonu a spolehlivosti systému napříč platformou                            |
 
-### <a name="support-for-windows-autopilot"></a>podpora Windowsho autopilotního nasazení
+### <a name="support-for-windows-autopilot"></a>Podpora pro Windows Autopilot
 
-Windows automatický pilot pro HoloLens 2 umožňuje, aby byl prodejní kanál zařízení předem zaregistrován HoloLens do vašeho tenanta intune. Jakmile zařízení dorazí, budou připravená na samoobslužné nasazení jako sdílená zařízení v rámci vašeho tenanta. Aby bylo možné využít výhody samoobslužného nasazení, musí se zařízení připojit k síti během první obrazovky v instalačním programu pomocí technologie USB-C-to-Ethernet.
+Windows Autopilot pro HoloLens 2 umožňuje kanálu prodeje zařízení předem zaregistrovat HoloLens do vašeho tenanta Intune. Jakmile zařízení dorazí, jsou připravená k vlastnímu nasazení jako sdílená zařízení ve vašem tenantovi. Pokud chcete využít výhod vlastního nasazení, musí se zařízení připojit k síti během první obrazovky v nastavení pomocí USB-C-to-Ethernet.
 
-Poté, co uživatel spustí proces automatického nasazení autopilotu, proces provede následující kroky:
+Jakmile uživatel spustí proces samosazování Autopilotu, proces dokončí následující kroky:
 
 1. Připojte zařízení k Azure Active Directory (Azure AD).
-1. pomocí služby Azure AD zaregistrujete zařízení v Microsoft Intune (nebo jiné službě MDM).
-1. Stáhněte si zásady, certifikáty a síťové profily zaměřené na zařízení.
-1. Zřídí zařízení.
-1. Prezentovat přihlašovací obrazovku uživateli
+1. Pomocí Azure AD zaregistrujte zařízení ve službě Microsoft Intune (nebo jiné službě MDM).
+1. Stáhněte si zásady, certifikáty a síťové profily cílené na zařízení.
+1. Zřídit zařízení.
+1. Zobrazí přihlašovací obrazovku uživateli.
 
-další informace najdete v [průvodci hodnocením Windows autopilot pro HoloLens 2](hololens2-autopilot.md).
+Další informace najdete v [Windows Autopilot for HoloLens 2](hololens2-autopilot.md).
 
-*Obraťte se na svého správce účtu, abyste se připojili k programu autopilot Preview nyní. Zařízení, která jsou připravena k autopilotu, začnou brzy dodávat.*
+*Požádejte svého account manažera, aby se teď připojil k AutoPilotu Preview. Zařízení připravená pro Autopilot začnou brzy doručovat.*
 
-### <a name="fido2-security-key-support"></a>Podpora klíče zabezpečení FIDO2
+### <a name="fido2-security-key-support"></a>Podpora klíčů zabezpečení FIDO2
 
-někteří uživatelé sdílejí zařízení HoloLens s ostatními v pracovním nebo školním prostředí. Proto je důležité, aby uživatelé mohli snadno bez psaní dlouhých uživatelských jmen a hesel. rychlá identita Online (FIDO) umožňuje všem uživatelům ve vaší organizaci (Azure AD tenant) bezproblémově se přihlašovat k HoloLens bez zadání uživatelského jména nebo hesla.
+Někteří uživatelé sdílejí HoloLens zařízení s ostatními uživateli v pracovním nebo školním prostředí. Je proto důležité, aby uživatelé mohli snadno zadávat dlouhá uživatelská jména a hesla. Fast Identity Online (FIDO) umožňuje komukoli ve vaší organizaci (tenant Azure AD) bezproblémově se přihlásit k HoloLens bez zadávání uživatelského jména nebo hesla.
 
-Klíče zabezpečení FIDO2 jsou "nepřesné" metody ověřování bez hesla založené na standardech, které mohou být v libovolném tvaru. FIDO je otevřený standard pro ověřování neheslem. Umožňuje uživatelům a organizacím přihlašovat se ke svým prostředkům bez uživatelského jména nebo hesla. Místo toho používají externí klíč zabezpečení nebo klíč platformy integrovaný do zařízení.
+Klíče zabezpečení FIDO2 jsou "nepřehledná" metoda ověřování bez hesla založená na standardech, která může být v jakémkoli provedení. FIDO je otevřený standard pro ověřování bez hesla. Umožňuje uživatelům a organizacím přihlásit se ke svým prostředkům bez uživatelského jména nebo hesla. Místo toho používají externí klíč zabezpečení nebo klíč platformy integrovaný do zařízení.
 
-Informace o tom, jak začít, najdete v tématu [Povolení přihlášení k bezpečnostnímu klíči bez hesla](/azure/active-directory/authentication/howto-authentication-passwordless-security-key).
+Pokud chcete začít, podívejte se [na stránku Povolení přihlašování pomocí bezpečnostního klíče bez hesla.](/azure/active-directory/authentication/howto-authentication-passwordless-security-key)
 
 ### <a name="improved-mdm-enrollment-via-provisioning-package"></a>Vylepšená registrace MDM prostřednictvím zřizovacího balíčku
 
-zřizovací balíčky umožňují nastavit HoloLens konfiguraci prostřednictvím konfiguračního souboru, a ne prostřednictvím HoloLens připraveného prostředí. dříve musely být zřizovací balíčky zkopírovány do HoloLens interní paměti. teď můžou být na jednotce USB, aby je bylo snazší znovu použít na více HoloLens zařízeních a můžete zařízení zřizovat paralelně. Zřizovací balíčky teď také podporují pole pro registraci ve správě zařízení, takže se po zřízení neprovádí ruční instalace.
+Zřizovací balíčky umožňují HoloLens konfiguraci prostřednictvím konfiguračního souboru, a HoloLens prostředí. Dříve bylo třeba zřizovací balíčky zkopírovat do HoloLens paměti. Teď mohou být na USB flash disku, aby se snadněji opakovaně opakovaně HoloLens zařízeních a vy můžete zařízení zřaďovat paralelně. Zřizovací balíčky teď také podporují pole pro registraci ve správě zařízení, takže po zřízení už neexistuje žádné ruční nastavení.
 
-Vyzkoušejte:
+Vyzkoušejte si to:
 
-1. stáhněte si nejnovější verzi návrháře konfigurace Windows z Windows storu na váš počítač.
-1. vyberte **zřídit HoloLens zařízení**  >  **zřídí HoloLens 2 zařízení**.
-2. Sestavte konfigurační profil. Pak zkopírujte všechny soubory, které byly vytvořeny na paměťové zařízení USB-C.
-3. Připojte zařízení USB-C k jakémukoli čerstvě blikajícímu HoloLens. Potom stisknutím tlačítka **hlasitosti dolů**  +   použijte balíček zřizování.
+1. Stáhněte si nejnovější verzi nástroje Windows Configuration Designer z úložiště Windows do počítače.
+1. Vyberte **Provision HoloLens Devices** Provision HoloLens 2 Devices (Zřídit HoloLens zařízení  >  **2).**
+2. Sestavte konfigurační profil. Potom zkopírujte všechny vytvořené soubory do úložného zařízení USB-C.
+3. Připojte zařízení USB-C k novému flash HoloLens. Potom stiskněte **tlačítka napájení pro** snížení hlasitosti a použijte  +   zřizovací balíček.
 
-### <a name="line-of-business-application-install-status"></a>Stav instalace obchodní aplikace
+### <a name="line-of-business-application-install-status"></a>Stav instalace obchodních aplikací
 
-Nasazení a Správa aplikací MDM pro obchodní aplikace je pro HoloLens zásadní. Správci a uživatelé musí zobrazit stav instalace aplikace pro auditování a diagnostiku. v této verzi jsme přidali další podrobnosti v **Nastavení**  >  **účty**  >  **přístup do práce nebo do školy**  >  klikněte na informace **o účtu**  >  .
+Nasazení a správa aplikací MDM pro obchodní aplikace je pro HoloLens. Správci a uživatelé musí zobrazit stav instalace aplikace pro auditování a diagnostiku. V této verzi jsme přidali další podrobnosti v části **Nastavení**  >  **Accounts Access** work or school (Přístup k účtům do práce nebo do školy) Klikněte na informace o  >    >  **vašem**  >  **účtu.**
 
 ### <a name="additional-csps-and-policies"></a>Další zprostředkovatelé CSP a zásady
 
@@ -1391,57 +1390,57 @@ Tyto "integrované" aplikace podporují tmavý režim:
 - Centrum Feedback
 - OneDrive
 - Fotky
-- Prohlížeč 3D
-- Filmy & televizor
+- 3D prohlížeč
+- Movies & TV
 
 **Vylepšení a opravy také v aktualizaci:** 
-- Je zajištěno, aby překryvy prostředí byly zahrnuty do hybridních zachycení realit.
-- Unreal vývojáři teď můžou pomocí stránky 3D zobrazení na portálu zařízení testovat a ladit své aplikace.
-- Zlepšená stabilita při hybridní realitě při použití algoritmu *DepthReprojection HolographicDepthReprojectionMethod* .
-- V 32ch aplikacích ARM se opravila chyba Třída rozhraní API WinRT IStreamSocketListener není zaregistrovaná.
+- Zajistili jsme, že se do zachytávání hybridní reality zahrnou překryvy prostředí.
+- Unreal developers can now use the 3D View page in Portál zařízení to test and debug their applications.
+- Vylepšená stabilita hologramu ve smíšené realitě při použití *algoritmu HolographicDepthReprojectionMethod DepthReprojection*
+- Opravili jsme chybu "Třída rozhraní API WinRT IStreamSocketListener není zaregistrovaná" v 32bitových aplikacích ARM.
 
-## <a name="windows-holographic-version-1903---march-2020-update"></a>Windows Holografická verze 1903 – březen 2020 – aktualizace 
-- Sestavení 18362,1056
-
-Vylepšení a opravy v aktualizaci:
-
-- Zlepšená stabilita při hybridní realitě při použití algoritmu *AutoPlanar HolographicDepthReprojectionMethod* .
-- Zajistěte, aby byl souřadnicový systém připojený k hloubkové ukázce MF konzistentní s veřejnou dokumentací.
-- Zlepšení produktivity vývojářů tím, že zákazníkům umožníte vkládat velké objemy textu prostřednictvím portálu zařízení.
-
-## <a name="windows-holographic-version-1903---february-2020-update"></a>Windows Holografická verze 1903 – únor 2020 aktualizace 
-- Sestavení 18362,1053
+## <a name="windows-holographic-version-1903---march-2020-update"></a>Windows Holographic, verze 1903 – aktualizace z března 2020 
+- Build 18362.1056
 
 Vylepšení a opravy v aktualizaci:
 
-- Dočasně zakázalo rozhraní API HolographicSpace. UserPresence pro aplikace Unity. Tato změna zabrání problému, který způsobil, že některé aplikace se při převrácení hypervisoru nemusely pozastavit, a to i v případě, že je povolené nastavení spustit v pozadí.
-- Opravili náhodnou HUP havárií způsobenou ručním sledováním, ve kterém uživatel všiml, že se zablokuje uživatelské rozhraní a pak se po několika sekundách zpátky do prostředí shell.
-- Vylepšené sledování, takže když se poke s prstem na index, je horní část tohoto prstu méně pravděpodobná na neočekávaném otáčení.
-- Zlepšená spolehlivost sledování hlav, prostorového mapování a dalších modulů runtime.
+- Vylepšená stabilita hologramu ve smíšené realitě při použití *algoritmu HolographicDepthReprojectionMethod AutoPlanar*
+- Zajistili jsme, aby souřadnicový systém připojený k vzorku s hloubkou BYL konzistentní s veřejnou dokumentací.
+- Vylepšili produktivitu vývojářů tím, že zákazníkům umožnili vkládat velké objemy textu prostřednictvím portálu zařízení.
 
-## <a name="windows-holographic-version-1903---january-2020-update"></a>Windows Holografická verze 1903 – leden 2020 – aktualizace 
-- Sestavení 18362,1043
+## <a name="windows-holographic-version-1903---february-2020-update"></a>Windows Holographic, verze 1903 – aktualizace z února 2020 
+- Build 18362.1053
+
+Vylepšení a opravy v aktualizaci:
+
+- Dočasně zakázali rozhraní API HolographicSpace.UserPresence pro aplikace Unity. Tato změna zabraňuje problému, který způsoboval pozastavení některých aplikací při překlopení zorovače, a to i v případě, že bylo povolené nastavení Spustit na pozadí.
+- Opravili jsme náhodné selhání HUP způsobené ručním sledováním, při kterém si uživatel po několika sekundách všiml zablokování uživatelského rozhraní a pak zpátky do prostředí.
+- Vylepšené sledování rukou, takže když házíte ukazováčkem, je menší pravděpodobnost, že se horní část prstu neočekávaně cvrdí.
+- Vylepšili jsme spolehlivost sledování hlavy, prostorového mapování a dalších runtime.
+
+## <a name="windows-holographic-version-1903---january-2020-update"></a>Windows Holographic, verze 1903 – aktualizace z ledna 2020 
+- Build 18362.1043
  
 Vylepšení a opravy v aktualizaci:
 
-- lepší stabilita pro exkluzivní aplikace při práci s emulátorem HoloLens 2.
+- Vylepšená stabilita pro exkluzivní aplikace při práci s emulátorem HoloLens 2.
 
-## <a name="windows-holographic-version-1903---december-2019-update"></a>Windows Holografická verze 1903 – prosinec 2019 Update 
-- Sestavení 18362,1042
-
-Vylepšení a opravy v aktualizaci:
-
-- Představily se opravy LSR (poslední fáze kopírování). Vylepšené vizuální vykreslování hologramů, aby se zobrazovalo více stabilních a bylo zaostřené o přesnější zúčtování jejich hloubky. Pokud aplikace nenastaví hloubku poznatku na hologramech, bude tento příznaku po této aktualizaci více patrné.
-- Pevná stabilita exkluzivních aplikací a navigace mezi exkluzivními aplikacemi
-- Vyřešili jsme problém, kdy zachycení hybridní reality nedokázalo nahrávat video po několika dnech v pohotovostním stavu zařízení.
-- Zlepšená stabilita hologramů.
-
-## <a name="windows-holographic-version-1903---november-2019-update"></a>Windows Holografická verze 1903 – aktualizace z listopadu 2019 
-- Sestavení 18362,1039
+## <a name="windows-holographic-version-1903---december-2019-update"></a>Windows Holographic, verze 1903 – aktualizace z prosince 2019 
+- Build 18362.1042
 
 Vylepšení a opravy v aktualizaci:
 
-- Při počátečním nastavení pro en-CA a EN-AU se opravily funkce **vybraných** hlasových příkazů.
-- vylepšená vizuální kvalita objektů umístěných v nejnovější Unity a verzích MRTK (Mixed Reality Toolkit).
-- opravili jsme problémy se zablokovanými holografickými aplikacemi při spuštění v pozastaveném stavu, dokud se nabídka Start neotevřeli a pak zavřeli.
-- opravy a vylepšení dodržování OpenXR za běhu pro HoloLens 2 a emulátor.
+- Zavedli jsme opravy poslední fáze reprodukování (LSR). Vylepšené vizuální vykreslování hologramů tak, aby se zdály stabilnější a ošemetnější díky přesnějšímu účtování jejich hloubky. Tento příznak bude po této aktualizaci patrnější, pokud aplikace nebudou správně nastavovat hloubku hologramů.
+- Byla opravena stabilita výhradních aplikací a navigace mezi exkluzivními aplikacemi.
+- Vyřešili jsme problém, kdy zachytávání hybridní reality nemohlo po několika dnech v pohotovostním stavu nahrát video.
+- Vylepšená stabilita hologramu
+
+## <a name="windows-holographic-version-1903---november-2019-update"></a>Windows Holographic, verze 1903 – aktualizace z listopadu 2019 
+- Build 18362.1039
+
+Vylepšení a opravy v aktualizaci:
+
+- Opravili jsme **funkčnost příkazu Select** voice commands during initial setup for en-CA and en-AU (Výběr hlasových příkazů během počátečního nastavení pro en-CA a en-AU).
+- Vylepšená vizuální kvalita objektů umístěných daleko v nejnovějších verzích Unity a Mixed Reality Toolkit (MRTK).
+- Opravili jsme problémy s holografickými aplikacemi, které se při spuštění zasekly v pozastaveném stavu, dokud se nabídka Start neotevřela a pak nezavřela.
+- Opravy shody modulu runtime OpenXR a vylepšení pro HoloLens 2 a emulátor.

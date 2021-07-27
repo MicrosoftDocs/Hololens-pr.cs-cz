@@ -14,12 +14,12 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 32153fd6f7703347f4fe2f9ad41043fbeb9fab3f
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 2da84a11a8f9613999e2b376fefeb6cb2b83cd00
+ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640470"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "114659025"
 ---
 # <a name="compare-hololens-2-options"></a>porovnat možnosti HoloLens 2
 
@@ -47,17 +47,6 @@ ať už jste [profesionálem](https://www.microsoft.com/hololens/apps) v oblasti
 - <sup>2</sup> – obdržíte náhradní zařízení v noci nebo na urychlené odeslání (rychlejší z dostupných možností) před tím, než je zařízení od Microsoftu obdrženo vadné.
 - <sup>3</sup> – na dotazy týkající se záruky, podpory a certifikace pro Trimble XR10 s edicí HoloLens 2 [kontaktujte Trimble](https://fieldtech.trimble.com/en/contact-support).
 
-## <a name="countries-where-hololens-2-is-available"></a>země, kde je k dispozici HoloLens 2
-
-<br>
-
-| edice HoloLens 2                  | Podporované trhy               |
-|-------------------------------------------| ----------------------------------------| 
-| HoloLens 2 | USA, Kanada, Německo, Francie, Velká Británie, Irsko, Indie, Japonsko, Austrálie, Itálie, Nový Zéland, Nizozemsko, Švýcarsko, Španělsko, Rakousko, Švédsko, Finsko, Dánsko, Portugalsko, Portugalsko, Hongkong, Hongkong, Tchaj-wan a Jižní Korea |
-| HoloLens 2 se vzdálenou asistencí | Austrálie, Japonsko, Kanada, USA, Rakousko, Belgie, Dánsko, Finsko, Francie, Německo, Itálie, Nizozemsko, Norsko, Španělsko, Švédsko, Švýcarsko, Spojené království a Irsko <sup>1</sup> 
-| HoloLens 2 – průmyslový edice *(při spuštění)* | USA, Kanada, Německo, Francie, Velká Británie, Irsko, Indie, Japonsko, Austrálie, Itálie, Nový Zéland, Nizozemsko, Švýcarsko, Španělsko, Rakousko, Švédsko, Finsko, Dánsko, Portugalsko, Portugalsko, Hongkong, Hongkong, Tchaj-wan a Jižní Korea |
-| HoloLens 2 – vývojová edice | Kanada, Německo, Francie, Spojené království, Irsko, Japonsko, Austrálie, Itálie, Švýcarsko a Nový Zéland |
-- <sup>1</sup> tento seznam je dynamický, vrátit se změnami aktualizace
 
 ## <a name="options-overview"></a>Přehled možností
 
@@ -90,9 +79,9 @@ prozkoumejte tato další řešení vytvořená pro HoloLens hybridních hybridn
 pro koncové uživatele zařízení si přečtěte téma věnované [přípravě HoloLens 2](hololens2-setup.md) , které se má použít k tomu, abyste mohli začít.
 
 > [!div class="nextstepaction"]
-> [Připravte HoloLens 2 k použití.](hololens2-setup.md)
+> [příprava HoloLens 2 na použití](hololens2-setup.md)
 
-Pro správce IT nasazení zařízení do vaší organizace odemkne výkonná prostředí hybridní reality. Začínáme se seznamte s HoloLens 2 požadavky a scénáři nasazení v celé řadě konfigurací IT infrastruktury.
+Pro správce IT nasazování zařízení do vaší organizace odemkne výkonné hybridní prostředí realit. začněte tím, že zkontrolujete HoloLens 2 požadavky na nasazení a scénáře napříč celou řadou konfigurací infrastruktury IT.
 
 > [!div class="nextstepaction"]
-> [Nasazení HoloLens 2 v komerčním prostředí](hololens-requirements.md)
+> [nasazení HoloLens 2 v komerčním prostředí](hololens-requirements.md)

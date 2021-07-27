@@ -1,7 +1,7 @@
 ---
-title: Správa identity uživatele a přihlašování pro HoloLens
-description: Zjistěte, jak spravovat identitu uživatele, podporu více uživatelů, zabezpečení, podnikové ověřování a přihlašování pro HoloLens zařízení.
-keywords: HoloLens, user, account, AAD, Azure AD, adfs, microsoft account, msa, credentials, reference
+title: Správa identity a přihlášení uživatelů pro HoloLens
+description: naučte se spravovat identitu uživatelů, podporu více uživatelů, zabezpečení, podnikové ověřování a přihlašování pro HoloLens zařízení.
+keywords: HoloLens, uživatel, účet, AAD, Azure AD, adfs, účet microsoft, msa, přihlašovací údaje, reference
 ms.assetid: 728cfff2-81ce-4eb8-9aaa-0a3c3304660e
 author: scooley
 ms.author: scooley
@@ -18,101 +18,101 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 4d959d99b65085aea2a776725abdb36e27b43b81
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 1081ed512183592e66e65f2e69323752b822f1c1
+ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640385"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "114659178"
 ---
-# <a name="manage-user-identity-and-sign-in-for-hololens"></a>Správa identity uživatele a přihlašování pro HoloLens
+# <a name="manage-user-identity-and-sign-in-for-hololens"></a>Správa identity a přihlášení uživatelů pro HoloLens
 
 > [!NOTE]
-> Tento článek je technickým referencem pro IT profesionály a nadšence do technologií. Pokud hledáte pokyny HoloLens, přečtěte si o nastavení[HoloLens (1. generace)](hololens1-start.md)nebo Nastavení HoloLens[2.](hololens2-start.md)
+> Tento článek je technickým odkazem na odborníky v oblasti IT a na techničtí nadšeni. pokud hledáte HoloLens pokyny pro nastavení, přečtěte si téma[nastavení HoloLens (1. generace)](hololens1-start.md)nebo[nastavení HoloLens 2](hololens2-start.md).
 
-Stejně jako Windows zařízení HoloLens vždy funguje v kontextu uživatele. Vždy existuje identita uživatele. HoloLens s identitou zachází téměř stejně jako s jinými Windows 10 zařízeními. Tento článek obsahuje referenční informace o identitě v HoloLens a zaměřuje se na to, HoloLens se liší od ostatních Windows 10 zařízení.
+stejně jako u jiných Windows zařízení HoloLens vždy funguje v kontextu uživatele. Vždy je k dispozici identita uživatele. HoloLens považuje identitu za skoro stejným způsobem jako ostatní zařízení Windows 10. tento článek je obsáhlý podrobněý odkaz na identitu na HoloLens a zaměřuje se na to, jak se HoloLens liší od jiných Windows 10 zařízení.
 
-HoloLens podporuje několik druhů identit uživatelů. K přihlášení můžete použít jeden nebo více uživatelských účtů. Tady je přehled typů identit a možností ověřování v HoloLens:
+HoloLens podporuje několik druhů identit uživatelů. K přihlášení můžete použít jeden nebo více uživatelských účtů. Tady je přehled typů identit a možností ověřování na HoloLens:
 
 | Typ identity | Účty na zařízení | Možnosti ověřování |
 | --- | --- | --- |
-| [Azure Active Directory](/azure/active-directory/)<sup>1</sup>  | 64 | <ul><li>Poskytovatel webových přihlašovacích údajů Azure</li><li>Azure Authenticator App</li><li>Biometrika (Iris) &ndash; HoloLens 2<sup></sup> </li><li>Pin &ndash; je volitelný HoloLens (1. generace) vyžadované pro HoloLens 2.</li><li>Heslo</li></ul> |
-| [Účet Microsoft (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>Biometrické údaje (Iris) &ndash; HoloLens 2</li><li>Pin &ndash; je volitelný HoloLens (1. generace) vyžadované pro HoloLens 2.</li><li>Heslo</li></ul> |
+| [Azure Active Directory](/azure/active-directory/)<sup>1</sup>  | 64 | <ul><li>Poskytovatel přihlašovacích údajů webu Azure</li><li>aplikace Azure Authenticator</li><li>biometrika (Iris) &ndash; HoloLens 2 pouze<sup>2</sup> </li><li>PIN kód &ndash; volitelný pro HoloLens (1. generace), který se vyžaduje pro HoloLens 2</li><li>Heslo</li></ul> |
+| [Účet Microsoft (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts) | 1 | <ul><li>biometrika (Iris) &ndash; HoloLens pouze 2</li><li>PIN kód &ndash; volitelný pro HoloLens (1. generace), který se vyžaduje pro HoloLens 2</li><li>Heslo</li></ul> |
 | [Místní účet](/windows/security/identity-protection/access-control/local-accounts) | 1 | Heslo |
 
-Účty připojené ke cloudu (Azure AD a MSA) nabízejí více funkcí, protože mohou využívat služby Azure.  
+Účty propojené s cloudem (Azure AD a MSA) nabízejí více funkcí, protože můžou používat služby Azure.  
 > [!IMPORTANT]
-> 1 – Azure AD Premium se k zařízení nevyžaduje přihlášení. Vyžaduje se ale pro další funkce cloudového nasazení s nízkými funkcemi, jako je automatická registrace a Autopilot.
+> 1 Azure AD Premium se k přihlášení k zařízení nevyžaduje. Vyžaduje se ale pro jiné funkce cloudového nasazení s nízkým dotykem, jako je automatické registrace a autopilot.
 
 > [!NOTE]
-> 2 – I když zařízení HoloLens 2 podporuje až 64 účtů Azure AD, do ověřování Iris se může zaregistrovat jenom 10 z těchto účtů. To je v souladu s dalšími [možnostmi biometrického ověřování pro Windows Hello pro firmy.](/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer)
+> 2 – když zařízení HoloLens 2 může podporovat až 64 účtů Azure AD, může se v ověřování Iris zaregistrovat jenom 31 těchto účtů. to je zarovnáno s dalšími [možnostmi biometrického ověřování pro Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-faq#how-many-users-can-enroll-for-windows-hello-for-business-on-a-single-windows-10-computer).
 
 ## <a name="setting-up-users"></a>Nastavení uživatelů
 
-Nejběžnějším způsobem, jak nastavit nového uživatele, je HoloLens prostředí při svém provozu. Během instalace HoloLens uživatele k přihlášení pomocí účtu, který chce na zařízení používat. Tento účet může být uživatelský účet Microsoft nebo podnikový účet nakonfigurovaný v Azure. Viz Nastavení HoloLens [(1. generace)](hololens1-start.md) [nebo HoloLens 2.](hololens2-start.md)
+nejběžnější způsob, jak nastavit nového uživatele, je během HoloLensho spouštěného při prvním spuštění. během instalace HoloLens vyzve uživatele k přihlášení pomocí účtu, který chtějí na zařízení použít. Tento účet může být příjemcem účet Microsoft nebo podnikovým účtem, který je nakonfigurovaný v Azure. viz nastavení [HoloLens (1. generace)](hololens1-start.md) nebo [HoloLens 2](hololens2-start.md).
 
-Podobně Windows na jiných zařízeních vytvoří přihlášení během instalace na zařízení profil uživatele. Profil uživatele ukládá aplikace a data. Stejný účet také poskytuje jednotné přihlašování pro aplikace, jako je Edge nebo Microsoft Store, pomocí rozhraní API správce Windows účtu.  
+stejně jako Windows na jiných zařízeních, přihlášení během instalace vytvoří na zařízení profil uživatele. Profil uživatele ukládá aplikace a data. stejný účet taky poskytuje jednotné přihlašování pro aplikace, jako je například Edge nebo Microsoft Store, pomocí rozhraní api Windows správce účtů.  
 
-Pokud se k přihlášení k účtu organizace nebo organizace HoloLens, HoloLens se zaregistruje v infrastruktuře IT organizace. Tato registrace umožňuje správci IT nakonfigurovat Mobile Správa zařízení (MDM) tak, aby odesílala zásady skupiny do HoloLens.
+pokud k přihlášení k HoloLens používáte podnikový nebo organizační účet, HoloLens se zaregistruje v infrastruktuře IT organizace. Tento zápis umožňuje vašemu správci IT nakonfigurovat správu mobilních zařízení (MDM), aby odesílal zásady skupiny na HoloLens.
 
-Stejně jako u jiných zařízení Windows 10 se budete muset při restartování nebo obnovení z pohotovostního HoloLens znovu přihlásit. Ke změně tohoto Nastavení můžete použít aplikaci pro správu nebo toto chování můžete řídit pomocí zásad skupiny.
+ve výchozím nastavení, stejně jako u jiných Windows 10 zařízení, se budete muset znovu přihlásit, když HoloLens restart nebo obnoví činnost z úsporného režimu. toto chování můžete změnit pomocí aplikace Nastavení, nebo můžete chování řídit pomocí zásad skupiny.
 
 ### <a name="linked-accounts"></a>Propojené účty
 
-Stejně jako v desktopové verzi Windows můžete propojit další přihlašovací údaje k webovému účtu HoloLens účtu. Toto propojení usnadňuje přístup k prostředkům v aplikacích nebo v rámci aplikací (jako je Store) nebo kombinování přístupu k osobním a pracovním prostředkům. Po připojení účtu k zařízení můžete aplikacím udělit oprávnění k používání zařízení, abyste se k jednotlivým aplikacím nechcete přihlašovat jednotlivě.
+stejně jako v desktopové verzi Windows můžete propojit další přihlašovací údaje webového účtu s účtem HoloLens. Takové propojení usnadňuje přístup k prostředkům v aplikacích nebo v rámci aplikací (jako je úložiště) nebo ke kombinování přístupu k osobním a pracovním prostředkům. Po připojení účtu k zařízení můžete udělit oprávnění k používání zařízení pro aplikace, abyste se k jednotlivým aplikacím nemuseli přihlašovat jednotlivě.
 
-Propojení účtů neod odděluje uživatelská data vytvořená v zařízení, jako jsou obrázky nebo soubory ke stažení.  
+Propojování účtů nedělí data uživatelů vytvořená v zařízení, například obrázky nebo soubory ke stažení.  
 
-### <a name="setting-up-multi-user-support-azure-ad-only"></a>Nastavení podpory pro více uživatelů (jenom Azure AD)
+### <a name="setting-up-multi-user-support-azure-ad-only"></a>Nastavení podpory více uživatelů (jenom Azure AD)
 
-HoloLens podporuje více uživatelů ze stejného tenanta Azure AD. Pokud chcete tuto funkci použít, musíte k nastavení zařízení použít účet, který patří do vaší organizace. Další uživatelé ze stejného tenanta se k zařízení mohou přihlásit z přihlašovací obrazovky nebo klepnutím na dlaždici uživatele na panelu Start. Současně může být přihlášen pouze jeden uživatel. Když se uživatel přihlásí, HoloLens předchozího uživatele odsoudí. První uživatel v zařízení je považován za vlastníka zařízení, s výjimkou případu připojení ke službě Azure AD. Další informace o vlastníkovi [zařízení.](security-adminless-os.md#device-owner)
+HoloLens podporuje více uživatelů ze stejného tenanta služby Azure AD. Pokud chcete tuto funkci použít, musíte k nastavení zařízení použít účet, který patří do vaší organizace. Následně se ostatní uživatelé ze stejného tenanta můžou přihlásit k zařízení z přihlašovací obrazovky nebo klepnutím na dlaždici uživatele na panelu Start. V jednom okamžiku může být přihlášen pouze jeden uživatel. když se uživatel přihlásí, HoloLens odhlásí předchozího uživatele. První uživatel v zařízení je považován za vlastníka zařízení, s výjimkou případu, kdy se služba Azure AD JOIN týká vlastníků [zařízení](security-adminless-os.md#device-owner).
 
-Všichni uživatelé mohou používat aplikace nainstalované na zařízení. Každý uživatel ale má svá vlastní data a předvolby aplikace. Odebráním aplikace ze zařízení ji odeberete pro všechny uživatele.  
+Všichni uživatelé můžou používat aplikace nainstalované na zařízení. Každý uživatel ale má vlastní data a předvolby aplikace. Odebráním aplikace ze zařízení ji odeberete pro všechny uživatele.  
 
-Zařízení nastavená pomocí účtů Azure AD neumožňují přihlášení k zařízení pomocí účtu Microsoft. Všechny následné použité účty musí být účty Azure AD ze stejného tenanta jako zařízení. Stále se můžete [přihlásit pomocí účtu Microsoft k aplikacím,](hololens-identity.md#setting-up-multi-user-support-azure-ad-only) které ho podporují (například Microsoft Store). Pokud chcete změnit používání účtů Azure AD na účty Microsoft pro přihlášení k zařízení, musíte zařízení [odkazovat na](hololens-recovery.md#clean-reflash-the-device).
+Zařízení nastavená s účty Azure AD neumožní přihlášení k zařízení pomocí účtu Microsoft. Všechny následující účty musí být účty Azure AD ze stejného tenanta jako zařízení. K aplikacím, které ji podporují (například Microsoft Store), se můžete stále [přihlašovat pomocí účtu Microsoft](hololens-identity.md#setting-up-multi-user-support-azure-ad-only) . Pokud chcete změnit použití účtů Azure AD na účty Microsoft pro přihlášení k zařízení, musíte [zařízení znovu zablikat](hololens-recovery.md#clean-reflash-the-device).
 
 > [!NOTE]
-> **HoloLens (1. generace)** začala podporovat více uživatelů Azure AD v [aktualizaci Windows 10 dubna 2018](/windows/mixed-reality/release-notes-april-2018) v [rámci Windows Holographic for Business](hololens-upgrade-enterprise.md).
+> **HoloLens (1. generace)** začala podporovat více uživatelů Azure AD v [Windows 10 aktualizace z dubna 2018](/windows/mixed-reality/release-notes-april-2018) jako součást [Windows Holographic for Business](hololens-upgrade-enterprise.md).
 
 ### <a name="multiple-users-listed-on-sign-in-screen"></a>Více uživatelů uvedených na přihlašovací obrazovce
 
-Dříve se na obrazovce Přihlásit zobrazí jenom naposledy přihlášený uživatel a také vstupní bod Jiný uživatel. Dostali jsme zpětnou vazbu od zákazníků, že to nestačí, pokud se k zařízení přihlásilo více uživatelů. Stále se vyžadovalo, aby znovu zadat své uživatelské jméno atd.
+Předchozí přihlašovací obrazovka zobrazila pouze posledního přihlášeného uživatele a vstupní bod jiného uživatele. Dostali jsme zpětnou vazbu od zákazníků, pokud se k zařízení přihlásilo více uživatelů. Pořád se vyžadovalo, aby znovu zapisovali své uživatelské jméno atd.
 
-Když v Windows Holographic verze [21H1](hololens-release-notes.md#windows-holographic-version-21h1)vyberete  Jiný uživatel, který se nachází napravo od pole pro zadání KÓDU PIN, na přihlašovací obrazovce se zobrazí několik uživatelů, kteří se k zařízení už přihlásili. To umožňuje uživatelům vybrat svůj profil uživatele a pak se přihlásit pomocí svých přihlašovacích Windows Hello uživatele. Nového uživatele můžete do zařízení přidat také z této stránky Ostatní uživatelé pomocí **tlačítka Přidat** účet.
+v [Windows holografické 21H1 verze](hololens-release-notes.md#windows-holographic-version-21h1)se při výběru **dalšího uživatele** , který se nachází napravo od pole pro zadání kódu PIN, zobrazuje na přihlašovací obrazovce více uživatelů, kteří se k zařízení dříve přihlásili. to umožňuje uživatelům vybrat svůj profil uživatele a pak se přihlašovat pomocí svých Windows Hello přihlašovacích údajů. Do zařízení můžete přidat nového uživatele pomocí tlačítka **Přidat účet** na stránce ostatní uživatelé.
 
-V nabídce Ostatní uživatelé se na tlačítku Ostatní uživatelé zobrazí poslední uživatel přihlášený k zařízení. Výběrem tohoto tlačítka se vrátíte na přihlašovací obrazovku tohoto uživatele.
+Když v nabídce ostatní uživatelé přejdete na tlačítko ostatní uživatelé, zobrazí se poslední uživatel přihlášený k zařízení. Kliknutím na toto tlačítko se vrátíte na přihlašovací obrazovku pro tohoto uživatele.
 
 ![Výchozí přihlašovací obrazovka](./images/multiusers1.jpg)
 
 <br>
 
-![Přihlašovací obrazovka – ostatní uživatelé](./images/multiusers2.jpg)
+![Přihlašovací obrazovka jiní uživatelé](./images/multiusers2.jpg)
 
 ## <a name="removing-users"></a>Odebírání uživatelů
 
-Uživatele ze zařízení můžete odebrat tak, že v **Nastavení**  >  **Účty**  >  **Ostatní lidé**. Tato akce také získá místo odebráním všech dat aplikace tohoto uživatele ze zařízení.  
+uživatele můžete ze zařízení odebrat tak, že kliknete na **Nastavení**  >  **účty**  >  **jiní lidé**. Tato akce také uvolní místo tím, že se ze zařízení odeberou všechna data aplikací daného uživatele.  
 
 ## <a name="using-single-sign-on-within-an-app"></a>Použití jednotného přihlašování v rámci aplikace
 
-Jako vývojář aplikací můžete využívat propojené identity ve službě HoloLens pomocí rozhraní API Windows [Account Manageru](/uwp/api/Windows.Security.Authentication.Web.Core), stejně jako na jiných Windows zařízeních. Některé ukázky kódu pro tato rozhraní API jsou k dispozici GitHub: [Ukázka správy webových účtů](https://go.microsoft.com/fwlink/p/?LinkId=620621).
+jako vývojář aplikací můžete využít výhod propojených identit v HoloLens pomocí [rozhraní api Windows správce účtů](/uwp/api/Windows.Security.Authentication.Web.Core), stejně jako na jiných Windows zařízeních. některé ukázky kódu pro tato rozhraní api jsou k dispozici v GitHub: [ukázka správy webových účtů](https://go.microsoft.com/fwlink/p/?LinkId=620621).
 
-Jakákoli přerušení účtu, ke kterým může dojít, například vyžádání souhlasu uživatele s informacemi o účtu, dvojfaktorové ověřování atd., musí být zpracována, když aplikace požádá o ověřovací token.
+Případné přerušení účtu, ke kterému může dojít, například vyžádání souhlasu uživatele pro informace o účtu, dvojúrovňové ověřování a tak dále, musí být zpracovány, když aplikace požaduje ověřovací token.
 
-Pokud vaše aplikace vyžaduje konkrétní typ účtu, který ještě nebyl propojený, může aplikace požádat systém, aby uživatele požádal o jeho přidání. Tento požadavek aktivuje podokno nastavení účtu, aby se spouštěl jako modální podřízený objekt vaší aplikace. U 2D aplikací se toto okno vykreslí přímo přes střed vaší aplikace. U aplikací Unity tato žádost uživatele krátce vyvede z holografické aplikace a vykreslí podřízené okno. Informace o přizpůsobení příkazů a akcí v tomto podokně najdete v tématu [WebAccountCommand – třída](/uwp/api/Windows.UI.ApplicationSettings.WebAccountCommand).
+Pokud vaše aplikace vyžaduje konkrétní typ účtu, který nebyl dříve propojen, může aplikace požádat systém, aby vyzvat uživatele, aby ho přidal. Tato žádost aktivuje podokno nastavení účtu, které se spustí jako modální dítě vaší aplikace. V případě 2D aplikací se toto okno vykreslí přímo přes střed vaší aplikace. V případě aplikací Unity tato žádost krátce převezme uživatele z vaší holografické aplikace, aby vygenerovalo podřízené okno. Informace o přizpůsobení příkazů a akcí v tomto podokně naleznete v tématu [Třída WebAccountCommand](/uwp/api/Windows.UI.ApplicationSettings.WebAccountCommand).
 
-## <a name="enterprise-and-other-authentication"></a>Enterprise a další ověřování
+## <a name="enterprise-and-other-authentication"></a>Enterprise a jiné ověřování
 
-Pokud vaše aplikace používá jiné typy ověřování, například NTLM, Basic nebo Kerberos, můžete uživatelské [rozhraní Windows přihlašovacích](/uwp/api/Windows.Security.Credentials.UI) údajů použít ke shromažďování, zpracování Windows ukládání přihlašovacích údajů uživatele. Uživatelské prostředí pro shromažďování těchto přihlašovacích údajů je velmi podobné jiným přerušením účtu řízeným cloudem a zobrazuje se jako podřízené aplikace nad vaší 2D aplikací nebo krátce pozastaví aplikaci Unity, aby bylo možné zobrazit uživatelské rozhraní.
+pokud vaše aplikace používá jiné typy ověřování, jako je například protokol NTLM, Basic nebo Kerberos, můžete k shromažďování, zpracování a ukládání přihlašovacích údajů uživatele použít [uživatelské rozhraní Windows přihlašovací údaje](/uwp/api/Windows.Security.Credentials.UI) . Uživatelské prostředí shromažďování těchto přihlašovacích údajů se velmi podobá jiným cloudovým přerušením účtů a zobrazuje se jako podřízená aplikace na 2D aplikaci nebo krátce pozastaví aplikaci Unity, aby zobrazovala uživatelské rozhraní.
 
 ## <a name="deprecated-apis"></a>Zastaralá rozhraní API
 
-Jedním ze způsobu, jak se vývoj HoloLens desktopových aplikací liší, je to, že rozhraní API [OnlineIDAuthenticator](/uwp/api/Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator) není plně podporováno. I když rozhraní API vrátí token, pokud je primární účet v pořádku, přerušení, jako jsou přerušení popsaná v tomto článku, nezobrazují uživatelské rozhraní pro uživatele a nedaří se správně ověřit účet.
+jedním ze způsobů, jak se vývoj pro HoloLens liší od vývoje pro Desktop, je to, že rozhraní [OnlineIDAuthenticator](/uwp/api/Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator) API není plně podporované. I když rozhraní API vrátí token, pokud je primární účet v dobrém umístění, přerušení, jako jsou ty popsané v tomto článku, nezobrazují žádné uživatelské rozhraní pro uživatele a nepodaří se mu správně ověřit účet.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-### <a name="is-windows-hello-for-business-supported-on-hololens-1st-gen"></a>Podporuje Windows Hello pro firmy HoloLens (1. generace)?
+### <a name="is-windows-hello-for-business-supported-on-hololens-1st-gen"></a>je Windows Hello pro firmy podporovaná v HoloLens (1. generace)?
 
-Windows Hello pro firmy (která podporuje použití kódu PIN pro přihlášení) je podporovaná pro HoloLens (1. generace). povolení přihlášení PIN Windows Hello pro firmy v HoloLens:
+Windows Hello pro firmy (která podporuje používání kódu PIN pro přihlášení) se podporuje pro HoloLens (1. generace). povolení přihlášení PIN Windows Hello pro firmy v HoloLens:
 
 1. zařízení HoloLens musí být [spravované pomocí MDM](hololens-enroll-mdm.md).
 1. pro zařízení musíte povolit Windows Hello pro firmy. ([Viz pokyny pro Microsoft Intune.](/intune/windows-hello))

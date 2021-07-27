@@ -12,12 +12,12 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a5c0e28eff9bb71135309ec5e484fc5b88f02d08
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: ef2f8723868e14beaf19cb057fffbcbd9e9f51f9
+ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636571"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "114659230"
 ---
 # <a name="set-up-your-hololens-2"></a>nastavení HoloLens 2
 
@@ -39,41 +39,44 @@ Než začnete, ujistěte se, že máte k dispozici následující:
 
 ## <a name="set-up-windows"></a>Instalace Windows
 
-při prvním spuštění HoloLens 2 je prvním úkolem nastavit Windows holografický.  když začnete HoloLens, uslyšíte si hudbu a uvidíte logo Windows.
+při prvním spuštění HoloLens 2 je prvním úkolem nastavit Windows holografický.  když začnete HoloLens, uslyšíte si hudbu a zobrazí se logo microsoftu.
 
-![První obrazovka při prvním spuštění](images/01-magic-moment.png)
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGGk]
+
+<br/>
+<img src="images/01-magic-moment.png" width="500px" alt="First screen during first boot">
 
 Zobrazí se Hummingbird kolem.
 
-![Hummingbirdy plující za](images/hummingbird-1.png)
+<img src="images/hummingbird-1.png" width="500px" alt="Hummingbird flying">
 
-Postupujte podle vašich rukou.
+Bude postupovat podle vaší ruky.
 
-![Hummingbird s uzavřením](images/hummingbird-2.png)
+<img src="images/hummingbird-2.png" width="500px" alt="Hummingbird flying close up">
 
-HoloLens 2 vás provede následujícími kroky:
+Zobrazí se tlačítko s logem Microsoftu. stiskněte tlačítko a HoloLens 2 vás provede následujícími kroky:
 
 1. Vyberte svůj jazyk.
 
-    ![Vybrat jazyk](images/04-language.png)
+    <img src="images/04-language.png" width="500px" alt="Select language">
 
 1. Vyberte oblast.
 
-    ![Vybrat oblast](images/05-region.png)
+    <img src="images/05-region.png" width="500px" alt="Select region">
 
 1. kalibrujte HoloLens své oči.  Pokud se rozhodnete přeskočit kalibraci, budete vyzváni k dalšímu přihlášení. 
 
     1. Nejdřív upravíte své hypervisory.
     
-        ![Obrazovka pro výběr kalibrace](images/06-et-corners.png)
-
+    <img src="images/06-et-corners.png" width="500px" alt="Calibration selection screen">
+    
     2. Kalibraci provedete tak, že se podíváte na sadu cílů (označovaných jako Gems). Je to v pořádku, pokud během kalibrace bliká nebo blízko vaše oči, ale nemusíte je postarit na jiné objekty v místnosti nebo na fyzickém místě. HoloLens tento proces využívá k tomu, abyste se dozvěděli o vaší poloze očí, aby mohl lépe vykreslovat svůj holografický svět. 
 
-        ![Přizpůsobení pro oči](images/07-adjust-eyes.png)
+        <img src="images/07-adjust-eyes.png" width="500px" alt="Adjust for your eyes">
 
         Po kalibraci se hologramy zobrazí správně i v případě, že se hypervisory posunou na hlavu. Informace o kalibraci jsou uloženy místně na zařízení a nejsou přidruženy k žádným informacím o účtu. Další informace najdete v tématu [data kalibrace a zabezpečení](hololens-calibration.md#calibration-data-and-security).
 
-        ![Kalibrace se dokončila.](images/calibration-complete.png)
+        <img src="images/calibration-complete.png" width="500px" alt="Calibration is complete">
 
 1. Připojení k internetu (vyberte Wi-Fi nebo připojení k síti ethernet).
 
@@ -112,7 +115,10 @@ HoloLens 2 vás provede následujícími kroky:
         
 1. Nastavte přihlášení Iris výběrem možnosti **Další**. Přes podobné prostředí se můžete setkat s kalibrací očí. Až se kontrola dokončí, vyberte **Hotovo** . Pokud chcete tento krok obejít, můžete taky vybrat **Přeskočit** .
     
-    ![](images/setup-iris.png) ![ Dokončení instalačního programu Iris pro Iris](images/iris-setup-complete.png) 
+    <img src="images/setup-iris.png" width="500px" alt="Iris setup">
+
+    <img src="images/iris-setup-complete.png" width="500px" alt="Iris setup completion">
+
      
   
 1. Nastavíte PIN kód pro přihlášení k zařízení. Tento kód PIN je specifický pro zařízení. 
@@ -122,32 +128,36 @@ HoloLens 2 vás provede následujícími kroky:
     ![nastavit Windows Hello kód PIN](images/windows-hello-pin.png)
 
     ![Windows Hello Nastavení proběhlo úspěšně](images/windows-hello-successful.png) 
+
     
 1. vyberte, jestli se má povolit rozpoznávání řeči na HoloLens 2.
 
-    ![Povolit Cortana](images/22-do-more-with-voice.png)
+    <img src="images/22-do-more-with-voice.png" width="500px" alt="Enable Cortana">
 
 1. vyberte, jestli se má povolit umístění na HoloLens 2.
     
-    ![Povolit služby zjišťování polohy](images/setup-location-services.png)
+    <img src="images/setup-location-services.png" width="500px" alt="Enable location services">
 
 1. Vyberte úroveň telemetrie. Pokud můžete, povolte prosím volitelnou telemetrii. tyto informace skutečně pomáhají HoloLens technický tým.
 
-     ![Úroveň telemetrie](images/24-telemetry.png)
+    <img src="images/24-telemetry.png" width="500px" alt="Telemetry level">
+
 
 1. naučte se používat počáteční gesto na HoloLens 2.
 
-     ![Naučte se používat gesto Start, obrázek 1.](images/26-01-startmenu-learning.png)
+    <img src="images/26-01-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 1">
 
-     ![Naučte se používat gesto Start, obrázek 2](images/26-02-startmenu-learning.png)
-
-Gratulujeme!  Instalace je hotová a Vy jste připraveni použít HoloLens!
+    <img src="images/26-02-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 2">
+    
+    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3Wxng]
+    
+    Gratulujeme!  Instalace je hotová a Vy jste připraveni použít HoloLens!
 
 ## <a name="next-steps"></a>Další kroky
 
-1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** ve které se můžete podívat na návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
+1. začněte pracovat hned se smíšenými realitami a projděte si Windows 10 v HoloLens – podívejte se na **Tipy** aplikaci, kde najdete praktická cvičení pro interakce. Použijte gesto Start, pokud chcete přejít na Start nebo vyslovit příkaz "Přejít na začátek" a vybrat Tipy.
 
-1. Klikněte níže a pokračujte ve čtení o tom, jak se dostat HoloLens 2.
+1. kliknutím dole můžete pokračovat v čtení HoloLens 2.
 
 > [!div class="nextstepaction"]
 > [Práce s HoloLens 2](hololens2-basic-usage.md)
