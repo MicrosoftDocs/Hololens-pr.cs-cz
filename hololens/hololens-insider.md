@@ -1,6 +1,6 @@
 ---
-title: Insider preview pro Microsoft HoloLens
-description: Naučte se, jak začít se sestaveními Insider, a poskytnout cennou zpětnou vazbu pro naši další velkou aktualizaci operačního systému pro HoloLens.
+title: Insider Preview pro Microsoft HoloLens
+description: Naučte se, jak začít s buildy Insider, a poskytněte vám užitečnou zpětnou vazbu k naší další aktualizaci operačního systému HoloLens.
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -16,51 +16,51 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: b7e5a7cbaa746f58fe0344dd8bf5b027e2e8cea7
-ms.sourcegitcommit: dc5d6f3802c997749775be04de522af8cb6d0850
+ms.openlocfilehash: 52503c0e1ff8c937211500203b91a30806cd317d
+ms.sourcegitcommit: 74f5b64c67026881c8ae46410f272b22862ff582
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/26/2021
-ms.locfileid: "114693702"
+ms.locfileid: "114696311"
 ---
-# <a name="insider-preview-for-microsoft-hololens"></a>Insider preview pro Microsoft HoloLens
+# <a name="insider-preview-for-microsoft-hololens"></a>Insider Preview pro Microsoft HoloLens
 
-Vítá vás nejnovější sestavení Insider Preview pro HoloLens! Začít a poskytnout [cennou zpětnou vazbu](hololens-insider.md#start-receiving-insider-builds) pro naši další velkou aktualizaci operačního systému pro HoloLens.
+Vítejte v nejnovějších buildech Insider Preview pro HoloLens! Je jednoduché začít a poskytnout cennou zpětnou [vazbu k naší](hololens-insider.md#start-receiving-insider-builds) další hlavní aktualizaci operačního systému pro HoloLens.
 
-## <a name="windows-insider-release-notes"></a>Windows Poznámky k verzi Insider
+## <a name="windows-insider-release-notes"></a>Windows Poznámky k verzi programu Insider
 
-S radostí můžeme začít s novými funkcemi, které Windows Insiderům. Nové buildy budou uchytát se do kanálů pro vývoj a beta verze a budou dostávat nejnovější aktualizace. Tuto stránku budeme dál aktualizovat, protože do našich buildů pro Windows Insider přidáme další funkce a aktualizace. Připravte se na kombinaci těchto aktualizací do vaší reality.
+s radostí zahájíme nové funkce, které Windows insidery. Pro nejnovější aktualizace budou nové buildy zacházet s kanály pro vývoj a beta verze. tato stránka bude i nadále aktualizována, protože přidáváme další funkce a aktualizace našich Windows buildů Insider. Využijte rádi a připravte se na tyto aktualizace ke své realitě.
 
-| Funkce                 | Popis                | Uživatel nebo scénář | Zavedené sestavení |
+| Funkce                 | Popis                | Uživatel nebo scénář | Sestavení představeno |
 |-------------------------|----------------------------|--------------|------------------|
-| [Změny CSP pro generování HoloLens sestav](#csp-changes-for-reporting-hololens-details) | Noví csp pro dotazování dat | Správci IT    | 20348.1403                 |
-| [Zásady automatického přihlášení řízené poskytovatelem CSP](#auto-login-policy-controlled-by-csp) | Slouží k automatickému přihlášení účtu. | Správci IT | 20348.1405 |
-| [Podpora souborů PFX pro Správce certifikátů](#pfx-file-support-for-certificate-manager) | Přidání certifikátu PFX prostřednictvím Nastavení uživatelského rozhraní | Koncový uživatel | 20348.1405 |
-| [Zobrazení rozšířené diagnostické sestavy v Nastavení na HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Zobrazení diagnostických protokolů MDM na zařízení | Řešení potíží | 20348.1405 |
-| [Offline diagnostická oznámení](#offline-diagnostics-notifications) | Zpětná vazba k shromažďování protokolů | Řešení potíží | 20348.1405 |
-| [Používejte jenom aplikace privátního Storu pro Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Konfigurace aplikace pro Store tak, aby se v aplikaci zobrazují jenom aplikace z organizace | Správce IT | 20348.1408 |
-| [Opravy a vylepšení](hololens-insider.md#fixes-and-improvements) | Opravy a vylepšení pro HoloLens. | Vše | 20348.1408 |
+| [CSP se mění pro vytváření sestav HoloLens podrobnosti](#csp-changes-for-reporting-hololens-details) | Noví poskytovatelé CSP pro k dotazování na data | Správci IT    | 20348,1403                 |
+| [Zásady automatického přihlašování řízené zprostředkovatelem CSP](#auto-login-policy-controlled-by-csp) | Používá se k automatickému přihlášení k účtu. | Správci IT | 20348,1405 |
+| [Podpora souborů PFX pro správce certifikátů](#pfx-file-support-for-certificate-manager) | přidání certifikátů PFX prostřednictvím Nastavení uživatelského rozhraní | Koncový uživatel | 20348,1405 |
+| [zobrazit pokročilou diagnostickou sestavu v Nastavení v HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Zobrazit diagnostické protokoly MDM na zařízení | Řešení potíží | 20348,1405 |
+| [Upozornění offline diagnostiky](#offline-diagnostics-notifications) | Audiovizuální zpětná vazba pro shromažďování protokolů | Řešení potíží | 20348,1405 |
+| [Používejte pouze aplikace privátního úložiště pro Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Konfigurace aplikace pro Store tak, aby zobrazovala pouze aplikace z organizace | Správce IT | 20348,1408 |
+| [Opravy a vylepšení](hololens-insider.md#fixes-and-improvements) | Opravy a vylepšení HoloLens. | Vše | 20348,1408 |
 
-### <a name="csp-changes-for-reporting-hololens-details"></a>Změny CSP pro generování HoloLens sestav
+### <a name="csp-changes-for-reporting-hololens-details"></a>CSP se mění pro vytváření sestav HoloLens podrobnosti
 
-- Zavedeno v Windows Insider, 20348.1403
+- představeno v Windows build Insider, 20348,1403
 
-Následující csP se aktualizovali o nové způsoby hlášení informací z vašich HoloLens zařízení.
+následující poskytovatelé csp byli aktualizováni novými způsoby, jak ohlásit informace ze zařízení HoloLens.
 
-#### <a name="devdetail-csp---free-storage"></a>DevDetail CSP – Bezplatná Storage
+#### <a name="devdetail-csp---free-storage"></a>DevDetail CSP – bezplatná Storage
 
-DevDetail CSP teď také hlásí volné místo v HoloLens zařízení. Tato hodnota by se měla přibližně shodovat s hodnotou Nastavení na stránce Storage aplikace. Následuje konkrétní uzel, který obsahuje tyto informace.
+DevDetail CSP nyní také oznamuje volné místo v úložišti HoloLens zařízení. hodnota by měla odpovídat hodnotě zobrazené na stránce Storage aplikace Nastavení. Následuje konkrétní uzel, který obsahuje tyto informace.
 
 - ./DevDetail/Ext/Microsoft/FreeStorage (pouze operace GET)
 
 #### <a name="devicestatus-csp---ssid-and-bssid"></a>DeviceStatus CSP – SSID a BSSID
 
-DeviceStatus CSP nyní také hlásí SSID a BSSID Wi-Fi sítě, se HoloLens je aktivně připojen. Níže jsou uvedené konkrétní uzly, které obsahují tyto informace.
+DeviceStatus CSP nyní také hlásí identifikátory SSID a BSSID Wi-Fi sítě, se kterou HoloLens aktivně připojená. Níže jsou uvedené konkrétní uzly, které obsahují tyto informace.
 
-- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/*adresa mac Wi-Fi adaptéru*/SSID
-- ./Vendor/MSFT/DeviceStatus/NetworkIdentifiers/*adresa MAC Wi-Fi adaptéru*/BSSID
+- *Adresa MAC adaptéru Wi-Fi*/SSID/Vendor/MSFT/DeviceStatus/NetworkIdentifiers/
+- *Adresa MAC adaptéru Wi-Fi*/BSSID/Vendor/MSFT/DeviceStatus/NetworkIdentifiers/
 
-Příklad objektu blob syncml (pro dodavatele MDM) pro dotazování na NetworkIdentifiers
+Příklad objektu BLOB SyncML (pro dodavatele MDM) pro dotazování na NetworkIdentifiers
 
 ```xml
 <SyncML>
@@ -80,57 +80,57 @@ Příklad objektu blob syncml (pro dodavatele MDM) pro dotazování na NetworkId
 </SyncML>
 ```
 
-### <a name="auto-login-policy-controlled-by-csp"></a>Zásady automatického přihlášení řízené poskytovatelem CSP
+### <a name="auto-login-policy-controlled-by-csp"></a>Zásady automatického přihlašování řízené zprostředkovatelem CSP
 
-Tato nová zásada AutoLogonUser určuje, jestli se uživatel automaticky přihlásí. Někteří zákazníci chtějí nastavit zařízení, která jsou svázaná s identitou, ale nechcete žádné přihlašovací prostředí. Imagine vyzvednutí zařízení a okamžité použití vzdálené pomoci. Nebo můžete mít výhodu, že dokážete rychle distribuovat HoloLens zařízení a umožnit koncovým uživatelům urychlit přihlášení.
+Tato nová zásada AutoLogonUser určuje, jestli se uživatel automaticky přihlašuje. Někteří zákazníci chtějí nastavit zařízení, která jsou vázaná na identitu, ale nechtějí žádné přihlašovací prostředí. Imagine vyzvednutí zařízení a okamžitě pomocí programu vzdálená pomoc. nebo využijte výhod, které vám umožní rychle distribuovat HoloLens zařízení a umožnit koncovým uživatelům urychlení přihlašovacích údajů.
 
-Pokud je zásada nastavená na neprázdnou hodnotu, určuje e-mailovou adresu uživatele s automatickým přihlášením. Zadaný uživatel se musí alespoň jednou přihlásit k zařízení, aby se umožnilo automatické přihlášení.
+Když je zásada nastavená na neprázdnou hodnotu, určí se e-mailová adresa uživatele automatického přihlašování. Zadaný uživatel se musí k zařízení přihlašovat aspoň jednou, aby se povolilo automatické přihlašování.
 
-OMA-URI nové hodnoty řetězce `./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser` zásad
+OMA-URI nové `./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser` hodnoty řetězce zásad
 
-- Uživatel se stejnou e-mailovou adresou bude mít povolené automatické přihlášení.
+- Uživatel se stejnou e-mailovou adresou bude mít povoleno automatické přihlašování.
 
-Na zařízení, kde je tato zásada nakonfigurovaná, se musí uživatel zadaný v zásadách alespoň jednou přihlásit. Po dalším restartování zařízení po prvním přihlášení se zadaný uživatel automaticky přihlásí. Podporuje se jenom jeden uživatel s automatickým přihlášením. Po povolení se automaticky přihlášený uživatel nebude moct odhlásit ručně. Pokud se chcete přihlásit jako jiný uživatel, musí být zásada nejprve zakázaná.
+V zařízení, na kterém je tato zásada nakonfigurovaná, se uživatel zadaný v zásadě musí přihlašovat aspoň jednou. Následná restartování zařízení po prvním přihlášení budou mít zadaného uživatele automaticky přihlášeni. Podporuje se jenom jeden uživatel s automatickým přihlašováním. Po povolení se automaticky přihlášený uživatel nebude moci odhlásit ručně. Pokud se chcete přihlásit jako jiný uživatel, musí být tato zásada nejdřív zakázaná.
 
 > [!NOTE]
-> - Některé události, jako jsou například hlavní aktualizace operačního systému, mohou vyžadovat, aby se zadaný uživatel k zařízení znovu přihlásit, aby obnovoval chování automatického přihlášení. 
-> - Automatické přihlášení se podporuje jenom pro uživatele MSA a AAD.
+> - Některé události, jako jsou hlavní aktualizace operačního systému, můžou vyžadovat, aby zadaný uživatel znovu přihlásí k zařízení a obnovil chování automatického přihlašování. 
+> - Automatické přihlašování se podporuje jenom pro uživatele MSA a AAD.
 
-### <a name="pfx-file-support-for-certificate-manager"></a>Podpora souborů PFX pro Správce certifikátů
+### <a name="pfx-file-support-for-certificate-manager"></a>Podpora souborů PFX pro správce certifikátů
 
-Zavedeno v Windows Insider buildu 20348.1405. Do Správce certifikátů jsme přidali [podporu](certificate-manager.md) pro použití certifikátů .pfx. Když uživatelé **přecházou Nastavení** Update & Security Certificates a vyberou Install a certificate (Nainstalovat certifikát), uživatelské rozhraní teď podporuje soubor certifikátu  >    >    .pfx.
-Uživatelé mohou importovat certifikát .pfx s privátním klíčem do úložiště uživatelů nebo do úložiště počítače.
+představeno v Windows build Insider build 20348,1405. Přidali jsme podporu [Správce certifikátů](certificate-manager.md) pro teď použití certifikátů. pfx. když uživatel přejde na **Nastavení**  >  **Update &**  >  **certifikáty** zabezpečení a vybere možnost **nainstalovat certifikát** , uživatelské rozhraní teď podporuje soubor certifikátu. pfx.
+Uživatelé mohou importovat certifikát. pfx s privátním klíčem do úložiště uživatele nebo do úložiště počítače.
 
-### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Zobrazení rozšířené diagnostické sestavy v Nastavení na HoloLens
+### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>zobrazit pokročilou diagnostickou sestavu v Nastavení v HoloLens
 
-Pro spravovaná zařízení při řešení potíží je důležitým krokem potvrzení, že se používá očekávaná konfigurace zásad. Dříve se tato nová funkce musela po exportu diagnostických protokolů MDM shromážděných přes **přístup** k účtům Nastavení do práce nebo do školy provést mimo zařízení přes MDM nebo v blízkosti zařízení a vybrat Export protokolů správy a zobrazit se na okolním  ->    >  počítači. 
+Pro spravovaná zařízení při řešení potíží ověřte, že se používá očekávaná konfigurace zásad, což je důležitý krok. dříve se tato nová funkce musela po exportu protokolů pro diagnostiku mdm shromážděných prostřednictvím **Nastavení**  ->  **účtů**  >  **přistupovat do práce nebo do školy** a vybrat možnost **exportovat protokoly správy** a zobrazit je na nejbližším počítači v blízkosti zařízení.
 
-Teď můžete diagnostiku MDM zobrazit na zařízení pomocí prohlížeče Edge. Pokud chcete sestavu diagnostiky MDM snadněji zobrazit, přejděte na stránku Přístup do práce nebo do školy a vyberte **Zobrazit pokročilou diagnostickou sestavu.** Tím se sestava vygeneruje a otevře v novém okně Edge.
+Diagnostiku MDM je teď možné zobrazit na zařízení pomocí prohlížeče Edge. Chcete-li snadněji zobrazit diagnostickou zprávu MDM, přejděte na stránku přístup do práce nebo do školy a vyberte **Zobrazit pokročilou diagnostickou sestavu**. Tato akce vygeneruje a otevře sestavu v novém okně Edge.
 
-![Zobrazení rozšířené diagnostické sestavy v Nastavení aplikaci](./images/view-advanced-diagnostic-report.jpg)
+![zobrazit pokročilou diagnostickou sestavu v aplikaci Nastavení.](./images/view-advanced-diagnostic-report.jpg)
 
-### <a name="offline-diagnostics-notifications"></a>Offline diagnostická oznámení
+### <a name="offline-diagnostics-notifications"></a>Upozornění offline diagnostiky
 
-Tato aktualizace pro existující funkci s názvem [Offline diagnostika](hololens-diagnostic-logs.md#offline-diagnostics). Dříve se uživatelům nespouštěl žádný jasný indikátor, že aktivoval shromažďování diagnostických dat nebo že se dokončilo.
-V buildech Windows Insider jsou teď k dispozici dvě formy zpětné vazby k offline diagnostice. Prvními jsou informační zprávy, které se zobrazují při spuštění a dokončení shromažďování. Ty se zobrazí, když je uživatel přihlášený a má vizuály.
+Tato aktualizace pro existující funkci se nazývá [offline Diagnostika](hololens-diagnostic-logs.md#offline-diagnostics). Dříve neexistoval žádný jasný indikátor pro uživatele, kteří aktivovali diagnostické shromažďování nebo dokončili.
+nově přidaná v Windows buildů Insider existují dvě formy audiovizuální zpětné vazby pro Offline diagnostiku. První je oznámení, která se zobrazují pro obě při spuštění a dokončení shromažďování. Ty se zobrazí, když je uživatel přihlášený a obsahuje vizuály.
 
-![Informační zprávy pro shromažďování protokolů](./images/logcollection1.jpg)
+![Informační zprávy pro shromažďování protokolů.](./images/logcollection1.jpg)
 
-![Informační zpráva po dokončení shromažďování protokolů](./images/logcollection2.jpg)
+![Informační zprávy, když je shromažďování protokolů dokončeno.](./images/logcollection2.jpg)
  
-Vzhledem k tomu, že uživatelé často používají offline diagnostiku jako záložní mechanismus shromažďování protokolů, když nemají přístup k displeji, nemůže se přihlásit nebo jsou stále v OOBE, bude se při shromažďování protokolů přehrávat také zvukové signály. Tento zvuk se přehraje spolu s informační zprávou.
+Vzhledem k tomu, že uživatelé často používají offline diagnostiku jako záložní mechanismus pro shromažďování protokolů, kdy nemají přístup k zobrazení, nemůžete se přihlásit nebo jsou pořád v počátečním souboru OOBE, při shromažďování protokolů se taky dohraje zvukový signál. Tento zvuk se přehraje kromě informačního oznámení.
 
-Tato nová funkce se povolí při aktualizaci zařízení a nemusí být povolená ani spravovaná. Offline diagnostika se bude generovat i v případě, že tuto novou zpětnou vazbu nelze zobrazit ani slyšet.
+Tato nová funkce bude povolená, když se vaše zařízení aktualizuje a nebude nutné ho povolit ani spravovat. V případě, že tuto novou zpětnou vazbu nelze zobrazit nebo zobrazit, bude i nadále vygenerována offline Diagnostika.
 
-Doufáme, že s tímto novějším přidáním zpětné vazby k zákazníkům je snazší shromáždit diagnostická data a rychleji vyřešit vaše problémy.
+Doufáme, že s tímto novějším přidáním audiovizuální zpětné vazby je snazší shromažďovat diagnostická data a rychleji řešit problémy.
 
-### <a name="use-only-private-store-apps-for-microsoft-store"></a>Pro Microsoft Store používejte jenom aplikace pro privátní Microsoft Store
+### <a name="use-only-private-store-apps-for-microsoft-store"></a>Pro Microsoft Store používat jenom soukromé aplikace ze Storu
 
-Zásady RequirePrivateStoreOnly jsou povolené pro HoloLens. Tato zásada umožňuje konfiguraci Microsoft Store aplikace tak, aby se v aplikaci nakonfiguroval jenom privátní obchod nakonfigurovaný pro vaši organizaci. Omezení přístupu pouze k aplikacím, které byly k dispozici.
+Zásada RequirePrivateStoreOnly je povolená pro HoloLens. tato zásada umožňuje, aby byla aplikace Microsoft Store nakonfigurovaná tak, aby zobrazovala jenom privátní úložiště nakonfigurované pro vaši organizaci. Omezení přístupu pouze k aplikacím, které byly k dispozici.
 
 Další informace o [ApplicationManagement/RequirePrivateStoreOnly](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
 
-### <a name="fixes-and-improvements"></a>Opravy a vylepšení:
+### <a name="fixes-and-improvements"></a>Opravy a vylepšení
 
 - Opravili [jsme známý problém s portálem zařízení, kde se nestáhly uzamčené soubory.](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)
 - Opravili jsme [známý problém s portálem zařízení s časovým limitem nahrávání a stahování souborů.](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)
