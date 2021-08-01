@@ -16,12 +16,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 52503c0e1ff8c937211500203b91a30806cd317d
-ms.sourcegitcommit: 74f5b64c67026881c8ae46410f272b22862ff582
+ms.openlocfilehash: e8adb2f796299c99a9152a5b245e8bdd0b768f05
+ms.sourcegitcommit: 78e5f26014e55c13fee9c2b75a80810fd2e77877
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114696311"
+ms.lasthandoff: 07/31/2021
+ms.locfileid: "115009336"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Insider Preview pro Microsoft HoloLens
 
@@ -39,7 +39,8 @@ s radostí zahájíme nové funkce, které Windows insidery. Pro nejnovější a
 | [zobrazit pokročilou diagnostickou sestavu v Nastavení v HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Zobrazit diagnostické protokoly MDM na zařízení | Řešení potíží | 20348,1405 |
 | [Upozornění offline diagnostiky](#offline-diagnostics-notifications) | Audiovizuální zpětná vazba pro shromažďování protokolů | Řešení potíží | 20348,1405 |
 | [Používejte pouze aplikace privátního úložiště pro Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Konfigurace aplikace pro Store tak, aby zobrazovala pouze aplikace z organizace | Správce IT | 20348,1408 |
-| [Opravy a vylepšení](hololens-insider.md#fixes-and-improvements) | Opravy a vylepšení HoloLens. | Vše | 20348,1408 |
+| [Vylepšení shromažďování protokolů s nízkým úložištěm](#low-storage-log-collection-improvements) | Vylepšení scénářů shromažďování protokolů během nedostatku případů úložiště. | Správce IT | 20348,1412 |
+| [Opravy a vylepšení](hololens-insider.md#fixes-and-improvements) | Opravy a vylepšení HoloLens. | Vše | 20348,1411 |
 
 ### <a name="csp-changes-for-reporting-hololens-details"></a>CSP se mění pro vytváření sestav HoloLens podrobnosti
 
@@ -130,13 +131,16 @@ Zásada RequirePrivateStoreOnly je povolená pro HoloLens. tato zásada umožňu
 
 Další informace o [ApplicationManagement/RequirePrivateStoreOnly](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
 
+### <a name="low-storage-log-collection-improvements"></a>Vylepšení shromažďování protokolů s nízkým úložištěm
+
+Ve scénářích, kdy se u zařízení při shromažďování diagnostických protokolů jeví nedostatek místa na disku, vytvoří se další zpráva s názvem **StorageDiagnostics.zip** . prahová hodnota nízkého úložiště je určena automaticky Windows [smyslem úložiště](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48).
+
 ### <a name="fixes-and-improvements"></a>Opravy a vylepšení
 
 - Opravili [jsme známý problém s portálem zařízení, kde se nestáhly uzamčené soubory.](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)
 - Opravili jsme [známý problém s portálem zařízení s časovým limitem nahrávání a stahování souborů.](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)
 - řeší problémy při vytváření sestav vlastností dodržování předpisů z HoloLens zařízení; pro spuštění správných sestav na buildech Insider může být nutné restartovat počítač.  
 - Aktualizace integrované verze vzdálené pomoci, která je nainstalovaná na nových bliknutích
-
 
 ## <a name="start-receiving-insider-builds"></a>Zahájit přijímání buildů Insider
 
