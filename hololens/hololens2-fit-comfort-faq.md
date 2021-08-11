@@ -1,6 +1,6 @@
 ---
-title: Nejčastější dotazy k přizpůsobení a komfortu HoloLens 2
-description: Získejte aktuální odpovědi na nejčastější dotazy týkající se toho, jak přizpůsobit HoloLens 2 a jak si v prostředí hybridní reality osídíte pohodlí.
+title: HoloLens 2 – nejčastější dotazy k přizpůsobení a pohodlí
+description: udržujte si přehled o odpovědích na nejčastější dotazy týkající se vaší HoloLens 2 a buďte v hybridním prostředí realit příjemné.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -13,57 +13,57 @@ ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 158354c23e93abe770875491af1ab559e47557a7
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 9edcf4e49d92bbdcab523206e4685f2d7a8d8b0e2c2ccf8391ea2b32e304201f
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379301"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659789"
 ---
-# <a name="hololens-2-fit-and-comfort-frequently-asked-questions"></a>HoloLens 2 – fitování a komfort – nejčastější dotazy
+# <a name="hololens-2-fit-and-comfort-frequently-asked-questions"></a>HoloLens 2 přizpůsobení a pohodlí nejčastějších dotazů
 
-Tady je několik tipů, jak si s HoloLens pohovovat a mít co nejlepší zkušenosti.
+Tady je několik tipů, jak si můžete zůstat v pohodlí a máte nejlepší zkušenosti s používáním HoloLens.
 
-Podrobné pokyny a video o nastavení a úpravě zařízení najdete v tématu získejte [holoLens 2 připravený k použití.](hololens2-setup.md)
+podrobné pokyny a video o tom, jak začít a upravovat zařízení, najdete v článku o tom, [jak HoloLens 2 připravené k použití](hololens2-setup.md).
 
 > [!NOTE]
-> Fit a tipy pro komfort v tomto tématu jsou určeny pouze jako obecné pokyny, které nenahrazuje žádné zákony ani předpisy ani váš dobrý úsudek při používání &mdash; HoloLens. Zůstaňte v bezpečí a bavte se!
+> Tipy pro přizpůsobení a pohodlí v tomto tématu jsou určené jenom jako obecné pokyny &mdash; , které nenahrazují žádné zákony nebo předpisy, nebo váš dobrý soud při použití HoloLens. Buďte v bezpečí a bavte se.
 
-Tady je několik tipů, jak si s HoloLens pohovovat a mít co nejlepší zkušenosti.
+Tady je několik tipů, jak si můžete zůstat v pohodlí a máte nejlepší zkušenosti s používáním HoloLens.
 
-## <a name="im-experiencing-discomfort-when-i-use-my-device-what-should-i-do"></a>Při používání zařízení dochází k problémům. Co bych měl/a dělat?
+## <a name="im-experiencing-discomfort-when-i-use-my-device-what-should-i-do"></a>Mám potíže, když používám zařízení. Co bych měl/a dělat?
 
-Pokud se vyžíváte v prostředí, vezměte si přestávku, dokud se nebude cítit lépe. Zkuste si chvíli posedět v dobře rozsvícené místnosti a trochu si odpočinit. Při příštím použití HoloLens ji zkuste na první pohled použít na kratší dobu.
+Pokud budete mít možnost nepohodlí, podělte se o přerušení, dokud to nebudete mít lepší. Zkuste nesedí v dobře osvětlené místnosti a požadavků. při příštím použití HoloLens ji zkuste použít po kratší dobu v prvním kroku.
 
-Další informace najdete v tématu [o stavu a bezpečnosti zařízení HoloLens.](https://go.microsoft.com/fwlink/p/?LinkId=746661)
+Další informace najdete v tématu [stav a zabezpečení na HoloLens](https://go.microsoft.com/fwlink/p/?LinkId=746661).
 
-## <a name="i-cant-see-the-whole-holographic-frame-or-my-holograms-are-cut-off"></a>Nevidím celý holografický rám nebo jsou odříznuty hologramy
+## <a name="i-cant-see-the-whole-holographic-frame-or-my-holograms-are-cut-off"></a>Nemůžu zobrazit celý holografický rámec, nebo se moje hologramy oříznou.
 
-Pokud chcete zobrazit horní okraj holografického rámu, přesuňte zařízení tak, aby bylo na výšce na vaší straně, nebo mírně naklonujte pásku na přední straně. Pokud chcete vidět dolní okraj, přesuňte zařízení do dolní části hlavy nebo mírně naklonujte horní mez. Pokud není levý nebo pravý okraj rámečku zobrazení viditelný, ujistěte se, že je zorník HoloLens za středem vašeho čela.
+Pokud se chcete podívat na horní okraj holografického rámce, přesuňte zařízení tak, aby bylo na vaší hlavě větší, nebo HEADBAND, mírně dopředu. Pokud se chcete podívat na dolní hranu, přesuňte zařízení do spodní části na vaší hlavě nebo HEADBAND dolů a mírně ho. pokud není levý nebo pravý okraj rámce zobrazení viditelný, ujistěte se, že je HoloLens rozcestníku v forehead.
 
-## <a name="i-need-to-look-up-or-down-to-see-holograms"></a>Potřebuji se podívat nahoru nebo dolů, abych si mohl zobrazit hologramy
+## <a name="i-need-to-look-up-or-down-to-see-holograms"></a>Potřebuji vyhledat nebo dolů, aby se zobrazily hologramy.
 
-Zkuste upravit polohu visoru zařízení tak, aby holografický snímek odpovídal vašemu přirozenému pohledu. Jak na to:
+Zkuste upravit polohu zařízení s clonou, aby holografický snímek odpovídal vašemu přirozenému pohledu. Jak na to:
 
-- **Pokud potřebujete najít hologramy.** Nejprve posunout zadní část pásky o trochu výš na hlavy. Pak jednou rukou přidržte pásku na místě a druhou k otočení zorzoru, abyste měli dobrý pohled na holografický rám.
-- **Pokud se potřebujete podívat dolů, abyste viděli hologramy**. Nejprve posouváním zadní části headbandu o něco níže na hlavy. Potom umístěte palce pod ruce zařízení a indexový šmouh na návršník a oříznou palcem, abyste měli dobrý pohled na holografický rám.
+- **Pokud potřebujete vyhledat hologramy, přejděte na**. Nejdřív v horní části posune zadní část HEADBAND o něco vyšší. Pak použijte jednu ruku pro uložení HEADBAND na místě a druhý pro mírné otočení hypervisoru, abyste měli dobrý pohled na holografický rámec.
+- **Pokud se potřebujete podívat na hologramy**. Nejdřív v horním rohu posune zadní část HEADBAND a trochu dole. Potom umístěte své jezdce do rukou zařízení a do svého indexeru v HEADBAND a jemně se dohodněte s vašimi pootočením, aby se zobrazila clona, takže máte dobrý přehled o holografickém snímku.
 
-## <a name="hologram-image-color-or-brightness-does-not-look-right"></a>Barva nebo jas obrázku hologramu nevypadá správně
+## <a name="hologram-image-color-or-brightness-does-not-look-right"></a>Barva nebo jas obrázku na hologramu nevypadá vpravo
 
-Podívejte se na postup řešení potíží s zobrazením HoloLens [2.](hololens2-display.md)
+projděte si část HoloLens 2 – [postup řešení potíží](hololens2-display.md).
 
-## <a name="the-device-slides-down-when-im-using-it-or-i-need-to-make-the-headband-too-tight-to-keep-it-secure"></a>Zařízení se při používání posune dolů nebo potřebuji, aby byl pásek příliš úzkou, aby byl zabezpečený.
+## <a name="the-device-slides-down-when-im-using-it-or-i-need-to-make-the-headband-too-tight-to-keep-it-secure"></a>Zařízení vystaví, když ho používám, nebo je potřeba udělat HEADBAND příliš těsný, aby se zajistilo jeho zabezpečení.
 
-Režijní náklady vám můžou pomoct udržet holoLens v bezpečí, zejména pokud se pohybujete hodně. Také vám může poněkud uvolnit pásku. [Naučte se ho používat.](hololens2-setup.md#adjust-fit)
+popruh režijních nákladů vám může pomáhat zajistit HoloLens zabezpečení na vaší hlavě, zejména pokud se pohybujete okolo nějakého světa. Popruh může také umožnit, abyste headbandi, že je bit k dispozici. [Přečtěte si, jak ho používat](hololens2-setup.md#adjust-fit).
 
-Můžete také experimentovat s umístěním headbandu v závislosti na velikosti a tvaru hlavy. Možná ho budete muset posouváním nahoru nebo dolů přemístit &mdash; na čelo.
+Můžete také experimentovat s umístěním HEADBAND &mdash; v závislosti na velikosti a tvaru hlav, možná budete muset snímek přesunout nahoru nebo dolů, abyste ho změnili na Forehead.
 
-## <a name="how-can-i-adjust-hololens-to-fit-with-my-glasses"></a>Jak můžu holoLens upravit tak, aby se vešel do brýlí?
+## <a name="how-can-i-adjust-hololens-to-fit-with-my-glasses"></a>jak mohu upravit HoloLens, aby odpovídala svým brýlem?
 
-Pokud chcete přizpůsobit zrak, můžete visor naklonovat.
+Pro přizpůsobení Eyewear můžete naklonovat hypervisor.
 
-## <a name="my-arm-gets-tired-when-i-use-gestures-what-can-i-do"></a>Když používám gesta, napadne mě únava. Co mám udělat?
+## <a name="my-arm-gets-tired-when-i-use-gestures-what-can-i-do"></a>My ARM získá už vás unavuje při použití gest. Co mám udělat?
 
-Při použití gest není potřeba rozšiřovat ruce daleko od těla. Udržujte ho blíže ke své straně, kde je pohodlnější a bude méně únavný. Můžete také použít ruční paprsky k interakci s hologramy bez zduchování rukou. Další informace o [gestech a ručních paprskech.](hololens2-basic-usage.md#the-hand-tracking-frame)
+Pokud používáte gesta, nemusíte nic od svého těla nijak rozkrývat. Snažte se přiblížit na vaši stranu, kde je pohodlnější a získáte méně už vás unavuje. K interakci s hologramy můžete také použít pracovní paprsky, aniž byste museli vymezit své zbraně [více o gestech a pohybech rukou](hololens2-basic-usage.md#the-hand-tracking-frame).
 
-A nezapomeňte vyzkoušet hlasové [příkazy](hololens-cortana.md).
+A nezapomeňte si vyzkoušet [hlasové příkazy](hololens-cortana.md).

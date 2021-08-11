@@ -1,7 +1,7 @@
 ---
 title: Příprava nového HoloLens 2
-description: Naučte se, jak nastavit a upravit zařízení HoloLens 2 poprvé, včetně tipů pro stav a zabezpečení a hardwarových průvodců.
-keywords: HoloLens, světla, přizpůsobení, pohodlí, části
+description: Zjistěte, jak poprvé nastavit a upravit zařízení HoloLens 2, včetně tipů pro stav a zabezpečení a průvodců hardwarem.
+keywords: hololens, lights, fit, komfort, parts
 ms.assetid: 02692dcf-aa22-4d1e-bd00-f89f51048e32
 ms.date: 9/17/2019
 ms.prod: hololens
@@ -12,117 +12,117 @@ ms.topic: article
 ms.localizationpriority: high
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 22b3dad817260175bccdb89faac0bbae7b210038
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 13f7000f608e6375efce201f1edd1627900ecdda2f86ddca8a174ac0b8e43ceb
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924430"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115658961"
 ---
-# <a name="get-your-hololens-2-ready-to-use"></a>Získejte svůj HoloLens 2 připravený k použití
+# <a name="get-your-hololens-2-ready-to-use"></a>Připravte HoloLens 2 k použití.
 
-Následující postupy vám pomůžou nastavit HoloLens 2 poprvé.
+Následující postupy vám pomůžou poprvé nastavit HoloLens 2.
 
-## <a name="charge-your-hololens"></a>Zpoplatnění HoloLens
+## <a name="charge-your-hololens"></a>Poplatek za HoloLens
 
-Připojte zdroj napájení k portu pro zpoplatnění pomocí kabelu USB-C (zahrnutého). Zapojte napájecí zdroj do zásuvky napájení. Nejlepším způsobem, jak účtovat pracovní sílu HoloLens 2, je napájení a kabel USB-C-to-C, který je součástí zařízení. Nabíječka dodá 18W výkonu (9V v 2A). Pomocí dodaných nabíječk zdí můžou zařízení s HoloLens 2 po dobu, kdy je zařízení v pohotovostním režimu, navýšit baterie na plnou dobu během méně než 65 minut.
+Připojte napájecí zdroj k portu pro účtování pomocí kabelu USB-C (součástí balení). Zapojte napájecí zdroj do napájecího zdroje. Nejlepší způsob, jak zařízení HoloLens 2 naúčtovat, je napájecí zdroj a kabel USB-C-to-C, který se dodává se zařízením. 18 W energie (9V při 2A) dosáhnou 18 W energie. Když je zařízení HoloLens 2 v pohotovostním režimu, mohou při dodaném zdi naplno nabít baterie za méně než 65 minut.
 
-Rychlost nabíjení a rychlost se můžou lišit v závislosti na prostředí, ve kterém je zařízení spuštěné.
+Rychlost a rychlost zpoplatnění se může lišit v závislosti na prostředí, ve kterém zařízení běží.
 
-- Když se zařízení účtuje, indikátory baterie až do indikace aktuální úrovně zpoplatnění.  Poslední světlo zmizí a odznačí aktivní zpoplatnění.
-- Když je zapnutý HoloLens, indikátor baterie zobrazuje úroveň baterie v přírůstcích.
-- Pokud je zapnutá jenom jedna z pěti světel, úroveň baterie je nižší než 20 procent.
-- Pokud je úroveň baterie kriticky nízká a pokusíte se zařízení zapnout, bude se krátce rozsvítit v jednom světle a pak se vrátí.
+- Když se zařízení nabíjí, indikátor baterie se rozsvítí, aby indikuje aktuální úroveň poplatku.  Poslední světlo postupně zeslábne a bude indikovat aktivní zpoplatnění.
+- Když je holoLens v systému, indikátor baterie zobrazí úroveň baterie v přírůstcích.
+- Když je jen jedna z pěti světel rozsvícená, je úroveň baterie nižší než 20 procent.
+- Pokud je úroveň baterie kriticky nízká a pokusíte se zařízení zapnout, jedno světlo krátce blikne a pak vypadne.
 
-Pokud potřebujete další informace, [můžete si přečíst úplné podrobnosti o zpoplatnění zařízení](hololens2-charging.md#charging-the-device) . 
+Pokud [potřebujete další informace, můžete si](hololens2-charging.md#charging-the-device) tady přečíst úplné podrobnosti o účtování zařízení. 
 
-## <a name="adjust-fit"></a>Přizpůsobit
+## <a name="adjust-fit"></a>Úprava přizpůsobení
 
-Umístěte HoloLens 2 na hlavu. Pokud si brýlí sami, ponechte je zapnuté.  Prohlížeč panel by se měl pohodlně napravit na Forehead a zadní plocha by měla být na zadní straně vaší hlavy.
+Umístěte HoloLens 2 na hlavičku. Pokud máte brýle, nechejte je v sobě.  Na čedici by se měl nachytá čediče a zadní část by měla být uprostřed zad vaší hlavy.
 
-V případě potřeby rozšíříte HEADBAND otočením kolace úprav a následným vyvoláním popruhu režijních nákladů.
+V případě potřeby rozšiřte pásek tak, že otočením kolečka pro úpravy uvolněte režijní most.
 
-![Přizpůsobení a přizpůsobení HoloLens 2](images/hololens2-fit.png)
+![HoloLens 2 – přizpůsobení a úpravy](images/hololens2-fit.png)
 
-### <a name="attach-and-detach-the-overhead-strap"></a>Připojit a odpojit popruh režijních nákladů
+### <a name="attach-and-detach-the-overhead-strap"></a>Připojte a odpojte režijní náklady.
 
-Popruhení režijních nákladů se nevyžaduje, ale během dlouhých dob používání může pohodlně použít HoloLens 2.
+Režie není nutná, ale v dlouhých obdobích použití může mít nosný HoloLens 2 pohodlnější.
 
-Chcete-li odpojit přední stranu popruh režijních nákladů, odpojte popruh a procházejte ho pomocí revolávatelné smyčky na panelu prohlížeč. Pokud ho chcete znovu připojit, vysuňte smyčku a procházejte přepruhek zpátky.
+Pokud chcete odpojit přední část režijní sítě, uvolněte podložku a protáhněte ji zatáhnoucí smyčkou na podložce. Pokud ho chcete znovu připojovat, vytáhněte smyčku a protáhněte ji zpět.
 
-Pokud chcete odpojit zadní pruhový popruh, stiskněte tlačítko na každé kartě připojení a jemně vytiskněte. Pokud ho chcete znovu připojit, nahrajte karty připojení zpátky do slotů, dokud na ně nekliknete.
+Pokud chcete odpojit zadní část režijní sítě, stiskněte tlačítko pod jednotlivými kartami připojení a stáhněte tlačítko. Pokud ho chcete znovu připojovat, nasažte karty připojení zpět do slotů, dokud nekliknou.
 
-![připojit nebo odebrat popruh 2 záhlaví HoloLens](images/hololens2-headstrap.png)
+![Připojení nebo odebrání náhonů HoloLens 2](images/hololens2-headstrap.png)
 
-## <a name="turn-on-the-hololens-2"></a>Zapnout HoloLens 2
+## <a name="turn-on-the-hololens-2"></a>Zapnutí HoloLens 2
 
-Chcete-li zapnout HoloLens 2, stiskněte tlačítko napájení.  Indikátory LED pod tlačítkem napájení zobrazuje úroveň baterie.
+Stisknutím tlačítka Napájení zapněte HoloLens 2.  Indikátory LED pod tlačítkem Napájení zobrazují stav baterie.
 
 > [!NOTE]
-> Chcete-li zapnout funkci HoloLens 2 pro velmi první čas, po rozbalení, stiskněte a podržte tlačítko napájení alespoň 4 sekundy a zapněte ho. Při příštím zapnutí HoloLens 2 se spustí po krátkém stisknutí tlačítka napájení.
+> Pokud chcete HoloLens 2 zapnout poprvé, po rozbalení stiskněte a podržte tlačítko napájení alespoň 4 sekundy a zapněte ho. Při příštím zapnutí HoloLens 2 se spustí po krátkém stisknutí tlačítka napájení.
 
-### <a name="power-button-actions-for-different-power-transitions"></a>Akce tlačítka napájení pro jiné přechody napájení
+### <a name="power-button-actions-for-different-power-transitions"></a>Akce tlačítka napájení pro různé přechody napájení
 
-| Akce | Provést tuto akci | HoloLens 2 to provede |
+| Akce | Provedení této akce | HoloLens 2 to |
 | - | - | - |
-| Zapnutí | Stisknutí jednoho tlačítka | Všechna pět světel zapněte a pak změňte, aby označovala úroveň baterie. Po čtyřech sekundách zvuk hraje. |
-| Do režimu spánku | Stisknutí jednoho tlačítka | Všechna pět světel se zapíná a pak zmizí po jednom. Po vypnutí světla se zvuk přehraje a obrazovka se zobrazí jako "rozdálení". |
-| Pro probuzení z režimu spánku | Stisknutí jednoho tlačítka | Všechna pět světel zapněte a pak změňte, aby označovala úroveň baterie. Zvuk se okamžitě přehraje. |
-| Vypnutí | Stiskněte a podržte pro 5. |  Všechna pět světel se zapíná a pak zmizí po jednom. Po vypnutí světla se zvuk přehraje a obrazovka se zobrazí jako "rozdálení". |
-| Vynucení restartování HoloLens, pokud neodpovídá | Stiskněte a podržte pro desítkách. | Všechna pět světel se zapíná a pak zmizí po jednom. Po vypnutí světel. |
+| Zapnutí | Stiskněte jedno tlačítko. | Všech pět světel se zapne a pak se změní na úroveň baterie. Po čtyřech sekundách se přehrává zvuk. |
+| Do režimu spánku | Stiskněte jedno tlačítko. | Všech pět světel se zapne a pak postupně postupně zesílá. Po vypnutí světel se přehraje zvuk a na obrazovce se zobrazí "Goodbye". |
+| Probuzení z režimu spánku | Stiskněte jedno tlačítko. | Všech pět světel se zapne a pak se změní na úroveň baterie. Zvuk se okamžitě přehraje. |
+| Vypnutí | Stiskněte a podržte 5 s. |  Všech pět světel se zapne a pak postupně postupně zesílá. Po vypnutí světel se přehraje zvuk a na obrazovce se zobrazí "Goodbye". |
+| Vynucení restartování holoLens v případě, že nereaguje | Stiskněte a podržte po dobu 10 s. | Všech pět světel se zapne a pak postupně postupně zesílá. Po vypnutí světel. |
 
-## <a name="hololens-behavior-reference"></a>Odkaz na chování HoloLens
+## <a name="hololens-behavior-reference"></a>Referenční informace k chování HoloLens
 
-Nejste si jistí, jak indikátory na vaší funkci HoloLens znamenají? Chcete zjistit, jak se má HoloLens chovat při zpoplatnění?  Tady je pár pomocníků!
+Nejste si jistí, co znamenají indikátory v HoloLens? Chcete vědět, jak se má HoloLens při účtování chovat?  Tady je nějaká pomoc!
 
-### <a name="charging-behavior"></a>Chování zpoplatnění
-
-| Stav zařízení | Akce | HoloLens 2 to provede |
-| - | - | - |
-| OFF | USB kabel plug-in | Zařízení se přesměrují na ZAPNUTo s indikátory, které ukazují úroveň baterie a zařízení se spouští zpoplatnění.
-| ON | Odebrat kabel USB | Zařízení přestane nabíjí se.
-| ON | USB kabel plug-in | Zařízení se spustí při zpoplatnění.
-| SPAT | USB kabel plug-in | Zařízení se spustí při zpoplatnění.
-| SPAT | Odebrat kabel USB | Zařízení přestane nabíjí se.
-| ZAPNUTo s kabelem USB zapojeným do | Vypnout zařízení | Přechody zařízení na ZAPNUTo s indikátory ukazujícími na úroveň baterie a zařízení se začnou vybíjí. |
-
-### <a name="lights-that-indicate-the-battery-level"></a>Světla indikující úroveň baterie
-
-| Počet světel | Úroveň baterie |
-| - | - |
-| Čtyři plné indikátory, jedna tenká a nízká | Mezi 100% a 81% (plně nabitá) |
-| Tři plná světla, jedna tenká | Mezi 80% a 61% |
-| Dvě plná světla, jedna tenká a druhá | Mezi 60% a 41% |
-| Jeden plný světlý, jeden lehký stromeček | Mezi 40% a 21% |
-| Jedno světlo v průběhu a ven | Mezi 20 a 5% nebo nižší (kritická baterie) |
-
-### <a name="sleep-behavior"></a>Chování režimu spánku
+### <a name="charging-behavior"></a>Chování při účtování
 
 | Stav zařízení | Akce | HoloLens 2 to bude |
 | - | - | - |
-| ON | Stisknutí jediného tlačítka napájení | Přechod zařízení do režimu SPÁNKU a vypnutí všech indikátorů |
-| ON | Žádný pohyb po dobu 3 minut | Přechod zařízení do režimu SPÁNKU a vypnutí všech indikátorů |
-| Spát | Jednosměnné tlačítko napájení – stisknutí | Přechody zařízení na on (Zapíná) a zapíná indikátory |
+| OFF | Zásuvný kabel USB | Zařízení se převádí na ON (Zahajuje se) a indikátory zobrazující stav baterie a zařízení se začne nabít.
+| ON | Odebrání kabelu USB | Zařízení zastaví účtování
+| ON | Zásuvný kabel USB | Zařízení začne účtovat
+| Spát | Zásuvný kabel USB | Zařízení začne účtovat
+| Spát | Odebrání kabelu USB | Zařízení zastaví účtování
+| ON (ON) s připojeným kabelem USB | Vypnout zařízení | Přechod zařízení do polohy ON se indikátory zobrazující stav baterie a zařízení se začne nabít. |
 
-### <a name="lights-to-indicate-problems"></a>Indikátory značí problémy
+### <a name="lights-that-indicate-the-battery-level"></a>Indikátory, které indikují stav baterie
 
-| Když to | To dělají světla. | To znamená, že |
+| Počet světel | Úroveň baterie |
+| - | - |
+| Čtyři plná světla, z jednoho světla zesládne a odchýlá | Mezi 100 a 81 % (plně naúčtované) |
+| Tři plná světla, kdy jedno světlo odchýlá a odchýlá | Mezi 80 a 61 % |
+| Dvě plná světla, kdy jedno světlo odchýlá a odchýlá | Mezi 60 a 41 % |
+| Jedno plné světlo, jedno světlo odchýlá a odchýlá | Mezi 40 a 21 % |
+| Jedno světlo odchýlá a odchýlá | 20 až 5 % nebo nižší (kritická baterie) |
+
+### <a name="sleep-behavior"></a>Chování režimu spánku
+
+| Stav zařízení | Akce | HoloLens 2 to provede |
 | - | - | - |
-| Stisknete tlačítko Napájení. | Jedno světlo pětkrát blikne a pak se vypne. | Baterie HoloLens je kriticky nízká. Poplatek za HoloLens |
-| Stisknete tlačítko Napájení. | Všech pět světel pětkrát blikne a pak se vypne. |  HoloLens se nemůže správně spustit a je v chybovém stavu. [Přeinstalujte operační systém a](hololens-recovery.md) obnovte zařízení. |
-| Stisknete tlačítko Napájení. | 1., 3. a 5. světla nepřetržitě blikají dohromady. |  HoloLens může mít selhání hardwaru. Kontaktujte [podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb). |
+| ON | Stisknutí jednoho tlačítka napájení | Zařízení přejde do režimu spánku a vypne všechna indikátory indikátorů. |
+| ON | Žádný přesun na 3 minuty | Přechod zařízení do režimu spánku a vypnutí všech indikátorů indikátorů |
+| SPAT | Stisknutí jednoho tlačítka napájení | Zařízení přejde na ZAPNUTo a zapne indikátor světla. |
 
-## <a name="safety-and-comfort"></a>Zabezpečení a komfort
+### <a name="lights-to-indicate-problems"></a>Světla indikující problémy
 
-### <a name="use-hololens-in-safe-surroundings"></a>Použití HoloLens v bezpečném okolí
+| Když to uděláte, | Tato světla | To znamená |
+| - | - | - |
+| Stisknete tlačítko napájení. | Jedno světlo se potěší pětkrát a pak se vypne. | HoloLens baterie je kriticky nízká. Účtovat HoloLens. |
+| Stisknete tlačítko napájení. | Všechna pět světel za špičku a potom vypnout. |  HoloLens nelze správně spustit a je v chybovém stavu. [Přeinstalujte operační systém](hololens-recovery.md) a obnovte své zařízení. |
+| Stisknete tlačítko napájení. | Indikátory 1., 3 a 5 se pohromadě blikají. |  HoloLens může dojít k selhání hardwaru. Obraťte se na [podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapid=3ec35c62-022f-466b-3a1e-dbbb7b9a55fb). |
 
-HoloLens používejte v bezpečném prostoru bez překážek a nebezpečí zahlcených. Nepoužívejte ho, když potřebujete jasné zorné pole nebo nemůžete věnovat plnou pozornost, například při provozu vozidla nebo při jiných potenciálně nebezpečných aktivitách.
+## <a name="safety-and-comfort"></a>Bezpečnost a pohodlí
 
-### <a name="stay-comfortable"></a>Zůstaňte v dobrém pohodlí
+### <a name="use-hololens-in-safe-surroundings"></a>použití HoloLens v bezpečném okolí
 
-Udržujte prvních pár relací s HoloLens krátkými a nezapomeňte si pohovovat. Pokud se s tím pocítíte, zastavte se a odpočíváte, dokud se nebude cítit lépe. To může zahrnovat dočasné záchudky migrovat, pohyb, nehybnost, deorientaci, únavu, únavu, zatěžování očí nebo suché oči.
+využijte svůj HoloLens v bezpečném prostoru, bez překážek a netrip nebezpečí. Nepoužívejte ji, pokud potřebujete jasné pole zobrazení nebo nemůžete potvrdit plnou pozornost, například když pracujete na vozidle nebo máte jiné potenciálně nebezpečné aktivity.
 
-Viz [bezpečnostní upozornění a pokyny k produktu.](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions)
+### <a name="stay-comfortable"></a>Buďte pohodlné
+
+ponechte si několik prvních relací HoloLens krátkými a nezapomeňte si je přenechat. Pokud budete mít možnost nepohodlí, zastavte a počkejte, dokud nebudete lepší. To může zahrnovat dočasné nálady nausea, nemoci, dizziness, reorientation, starostí, únavy, očí nebo suchého oči.
+
+Další informace najdete v tématu [Upozornění a pokyny pro zabezpečení produktu](https://support.microsoft.com/help/4558037/product-safety-warnings-and-instructions).
 
 > [!div class="nextstepaction"]
-> [Nastavení HoloLens 2](hololens2-start.md)
+> [nastavení HoloLens 2](hololens2-start.md)

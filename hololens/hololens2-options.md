@@ -1,7 +1,7 @@
 ---
-title: edice HoloLens 2
-description: seznamte se s tím, jak každá edice HoloLens 2 zařízení je stejná nebo odlišná a co dělat, když máte jednu ze svých potřeb.
-keywords: HoloLens 2 možnosti nákupu, možnosti HoloLens, Developer Edition
+title: HoloLens 2 edice
+description: Zjistěte, HoloLens 2 edice zařízení jsou stejné nebo jiné a co dělat po získání vlastní edice zařízení.
+keywords: HoloLens 2 možnosti nákupu, HoloLens, Developer Edition
 author: evmill
 ms.author: v-evmill
 ms.reviewer: evmill
@@ -14,74 +14,74 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 2da84a11a8f9613999e2b376fefeb6cb2b83cd00
-ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
+ms.openlocfilehash: 4ba759dfa491725011977c39d6e51ed583a21919ea271f0c3d6482c0847938fb
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114659025"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115658922"
 ---
-# <a name="compare-hololens-2-options"></a>porovnat možnosti HoloLens 2
+# <a name="compare-hololens-2-options"></a>Porovnání HoloLens 2 možností
 
-HoloLens je zařízení se smíšenými realitami, které *využívá hologramy* , a poskytuje aplikace a řešení, které zlepšují spolupráci. díky HoloLens 2 se můžete setkat s novou výškou produktivity a inovacemi – s účelem – pro práci efektivněji.
+HoloLens je zařízení hybridní reality, které využívá *hologramy* a poskytuje aplikace a řešení, které vylepšují spolupráci. S HoloLens 2 si vyzkoušejte novou výšku produktivity a inovací – s účelem – abyste fungovali chytřeji.
 
-ať už jste [profesionálem](https://www.microsoft.com/hololens/apps) v oblasti IT, který hledá vaše další odvětví, [vývojář](https://www.microsoft.com/hololens/developers) se snaží vytvořit prostředí pro novou realitu nebo může [vedoucí podnikového rozhodnutí](https://www.microsoft.com/hololens/apps) myslet na vaše další inovace – HoloLens 2 je vaše nová skutečnost pro výpočetní výkon.
+Ať už jste [IT](https://www.microsoft.com/hololens/apps) profesionál [a](https://www.microsoft.com/hololens/apps) hledáte [](https://www.microsoft.com/hololens/developers) další oborové řešení, vývojáře, který se snaží vytvořit prostředí pro novou realitu, nebo pracovník s rozhodovací pravomocí o vaší další inovaci – HoloLens 2 je nová realita pro výpočetní prostředí.
 
 <br>
 
-|                                                      | HoloLens 2 | HoloLens 2 se vzdálenou asistencí | HoloLens 2 – průmyslový edice | HoloLens 2 – průmyslový edice s nástrojem Remote Assist | Trimble XR10 s HoloLens 2 | HoloLens 2 – vývojová edice |
+|                                                      | HoloLens 2 | HoloLens 2 s asistencí pro vzdálenou správu | HoloLens 2 Industrial Edition | HoloLens 2 Industrial Edition se vzdáleným asistencí | Trimble XR10 s HoloLens 2 | HoloLens 2 Development Edition |
 |------------------------------------------------------|------------|-------------------------------|-------------------------------|--------------------------------------------------|------------------------------|--------------------------------|
-| **zařízení HoloLens 2 (jedno zařízení)**                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
-| **Dynamics 365 Remote Assist (jedno sedadlo)**                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
-| **Klasifikace vyčištění místnosti ISO 14644-1 Class 5**           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
-| **UL Class I, divize 2-skupiny A, B, C a D HAZLOC prostředí**                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| **Integrovaná do pevného Hat (vyhovuje OOP ve 40 + zemích)** |            |                               |                               |                                                  |               ✔️              |                                |
-| **Šum – zrušení výstupu zvuku**                        |            |                               |                               |                                                  |               ✔️              |                                |
-| **Vývojář nároků <sup>1</sup>**                             |            |                               |                               |                                                  |                              |                ✔️               |
-| **Rychlý nahrazující program <sup>2</sup>**                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
-| **Práva pro komerční použití**                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
-| [**Záruky**](hololens2-hardware.md#warranty-information)                                             |   1 rok   |             1 rok            |             dva roky            |                      dva roky                      |            1. rok <sup>3</sup>            |             1 rok             |
-| **Limit pro nákup zařízení**                                |    Žádná    |              Žádná             |              Žádná             |                       Žádná                       |             Žádná             |       Jedna na transakci      |
+| **HoloLens 2 zařízení (jedno zařízení)**                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
+| **Dynamics 365 Remote Assist (jednomístné)**                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
+| **Klasifikace čisté místnosti třídy 14644-1 ISO 14644-1**           |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **Třída UL I, prostředí A, B, C a D HAZLOC, dělení 2 skupin**                     |            |                               |               ✔️               |                         ✔️                        |               ✔️              |                                |
+| **Integrovaný pevný hat (kompatibilní s PPE ve více než 40 zemích)** |            |                               |                               |                                                  |               ✔️              |                                |
+| **Zvukový výstup s rušijícím šumem**                        |            |                               |                               |                                                  |               ✔️              |                                |
+| **Nároky vývojáře <sup>1</sup>**                             |            |                               |                               |                                                  |                              |                ✔️               |
+| **Rapid Replacement Program <sup>2</sup>**                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
+| **Práva ke komerčnímu použití**                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
+| [**Záruka**](hololens2-hardware.md#warranty-information)                                             |   1 rok   |             1 rok            |             2 roky            |                      2 roky                      |            1 rok <sup>3</sup>            |             1 rok             |
+| **Limit nákupu zařízení**                                |    Žádná    |              Žádná             |              Žádná             |                       Žádná                       |             Žádná             |       Jedna na transakci      |
 
-- <sup>1</sup> – obsahuje $500 kreditů a zkušebních období Azure pro Pro Unity a modul plug-in Pixyz.
-- <sup>2</sup> – obdržíte náhradní zařízení v noci nebo na urychlené odeslání (rychlejší z dostupných možností) před tím, než je zařízení od Microsoftu obdrženo vadné.
-- <sup>3</sup> – na dotazy týkající se záruky, podpory a certifikace pro Trimble XR10 s edicí HoloLens 2 [kontaktujte Trimble](https://fieldtech.trimble.com/en/contact-support).
+- <sup>1</sup> – Zahrnuje kredit Azure ve výši 500 USD a 3měsíční zkušební verze pro Unity Pro a plug-in Pixyz.
+- <sup>2</sup> – Dostávat náhradní zařízení přes noc nebo zrychlit expedici (rychlejší z dostupných možností) před tím, než Microsoft obdrží vadné zařízení.
+- <sup>3</sup> – Pokud máte dotazy k záruce, podpoře a certifikaci pro Trimble XR10 s HoloLens 2, obraťte se na [společnost Trimble.](https://fieldtech.trimble.com/en/contact-support)
 
 
 ## <a name="options-overview"></a>Přehled možností
 
-**[HoloLens 2 (pouze zařízení)](hololens2-options-device-only.md)**: HoloLens 2 nabízí nejpohodlnější a atraktivní zážitek z realit, který je k dispozici a je vylepšený spolehlivostí, zabezpečením a škálovatelností služeb cloud a AI od microsoftu.
+**[HoloLens 2 (jenom zařízení):](hololens2-options-device-only.md)** HoloLens 2 nabízí nejpohodlnější a imerzivní prostředí hybridní reality, které je vylepšené o spolehlivost, zabezpečení a škálovatelnost cloudových služeb a služeb AI od Microsoftu.
 
-**[HoloLens 2 s Dynamics 365 Remote Assist](hololens2-options-remote-assist.md)**: začínáme na jednom dni s HoloLens 2 a špičkovou komunikační aplikací ve realitě od microsoftu, která je dostupná dohromady. Pomáhat vaší celé společnosti zvýšit produktivitu a inovovat s větším účelem. S využitím Dynamics 365 a řešení od průmyslových partnerů se teď můžete setkat s Mixed realitou.
+**[HoloLens 2 s Dynamics 365 Remote Assistem:](hololens2-options-remote-assist.md)** První den se službou HoloLens 2 a konečná komunikační aplikace hybridní reality od Microsoftu, která je k dispozici společně. Pomozte celé společnosti být produktivnější a inovovat s vyšším účelem. Vyzkoušejte hybridní realitu s Dynamics 365 a řešeními od oborových partnerů.
 
-**[HoloLens 2 průmyslová edice](hololens2-options-industrial-edition.md)**: navržená, sestavená a testovaná pro podporu čistých prostředí místností s normami od iso class 6 až iso class 8, HoloLens 2 průmyslová edice je UL class I, divize 2 certifikováno a je podporován se zárukou na 2 roky a rychlé nahrazení programu.
+**[HoloLens 2 Industrial Edition:](hololens2-options-industrial-edition.md)** Navržená, sestavená a otestovaná tak, aby podporovala prostředí čistých místností se standardy od ISO třídy 6 až po ISO třídu 8, HoloLens 2 Industrial Edition je třída UL I, certifikovaná divize 2 a je podporována s 2letou zárukou a programem rychlé výměny.
 
-**[Trimble XR10 s HoloLens 2](hololens2-options-trimble-xr10-edition.md)**: účel sestavený pro pracovní procesy v prostředích s nečistými, hlasitými a bezpečnostními prostředími Trimble XR10 s HoloLens 2 přináší do vaší pracovní lokality smíšenou realitu.
+**[Trimble XR10 s HoloLens 2:](hololens2-options-trimble-xr10-edition.md)** Účel sestavený pro pracovníky v nečistých, hlučných a bezpečnostních prostředích přináší Trimble XR10 s HoloLens 2 hybridní realitu přímo na váš pracovní web.
 
-**[HoloLens 2 Development Edition](hololens2-options-dev-edition.md)**: začněte sestavovat směsnou realitu s touto nabídkou, která kombinuje HoloLens 2 s bezplatnými zkušebními verzemi softwaru Unity a kredity Azure pro cloud services. Naučte se, jak jít nad rámec základních skutečností a začněte vyvíjet pro hybridní realitu.
+**[HoloLens 2 Development Edition:](hololens2-options-dev-edition.md)** Začněte budovat pro hybridní realitu s touto nabídkou, která kombinuje HoloLens 2 s bezplatnými zkušebními verzemi softwaru Unity a kredity Azure pro cloudové služby. Zjistěte, jak přejít nad rámec základů a začít s vývojem pro hybridní realitu.
 
-přečtěte si o našem [portfoliu obsáhlém HoloLens 2](https://www.microsoft.com/hololens/buy).
+Seznamte se s naším rozsáhlým [portfoliem HoloLens 2.](https://www.microsoft.com/hololens/buy)
 
-## <a name="explore-solutions"></a>Prozkoumat řešení
+## <a name="explore-solutions"></a>Prozkoumání řešení
 
-prozkoumejte tato další řešení vytvořená pro HoloLens hybridních hybridních zařízení.
+Prozkoumejte tato další řešení vytvořená pro HoloLens zařízení hybridní reality.
 
 | Řešení | Stručný popis                                                                                |
 |----------|---------------------------------------------------------------------------------------------------|
-| [Dynamics 365 pro HoloLens](https://www.microsoft.com//hololens/apps)          | Umožněte zaměstnancům a optimalizujte operace.                                                        |
-| [Vzdálená pomoc pro Dynamics 365](https://dynamics.microsoft.com/mixed-reality/remote-assist/)          | Umožněte technikům spolupracovat efektivněji díky spolupráci z různých míst. |
-|   [Příručky k Dynamics 365](https://dynamics.microsoft.com/mixed-reality/guides/)        | Vylepšete efektivní potřeby školení a Naučte se, jak zaměstnanci provádějí.                          |
-|  [Azure Cloud Services pro Mixed reality](/windows/mixed-reality/develop/mixed-reality-cloud-services#:~:text=Mixed%20Reality%20services%20Mixed%20Reality%20cloud%20services%20like,all%20in%20the%20context%20of%20your%20users%E2%80%99%20environments)         | Naučte se vyvíjet řešení pomocí Azure Cloud Services.                                       |
-|  [začínáme s vývojem pro HoloLens 2](/windows/mixed-reality/develop/development?tabs=unity)         | Sestavte řešení pro hybridní realitu, které bude vyhovovat vašim potřebám.                                                 |
+| [Dynamics 365 for HoloLens](https://www.microsoft.com//hololens/apps)          | Posílení práce zaměstnanců a optimalizace provozu                                                        |
+| [Dynamics 365 Remote Assist](https://dynamics.microsoft.com/mixed-reality/remote-assist/)          | Umožnovat technikům efektivnější spolupráci díky spolupráci z různých míst. |
+|   [Průvodci Dynamics 365](https://dynamics.microsoft.com/mixed-reality/guides/)        | Vylepšete efektivní potřeby školení a zjistěte, jak si zaměstnanci trénují.                          |
+|  [Azure Cloud Services pro Mixed Reality](/windows/mixed-reality/develop/mixed-reality-cloud-services#:~:text=Mixed%20Reality%20services%20Mixed%20Reality%20cloud%20services%20like,all%20in%20the%20context%20of%20your%20users%E2%80%99%20environments)         | Naučte se vyvíjet řešení pomocí Azure Cloud Services.                                       |
+|  [Zahájení vývoje pro HoloLens 2](/windows/mixed-reality/develop/development?tabs=unity)         | Vytvořte řešení hybridní reality tak, aby vyhovovalo vašim potřebám.                                                 |
 
 ## <a name="next-steps"></a>Další kroky
 
-pro koncové uživatele zařízení si přečtěte téma věnované [přípravě HoloLens 2](hololens2-setup.md) , které se má použít k tomu, abyste mohli začít.
+Pokud chcete začít, podívejte se na stránku [HoloLens 2](hololens2-setup.md) pro koncové uživatele zařízení.
 
 > [!div class="nextstepaction"]
-> [příprava HoloLens 2 na použití](hololens2-setup.md)
+> [Připravte HoloLens 2 k použití.](hololens2-setup.md)
 
-Pro správce IT nasazování zařízení do vaší organizace odemkne výkonné hybridní prostředí realit. začněte tím, že zkontrolujete HoloLens 2 požadavky na nasazení a scénáře napříč celou řadou konfigurací infrastruktury IT.
+Pro správce IT nasazení zařízení do vaší organizace odemkne výkonná prostředí hybridní reality. Začínáme se seznamte s HoloLens 2 požadavky a scénáři nasazení napříč celou řadou konfigurací INFRASTRUKTURY IT.
 
 > [!div class="nextstepaction"]
-> [nasazení HoloLens 2 v komerčním prostředí](hololens-requirements.md)
+> [Nasazení HoloLens 2 v komerčním prostředí](hololens-requirements.md)

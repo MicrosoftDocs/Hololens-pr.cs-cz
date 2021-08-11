@@ -1,6 +1,6 @@
 ---
 title: Podporované jazyky pro HoloLens 2
-description: Seznamte se se všemi jazyky, které HoloLens 2 podporuje, mění rozložení klávesnice a aktualizuje jazyk zobrazení Windows.
+description: Seznamte se se všemi jazyky, HoloLens 2 podporuje, změnou rozložení klávesnice a aktualizací Windows jazyka zobrazení.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -17,16 +17,16 @@ ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: dc3de0c95f17c821816bad278de5717bc24a2c29
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 32f4cce668b2f8a483dbef3f4b41a0ceb8267dcc202f2be9d32ecec4061d0c21
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377691"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659576"
 ---
 # <a name="supported-languages-for-hololens-2"></a>Podporované jazyky pro HoloLens 2
 
-HoloLens 2 je lokalizovaný do následujících jazyků. Mezi lokalizační funkce patří hlasové příkazy a diktování, rozložení klávesnice a rozpoznávání OCR v rámci aplikací.
+HoloLens 2 jsou lokalizovány do následujících jazyků. Mezi lokalizační funkce patří hlasové příkazy a diktování, rozložení klávesnice a rozpoznávání OCR v rámci aplikací.
 
 - Zjednodušená čínština (Čína)
 - Angličtina (Austrálie)
@@ -46,7 +46,7 @@ HoloLens 2 podporuje také následující jazyky. Tato podpora ale nezahrnuje ř
 - nizozemština (Nizozemsko)
 - korejština (Jižní Korea)
 
-Některé funkce HoloLens 2 používají jazyk zobrazení Windows. Jazyk zobrazení Windows má vliv na následující nastavení pro Windows a pro aplikace, které podporují lokalizaci:
+Některé funkce HoloLens 2 používají jazyk Windows zobrazení. Jazyk Windows má vliv na následující nastavení pro Windows a pro aplikace, které podporují lokalizaci:
 
 - Jazyk textu uživatelského rozhraní.
 - Jazyk řeči.
@@ -54,29 +54,29 @@ Některé funkce HoloLens 2 používají jazyk zobrazení Windows. Jazyk zobraze
 
 ## <a name="change-the-language-or-keyboard-layout"></a>Změna jazyka nebo rozložení klávesnice
 
-Proces nastavení nakonfiguruje HoloLens pro konkrétní oblast a jazyk. Tuto konfiguraci můžete změnit pomocí části **& jazyka** v **nastavení**.
+Proces nastavení nakonfiguruje HoloLens pro konkrétní oblast a jazyk. Tuto konfiguraci můžete změnit pomocí části **Jazyk časového & v** **Nastavení**.
 
 > [!NOTE]  
-> Jazyk pro řeč a diktování závisí na jazyce zobrazení Windows (a je stejný jako).
+> Jazyk pro řeč a diktování závisí na jazyce pro Windows a je stejný.
 
-### <a name="to-change-the-windows-display-language"></a>Změna jazyka zobrazení Windows
+### <a name="to-change-the-windows-display-language"></a>Změna jazyka Windows zobrazení
 
-1. Otevřete **nabídku Start** a pak vyberte **Nastavení Čas** a  >  **jazyk**  >  .
-2. Vyberte **jazyk zobrazení Windows** a pak vyberte jazyk.  
+1. Otevřete **nabídku Start** a pak **vyberte** Nastavení Čas a  >  **jazyk**  >  .
+2. Vyberte **Windows jazyk zobrazení** a pak vyberte jazyk.  
 
 Pokud podporovaný jazyk, který hledáte, není v nabídce, postupujte následovně:  
 
 1. V **části Preferované** jazyky **vyberte Přidat jazyk.**
 2. Vyhledejte a přidejte jazyk.
-3. Znovu vyberte **nabídku jazyka zobrazení** Windows a pak vyberte jazyk, který jste přidali v předchozím kroku.
+3. Znovu vyberte **Windows zobrazit jazyk** a pak vyberte jazyk, který jste přidali v předchozím kroku.
 
 ### <a name="to-change-the-keyboard-layout"></a>Změna rozložení klávesnice
 
-Pokud chcete přidat nebo odebrat rozložení klávesnice, otevřete  **nabídku Start** a pak vyberte Nastavení  >  **Čas &**  >  **jazyka Klávesnice**.
+Pokud chcete přidat nebo odebrat rozložení klávesnice, otevřete **nabídku Start** a pak **vyberte** Nastavení Time &  >  **Language**  >  **Keyboard**.
 
-Pokud má HoloLens více rozložení klávesnice,  můžete mezi nimi přepínat pomocí klávesy Rozložení. **Klávesa** Rozložení se nachází v pravém dolním rohu klávesnice na obrazovce.
+Pokud má HoloLens rozložení klávesnice, můžete mezi  nimi přepínat pomocí klávesy Rozložení. **Klávesa** Rozložení se nachází v pravém dolním rohu klávesnice na obrazovce.
 
 > [!NOTE]  
-> Klávesnice na obrazovce může pomocí Editoru IME (Input Method Editor) zadávat znaky v jazycích, jako je japonština. HoloLens ale nepodporuje externí klávesnice Bluetooth, které používají IME.
+> Klávesnice na obrazovce může pomocí Editoru IME (Input Method Editor) zadávat znaky v jazycích, jako je japonština. Nástroj HoloLens ale nepodporuje externí Bluetooth klávesnice, které používají IME.
 >  
-> I když použijete IME společně s klávesnicí na obrazovce, můžete dál používat klávesnici Bluetooth k psaní v angličtině. Pokud chcete přepínat mezi klávesnicemi, stiskněte tlačítko tildy ( **~** ).
+> I když použijete IME společně s klávesnicí na obrazovce, můžete k psaní v angličtině dál používat Bluetooth klávesnici. Pokud chcete přepínat mezi klávesnicemi, stiskněte tlačítko tildy ( **~** ).
