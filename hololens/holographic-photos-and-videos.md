@@ -1,7 +1,7 @@
 ---
-title: Zachycení, záznam a sdílení fotek a videí hybridní reality
-description: Naučte se zaznamenávat, zaznamenávat a prohlížet fotky a videa hybridní reality pomocí HoloLens zařízení hybridní reality. Zjistěte, jak sdílet prostřednictvím Miracast nebo shromážděných souborů.
-keywords: hololens, photo, video, capture, mrc, mixed reality capture, photos, camera, miracast, stream, livestream, demo, record
+title: Zaznamenávání, zaznamenávání a sdílení fotek a videí ve smíšené realitě
+description: naučte se zachytit, nahrávat a zobrazovat a míchat fotky a videa ve hybridní realitě pomocí HoloLensch hybridních realit. naučte se, jak sdílet přes Miracast nebo shromážděné soubory.
+keywords: HoloLens, fotografie, video, zachycení, MRC, zachycení smíšené reality, fotky, kamera, Miracast, Stream, živě, ukázka, záznam
 ms.assetid: 1b636ec3-6186-4fbb-81b2-71155aef0593
 ms.prod: hololens
 ms.sitesec: library
@@ -15,142 +15,142 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: daced6fab65f779b7bd670bf1275f99ae5311d3f
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 54e9959c03b69db39ff2738e5d4f41f9740ae562b38e8d85998521a4733edad7
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635955"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664855"
 ---
-# <a name="create-mixed-reality-photos-and-videos"></a>Vytváření fotek a videí hybridní reality
+# <a name="create-mixed-reality-photos-and-videos"></a>Vytvářejte fotky a videa ve smíšené realitě.
 
-HoloLens uživatelům prostředí pro kombinaci skutečného světa s digitálním světem.  Zachycení hybridní reality (MRC) umožňuje zachytit toto prostředí jako fotku nebo video nebo sdílet to, co vidíte s ostatními, v reálném čase.
+HoloLens poskytuje uživatelům možnost smíchání reálného světa s digitálním světem.  Funkce MRC (Mixed reality Capture) umožňuje zachytit toto prostředí jako fotografii nebo video nebo sdílet obsah, který vidíte s ostatními v reálném čase.
 
-Zachycení hybridní reality používá z pohledu první osoby, aby ostatní viděli hologramy podle toho, jak je vidíte. Z pohledu třetí osoby použijte [zobrazení spectator .](/windows/mixed-reality/spectator-view) Zobrazení Spectator je zvlášť užitečné pro ukázky.
+V rámci hybridního zachycení reality se používá první bod zobrazení, takže ostatní lidé uvidí hologramy tak, jak je vidíte. V případě, že je k dismístě třetí osoba, použijte [zobrazení Spectator](/windows/mixed-reality/spectator-view). Zobrazení Spectator je zvláště užitečné pro ukázky.
 
-Je sice zábavné sdílet videa mezi přáteli a kolegy, ale videa můžou také pomoct naučit ostatní uživatele používat aplikaci nebo komunikovat problémy s aplikacemi a prostředími.
-
-> [!NOTE]
-> Pokud nemůžete spustit prostředí pro zachytávání hybridní reality a vaše aplikace HoloLens pracovní zařízení, zkontrolujte to u správce systému. Přístup k fotoaparátu je možné omezit prostřednictvím zásad společnosti.
-
-## <a name="capture-a-mixed-reality-photo"></a>Zachycení fotky hybridní reality
-
-Existuje několik způsobů, jak na počítači posout fotku hybridní HoloLens. Můžete použít hardwarová tlačítka, hlas nebo nabídka Start.
-
-### <a name="hardware-buttons-to-take-photos"></a>Hardwarová tlačítka pro posouní fotek
-
-Pokud chcete pohotovou fotku aktuálního zobrazení, stiskněte současně tlačítka pro zvýšení a snížení hlasitosti.  Je to trochu jako HoloLens obrazovky snímku obrazovky nebo obrazovky tisku.
-
-- [Umístění tlačítek na HoloLens 2](hololens2-hardware.md)
-- [Umístění tlačítek v HoloLens (1. generace)](hololens1-hardware.md#hololens-components)
+I když je zábavné sdílet videa mezi přáteli a kolegy, můžou videa také pomáhat naučit ostatním uživatelům, aby používali aplikaci nebo komunikovali s aplikacemi a prostředími.
 
 > [!NOTE]
-> Když **podržíte** tlačítko **pro** zvýšení a snížení hlasitosti po dobu tří sekund, místo posouníte fotku, začne se nahrávat video. Nahrávání zastavíte tak, že  **současně klepnete** na tlačítka pro zvýšení i snížení hlasitosti.
+> pokud nemůžete spustit prostředí pro zachycení smíšeného realit a vaše HoloLens je pracovní zařízení, obraťte se na správce systému. Přístup k kameře se dá omezit prostřednictvím firemních zásad.
 
-### <a name="voice-commands-to-take-photos"></a>Hlasové příkazy pro posouní fotek
+## <a name="capture-a-mixed-reality-photo"></a>Zachytit fotografii ve smíšeném realitě
 
-Na HoloLens 2 verze 2004 (a novější) řekněte: "Udělejte si obrázek".
+Existuje několik způsobů, jak pořizovat fotografii smíšené reality na HoloLens. můžete použít hardwarová tlačítka, hlas nebo nabídka Start.
 
-V HoloLens (1. generace) nebo HoloLens 2 verze 1903 řekněme: "Na Cortana se vyfotíte."
+### <a name="hardware-buttons-to-take-photos"></a>Hardwarová tlačítka pro pořizovat fotek
 
-### <a name="start-menu-to-take-photos"></a>nabídka Start posout fotografie
+Chcete-li si pořídit rychlou fotografii aktuálního zobrazení, stiskněte tlačítko navýšení hlasitosti a rozmístění hlasitosti ve stejnou dobu.  jedná se o bitovou kopii, jako je HoloLens verze obrazovky nebo obrazovky pro tisk.
 
-Pomocí gesta Start přejděte na **Start a** pak vyberte **ikonu Fotoaparát.**
-
-Namiřte hlavičku směrem k tomu, [](hololens2-basic-usage.md#touch-holograms-near-you) co chcete zachytit, a pak klepnutím ve vzduchu pořizovat fotku. Můžete pokračovat v klepnutí ve vzduchu a pořizovat další fotky. Všechny fotografie, které pořidíte, se uloží do vašeho zařízení.
-
-Znovu použijte gesto Start (Spustit) a zachytávání fotek zakončíte.  
-
-## <a name="capture-a-mixed-reality-video"></a>Zachycení videa s hybridní realitou
-
-Existuje několik způsobů, jak nahrát video hybridní reality na HoloLens. Můžete použít hardwarová tlačítka, hlas nebo nabídka Start.
-
-### <a name="hardware-buttons-to-record-videos"></a>Hardwarová tlačítka pro záznam videí
-
-Nejrychlejší způsob, jak nahrát video, je  stisknout  a podržet současně tlačítka pro zvýšení a snížení hlasitosti, dokud nezačne třísekunové odpočítávání. Pokud chcete záznam zastavit, klepněte současně na obě tlačítka.
+- [umístění tlačítek na HoloLens 2](hololens2-hardware.md)
+- [umístění tlačítek na HoloLens (1. generace)](hololens1-hardware.md#hololens-components)
 
 > [!NOTE]
-> Když současně rychle **stisknete** tlačítko pro zvýšení a snížení hlasitosti, posoute fotku, a ne nahráte video. 
+> Když podržíte tlačítka **hlasitosti nahoru** a **dolů** pro tři sekundy, začne se nahrávat video místo pořizování fotek. Chcete-li záznam zastavit, klepněte současně na tlačítko **Hlasitost** a rozložte je **dolů** .
 
-### <a name="voice-to-record-videos"></a>Hlas pro záznam videí
+### <a name="voice-commands-to-take-photos"></a>Hlasové příkazy pro pořizovat fotek
 
-Ve HoloLens 2, verze 2004 (a novější), řekněme: "Spustit nahrávání". Pokud chcete nahrávání zastavit, řekněte "Stop recording" (Zastavit nahrávání).
+v HoloLens 2 verze 2004 (a novější) řekněme, že: "vzít si obrázek".
 
-V HoloLens (1. generace) nebo HoloLens 2, verze 1903, řekněme: "Hey Cortana, start recording". Pokud chcete nahrávání zastavit, řekněte "Say Cortana, stop recording".
+v HoloLens (1. generace) nebo HoloLens 2, verze 1903, řekněme: "Hey Cortana, pořizovat obrázek."
 
-### <a name="start-menu-to-record-videos"></a>nabídka Start k nahrávání videí
+### <a name="start-menu-to-take-photos"></a>nabídka Start pořizovat fotky
 
-Pomocí gesta Start přejděte na **Start (Spustit)** a pak vyberte **ikonu Video.** Namiřte hlavičku směrem k tomu, [](hololens2-basic-usage.md#touch-holograms-near-you) co chcete zachytit, a pak klepnutím ve vzduchu začáte nahrávat. Odpočítávání bude tři sekundy a vaše nahrávka začne.
+Pro **začátek** použijte gesto Start a pak vyberte ikonu **kamery** .
 
-Pokud chcete nahrávání zastavit, použijte gesto Spustit a vyberte zvýrazněnou **ikonu Video.** Video se uloží do vašeho zařízení.
+Najeďte na hlavní směr v tom, co chcete zachytit, a pak [klepněte na tlačítko Air](hololens2-basic-usage.md#touch-holograms-near-you) a pořiďte fotografii. Můžete pokračovat ve vzduchu a zachytit další fotky. Všechny fotky, které zachytíte, se uloží do vašeho zařízení.
 
-> [!NOTE]
-> **Platí pouze HoloLens (1. generace)**  
-> Nastavení [Aktualizace Windows 10 z října 2018](/windows/mixed-reality/release-notes-october-2018) chování gesta Start a Windows na HoloLens (1. generace). Před aktualizací zastaví tlačítko Windows nebo Spustit záznam videa. Po aktualizaci ale tlačítko Spustit gesto nebo Windows otevře nabídku  **Start** (nebo nabídku rychlých akcí, pokud jste v  imerzivní aplikaci), ze které můžete vybrat zvýrazněnou ikonu videa a ukončit tak nahrávání.
+K ukončení zachycení fotografií použijte znovu gesto pro spuštění.  
 
-## <a name="share-what-you-see-in-real-time"></a>Sdílení toho, co vidíte v reálném čase
+## <a name="capture-a-mixed-reality-video"></a>Zachytit video se smíšenými realitami
 
-To, co vidíte ve službě HoloLens, můžete sdílet s přáteli a kolegy v reálném čase. K dispozici je několik metod:
+Existuje několik způsobů, jak zaznamenat video o hybridní realitě na HoloLens. můžete použít hardwarová tlačítka, hlas nebo nabídka Start.
 
-1. Připojení k Miracast s podporou připojení nebo adaptéru ke sledování na tv.
-1. Použití [Windows Portál zařízení](/windows/mixed-reality/using-the-windows-device-portal) ke sledování na počítači
-1. Použití Microsoft HoloLens [aplikace ke](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) sledování na počítači.
-1. Nasazení aplikace [Microsoft Dynamics 365 Remote Assist,](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) která umožňuje pracovníkům front-line streamovat to, co vidí, vzdálenému odborníkovi. Vzdálený odborník pak může pracovníka front-line vést verbálně nebo anotací ve svém světě.
+### <a name="hardware-buttons-to-record-videos"></a>Hardwarová tlačítka pro nahrávání videí
+
+Nejrychlejší způsob, jak nahrávat video, je stisknout a podržet tlačítka **hlasitosti nahoru** a **dolů** , dokud se nezahájí odpočítávání o tři sekundy. Nahrávání zastavíte klepnutím na obě tlačítka současně.
 
 > [!NOTE]
-> Sdílení toho, co vidíte prostřednictvím Windows Portál zařízení nebo Microsoft HoloLens aplikace, vyžaduje, aby HoloLens byla v režimu [pro vývojáře.](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal)
+> Rychlé stisknutí tlačítek **hlasitosti nahoru** a **dolů** bude pořizovat fotografii místo nahrávání videa.
+
+### <a name="voice-to-record-videos"></a>Mluvený hlas pro nahrávání videí
+
+v HoloLens 2 verze 2004 (a novější) řekněte: "spustit záznam". Záznam zastavíte vyslovením "Stop Record".
+
+v HoloLens (1. generace) nebo HoloLens 2, verze 1903, řekněme: "Hey Cortana, start record." chcete-li zastavit nahrávání, řekněme "Hey Cortana, stop record."
+
+### <a name="start-menu-to-record-videos"></a>nahrávání videí nabídka Start
+
+Pro **začátek** použijte gesto Start a pak vyberte ikonu **videa** . Najeďte na hlavní směr v tom, co chcete zachytit, a pak [klepněte na tlačítko Air](hololens2-basic-usage.md#touch-holograms-near-you) začít nahrávat. Bude se vám započítávat tři sekundy a vaše nahrávání se zahájí.
+
+Chcete-li záznam zastavit, použijte gesto Start a vyberte zvýrazněnou ikonu **videa** . Video se uloží do vašeho zařízení.
+
+> [!NOTE]
+> **platí jenom pro HoloLens (1. generace).**  
+> [Aktualizace Windows 10 z října 2018](/windows/mixed-reality/release-notes-october-2018) mění způsob, jakým se chová gesto spuštění a Windows na HoloLens (1. generace). před aktualizací se pro gesto spuštění nebo Windows tlačítko zastaví záznam videa. po aktualizaci se ale na tlačítku spustit nebo Windows otevře nabídka **start** (nebo **nabídka rychlá akce** ), ze které můžete vybrat zvýrazněnou ikonu **videa** a zastavit nahrávání.
+
+## <a name="share-what-you-see-in-real-time"></a>Sdílejte, co vidíte v reálném čase
+
+můžete sdílet, co vidíte v HoloLens s přáteli a kolegy v reálném čase. K dispozici je několik metod:
+
+1. připojení k zařízení nebo adaptéru s podporou Miracast pro sledování v televizi.
+1. sledování na počítači pomocí [Windowsho portálu zařízení](/windows/mixed-reality/using-the-windows-device-portal)
+1. použití [doprovodné aplikace Microsoft HoloLens](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) ke sledování v počítači.
+1. Nasazení aplikace [Microsoft Dynamics 365 Remote Assist](https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist) , která umožňuje uživatelům z front-line streamovat, co vidí na vzdáleném odborníkovi. Od vzdáleného odborníka pak může pracovní proces front-line pořídit ústně nebo opatřit poznámkami v celém světě.
+
+> [!NOTE]
+> sdílení co vidíte přes Windows portál zařízení nebo Microsoft HoloLens doprovodné aplikace vyžaduje, aby váš HoloLens byl v [režimu pro vývojáře](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal).
 
 ### <a name="stream-video-with-miracast"></a>Streamování videa s Miracast
 
-Pomocí gesta Start přejděte na **Start** a pak vyberte **ikonu Připojení** startu. V seznamu, který se zobrazí, vyberte zařízení nebo Miracast s podporou připojení, ke kterému se chcete připojit.
+pro **začátek** použijte gesto start a pak vyberte ikonu **Připojení** . v zobrazeném ovládacím prvku vyberte zařízení nebo adaptér s podporou Miracast, ke kterému se chcete připojit.
 
-Sdílení zastavíte tak, že použijete gesto Spustit a vyberete zvýrazněnou **Připojení** obrazovky. Protože jste streamování měli, nic se do vašeho zařízení nebude ukládat.
+chcete-li ukončit sdílení, použijte gesto Start a vyberte zvýrazněnou ikonu **Připojení** . Vzhledem k tomu, že jste streamování, na vaše zařízení se nic neuloží.
 
 > [!NOTE]
-> Miracast na serveru HoloLens (1. generace) od začátku Aktualizace Windows 10 z října 2018 [.](/windows/mixed-reality/release-notes-october-2018)
+> byla povolena podpora Miracast HoloLens (1. generace) od [Aktualizace Windows 10 z října 2018](/windows/mixed-reality/release-notes-october-2018).
 
-### <a name="real-time-video-with-windows-device-portal"></a>Video v reálném čase s Windows Portál zařízení
+### <a name="real-time-video-with-windows-device-portal"></a>video v reálném čase s portálem pro Windows zařízení
 
-Protože sdílení přes Windows Portál zařízení vyžaduje, aby byl v systému HoloLens povolený vývojářský režim, nastavte režim pro vývojáře podle pokynů v naší dokumentaci pro vývojáře a přejděte [Windows Portál zařízení](/windows/mixed-reality/using-the-windows-device-portal).
+protože sdílení přes Windows portál zařízení vyžaduje, aby byl v HoloLens povolen režim pro vývojáře, postupujte podle pokynů v naší dokumentaci pro vývojáře [a nastavte vývojářský režim a přejděte na Windows portál zařízení](/windows/mixed-reality/using-the-windows-device-portal).
 
 ### <a name="microsoft-hololens-companion-app"></a>Microsoft HoloLens doprovodné aplikace
 
-Protože sdílení prostřednictvím doprovodné Microsoft HoloLens aplikace vyžaduje, aby byl ve službě HoloLens povolený vývojářský režim, nastavte vývojářský režim podle pokynů v naší dokumentaci [pro vývojáře.](/windows/mixed-reality/using-the-windows-device-portal) Pak si stáhněte [Microsoft HoloLens doprovodnou aplikaci](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) a podle pokynů v aplikaci se připojte ke svému HoloLens.
+vzhledem k tomu, že sdílení prostřednictvím doprovodné aplikace Microsoft HoloLens vyžaduje, aby byl v HoloLens povolen režim pro vývojáře, postupujte podle pokynů v dokumentaci pro vývojáře a [nastavte vývojářský režim](/windows/mixed-reality/using-the-windows-device-portal). pak stáhněte [aplikaci Microsoft HoloLens doprovodné aplikace](https://www.microsoft.com/store/productId/9NBLGGH4QWNX) a podle pokynů v aplikaci se připojte k HoloLens.
 
-Po nastavení aplikace s vaší HoloLens vyberte možnost **Živý stream** z hlavní nabídky aplikace.
+jakmile se aplikace nastaví s vaším HoloLens, v hlavní nabídce aplikace vyberte možnost **živý datový proud** .
 
-## <a name="view-your-mixed-reality-photos-and-videos"></a>Zobrazení fotek a videí hybridní reality
+## <a name="view-your-mixed-reality-photos-and-videos"></a>Zobrazení vašich fotek a videí ve smíšeném realitě
 
-Fotky a videa hybridní reality se ukládají do fotoaparátu v zařízení. Obsah této složky můžete procházet na svém HoloLens pomocí Průzkumník souborů (přejděte na Obrázky > **fotoaparátu).**
+Fotky a videa ve smíšené realitě se ukládají do "kamery". obsah této složky můžete v HoloLens procházet pomocí aplikace průzkumník souborů (přejděte na **obrázky > kamery**).
 
-Fotky a videa hybridní reality můžete také zobrazit v aplikaci Photos, která je předem nainstalovaná na HoloLens. Pokud chcete připnout fotku ve svém světě, vyberte ji v aplikaci Fotky a zvolte **Umístit ve smíšeném světě.** Po umístění můžete fotku po celém světě přesunout.
+V aplikaci Photos, která je předem nainstalovaná na HoloLens, si můžete zobrazit i fotky a videa ve smíšené realitě. Pokud chcete fotografii připnout na svůj svět, vyberte ji v aplikaci Photos a zvolte **umístit na smíšený svět**. Po umístění můžete fotografii po celém světě přesunout do celého světa.
 
-Pokud chcete zobrazit nebo uložit fotky a videa hybridní reality na počítači připojeném k HoloLens, můžete použít [Windows Portál zařízení](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture) nebo aplikaci počítače [Průzkumník souborů prostřednictvím MTP.](/windows/mixed-reality/release-notes-april-2018#new-features-for-hololens)
+pokud chcete fotky a videa hybridní reality zobrazit a uložit na počítači připojeném k HoloLens, můžete použít [Windows portál zařízení](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture) nebo [počítačového průzkumníka souborů přes MTP](/windows/mixed-reality/release-notes-april-2018#new-features-for-hololens).
 
-### <a name="use-file-explorer-to-get-your-pictures-videos-and-files"></a>Použití Průzkumník souborů k získání obrázků, videí a souborů
+### <a name="use-file-explorer-to-get-your-pictures-videos-and-files"></a>Použití Průzkumníka souborů k získání obrázků, videí a souborů
 
-Podobně jako u jiných mobilních zařízení připojte HoloLens k počítači, aby se Průzkumník souborů pro přístup k knihovnám HoloLens (fotky, videa, dokumenty) pro snadný přenos. Tato metoda se snadno používá a nevyžaduje použití portálu zařízení ani Wi-Fi.
+podobně jako u jiných mobilních zařízení připojte HoloLens k počítači, abyste mohli získat průzkumníka souborů, aby měli přístup k vašim HoloLensm knihovnám (fotkám, videím, dokumentům) pro snadný přenos. Tato metoda se snadno používá a nevyžaduje použití portálu pro zařízení ani Wi-Fi.
 
 1. Odemkněte zařízení.
-1. Připojení zařízení k počítači přes USB.
-1. Průzkumník souborů by se na počítači mělo otevřít.
-1. Přejděte na: \\ *Yourhololensname* počítače \Internal Storage\Pictures\Camera Roll
-1. Do počítače zkopírujte všechny soubory, které potřebujete.
+1. Připojení zařízení do počítače přes USB.
+1. V počítači by se měl otevřít Průzkumník souborů.
+1. přejít na: tento počítač \\ *yourhololensname*\Internal Storage \Pictures\Camera
+1. Zkopírujte libovolné soubory, které potřebujete, do svého počítače.
 
 Tipy:
-- Pokud žádné soubory nevidíte, ujistěte se, že se přihlásíte ke svému HoloLens přístup k vašim datům.
-- Další soubory v jiných složkách, například diagnostické soubory, můžete [získat](hololens-diagnostic-logs.md#offline-diagnostics) ze složky Dokumenty.
-- V Průzkumník souborů počítači můžete vybrat Vlastnosti zařízení Windows zobrazit číslo verze holografického operačního systému (verze firmwaru), sériové číslo zařízení Windows procento baterie.
-- Pokud vaše organizace k zakázání připojení [nebo připojení AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) použila MDM, pak se k vašemu zařízení nebude možné připojit.
+- pokud nevidíte žádné soubory, ujistěte se prosím, že jste se přihlásili k vašemu HoloLens, abyste mohli povolit přístup k vašim datům.
+- Další soubory můžete získat v jiných složkách, jako jsou například [diagnostické soubory](hololens-diagnostic-logs.md#offline-diagnostics) ze složky Dokumenty.
+- v průzkumníku souborů na počítači můžete vybrat vlastnosti zařízení, abyste viděli Windows číslo verze operačního systému (verze firmwaru), sériové číslo zařízení a procento baterie.
+- Pokud vaše organizace používá MDM k zakázání [připojení/AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) , pak se nebudete moct připojit k vašemu zařízení.
 
-## <a name="share-your-mixed-reality-photos-and-videos"></a>Sdílení fotek a videí hybridní reality
+## <a name="share-your-mixed-reality-photos-and-videos"></a>Sdílejte své fotky a videa ve smíšené realitě.
 
-Před Windows [Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)se po zachycení fotky nebo videa hybridní reality zobrazí náhled. Výběrem **ikony** Sdílet nad náhledem zobrazte asistenta sdílení. Odtud můžete vybrat koncový bod, ke kterému chcete tuto fotku nebo video sdílet.
+před [Windows holografické 21H1 verze](hololens-release-notes.md#windows-holographic-version-21h1)po zaznamenání fotky nebo videa se smíšenou realitou se zobrazí náhled. Kliknutím na ikonu **sdílení** nad náhledem zobrazíte pomocníka pro sdílení. Odtud můžete vybrat koncový bod, na který chcete tuto fotografii nebo video sdílet.
 
-V Windows Holographic verze 21H1 se po zachycení fotky nebo videa hybridní reality zobrazí náhled. Výběrem **ikony** Sdílet nad náhledem zobrazte asistenta sdílení. Odtud můžete vybrat koncový bod (Mail, OneDrive atd.), se kterým chcete tuto fotku nebo video sdílet. Můžete také povolit sdílení HoloLens blízkými zařízeními tak, že Nastavení **-> System -> Shared Experiences**. Další podrobnosti najdete v tématu [Sdílení věcí s blízkými zařízeními v Windows 10](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9).
+po zaznamenání fotky nebo videa ve smíšené realitě Windows holografická verze 21H1, zobrazí se náhled. Kliknutím na ikonu **sdílení** nad náhledem zobrazíte pomocníka pro sdílení. odtud můžete vybrat koncový bod (Mail, OneDrive atd.), na který byste chtěli sdílet tuto fotografii nebo video. Můžete také povolit sdílení HoloLens blízkými zařízeními tak, že Nastavení **-> System -> Shared Experiences**. Další podrobnosti najdete v tématu [Sdílení věcí s blízkými zařízeními v Windows 10](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9).
 
 > [!TIP] 
-> Můžete také sdílet fotky a videa hybridní reality z OneDrive tím, že automaticky nahrajete fotky a videa hybridní reality. Otevřete aplikaci OneDrive na HoloLens a přihlaste se pomocí **[osobního účet Microsoft](https://account.microsoft.com)**, pokud jste to ještě neudělali. Vyberte **ikonu Nastavení** a zvolte **Nahrání fotoaparátu.** Zapněte nahrávání fotoaparátu. Fotky a videa hybridní reality se teď budou nahrávat do OneDrive při každém spuštění aplikace na HoloLens.
+> Můžete také sdílet fotky a videa hybridní reality z OneDrive tím, že automaticky nahrajete fotky a videa hybridní reality. Otevřete aplikaci OneDrive na HoloLens a přihlaste se pomocí **[osobního účet Microsoft](https://account.microsoft.com)**, pokud jste to ještě neudělali. Vyberte **ikonu Nastavení** a zvolte **Nahrání fotoaparátu.** Zapněte nahrávání z fotoaparátu. Fotky a videa hybridní reality se teď budou nahrávat do OneDrive při každém spuštění aplikace na HoloLens.
 
 > [!NOTE]
 > Nahrávání fotoaparátu v aplikaci OneDrive jenom v případě, že jste přihlášení OneDrive pomocí osobního účet Microsoft. Pokud nastavíte HoloLens pracovním nebo školním účtem, můžete přidat osobní účet účet Microsoft aplikaci OneDrive tuto funkci povolit.
@@ -178,7 +178,7 @@ Z důvodu zpětné vazby od zákazníků jsme zvýšili délku záznamu zachytá
 |  Zařízení  |  Formát  |  Linka  |  Řešení  |
 |----------|----------|----------|----------|
 | HoloLens 2 | [Jpeg](https://en.wikipedia.org/wiki/JPEG) | .jpg | 3904x2196px |
-| HoloLens (1. generace) | [Jpeg](https://en.wikipedia.org/wiki/JPEG) | .jpg | 1408x792px |
+| HoloLens (1. generace) | [Jpeg](https://en.wikipedia.org/wiki/JPEG) | .jpg | 1408 × 792 px |
 
 ### <a name="recorded-video-format-and-resolution"></a>Formát a rozlišení zaznamenaného videa
 

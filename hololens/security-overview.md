@@ -1,6 +1,6 @@
 ---
-title: Přehled zabezpečení HoloLens
-description: Seznamte se s přehledem zabezpečení pro zařízení s funkcí HoloLens Mixed reality.
+title: přehled zabezpečení HoloLens
+description: začínáme s přehledem zabezpečení pro HoloLens zařízení se smíšenými realitami.
 author: evmill
 ms.author: v-evmill
 ms.reviewer: tagran
@@ -13,17 +13,17 @@ ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: bbf05404193f684bdc43d7d6a37159e17678d604
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 5e65cd542cc1090a7744c0041d57f1e13d3ca0c67b15f81a515f8e3040438aca
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379230"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665636"
 ---
 # <a name="security-overview"></a>Přehled zabezpečení
 
-Aby se splnily výzvy k moderní hrozbě a jejím přidruženým rizikům, Architektura zabezpečení HoloLens 2 byla zcela přepracována, aby poskytovala pokročilou, inovativní ochranu a ochranu osobních údajů.
+aby bylo možné plnit výzvy moderní hrozby a související rizika, byla architektura zabezpečení HoloLens 2 zcela přepracována, aby poskytovala pokročilé, inovativní zabezpečení a ochranu osobních údajů.
 
-S HoloLens 2 mají firmy a zákazníci skutečně moderní a špičkové operační systémy se silným integrovaným bezpečnostním rozhraním. Tento moderní operační systém umožňuje vývojářům navrhovat, sestavovat a doručovat aplikace s výjimečnou strategií zabezpečení a účinně bojovat proti komplexním hrozbám a jejím souvisejícím rizikům. 
+díky HoloLens 2 mají firmy a zákazníci skutečně moderní, špičkové operační systémy se silným integrovaným bezpečnostním rozhraním. Tento moderní operační systém umožňuje vývojářům navrhovat, sestavovat a doručovat aplikace s výjimečnou strategií zabezpečení a účinně bojovat proti komplexním hrozbám a jejím souvisejícím rizikům. 
 
-Následující kapitoly zabezpečení obsahují přehled našeho rozvíjejícího se zabezpečení Windows HoloLens 2, které vývojářům umožňují sestavovat více úspěšných a zabezpečených aplikací s vysokým výkonem. Tyto oddíly popisují architekturu zabezpečení operačního systému Windows HoloLens 2, její zabezpečená umístění a související funkce a mechanismy zabezpečení.
+následující kapitoly zabezpečení obsahují přehled našeho rozvíjejícího se Windows zabezpečení HoloLens 2, která vývojářům umožňuje sestavovat více úspěšných a zabezpečených aplikací s vysokým výkonem. tyto části popisují Windows architekturu zabezpečení operačního systému HoloLens 2, jejich zabezpečená umístění a související funkce a mechanismy zabezpečení.

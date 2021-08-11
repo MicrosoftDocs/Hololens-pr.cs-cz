@@ -13,12 +13,12 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: acf4b5d730b9a7eee2dedfad2bb3f866931d7455
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 495be858c235931ed591b097e6b5951f7197c3f7a62bd1aaa16bea65a4e3885f
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113636941"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115659879"
 ---
 # <a name="deploying-hololens-2-to-external-clients-with-remote-assist"></a>Nasazení HoloLens 2 do externích klientů pomocí vzdálené pomoci
 
@@ -28,7 +28,7 @@ Tato příručka pomáhá IT specialistům s následujícími cíli nasadit Micr
 1. Půjčování HoloLens 2 zařízením externím klientům k použití
 1. Zabezpečená půjčovaná zařízení
 
-Tato příručka bude poskytovat obecná doporučení k nasazení [HoloLens 2,](#general-deployment-recommendations-and-instructions) která se vztahují [](#common-concerns) na většinu scénářů nasazení HoloLens 2, a běžné obavy zákazníků při nasazování vzdálené pomoci pro externí použití.
+Tato příručka bude poskytovat obecná doporučení k nasazení HoloLens [2,](#general-deployment-recommendations-and-instructions) která se vztahují [](#common-concerns) na většinu scénářů nasazení HoloLens 2, a běžné obavy zákazníků při nasazování vzdálené pomoci pro externí použití.
 
 ## <a name="scenario-description"></a>Popis scénáře
 
@@ -54,7 +54,7 @@ Další informace o vzdálené pomoci [najdete tady.](/hololens/hololens2-cloud-
 
 ### <a name="how-to-ensure-that-external-clients-do-not-have-the-ability-to-communicate-with-one-another"></a>Jak zajistit, že externí klienti nebudou mít možnost vzájemně komunikovat
 
-Vzhledem k tomu, HoloLens remote assist HoloLens volání nejsou podporována, klienti mohou vyhledávat, ale nemohou spolu komunikovat. Aby bylo možné dále omezit, kdo klienti mohou vyhledávat a volat, mohou informační  [bariéry](/microsoft-365/compliance/information-barriers) omezit, s kým klient může komunikovat. Další možností, která je třeba zvážit, je použití [vyhledávání v adresáři s vymezenou oborem.](/MicrosoftTeams/teams-scoped-directory-search)
+Vzhledem k tomu, HoloLens HoloLens vzdálená pomoc není podporována, klienti mohou vyhledávat ,ale nemohou spolu komunikovat. Aby bylo možné dále omezit, kdo klienti mohou vyhledávat a volat, mohou informační  [bariéry](/microsoft-365/compliance/information-barriers) omezit, s kým klient může komunikovat. Další možností, která je třeba zvážit, je použití [vyhledávání v adresáři s vymezenou oborem.](/MicrosoftTeams/teams-scoped-directory-search)
 
  > [!NOTE]
 > Vzhledem k tomu, že je povolené jednotné přihlašování, je důležité zakázat prohlížeč pomocí nástroje [**WDAC.**](/hololens/windows-defender-application-control-wdac) Pokud externí klient otevře prohlížeč a použije webovou verzi Teams, bude mít klient přístup k historii volání nebo chatu.
@@ -65,7 +65,7 @@ Je třeba zvážit dvě možnosti.
 
 První možností je vícevrstvý přístup:
 
-1. Přiřaďte pouze licence, které uživatel vyžaduje. Pokud uživateli nepřiřadíte OneDrive, Outlook, SharePoint, Yammer atd., nebude k těmito prostředkům mít přístup. Jediné licence, které uživatelé budou potřebovat, jsou licence Remote Assistu, Intune a AAD.
+1. Přiřaďte pouze licence, které uživatel vyžaduje. Pokud uživateli nepřiřadíte OneDrive, Outlook, SharePoint, Yammer atd., nebude k těmito prostředkům mít přístup. Jediné licence, které budou uživatelé potřebovat, jsou licence Remote Assistu, Intune a AAD.
 1. Blokovat aplikace (například e-mail), ke které nechcete klientům přistupovat (viz [Jak omezit aplikace).](#how-to-restrict-apps)
 1. NESDÍLEJTE s klienty uživatelská jména ani hesla. Pro přihlášení k HoloLens 2 se vyžaduje e-mail a číselný PIN kód.
 
@@ -88,12 +88,12 @@ Druhou možností je vytvořit samostatného tenanta, který je hostitelem klien
 
 ### <a name="how-to-ensure-that-clients-do-not-have-access-to-chat-history"></a>Jak zajistit, aby klienti nemají přístup k historii chatu
 
-Remote Assist vymaže historii chatu po každé relaci. Historie chatu ale bude dostupná pro Microsoft Teams uživatele.
+Remote Assist vymaže historii chatu po každé relaci. Historie chatu ale bude k dispozici pro Microsoft Teams uživatele.
 
 > [!NOTE]
 > Vzhledem k tomu, že je povolené jednotné přihlašování, je důležité zakázat prohlížeč pomocí nástroje [**WDAC.**](/hololens/windows-defender-application-control-wdac) Pokud externí klient otevře prohlížeč a použije webovou verzi Teams, bude mít klient přístup k historii volání nebo chatu.
 
-## <a name="general-deployment-recommendations-and-instructions"></a>Obecné pokyny Recommendations nasazení
+## <a name="general-deployment-recommendations-and-instructions"></a>Obecné pokyny a Recommendations nasazení
 
 Pro následující kroky nasazení HoloLens následující:
 
@@ -105,12 +105,12 @@ Pro následující kroky nasazení HoloLens následující:
         1. (Volitelné) Můžete cílit na skupiny pro zásady MDM.
 
 1. Zařízení by měla být připojená [](/hololens/hololens-enroll-mdm#auto-enrollment-in-mdm)k vašemu tenantovi, automaticky zaregistrovaná a nakonfigurovaná prostřednictvím [automatického pilotního projektu](/hololens/hololens2-autopilot).
-    1. Upozorňujeme, že prvním uživatelem v zařízení bude vlastník zařízení.
+    1. Upozorňujeme, že první uživatel v zařízení bude vlastníkem zařízení.
     1. Upozorňujeme, že pokud je zařízení připojené k AAD, uživatel, který připojení provedl, je vlastníkem zařízení.
     1. Další informace najdete v tématu [Vlastník zařízení.](/hololens/security-adminless-os#device-owner)
 1. [Tenant zařízení](/hololens/hololens-release-notes#tenantlockdown-csp-and-autopilot) uzamkne, aby se k vašemu tenantovi mohl pouze připojil.
-    1. **Další odkaz: Tenant** [lock CSP](/windows/client-management/mdm/tenantlockdown-csp).
-1. Nakonfigurujte bezobrazovkové terminály pomocí globálního přiřazeného [přístupu k této možnosti.](/hololens/hololens-global-assigned-access-kiosk)
+    1. **Další odkaz:** [Tenant lock CSP](/windows/client-management/mdm/tenantlockdown-csp).
+1. Nakonfigurujte bezobrazovkové terminály pomocí globálního přiřazeného [přístupu k .](/hololens/hololens-global-assigned-access-kiosk)
 1. Doporučujeme zakázat následující (volitelné) možnosti:
     1. Možnost zařízení přetát do vývojářského [režimu tady.](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
     1. Možnost připojení zařízení HoloLens počítači a zkopírování data [zakažte USB.](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)

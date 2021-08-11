@@ -13,12 +13,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ed2d5134a6bc5952063f7dc5dc5d0e31db972b08
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: f4fc79b7f51933418cdda8368c6b4b070e854dd0978754647ce864075c772cfd
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639399"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665535"
 ---
 # <a name="admin-less-operating-system"></a>Operační systém bez oprávnění správce
 
@@ -40,7 +40,7 @@ Provádění konkrétních operací v celém zařízení, jako je například p�
   * Když je uživatel povýšen na vlastníka z uživatelského Nastavení uživatelského rozhraní jiného vlastníka na zařízení.
   * Pokud už vlastník zařízení není dostupný (opustí společnost) a zařízení je připojené k Azure AD, správce tenanta může změnit vlastníka zařízení na nového uživatele v Azure Portal. Globální správci a správci zařízení tenanta Azure AD jsou implicitně přihlášení jako vlastníci zařízení, aniž by to vyžadovalo některý z předchozích kroků.  
 
- Správci IT můžou spravovat, k jakým aplikacím má přístup prostřednictvím [zásad ochrany osobních](/windows/client-management/mdm/policy-csp-privacy) údajů. 
+ Správci IT můžou spravovat, ke jakým aplikacím má přístup prostřednictvím [zásad ochrany osobních](/windows/client-management/mdm/policy-csp-privacy) údajů. 
 
 > [!NOTE]
 > Pokud chcete lépe porozumět tomu, kdo je vlastníkem zařízení připojeného k Azure AD, přečtěte si dokumentaci Přiřadit místního správce [(ale](/azure/active-directory/devices/assign-local-admin) přečtěte si o tom, že místní správce je vlastníkem zařízení, protože správce na zařízení HoloLens).

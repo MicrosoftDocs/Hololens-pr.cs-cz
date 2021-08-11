@@ -1,11 +1,11 @@
 ---
-title: Nastavení viditelnost stránky
-description: udržujte si přehled o našich podporovaných identifikátorech uri pro PageVisibilityList a průvodce na HoloLens hybridních hybridních zařízení.
+title: Viditelnost Nastavení stránky
+description: Seznam podporovaných identifikátorů URI pro PageVisibilityList a průvodce pro zařízení HoloLens hybridní realitou
 author: evmill
 ms.author: v-evmill
 ms.date: 10/13/2020
 ms.topic: article
-keywords: HoloLens, HoloLens 2, přiřazený přístup, veřejný terminál, stránka nastavení
+keywords: hololens, hololens 2, přiřazený přístup, kiosk, stránka nastavení
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
@@ -13,74 +13,74 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 454d79e8b719feb73d5a39280794dcd76f134952
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: d2747da37ae198f7a2c051593da3ffd4cb4476dfaa7a3078a7749fa1fc912ba2
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639229"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665620"
 ---
-# <a name="page-settings-visibility"></a>Nastavení viditelnost stránky
+# <a name="page-settings-visibility"></a>Viditelnost Nastavení stránky
 
-jedna z spravovatelných funkcí pro HoloLens zařízení používá [zásady Nastavení/PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) k omezení stránek zobrazených v rámci aplikace Nastavení. PageVisibilityList je zásada, která správcům IT umožňuje zabránit tomu, aby určité stránky v systémové Nastavení aplikaci byly viditelné nebo přístupné, nebo aby tak učinily pro všechny stránky kromě těch, které jsou uvedené.
+Jednou ze spravovatelných funkcí pro HoloLens zařízení je použití zásad [Nastavení/PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) k omezení stránek, které se zobrazí v Nastavení aplikaci. PageVisibilityList je zásada, která správcům IT umožňuje zabránit zobrazení nebo přístupu konkrétních stránek v aplikaci System Nastavení, nebo to udělat pro všechny stránky kromě těch, které jsou zadané.
 
 > [!NOTE]
-> tato funkce je dostupné jenom v [Windows holografická, verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo vyšší pro zařízení HoloLens 2. Ujistěte se, že zařízení, která hodláte použít, se aktualizují.
+> Tato funkce je k dispozici pouze [v Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo vyšší pro HoloLens 2. Ujistěte se, že jsou aktualizovaná zařízení, pro která ho chcete použít.
 
 
 ## <a name="examples"></a>Příklady
-Stránky jsou označeny zkrácenou verzí publikovaných identifikátorů URI, což je identifikátor URI mínus předpona MS-Settings:.
+Stránky jsou identifikované zkrácenou verzí publikovaných identifikátorů URI, což je identifikátor URI minus předpona ms-settings:.
 
-Následující příklad ilustruje zásadu, která by povolovala přístup jenom na stránky o technologii Bluetooth, které mají identifikátor URI "síť-WiFi" a "Bluetooth":
+Následující příklad ukazuje zásadu, která by umožnila přístup pouze ke stránkám about a bluetooth, které mají identifikátory URI network-wifi a bluetooth:
 - `showonly:network-wifi;network-proxy;bluetooth`
 
-Následující příklad ilustruje zásadu, která by mohla skrýt stránku pro obnovení operačního systému:
+Následující příklad ukazuje zásadu, která by skryla stránku resetování operačního systému:
 - `hide:reset`
 
 
-## <a name="deploying-this-policy-via-intune"></a>Nasazení této zásady prostřednictvím Intune
+## <a name="deploying-this-policy-via-intune"></a>Nasazení této zásady přes Intune
 
-Jedná se o konfigurační hodnoty, které se dodávají do Intune:
+Toto jsou konfigurační hodnoty, které se dodávají do Intune:
 
-- **Název:** Zobrazovaný název preferovaného správce pro profil.
-- **OMA-URI:** Plně kvalifikovaný identifikátor URI stránky nastavení, včetně jejího [oboru](/windows/client-management/mdm/policy-configuration-service-provider). Tento příklad na této stránce používá `./Device` obor.
-- **Hodnota:** Řetězcová hodnota, která označuje, zda se mají skrýt nebo zobrazit *pouze* zadané stránky. Možné hodnoty jsou `hide:<pagename>` a `showonly:<pagename>` . 
+- **Name (Název):** Zobrazovaný název profilu upřednostňovaný správcem.
+- **OMA-URI:** Plně kvalifikovaný identifikátor URI stránky nastavení včetně jejího [oboru](/windows/client-management/mdm/policy-configuration-service-provider). V těchto příkladech na této stránce se používá `./Device` obor .
+- **Hodnota:** Řetězcová hodnota, která určuje, jestli se mají skrýt nebo *zobrazit jenom* zadané stránky. Možné hodnoty jsou `hide:<pagename>` a `showonly:<pagename>` . 
  
-Více stránek je možné zadat tak, že je oddělíte středníkem, a seznam běžných stránek najdete níže.
+Více stránek lze zadat tak, že je oddělíte středníkem a níže najdete seznam běžných stránek.
 
 1. Vytvořte **vlastní zásadu**.
-1. Při nastavování **OMA-URI** zadejte plně vymezený identifikátor URI. Například: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
-1. Když vybíráte výběr dat, zvolte: **řetězec** .
-1. Při zadávání **hodnoty** použijte pokyny výše. Například: **`showonly:network-wifi;network-proxy;bluetooth`** nebo **`hide:reset`** 
+1. Při nastavování **OMA-URI** zadejte plně vymezený identifikátor URI. Příklad: **`./Device/Vendor/MSFT/Policy/Config/Settings/PageVisibilityList`**
+1. Při výběru dat zvolte: **Řetězec**
+1. Při zadávání hodnoty **použijte** výše uvedené pokyny. Příklad: **`showonly:network-wifi;network-proxy;bluetooth`** nebo **`hide:reset`** 
 > [!IMPORTANT]
-> Ujistěte se, že jste přidělili vlastní konfiguraci zařízení skupině, na kterou má zařízení nacházet. Pokud tento krok není proveden, zásada bude vložena, ale nebude použita.
+> Nezapomeňte přiřadit vlastní konfiguraci zařízení ke skupině, ve které má být zařízení. Pokud tento krok není proveden, zásada se nas nabízené oznámení provede, ale nebude použita.
 
-další informace o skupinách a konfiguracích zařízení služby intune najdete v tématu [HoloLens konfigurace MDM](hololens-mdm-configure.md) .
+Další informace o HoloLens Intune a konfiguracích zařízení najdete v tématu Konfigurace [MDM.](hololens-mdm-configure.md)
 
 
 ## <a name="deploying-this-policy-via-a-provisioning-package"></a>Nasazení této zásady prostřednictvím zřizovacího balíčku
 
-jedná se o konfigurační hodnoty, které budou zadány v nástroji Windows configuration Designer:
+Toto jsou konfigurační hodnoty, které budou zadány v Windows Configuration Designeru:
 
-**Hodnota:** Řetězcová hodnota, která označuje, zda se mají skrýt nebo zobrazit *pouze* zadané stránky. Možné hodnoty jsou `hide:<pagename>` a `showonly:<pagename>` . Více stránek je možné zadat tak, že je oddělíte středníkem, a seznam běžných stránek najdete níže.
+**Hodnota:** Řetězcová hodnota, která určuje, jestli se mají skrýt nebo *zobrazit jenom* zadané stránky. Možné hodnoty jsou `hide:<pagename>` a `showonly:<pagename>` . Více stránek lze zadat tak, že je oddělíte středníkem a níže najdete seznam běžných stránek.
 
 
-1. při vytváření balíčku v návrháři konfigurace Windows přejděte na **zásady > Nastavení > PageVisibilityList**
+1. Při vytváření balíčku v návrháři konfigurace Windows přejděte na **Zásady > Nastavení > PageVisibilityList.**
 1. Zadejte řetězec: **`showonly:network-wifi;network-proxy;bluetooth`**
 1. Exportujte zřizovací balíček.
-1. Použijte balíček pro vaše zařízení.
-úplné informace o tom, jak vytvořit a použít zřizovací balíček, najdete [na stránce věnovaném zřizování HoloLens](hololens-provisioning.md).
+1. Použijte balíček na zařízení.
+Úplné podrobnosti o tom, jak vytvořit a použít zřizovací balíček, najdete [na HoloLens stránky zřizování.](hololens-provisioning.md)
 
 
-bez ohledu na zvolenou metodu by vaše zařízení nyní mělo přijímat změny a uživatelům se zobrazí následující aplikace Nastavení.
+Bez ohledu na zvolenou metodu by vaše zařízení teď mělo přijímat změny a uživatelům se zobrazí následující Nastavení App.
 
-![snímek obrazovky s aktivními hodinami upravovanými v aplikaci Nastavení](images/hololens-page-visibility-list.jpg)
+![Snímek obrazovky s úpravami aktivních hodin v Nastavení aplikaci](images/hololens-page-visibility-list.jpg)
 
-pokud chcete nakonfigurovat stránky aplikace Nastavení tak, aby zobrazovaly nebo skryly vlastní výběr stránek, podívejte se na Nastavení identifikátory uri, které jsou k dispozici na HoloLens.
+Pokud chcete nakonfigurovat Nastavení, aby se na stránkách aplikace zobrazují nebo skryly vlastní výběry stránek, podívejte se na Nastavení identifikátory URI, které jsou HoloLens.
 
-## <a name="settings-uris"></a>Nastavení Identifikátory URI
+## <a name="settings-uris"></a>Nastavení Uri
 
-HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení jinou možnost výběru stránek. Na této stránce najdete pouze nastavení, která existují na HoloLens.
+HoloLens zařízení a Windows 10 mají v aplikaci Nastavení jiný výběr stránek. Na této stránce najdete pouze nastavení, která existují v HoloLens.
 
 ### <a name="accounts"></a>Účty
 | Stránka Nastavení           | Identifikátor URI                                            |
@@ -93,9 +93,9 @@ HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení
 | Stránka Nastavení | Identifikátor URI                          |
 |---------------|------------------------------|
 | Aplikace & funkce <sup>2</sup>     | `appsfeatures` <br> |
-| Aplikace & funkce > pokročilé možnosti <sup>2</sup>     | `appsfeatures-app` <br> |
-| aplikace & funkce > Offline Mapy <sup>2</sup>     | `maps-maps` <br> |
-| aplikace & funkce > Offline Mapy > stáhnout mapy <sup>2</sup>     | `maps-downloadmaps` <br> |
+| Aplikace & funkce > Upřesnit možnosti <sup>2</sup>     | `appsfeatures-app` <br> |
+| Aplikace & funkce > Offline Mapy <sup>2</sup>     | `maps-maps` <br> |
+| Aplikace & funkcemi > Offline Mapy > Stáhnout <sup>mapy 2</sup>     | `maps-downloadmaps` <br> |
 
 ### <a name="devices"></a>Zařízení
 | Stránka Nastavení | Identifikátor URI                          |
@@ -114,32 +114,32 @@ HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení
 | Historie volání             | `privacy-callhistory`                 |
 | Camera                   | `privacy-webcam`                      |
 | Kontakty                 | `privacy-contacts`                    |
-| Diagnostika & zpětná vazba | `privacy-feedback`                    |
+| Zpětná vazba & diagnostiky | `privacy-feedback`                    |
 | dokumenty.                | `privacy-documents`                   |
 | E-mail                    | `privacy-email`                       |
 | Systém souborů              | `privacy-broadfilesystemaccess`       |
 | Obecné <sup>2</sup>             | `privacy-general`       |
-| Ink & – přizpůsobení textu <sup>2</sup>             | `privacy-speechtyping`       |
+| Psaní & rukopisu <sup>2</sup>             | `privacy-speechtyping`       |
 | Umístění                 | `privacy-location`                    |
 | Zasílání zpráv                | `privacy-messaging`                   |
 | Mikrofon               | `privacy-microphone`                  |
 | Pohyb <sup>2</sup>               | `privacy-motion`                  |
 | Oznámení            | `privacy-notifications`               |
-| Jiná zařízení            | `privacy-customdevices`               |
+| Další zařízení            | `privacy-customdevices`               |
 | Obrázky                 | `privacy-pictures`                    |
-| Radiostanicím                   | `privacy-radios`                      |
-| Snímek obrazovky s ohraničením <sup>2</sup>             | `privacy-graphicsCaptureWithoutBorder`       |
+| Rádia                   | `privacy-radios`                      |
+| Snímek obrazovky s <sup>ohraničením 2</sup>             | `privacy-graphicsCaptureWithoutBorder`       |
 | Snímky obrazovky a aplikace <sup>2</sup>             | `privacy-graphicsCaptureProgrammatic`       |
 | Řeč                   | `privacy-speech`                      |
 | Úkoly                    | `privacy-tasks`                       |
 | Pohyby uživatelů           | `privacy-backgroundspatialperception` |
 | Videa                   | `privacy-videos`                      |
-| Aktivace hlasu       | `privacy-voiceactivation`             |
+| Hlasová aktivace       | `privacy-voiceactivation`             |
 
 ### <a name="network--internet"></a>Síť a internet
 | Stránka Nastavení | Identifikátor URI                              |
 |---------------|----------------------------------|
-| Režim v letadle <sup>2</sup> | `network-airplanemode`        |
+| Režim v <sup>letadle 2</sup> | `network-airplanemode`        |
 | Proxy server | `network-proxy`        |
 | Síť VPN   | `network-vpn`          |
 | Wi-Fi  | `network-wifi`<br>`network-wifisettings`<br>`network-status`<br>`wifi-provisioning`    |
@@ -154,7 +154,7 @@ HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení
 | Barvy             | `colors`<br>`personalization-colors` |
 | Hologramy <sup>2</sup>  |  `holograms`  |
 | <sup>Uchýlovací 2</sup> |  `calibration` |
-| Oznámení & akce  | `notifications`          |
+| Oznámení & akcích  | `notifications`          |
 | Sdílená prostředí | `crossdevice` 
 | Zvuk <sup>2</sup>           | `sound`<br>|
 | Zvuk > Svazek aplikace a předvolba zařízení <sup>2</sup>           | `apps-volume`<br>|

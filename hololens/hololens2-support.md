@@ -7,12 +7,12 @@ description: Mixed Reality možnosti podpory pro malé až velké podnikové zá
 ms.prod: hololens
 ms.topic: article
 ms.date: 3/19/2021
-ms.openlocfilehash: 0ddc4eb15036a4f5aa2ecf86893d5f671584f9bf
-ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
+ms.openlocfilehash: 43940fca03dec957c2afc6108e1ce77979aa000c1366bdc873056107d0b7da20
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114659093"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115658752"
 ---
 # <a name="what-are-the-mixed-reality-support-and-help-options"></a>Jaké jsou Mixed Reality podpory a nápovědy?
 
@@ -86,7 +86,7 @@ Pokud odešlete novou otázku do Stack Overflow, při vytváření otázky použ
 >K dokončení nákupu použijte jedno z telefonních čísel komerční podpory níže. 
 
 >[!Note]
->Pokud voláte kvůli podpoře z trhu, který není uvedený níže, nasměruje vás na číslo našeho firemního stolu v USA.
+>Pokud voláte o podporu z trhu, který není uvedený níže, nasměruje vás na číslo našeho firemního stolu v USA.
 
 | Trhy | Číslo obchodního stolu | Provozní doba |
 |-----------------|-------------------|-----------------------|
@@ -114,7 +114,7 @@ Pokud odešlete novou otázku do Stack Overflow, při vytváření otázky použ
 | Nový Zéland | 0800 471 640 |  Po–Pá, 8:00 AŽ 18:00 |
 
 >[!IMPORTANT]
->Pokud požadujete úplnou fakturu k DPH, měli byste se s týmem komerčního obchodu podpory se stýkat přímo a nekupovat zařízení online. Všechny nákupy provedené online dostanou jenom zjednodušenou fakturu k DPH, kterou už nebude možné později upravit.
+>Pokud požadujete úplnou fakturu za DPH, měli byste se s týmem komerčního obchodu podpory se stýkat přímo a nekupovat zařízení online. Všechny nákupy provedené online dostanou jenom zjednodušenou fakturu za DPH, kterou už nebude možné později upravit.
 
 ## <a name="azure-mixed-reality-services-support"></a>Podpora služeb hybridní reality Azure
 
@@ -139,13 +139,13 @@ Pokud chcete otevřít lístek technické podpory na webu Azure Portal pro azure
 
     1. Klikněte **na Další:** Řešení v dolní části stránky a přidejte další podrobnosti, abyste nám o problému řekli více.
 
-    2. Vyplňte formulář co nejpřesněji a podrobně společně s upřednostňovaným způsobem, jak se k vám dostat.
+    2. Vyplňte formulář co nejpřesněji a nejpřesněji společně s upřednostňovaným způsobem, jak se k vám dostat.
 
     3. Zkontrolujte všechny informace, které jste vyplnili v předchozích částech, a teď odešlete žádost o podporu.
 
 ### <a name="provide-documentation-content-feedback"></a>Poskytnutí zpětné vazby k obsahu dokumentace
 
-Na konci každého článku o obsahu je příležitost otevřít problém s GitHub poskytnout zpětnou vazbu k obsahu v jakémkoli úložišti dokumentace hybridní reality. 
+Na konci každého článku o obsahu je možnost otevřít problém s GitHub poskytnout zpětnou vazbu k obsahu v jakémkoli úložišti dokumentace hybridní reality. 
 
 ### <a name="provide-product-feedback"></a>Poskytnutí zpětné vazby k produktu
 

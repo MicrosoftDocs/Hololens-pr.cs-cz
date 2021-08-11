@@ -1,10 +1,10 @@
 ---
-title: Použití kliknutí HoloLens
-description: Tento článek popisuje, jak používat kliknutí HoloLens, včetně párování kliknutí, účtování a obnovení.
+title: použití HoloLensho kliknutí
+description: tento článek popisuje, jak používat HoloLens click, včetně párování, zpoplatnění a obnovení.
 ms.assetid: 7d4a30fd-cf1d-4c9a-8eb1-1968ccecbe59
 ms.date: 09/16/2019
 manager: jarrettr
-keywords: hololens
+keywords: HoloLens
 ms.prod: hololens
 ms.sitesec: library
 author: v-miegge
@@ -13,100 +13,100 @@ ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 83e5a746b6900c547778c71a0855426563458032
-ms.sourcegitcommit: d5b2080868d6b74169a1bab2c7bad37dfa5a8b5a
+ms.openlocfilehash: 6e98918c89da7e74157d8fc003e6997f1e44b8538e9006a835707e85c5fd3307
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112924056"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662741"
 ---
-# <a name="use-the-hololens-1st-gen-clicker"></a>Použití kliknutí HoloLens (1. generace)
+# <a name="use-the-hololens-1st-gen-clicker"></a>použití HoloLens (1. generace) – kliknutí
 
-Kliknutí bylo navrženo speciálně pro HoloLens (1. generace) a nabízí další způsob interakce s hologramy. Dodává se s HoloLens (1. generace) v samostatném rámečku.
+ta je navržená speciálně pro HoloLens (1. generace) a dává vám další způsob, jak pracovat s hologramy. obsahuje HoloLens (1. generace), v samostatném poli.
 
-Použijte ho místo ručních gest k výběru, posouvání, přesouvání a změně velikosti aplikací.
+Použijte ji místo ručních gest pro výběr, posouvání, přesunutí a změnu velikosti aplikací.
 
-## <a name="clicker-hardware-and-pairing"></a>Hardware a párování clickeru
+## <a name="clicker-hardware-and-pairing"></a>Hardware a párování Click
 
-Kliknutí HoloLens (1. generace) má smyčku prstu, která usnadňuje podržení, a indikátorové světlo.
+HoloLens (1. generace) kliknutí na něj má smyčku prstů, aby bylo snazší pojmout a indikátor světla.
 
-![The HoloLens Clicker](images/use-hololens-clicker-1.png)
+![HoloLens kliknutí](images/use-hololens-clicker-1.png)
 
-### <a name="clicker-indicator-lights"></a>Indikátory clickeru
+### <a name="clicker-indicator-lights"></a>Indikátory kliknutí
 
-Toto znamenají světla na klikateli.
+V takovém případě se zobrazí světla na středníku.
 
-- **Blikající bílé .** Kliknutí je v režimu párování.
-- **Rychle blikající bílé .** Párování bylo úspěšné.
-- **Plnou bílou .** Kliknutí se načítá.
-- **Blikající žlutoho.** Baterie je málo.
-- **Solidní žlutohnědé**. Při kliknutí došlo k chybě a budete ji muset restartovat. Při stisknutí tlačítka pro párování klikněte a podržte na 15 sekund.
+- **Blikající bílá**. Tento modul je v párovacím režimu.
+- **Rychlé blikání – bílá**. Párování bylo úspěšné.
+- **Plná bílá**. Přibíjí se na něj.
+- **Blikání žlutého**. Baterie je nízká.
+- **Plná oranžová** V případě, že došlo k chybě, je nutné ji restartovat. Když stisknete tlačítko párování, kliknete a podržíte 15 sekund.
 
-### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>Spárování kliknutí s HoloLens (1. generace)
+### <a name="pair-the-clicker-with-your-hololens-1st-gen"></a>párování kliknutí s vaším HoloLens (1. generace)
 
-1. Pomocí gesta bloom přejděte na **Start (Spustit),** vyberte Settings Devices   >  **(Nastavení zařízení)** a ověřte, že je zapnuté Bluetooth.
-1. Na klikání stiskněte a podržte tlačítko párování, dokud stavové světlo nebude blikat bíle.
-1. Na obrazovce párování vyberte **Pár kliknutí**  >  .
+1. pro **začátek** použijte gesto bloom a pak vyberte **Nastavení**  >  **zařízení** a ověřte, jestli je Bluetooth zapnutá.
+1. Klikněte na tlačítko a podržte tlačítko párování, dokud se stav světla nespustí bíle.
+1. Na obrazovce párování vyberte **možnost kliknout na**  >  **pár**.
 
-### <a name="charge-the-clicker"></a>Poplatek za kliknutí
+### <a name="charge-the-clicker"></a>Poplatky za kliknutí
 
-Když je klikatel vybídne, indikátor baterie bude blikat žlutou. Připojte kabel Micro USB k napájecímu zdroji USB pro nabíjíní zařízení.
+Když je vybitá baterie, indikátor baterie bude blikat žlutě. Připojte kabel Micro USB ke zdroji napájení USB, aby bylo možné zařízení účtovat.
 
-## <a name="use-the-clicker-with-hololens-1st-gen"></a>Použití kliknutí s HoloLens (1. generace)
+## <a name="use-the-clicker-with-hololens-1st-gen"></a>použití nástroje click se HoloLensem (1. generace)
 
-### <a name="hold-the-clicker"></a>Podržení klikače
+### <a name="hold-the-clicker"></a>Blokování kliknutí
 
-Pokud chcete zaklikat, posuňte smyčku přes kruh nebo prostřední prst tak, aby port Micro USB směřil k vašemu okruhu. Čekací kolečko odsazení.
+Pokud ho chcete umístit na sebe, posuňte smyčku přes svůj prstenec nebo střední krok, aby se adaptér Micro USB tváře na zápěstí. Zbytek jezdce odsadíte.
 
-![Jak podržet clicker](images/use-hololens-clicker-2.png)
+![Jak držet kliknutí](images/use-hololens-clicker-2.png)
 
 ### <a name="clicker-gestures"></a>Gesta kliknutí
 
-Gesta klikacích zařízení jsou malá otočení, nikoli větší pohyby používané pro gesta rukou HoloLens. A HoloLens rozpozná vaše gesta a klikne, i když je kliknutí mimo rámec [gesta,](hololens1-basic-usage.md)takže můžete podržet kliknutí na pozici, která je pro vás nejpohodlnější.
+gesta kliknutí se pohybují malým zápěstí, ne větším pohybům, které se používají pro HoloLens gesta. a HoloLens rozpoznává gesta a klikne i v případě, že je návštěvník mimo [rámec gesta](hololens1-basic-usage.md), takže ho můžete umístit na pozici, která je pro vás nejpohodlnější.
 
-- **Vyberte**. Pokud chcete vybrat hologram, tlačítko nebo jiný prvek, upřete na něj pohled a klikněte na něj.
+- **Vyberte**. Pokud chcete vybrat hologram, tlačítko nebo jiný prvek, pohledu na něj a potom klikněte na.
 
-- **Klikněte na a podržte .** Kliknutím a podržením palcem na tlačítku můžete klepnutím a podržením provést některé z věcí, jako je přesunutí nebo změna velikosti hologramu.
+- **Klikněte a podržte**. Pokud chcete udělat některé z stejných věcí, jako je třeba přesunout nebo změnit velikost hologramu, klikněte na tlačítko Další a podržte tlačítko myši.
 
-- **Posuňte se na**. Na panelu aplikace vyberte Scroll **Tool (Nástroj pro posouvání).** Klikněte a podržte a pak klikejte nahoru, dolů, doleva nebo doprava. Pokud se chcete posouvat rychleji, přesuňte svou rukou dál od středu nástroje pro posouvání.
+- **Posuňte** se. Na panelu aplikace vyberte **rolovací nástroj**. Klikněte a podržte ho a potom otáčejte kliknutím nahoru, dolů, vlevo nebo vpravo. Pokud se chcete pohybovat rychleji, posuňte svoji ruku od středu nástroje pro posouvání.
 
-- **Zoom (Přiblížit).** Na panelu aplikace vyberte Nástroj **lupy.** Kliknutím a podržením a otočením klikače nahoru můžete zobrazení přiblížit nebo oddálit.
+- **Přiblížení**. Na panelu aplikace vyberte možnost **Nástroj Lupa**. Klikněte na tlačítko a podržte tlačítko pro přiblížení a zmenšení.
 
 > [!TIP]
-> Pokud chcete zobrazení přiblížit nebo oddálit Microsoft Edge, nahlédněte na stránku a poklikejte na něj.
+> pokud chcete přiblížit nebo oddálit při použití Microsoft Edge, pohledu na stránce a dvakrát na ni klikněte.
 
-## <a name="im-having-problems-using-the-hololens-clicker"></a>Mám potíže s používáním klikače HoloLens
+## <a name="im-having-problems-using-the-hololens-clicker"></a>mám problémy s používáním HoloLens click
 
-Pomocí kliknutí [můžete vybrat,](hololens1-clicker.md) posouvat, přesunout a změnit velikost hologramů. Jednotlivé aplikace mohou podporovat další gesta kliknutí.
+Kliknutím na [tlačítko](hololens1-clicker.md) můžete vybrat, posouvat, přesouvat a měnit velikost hologramů. Jednotlivé aplikace můžou podporovat další gesta pro kliknutí.
 
-Pokud máte potíže s používáním klikače, ujistěte se, že se účtuje a spáruje s HoloLens. Pokud je baterie nízká, světlo indikátoru blikne žlutou. Pokud chcete ověřit, že je clicker spárovaný, přejděte na **Nastavení** Zařízení a podívejte  >   se, jestli se tam zobrazuje. Další informace najdete v tématu [Párování klikače](hololens1-clicker.md).
+Pokud máte potíže s používáním nástroje Click, ujistěte se, že se vám HoloLens účtovat a párovat. Pokud je baterie nízká, indikátor světla bliká žlutě. pokud chcete ověřit, že je tento přidaný, přejděte na **Nastavení**  >  **zařízení** a podívejte se, jestli se tam zobrazuje. Další informace najdete v tématu [párování kliknutí](hololens1-clicker.md).
 
-Pokud se kliknutí naúčtuje a spáruje a stále máte problémy, resetujte ho tak, že podržíte hlavní tlačítko a tlačítko párování po dobu 15 sekund. Pak znovu spárujte klikací tlačítko se svým HoloLensem.
+Pokud se k němu klikne při párování a spárování a stále dochází k problémům, resetujte ho tak, že podržíte hlavní tlačítko a tlačítko párování po dobu 15 sekund. potom klikněte na HoloLens znovu párování s vaším.
 
-Pokud resetování kliknutí nepomůže, podívejte se na [stránku Restart or recover the HoloLens clicker](hololens1-clicker.md#restart-or-recover-the-clicker)(Restartování nebo obnovení kliknutí HoloLens).
-## <a name="restart-or-recover-the-clicker"></a>Restartování nebo obnovení kliknutí
+pokud se kliknutím na resetování pomocníka nedaří, přečtěte si téma [restartování nebo obnovení HoloLensho kliknutí](hololens1-clicker.md#restart-or-recover-the-clicker).
+## <a name="restart-or-recover-the-clicker"></a>Restartování nebo obnovení kliknutí na něj
 
-Tady je několik věcí, které můžete vyzkoušet, pokud kliknutí na HoloLens nereaguje nebo nefunguje dobře.
+tady je několik věcí, které můžete vyzkoušet, pokud HoloLenser nereaguje nebo nefunguje dobře.
 
-### <a name="restart-the-clicker"></a>Restartujte kliknutí.
+### <a name="restart-the-clicker"></a>Restartovat klepnutím
 
-Pomocí špičky pera stiskněte a podržte tlačítko párování. Současně klikněte a podržte na 15 sekund kliknutí. Pokud už kliknutí bylo spárované s holoLens, zůstane spárované i po restartování.
+Pomocí hrotu pera stiskněte a podržte tlačítko párování. Ve stejnou dobu klikněte na po 15 sekundách na tlačítko a podržíte ho. pokud již byl tento počítač spárován s vaším HoloLens, zůstane po restartování spárován.
 
-Pokud se kliknutí nezačne zapnout nebo restartovat, zkuste ho zapnout pomocí zařízení HoloLens. Pokud je baterie velmi nízká, může trvat několik minut, než se světlo bílého indikátoru zapne.
+pokud se nespustí ani nerestartuje, zkuste ho vyúčtováním použít HoloLens nabíječky. Pokud je baterie velmi nízká, může trvat několik minut, než se ukazatel bílého indikátoru zapne.
 
-### <a name="re-pair-the-clicker"></a>Opětovné spárování klikače
+### <a name="re-pair-the-clicker"></a>Přespárovat kliknutí
 
-Vyberte **Nastavení**  >  **Zařízení** a klikněte na něj. Vyberte **Odebrat,** počkejte několik sekund a pak znovu spárujte kliknutí.
+vyberte **Nastavení**  >  **zařízení** a vyberte kliknutím. Vyberte **Odebrat**, počkejte několik sekund a potom klikněte na tlačítko spárovat znovu.
 
-### <a name="recover-the-clicker"></a>Obnovení kliknutí
+### <a name="recover-the-clicker"></a>Obnovit kliknutím
 
-Pokud restartováním a znovu spárováním klikacího nástroje problém nevyřešíte, může vám s jeho obnovením pomoct nástroj Windows Device Recovery. Proces obnovení může nějakou dobu trvat a nainstaluje nejnovější verzi softwaru klikače. K použití tohoto nástroje budete potřebovat počítač se systémem Windows 10 nebo novějším, který má alespoň 4 GB volného místa v úložišti.
+pokud po restartování a přepárování s tímto kliknutím neopravíte problém, může vám nástroj pro obnovení Windows zařízení pomoct ho obnovit. Proces obnovení může nějakou dobu trvat a nainstaluje nejnovější verzi softwaru na něj. chcete-li použít tento nástroj, budete potřebovat počítač se systémem Windows 10 nebo novějším, který má alespoň 4 GB volného místa úložiště.
 
-Obnovení klikače:
+Postup obnovení kliknutí:
 
-1. Stáhněte a nainstalujte do svého počítače nástroj Obnovení zařízení systému [Windows.](https://dev.azure.com/ContentIdea/ContentIdea/_queries/query/8a004dbe-73f8-4a32-94bc-368fc2f2a895/)
-1. Ke svému počítači připojte klikače pomocí kabelu Micro USB, který jste dodáli s holoLens.
-1. Spusťte nástroj Windows Device Recovery Tool a postupujte podle pokynů.
+1. stáhněte a nainstalujte [nástroj Windows recovery zařízení](https://dev.azure.com/ContentIdea/ContentIdea/_queries/query/8a004dbe-73f8-4a32-94bc-368fc2f2a895/) do počítače.
+1. Připojení kliknutím na váš počítač pomocí kabelu USB, který jste dostali v HoloLens.
+1. spusťte nástroj Windows recovery zařízení a postupujte podle pokynů.
 
-Pokud se kliknutí nezjistne  automaticky, vyberte Moje zařízení nebylo zjištěno a postupujte podle pokynů k nastavení zařízení do režimu obnovení.
+Pokud nedojde k automatickému rozpoznání, vyberte možnost **Moje zařízení nebylo rozpoznáno** a postupujte podle pokynů k přepnutí zařízení do režimu obnovení.
 

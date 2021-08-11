@@ -1,5 +1,5 @@
 ---
-title: Průvodce nasazením – Příručky pro firemní HoloLens 2 s Dynamics 365 – nasazení
+title: Průvodce nasazením – Průvodci nasazením HoloLens 2 s Dynamics 365 – nasazení
 description: Zjistěte, jak nastavit nasazení zařízení HoloLens 2 přes podnikovou propojenou síť pomocí průvodců Dynamics 365.
 keywords: HoloLens, správa, firemní připojení, Průvodci Dynamics 365, AAD, Azure AD, MDM, Mobile Správa zařízení
 author: joyjaz
@@ -14,30 +14,30 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 6407517bca9efd02fdaf45a78cba7a215ec05670
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: f9435ce94986a851bb7744eeea48fa6e411454f5090d7ae11c869ba6f27dc942
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113637060"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115660255"
 ---
 # <a name="deploy---corporate-connected-guide"></a>Nasazení – Průvodce připojeným podnikem
 
 Důležitou součástí každého nasazení je zajistit správné nastavení nasazení před tím, než ho sami otestujete, abyste zajistili bezproblémové prostředí pro koncového uživatele.
 
-Vzhledem k tomu, že nasazujete certifikát Wi-Fi přes MDM, musíme nejprve nastavit HoloLens a zaregistrovat zařízení v otevřené síti Wi-Fi nebo v síti, která certifikát nevyžaduje. Jakmile HoloLens oOBE a zaregistrovali, zařízení obdrží síťový certifikát a obchodní soubor nakonfigurovaný dříve a my budeme moct ověřit, že zařízení přijalo obojí.
+Vzhledem k tomu, že nasazujete certifikát Wi-Fi prostřednictvím MDM, musíme nejprve nastavit HoloLens a zaregistrovat zařízení v otevřené síti Wi-Fi nebo v síti, která certifikát nevyžaduje. Jakmile HoloLens oOBE a zaregistrovali, zařízení obdrží síťový certifikát a obchodní soubor nakonfigurovaný dříve a my budeme moct ověřit, že zařízení přijalo obojí.
 
 Potom budete moct potvrdit, že můžete vytvořit a provozovat testovací příručku.
 
 ## <a name="enrollment-validation"></a>Ověření registrace
 
-Teď, když je všechno správně nakonfigurované pro azure AD a registraci MDM, by teď mělo být všechno v pořádku. Budete potřebovat připojení Wi-Fi a HoloLens zařízení a jeden z dříve nakonfigurovaných uživatelských účtů Azure AD.
+Teď, když je všechno správně nakonfigurované pro azure AD a registraci MDM, by teď zbytek měl být v pořádku. Budete potřebovat připojení Wi-Fi a HoloLens zařízení a jeden z dříve nakonfigurovaných uživatelských účtů Azure AD.
 
 Pokud zařízení aktuálně není ve stavu továrního nastavení, je teď vhodné ho [namítt.](/hololens/hololens-recovery#clean-reflash-the-device)
 
 1. Jakmile bude zařízení v OOBE, budete muset začít pracovat a postupovat podle pokynů.
 
-2. Připojení k otevřené Wi-Fi, která nevyžaduje pro připojení k Wi-Fi certifikáty. To umožní zařízení stáhnout certifikát, který se má po počátečním nastavení Wi-Fi v organizaci.
+2. Připojení k otevřené Wi-Fi, která nevyžaduje pro připojení k Wi-Fi certifikáty. To umožní zařízení stáhnout certifikát, který se má po počátečním nastavení Wi-Fi na zařízení organizace.
 
 3. Kritická výzva se zobrazí, když se zobrazí **dotaz Kdo který tento HoloLens?** Vyberte **Můj pracovní nebo školní účet vlastní a** zadejte své přihlašovací údaje k účtu Azure AD.
 
@@ -53,14 +53,14 @@ Pokud zařízení aktuálně není ve stavu továrního nastavení, je teď vhod
 
 8. Ověřte, že je vaše zařízení úspěšně připojené k Azure AD. Existují dva způsoby:
 
-    1.  Aplikace Nastavení. V **Nastavení** vyberte Účty **Přístup** do práce nebo  ->  **do školy.** Na této obrazovce můžete ověřit, že jste úspěšně zaregistrovaní. Zobrazí se stránka Připojeno k &quot;&#39;Azure AD. Připojeno přes *yourusername@nameofAAD.onmicrosoft.com* . Tím ověříte, že je vaše zařízení připojené k vaší organizaci&#39;Azure AD.
+    1.  Aplikace Nastavení. V **Nastavení** vyberte Účty **Přístup** do práce nebo  ->  **do školy.** Na této obrazovce můžete ověřit, že jste úspěšně zaregistrovaní– zobrazí se stránka Připojeno k &quot;&#39;Azure AD. Připojeno přes *yourusername@nameofAAD.onmicrosoft.com* . Tím ověříte, že je vaše zařízení připojené k vaší organizaci&#39;Azure AD.
 
-    1. Na [Azure Portal](https://portal.azure.com/#home). Přejděte na **Azure Active Directory** Zařízení Všechna zařízení a  ->    ->  vyhledejte název zařízení. V části Typ spojení se zobrazí text Připojeno k Azure AD.
+    1. Na [Azure Portal](https://portal.azure.com/#home). Přejděte na **Azure Active Directory** Zařízení Všechna zařízení a  ->    ->  vyhledejte název zařízení. V části Join Type (Typ spojení) se zobrazí , že je připojeno k Azure AD.
         ![Ověření typu připojení v Azure AD](./images/hololens2-devices-all-devices.png)
 
 9. Ověřte, že je zařízení zaregistrované v MDM. Existují dva způsoby:
 
-    1. V **Nastavení** vyberte Účty **Přístup do** práce nebo do  ->  **školy.** Na této obrazovce můžete ověřit, že jste úspěšně zaregistrovaní. Zobrazí se stránka Připojeno k &quot;&#39;Azure AD. Připojeno přes *yourusername@nameofAAD.onmicrosoft.com* . Z tohoto přístupového pracovního nebo školního účtu vyberte &quot; Připojeno k názvuAAD&#39;Azure AD. Připojeno yourusername@nameofAAD.onmicrosoft.com &quot; přes a vyberte **tlačítko** Informace.
+    1. V **Nastavení** vyberte Účty **Přístup do** práce nebo do  ->  **školy.** Na této obrazovce můžete ověřit, že jste úspěšně zaregistrovaní– zobrazí se stránka Připojeno k &quot;&#39;Azure AD. Připojeno přes *yourusername@nameofAAD.onmicrosoft.com* . Z tohoto přístupového pracovního nebo školního účtu vyberte Připojeno k &quot; názvuAAD&#39;Azure AD. Connected by yourusername@nameofAAD.onmicrosoft.com &quot; (Připojeno pomocí) **a vyberte tlačítko Info** (Informace).
 
     1. [Microsoft Endpoint Manager Admin Center](https://endpoint.microsoft.com/#home). Přihlaste se a **vyberte Zařízení a** pak Všechna **zařízení.** Tady můžete prohledat název HoloLens&#39;zařízení. Vaše aplikace by se měla zobrazit HoloLens v Intune.
 
@@ -81,7 +81,7 @@ Otevřete nabídka Start a vyberte **Všechny aplikace**. V závislosti na počt
 
 Pokud chcete ověřit instalaci aplikace na zařízení, můžete to udělat přes přístup k účtům **Nastavení** do práce nebo do školy, vybrat účet, pak tlačítko Informace a posunout se dolů, abyste viděli různé konfigurace a aplikace použité pro zařízení z  ->    ->  MDM. 
 
-Pokud chcete ověřit instalaci z Intune, přejděte na stránku Stav instalace zařízení [MEM](https://endpoint.microsoft.com/#home)  ->  **Aplikace** -> Všechny   -> *aplikaceNázev_vašeho_zařízení_aplikace.*  ->  
+Pokud chcete ověřit instalaci z Intune, přejděte na stránku Stav instalace zařízení [MEM](https://endpoint.microsoft.com/#home)-> Všechny  ->     -> *aplikaceNázevOfNázevAuch*  ->  **zařízení.**
 
 Další informace: [Nasazení aplikací Intune pro HoloLens](/hololens/app-deploy-intune)
 
@@ -91,7 +91,7 @@ Existují režimy pro aplikaci Průvodci pro HoloLens, vytváření a provoz. P�
 
 ### <a name="authoring-the-guide"></a>Vytváření příručky
 
-Pro toto rychlé ověření toho moc dělat nemusíme. Stačí vybrat průvodce, který jste připravili na svém počítači. Kvůli rychlému ověření [budete muset](/dynamics365/mixed-reality/guides/hololens-app-anchor)průvodce ukotvit, abyste mohli použít holografické ukotvení. Potom byste měli umístit [kroky a modely](/dynamics365/mixed-reality/guides/hololens-app-orientation).
+Pro toto rychlé ověření toho moc dělat nemusíme. Stačí vybrat průvodce, který jste připravili na svém počítači. Kvůli rychlému ověření [budete](/dynamics365/mixed-reality/guides/hololens-app-anchor)muset průvodce ukotvit, abyste mohli použít holografické ukotvení. Potom byste měli umístit [kroky a modely](/dynamics365/mixed-reality/guides/hololens-app-orientation).
 
 >[!NOTE]
 > K přihlášení k **počítači a** vytváření na počítači budete potřebovat roli vytváření HoloLens. Role Operátor je jen pro čtení a nemá přístup k aplikaci pro počítače.

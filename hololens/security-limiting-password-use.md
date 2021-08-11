@@ -6,7 +6,7 @@ ms.author: v-evmill
 ms.reviewer: tagran
 ms.date: 6/30/2020
 ms.topic: article
-keywords: zabezpečení, HoloLens, omezení používání hesla, heslo, heslo pro HoloLens, přihlášení, přihlášení, Windows Hello, Hello, správce účtů systému Windows, FIDO2 přihlášení, FIDO 2, operace WEBAUTHN, místní účet, zabezpečení HoloLens
+keywords: security, hololens, limiting password use, password, hololens password, sign-in, signing in, windows hello, hello, windows account manager, FIDO2 sign in, FIDO 2, WEBAUTHN, local account, hololens security
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
@@ -14,105 +14,105 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 074fffc8350dd6deb876a19320397674bcac3e46
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: a4ceaa1a741ec63153cd9112d04547165b46b0fa72c32ee7f9580f15368a2f88
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639297"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665442"
 ---
 # <a name="limiting-password-use"></a>Omezení použití hesla
 
-Většina počítačových systémů dnes využívá přihlašovací údaje uživatele jako základu pro zabezpečení, které je zabezpečí na základě opakovaně použitelných hesel vytvořených uživatelem. To má za následek to, že hesla se také staly Nejběžnější příčinou ohrožení bezpečnosti a porušení zabezpečení účtů. Příkladem je, že hesla se můžou zachytit při přenosu nebo odcizení ze serveru (útokem phishing nebo proti postřiku hesla) a ohrozit tak přístup k uživatelskému účtu.
+Většina počítačových systémů dnes využívá přihlašovací údaje uživatelů jako základ zabezpečení, díky nimž jsou závislé na znovu použitelných a uživatelem vytvořených heslech. Výsledkem je, že hesla se také stávají nejčastější příčinou ohrožení zabezpečení účtu a porušení zabezpečení dat. Jako příklad toho je možné hesla zachytit při přenosu nebo odcizení ze serveru (útoky phishing nebo password spray) a ohrozit je, aby získala přístup k uživatelskému účtu.
 
-pro zvýšení zabezpečení a ochrany účtů má HoloLens 2 možnost povolit pro přihlášení k zařízení silné přihlašovací údaje s heslem bez hesla (včetně Windows Hello) a nabízí bezproblémový přístup ke cloudu microsoftu.
+Za účelem zlepšení zabezpečení a ochrany účtů má HoloLens 2 možnost povolit silné hardwarově chráněné přihlašovací údaje bez hesla (včetně Windows Hello) pro přihlašování zařízení a nabízí bezproblémový přístup ke cloudu Microsoftu.
 
 ## <a name="signing-in-from-another-device"></a>Přihlaste se z jiného zařízení
 
-HoloLens 2 nabízí možnosti přihlášení ke vzdálenému zařízení pro Azure Active Directory pracovní účty během počátečního nastavení zařízení a přihlašování uživatelů, aby se snížila nutnost psaní složitých hesel a minimalizovala potřeba hesla jako přihlašovací údaje. uživatelé a organizace, kteří používají čipové karty k ověřování, mají potíže s používáním těchto přihlašovacích údajů na zařízeních, jako jsou HoloLens 2, a často můžou vytvářet složité systémy a nákladné procesy pro řešení tohoto problému. k vyřešení tohoto problému Azure AD nabízí dvě možnosti pro přihlášení bez hesla HoloLens 2.
+HoloLens 2 nabízí možnosti vzdáleného přihlášení zařízení pro pracovní účty Azure Active Directory během počátečního nastavení zařízení Azure Active Directory přihlašování uživatelů, aby se snížila potřeba zapisovat složitá hesla Azure Active Directory minimalizovala se potřeba hesel jako přihlašovacích údajů. Uživatelé a organizace, které k ověřování používají čipové karty, mají potíže s používáním těchto přihlašovacích údajů na zařízeních, jako je HoloLens 2, a organizace často vyvíjejí složité systémy a nákladné procesy pro řešení problému. Azure AD nabízí pro řešení tohoto problému dvě možnosti pro přihlašování bez hesla na HoloLens 2.
 
-metoda prvního ověřování spoléhá na nové funkce v aplikaci Microsoft Authenticator, aby poskytovaly ověřování založené na klíčích, které povoluje přihlašovací údaje uživatele vázané na zařízení. po povolení u tenanta správcem se uživatelům zobrazí zpráva během HoloLens nastavení zařízení, která jim sdělí, že chtějí klepnout na číslo ve své aplikaci. musí se pak shodovat s číslem v ověřovací aplikaci, zvolit schválit, zadat jejich PIN kód nebo biometriku a dokončit ověřování pro jejich nastavení HoloLens, aby bylo možné pokračovat. Tato informace je podrobněji popsána v tématu [přihlášení k neheslům](/azure/active-directory/authentication/howto-authentication-passwordless-phone).
+První metoda ověřování spoléhá na nové funkce v aplikaci Microsoft Authenticator, aby poskytovala ověřování na základě klíčů, které umožňuje přihlašovací údaje uživatele vázané na zařízení. Po povolení správcem v tenantovi se uživatelům během nastavování HoloLens zobrazí zpráva s oznámením, že mají v aplikaci klepnout na číslo. Musí se pak shodovat s číslem v ověřovací aplikaci, zvolit Schválit, zadat pin kód nebo biometrické údaje a dokončit ověření, aby jejich HoloLens mohli pokračovat. To je podrobněji popsáno v části o přihlašování [bez hesla.](/azure/active-directory/authentication/howto-authentication-passwordless-phone)
 
-Druhým je tok kódu zařízení, který je pro uživatele intuitivní a nevyžaduje žádnou další infrastrukturu.  toto vzdálené přihlašovací chování spoléhá na jiné důvěryhodné zařízení, které podporuje preferovaný ověřovací mechanismus organizace a po jeho dokončení se tokeny vydávají zpátky do HoloLens, aby se dokončilo přihlášení nebo nastavení zařízení. Postup v tomto toku:
+Druhým je tok kódu zařízení, který je pro uživatele intuitivní a nevyžaduje žádnou další infrastrukturu.  Toto chování při vzdáleném přihlašování spoléhá na jiné důvěryhodné zařízení, které podporuje upřednostňovaný mechanismus ověřování organizace, a po dokončení se tokeny předá zpět HoloLens, aby se dokončilo přihlášení nebo nastavení zařízení. Postup v tomto toku je následující:
 
-  1. Uživatel prochází počátečním nastavením zařízení nebo toky přihlášení na začátku se zobrazí s odkazem přihlásit z jiného zařízení a klepne na něj. Tím se spustí relace vzdáleného přihlášení.
-  1. Uživateli se pak zobrazí stránka s dotazem, která obsahuje krátký identifikátor URI ( [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) ), který odkazuje na koncový bod ověřování zařízení služby tokenů zabezpečení Azure AD. Uživatel je také zobrazen s jednorázovým kódem, který je bezpečně generován v cloudu a má maximální dobu 15 minut. Společně s generováním kódu vytvoří služba Azure AD zašifrovanou relaci při zahájení žádosti o vzdálené přihlášení v předchozím kroku a společně se k schválení žádosti o vzdálené přihlášení používá identifikátor URI a kód.
-  1. uživatel pak přejde k identifikátoru URI z jiného zařízení a zobrazí se výzva k zadání kódu zobrazeného na jejich zařízení HoloLens 2.
-  1. jakmile uživatel zadá kód, Azure AD STS zobrazí stránku s informacemi o zařízení uživatele HoloLens 2, které aktivovalo požadavek na vzdálené přihlášení a požadoval generování kódu. Uživatel se pak vyzve k potvrzení, aby nedocházelo k útokům phishing.
-  1. Pokud se uživatel rozhodne pokračovat v přihlašování k zobrazené aplikaci, služba Azure AD STS vyzve uživatele k zadání přihlašovacích údajů. Po úspěšném ověření služba Azure AD STS aktualizuje vzdálenou relaci uloženou v mezipaměti jako schválenou společně s autorizačním kódem.
-  1. nakonec stránka pro dotazování na zařízení HoloLens 2 uživatele obdrží odpověď autorizovaný od Azure AD a pokračuje v ověřování uživatelského kódu, přidruženého uloženého autorizačního kódu a vygeneruje tokeny OAuth, jak je požadováno k dokončení nastavení zařízení. Vytvořený ověřovací token je platný 1 hodina a obnovovací token má životnost 90 dní.
+  1. Uživateli, který prochází počátečním nastavením zařízení nebo přihlášením na OOBE, se zobrazí odkaz Přihlásit se z jiného zařízení a klepne na něj. Tím se zahájí relace vzdáleného přihlášení.
+  1. Uživateli se pak zobrazí stránka cyklického dotazování, která obsahuje krátký identifikátor URI ( ), který odkazuje na koncový bod ověřování zařízení služby [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) tokenů zabezpečení (STS) Azure AD. Uživateli se také zobrazí jeden kód, který se bezpečně vygeneruje v cloudu a má maximální životnost 15 minut. Spolu s generováním kódu azure AD také vytvoří šifrovanou relaci při zahájení žádosti o vzdálené přihlášení v předchozím kroku a společně se identifikátor URI a kód používají ke schválení žádosti o vzdálené přihlášení.
+  1. Uživatel pak přejde na identifikátor URI z jiného zařízení a zobrazí se výzva k zadání kódu zobrazeného na jeho zařízení HoloLens 2.
+  1. Jakmile uživatel zadá kód, služba Azure AD STS zobrazí stránku s oznámením, že zařízení uživatele HoloLens 2 aktivuje žádost o vzdálené přihlášení a požadované generování kódu. Uživateli se zobrazí výzva k potvrzení, aby se zabránilo útokům phishing.
+  1. Pokud se uživatel rozhodne pokračovat v přihlašování k zobrazené aplikaci, služba Azure AD STS vyzve uživatele k zadání přihlašovacích údajů. Po úspěšném ověření služba Azure AD STS aktualizuje vzdálenou relaci v mezipaměti jako schválenou spolu s autorizačním kódem.
+  1. Nakonec stránka cyklického dotazování na zařízení uživatele HoloLens 2 obdrží od Azure AD odpověď Autorizované a pokračuje ověřením uživatelského kódu, přidruženého uloženého autorizačního kódu a vygeneruje tokeny OAuth podle požadavku na dokončení nastavení zařízení. Vytvořený ověřovací token je platný po dobu 1 hodiny a obnovovací token má životnost 90 dnů.
 
-Algoritmy pro generování kódu a šifrování použité v tomto toku jsou kompatibilní se standardem FIPS. zařízení HoloLens 2 využívají čip TPM k zabezpečení klíčů zařízení a šifrování tokenů generovaných po ověření uživatele pomocí klíčů chráněných hardwarem. další informace o zabezpečení tokenu na HoloLens 2 se sdílí v [tom, co je primární obnovovací token (PRT)](/azure/active-directory/devices/concept-primary-refresh-token).
+Algoritmy generování kódu a šifrování použité v tomto toku jsou kompatibilní se standardem FIPS. HoloLens 2 využívají čip TPM k zabezpečení klíčů zařízení a šifrování tokenů generovaných po ověření uživatele pomocí klíčů chráněných hardwarem. Další informace o zabezpečení tokenů v HoloLens 2 najdete v článku Co je primární [obnovovací token (PRT).](/azure/active-directory/devices/concept-primary-refresh-token)
 
 ## <a name="device-sign-in-with-windows-hello"></a>Přihlášení zařízení pomocí Windows Hello
 
-[Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification) nabízí možnosti bez hesla vytvořené přímo do operačního systému, které uživatelům umožňují přihlašovat se k zařízení pomocí Iris nebo PIN kódu. KÓD PIN je vždy k dispozici jako přihlašovací údaje a je vyžadován pro nastavení zařízení, zatímco Iris je volitelné a může být vynecháno. uživatelé se mohou přihlašovat k HoloLens zařízení pomocí osobního účet Microsoft nebo [Azure Active Directory pracovní účet *bez* zadání hesla](/azure/active-directory/authentication/concept-authentication-passwordless). možnosti, jako jsou například tyto, nabízejí uživatelům rychlý a zabezpečený přístup k jejich úplným Windowsm, aplikacím, datům, webům a službám. Strategii Microsoftu pro prostředí, která nejsou v hesle, je podrobně popsána zde.
+[Windows Hello](/windows/security/identity-protection/hello-for-business/hello-identity-verification) nabízí možnosti bez hesla integrované přímo do operačního systému, které uživatelům povolují přihlášení k zařízení pomocí Iris nebo PIN kódu. KÓD PIN je vždy k dispozici jako přihlašovací údaje a vyžaduje se pro nastavení zařízení, zatímco Iris je volitelná a může se přeskočit. Uživatelé se mohou přihlásit k HoloLens pomocí svého osobního účet Microsoft nebo Azure Active Directory účtu bez [zadání hesla.  ](/azure/active-directory/authentication/concept-authentication-passwordless) Tyto možnosti nabízejí uživatelům rychlý a zabezpečený přístup k jejich kompletnímu Windows, aplikacím, datům, webům a službám. Tady je podrobná strategie Microsoftu pro prostředí bez hesla.
 
-když se vytvoří přihlašovací údaje Windows Hello, vytvoří se důvěryhodný vztah s poskytovatelem identity a vytvoří se asymetrický pár klíčů pro ověřování. Windows Hello gesto (například iris nebo PIN) poskytuje entropii k dešifrování privátního klíče, který je zajištěný čipem TPM (Trusted Platform Module) zařízení. Tento privátní klíč se pak použije k podepisování požadavků odesílaných ověřovacímu serveru a po úspěšném ověření. uživateli se udělí přístup k e-mailu, obrázkům a dalším nastavením účtu.
+Při Windows Hello přihlašovacích údajů vytvoří důvěryhodný vztah se zprostředkovatelem identity a vytvoří asymetrický pár klíčů pro ověřování. Gesto Windows Hello (například iris nebo PIN) poskytuje entropii k dešifrování privátního klíče chráněného čipem TPM (specifikace TPM (Trusted Platform Module) zařízení). Tento privátní klíč se pak použije k podepisování požadavků odeslaných na ověřovací server a po úspěšném ověření je uživateli udělen přístup k e-mailu, obrázkům a dalším nastavením účtu.
 
-Další informace najdete v následujících infografika:
+Další informace najdete v následující infografice:
 
   ![Windows Hello Přihlášení](images/security-hello-sign-in.png)
   
-Na obrázku uvedeném výše si všimněte, že hodnota nonce je "Number jedenkrát" a je náhodné nebo částečně vygenerované číslo. po nastavení Windows Hello biometriky nebo PIN kódu PIN nikdy nezůstane zařízení, na kterém je zřízené. i v případě, že je kód PIN Windows Hello uživatele odcizen, například útok útokem phishing, je [bez fyzického zařízení uživatele nepoužitelné](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password).
+Na obrázku uvedeném výše si všimněte, že nonce je zkratka pro "number once" (číslo jednou) a je náhodné nebo částečně náhodné vygenerované číslo. Po nastavení Windows Hello biometrických údajů nebo přihlašovacích údajů PIN kódu se zařízení, na kterém je zřízené, nikdy neopustí. I v případě, že Windows Hello pin kód uživatele, například prostřednictvím útoku phishing, je bez fyzického zařízení uživatele [nepoužitelný.](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password)
 
-pro zvýšení zabezpečení jsou přihlašovací údaje Windows Hello chráněny čipem TPM (Trusted Platform Module), aby přihlašovací údaje byly odolné proti chybám a byly doplněny ochranou před únikem informací proti více nesprávným položkám a ochraně před škodlivým softwarem, aby nedocházelo k expozici. Pokud chcete získat další informace o jednom Sign-On (SSO), přečtěte si tento [Přehled metod jednotného přihlašování](/azure/active-directory/manage-apps/what-is-single-sign-on).
+Kvůli vyššímu zabezpečení jsou přihlašovací údaje Windows Hello chráněné čipem specifikace TPM (Trusted Platform Module) (TPM), aby byly přihlašovací údaje odolné vůči neoprávněné manipulaci, a doplněné ochranou proti škodlivým položkám proti více nesprávným položkám a ochranu škodlivého softwaru, která brání vystavení. Další informace o metodách jednotného Sign-On (SSO) najdete v tomto přehledu metod [jednotného přihlašování.](/azure/active-directory/manage-apps/what-is-single-sign-on)
 
-Ověřování Iris se vrátí k PIN kódu. Aby bylo možné na zařízení nastavit nový PIN kód (silné ověřovatele), musí se uživatel nedávno dodávat prostřednictvím [vícefaktorového ověřování (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) , aby mohl proces dokončit.
+Ověřování Iris se vrátí zpět k PIN kódu. Aby uživatel mohl v zařízení nastavit nový PIN (silný ověřovací kód), musí nedávno projít vícefaktorovým ověřováním [(MFA),](/azure/active-directory/authentication/concept-mfa-howitworks) aby mohl proces dokončit.
 
-## <a name="single-sign-on-with-web-account-manager"></a>Jednotné přihlašování pomocí Správce účtů webu
+## <a name="single-sign-on-with-web-account-manager"></a>Jednotné přihlašování s Správce webových účtů
 
-Jednotné přihlašování (SSO) umožňuje uživatelům bez hesla přihlašovat se k zařízení pomocí osobního účtu uživatele nebo svého pracovního nebo školního účtu. Uživatel je automaticky autorizován pomocí jednotného přihlašování na všech integrovaných aplikacích a službách prostřednictvím [rozhraní API Správce účtů webu](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true).
+Jednotné přihlašování umožňuje uživatelům bez hesla přihlásit se k zařízení s využitím osobního účtu uživatele nebo jeho pracovního nebo školního účtu. Uživatel je automaticky autorizován pomocí jednotného přihlašování ve všech integrovaných aplikacích a službách [prostřednictvím Správce webových účtů API.](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true)
 
-Po přidání identity přes jednu aplikaci může s souhlasem uživatele být dostupná pro všechny aplikace a služby, které využívají integraci na úrovni systému. Tím se výrazně omezuje režie v přihlašování k aplikacím a poskytuje uživatelům bezproblémové prostředí identity.
+Jakmile je identita přidána prostřednictvím jedné aplikace, může být se souhlasem uživatele dostupná všem aplikacím a službám pomocí integrace na úrovni systému. Tím se výrazně snižuje zatížení přihlašování k aplikacím a poskytuje uživatelům bezproblémové prostředí pro identitu.
 
-Další informace o implementaci rozhraní API správce webového účtu najdete v [implementace rozhraní API správce webového účtu](/windows/uwp/security/web-account-manager).
+Další informace o implementaci rozhraní SPRÁVCE WEBOVÝCH ÚČTŮ API najdete v Správce webových účtů [rozhraní API.](/windows/uwp/security/web-account-manager)
 
   ![Rozhraní API pro zabezpečení](images/security-api-img.png)
   
-Pro sady aplikací s požadavky na specializované ověřování je rozhraní správce účtů webu (WAM) rozšiřitelné pro vlastní zprostředkovatele identity. uživatelé můžou stáhnout vlastního zprostředkovatele identity, který se zabalí jako aplikace Univerzální platforma Windows (UWP) z Microsoft Store a povolit jednotné přihlašování v jiných aplikacích integrovaných s tímto poskytovatelem identity.
+U sad aplikací se zvláštními požadavky na ověřování je Správce webových účtů (WAM) rozšiřitelná pro vlastní zprostředkovatele identity. Uživatelé si mohou z webu Microsoft Store stáhnout vlastního zprostředkovatele identity zabalený jako aplikaci univerzální platformy Windows Platform (UPW), aby bylo možné jednotné přihlašování v jiných aplikacích integrovaných s tímto zprostředkovatelem identity.
 
-Další informace o implementaci vlastních zprostředkovatelů identity WAM najdete v tématu [vlastní Reference k rozhraní API zprostředkovatele identity poskytovatele](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true)služby WAM.
+Další informace o implementaci vlastních zprostředkovatelů identity WAM najdete v referenčních informacích k rozhraní [API vlastního zprostředkovatele identity WAM.](/uwp/api/Windows.Security.Authentication.Web.Provider?view=winrt-19041&preserve-view=true)
 
-## <a name="windows-hello-and-fido2-sign-in-with-webauthn"></a>Windows Hello a FIDO2 přihlášení pomocí operace WebAuthn
+## <a name="windows-hello-and-fido2-sign-in-with-webauthn"></a>Windows Hello a FIDO2 pomocí WebAuthn
 
-HoloLens 2 může využít přihlašovací údaje uživatele bez hesla (například Windows Hello nebo FIDO2 klíče zabezpečení) k bezpečnému přihlášení na webu prostřednictvím Microsoft Edge a na weby, které podporují funkci WebAuthn. FIDO2 umožňuje uživatelským přihlašovacím údajům využít k ověření online služby k ověřování na základě standardů.
+HoloLens 2 můžete použít přihlašovací údaje uživatele bez hesla (například klíče zabezpečení Windows Hello nebo FIDO2) k zabezpečenému přihlášení na webu přes Microsoft Edge a k webům, které podporují WebAuthn. FIDO2 umožňuje přihlašovacím údajům uživatelů využívat k ověřování zařízení založených na standardech online služby.
 
 > [!Note]
-> Specifikace [WebAuthn](https://www.w3.org/TR/webauthn/) a FIDO2 [CTAP2](https://fidoalliance.org/specs/fido-v2.0-ps-20190130/fido-client-to-authenticator-protocol-v2.0-ps-20190130.html) jsou implementovány do služeb. Podepsaná metadata určená parametrem WebAuthn a FIDO2 poskytují informace – například zda byl uživatel přítomen a ověřuje ověřování prostřednictvím místního gesta.
+> Specifikace [WebAuthn a](https://www.w3.org/TR/webauthn/) FIDO2 [CTAP2](https://fidoalliance.org/specs/fido-v2.0-ps-20190130/fido-client-to-authenticator-protocol-v2.0-ps-20190130.html) jsou implementované do služeb. Podepsaná metadata zadaná pomocí WebAuthn a FIDO2 poskytují informace – například to, jestli byl uživatel přítomen – a ověřuje ověřování prostřednictvím místního gestu.
 
-stejně jako u Windows Hello, když uživatel vytvoří a zaregistruje přihlašovací údaje FIDO2, zařízení (HoloLens 2 nebo bezpečnostní klíč FIDO2) vygeneruje na zařízení soukromý a veřejný klíč. Privátní klíč je bezpečně uložený na zařízení a dá se použít jenom po odemčení pomocí místního gesta, jako je biometrika nebo PIN. Po uložení privátního klíče se veřejný klíč pošle do systému účet Microsoft v cloudu a zaregistruje se s přidruženým uživatelským účtem.
+Stejně jako u Windows Hello i když uživatel vytvoří a zaregistruje přihlašovací údaje FIDO2, zařízení (HoloLens 2 nebo klíč zabezpečení FIDO2) na zařízení vygeneruje privátní a veřejný klíč. Privátní klíč je bezpečně uložený v zařízení a je možné ho použít až po odemknutí pomocí místního gestu, jako je biometrika nebo PIN kód. Když je privátní klíč uložený, veřejný klíč se odesílá účet Microsoft systému v cloudu a zaregistrován pomocí přidruženého uživatelského účtu.
 
-po přihlášení pomocí účtu MSA a Azure AD pošle systém vygenerované číslo nebo datovou proměnnou do zařízení HoloLens 2 nebo FIDO2. HoloLens 2 nebo zařízení používá privátní klíč k podepsání identifikace. Podepsaná identifikace a metadata se odesílají zpátky do účet Microsoft systému a ověřují se pomocí veřejného klíče.
+Po přihlášení pomocí účtu MSA a Azure AD systém odešle vygenerované číslo nebo datovou proměnnou do zařízení HoloLens 2 nebo FIDO2. Zařízení HoloLens 2 používá k podepsání identifikace privátní klíč. Podepsaná identifikace a metadata se odesílat zpět účet Microsoft systému a ověřovat pomocí veřejného klíče.
 
-zařízení Windows Hello a FIDO2 implementují přihlašovací údaje na základě HoloLens zařízení, konkrétně vestavěného modulu Trusted Platform Module secure enklávy. ČIP TPM enklávy ukládá privátní klíč a vyžaduje jeho odemčení buď pomocí biometriky, nebo kódu PIN. Podobně klíč zabezpečení FIDO2 je malé externí zařízení s integrovaným zabezpečeným enklávy, které ukládá soukromý klíč a vyžaduje k jeho odemčení biometriku nebo PIN.
+Windows Hello a FIDO2 implementují přihlašovací údaje na základě HoloLens zařízení, konkrétně integrované specifikace TPM (Trusted Platform Module) zabezpečené enklávy. Enkláva TPM ukládá privátní klíč a k odemknutí vyžaduje biometrii nebo PIN kód. Podobně je bezpečnostní klíč FIDO2 malé externí zařízení s integrovanou zabezpečenou enklávou, která ukládá privátní klíč a k odemknutí vyžaduje biometrii nebo PIN kód.
 
-Obě možnosti nabízí dvojúrovňové ověřování v jednom kroku, které vyžaduje, aby se úspěšně přihlásili registrovaným zařízením a biometrickou metrikou nebo PIN. Další informace najdete v tématu silné ověřování s klíčem zabezpečení FIDO2 a s tímto postupem.
+Obě možnosti nabízejí dvojfaktorové ověřování v jednom kroku, které k úspěšnému přihlášení vyžaduje zaregistrované zařízení i biometrické nebo PIN. Další informace najdete v následujícím obrázku a procesu silného ověřování pomocí klíče zabezpečení FIDO2.
 
 ### <a name="strong-authentication-with-fido2-security-key"></a>Silné ověřování s klíčem zabezpečení FIDO2
 
   ![FIDO img](images/security-fido2-whfb-smaller.png)
 
-1. uživatel zapojuje klíč zabezpečení FIDO2 do HoloLens 2
+1. Uživatel zapojuje klíč zabezpečení FIDO2 do HoloLens 2.
 1. Windows detekuje klíč zabezpečení FIDO2
-1. HoloLens posílá žádost o ověření.
-1. Azure AD odesílá zpětnou hodnoty nonce
-1. Uživatel dokončí gesto pro odemknutí privátních úložišť klíčů v zabezpečeném enklávy bezpečnostního klíče.
-1. FIDO2 zabezpečení podepisuje klíč hodnoty nonce pomocí privátního klíče
-1. Požadavek na token PRT s podepsanou hodnotu NONCE se pošle do Azure AD.
-1. Azure AD ověří klíč FIDO
-1. Azure AD vrací PRT a TGT pro povolení přístupu k prostředkům.
+1. HoloLens odešle žádost o ověření.
+1. Azure AD odesílá zpět nece.
+1. Uživatel dokončí gesto pro odemknutí úložišť privátních klíčů v zabezpečené enklávě klíče zabezpečení.
+1. Klíč zabezpečení FIDO2 podepíše nece privátním klíčem
+1. Žádost o token PRT s podepsanou nece se odesílá do Azure AD.
+1. Azure AD ověřuje klíč FIDO
+1. Azure AD vrací PRT a TGT, aby byl umožněn přístup k prostředkům.
 
-MSA a Azure AD jsou mezi prvními předávajícími stranami, aby podporovaly ověřování bez hesla implementací operace WebAuthn.
+MSA a Azure AD patří mezi první předávající strany, které implementují WebAuthn a podporují ověřování bez hesla.
 
-Další informace o použití operace WebAuthn s aplikacemi a sadami SDK naleznete [v rozhraních Webauthn API pro ověřování bez hesla Windows 10](/windows/security/identity-protection/hello-for-business/webauthnapis).
+Další informace o používání WebAuthn s aplikacemi a/nebo sdk najdete v článku Rozhraní [WEBAuthn API](/windows/security/identity-protection/hello-for-business/webauthnapis)pro ověřování bez hesla na Windows 10 .
 
-HoloLens 2 podporuje bezpečnostní zařízení FIDO2, která jsou implementovaná na specifikaci a splňují požadavky uvedené v [Azure Active Directory bezpečnostní klíče FIDO2 pro přihlášení k heslům](/azure/active-directory/authentication/concept-authentication-passwordless#fido2-security-keys) , které by měly být podporované.
+HoloLens 2 podporuje zařízení zabezpečení FIDO2, která jsou implementovaná pro specifikace Azure Active Directory splňují požadavky uvedené v části o přihlašování bez hesla – klíče zabezpečení [FIDO2](/azure/active-directory/authentication/concept-authentication-passwordless#fido2-security-keys) by se měly podporovat.
 
 ## <a name="local-accounts"></a>Místní účty
 
-Pro nasazení offline režimu se dá nakonfigurovat jeden místní účet. Místní účty nejsou ve výchozím nastavení povolené a musí být nakonfigurované během zřizování zařízení. musí se přihlásit pomocí hesla a nepodporují alternativní metody ověřování (například [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-overview) nebo [Windows Hello](/windows-hardware/design/device-experiences/windows-hello)).
+Pro nasazení v offline režimu je možné nakonfigurovat jeden místní účet. Místní účty nejsou ve výchozím nastavení povolené a musí se nakonfigurovat během zřizování zařízení. Musí se přihlásit pomocí hesla a nepodporují alternativní metody ověřování (například [Windows Hello pro](/windows/security/identity-protection/hello-for-business/hello-overview) firmy [nebo Windows Hello](/windows-hardware/design/device-experiences/windows-hello)).
 
-další podrobnosti o HoloLens uživatelských účtů najdete v [HoloLens Identity](hololens-identity.md).
+Další podrobnosti o HoloLens uživatelských účtech najdete na HoloLens [Identity.](hololens-identity.md)
 
-Správci IT upraví, jestli má uživatel povoleno používat účet MSA pro ověřování a služby v souvislosti s Nee-maily prostřednictvím [AllowMicrosoftAccountConnection](/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection). Zásady konfigurace hesel, zásady volnoběhu a zásady uzamčené obrazovky najdete v tématu [Zámek zařízení](/windows/client-management/mdm/policy-csp-devicelock).
+Správci IT prostřednictvím [allowMicrosoftAccountConnection](/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)upravují, jestli uživatel může používat účet MSA pro ověřování připojení a služby nesouvisecí s e-mailem. Zásady konfigurace hesel, zásady idingu a zásady zamykací obrazovky najdete v tématu [Zámek zařízení.](/windows/client-management/mdm/policy-csp-devicelock)

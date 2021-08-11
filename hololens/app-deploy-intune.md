@@ -17,12 +17,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: b192732f5e7edffaa1d0ab081454e4034c416191
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: f1c178c940224ed3cd07c58b886b176108614caf7a8463af089e2f2357f45553
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635496"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665246"
 ---
 # <a name="intune--company-portal"></a>Intune & Portál společnosti
 
@@ -50,7 +50,7 @@ Pokud chcete automaticky získat aplikace, postupujte podle těchto kroků:
 
 1. Zaregistrujte své zařízení v tenantovi.
 2. Po dokončení registrace zařízení byste měli aplikaci obdržet na svém zařízení.
-3. Pokud aplikaci nevidíte okamžitě, přejděte do části Nastavení Accounts Work or School your account Info **(Pracovní** nebo školní informace o účtu) a posuňte se dolů, kde se zobrazí informace o  >    >    >   stavu nainstalované aplikace.
+3. Pokud aplikaci nevidíte okamžitě, přejděte do části Nastavení Accounts Work or School your account Info **(Pracovní** nebo školní informace o účtu) a posuňte se dolů, kde najdete informace o  >    >    >   stavu nainstalované aplikace.
 
 Jak se dostat k aplikacím prostřednictvím Portál společnosti:
 

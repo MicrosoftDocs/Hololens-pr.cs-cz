@@ -15,12 +15,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: bbbc60decb74942bd7930afb04297f78df33028a
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: c26c3a236a1047e62d480c27ec1bbb09faa63630eb29e0e1103546842d6a76d3
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635853"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664769"
 ---
 # <a name="find-install-and-uninstall-applications-from-the-microsoft-store"></a>Vyhledání, instalace a odinstalace aplikací z Microsoft Store
 
@@ -34,7 +34,7 @@ Další informace o instalaci a spouštění vlastních aplikací najdete v tém
 
 ## <a name="find-apps"></a>Hledání aplikací
 
-Otevřete Microsoft Store z **nabídky Start.** Pak vyhledejte aplikace a hry. Hlasové příkazy [můžete](hololens-cortana.md) použít k vyhledávání tak, že řeknete "Hledat", jakmile se okno hledání otevře, řekne "Start dictating" (Začít diktovat) a po zobrazení výzvy začne hledaný výraz říkat.
+Otevřete Microsoft Store z **nabídky Start.** Pak vyhledejte aplikace a hry. Hlasové příkazy [můžete](hololens-cortana.md) použít k vyhledávání tak, že řeknete "Hledat", jakmile se otevře okno hledání, které řekne "Start dictating" (Začít diktovat) a po zobrazení výzvy začne hledaný výraz říkat.
 
 > [!NOTE]
 > Požadavky na systém pro HoloLens zařízení jsou založené na architektuře sestavení aplikace. Pokud sestavení aplikace pro HoloLens (1. generace) nebylo aktualizováno na novější UPW ve Storu, aby zahrnovalo balíček architektury ARM, nebude dostupné pro HoloLens 2. Podobně platí, že pokud aplikace HoloLens 2 neobsahuje balíček architektury x86, nebude dostupná pro zařízení HoloLens (1. generace). HoloLens architektury zařízení:
@@ -93,7 +93,7 @@ Pokud chcete aktualizovat aplikaci, kterou jste nainstalovali z Microsoft Store,
    > ![Microsoft Store snímku obrazovky aplikace se získáním aktualizací.](images/store-update-2.png.jpg)
 
 > [!NOTE]
-> Pokud vaše organizace distribuuje aplikace na vašem zařízení, můžete je aktualizovat stejnými komerčními metodami správy aplikací. Pokud to platí pro vaši situaci, přečtěte si další informace v [přehledu nasazení komerčních aplikací.](app-deploy-overview.md)
+> Pokud vaše organizace distribuuje aplikace na vašem zařízení, můžete je aktualizovat stejnými komerčními metodami správy aplikací. Pokud se to týká vaší situace, přečtěte si další informace v [přehledu nasazení komerčních aplikací.](app-deploy-overview.md)
 >
 > Pokud chcete aktualizovat vlastní aplikaci, která se nasadila bokem nebo bokem, budete muset použít stejnou metodu s aktualizovanou verzí aplikace. Další informace o instalaci a spouštění vlastních aplikací najdete v tématu [o vlastních holografických aplikacích.](holographic-custom-apps.md)
 

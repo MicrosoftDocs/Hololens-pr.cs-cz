@@ -1,6 +1,6 @@
 ---
-title: Využijte svůj hlas k práci s HoloLens
-description: Přečtěte si, jak Cortana vám může pomáhat dělat všechny druhy věcí na zařízeních s hybridní realitou HoloLens, včetně hlasových příkazů, diktování a interakcí na hologram.
+title: Využijte svůj hlas k provozu HoloLens
+description: přečtěte si, jak vám Cortana může pomáhat dělat všechny druhy věcí na vašich HoloLensch hybridních realit, včetně hlasových příkazů, diktování a interakcí s hologramem.
 ms.assetid: fd96fb0e-6759-4dbe-be1f-58bedad66fed
 ms.date: 03/10/2020
 keywords: HoloLens
@@ -15,45 +15,45 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f6e3dd8f7dc90cea158d000251973ec75dc76a90
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 2fe7727fb05f983f56f329a6e7f7c25a627a914a1956fc65a9fc047653aae977
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111379281"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115661081"
 ---
-# <a name="use-your-voice-to-operate-hololens"></a>Využijte svůj hlas k práci s HoloLens
+# <a name="use-your-voice-to-operate-hololens"></a>Využijte svůj hlas k provozu HoloLens
 
-Můžete použít svůj hlas k tomu, abyste v HoloLens mohli dělat skoro cokoli, jako je třeba vytvoření rychlé fotografie nebo otevření aplikace. Mnoho hlasových příkazů je integrováno do HoloLens, zatímco jiné jsou k dispozici prostřednictvím Cortany.
+můžete použít svůj hlas k tomu, abyste mohli prakticky cokoli o HoloLens, jako je třeba pořizování rychlé fotografie nebo otevření aplikace. mnoho hlasových příkazů je integrováno do HoloLens, zatímco jiné jsou k dispozici prostřednictvím Cortana.
 
-Tento článek vás seznámí s tím, jak ovládat HoloLens a váš holografický svět pomocí vašeho hlasu a Cortany.
+v tomto článku se naučíte, jak řídit HoloLens a váš holografický svět pomocí hlasu a Cortana.
 
 > [!NOTE]
-> Rozpoznávání řeči je podporováno pouze v [některých jazycích](hololens2-language-support.md). Jazyk řeči je založen na jazyku zobrazení systému Windows, nikoli v jazyku klávesnice.  
+> Rozpoznávání řeči je podporováno pouze v [některých jazycích](hololens2-language-support.md). jazyk řeči je založený na jazyce zobrazení Windows, nikoli v jazyku klávesnice.  
 >  
-> Jazyk zobrazení systému Windows můžete ověřit tak, že vyberete **Nastavení**  >  **čas a jazyk jazyka**  >  .
+> jazyk zobrazení Windows můžete ověřit tak, že vyberete **Nastavení**  >  **čas a jazyk jazyka**  >  .
 
 ## <a name="built-in-voice-commands"></a>Integrované hlasové příkazy
 
-Využijte k rychlejšímu zpracování HoloLens tyto základní příkazy. Aby je bylo možné použít, je třeba povolit rozpoznávání řeči během prvního spuštění zařízení nebo v **Nastavení**  >  **soukromí**  >  **řeči**. V horní části nabídky Start můžete vždy zjistit, jestli je zapnutý Speech. Pro dosažení nejlepších výsledků rozpoznávání řeči využívá HoloLens 2 cloudové služby Microsoftu. Tuto funkci však můžete zakázat pomocí nastavení. To uděláte tak, že v nastavení vypnete **rozpoznávání řeči online**. Po změně tohoto nastavení bude HoloLens 2 zpracovávat pouze hlasová data místně, aby bylo možné rozpoznat příkazy a diktování a Cortana nebude k dispozici.
+pomocí těchto základních příkazů se dostanete HoloLens rychleji. aby je bylo možné použít, je třeba povolit rozpoznávání řeči během prvního spuštění zařízení nebo v **Nastavení**  >  **ochrany osobních údajů**  >  . v horní části nabídka Start můžete kdykoli zjistit, jestli je řeč povolený. pro dosažení nejlepších výsledků rozpoznávání řeči HoloLens 2 používá cloudové služby microsoftu. tuto funkci však můžete zakázat pomocí Nastavení. chcete-li to provést, v Nastavení vypněte **rozpoznávání řeči Online**. po změně tohoto nastavení bude HoloLens 2 zpracovávat pouze hlasová data místně, aby bylo možné rozpoznat příkazy a diktování a Cortana nebudou k dispozici.
 
 ### <a name="general-speech-commands"></a>Obecné příkazy pro rozpoznávání řeči
 
-Pomocí těchto příkazů v rámci Windows Mixed reality se můžete rychleji vyhnout. Některé příkazy používají pohledu ukazatel, který se zobrazí vyslovením příkazu "vybrat".
+pomocí těchto příkazů v celém Windows Mixed Reality se můžete rychleji vyhnout. Některé příkazy používají pohledu ukazatel, který se zobrazí vyslovením příkazu "vybrat".
 
 > [!NOTE]
-> Pro HoloLens (1. generace) se ruky nepodporují.
+> u HoloLens (1. generace) se nepodporují ruční paprsky.
 
 | Řekněme | Akce |
 | - | - |
 | Vybrali | Vyslovením příkazu "SELECT" zobrazíte pohledu ukazatel. Pak změňte polohu kurzoru na věc, kterou chcete vybrat, a vyslovení příkazu "vybrat". |
 | "Přejít na začátek" |  Otevření nabídky Start |
-| Uzavírací  | Zavření nabídky Start |
+| Uzavírací  | zavřít nabídka Start |
 | Vyslovením příkazu "Přejít na začátek" zobrazíte nabídku rychlé akce a potom řekněme "Mixed reality – Domovská stránka".  | Opuštění moderní aplikace |
 | "Skrýt ruka pro ruky"/"Zobrazit ruku – Ray" | Skrytí a zobrazení příručních paprsků |
 | Co můžu říci?  | Zobrazit dostupné příkazy řeči |
 
-Počínaje verzí 19041. x z HoloLens 2 můžete použít také tyto příkazy:
+počínaje verzí 19041. x z HoloLens 2 můžete použít také tyto příkazy:
 
 | Řekněme | Akce |
 | - | - |
@@ -81,7 +81,7 @@ Pokud chcete tyto příkazy použít, pohledu se v 3D objektu, hologramu nebo ok
 
 ### <a name="see-it-say-it"></a>Podívejte se, jak se to říká
 
-Mnoho tlačítek a dalších prvků na HoloLens také reaguje na váš hlas – například **Sledujte mě** **a na** panelu aplikace nebo na tlačítko **zpět** na okraji. Pokud chcete zjistit, jestli **je u tlačítka** povolený hlas, nechte za chvíli **pohledu kurzor**, **dotykové ovládání** nebo jednu kapacitu. Pokud je na tlačítku zapnuté hlasové hovory, zobrazí se hlasový Tip.
+mnoho tlačítek a dalších prvků HoloLens také reaguje na váš hlas – například **sledujte mě** **a na** panelu aplikace nebo na tlačítko **zpět** na okraji. Pokud chcete zjistit, jestli **je u tlačítka** povolený hlas, nechte za chvíli **pohledu kurzor**, **dotykové ovládání** nebo jednu kapacitu. Pokud je na tlačítku zapnuté hlasové hovory, zobrazí se hlasový Tip.
 
 ### <a name="dictation-mode"></a>Režim diktování
 
@@ -90,7 +90,7 @@ Už vás unavuje psaní? Přepněte do režimu diktování, kdykoli je tato holo
 > [!NOTE]
 > Chcete-li použít režim diktování, je nutné mít připojení k Internetu.
 
-Diktování HoloLens používá explicitní interpunkci, což znamená, že je název interpunkční znaménka, které chcete použít. Například můžete vyslovit "Hey **čárka** , co jste na **otazník**."
+HoloLens diktování používá explicitní interpunkci, což znamená, že je název interpunkční znaménka, které chcete použít. Například můžete vyslovit "Hey **čárka** , co jste na **otazník**."
 
 Tady jsou klíčová slova interpunkce, která můžete použít:
 
@@ -105,41 +105,41 @@ Někdy je užitečné hláskovat například e-mailové adresy. Například pro 
 
 ## <a name="do-more-with-cortana"></a>Další s Cortana
 
-Cortana vám může pomoci dělat všechny druhy věcí na HoloLens, ale v závislosti na tom, kterou verzi Windows holografickou používáte, můžou být tyto možnosti odlišné. Další informace o aktualizovaných možnostech nejnovější verze Cortany najdete tady: [Cortana v nadcházející verzi Windows 10: zaměřuje se na produktivitu s využitím zvýšeného zabezpečení a ochrany osobních údajů](https://blogs.windows.com/windowsexperience/2020/02/28/cortana-in-the-upcoming-windows-10-release-focused-on-your-productivity-with-enhanced-security-and-privacy/). 
+Cortana vám může pomoci dělat všechny druhy věcí v HoloLens, ale v závislosti na tom, kterou verzi Windows holografickou používáte, můžou být tyto možnosti odlišné. další informace o aktualizovaných možnostech nejnovější verze Cortana najdete tady: [Cortana v nadcházející Windows 10 verzi: zaměřuje se na vaši produktivitu s vylepšeným zabezpečením a ochranou osobních údajů](https://blogs.windows.com/windowsexperience/2020/02/28/cortana-in-the-upcoming-windows-10-release-focused-on-your-productivity-with-enhanced-security-and-privacy/). 
 
 ![Hey Cortana!](images/cortana-on-hololens.png)
 
-Tady je několik věcí, které můžete vyzkoušet (nezapomeňte nejdřív vyslovit "Hey Cortana").
+Tady je několik věcí, které můžete zkusit říct (nezapomeňte nejprve Cortana".
 
-**Hey, Cortana**...
+**Nazýme Cortana...**
 
 - Co mám říct?
-- Spusťte <*název aplikace*>.
+- Spusťte <*název>.*
 - Kolik je hodin?
-- Zobrazit nejnovější NBA skóre
-- Řekněte mi zábavný.
+- Show me the latest NBA scores.
+- Řekněte mi něco.
 
-Pokud používáte *verzi 18362. x nebo starší*, můžete použít také tyto příkazy:
+Pokud používáte verzi *18362.x nebo starší,* můžete použít také tyto příkazy:
 
-**Hey, Cortana**...
+**Nazýme Cortana...**
 
-- Zvětšete svazek.
+- Zvyšte svazek.
 - Snižte jas.
 - Odprejskni.
 - Restart.
 - Jdi spát.
-- Vypnutí.
-- Přesuňte <*název aplikace*> sem (pohledu na místě, na které se má aplikace přesunout).
+- Mute.
+- Přesuňte <*název* aplikace> (pohledem na místo, na které chcete aplikaci přesunout).
 - Přejděte na Start.
-- Pořídit obrázek.
-- Spustit záznam. (Spustí záznam videa.)
+- Udělejte si obrázek.
+- Spusťte záznam. (Spustí nahrávání videa.)
 - Zastavit nahrávání. (Zastaví nahrávání videa.)
-- Kolik baterie zbývá?
+- Kolik baterie mi zbývá?
 
-Některé funkce Cortany, které jste použili v systému Windows na vašem počítači nebo telefonu (například připomenutí a oznámení), se v Microsoft HoloLens nepodporují a prostředí Cortana se může lišit od jedné oblasti do druhé.
+Některé Cortana, na které jste zvykní z Windows na počítači nebo telefonu (například připomenutí a oznámení), se v Microsoft HoloLens nepodporují a prostředí Cortana se může v jednotlivých oblastech lišit.
 
-### <a name="turn-cortana-off"></a>Vypnout Cortanu
+### <a name="turn-cortana-off"></a>Vypnout Cortana
 
-Cortana je v době, kdy jste povolili rozpoznávání řeči při prvním použití HoloLens. Můžete ho zapnout v nastavení Cortany. V seznamu **všechny aplikace** vyberte   >  **Nastavení** Cortany. Potom Cortana může poskytnout návrhy, nápady, připomenutí, výstrahy a další.
+Cortana je při prvním použití HoloLens povolíte řeč. Můžete ji vypnout v Cortana nastavení. V **Všechny aplikace** seznamu vyberte **Cortana**  >  **Nastavení**. Vypnutím tohoto Cortana návrhy, nápady, připomenutí, výstrahy a další informace.
 
-Pokud Cortana nereaguje na "Hey Cortana", zkontrolujte, že je v nabídce Start zapnutý Speech, přejít na nastavení Cortany a ověřte, jestli je zapnutý.
+Pokud Cortana nereaguje na Cortana, zkontrolujte, že je v nabídce Start povolená řeč, přejděte do nastavení služby Cortana a zkontrolujte, že je zapnutá.

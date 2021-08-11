@@ -14,12 +14,12 @@ manager: jarrettr
 ms.prod: hololens
 appliesto:
 - HoloLens (1st Gen)
-ms.openlocfilehash: 36991d62da91011b807dfb9ff52ab16eadac8bc7
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: d2a8ae420a0c1d646625fe81b166e2daae07e44652b70f2e4a1b19ccba240cfb
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640300"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115663934"
 ---
 # <a name="known-issues-for-hololens-1st-gen"></a>známé problémy pro HoloLens (1. generace)
 
@@ -176,35 +176,35 @@ pokud vaše zařízení stále nemůže načítat aplikace, můžete bokem verzi
 
 1. až budete mít Windows portál zařízení, potřebujeme, abyste na "straněnou zátěž" stáhli dva stažené soubory. K tomu je potřeba přejít na levou stranu, dokud se nedostanete do části **aplikace** a vyberete **aplikace**.
 
-1. Zobrazí se obrazovka podobná následující.  Chcete přejít do části Instalace  aplikace a přejít na místo, kde jste tyto dva soubory APPX rozbalili. Můžete provést pouze jednu po jedné, takže po výběru první z nich klikněte na Přejít v části Nasadit. Pak to proveďte pro druhý soubor APPX.
+1. Zobrazí se obrazovka, která je podobná následující.  Chcete přejít do oddílu, který říká **instalaci aplikace** , a vyhledat, kde tyto dva soubory appx rozcházejí. Tuto akci můžete provést jen jednou, takže když vyberete první z nich, pak v části Nasazení klikněte na Přejít. Pak to udělejte pro druhý soubor APPX.
 
-   ![Windows Portál zařízení instalace Side-Loaded aplikace](images/20190322-DevicePortal.png)
+   ![Windows Portál zařízení pro instalaci aplikace Side-Loaded](images/20190322-DevicePortal.png)
 
-1. V tuto chvíli věříme, že vaše aplikace by měly znovu fungovat a že se můžete dostat také do Storu.
+1. V tuto chvíli se domníváme, že by vaše aplikace znovu začaly fungovat a že se můžete dostat i do Storu.
 
-1. V některých případech je nutné před spuštěním ovlivněných aplikací spustit další krok spuštění 3D prohlížeč aplikace.
+1. V některých případech je nutné spustit další krok spuštění aplikace 3D Viewer před tím, než se aplikace spustí.
 
-Vážíme si vaší trpělivosti, protože jsme tento problém vyřešili, a těšíme se, že ve spolupráci s naší komunitou budeme vytvářet Mixed Reality prostředí.
+Vážíme si vaší trpělivosti v tom, že jsme provedli proces, který tento problém vyřešil, a těšíme se na spolupráci s naší komunitou, abychom mohli vytvářet úspěšné hybridní prostředí realit.
 
 ### <a name="device-update"></a>Aktualizace zařízení
 
-- 30 sekund po nové aktualizaci může prostředí jednou zmizet. Proveďte prosím **gesto bloomu** a obnovte relaci.
+- 30 sekund po nové aktualizaci může prostředí zmizet jednou za chvíli. Pokud chcete pokračovat v relaci, proveďte prosím gesto **Bloom** .
 
 ### <a name="visual-studio"></a>Visual Studio
 
-- Aktuální [verzi nástroje najdete](/windows/mixed-reality/install-the-tools) v článku Instalace nástrojů Visual Studio který se doporučuje HoloLens vývoji.
+- přečtěte si téma [instalace nástrojů](/windows/mixed-reality/install-the-tools) pro nejaktuálnější verzi Visual Studio, která se doporučuje pro vývoj HoloLens.
 
-- Při nasazování aplikace z Visual Studio do HoloLens se může zobrazit chyba: Požadovanou operaci nelze provést u souboru s otevřeným oddílem **mapovaným uživatelem. (Výjimka na hodnoty HRESULT: 0x800704C8)**. Pokud k tomu dojde, zkuste to znovu a vaše nasazení bude obecně úspěšné.
+- když nasadíte aplikaci z Visual Studio do HoloLens, může se zobrazit chyba: **požadovanou operaci nejde provést u souboru s otevřeným oddílem mapovaným uživatelem. (Výjimka z HRESULT: 0x800704C8)**. Pokud k tomu dojde, zkuste to znovu a vaše nasazení bude obecně úspěšné.
 
 ### <a name="api"></a>rozhraní API
 
-- Pokud aplikace nastaví zaměřovací [bod](/windows/mixed-reality/focus-point-in-unity) za uživatelem nebo normální hodnotu na fotoaparát.forward, hologramy se nezobrazí na Záznam hybridní reality fotografiích nebo videích. Dokud se tato chyba v nástroji Windows nevyřešila, měly by aplikace aktivně nastavit fokus, aby se zajistilo, že je normální rovina nastavená proti směru fotoaparátu (například normální = -camera.forward). [](/windows/mixed-reality/focus-point-in-unity)
+- Pokud aplikace nastaví [zaměření](/windows/mixed-reality/focus-point-in-unity) na uživatele nebo normální na kameru. předá, hologramy se ve hybridním videu nebo videích nezachytí. dokud se tato chyba nevyřešila v Windows, pokud aplikace aktivně nastavují [fokus](/windows/mixed-reality/focus-point-in-unity) , měli byste mít jistotu, že normální plocha je nastavená na opačnou dobu (například normal =-camera. dopředně).
 
-### <a name="xbox-wireless-controller"></a>Bezdrátový ovladač pro Xbox
+### <a name="xbox-wireless-controller"></a>Adaptér bezdrátové sítě Xbox
 
-- Před použitím bezdrátového ovladače Xbox S je nutné ho aktualizovat s HoloLens. Než se [pokusíte spárovat kontroler](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) s řadičem domény, ujistěte se, že HoloLens.
+- Aby bylo možné používat zařízení s HoloLens, musí být aktualizace bezdrátových řadičů Xbox aktualizované. Než se pokusíte spárovat kontroler s HoloLens, ujistěte se, že máte [aktuální data](https://support.xbox.com/xbox-one/accessories/update-controller-for-stereo-headset-adapter) .
 
-- Pokud restartujete počítač HoloLens bezdrátového ovladače Xbox, nebude se kontroler automaticky znovu připojovat k HoloLens. Světlo tlačítka Průvodce bude pomalu blikat, dokud se kontroler po 3 minutách nesmaří. Pokud chcete kontroler okamžitě znovu připojit, vypněte ho tak, že podržíte tlačítko Guide (Průvodce), dokud se světlo nevypíná. Po opětovném zapnutí kontroleru se kontroler znovu připojí k HoloLens.
+- pokud restartujete HoloLens v době, kdy je adaptér bezdrátové sítě Xbox připojen, kontroler se automaticky znovu nepřipojí k HoloLens. Světlá tlačítko průvodce bude blikat pomalu, dokud se kontrolér nevypne po 3 minutách. Pokud chcete řadič znovu připojit hned, vypněte ho tak, že podržíte tlačítko průvodce, dokud se světlo nevypne. Po opětovném zapnutí kontroleru se znovu připojí k HoloLens.
 
-- Pokud se HoloLens bezdrátového ovladače Pro Xbox připojí do pohotovostního režimu, všechny vstupy na kontroleru probudí HoloLens. Tomu můžete zabránit vypnutím kontroleru, jakmile ho budete používat.
+- pokud váš HoloLens do úsporného režimu dorazí, když je připojen bezdrátový kontroler konzoly Xbox, veškerý vstup na řadiči bude probudit HoloLens. Můžete tomu zabránit tím, že ho vypínáte, až ho budete s použitím dělat.
 

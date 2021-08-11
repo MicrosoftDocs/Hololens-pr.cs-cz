@@ -1,6 +1,6 @@
 ---
-title: plánování nasazení HoloLens 2 v komerčním prostředí
-description: přečtěte si o základních potřebách pro nasazení a správu HoloLens v podnikových prostředích, včetně infrastruktury, azure active directory a správy mobilních zařízení.
+title: Plánování HoloLens 2 v komerčním prostředí
+description: Seznamte se se základními potřebami při nasazování a správě HoloLens podnikových prostředích, včetně infrastruktury, Azure Active Directory a správy mobilních zařízení.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 88bf50aa-0bac-4142-afa4-20b37c013001
@@ -12,31 +12,31 @@ ms.localizationpriority: medium
 ms.date: 05/21/2021
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 43162389eae82bc09135c62acd40d71048d14db1
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 8273813d85c3b2df2c1a551fb0322a867a5a9c64fdd05e9a85a2097b1590fb62
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639076"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664348"
 ---
-# <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>plánování nasazení HoloLens 2 v komerčním prostředí
+# <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>Plánování HoloLens 2 v komerčním prostředí
 
 ## <a name="overview"></a>Přehled
 
 > [!NOTE]
-> tento přehled je určený k tomu, aby odborníci v oblasti IT pochopili důležité informace o nasazení a správě zařízení Microsoft HoloLens 2 v rámci organizace. informace o koncových uživatelích zařízení najdete v článku o tom, jak začít [používat HoloLens 2](hololens2-setup.md) .
+> Tento přehled pomáhá IT specialistům pochopit aspekty nasazení a správy Microsoft HoloLens 2 v rámci organizace. Informace o koncových uživatelích [zařízení najdete v tématu HoloLens 2 připravené k](hololens2-setup.md) použití.
 
-HoloLens 2 se spouští na Windows 10 Holographic, která poskytuje organizacím robustní, flexibilní a integrované technologie pro správu mobilních zařízení a aplikací. Windows 10 Holographic podporuje komplexní správu životního cyklu zařízení, aby společnosti poskytovaly kontrolu nad svými zařízeními, daty a aplikacemi. HoloLens 2 je možné snadno začlenit do standardních postupů životního cyklu, od registrace zařízení, konfigurace a správy aplikací až po údržbu a vyřazení z provozu pomocí komplexního řešení pro správu mobilních zařízení.
+HoloLens 2 běží na Windows 10 Holographic, který organizacím poskytuje robustní, flexibilní integrované technologie správy mobilních zařízení a aplikací. Windows 10 Holographic podporuje správu životního cyklu zařízení od celého zařízení, která společnostem umožňuje kontrolu nad jejich zařízeními, daty a aplikacemi. Řešení HoloLens 2 je možné snadno začlenit do standardních postupů životního cyklu, od registrace zařízení, konfigurace a správy aplikací až po údržbu a vyřazení pomocí komplexního řešení pro správu mobilních zařízení.
 
-následující kroky a videa vám pomůžou s postupem HoloLens 2 při přijímání v rámci vaší organizace.
+Následující kroky a video vám můžou pomoct s procesem přechodu na HoloLens 2 v rámci vaší organizace.
 
 | &nbsp; | &nbsp; |
 |--|--|
-| ![Krok 1](images/1green.png)| <br/> **[obvyklé scénáře nasazení](hololens-requirements.md)**: pochopení scénářů nasazení a zkoumání základních součástí potřebných k nasazení zařízení HoloLens 2. |
-| ![Krok 2](images/2green.png)| <br/> **[příprava](#prepare)**: seznámení se základy infrastruktury potřebnými pro HoloLens 2. |
-| ![Krok 3](images/3green.png) | <br/> **[Konfigurace](#configure)**: Naučte se konfigurovat základní komponenty pro cloudové nasazení. |
-| ![Krok 4](images/4green.png) | <br/> **[Nasazení](#deploy)**: Zjistěte, jak vaše zařízení nasadit a jak bezpečně a efektivně distribuovat aplikace. |
-| ![Krok 5](images/5green.png) | <br/> **[údržba](#maintain)**: zjistěte, co je potřeba pro správné udržování stavu zařízení HoloLens 2 a zajištění souladu s podnikovými zásadami. |
+| ![Krok 1](images/1green.png)| <br/> **[Běžné scénáře nasazení:](hololens-requirements.md)** Seznamte se se scénáři nasazení a prozkoumejte základní komponenty potřebné k HoloLens 2 zařízení. |
+| ![Krok 2](images/2green.png)| <br/> **[Příprava:](#prepare)** Seznamte se se základními prvky infrastruktury potřebnými pro HoloLens 2. |
+| ![Krok 3](images/3green.png) | <br/> **[Konfigurace:](#configure)** Zjistěte, jak nakonfigurovat základní komponenty pro cloudové nasazení. |
+| ![Krok 4](images/4green.png) | <br/> **[Nasazení:](#deploy)** Zjistěte, jak bezpečně a efektivně nasadit zařízení a distribuovat aplikace. |
+| ![Krok 5](images/5green.png) | <br/> **[Údržba:](#maintain)** Zjistěte, co je potřeba ke správné údržbě stavu vašich zařízení HoloLens 2 a zajištění dodržování firemních zásad. |
 
 <br/>
 
@@ -44,39 +44,39 @@ následující kroky a videa vám pomůžou s postupem HoloLens 2 při přijím�
 
 ## <a name="prepare"></a>Příprava
 
-seznamte se se základními službami infrastruktury potřebnými k podpoře plné sady možností HoloLens 2.
+Seznamte se se základními službami infrastruktury potřebnými k podpoře úplné sady HoloLens 2.
 
 | Komponenta | Popis |
 |-----------|------------|
-| [Azure AD](hololens-identity.md) | poskytuje správu identit a přístupu pro HoloLens 2.  |
-| [Správa mobilních zařízení](hololens-mdm-configure.md)| spravuje HoloLens 2 zařízení připojená k vašemu tenantovi.  |
-| [Síť Wi-Fi](hololens-commercial-infrastructure.md)| Wi-Fi je k dispozici a zařízení je možné připojit k Internetu  |
+| [Azure AD](hololens-identity.md) | Poskytuje správu identit a přístupu pro HoloLens 2.  |
+| [Správa mobilních zařízení](hololens-mdm-configure.md)| Spravuje HoloLens 2 zařízení připojená k vašemu tenantovi.  |
+| [Síť Wi-Fi](hololens-commercial-infrastructure.md)| Wi-Fi je k dispozici a zařízení je možné připojit k internetu.  |
 
 ## <a name="configure"></a>Konfigurace
 
-používejte intune a autopilot jako řešení s nízkým dotykem pro registraci a konfiguraci HoloLens 2 pro tenanta Azure AD vaší organizace a MDM.
+Intune a Autopilot můžete použít jako nízko touch řešení pro registraci a konfiguraci HoloLens 2 do tenanta Azure AD a MDM vaší organizace.
 
 | Komponenta | Popis |
 |-----------|------------|
-| [Automatický zápis](hololens-enroll-mdm.md#auto-enrollment-in-mdm) | Po počátečním přihlášení se zařízení automaticky registrují ve službě Azure AD a zaregistrují se do MDM.  |
-| [Licence k aplikacím](hololens2-cloud-connected-configure.md#application-licenses)| Dá se použít pro uživatele, skupiny uživatelů nebo skupiny zařízení.  |
-| [Uživatelé a skupiny Azure](hololens2-cloud-connected-configure.md#azure-users-and-groups) | pomáhá přiřadit konfigurace a licence pro HoloLens 2.  |
+| [Automatická registrace](hololens-enroll-mdm.md#auto-enrollment-in-mdm) | Po počátečním přihlášení se zařízení automaticky zaregistrují v Azure AD a zaregistrují se do MDM.  |
+| [Licence aplikací](hololens2-cloud-connected-configure.md#application-licenses)| Lze použít pro uživatele, skupiny uživatelů nebo skupiny zařízení.  |
+| [Uživatelé a skupiny Azure](hololens2-cloud-connected-configure.md#azure-users-and-groups) | Pomáhá přiřazovat konfigurace a licence pro HoloLens 2.  |
 
 ## <a name="deploy"></a>Nasadit
 
-distribuujte zařízení HoloLens 2 a ověřte jejich konfiguraci. 
+Distribuujte zařízení HoloLens 2 a ověřte jejich konfiguraci. 
 
 | Komponenta | Popis |
 |-----------|------------|
-| [Ověřování registrace](hololens2-corp-connected-deploy.md#enrollment-validation) | ověřte, jestli je zařízení připojené k azure AD, Nastavení nebo azure Portal. |
-| [Ověření certifikátu](hololens2-corp-connected-deploy.md#wi-fi-certificate-validation) | Zkontrolujte nastavení a ověřte, zda byly správně distribuovány. |
-| [Ověřit instalace aplikace](hololens2-corp-connected-deploy.md#validate-lob-app-install) | potvrďte, že je aplikace přítomná a funguje na vašem HoloLens 2 |
+| [Ověření registrace](hololens2-corp-connected-deploy.md#enrollment-validation) | Ověření připojení zařízení k Azure AD z Nastavení nebo webu Azure Portal |
+| [Ověření certifikátu](hololens2-corp-connected-deploy.md#wi-fi-certificate-validation) | Zkontrolujte nastavení a ověřte, že se správně distribuují. |
+| [Ověření instalací aplikace](hololens2-corp-connected-deploy.md#validate-lob-app-install) | Ověřte, že aplikace existuje a pracuje na vaší aplikaci HoloLens 2. |
 
 ## <a name="maintain"></a>Údržba
 
-použijte web Windows Update pro firmy společně s vaším systémem MDM nebo Microsoft Store, aby se zajistilo, že se vaše flotila HoloLens 2 a aplikace aktualizovala.
+Pomocí Windows Update for Business spolu se systémem MDM nebo Microsoft Store udržujte vozový park aplikací HoloLens 2 a aplikací aktualizovaných.
 
 | Komponenta | Popis |
 |-----------|------------|
-| [aktualizace HoloLens 2](hololens-updates.md) | konfigurace aktualizací podle potřeby prostřednictvím Windows aktualizací pro firmy |
+| [Aktualizace HoloLens 2](hololens-updates.md) | Podle potřeby nakonfigurujte aktualizace prostřednictvím Windows Updates for Business. |
 | [Aktualizace aplikací](app-deploy-overview.md) | Konfigurace prostřednictvím systému MDM nebo Microsoft Store

@@ -1,6 +1,6 @@
 ---
 title: Použití 3D prohlížeč Beta na HoloLens (1. generace)
-description: Popisuje typy souborů a funkcí, které 3D prohlížeč beta verze HoloLens (1. generace) podporuje, a způsob použití aplikace a řešení potíží.
+description: Popisuje typy souborů a funkcí, které 3D prohlížeč beta verze HoloLens (1. generace) podporuje, a jak používat a řešit potíže s aplikací.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -13,12 +13,12 @@ audience: ITPro
 manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 00e99d3f67e9e4371da12612b9b01c3ce58e71bd
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: d25a87bd210535e36e18f165b5461141c40aa292a07c560018ba7c0cbf76f6ba
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635479"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664923"
 ---
 # <a name="using-3d-viewer-beta-on-hololens-1st-gen"></a>Použití 3D prohlížeč Beta na HoloLens (1. generace)
 
@@ -53,7 +53,7 @@ Pokud máte po přečtení těchto témat potíže, podívejte se na téma [Ře�
 ### <a name="geometry"></a>Geometrie
 
 - Pouze mnohoúhelníkové modely. Žádné povrchy dělení aniBS
-- Souřadnicový systém spravně
+- Souřadnicový systém spravený doprava
 - Zásměk v transformačních matricích se nepodporuje
 
 ### <a name="textures"></a>Textury
@@ -62,14 +62,14 @@ Pokud máte po přečtení těchto témat potíže, podívejte se na téma [Ře�
 - Podporované formáty obrázků
   - Obrázky JPEG a PNG
   - Obrázky BMP (24bitová barva true RGB)
-  - Obrázky TGA (24bitové a 32bitové barvy RGBQ true)
+  - Obrázky TGA (24bitové RGB a 32bitové barvy RGBQ true)
 - Maximální rozlišení textury 2048 × 2048
 - Maximálně jedna mapová mapa, jedna normální mapa a jedna mapa datové krychle reflexe na jednu síť
-- Alfa kanál v texturách tekutých pixelů způsobí zahození pixelů, pokud je hodnota nižší než 50 %.
+- Alfa kanál v texturách tekutých pixelů způsobí zahození pixelů, pokud je nižší než 50 %.
 
 ### <a name="animation"></a>Animace
 
-- Animace škálování,otočení/posunutí u jednotlivých objektů
+- Animace škálování/otočení/posunutí u jednotlivých objektů
 - Animace s odřídkanou animací
   - Maximálně 4 vlivy na vrchol
 
@@ -94,7 +94,7 @@ Pokud máte po přečtení těchto témat potíže, podívejte se na téma [Ře�
 
 ### <a name="file-and-model-limitations"></a>Omezení souborů a modelů
 
-Velikost souborů a počet modelů, vrcholů a sítí, které mohou být v beta verzi otevřené současně, 3D prohlížeč pevných prvků:
+Velikost souborů a počet modelů, vrcholů a sítí, které mohou být ve verzi beta otevřené současně, jsou 3D prohlížeč limity:
 
 - Maximální velikost souboru na model: 500 MB
 - Vrcholy: 600 000 kombinovaných ve všech otevřených modelech
@@ -107,7 +107,7 @@ Velikost souborů a počet modelů, vrcholů a sítí, které mohou být v beta 
 
 - Vyhněte se černým materiálům nebo černým oblastem v mapách textur. Hologramy jsou tvořeny světlem, HoloLens se černě (bez světla) jako průhledné.
 - Před exportem do FBX z nástroje pro vytváření se ujistěte, že je viditelná a odemknutá veškerá geometrie a že nejsou vypnuté ani šablonované žádné vrstvy obsahující geometrii. Viditelnost není respektována.
-- Vyhněte se velmi velkým posunům překladu mezi uzly (například 100 000 jednotek). To může způsobit, že se model během přesunu, škálování nebo otočení bude zachytovat.
+- Vyhněte se velmi velkým posunům překladu mezi uzly (například 100 000 jednotek). To může způsobit, že se model během přesunu, škálování nebo otočení bude zachytát.
 
 ### <a name="performance-optimization"></a>Optimalizace výkonu
 
@@ -121,7 +121,7 @@ Pokud 3D model dobře nefunguje kvůli složitosti modelu, zvažte následujíc�
 - Snížení počtu řídce v řídce animaci
 - Jak se vyhnout samo okluzi
 
-Vykreslování na dvou stranách se podporuje 3D prohlížeč Beta, i když je ve výchozím nastavení vypnuté z důvodů výkonu. Můžete ji zapnout pomocí tlačítka **s dvojitou stranou** na **stránce Podrobnosti.** Pokud chcete mít nejlepší výkon, vyhněte se tomu, aby se v obsahu vykresloval na dvou stranách.
+Oboustranné vykreslování se podporuje ve verzi 3D prohlížeč Beta, i když je ve výchozím nastavení vypnuté z důvodů výkonu. Toto nastavení můžete zapnout pomocí **tlačítka s dvojitou stranou** na stránce **Podrobnosti.** Pokud chcete mít nejlepší výkon, vyhněte se tomu, aby se v obsahu vykresloval na dvou stranách.
 
 ### <a name="validating-your-3d-model"></a>Ověření 3D model
 
@@ -131,7 +131,7 @@ Ověřte model tak, že ho otevřete v 3D prohlížeč Beta na HoloLens. Výběr
 
 Ve výchozím nastavení 3D prohlížeč Beta zobrazuje 3D modely v pohodlné velikosti a pozici vzhledem k uživateli. Pokud je ale důležité vykreslení 3D model s měřením hodnoty true-to-life (například při vyhodnocování modelů jídel v místnosti), může tvůrce obsahu nastavit příznak v metadatech souboru, aby zabránil změnu velikosti modelu aplikací i uživatelem.
 
-Pokud chcete zabránit škálování modelu, přidejte logický vlastní atribut k libovolnému objektu ve scéně s názvem Microsoft_DisableScale a nastavte ho na true. 3D prohlížeč Beta pak bude respektovat informace FbxSystemUnit, které jsou v souboru FBX. Škálování na 3D prohlížeč Beta je 1 měřič na jednotku FBX.
+Pokud chcete zabránit škálování modelu, přidejte logický vlastní atribut do libovolného objektu ve scéně s názvem Microsoft_DisableScale a nastavte ho na true. 3D prohlížeč Beta pak bude respektovat informace FbxSystemUnit, které jsou v souboru FBX. Škálování na 3D prohlížeč Beta je 1 měřič na jednotku FBX.
 
 ## <a name="viewing-fbx-files-on-hololens"></a>Zobrazení souborů FBX na HoloLens
 
@@ -143,7 +143,7 @@ Soubory FBX je možné otevřít přímo z webu pomocí Microsoft Edge na HoloLe
 1. Vyberte soubor, který chcete stáhnout.
 1. Po dokončení stahování vyberte  tlačítko Otevřít v Microsoft Edge a otevřete soubor ve verzi 3D prohlížeč Beta.
 
-Stažený soubor můžete otevřít a znovu otevřít později pomocí položky Ke stažení v Microsoft Edge. Pokud chcete uložit 3D model a zajistit trvalý přístup, stáhněte si soubor do počítače a uložte ho do OneDrive účtu. Soubor pak můžete otevřít z aplikace OneDrive na HoloLens.
+Stažený soubor můžete otevřít a znovu otevřít později pomocí položky Ke stažení v Microsoft Edge. Pokud chcete uložit 3D model a zajistit pokračování přístupu, stáhněte si soubor do počítače a uložte ho do OneDrive účtu. Soubor pak můžete otevřít z aplikace OneDrive na HoloLens.
 
 > [!NOTE]
 > Některé weby s modely FBX ke stažení je poskytují v komprimovaném formátu ZIP. 3D prohlížeč Beta nemůže otevřít soubory ZIP přímo. Místo toho pomocí počítače extrahujte soubor FBX a uložte ho do OneDrive účtu. Soubor pak můžete otevřít z aplikace OneDrive na HoloLens.
@@ -155,7 +155,7 @@ Soubory FBX je možné otevřít OneDrive pomocí OneDrive aplikace na HoloLens.
 Jakmile jsou OneDrive, můžete soubory FBX otevřít na HoloLens pomocí 3D prohlížeč Beta jedním ze dvou způsobů:
 
 - Spusťte OneDrive na HoloLens a výběrem souboru FBX ho otevřete v 3D prohlížeč Beta.
-- Spusťte 3D prohlížeč Beta, klepnutím ve vzduchu zobrazte panel nástrojů a vyberte **Otevřít soubor.** OneDrive se spustí , což vám umožní vybrat soubor FBX.
+- Spusťte 3D prohlížeč Beta, klepnutím ve vzduchu zobrazte panel nástrojů a vyberte **Otevřít soubor**. OneDrive se spustí , což vám umožní vybrat soubor FBX.
 
 ## <a name="troubleshooting"></a>Poradce při potížích
 
@@ -167,7 +167,7 @@ Další informace najdete v tématu [Podporované specifikace obsahu](#supported
 
 ### <a name="i-see-a-warning-and-the-3d-model-doesnt-load"></a>Zobrazí se upozornění a 3D model se nenačte
 
-Chybová zpráva se zobrazí, když 3D prohlížeč beta verze nemůže načíst 3D model kvůli složitosti nebo velikosti souboru nebo pokud je soubor FBX poškozený nebo neplatný. Pokud jste dosáhli limitu celkového počtu modelů, vrcholů nebo sítí, které mohou být současně otevřené, zobrazí se také chybová zpráva.  
+Chybová zpráva se zobrazí, když 3D prohlížeč Beta nemůže načíst 3D model kvůli složitosti nebo velikosti souboru nebo pokud je soubor FBX poškozený nebo neplatný. Pokud jste dosáhli limitu celkového počtu modelů, vrcholů nebo sítí, které mohou být současně otevřené, zobrazí se také chybová zpráva.  
 
 Další informace najdete v tématu [Podporované specifikace obsahu](#supported-content-specifications) a Omezení souborů a [modelů.](#file-and-model-limitations)
 
@@ -197,7 +197,7 @@ Pokud 3D prohlížeč nainstalovaná beta verze, spusťte 3D prohlížeč Beta a
 
 Pokud se pokusíte otevřít soubor FBX, otevře se jiná aplikace než 3D prohlížeč Beta, tato aplikace se pravděpodobně nainstalovala po 3D prohlížeč Beta a převzala přidružení k příponě souboru .fbx. Pokud dáváte přednost 3D prohlížeč beta verzi, aby byla přidružená k příponě souboru .fbx, odinstalujte a znovu 3D prohlížeč Beta.
 
-### <a name="the-open-file-button-in-3d-viewer-beta-doesnt-launch-an-app"></a>Tlačítko Otevřít soubor v 3D prohlížeč Beta aplikaci nespuštěné
+### <a name="the-open-file-button-in-3d-viewer-beta-doesnt-launch-an-app"></a>Tlačítko Otevřít soubor v 3D prohlížeč beta verze nespuštěné aplikace
 
 Tlačítko **Otevřít soubor** otevře aplikaci přidruženou k funkci výběru souborů na HoloLens. Pokud OneDrive nainstalovaná, mělo **by se tlačítko Otevřít soubor** spustit OneDrive. Pokud ale v tuto chvíli není k funkci výběru souborů nainstalovaná žádná aplikace, HoloLens, budete přesměrováni na Microsoft Store.
 
@@ -207,5 +207,5 @@ Pokud **tlačítko Otevřít soubor** není aktivní, je možné, že jste dosá
 
 ## <a name="additional-resources"></a>Další zdroje informací
 
-- [Fóra podpory](http://forums.hololens.com/categories/3d-viewer-beta) – jenom pro archivní účely. Toto fórum už není aktivní.
+- [Fóra podpory](http://forums.hololens.com/categories/3d-viewer-beta) – jenom pro účely archivace. Toto fórum už není aktivní.
 - [Oznámení třetích stran](https://www.microsoft.com/{lang-locale}/legal/products)

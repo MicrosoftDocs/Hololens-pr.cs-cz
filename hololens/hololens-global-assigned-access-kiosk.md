@@ -13,24 +13,24 @@ ms.reviewer: lavinds
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d89c630da76060fe6c2a049e5fa162e88779bb99
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: d36192e7f65f7fe2ccc7ff8699484a19b3d5d3a7ccab0167d2dbdcaf64bb5880
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640419"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664039"
 ---
 # <a name="global-assigned-access--kiosk"></a>Globální přiřazený přístup – Beziosk
 
 Tato funkce konfiguruje zařízení HoloLens 2 pro režim veřejného terminálů s více aplikacemi, který je použitelný na úrovni systému, nemá žádné spřažení s žádnou identitou v systému a vztahuje se na všechny uživatele, kteří se k zařízení přihlásí.
 
 > [!NOTE]
-> Tato funkce je v současné době dostupná pouze Windows buildech Insider. Pokud si chcete tuto funkci vyzkoušet dříve, než je všeobecně dostupná v HoloLens verzích, přečtěte si další informace [o sestaveních Windows Insider.](hololens-insider.md)
+> Tato funkce je v současné době dostupná pouze Windows buildech Insider. Pokud si chcete tuto funkci vyzkoušet dříve, než bude obecně dostupná v HoloLens verzích, přečtěte si další informace [o sestaveních Windows Insider.](hololens-insider.md)
 
 ## <a name="how-to-use-global-assigned-access-in-intune"></a>Jak používat globální přiřazený přístup v Intune?
 
 > [!NOTE]
-> Mějte na paměti oblasti označené <!-. Tyto oblasti budou vyžadovat, abyste na základě svých preferencí úpravy úpravy úpravy.
+> Mějte na paměti oblasti označené <!-. Tyto oblasti budou vyžadovat úpravy na základě vašich preferencí.
 
 1. Následujícím způsobem vytvořte vlastní konfigurační profil zařízení OMA URI a použijte ho HoloLens skupiny zařízení:
 
@@ -55,7 +55,7 @@ Ano, podívejte se na příklad objektu blob XML níže. Profil globálního př
 Tady je příklad použití objektu blob XML:
 
 > [!NOTE]
-> Mějte na paměti zvýrazněné oblasti označené `<!-` . Tyto oblasti budou vyžadovat, abyste na základě svých preferencí úpravy úpravy úpravy.
+> Mějte na paměti zvýrazněné oblasti označené `<!-` . Tyto oblasti budou vyžadovat úpravy na základě vašich preferencí.
 
  :::code language="xml" source="samples/exclude-one-aad-user-or-group.xml" highlight="8,11,17":::
 
@@ -67,7 +67,7 @@ Tato funkce umožňuje uživateli, který je považován za "vlastníka[zaříze
 
 ## <a name="additional-global-assigned-access-examples"></a>Další příklady globálního přiřazeného přístupu
 
-Toto je příklad veřejného terminálu s globálním přiřazeným přístupem, který bude mít, když se přihlásí jakýkoli uživatel, kiosk s více aplikacemi pomocí Nastavení App, Centrum Feedback a Microsoft Edge.
+Toto je příklad veřejného terminálu s globálním přiřazeným přístupem, který bude mít, když se přihlásí nějaký uživatel, kiosk s více aplikacemi pomocí Nastavení App, Centrum Feedback a Microsoft Edge.
 
 :::code language="xml" source="samples/kiosk-sample-global-assigned-access.xml":::
 

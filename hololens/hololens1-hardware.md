@@ -1,6 +1,6 @@
 ---
 title: HoloLens (1. generace)
-description: Seznamte se s komponentami, které tvoří Microsoft HoloLens (1. generace), který je nejnovějším vývojem nepouhlého holografického počítače Microsoftu s Windows 10.
+description: Seznamte se s komponentami, které tvoří Microsoft HoloLens (1. generace), nejnovější vývoj nepouhlého holografického počítače Microsoftu se systémem Windows 10.
 ms.assetid: 527d494e-2ab6-46ca-bd5a-bfc6b43cc833
 ms.date: 09/16/2019
 keywords: hololens
@@ -13,12 +13,12 @@ manager: jarrettr
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 02496d90f2dee320e62a99e07527f32b7a209a69
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: f76c8bb669f45ddde539c0149159287724b73707765703bf310530adb4e300c6
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639960"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662081"
 ---
 # <a name="hololens-1st-gen-hardware"></a>HoloLens (1. generace)
 
@@ -33,8 +33,8 @@ Microsoft HoloLens (1. generace) je první holografický počítač na světě. 
 Váš HoloLens obsahuje následující funkce:
 
 - **Visor**. Obsahuje HoloLens senzory a displeje. Když máte na sobě zorník, můžete ho HoloLens.
-- **Headband**. Pokud chcete HoloLens roztáhnou, pomocí úpravy rozšiřte pásek. Když je HoloLens, zpřísnit kolečko pro úpravy, dokud se pásek upevní.
-- **Tlačítka brightness** Když máte na sobě HoloLens, na levé straně zařízení jsou tlačítka s jasným světlům.
+- **Headband**. Pokud chcete HoloLens roztáhnou, pomocí úpravy rozšiřte pásek. Když je HoloLens, zpřísnit kolečko pro úpravy, dokud se pásek neuchová.
+- **Tlačítka brightness** Když máte na sobě HoloLens, tlačítka brightness jsou na levé straně zařízení.
 - **Tlačítka hlasitosti**. Když máte HoloLens, jsou tlačítka hlasitosti na pravé straně zařízení.
 - **Device arms (Ruce zařízení).** Při vyzvednutí, nasuvování nebo odsuování HoloLens vždy pochopte ruce zařízení.
 
@@ -45,7 +45,7 @@ Váš HoloLens obsahuje následující funkce:
 Pole HoloLens obsahuje následující položky:
 
 - **Nosové pady**. Vyberte nosný nos, který odpovídá tvaru nosu a přizpůsobí se nosu.
-- **Režijní náklady**. Když máte na sobě HoloLens, zatímco se pohybujete, použijte režijní náklady, které vám pomůžou udržet zařízení na místě. Pokud navíc máte na sobě HoloLens delší dobu, může se při použití režijní návěse zařízení více používat k ošitřování.
+- **Režijní náklady** Když máte na sobě HoloLens, zatímco se pohybujete, použijte režijní náklady, které vám pomůžou udržet zařízení na místě. Kromě toho, pokud máte HoloLens delší dobu, může se při použití režijní návěsy zařízení více používat k ošitřování.
 - **Kabel Micro USB**. Pomocí kabelu mikro USB připojte HoloLens k napájecímu zdroji pro nabíjení, nebo ho použijte k připojení HoloLens k počítači.
 - **Napájecí zdroj**. Zapojte napájecí zdroj.
 - **Mikrovlákno .** Pomocí zornice vyčistěte HoloLens visor.
@@ -69,7 +69,7 @@ Aby bylo možné udržovat/šedě udržovat interní procento poplatku za bateri
 
 | &nbsp; | &nbsp; |
 |---|---|
-| **Optika** | See-through holographic lenses (waveguides) |
+| **Optika** | Zobrazitá holografická objektivy (waveguides) |
 | **Holografické rozlišení** | 2 světlé motory HD 16:9 vytvářející celkový počet světlých bodů 2,3 M |
 | **Holografická hustota** | \>2,5 tis. radiánů (světlé body na radián) |
 | **Vykreslování na základě očí** | Automatická závislou vzdálenost mezi vzdáleností |
@@ -79,7 +79,7 @@ Aby bylo možné udržovat/šedě udržovat interní procento poplatku za bateri
 ![HoloLens senzory pro pochopení jeho prostředí a akcí uživatelů](images/sensor-bar-400px.jpg)
 
 - 1 inerciální měrné jednotka (IMU)
-- 4 kamery pro pochopení prostředí
+- 4. Principy prostředí fotoaparátů
 - 1 hloubková kamera
 - 1 2MP fotografie / HD videokameře
 - Zachycení hybridní reality
@@ -90,7 +90,7 @@ Aby bylo možné udržovat/šedě udržovat interní procento poplatku za bateri
 
 - Předdefinní mluvčí
 - Konektor Audio 3.5mm
-- Zvýšení/snížení svazku
+- Zvýšení nebo snížení svazku
 - Brightness up/down
 - Tlačítko napájení
 - LED diody stavu baterie
@@ -127,10 +127,10 @@ Aby bylo možné udržovat/šedě udržovat interní procento poplatku za bateri
 
 ## <a name="device-capabilities"></a>Možnosti zařízení
 
-Následující informace vám porozumí akcím uživatelů:
+Následující postup vám porozumí akcím uživatelů:
 
 - Sledování pohledu
-- Vstup gesta
+- Zadání gest
 - Podpora hlasu
 
 Následující informace vám porozumí prostředí:

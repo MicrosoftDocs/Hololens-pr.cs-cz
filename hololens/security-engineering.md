@@ -13,12 +13,12 @@ ms.localizationpriority: high
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1c043b721590e8245f694b3e4f6e5b6ce57f1ecf
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: bf0256ae24733fac7eb80a634edc78a33fcc1538d3d4a1db3c9b50fc01893c74
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639348"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665416"
 ---
 # <a name="security-engineering"></a>Engineering zabezpečení
 
@@ -30,8 +30,8 @@ Microsoft má několik zdrojů a týmů, které se věnují optimalizaci technic
 
 ## <a name="updates-and-patches"></a>Aktualizace a opravy
 
-Aktualizace a opravy zabezpečení se vydaná druhé úterý v každém měsíci. Pokud chcete porozumět kritériím, pomocí kterých Microsoft vyhodnocuje další kroky nahlášené chyby zabezpečení, Microsoft Security Response Center stránce [Kritéria údržby zabezpečení.](https://www.microsoft.com/msrc/windows-security-servicing-criteria) 
+Aktualizace a opravy zabezpečení se vydaná druhé úterý v každém měsíci. Pokud chcete porozumět kritériím, pomocí kterých Microsoft vyhodnotí další kroky nahlášené chyby zabezpečení, Microsoft Security Response Center stránce [Kritéria údržby zabezpečení.](https://www.microsoft.com/msrc/windows-security-servicing-criteria) 
 
-Pokyny ke správě aktualizací HoloLens 2 prostřednictvím MDM najdete v tématu [Správa HoloLens aktualizací.](hololens-updates.md) Frekvence aktualizací operačního systému HoloLens 2 odpovídá Windows 10; Existují dvě aktualizace za rok, jedna probíhá ve Springu a druhá na Fallu. Další informace o tom, jak jsou zařízení zabezpečená během aktualizací operačního systému, najdete v tématu [Oddělení stavu](security-state-separation-isolation.md)a izolace . 
+Pokyny ke správě aktualizací HoloLens 2 prostřednictvím MDM najdete v tématu [Správa HoloLens aktualizací.](hololens-updates.md) Frekvence aktualizací operačního systému HoloLens 2 odpovídá Windows 10. Existují dvě aktualizace za rok, jedna probíhá ve Springu a druhá na Fallu. Další informace o tom, jak jsou zařízení zabezpečená během aktualizací operačního systému, najdete v tématu [Oddělení stavu](security-state-separation-isolation.md)a izolace . 
 
-Správci IT mohou další informace o zásadách aktualizace na [stránce Policy CSP – Update](/windows/client-management/mdm/policy-csp-update). 
+Správci IT mohou další informace o zásadách aktualizací získat na [stránce Policy CSP – Update](/windows/client-management/mdm/policy-csp-update). 

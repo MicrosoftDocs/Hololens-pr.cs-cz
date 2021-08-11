@@ -1,11 +1,11 @@
 ---
-title: Sestaní s HoloLensem (1. generace)
-description: Začínáme se stručným průvodcem rozhraním HoloLens (1. generace), funkcemi pro sledování rukou a používáním holografických aplikací
+title: seznámení s HoloLens (1. generace)
+description: začněte s stručnou prohlídkou rozhraní HoloLens (1. generace), funkcí pro sledování ruky a používání holografických aplikací.
 ms.assetid: 064f7eb0-190e-4643-abeb-ed3b09312042
 ms.date: 9/16/2019
 ms.reviewer: jarrettr
 manager: jarrettr
-keywords: hololens
+keywords: HoloLens
 ms.prod: hololens
 ms.sitesec: library
 author: v-miegge
@@ -14,130 +14,130 @@ ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: a1ed1b900f255da9f8db66577f1e88f6bd6881e8
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 74b0c8b78bf6e310965f674098a883acda5ed6101f74619c2dea209beb27e47d
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377635"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662797"
 ---
-# <a name="getting-around-hololens-1st-gen"></a>Sestaní s HoloLensem (1. generace)
+# <a name="getting-around-hololens-1st-gen"></a>seznámení s HoloLens (1. generace)
 
-Jste připraveni se stoupit do světa hologramů? Tady jsou některé informace, které vám poslané posouou.
+Jste připraveni ke krokování světa hologramů? Tady jsou některé informace, které vám pomohou začít.
 
-Tato příručka obsahuje úvod do hybridní reality, gesta pro interakci s hologramy a úvod do Windows Holographic.
+tato příručka nabízí úvod ke smíšené realitě, gestům pro interakci s hologramy a úvod k Windows holografické.
 
-## <a name="discover-mixed-reality"></a>Objevte hybridní realitu
+## <a name="discover-mixed-reality"></a>Zjistit Mixed realitu
 
-V HoloLens se hologramy prolnou s fyzickým prostředím, aby vypadaly a vypadaly, jako by byly součástí vašeho světa. I když jsou hologramy kolem vás, stále můžete vidět své okolí, volně se pohybovat a pracovat s ostatními lidmi a objekty. Tomuto prostředí říkáme hybridní realita.
+na HoloLens hologramy s vaším fyzickým prostředím a vypadají tak, jak jsou součástí vašeho světa. I když se vám všechny hologramy dokončí, můžete pořád zobrazit vaše okolí, volně se pohybovat a pracovat s dalšími lidmi a objekty. Voláme toto prostředí "Mixed reality".
 
-Holografický rámec umístí hologramy tam, kde jsou vaše oči nejcitlivější na detaily, a zrakové objektivy opouštěly periferní zrak. Pomocí prostorového zvuku můžete určit hologram, i když je za vámi. A protože HoloLens učí a rozumí vašemu prostředí, můžete hologramy umístit na skutečné objekty a obchádovat je – stejně jako vaše aplikace a hry. Takže postavu ve hře si můžete posedět na svém dechu, nebo se vesmírní roboti můžou [vytahovat z vašich zdí.](https://www.microsoft.com/store/apps/9nblggh5fv3j)
+Holografický rámec umisťuje vaše hologramy, kde jsou oči nejvíc citlivá na podrobnosti, a objektivních čočky ponechají vaše periferie v nekrytém stavu. S prostorovým zvukem můžete určit hologram, a to i v případě, že je za vás. a vzhledem k tomu, že HoloLens se učí a rozumíte vašemu prostředí, můžete umístit hologramy do a kolem skutečných objektů, a tak i vaše aplikace a hry. Takže znak ve hře může být v rozsahu pohovky nebo [roboty, které by mohly fronty musí z vašich zdí](https://www.microsoft.com/store/apps/9nblggh5fv3j).
 
-## <a name="use-hololens-with-your-hands"></a>Použití HoloLens s rukou
+## <a name="use-hololens-with-your-hands"></a>použití HoloLens s vašimi rukou
 
-Práce s HoloLensem je velmi podobná jako použití vašeho inteligentního telefonu. Pomocí rukou můžete manipulovat s holografickými okny, nabídkami a tlačítky.  Místo toho, abyste ukázali, klikávali nebo klepnete, použijete svůj pohled, hlas a gesta k výběru aplikací a hologramů a k obchádování HoloLens. [](hololens-cortana.md)
+HoloLens se dostanete jako s využitím svého inteligentního telefonu. Pomocí vašich rukou můžete manipulovat s holografickými okny, nabídkami a tlačítky.  Místo ukázání, kliknutí nebo klepnutí budete používat své pohledu, [hlas](hololens-cortana.md)a gesta k výběru aplikací a hologramů a obejít HoloLens.
 
-Pokud znáte tyto základní interakce, bude se s HoloLens potýkat.
+když tyto základní interakce poznáte, budete mít k dispozici HoloLens přichycení.
 
-Při prvním použití HoloLens vás provedeme základy. V nabídce Start najdete také  kurz gest – hledejte aplikaci Learn Gestures.
+Při prvním použití HoloLens Vás provedeme základy. Kurz gesta v nabídce **Start** najdete také v aplikaci s gesty pro učení.
 
-### <a name="the-hand-tracking-frame"></a>Snímek ručního sledování
+### <a name="the-hand-tracking-frame"></a>Rámec pro sledování ruky
 
-HoloLens má senzory, které vidíte na obou stranách několik stop. Když použijete ruce, budete je muset v tomto snímku zachovat, jinak je HoloLens neuvidí. Když se budete pohybovat, snímek se přesune s váma.  
+HoloLens má senzory, které vám mohou zobrazit několik stop na jednu stranu. když použijete ruce, budete je muset zachovat uvnitř tohoto rámce, nebo je HoloLens uvidí. Při přesunu se rámec přesouvá s vámi.  
 
-![Obrázek znázorňuje snímek ručního sledování HoloLens](./images/hololens-2-gesture-frame.png)
+![obrázek zobrazující HoloLens snímku pro sledování zásob](./images/hololens-2-gesture-frame.png)
 
-### <a name="open-the-start-menu-with-bloom"></a>Open the nabídka Start with bloom
+### <a name="open-the-start-menu-with-bloom"></a>otevřít nabídka Start s bloom
 
-Otevření nabídky **Start:**
+Otevřete nabídku **Start** :
 
-1. Drž ruce před mnou, aby byla v snímku gesta.
-1. Bloom: Svešte všechny vaše květiny dohromady a otevřete si ruce.
-  ![Animace znázorňuje gesto bloomu](./images/hololens-bloom.gif)
+1. Podržíte ruku před vámi, takže se nachází v rámečku gesta.
+1. Bloom: spojíte všechna svoje prsty a pak otevřete svoji ruku.
+  ![Animace, která zobrazuje gesto Bloom](./images/hololens-bloom.gif)
 
-### <a name="select-holograms-with-gaze-and-air-tap"></a>Výběr hologramů pomocí pohledu a klepnutí ve vzduchu
+### <a name="select-holograms-with-gaze-and-air-tap"></a>Výběr hologramů pomocí pohledu a klepnutí vzduchu
 
-Pokud chcete vybrat aplikaci nebo jiný hologram, klepněte na něj ve vzduchu při přímém pohledu na hologram, který vyberete. Postupujte takto:
+Pokud chcete vybrat aplikaci nebo jiný hologram, klepněte na něj v ovzduší přímo na hologramě, kterou vyberete. Postupujte takto:
 
-1. Pohled na hologram, který chcete vybrat
-1. Nasměřte ukazováček směrem ke stropu.
-1. Klepnutí ve vzduchu: snižte prst a rychle ho zvyšte.
-   ![Animace gest klepnutí ve vzduchu](./images/hololens-air-tap.gif)
+1. Pohledu na hologram, který chcete vybrat.
+1. Najeďte prstem indexu rovnou k hornímu limitu.
+1. Klepněte na vzduch: Snižte prst a pak ho rychle vyvolejte.
+   ![Animace gesta na vzduchu](./images/hololens-air-tap.gif)
 
 ### <a name="select-a-hologram-by-using-your-voice"></a>Výběr hologramu pomocí hlasu
 
-1. Kurzor pohledu je tečka, kterou pohybem hlavy posouváte. Můžete ho použít k přesnému cílení na hlasové příkazy.
-1. Pohled na hologram, který chcete vybrat
-1. Pokud chcete vybrat hologram, řekněte "Vybrat".
+1. Pohledu kurzor je tečka, o kterou se přesouváte přesunutím hlavní pozice. Můžete ji použít k zacílení hlasových příkazů s přesností.
+1. Pohledu na hologram, který chcete vybrat.
+1. Pokud chcete vybrat hologram, řekněme "SELECT".
 
 ## <a name="holograms-and-apps"></a>Hologramy a aplikace
 
-Teď je čas otestovat gesta.
+Teď je čas na vložení gest do testu!
 
-Nainstalované aplikace najdete v nabídka Start [](holographic-home.md) a v Microsoft Store jsou další aplikace pro HoloLens (1. generace).
+nainstalované aplikace najdete v [nabídka Start](holographic-home.md) a v Microsoft Store je více aplikací pro HoloLens (1. generace).
 
-Otevřete **nabídku Start** a vyberte aplikaci.
+Otevřete nabídku **Start** a vyberte aplikaci.
 
-Použití aplikací na HoloLens se trochu liší od aplikací na počítači: Některé aplikace používají 2D zobrazení a vypadají jako jiné aplikace pro Windows. Ostatní aplikace (imerzivní aplikace) používají 3D zobrazení a když je spustíte, stanou se jedinou aplikací, kterou vidíte.
+používání aplikací na HoloLens se trochu liší od na počítači: některé aplikace používají 2d zobrazení a vypadají jako jiné aplikace Windows. Ostatní aplikace (moderní aplikace) používají prostorové zobrazení a když je spouštíte, objeví se jenom aplikace, kterou vidíte.
 
-Když dáte okno aplikace nebo spouštěč aplikací, zůstane v umístění, dokud ho neodeberete. Tyto hologramy můžete kdykoli přesunout nebo změnit jejich velikost v domácnosti hybridní reality.
+Když umístíte okno aplikace nebo spouštěč aplikace, zůstane v provozu, dokud ho neodeberete. Tyto hologramy můžete kdykoli přesunout nebo změnit jejich velikost v domácnosti ve smíšené realitě.
 
 ## <a name="move-resize-and-rotate-apps"></a>Přesunutí, změna velikosti a otočení aplikací
 
-Přesunutí a změna velikosti aplikací na HoloLens funguje trochu jinak než na počítači. Místo přetažení aplikace použijete pohled společně s gestem [nebo](https://support.microsoft.com/help/12644/hololens-use-gestures) [klikem](hololens1-clicker.md). Můžete také otočením okna aplikace ve 3D prostoru.
+přesunutí a změna velikosti aplikací v HoloLens funguje trochu jinak než v počítači. Místo toho, abyste aplikaci přetahujei, použijete pohledu spolu s [gestem](https://support.microsoft.com/help/12644/hololens-use-gestures) nebo [kliknutím](hololens1-clicker.md). Můžete také otáčet okno aplikace v prostorovém prostoru.
 
 > [!TIP]
-> Přeuspořádejte aplikace podle svého hlasu – upřete pohled na aplikaci a řekněte "Tvář mi", "Větší" nebo "Menší". Nebo může Cortana přesunout aplikaci za vás: řekněte "Ahoj Cortano, \* *přesuňte název aplikace \** sem".
+> Uspořádejte aplikace pomocí hlasového pohleduu v aplikaci a řekněte mi "FACET", "větší" nebo "menší". nebo Cortana přesunout aplikaci za vás: řekněte sem "Hey Cortana, přesunout \* *název \* aplikace* sem."
 
 ### <a name="move-an-app"></a>Přesunutí aplikace
 
-Nahlédněte do aplikace (v záhlaví okna aplikace) a pak proveďte jednu z následujících akcí.
+Pohledu v aplikaci (v záhlaví okna aplikace) a pak proveďte jednu z následujících akcí.
 
-- Klepněte a podržte a vyberte aplikaci. Umístěte aplikaci rukou a posunout ji prstem.
-- Vyberte **Upravit,** klepněte na aplikaci a podržte ji a přesuňte ji do pozice. Chytěte prstem, umístěte ho a pak vyberte **Hotovo.**
-- Vyberte **Upravit,** klikněte na kliknutí a podržte na něj a přesuňte ruce do pozice aplikace. Uvolněte kliknutí a pak vyberte **Hotovo.**
+- Klepněte a podržte klávesu pro výběr aplikace. Přesuňte ruku na umístění aplikace a najeďte prstem na jeho umístění.
+- Vyberte **přizpůsobit**, klepněte na a podržte a přesuňte ruku na umístění aplikace. Přivolejte prst k umístění a potom vyberte **Hotovo**.
+- Vyberte **přizpůsobit**, klikněte na a podržte kliknutí na něj a přesuňte ruku na umístění aplikace. Uvolněte kliknutí na tlačítko Hotovo a potom vyberte **Hotovo**.
 
 > [!TIP]
-> Pokud při přesunu aplikace zahodíte, nezapomeňte mít po ruce snímek gest tím, že je budete sledovat pohledem.
+> Pokud při přesouvání aplikace vyřadíte, ujistěte se, že máte ruku v rámci gesta tím, že se vám povede s pohledu.
 
 ### <a name="resize-an-app"></a>Změna velikosti aplikace
 
-Nahlédněte do aplikace a pak proveďte jednu z následujících akcí.
+Pohledu v aplikaci a proveďte jednu z následujících akcí.
 
-- Pohled do rohu nebo okraje okna aplikace a klepnutí a podržení Posunout ruce, abyste změnili velikost aplikace, a až budete hotovi, hněte prstem.
-- Vyberte **Upravit.** Pohledem na jeden z modrých čtverců v rozích aplikace klepněte a podržte ji a potom posouněte rukou, abyste aplikaci přizpůsobíte změně velikosti. Pusťte ho prstem a pak vyberte **Hotovo.**
-- Vyberte **Upravit.** Pohled do jednoho z modrých čtverců v rozích aplikace, kliknutí a podržení kliknutí a přesunutím ruky změňte velikost aplikace. Uvolněte kliknutí a pak vyberte **Hotovo.**
+- Pohledu v rohu nebo na okraji okna aplikace a klepněte a podržte klávesu. Pokud chcete změnit velikost aplikace, přejděte na ruku a až budete hotovi, zvyšte prst.
+- Vyberte **Upravit**. Pohledu se v jednom z modrých čtverečků v rozích aplikace a klepněte na podržet a pak posuňte ruku o změnu velikosti aplikace. Přivolejte prst k vydání a potom vyberte **Hotovo**.
+- Vyberte **Upravit**. Pohledu se v jednom z modrých čtverečků v rozích aplikace, klikněte na tlačítko a podržte ho a pak změňte velikost své ruky. Uvolněte kliknutí na tlačítko Hotovo a potom vyberte **Hotovo**.
 
 > [!TIP]
-> V režimu Upravit můžete přesunout nebo změnit velikost libovolného hologramu.
+> V režimu úprav můžete přesunout nebo změnit velikost libovolného hologramu.
 
 ### <a name="rotate-an-app"></a>Otočení aplikace
 
-Pohledem na aplikaci klepněte a podržte ji oběma ruce a vyberte ji. Obměnou aplikace udržováním jedné ruky ve stabilním stavu a pohybem druhé ruky kolem ní. Až budete hotovi, zvyšte oba indexy.
+Pohledu v aplikaci a při jejich výběru klepněte a podržte obě ruce. Otočte aplikaci tak, že si jednu ruku zachováte a přesunete ji kolem ní. Až budete hotovi, vyvolejte obě indexery.
 
-### <a name="scroll-content-in-an-app-window"></a>Posouvání obsahu v okně aplikace
+### <a name="scroll-content-in-an-app-window"></a>Posunutí obsahu v okně aplikace
 
-Prohlédněte si obsah okna aplikace. Klepnutím a podržením posouváním rukou mírně nahoru nebo dolů.
+Pohledu se v obsahu okna aplikace. Klepněte a podržte a potom posuňte svoji ruku o něco nahoru nebo dolů, abyste provedli posouvání obsahu.
 
-## <a name="meet-the-hololens-1st-gen-clicker"></a>Seznámit se s clickerem HoloLens (1. generace)
+## <a name="meet-the-hololens-1st-gen-clicker"></a>splnění HoloLens (1. generace) kliknutí
 
-Kliknutí [na HoloLens (1. generace)](hololens1-clicker.md) nabízí další způsob interakce s hologramy. [Spárujte](hololens-connect-devices.md) ho s HoloLens a pak ho použijte společně s pohledem k výběru, posouvání a další možnosti.
+[HoloLens (1. generace) kliknutí](hololens1-clicker.md) poskytuje další způsob, jak pracovat s hologramy. můžete [ho spárovat](hololens-connect-devices.md) s vaším HoloLens a pak ho použít spolu s pohledu k výběru, posunování a dalším možnostem.
 
 ## <a name="next-steps"></a>Další kroky
 
-Gratulujeme! Jste připraveni použít HoloLens (1. generace).
+Gratulujeme! jste připraveni použít HoloLens (1. generace).
 
-Teď můžete holoLens (1. generace) nakonfigurovat tak, aby splňovala vaše konkrétní potřeby.
+teď můžete HoloLens (1. generace) nakonfigurovat tak, aby vyhovovaly vašim konkrétním potřebám.
 
-[Připojení zařízení Bluetooth, jako je myš a klávesnice](hololens-connect-devices.md)
+[Připojení zařízení bluetooth, jako je myš a klávesnice](hololens-connect-devices.md)
 
-[Další informace o Hlasu a Cortaně](hololens-cortana.md)
+[Další informace o hlasu a Cortana](hololens-cortana.md)
 
-### <a name="help-i-dont-see-my-holograms"></a>Pomoc! Nezminí se mi hologramy
+### <a name="help-i-dont-see-my-holograms"></a>Pomoc! Nevidím svoje hologramy
 
-Pokud nevidíte hologramy, které jste umístili při používání HoloLens, můžete vyzkoušet několik věcí:
+pokud se vám nezobrazuje hologramy, které jste umístili při použití HoloLens, můžete vyzkoušet několik věcí:
 
-- Mějte na paměti, že se díváte do pravé &mdash; oblasti. Hologramy zůstanou tam, kde jste je opustili.
-- Ujistěte se, že jste v dobře rozsvícené místnosti, aniž byste řeholili přímo.
-- Počkej. Když má HoloLens potíže s rozpoznáváním vašeho prostoru, může opětovné rozpoznání dříve umístěných hologramů trvat až minutu.
-- Pokud problém přetrvává, můžete chtít vymazat data úložiště Holograms v Nastavení Systémové hologramy a pak   >    >  **hologramy** znovu umístit do domova hybridní reality.
+- Ujistěte se, že se díváte do pravé oblasti &mdash; a hologramy tam, kde jste je zůstali.
+- Ujistěte se, že jste v dobře osvětlené místnosti bez přímého slunečního světla.
+- Počkej. když HoloLens má při rozpoznávání prostoru problémy, může trvat až minutu, než se znovu zobrazí.
+- pokud se problém opakuje, možná budete chtít vymazat data Hologramy úložiště v **Nastavení**  >  **systému**  >  **Hologramy** a pak vyzkoušet hologramy na domácí realitě.

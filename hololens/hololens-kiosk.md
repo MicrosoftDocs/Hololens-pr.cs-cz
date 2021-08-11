@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 25227184ec33b134215dbd1f42f7b920b26dc29c
-ms.sourcegitcommit: 5130823947caffd2a444e9d8fb15cd24cbb6414c
+ms.openlocfilehash: e7f1efa99cc16b1003bd7063817451013ed2ec2661dbdf02edcd89c7984d0980
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2021
-ms.locfileid: "114659586"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115663987"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>Nastavení HoloLens jako beziosku
 
@@ -51,10 +51,10 @@ Při plánování veřejného terminálů budete muset být schopni zodpovědět
 
 ### <a name="kiosk-mode-requirements"></a>Požadavky na bezobrazovkové režimy
 
-Libovolné zařízení se HoloLens 2 můžete nakonfigurovat tak, aby bylo v bezobrazovkovém režimu.
+Libovolné zařízení s HoloLens 2 můžete nakonfigurovat tak, aby bylo v bezobrazovkovém režimu.
 
 > [!IMPORTANT]
-> Bezobrazovový režim je dostupný jenom v případě, že zařízení Windows Holographic for Business. Všechna HoloLens 2 se dodá Windows Holographic for Business a žádné jiné edice. Každý HoloLens 2 zařízení může bez spuštění spustit bezioskový režim.
+> Bezobrazovový režim je dostupný jenom v případě, že zařízení Windows Holographic for Business. Všechna HoloLens 2 se dodá s Windows Holographic for Business a nejsou k dispozici žádné jiné edice. Každý HoloLens 2 zařízení může bez spuštění spustit bezioskový režim.
 >
 > HoloLens (1. generace) je potřeba upgradovat jak z hlediska sestavení operačního systému, tak edice operačního systému. Tady jsou další informace o aktualizaci HoloLens (1. generace) [na Windows Holographic for Business](hololens1-upgrade-enterprise.md) edici. Pokud chcete zařízení HoloLens (1. generace) tak, aby bylo v beznarovém režimu, musíte nejprve zajistit, aby na zařízení byla spuštěná verze Windows 10, verze 1803 nebo novější. Pokud jste k obnovení zařízení HoloLens (1. generace) použili nástroj Windows Device Recovery Tool do výchozího sestavení, nebo pokud jste nainstalovali nejnovější aktualizace, je zařízení připravené ke konfiguraci.
 
@@ -92,7 +92,7 @@ Příklady použití těchto funkcí najdete v následující tabulce.
 |Zařízení, na které běží jenom příručka Dynamics 365 pro nové zaměstnance |Zařízení, na které běží průvodci i vzdálená pomoc pro celou řadu zaměstnanců. |
 |Zařízení, na které běží jenom vlastní aplikace. |Zařízení, které funguje jako beziosk pro většinu uživatelů (jenom vlastní aplikace), ale funguje jako standardní zařízení pro konkrétní skupinu uživatelů. |
 
-### <a name="plan-kiosk-apps"></a>Plánování aplikací v bezobrazovkovém systému
+### <a name="plan-kiosk-apps"></a>Plánování aplikací v beziosku
 
 Obecné informace o tom, jak zvolit aplikace v bezobrazovkovém režimu, najdete v tématu Pokyny pro výběr aplikace pro přiřazený přístup [(bezioskový režim).](/windows/configuration/guidelines-for-assigned-access-app)
 
@@ -180,144 +180,144 @@ V následující tabulce jsou uvedeny možnosti a výhody jednotlivých metod na
 |Nasadit jenom na místní zařízení | Yes           | Yes                  | No   |
 |Nasazení pomocí vývojářského režimu |Vyžadováno       | Nevyžadováno            | Nevyžadováno   |
 |Nasazení pomocí Azure Active Directory (Azure AD)  | Nevyžadováno            | Nevyžadováno                   | Vyžadováno  |
-|Nasadit automaticky      | No            | No                   | Yes  |
+|Automatické nasazení      | No            | No                   | Yes  |
 |Rychlost nasazení            | Rychlý       | Rychlá                 | Pomalý |
 |Nasazení ve velkém | Nedoporučuje se    | Doporučeno        | Doporučeno |
 
-## <a name="use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk"></a>použití Microsoft Intune nebo jiné MDM k nastavení veřejného terminálu pro jednu aplikaci nebo pro více aplikací
+## <a name="use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk"></a>Použití Microsoft Intune nebo jiného MDM k nastavení veřejného terminálu s jednou nebo více aplikacemi
 
-pokud chcete nastavit celoobrazovkový režim pomocí Microsoft Intune nebo jiného systému MDM, postupujte podle těchto kroků.
+Pokud chcete nastavit bezobrazovový režim pomocí Microsoft Intune nebo jiného systému MDM, postupujte podle těchto kroků.
 
-1. [Připravte se na registraci zařízení](#mdmenroll).
-1. [Vytvořte profil konfigurace veřejného terminálu](#mdmprofile).
-1. Nakonfigurujte veřejného terminálu.
-   - [Nakonfigurujte nastavení pro veřejný terminál s jednou aplikací](#mdmconfigsingle).
-   - [Nakonfigurujte nastavení pro veřejný terminál s více aplikacemi](#mdmconfigmulti).
-1. [Přiřaďte konfigurační profil pro veřejného terminálu ke skupině](#mdmassign).
+1. [Připravte se na registraci zařízení.](#mdmenroll)
+1. [Vytvořte konfigurační profil veřejného terminálu.](#mdmprofile)
+1. Nakonfigurujte beziosk.
+   - [Nakonfigurujte nastavení pro beziosk s jednou aplikací.](#mdmconfigsingle)
+   - [Nakonfigurujte nastavení pro beziosk s více aplikacemi.](#mdmconfigmulti)
+1. [Přiřaďte konfigurační profil veřejného terminálu ke skupině](#mdmassign).
 1. Nasaďte zařízení.
-   - [Nasaďte veřejný terminál s jednou aplikací](#mdmsingledeploy).
-   - [Nasaďte veřejný terminál s více aplikacemi](#mdmmultideploy).
+   - [Nasaďte beziosk s jednou aplikací.](#mdmsingledeploy)
+   - [Nasaďte beziosk s více aplikacemi.](#mdmmultideploy)
 
-### <a name="mdm-step-1-ndash-prepare-to-enroll-the-devices"></a><a id="mdmenroll"></a>MDM, krok 1 &ndash; Příprava na registraci zařízení
+### <a name="mdm-step-1-ndash-prepare-to-enroll-the-devices"></a><a id="mdmenroll"></a>MDM– krok 1 &ndash; Příprava registrace zařízení
 
-systém MDM můžete nakonfigurovat tak, aby se zařízení HoloLens automaticky zaregistrovala, když se uživatel poprvé přihlásí, nebo aby uživatelé zaregistrovali zařízení ručně. Zařízení musí být také připojena k doméně služby Azure AD a přiřazena k příslušným skupinám.
+Systém MDM můžete nakonfigurovat tak, aby automaticky HoloLens zařízení, když se uživatel poprvé přihlásí, nebo aby zařízení zaregistroval ručně. Zařízení musí být také připojená k vaší doméně Azure AD a přiřazena k příslušným skupinám.
 
-další informace o tom, jak zaregistrovat zařízení, najdete v tématu [registrace HoloLens v MDM](hololens-enroll-mdm.md) a [metod registrace v intune pro Windows zařízení](/mem/intune/enrollment/windows-enrollment-methods).
+Další informace o registraci zařízení najdete v tématu Registrace zařízení [HoloLens v MDM](hololens-enroll-mdm.md) a metodách registrace [Intune pro Windows zařízení.](/mem/intune/enrollment/windows-enrollment-methods)
 
-### <a name="mdm-step-2-ndash-create-a-kiosk-configuration-profile"></a><a id="mdmprofile"></a>MDM, krok 2 &ndash; Vytvoření profilu konfigurace veřejného terminálu
+### <a name="mdm-step-2-ndash-create-a-kiosk-configuration-profile"></a><a id="mdmprofile"></a>MDM, krok 2 &ndash; Vytvoření konfiguračního profilu veřejného terminálu
 
-1. Otevřete [Azure](https://portal.azure.com/) Portal a přihlaste se ke svému účtu správce Intune.
-1. vyberte **Microsoft Intune**  >  **konfigurace zařízení – profily**  >  **vytvořit profil**.
+1. Otevřete [Azure Portal](https://portal.azure.com/) a přihlaste se ke svému Správce Intune účtu.
+1. Vyberte **Microsoft Intune**  >  **Konfigurace zařízení – Profily** Vytvořit  >  **profil.**
 1. Zadejte název profilu.
-1. vyberte **Platform**  >  **Windows 10 a novější** a pak vyberte **typ profilu**  > **omezení zařízení**.
-1. Vyberte **Konfigurovat**  >  **terminál** a pak vyberte jednu z následujících možností:
-   - Pokud chcete vytvořit veřejný terminál **s jednou aplikací, vyberte veřejný**  >  **terminál s jednou aplikací**.
-   - Pokud chcete vytvořit veřejný terminál s více aplikacemi, vyberte možnost celoobrazovkový **režim** s  >  **více aplikacemi**.
-1. Pokud chcete spustit konfiguraci veřejného terminálu, vyberte **Přidat**.
+1. Vyberte **Možnost**  >  **Windows 10 a novější a** pak vyberte Typ profilu **Omezení**  > **zařízení.**
+1. Vyberte **Konfigurovat**  >  **beziosk** a pak vyberte jednu z následujících možností:
+   - Pokud chcete vytvořit beziosk s jednou aplikací, vyberte **Bezobrazovový** režim Bez přípony.  >  
+   - Pokud chcete vytvořit beziosk s více aplikacemi, vyberte **Bezobrazovový režim** Režim více aplikací  >  **Beziosk.**
+1. Pokud chcete začít konfigurovat beziosk, vyberte **Přidat.**
 
-Vaše další kroky se liší v závislosti na typu veřejného terminálu, který chcete. Pokud chcete získat další informace, vyberte jednu z následujících možností:  
+Další kroky se liší v závislosti na typu veřejného terminálů, který chcete. Další informace získáte výběrem jedné z následujících možností:  
 
-- [Veřejný terminál s jednou aplikací](#mdmconfigsingle)
-- [Veřejný terminál s více aplikacemi](#mdmconfigmulti)
+- [Beziosk s jednou aplikací](#mdmconfigsingle)
+- [Beziosk s více aplikacemi](#mdmconfigmulti)
 
-další informace o tom, jak vytvořit profil konfigurace veřejného terminálu, najdete v tématu [Windows 10 a Windows Holographic for Business nastavení zařízení, která se mají spustit jako vyhrazené veřejné terminály pomocí intune](/intune/configuration/kiosk-settings).
+Další informace o tom, jak vytvořit profil konfigurace veřejného terminálu, najdete v tématu [Windows 10 a Windows Holographic for Business,](/intune/configuration/kiosk-settings)která se mají spustit jako vyhrazený beznaiosk pomocí Intune.
 
-### <a name="mdm-step-3-single-app-ndash--configure-the-settings-for-a-single-app-kiosk"></a><a id="mdmconfigsingle"></a>MDM, krok 3 (jedna aplikace) – &ndash;  Konfigurace nastavení pro veřejný terminál s jednou aplikací
+### <a name="mdm-step-3-single-app-ndash--configure-the-settings-for-a-single-app-kiosk"></a><a id="mdmconfigsingle"></a>MDM, krok 3 (jedna aplikace) Konfigurace nastavení veřejného terminálu &ndash;  s jednou aplikací
 
-V této části najdete souhrn nastavení, která vyžaduje veřejný terminál s jednou aplikací. Další podrobnosti najdete v následujících článcích:
+Tato část shrnuje nastavení, která vyžaduje beziosk s jednou aplikací. Další podrobnosti najdete v následujících článcích:
 
-- Informace o tom, jak nakonfigurovat profil konfigurace veřejného terminálu v Intune, najdete v tématu [Konfigurace celoobrazovkového režimu pomocí Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
-- Další informace o dostupných nastaveních pro veřejné terminály s jednou aplikací v Intune najdete v článku veřejné [terminály aplikací pro celou obrazovku](/intune/configuration/kiosk-settings-holographic#single-full-screen-app-kiosks) .
-- Další služby MDM najdete v dokumentaci vašeho poskytovatele, kde najdete pokyny. Pokud k nastavení veřejného terminálu v rámci služby MDM používáte vlastní konfiguraci XML, [vytvořte soubor XML, který definuje konfiguraci veřejného terminálu](#ppkioskconfig).
+- Informace o tom, jak nakonfigurovat konfigurační profil veřejného terminálů v Intune, najdete v tématu Konfigurace beznaiosku pomocí [Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
+- Další informace o dostupných nastaveních pro veřejného terminály s jednou aplikací v Intune najdete v článku o bezna obrazovce [s jednou aplikací na celé obrazovce.](/intune/configuration/kiosk-settings-holographic#single-full-screen-app-kiosks)
+- Pokyny k jiným službám MDM najdete v dokumentaci k poskytovateli. Pokud k nastavení veřejného terminálu ve službě MDM musíte použít vlastní konfiguraci XML, vytvořte soubor XML, který definuje konfiguraci [veřejného terminálu.](#ppkioskconfig)
 
-1. Vyberte **typ přihlášení uživatele**  >  **místní uživatelský účet** a zadejte uživatelské jméno místního účtu (zařízení) nebo účtu Microsoft (MSA), které se můžou přihlásit k veřejnému terminálu.
+1. Vyberte **Typ přihlášení uživatele** Místní uživatelský účet a pak zadejte uživatelské jméno místního účtu (zařízení) nebo účtu Microsoft (MSA), který se může přihlásit k  >  beziosku.
    > [!NOTE]  
    > Typy uživatelských účtů **Automatické přihlášení** nejsou na zařízení s Windows Holographic for Business podporované.
-1. Vyberte možnost aplikace pro Store **typu aplikace**  >  a pak vyberte aplikaci ze seznamu.
+1. Vyberte **Typ aplikace** Aplikace Aplikace pro  >  **Store** a pak v seznamu vyberte aplikaci.
 
-Vaším dalším krokem je [přiřazení](#mdmassign) profilu ke skupině.
+Dalším krokem je [přiřazení](#mdmassign) profilu ke skupině.
 
-### <a name="mdm-step-3-multi-app-ndash-configure-the-settings-for-a-multi-app-kiosk"></a><a id="mdmconfigmulti"></a>MDM, krok 3 (více aplikací) &ndash; Konfigurace nastavení pro veřejný terminál s více aplikacemi
+### <a name="mdm-step-3-multi-app-ndash-configure-the-settings-for-a-multi-app-kiosk"></a><a id="mdmconfigmulti"></a>MDM, krok 3 (více aplikací) Konfigurace nastavení veřejného &ndash; terminálu s více aplikacemi
 
-V této části najdete souhrn nastavení, která vyžaduje veřejný terminál s více aplikacemi. Podrobnější informace najdete v následujících článcích:
+Tato část shrnuje nastavení, která vyžaduje beziosk s více aplikacemi. Podrobnější informace najdete v následujících článcích:
 
-- Informace o tom, jak nakonfigurovat profil konfigurace veřejného terminálu v Intune, najdete v tématu [Konfigurace celoobrazovkového režimu pomocí Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
-- Další informace o dostupných nastaveních pro veřejné terminály s více aplikacemi v Intune najdete v tématu veřejné [terminály s více aplikacemi](/mem/intune/configuration/kiosk-settings-holographic#multi-app-kiosks) .
-- Další služby MDM najdete v dokumentaci vašeho poskytovatele, kde najdete pokyny. Pokud potřebujete použít vlastní konfiguraci XML k nastavení veřejného terminálu ve službě MDM, [vytvořte soubor XML, který definuje konfiguraci veřejného terminálu](#ppkioskconfig). Pokud používáte soubor XML, nezapomeňte zahrnout [počáteční rozložení](#start-layout-for-hololens).  
-- Volitelně můžete použít vlastní rozložení zahájení s Intune nebo jinými službami MDM. Další informace najdete v tématu [spuštění souboru rozložení pro MDM (Intune a další)](#start-layout-file-for-mdm-intune-and-others).
+- Informace o tom, jak nakonfigurovat konfigurační profil veřejného terminálů v Intune, najdete v tématu Konfigurace beznaiosku pomocí [Microsoft Intune](hololens-commercial-infrastructure.md#how-to-configure-kiosk-mode-using-microsoft-intune).
+- Další informace o dostupných nastaveních pro bezobrazovkové terminály s více aplikacemi v Intune najdete v tématu Veřejného terminály [s více aplikacemi.](/mem/intune/configuration/kiosk-settings-holographic#multi-app-kiosks)
+- Pokyny k jiným službám MDM najdete v dokumentaci k poskytovateli. Pokud k nastavení veřejného terminálu ve službě MDM potřebujete použít vlastní konfiguraci XML, vytvořte soubor XML, který definuje konfiguraci [veřejného terminálu.](#ppkioskconfig) Pokud používáte soubor XML, nezapomeňte zahrnout [rozložení Start](#start-layout-for-hololens).  
+- Volitelně můžete použít vlastní rozložení Start s Intune nebo jinými službami MDM. Další informace najdete v tématu [Spuštění souboru rozložení pro MDM (Intune a další).](#start-layout-file-for-mdm-intune-and-others)
 
-1. vyberte **cíl Windows 10 v režimu S**  >  .  
+1. Vyberte **Cílový Windows 10 v režimu S Ne.**  >    
 >[!NOTE]  
-> V Windows Holographic for Business není podporován režim S.
+> Režim S se nepodporuje v Windows Holographic for Business.
 
-1. vyberte **uživatelský typ přihlášení**.  >  **uživatel nebo skupina Azure AD** nebo **typ přihlášení uživatele**  >  **HoloLens návštěvník** a pak přidejte jednu nebo více skupin nebo účtů uživatelů.  
+1. Vyberte **Typ přihlášení uživatele** Uživatel nebo skupina Azure AD nebo Typ přihlášení uživatele HoloLens návštěvníka a pak přidejte jednu nebo více skupin uživatelů  >     >  nebo účtů.  
 
-   Jenom uživatelé, kteří patří do skupin nebo účtů, které zadáte v možnosti **typ přihlášení uživatele** , můžou využívat možnosti veřejného terminálu.
+   Prostředí veřejného terminálů mohou používat jenom  uživatelé, kteří patří do skupin nebo účtů, které zadáte v části Typ přihlášení uživatele.
 
 1. Vyberte jednu nebo více aplikací pomocí následujících možností:
-   - Pokud chcete přidat nahranou obchodní aplikaci, vyberte **Přidat aplikaci pro Store** a pak vyberte aplikaci, kterou chcete.
-   - Pokud chcete přidat aplikaci zadáním jejího AUMID, vyberte **Přidat podle AUMID** a pak zadejte AUMID aplikace. [Zobrazit seznam dostupných AUMIDs](#aumids)
+   - Pokud chcete přidat nahranou obchodní aplikaci, vyberte **Přidat aplikaci** ze Storu a pak vyberte požadovanou aplikaci.
+   - Pokud chcete přidat aplikaci zadáním jejího AUMID, vyberte **Přidat podle AUMID** a pak zadejte AUMID aplikace. [Zobrazení seznamu dostupných identifikátorů AUMID](#aumids)
 
-Vaším dalším krokem je [přiřazení](#mdmassign) profilu ke skupině.
+Dalším krokem je [přiřazení](#mdmassign) profilu ke skupině.
 
-### <a name="mdm-step-4-ndash-assign-the-kiosk-configuration-profile-to-a-group"></a><a id="mdmassign"></a>MDM, krok 4 &ndash; přiřazení profilu konfigurace veřejného terminálu ke skupině
+### <a name="mdm-step-4-ndash-assign-the-kiosk-configuration-profile-to-a-group"></a><a id="mdmassign"></a>MDM, krok 4: Přiřazení konfiguračního profilu &ndash; veřejného terminálu ke skupině
 
-Pomocí stránky **přiřazení** v profilu konfigurace veřejného terminálu nastavte, kam chcete nasadit konfiguraci veřejného terminálu. v nejjednodušším případě přiřadíte konfigurační profil pro terminál ke skupině, která bude obsahovat zařízení HoloLens, když se zařízení zaregistruje v MDM.
+Na stránce **Přiřazení konfiguračního** profilu veřejného terminálů nastavte, kam chcete konfiguraci veřejného terminálů nasadit. V nejjednodušším případě přiřadíte konfigurační profil veřejného terminálu ke skupině, která bude obsahovat HoloLens zařízení, když se zařízení zaregistruje do MDM.
 
-### <a name="mdm-step-5-single-app-ndash-deploy-a-single-app-kiosk"></a><a id="mdmsingledeploy"></a>MDM, krok 5 (jediná aplikace) &ndash; nasazení veřejného terminálu s jednou aplikací
+### <a name="mdm-step-5-single-app-ndash-deploy-a-single-app-kiosk"></a><a id="mdmsingledeploy"></a>MDM, krok 5 (jedna aplikace) &ndash; Nasazení veřejného terminálu s jednou aplikací
 
-Když použijete systém MDM, můžete zařízení zaregistrovat v MDM během počátečního spuštění počítače. Po dokončení počátečního spuštění počítače se přihlašuje k zařízení snadno.
+Když používáte systém MDM, můžete zařízení zaregistrovat v MDM během spuštění počítače. Po dokončení OOBE se můžete snadno přihlásit k zařízení.
 
-Během počátečního nastavení použijte následující postup:
+Během OOBE postupujte takto:
 
-1. Přihlaste se pomocí účtu, který jste zadali v profilu konfigurace veřejného terminálu.
-1. Registrace zařízení Ujistěte se, že je zařízení přidané do skupiny, ke které je přiřazen konfigurační profil pro veřejné terminály.
-1. Počkejte, až se počáteční soubor dokončí, aby se aplikace Store mohla stáhnout a nainstalovat a aby se zásady uplatnily. Pak zařízení restartujte.
+1. Přihlaste se pomocí účtu, který jste zadali v konfiguračním profilu veřejného terminálu.
+1. Registrace zařízení Ujistěte se, že je zařízení přidané do skupiny, ke které je konfigurační profil veřejného terminálů přiřazený.
+1. Počkejte na dokončení funkce OOBE, na stažení a instalaci aplikace ze Storu a na použití zásad. Pak zařízení restartujte.
 
-Až se příště přihlásíte k zařízení, aplikace veřejného terminálu by se měla automaticky spustit.
+Při příštím přihlášení k zařízení by se měla automaticky spustit aplikace veřejného terminálu.
 
-Pokud v tuto chvíli nevidíte konfiguraci veřejného terminálu, [Zkontrolujte stav přiřazení](/intune/configuration/device-profile-monitor).
+Pokud v tuto chvíli konfiguraci veřejného terminálu nevidíte, [zkontrolujte stav přiřazení](/intune/configuration/device-profile-monitor).
 
-### <a name="mdm-step-5-multi-app-ndash-deploy-a-multi-app-kiosk"></a><a id="mdmmultideploy"></a>MDM, krok 5 (více aplikací) &ndash; nasazení veřejného terminálu s více aplikacemi
+### <a name="mdm-step-5-multi-app-ndash-deploy-a-multi-app-kiosk"></a><a id="mdmmultideploy"></a>MDM, krok 5 (více aplikací) &ndash; Nasazení veřejného terminálu s více aplikacemi
 
-Když použijete systém MDM, můžete ho připojit k vašemu tenantovi Azure AD a zaregistrovat zařízení v MDM během OOBE. V případě potřeby Poskytněte uživatelům informace pro registraci, aby měli k dispozici během procesu OOBE.
+Když používáte systém MDM, můžete zařízení připojit ke svému tenantovi Azure AD a zaregistrovat ho v MDM během spuštění počítače. V případě potřeby zadejte uživatelům informace o registraci, aby je měli k dispozici během procesu OOBE.
 
 > [!NOTE]  
-> Pokud jste profil konfigurace veřejného terminálu přiřadili ke skupině, která obsahuje uživatele, ujistěte se, že jeden z těchto uživatelských účtů je prvním účtem pro přihlášení k zařízení.
+> Pokud jste přiřadili konfigurační profil veřejného terminálů ke skupině, která obsahuje uživatele, ujistěte se, že jeden z těchto uživatelských účtů je prvním účtem pro přihlášení k zařízení.
 
-Během počátečního nastavení použijte následující postup:
+Během OOBE postupujte takto:
 
-1. Přihlaste se pomocí účtu, který patří do skupiny **typ přihlášení uživatele** .
+1. Přihlaste se pomocí účtu, který patří do **skupiny typů přihlášení** uživatele.
 1. Registrace zařízení
-1. Počkejte na stažení a instalaci všech aplikací, které jsou součástí profilu konfigurace veřejného terminálu. Také počkejte na použití zásad.  
-1. Po dokončení počátečního nastavení můžete nainstalovat další aplikace z Microsoft Storu nebo pomocí zkušebního načtení. [Požadované aplikace](/mem/intune/apps/apps-deploy#assign-an-app) pro skupinu, pro kterou zařízení patří k instalaci automaticky
-1. Po dokončení instalace zařízení znovu spusťte.
+1. Počkejte, až se stáhnou a nainstalují všechny aplikace, které jsou součástí konfiguračního profilu veřejného terminálu. Počkejte také na použití zásad.  
+1. Po dokončení funkce OOBE můžete nainstalovat další aplikace z Microsoft Storu nebo pomocí instalace bokem (sideloading). [Požadované aplikace](/mem/intune/apps/apps-deploy#assign-an-app) pro skupinu, do které zařízení patří, se instalují automaticky.
+1. Po dokončení instalace restartujte zařízení.
 
-Až se příště přihlásíte k zařízení pomocí účtu, který patří do **typu přihlášení uživatele**, aplikace veřejného terminálu by se měla automaticky spustit.
+Při příštím přihlášení k zařízení pomocí účtu, který patří do typu Přihlášení **uživatele,** by se měla automaticky spustit aplikace veřejného terminálu.
 
-Pokud v tuto chvíli nevidíte konfiguraci veřejného terminálu, [Zkontrolujte stav přiřazení](/intune/configuration/device-profile-monitor).
+Pokud v tuto chvíli konfiguraci veřejného terminálu nevidíte, [zkontrolujte stav přiřazení](/intune/configuration/device-profile-monitor).
 
-## <a name="use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk"></a>Použití zřizovacího balíčku k nastavení veřejného terminálu pro jednu aplikaci nebo více aplikací
+## <a name="use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk"></a>Použití zřizovacího balíčku k nastavení veřejného terminálu s jednou nebo více aplikacemi
 
-Pokud chcete nastavit celoobrazovkový režim pomocí zřizovacího balíčku, postupujte podle těchto kroků.
+Pokud chcete nastavit režim veřejného terminálů pomocí zřizovacího balíčku, postupujte podle těchto kroků.
 
-1. [Vytvořte soubor XML, který definuje konfiguraci veřejného terminálu.](#ppkioskconfig)včetně [počátečního rozložení](#start-layout-for-hololens).
+1. [Vytvořte soubor XML, který definuje konfiguraci veřejného terminálu.](#ppkioskconfig), včetně [rozložení Start](#start-layout-for-hololens).
 2. [Přidejte soubor XML do zřizovacího balíčku.](#ppconfigadd)
-3. [Balíček zřizování nainstalujte na HoloLens.](#ppapply)
+3. [Použijte zřizovací balíček pro HoloLens.](#ppapply)
 
-### <a name="provisioning-package-step-1-ndash-create-a-kiosk-configuration-xml-file"></a><a id="ppkioskconfig"></a>Zřizovací balíček, krok 1 &ndash; Vytvoření souboru XML konfigurace veřejného terminálu
+### <a name="provisioning-package-step-1-ndash-create-a-kiosk-configuration-xml-file"></a><a id="ppkioskconfig"></a>Zřizovací balíček, krok 1: Vytvoření konfiguračního souboru &ndash; XML veřejného terminálu
 
-postupujte podle [obecných pokynů pro vytvoření souboru XML konfigurace veřejného terminálu pro Windows plochu](/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file)s výjimkou následujících:
+Postupujte [podle obecných pokynů a vytvořte soubor XML](/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file)konfigurace veřejného Windows desktopu s výjimkou následujících:
 
-- nezahrnovat klasické Windows aplikace (Win32). HoloLens tyto aplikace nepodporuje.
-- Pro HoloLens použijte [zástupný symbol pro začátek rozložení XML](#start-layout-for-hololens) .
-- Volitelné: přidejte přístup hosta do konfigurace veřejného terminálu.
+- Nezahrnujte klasické aplikace Windows (Win32). HoloLens nepodporuje tyto aplikace.
+- Pro tuto aplikaci použijte zástupný symbol [Start layout XML](#start-layout-for-hololens) HoloLens.
+- Volitelné: Přidání přístupu hosta ke konfiguraci veřejného terminálů
 
-#### <a name="optional-add-guest-access-to-the-kiosk-configuration"></a><a id="ppkioskguest"></a>Volitelné: přidejte přístup hosta do konfigurace veřejného terminálu.
+#### <a name="optional-add-guest-access-to-the-kiosk-configuration"></a><a id="ppkioskguest"></a>Volitelné: Přidání přístupu hosta ke konfiguraci veřejného terminálů
 
-V části [ **CONFIGS** souboru XML](/windows/configuration/lock-down-windows-10-to-specific-apps#configs)můžete nakonfigurovat speciální skupinu s názvem **Návštěvníci** , která umožní hostům využívat veřejný terminál. Když je veřejný terminál nakonfigurovaný tak, aby podporoval speciální skupinu **návštěvníků** , přidá se na přihlašovací stránku možnost **Host**. Účet **Guest** nevyžaduje heslo a při odhlášení účtu se odstraní všechna data přidružená k tomuto účtu.
+V části [ **Konfigurace v** souboru XML](/windows/configuration/lock-down-windows-10-to-specific-apps#configs)můžete nakonfigurovat speciální skupinu s názvem **Návštěvník,** aby hosté mohli používat terminál. Pokud je kiosk nakonfigurovaný tak, abypodporoval speciální skupinu **Návštěvník,** přidá se na přihlašovací stránku možnost Host. Účet **hosta** nevyžaduje heslo a všechna data přidružená k účtu se při odhlášení účtu odstraní.
 
-Pokud chcete povolit účet **Guest** , přidejte následující fragment kódu do souboru XML konfigurace veřejného terminálu:
+Pokud chcete účet **guest** povolit, přidejte do XML konfigurace veřejného terminálů následující fragment kódu:
 
 ```xml
 <Configs>
@@ -327,43 +327,43 @@ Pokud chcete povolit účet **Guest** , přidejte následující fragment kódu 
   </Config>  
 </Configs>  
 ```
-#### <a name="enable-visitor-autologon"></a>Povolit automatické přihlašování návštěvníků
+#### <a name="enable-visitor-autologon"></a>Povolení automatického protokolování návštěvníka
 
-v sestavách [Windows holografická verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a vyšší:
-- Konfigurace AAD a Nepřidání: podporuje jak automatické přihlašování, tak i účty návštěvníků, které jsou povolené pro celoobrazovkový režim.
+V [buildech Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a novější:
+- Konfigurace AAD i bez přidání podporují automatické přihlašování k účtům návštěvníka pro režim veřejného terminálu.
 
-##### <a name="non-aad-configuration"></a>Konfigurace jiného typu než AAD
+##### <a name="non-aad-configuration"></a>Konfigurace mimo AAD
 
 1. Vytvořte zřizovací balíček, který:
-    1. Nakonfiguruje nastavení modulu runtime/AssignedAccess tak, aby umožňoval účty návštěvníků.
-    1. Volitelně můžete zařízení zaregistrovat v MDM (nastavení modulu runtime/pracoviště/registrace), aby se mohlo spravovat později.
-    1. Nevytvářet místní účet
+    1. Nakonfiguruje nastavení modulu runtime /AssignedAccess tak, aby povolují účty návštěvníka.
+    1. Volitelně zaregistruje zařízení v MDM (nastavení modulu runtime, pracoviště/ registrace), aby ho bylo možné později spravovat.
+    1. Nevytvářejte místní účet.
 2. [Použijte zřizovací balíček](hololens-provisioning.md).
 
 ##### <a name="aad-configuration"></a>Konfigurace AAD
 
-Zařízení připojená k AAD nakonfigurovaná pro celoobrazovkový režim se můžou přihlásit k účtu návštěvníka jediným klepnutím na tlačítko na přihlašovací obrazovce. Po přihlášení k účtu návštěvníka se zařízení nevyzve k opětovnému přihlášení, dokud se návštěvník výslovně odhlásí z nabídky Start nebo když se zařízení nerestartuje.
+Zařízení připojená k AAD nakonfigurovaná pro beznarový režim mohou přihlásit účet Návštěvník jediným klepnutím na přihlašovací obrazovku. Jakmile se zařízení přihlásí k účtu návštěvníka, nebude znova vyzváno k přihlášení, dokud se návštěvník z nabídky Start explicitně odhlásit nebo dokud se zařízení nerestartuje.
 
-Automatické přihlašování návštěvníka se dá spravovat pomocí [vlastních zásad OMA-URI](/mem/intune/configuration/custom-settings-windows-10):
+Automatické přihlášení návštěvníka je možné spravovat [pomocí vlastních zásad OMA-URI:](/mem/intune/configuration/custom-settings-windows-10)
 
-- Hodnota identifikátoru URI:./Device/Vendor/MSFT/MixedReality/VisitorAutoLogon
+- Hodnota URI: ./Device/Vendor/MSFT/MixedReality/VisitorAutoLogon
 
 
 | Zásady |Description |Konfigurace 
 | --------------------------- | ------------- | -------------------- |
-| MixedReality/VisitorAutoLogon | Umožňuje návštěvníkovi automatické přihlašování do veřejného terminálu. | 1 (Ano), 0 (ne, výchozí) |
+| MixedReality/VisitorAutoLogon | Umožňuje návštěvníkovi automaticky se přihlásit k bezobrazovkovému režimu. | 1 (Ano), 0 (Ne, výchozí.) |
 
-#### <a name="placeholder-start-layout-for-hololens"></a><a id="start-layout-for-hololens"></a>Zástupný symbol začátku rozložení pro HoloLens
+#### <a name="placeholder-start-layout-for-hololens"></a><a id="start-layout-for-hololens"></a>Zástupný symbol rozložení Start pro HoloLens
 
-Pokud použijete [zřizovací balíček](#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk) ke konfiguraci veřejného terminálu s více aplikacemi, procedura vyžaduje počáteční rozložení. Přizpůsobení rozložení při spuštění není v Windows Holographic for Business podporováno. Proto budete muset použít zástupné počáteční rozložení.
-
-> [!NOTE]  
-> vzhledem k tomu, že veřejný terminál s jednou aplikací spouští aplikaci na veřejném terminálu, když se uživatel přihlásí, nepoužívá nabídka Start a nemusí mít počáteční rozložení.
+Pokud ke konfiguraci [veřejného terminálu](#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk) s více aplikacemi používáte zřizovací balíček, vyžaduje tento postup rozložení Pro spuštění. Přizpůsobení počátečního rozložení není podporované v Windows Holographic for Business. Proto budete muset použít zástupný symbol Rozložení pro začátek.
 
 > [!NOTE]  
-> Pokud používáte [MDM](#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk) k nastavení veřejného terminálu s více aplikacemi, můžete volitelně použít počáteční rozložení. Další informace najdete v tématu [zástupný symbol pro začátek souboru rozložení pro MDM (Intune a další)](#start-layout-file-for-mdm-intune-and-others).
+> Protože bezna terminál s jednou aplikací spustí aplikaci veřejného terminála, když se uživatel přihlásí, nebude používat nabídka Start a nemusí mít rozložení Start.
 
-Pro možnost začít rozložení přidejte do souboru XML pro veřejné zřizování následující část **upravily** :
+> [!NOTE]  
+> Pokud k nastavení veřejného terminálu s více aplikacemi používáte [MDM,](#use-microsoft-intune-or-other-mdm-to-set-up-a-single-app-or-multi-app-kiosk) můžete volitelně použít rozložení Start. Další informace najdete v tématu [Zástupný symbol souboru rozložení Start pro MDM (Intune](#start-layout-file-for-mdm-intune-and-others)a další).
+
+Pro rozložení Start přidejte do souboru XML zřizování veřejného terminálů následující část **StartLayout:**
 
 ```xml
 <!-- This section is required for parity with Desktop Assigned Access. It is not currently used on HoloLens -->
@@ -385,12 +385,12 @@ Pro možnost začít rozložení přidejte do souboru XML pro veřejné zřizov�
             <!-- This section is required for parity with Desktop Assigned Access. It is not currently used on HoloLens -->
 ```
 
-#### <a name="placeholder-start-layout-file-for-mdm-intune-and-others"></a><a id="start-layout-file-for-mdm-intune-and-others"></a>Zástupný symbol pro začátek souboru rozložení pro MDM (Intune a další)
+#### <a name="placeholder-start-layout-file-for-mdm-intune-and-others"></a><a id="start-layout-file-for-mdm-intune-and-others"></a>Zástupný symbol Souboru rozložení Start pro MDM (Intune a další)
 
-Následující ukázku uložte jako soubor XML. tento soubor můžete použít při konfiguraci veřejného terminálu s více aplikacemi v Microsoft Intune (nebo v jiné službě MDM, která poskytuje profil veřejného terminálu).
+Uložte následující ukázku jako soubor XML. Tento soubor můžete použít při konfiguraci veřejného terminálu s více aplikacemi v Microsoft Intune (nebo v jiné službě MDM, která poskytuje profil veřejného terminálu).
 
 > [!NOTE]
-> Pokud pro nastavení veřejného terminálu ve službě MDM používáte vlastní nastavení a úplnou konfiguraci XML, použijte [pokyny pro vytvoření balíčku pro zřizovací balíček](#start-layout-for-hololens).
+> Pokud k nastavení veřejného terminálu ve službě MDM musíte použít vlastní nastavení a úplnou konfiguraci XML, použijte pokyny k rozložení startu pro [zřizovací balíček](#start-layout-for-hololens).
 
 ```xml
 <LayoutModificationTemplate
@@ -408,50 +408,50 @@ Následující ukázku uložte jako soubor XML. tento soubor můžete použít p
  </LayoutModificationTemplate>
 ```
 
-### <a name="prov-package-step-2-ndash-add-the-kiosk-configuration-xml-file-to-a-provisioning-package"></a><a id="ppconfigadd"></a>Kazatel. balíček, krok 2 &ndash; přidejte do zřizovacího balíčku konfigurační soubor XML pro veřejné terminály.
+### <a name="prov-package-step-2-ndash-add-the-kiosk-configuration-xml-file-to-a-provisioning-package"></a><a id="ppconfigadd"></a>Prov. balíček, krok 2 Přidání konfiguračního souboru XML veřejného &ndash; terminálu do zřizovacího balíčku
 
-1. otevřete [Windows návrháře konfigurace](https://www.microsoft.com/store/apps/9nblggh4tx22).
-1. Vyberte **Upřesnit zřizování**, zadejte název projektu a pak vyberte **Další**.
-1. vyberte **Windows 10 Holographic** a pak vyberte **další**.
+1. Otevřete [Windows Configuration Designer.](https://www.microsoft.com/store/apps/9nblggh4tx22)
+1. Vyberte **Rozšířené zřizování,** zadejte název projektu a pak vyberte **Další.**
+1. Vyberte **Windows 10 Holographic** a pak vyberte **Další.**
 1. Vyberte **Dokončit**. Otevře se pracovní prostor pro váš balíček.
-1. Vyberte **nastavení modulu runtime**  >  **AssignedAccess**  >  **MultiAppAssignedAccessSettings**.
-1. V prostředním podokně vyberte **Procházet** a vyhledejte a vyberte soubor XML konfigurace veřejného terminálu, který jste vytvořili.
+1. Vyberte **Nastavení modulu runtime**  >  **PřiřazenoPřístup**  >  **multiAppAssignedAccessNastavení.**
+1. V podokně uprostřed  vyberte Procházet a vyhledejte a vyberte soubor XML konfigurace veřejného terminálů, který jste vytvořili.
 
-   ![snímek obrazovky s polem MultiAppAssignedAccessSettings v návrháři konfigurace Windows](./images/multiappassignedaccesssettings.png)
+   ![Snímek obrazovky s polem MultiAppAssignedAccessSettings v Windows Configuration Designeru](./images/multiappassignedaccesssettings.png)
 
-1. **Volitelné**. (Pokud chcete zřizovací balíček použít po počátečním nastavení zařízení a na veřejném zařízení je již k dispozici uživatel s právy pro správu, přeskočte tento krok.) Vyberte **nastavení modulu runtime** &gt; **účty** &gt; **Uživatelé** a pak vytvořte uživatelský účet. Zadejte uživatelské jméno a heslo a pak vyberte   >  **skupiny** uživatelů.  
+1. **Nepovinné**. (Pokud chcete po počátečním nastavení zařízení použít zřizovací balíček a uživatel s rolí správce už je na zařízení v bezobrazovkovém režimu dostupný, tento krok přeskočte.) Vyberte **Nastavení modulu runtime** &gt; **Uživatelé** &gt; **účtů** a pak vytvořte uživatelský účet. Zadejte uživatelské jméno a heslo a pak vyberte **UserGroup**  >  **Administrators**.  
   
      Pomocí tohoto účtu můžete zobrazit stav zřizování a protokoly.  
-1. **Volitelné**. (Pokud už nemáte účet správce na veřejném zařízení, přeskočte tento krok.) Vyberte **nastavení modulu runtime** &gt; **účty** &gt; **Uživatelé** a pak vytvořte místní uživatelský účet. Ujistěte se, že je uživatelské jméno stejné jako pro účet, který zadáte v konfigurační XML. Vyberte **uživatele** se  >  **standardními** uživateli.
-1. Vyberte   >  **Uložit** soubor.
-1. Vyberte **exportovat**  >  **zřizovací balíček** a pak vyberte **vlastník**  >  **IT správce**. Tím se nastaví priorita tohoto zřizovacího balíčku vyšší než zřizovací balíčky, které se na toto zařízení aplikují z jiných zdrojů.
+1. **Nepovinné**. (Pokud už na zařízení s bez oprávnění správce máte účet bez oprávnění správce, tento krok přeskočte.) Vyberte **Nastavení modulu runtime** &gt; **Uživatelé** &gt; **účtů** a pak vytvořte místní uživatelský účet. Ujistěte se, že uživatelské jméno je stejné jako pro účet, který zadáte v souboru XML konfigurace. Vyberte **UserGroup**  >  **Standard Users**.
+1. Vyberte **Soubor**  >  **Uložit.**
+1. Vyberte **Exportovat**  >  **zřizovací balíček** a pak vyberte **Vlastník**  >  **Správce IT.** Tím se nastaví priorita tohoto zřizovacího balíčku vyšší než zřizovací balíčky, které se na toto zařízení použijí z jiných zdrojů.
 1. Vyberte **Další**.
-1. Na stránce **zabezpečení balíčku zřizování** vyberte možnost zabezpečení.
+1. Na **stránce Zabezpečení zřizovacího** balíčku vyberte možnost zabezpečení.
    > [!IMPORTANT]  
-   > Pokud vyberete možnost **povolit podepisování balíčků**, budete také muset vybrat platný certifikát, který se má použít k podepsání balíčku. Pokud to chcete provést, vyberte **Procházet** a vyberte certifikát, který chcete použít k podepsání balíčku.
+   > Pokud vyberete **Povolit podepisování** balíčků , budete také muset vybrat platný certifikát, který se má použít k podepsání balíčku. Chcete-li to provést, vyberte **Procházet** a vyberte certifikát, který chcete použít k podepsání balíčku.
    
    > [!CAUTION]  
-   > Nevybírejte možnost **Povolit šifrování balíčku**. v zařízeních HoloLens toto nastavení způsobí selhání zřizování.
+   > Nevyberte **možnost Povolit šifrování balíčků.** Na HoloLens zařízeních toto nastavení způsobí selhání zřizování.
 1. Vyberte **Další**.
-1. Zadejte umístění výstupu, kde má zřizovací balíček při sestavení přejít. ve výchozím nastavení používá návrhář konfigurace Windows složku projektu jako umístění výstupu. Pokud chcete změnit umístění výstupu, vyberte **Procházet**. Po dokončení vyberte **Další**.
-1. Vyberte **sestavení** pro zahájení sestavování balíčku. Zřizovací balíček netrvá déle, než se sestaví. Na stránce Build (sestavení) se zobrazí informace o projektu a indikátor průběhu indikuje stav sestavení.
+1. Zadejte výstupní umístění, kam má zřizovací balíček po jeho vytváření přejít. Ve výchozím nastavení Windows Configuration Designer používá složku projektu jako výstupní umístění. Pokud chcete změnit umístění výstupu, vyberte **Procházet.** Po dokončení vyberte **Další.**
+1. Vyberte **Build (Sestavit)** a začněte vytvářet balíček. Sestavení zřizovacího balíčku trvá dlouho. Na stránce sestavení se zobrazí informace o projektu a indikátor průběhu uvádí stav sestavení.
 
-### <a name="provisioning-package-step-3-ndash-apply-the-provisioning-package-to-hololens"></a><a id="ppapply"></a>Zřizovací balíček, krok 3, &ndash; použití zřizovacího balíčku na HoloLens
+### <a name="provisioning-package-step-3-ndash-apply-the-provisioning-package-to-hololens"></a><a id="ppapply"></a>Zřizovací balíček, krok &ndash; 3: Použití zřizovacího balíčku pro HoloLens
 
-článek "konfigurace HoloLens pomocí zřizovacího balíčku" poskytuje podrobné pokyny k použití zřizovacího balíčku za následujících okolností:
+Článek Konfigurace HoloLens pomocí zřizovacího balíčku obsahuje podrobné pokyny k použití zřizovacího balíčku za následujících okolností:
 
-- [během instalace můžete zpočátku použít zřizovací balíček, který se HoloLens](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup).
+- Při instalaci můžete [nejprve použít zřizovací HoloLens zřizovací balíček.](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup)
 
-- [zřizovací balíček můžete také použít pro HoloLens po instalaci](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup).
+- Můžete také [použít zřizovací balíček pro HoloLens po instalaci](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup).
 
-## <a name="use-the-windows-device-portal-to-set-up-a-single-app-kiosk"></a>použití portálu Windows zařízení k nastavení veřejného terminálu s jednou aplikací
+## <a name="use-the-windows-device-portal-to-set-up-a-single-app-kiosk"></a>Použití Windows Portál zařízení k nastavení veřejného terminálu s jednou aplikací
 
-pokud chcete nastavit celoobrazovkový režim pomocí portálu Windows zařízení, postupujte podle těchto kroků.
+Pokud chcete nastavit bezobrazovový režim pomocí Windows Portál zařízení, postupujte podle těchto kroků.
 
-1. [nastavte zařízení HoloLens na používání portálu Windows zařízení](https://developer.microsoft.com/windows/mixed-reality/using_the_windows_device_portal#setting_up_hololens_to_use_windows_device_portal). portál zařízení je webový server na vašem HoloLens, ke kterému se můžete připojit z webového prohlížeče na svém počítači.
+1. [Nastavte HoloLens zařízení pro použití Windows Portál zařízení](https://developer.microsoft.com/windows/mixed-reality/using_the_windows_device_portal#setting_up_hololens_to_use_windows_device_portal). Tato Portál zařízení webový server ve vaší HoloLens, ke které se můžete připojit z webového prohlížeče na počítači.
 
     > [!CAUTION]
-    > když nastavíte HoloLens, abyste mohli používat portál zařízení, musíte na zařízení povolit vývojářský režim. vývojářský režim na zařízení, které má Windows Holographic for Business umožňuje vám načítat aplikace. Toto nastavení však vytvoří riziko, že uživatel může instalovat aplikace, které nebyly certifikovány Microsoft Store. Správci můžou zablokovat možnost Povolit vývojářský režim pomocí nastavení **odemčení ApplicationManagement/AllowDeveloper** v [zásadách CSP](/windows/client-management/mdm/policy-configuration-service-provider). [Přečtěte si další informace o režimu pro vývojáře.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
+    > Když nastavíte, HoloLens používat Portál zařízení, musíte na zařízení povolit vývojářský režim. Vývojářský režim na zařízení, které Windows Holographic for Business umožňuje zkušební načtení aplikací. Toto nastavení ale vytváří riziko, že uživatel může instalovat aplikace, které nejsou certifikované Microsoft Store. Správci můžou blokovat možnost povolit režim pro vývojáře pomocí nastavení **ApplicationManagement/AllowDeveloper Unlock** v [csP zásad.](/windows/client-management/mdm/policy-configuration-service-provider) [Přečtěte si další informace o režimu pro vývojáře.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
     
 1. Na počítači se připojte k HoloLens pomocí [Wi-Fi](https://developer.microsoft.com/windows/mixed-reality/Using_the_Windows_Device_Portal#connecting_over_wi-fi) nebo [USB](https://developer.microsoft.com/windows/mixed-reality/Using_the_Windows_Device_Portal#connecting_over_usb).
 
@@ -501,7 +501,7 @@ Aplikace se automaticky spustí při přihlášení uživatele.
 Při selhání při použití bezobrazovkovém režimu se zobrazí následující chování:
 
 - Před Windows Holographic se ve verzi 20H2 – HoloLens zobrazí všechny aplikace v nabídka Start.
-- Windows Holographic, verze 20H2 – pokud má zařízení konfiguraci veřejného terminálů, což je kombinace přístupu přiřazeného globálním i přiřazeného členovi skupiny AAD. Pokud se určení členství ve skupině AAD nezdaří, uživateli se zobrazí nabídka "nic se nezobrazí v nabídce Start".
+- Windows Holographic verze 20H2 – pokud má zařízení konfiguraci veřejného terminálů, což je kombinace přístupu přiřazeného globálním i přiřazeným členem skupiny AAD. Pokud se určení členství ve skupině AAD nezdaří, uživateli se zobrazí nabídka "nic se nezobrazí v nabídce Start".
 
 ![Obrázek toho, jak vypadá bezobrazovový režim, když selže](images/hololens-kiosk-failure-behavior.png )
 

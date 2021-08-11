@@ -1,5 +1,5 @@
 ---
-title: Představujeme nové Microsoft Edge
+title: Představení nového Microsoft Edge
 description: Další informace o nové aplikaci Edge
 author: joyjaz
 ms.author: v-jjaswinski
@@ -9,20 +9,20 @@ ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: yannisle
-ms.openlocfilehash: 41978c626328903cf480a3315d56841f187bc123
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 35d3b38cd442198aec8aaabf46ff7d842c1bf599dbada68718c1d0fa548b2030
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113640181"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115663210"
 ---
-# <a name="introducing-the-new-microsoft-edge"></a>Představujeme nové Microsoft Edge
+# <a name="introducing-the-new-microsoft-edge"></a>Představení nového Microsoft Edge
 
 ![Animace staršího Microsoft Edge loga na nové Microsoft Edge loga](images/new-edge.gif)
 
-Nový Microsoft Edge přijme [projekt Chromium open source,](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) aby pro zákazníky vytvořil lepší kompatibilitu a menší fragmentaci webu pro webové vývojáře.
+Nový Microsoft Edge přijme [projekt Chromium open source,](https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/) aby pro zákazníky vytvořil lepší kompatibilitu a méně fragmentace webu pro webové vývojáře.
 
-S [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)je nový Microsoft Edge poprvé k dispozici HoloLens 2 zákazníkům. Podělte se s naším týmem o zpětnou vazbu a chyby prostřednictvím funkce Poslat zpětnou vazbu v novém Microsoft Edge nebo [přes Centrum Feedback](hololens-feedback.md). 
+S [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)je nový Microsoft Edge poprvé k dispozici HoloLens 2 zákazníkům. Podělte se s naším týmem o zpětnou vazbu a chyby prostřednictvím funkce Poslat zpětnou **vazbu** v novém Microsoft Edge nebo [přes Centrum Feedback](hololens-feedback.md).
 
 > [!IMPORTANT]
 > Tato nová Microsoft Edge automaticky nahrazuje starší Microsoft Edge, která [se](https://blogs.windows.com/msedgedev/2021/03/09/microsoft-edge-legacy-end-of-support/) už v nových verzích nepodporuje.
@@ -69,7 +69,7 @@ Vzhledem k tomu, že Microsoft Edge je nativní aplikace Win32 s novou vrstvou a
 - Prostorový zvuk z jednoho okna prohlížeče
 - Automatická a ruční aktualizace prohlížeče
 - Uložení souboru PDF z nabídky Tisk (pomocí možnosti Uložit do souboru PDF)
-- Rozšíření WebXR a 360 Viewer
+- WebXR a rozšíření 360 Viewer
 - Obnovení obsahu do správného okna při procházení několika oken umístěných ve vašem prostředí
 
 **Scénáře a funkce, u které se neočekává, že budou fungovat:**
@@ -81,13 +81,13 @@ Vzhledem k tomu, že Microsoft Edge je nativní aplikace Win32 s novou vrstvou a
 - Náhled lupy na holografické klávesnici byl pro novou klávesnici Microsoft Edge. Doufáme, že tuto funkci znovu umožníme v budoucí aktualizaci, jakmile zvětšení bude fungovat správně.
 - Zvuk se může přehrát z nesprávného okna prohlížeče, pokud máte otevřené a aktivní jiné okno prohlížeče. Tento problém můžete vyřešit zavřením druhého aktivního okna, které by nemělo přehrávat zvuk.
 - Při přehrávání zvuku z okna prohlížeče v režimu Sledovat mě se zvuk bude přehrávat i v případě, že zakážete režim Sledovat mě. Tento problém můžete vyřešit zastavením přehrávání zvuku před zakázáním režimu Sledovat mě nebo zavřením okna tlačítkem X.
-- Interakce s aktivními aplikacemi Microsoft Edge windows může způsobit, že ostatní okna 2D aplikací neočekávaně prochádí. Tato okna můžete znovu aktivovat opětovnou interakcí.
+- Interakce s aktivními aplikacemi Microsoft Edge windows může způsobit neočekávané neaktivování ostatních 2D oken aplikací. Tato okna můžete znovu aktivovat opětovnou interakcí.
 
-## <a name="microsoft-edge-insider-channels"></a>Microsoft Edge Kanály insider
+## <a name="microsoft-edge-insider-channels"></a>Microsoft Edge Kanály Insider
 
-Tým Microsoft Edge komunitě Edge Insider tři kanály Preview: Beta, Dev a Canary. Instalace kanálu preview neinstaluje vydanou verzi Microsoft Edge na HoloLens 2 a můžete nainstalovat víc verzí najednou. 
+Tým Microsoft Edge komunitě Edge Insider k dispozici tři kanály Preview: Beta, Dev a Canary. Instalace kanálu preview neinstaluje vydanou verzi Microsoft Edge na HoloLens 2 a můžete nainstalovat víc verzí najednou. 
 
-Další informace [o komunitě Edge Insider najdete na domovské stránce Microsoft Edge Insider.](https://www.microsoftedgeinsider.com) Další informace o různých kanálech Edge Insider a o tom, jak začít, najdete na stránce [pro stažení Aplikace Edge Insider.](https://www.microsoftedgeinsider.com/download)
+Další informace [o komunitě Edge Insider najdete na domovské](https://www.microsoftedgeinsider.com) stránce Microsoft Edge Insider. Další informace o různých kanálech Edge Insider a o tom, jak začít, najdete na stránce pro [stažení Aplikace Edge Insider.](https://www.microsoftedgeinsider.com/download)
 
 Pro instalaci kanálů Insider do Microsoft Edge 2 je k dispozici několik HoloLens 2:
 
@@ -121,7 +121,7 @@ Přečtěte si další informace o aktuálně dostupných [koncových bodech pro
 
 ## <a name="install-web-apps"></a>Instalace webových aplikací
  > [!Note]
-> Od [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)už nebude Office webová aplikace předem nainstalovaná. 
+> Od [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)nebude Office webová aplikace předem nainstalovaná. 
 
 Nový Edge můžete použít k instalaci webových aplikací společně s Microsoft Store aplikacemi. Můžete například nainstalovat webovou aplikaci Microsoft Office zobrazit a upravit soubory hostované na SharePoint nebo OneDrive. Pokud chcete nainstalovat Office aplikaci, navštivte a vyberte tlačítko App Available (Aplikace k dispozici) https://www.office.com nebo Install Office **(Nainstalovat** aplikaci) na panelu Adresa.  Potvrďte **výběrem** možnosti Nainstalovat.
 > [!IMPORTANT]
@@ -132,7 +132,7 @@ Nový Edge můžete použít k instalaci webových aplikací společně s Micros
 
 Součástí nového Microsoft Edge je podpora WebXR, což je nový standard pro vytváření imerzivních webových prostředí (nahrazení WebVR). Řada imerzivních webových prostředí byla navržena s ohledem na virtuální prostředí (nahradí vaše zorné pole virtuálním prostředím), ale tato prostředí podporuje také virtuální HoloLens 2. Standard WebXR také umožňuje rozšířit imerzivní webová prostředí hybridní reality, která používají vaše fyzické prostředí. S tím, jak vývojáři tráví více času s WebXR, očekáváme, že nová imerzivní prostředí rozšířené reality a hybridní reality budou k dispozici HoloLens 2 zákazníky, kteří si to budou zkoušet!
 
-Rozšíření 360 Viewer je postaveno na aplikaci WebXR a automaticky se nainstaluje společně s novou Microsoft Edge na HoloLens 2. Toto webové rozšíření vám umožňuje ponořit se do videí o 360 stupních. YouTube nabízí největší výběr 360 videí, takže doporučujeme začít tam.
+Rozšíření 360 Viewer je postaveno na Aplikaci WebXR a automaticky se nainstaluje společně s novým Microsoft Edge na HoloLens 2. Toto webové rozšíření vám umožňuje ponořit se do videí o 360 stupních. YouTube nabízí největší výběr 360 videí, takže doporučujeme začít tam.
 
 ### <a name="how-to-use-webxr"></a>Jak používat WebXR
 
@@ -166,6 +166,6 @@ Rozšíření 360 Viewer je postaveno na aplikaci WebXR a automaticky se nainsta
 - Podpora pro articulated handu v WebXR není ve výchozím nastavení povolená. Vývojáři mohou podporu povolit prostřednictvím edge://flags zapnutím nastavení "Ruční vstup WebXR".
 - 360 videí z jiných webů než YouTube nemusí fungovat podle očekávání.
 
-### <a name="providing-feedback-on-webxr-and-360-viewer"></a>Poskytnutí zpětné vazby k WebXR a 360 Vieweru
+### <a name="providing-feedback-on-webxr-and-360-viewer"></a>Poskytnutí zpětné vazby k WebXR a prohlížeči 360
 
 Podělte se s naším týmem o zpětnou vazbu a chyby prostřednictvím funkce **Poslat** zpětnou vazbu v novém Microsoft Edge.

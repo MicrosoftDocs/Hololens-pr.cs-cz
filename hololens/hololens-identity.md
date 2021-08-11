@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: e2c5c98eb62f9e8ec19306b2cb460004eb8ae8dd
-ms.sourcegitcommit: 44d5fbee8aa0e2404137484edbeb4653437e79dd
+ms.openlocfilehash: ceb2416ec96db1bdd363e9164ec39eed9247fe37095a52e7f02bafc74416e4f2
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "114991419"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115664143"
 ---
 # <a name="manage-user-identity-and-sign-in-for-hololens"></a>Správa identity a přihlášení uživatelů pro HoloLens
 
@@ -113,51 +113,51 @@ jedním ze způsobů, jak se vývoj pro HoloLens liší od vývoje pro Desktop, 
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-### <a name="is-windows-hello-for-business-supported-on-hololens-1st-gen"></a>Podporuje Windows Hello pro firmy HoloLens (1. generace)?
+### <a name="is-windows-hello-for-business-supported-on-hololens-1st-gen"></a>je Windows Hello pro firmy podporovaná v HoloLens (1. generace)?
 
-Windows Hello pro firmy (která podporuje použití kódu PIN pro přihlášení) je podporovaná pro HoloLens (1. generace). Povolení Windows Hello pin kódu pro firmy v HoloLens:
+Windows Hello pro firmy (která podporuje používání kódu PIN pro přihlášení) se podporuje pro HoloLens (1. generace). povolení přihlášení PIN Windows Hello pro firmy v HoloLens:
 
-1. Zařízení HoloLens musí být [spravované pomocí MDM](hololens-enroll-mdm.md).
-1. Pro zařízení Windows Hello povolit možnost pro firmy. ([Viz pokyny pro Microsoft Intune.](/intune/windows-hello))
-1. Na HoloLens může uživatel nastavit PIN kód Nastavení možnosti přihlášení  >    >  **Přidat PIN.**
+1. zařízení HoloLens musí být [spravované pomocí MDM](hololens-enroll-mdm.md).
+1. pro zařízení musíte povolit Windows Hello pro firmy. ([Viz pokyny pro Microsoft Intune.](/intune/windows-hello))
+1. na HoloLens může uživatel pomocí   >  **možností přihlášení** Nastavení  >  **přidat kód** pin a nastavit pin kód.
 
 > [!NOTE]
-> Uživatelé, kteří se přihlásí pomocí účet Microsoft, si mohou pin kód nastavit také **v Nastavení** možnosti přihlášení Přidat  >    >  **KÓD PIN.** Tento PIN je přidružený [k Windows Hello](https://support.microsoft.com/help/17215/windows-10-what-is-hello), nikoli k Windows Hello [pro firmy.](/windows/security/identity-protection/hello-for-business/hello-overview)
+> uživatelé, kteří se přihlásí pomocí účet Microsoft, můžou nastavit pin kód v **Nastavení**  >  **možnosti přihlašování**  >  **přidat pin**. tento PIN kód je přidružený k [Windows Hello](https://support.microsoft.com/help/17215/windows-10-what-is-hello)místo [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-overview).
 
-### <a name="how-is-iris-biometric-authentication-implemented-on-hololens-2"></a>Jak se v systému HoloLens 2 implementuje biometrické ověřování Iris?
+### <a name="how-is-iris-biometric-authentication-implemented-on-hololens-2"></a>jak se v HoloLens 2 implementuje biometrické ověřování Iris?
 
-HoloLens 2 podporuje ověřování Iris. Iris je založená na Windows Hello a je podporovaná pro použití účty Azure Active Directory i účty Microsoft. Iris je implementovaná stejným způsobem jako jiné Windows Hello technologií a dosahuje biometrického zabezpečení VE výši [1/100 tisíc](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise#has-microsoft-set-any-device-requirements-for-windows-hello).
+HoloLens 2 podporuje ověřování Iris. Iris je založen na technologii Windows Hello a je podporována pro použití s účty Azure Active Directory a Microsoft. Iris je implementováno stejným způsobem jako jiné technologie Windows Hello a dosahuje [zabezpečení biometrikae daleko 1/100 tisíc](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise#has-microsoft-set-any-device-requirements-for-windows-hello).
 
-Další informace [najdete v biometrických](/windows-hardware/design/device-experiences/windows-hello-biometric-requirements) požadavcích Windows Hello specifikacích. Další informace o [Windows Hello](/windows-hardware/design/device-experiences/windows-hello) [a Windows Hello pro firmy.](/windows/security/identity-protection/hello-for-business/hello-identity-verification) 
+další informace najdete v článku o [biometrických požadavcích a specifikacích pro Windows Hello](/windows-hardware/design/device-experiences/windows-hello-biometric-requirements) . přečtěte si další informace o [Windows Hello](/windows-hardware/design/device-experiences/windows-hello) a [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-identity-verification). 
 
-### <a name="where-is-iris-biometric-information-stored"></a>Kde jsou uložené biometrické informace Iris?
+### <a name="where-is-iris-biometric-information-stored"></a>Kam se ukládají informace o biometrice Iris?
 
-Biometrické informace Iris se uchovávají místně na jednotlivých HoloLens podle [Windows Hello specifikací.](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise#where-is-windows-hello-data-stored) Není sdílený a je chráněný dvěma vrstvami šifrování. Není přístupná pro jiné uživatele, dokonce ani pro správce, protože v účtu správce není HoloLens.
+informace o biometrice Iris se ukládají místně na každé HoloLens podle [Windows Hello specifikace](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise#where-is-windows-hello-data-stored). Není sdílený a je chráněn dvěma vrstvami šifrování. Není přístupná ostatním uživatelům, ani správci, protože na HoloLens neexistuje žádný účet správce.
 
-### <a name="do-i-have-to-use-iris-authentication"></a>Musím použít ověřování Iris?
-Ne, tento krok můžete během instalace přeskočit. 
+### <a name="do-i-have-to-use-iris-authentication"></a>Musím používat ověřování Iris?
+Ne, tento krok můžete přeskočit během instalace. 
 
 ![Nastavení Iris](./images/setup-iris.png)
 
-HoloLens 2 nabízí mnoho různých možností ověřování, včetně klíčů zabezpečení FIDO2.
+HoloLens 2 poskytuje mnoho různých možností ověřování, včetně klíčů zabezpečení FIDO2.
 
-### <a name="can-iris-information-be-removed-from-the-hololens"></a>Je možné z tohoto účtu odebrat HoloLens?
-Ano, můžete ho ručně odebrat v Nastavení.
+### <a name="can-iris-information-be-removed-from-the-hololens"></a>Můžu z HoloLens odebrat informace Iris?
+ano, můžete ho ručně odebrat v Nastavení.
 
 
-### <a name="how-does-the-type-of-account-affect-sign-in-behavior"></a>Jaký má typ účtu vliv na chování při přihlašování?
+### <a name="how-does-the-type-of-account-affect-sign-in-behavior"></a>Jak má typ účtu vliv na chování přihlášení?
 
-Pokud použijete zásady pro přihlášení, zásady se vždy respektují. Pokud pro přihlášení nejsou použity žádné zásady, jedná se o výchozí chování pro každý typ účtu:
+Pokud použijete zásady pro přihlášení, zásada se vždycky dodržuje. Pokud se nepoužije žádná zásada pro přihlášení, jedná se o výchozí chování každého typu účtu:
 
-- **Azure AD:** Žádá o ověření ve výchozím nastavení a Nastavení, **aby** se už nežádá o ověření.
-- **účet Microsoft:** Chování zámku se liší, což umožňuje automatické odemčení, ale při restartování se stále vyžaduje ověření přihlášení.
-- **Místní účet:** Vždy požádá o ověření ve formě hesla, které nelze konfigurovat v **Nastavení**
+- **Azure AD**: požádá o ověření ve výchozím nastavení a dá se nakonfigurovat **Nastavení** , aby už nevyžadovaly ověřování.
+- **Účet Microsoft**: chování zámku je jiné, což umožňuje automatické odemknutí, ale při restartování se pořád vyžaduje přihlášení k ověřování.
+- **místní účet**: vždy žádá o ověření ve formě hesla, takže se nedá konfigurovat v **Nastavení**
 
 > [!NOTE]
-> Časovače nečinnosti se v současné době nepodporují, což znamená, že zásady **AllowIdleReturnWithoutPassword** se respektují, jenom když zařízení přejde do StandBy.
+> Časovače nečinnosti se aktuálně nepodporují, což znamená, že zásady **AllowIdleReturnWithoutPassword** se respektují jenom v případě, že zařízení přejde do úsporného režimu.
 
 ## <a name="additional-resources"></a>Další zdroje informací
 
-Další informace o ochraně identit uživatelů a ověřování najdete v dokumentaci [Windows 10 identity a zabezpečení uživatelů.](/windows/security/identity-protection/)
+další informace o ochraně identity uživatelů a ověřování najdete v [dokumentaci k zabezpečení a identitě pro Windows 10](/windows/security/identity-protection/).
 
-Další informace o nastavení infrastruktury hybridní identity se dozvíte důkladně v dokumentaci [k hybridní identitě Azure.](/azure/active-directory/hybrid/)
+Další informace o nastavení infrastruktury hybridní identity najdete v [dokumentaci k Azure Hybrid identity](/azure/active-directory/hybrid/).

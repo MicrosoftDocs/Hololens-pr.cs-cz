@@ -13,20 +13,20 @@ audience: ITPro
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 7938a433921a096913986f5eccff953fd17f1534
-ms.sourcegitcommit: 4c15afc772fba26683d9b75e38c44a018b4889f6
+ms.openlocfilehash: 1be1a8aa021c2a588b120fc9fa148b6c5dafd2840bbefa0d8ea9701751834521
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113639433"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665575"
 ---
 # <a name="enterprise-enrollment-of-hololens-devices-in-mac-address-restricted-wi-fi-environment"></a>Enterprise Registrace zařízení HoloLens v prostředí s omezenými adresami MAC Wi-Fi Prostředí
 
-Tento dokument popisuje běžný scénář, který jsme identifikovali v zákaznických prostředích, kde je Wi-Fi omezený adresami MAC, nebo jsou vyžadovány certifikáty pro připojení k bezdrátovým sítím.
+Tento dokument popisuje běžný scénář, který jsme identifikovali v zákaznických prostředích, kde je Wi-Fi omezena adresami MAC nebo jsou vyžadovány certifikáty pro připojení k bezdrátovým sítím.
 
 ## <a name="example-scenario"></a>Ukázkový scénář
 
-Mnoho zákazníků v zabezpečených prostředích má omezení v bezdrátových nebo drátových sítích, která umožní úspěšné připojení jenom schváleným zařízením (na základě adres MAC). To může být vynuceno prostřednictvím filtrování adres MAC v bezdrátovém přístupového bodu nebo prostřednictvím serveru DHCP. Kromě toho některé bezdrátové sítě mohou být chráněny protokolem PEAP, který vyžaduje, aby certifikát se použil na zařízení před ověřením v bezdrátové síti.
+Mnoho zákazníků v zabezpečených prostředích má omezení v bezdrátových nebo drátových sítích, která umožní úspěšné připojení jenom schváleným zařízením (na základě adres MAC). To může být vynuceno prostřednictvím filtrování adres MAC na bezdrátový přístupový bod nebo prostřednictvím serveru DHCP. Kromě toho některé bezdrátové sítě mohou být chráněny protokolem PEAP, který vyžaduje, aby certifikát se použil na zařízení před ověřením v bezdrátové síti.
 
 V tomto scénáři mohou dva klíčové požadavky způsobit zpoždění nebo vyžadovat ruční zásah HoloLens zařízení k síti:
 
@@ -78,7 +78,7 @@ Proces se může lišit v závislosti na úrovni softwaru zařízení. Pokud má
 
 Pokud má zařízení build operačního systému před aktualizací z května [2004,](hololens-release-notes.md#windows-holographic-version-2004)postupujte následovně.
 
-1. Zapněte počítač HoloLens připojte zařízení k počítači.
+1. Zapněte HoloLens a připojte zařízení k počítači.
 2. Zařízení by se mělo v počítači zobrazit jako zařízení úložiště souborů.
 3. Zkopírování zřizovacího balíčku do zařízení
 4. Připojení Ethernetový kabel k rozbočovači.
@@ -122,7 +122,7 @@ Budete potřebovat další požadavky, jak je uvedeno níže:
 
 4. Zařízení použije požadované certifikáty Wi-Fi a další konfiguraci podle potřeby prostřednictvím Intune.
 
-5. Po dokončení může technik načíst portál Intune (Endpoint Manager) a přejít na stránku vlastností zařízení na domovské stránce **-> Devices -> DeviceName -> Hardware**.
+5. Po dokončení může technik načíst portál Intune (Endpoint Manager) a přejít na stránku vlastností zařízení v části **Domů -> Zařízení -> Název_zařízení -> Hardware.**
 
 6. Adresa MAC Wi-Fi zobrazí na portálu Intune.
 
@@ -132,7 +132,7 @@ Budete potřebovat další požadavky, jak je uvedeno níže:
 
 ### <a name="benefits"></a>Výhody
 
-To technikovi umožní nasazení "bez problémů", kdy zařízení může přejít z krabice do Azure AD a Intune, aniž by technik museli zařízení používat nebo ručně pracovat s HoloLens prostředím.
+To technikovi umožní nasazení "smutku", kdy zařízení může přejít z krabice do Azure AD a Intune, aniž by technik museli zařízení používat nebo ručně pracovat s HoloLens prostředím.
 
 ## <a name="reporting-of-mac-addresses-to-the-technician"></a>Hlášení adres MAC technikovi
 

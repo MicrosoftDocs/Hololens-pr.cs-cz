@@ -1,6 +1,6 @@
 ---
 title: Správce certifikátů
-description: naučte se, jak ručně instalovat, spravovat a odebírat certifikáty na zařízeních HoloLens 2 mixed reality.
+description: Zjistěte, jak ručně nainstalovat, spravovat a odebírat certifikáty na HoloLens 2 zařízeních hybridní reality.
 author: evmill
 ms.author: v-evmill
 manager: yannisle
@@ -12,51 +12,51 @@ ms.date: 10/13/2020
 audience: ITPro
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8b1869e786e3f3324494cecbfd596f61811e1893
-ms.sourcegitcommit: 78e5f26014e55c13fee9c2b75a80810fd2e77877
+ms.openlocfilehash: 438a132a6bafd8c93b148b9c2c817ec93cc3bc73651f08275acc130695fa09c1
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2021
-ms.locfileid: "115009319"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115665178"
 ---
 # <a name="certificate-manager"></a>Správce certifikátů
 
-- Vylepšené auditování, diagnostika a nástroje ověřování pro zabezpečení zařízení a dodržování předpisů prostřednictvím nového správce certifikátů. Tato funkce vám umožní nasadit, řešit potíže a ověřit škálování vašich certifikátů v komerčních prostředích.
+- Vylepšené nástroje pro auditování, diagnostiku a ověřování pro zabezpečení a dodržování předpisů zařízení prostřednictvím nového Správce certifikátů Tato funkce vám umožní nasazovat, řešit potíže a ověřovat certifikáty ve velkém měřítku v komerčních prostředích.
 
-v Windows holografická verze 20H2 přidáváme do aplikace HoloLens 2 Nastavení správce certifikátů. přejít na **Nastavení > aktualizace & certifikátů zabezpečení >**. Tato funkce poskytuje jednoduchý a uživatelsky přívětivý způsob zobrazení, instalace a odebrání certifikátů na vašem zařízení. Díky novému Správci certifikátů a správcům a uživatelům teď vylepšili Nástroj pro auditování, diagnostiku a ověřování, aby zařízení zůstala zabezpečená a kompatibilní. 
+V Windows Holographic verze 20H2 přidáváme Správce certifikátů do HoloLens 2 Nastavení aplikace. Přejděte na **Nastavení > Update & Security > Certificates**. Tato funkce poskytuje jednoduchý a uživatelsky přívětivý způsob zobrazení, instalace a odebrání certifikátů v zařízení. S novým Správcem certifikátů teď správci a uživatelé vylepšili auditování, diagnostiku a ověřování, aby zajistili, že zařízení zůstanou zabezpečená a vyhovující. 
 
--   **Auditování:** Možnost ověřit, jestli je certifikát správně nasazený, nebo ověřit, že se certifikát odebral správně. 
--   **Diagnostika:** V případě problémů se ověří, že na zařízení existují vhodné certifikáty, které šetří čas a pomáhají při řešení problémů. 
--   **Ověření:** Ověření, že certifikát slouží k zamýšlenému účelu a je funkční, může ušetřit značný čas, zejména v komerčních prostředích před nasazením certifikátů ve větším měřítku.
+-   **Auditování:** Možnost ověřit, že je certifikát správně nasazený, nebo ověřit, že byl správně odebrán. 
+-   **Diagnostika:** Když nastanou problémy, ověření, že v zařízení existují příslušné certifikáty, šetří čas a pomáhá s řešením potíží. 
+-   **Ověření:** Ověření, že certifikát slouží zamýšlenému účelu a je funkční, může ušetřit značný čas, zejména v komerčních prostředích před nasazením certifikátů ve větším měřítku.
 
-Chcete-li v seznamu rychle najít konkrétní certifikát, existují možnosti řazení podle názvu, úložiště nebo data vypršení platnosti. Uživatelé můžou taky certifikát vyhledat přímo. Chcete-li zobrazit vlastnosti jednotlivých certifikátů, vyberte certifikát a klikněte na tlačítko **informace**. 
+Pokud chcete rychle najít konkrétní certifikát v seznamu, existují možnosti řazení podle názvu, úložiště nebo data vypršení platnosti. Uživatelé mohou také přímo vyhledat certifikát. Pokud chcete zobrazit vlastnosti jednotlivých certifikátů, vyberte certifikát a klikněte na **Informace.** 
 
-Instalace certifikátu v současné době podporuje soubory. cer a. CRT. Vlastníci zařízení mohou instalovat certifikáty v místním počítači a aktuálním uživateli.  všechny ostatní uživatele lze instalovat pouze do aktuálního uživatele.
+Instalace certifikátu aktuálně podporuje soubory .cer a .crt. Vlastníci zařízení mohou instalovat certifikáty v místním počítači a aktuálním uživateli.  Všichni ostatní uživatelé se instaluje jenom do aktuálního uživatele.
 
 ## <a name="to-install-a-certificate"></a>Instalace certifikátu: 
 
-1.  Připojení HoloLens 2 k počítači.
-1.  soubor certifikátu, který chcete nainstalovat, umístěte do umístění na vašem HoloLens 2.
-1.  přejděte na **Nastavení > aktualizace & > certifikátů zabezpečení** a vyberte nainstalovat certifikát.
-1.  Klikněte na **importovat soubor** a přejděte do umístění, kam jste certifikát uložili.
-1.  Vyberte **umístění úložiště**.
-1.  Vyberte **úložiště certifikátů**.
+1.  Připojení počítač HoloLens 2.
+1.  Soubor certifikátu, který chcete nainstalovat, umístěte do umístění na HoloLens 2.
+1.  Přejděte na **Nastavení App > Update & Security > Certificates** a vyberte Nainstalovat certifikát.
+1.  Klikněte **na Importovat** soubor a přejděte do umístění, do něj které jste certifikát uložili.
+1.  Vyberte **Store Location (Umístění obchodu).**
+1.  Vyberte **Úložiště certifikátů.**
 1.  Klikněte na **Install** (Nainstalovat).
 
-Certifikát by se teď měl nainstalovat na zařízení.
+Certifikát by teď měl být nainstalovaný na zařízení.
 
-![prohlížeč certifikátů v aplikaci Nastavení v části certifikáty.](images/certificate-viewer-device.jpg)
+![Prohlížeč certifikátů v aplikaci Nastavení v části Certifikáty.](images/certificate-viewer-device.jpg)
 
-![obrázek ukazující, jak použít uživatelské rozhraní certifikátu k instalaci certifikátu v Nastavení.](images/certificate-device-install.jpg)
+![Obrázek znázorňující, jak pomocí uživatelského rozhraní certifikátu nainstalovat certifikát do Nastavení](images/certificate-device-install.jpg)
 
 ## <a name="to-remove-a-certificate"></a>Odebrání certifikátu:
 
 > [!WARNING]
-> pomocí správce certifikátů můžou uživatelé odebrat jenom certifikáty nainstalované přímo z uživatelského rozhraní Nastavení. Pokud byl certifikát nainstalován jiným způsobem, musí být také odebrán stejným mechanismem a nelze jej odebrat ze Správce certifikátů. I když můžete zobrazit certifikáty nasazené v MDM ve Správci certifikátů, nemůžete je odinstalovat ve Správci certifikátů. Musíte je odinstalovat přes MDM.
+> Pomocí Správce certifikátů mohou uživatelé odebrat certifikáty nainstalované pouze přímo z Nastavení uživatelského rozhraní. Pokud byl certifikát nainstalován jiným způsobem, musí být také odebrán stejným mechanismem a nelze jej odebrat ze Správce certifikátů. I když můžete zobrazit certifikáty nasazené v MDM ve Správci certifikátů, nemůžete je odinstalovat ve Správci certifikátů. Musíte je odinstalovat prostřednictvím MDM.
 
-1. přejděte na **Nastavení App > aktualizace a > certifikáty zabezpečení**.
+1. Přejděte na **Nastavení App > Update and Security > Certificates**.
 1. Ve vyhledávacím poli vyhledejte certifikát podle názvu.
 1. Vyberte certifikát.
-1. Klikněte na **Odebrat** .
-1. Po zobrazení výzvy k potvrzení vyberte **Ano** .
+1. Klikněte na **Odebrat.**
+1. Po **zobrazení** výzvy k potvrzení vyberte Ano.
 

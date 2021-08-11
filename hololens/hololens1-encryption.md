@@ -1,6 +1,6 @@
 ---
-title: HoloLens Šifrování BitLockeru
-description: naučte se, jak povolit šifrování zařízení pomocí nástroje BitLocker k ochraně souborů uložených ve vašich zařízeních HoloLens hybridní realitu.
+title: HoloLens Šifrování nástrojem BitLocker
+description: Zjistěte, jak povolit šifrování zařízení nástrojem BitLocker za účelem ochrany souborů uložených HoloLens zařízeních hybridní reality.
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -13,92 +13,92 @@ ms.reviewer: ''
 manager: laurawi
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 37efab3ef3d68a9641320e144619008612f6efa2
-ms.sourcegitcommit: c43cd2f450b643ad4fc8e749235d03ec5aa3ffcf
+ms.openlocfilehash: 4b07bb87b34ec966472bcbde000106590570fd7e7063ab503724884fa266bb34
+ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113635241"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115662712"
 ---
-# <a name="hololens-1st-gen-bitlocker-encryption"></a>šifrování bitlockeru HoloLens (1. generace)
+# <a name="hololens-1st-gen-bitlocker-encryption"></a>HoloLens (1. generace) Nástroje BitLocker
 
-HoloLens (1. generace) a HoloLens 2 podporují šifrování zařízení pomocí nástroje bitlocker, ale nástroj bitlocker je vždy povolený v HoloLens 2.
+HoloLens (1. generace) i HoloLens 2 podporují šifrování zařízení pomocí BitLockeru, ale BitLocker je vždycky povolený na HoloLens 2.
 
-tento článek vám pomůže s povolením a správou nástroje BitLocker na HoloLens (1. generace).
+Tento článek vám pomůže povolit a spravovat BitLocker na HoloLens (1. generace).
 
-v HoloLens (1. generace) můžete povolit šifrování zařízení pomocí nástroje BitLocker ručně nebo pomocí správy mobilních zařízení (MDM). Pomocí těchto pokynů povolte [šifrování zařízení s nástrojem BitLocker](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) k ochraně souborů a informací uložených v HoloLens. Šifrování zařízení pomáhá chránit vaše data pomocí metody šifrování AES-CBC 128, která je ekvivalentní [EncryptionMethodByDriveType metodě 3](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype) ve zprostředkovateli kryptografických služeb (CSP) nástroje BitLocker. Pracovníci, kteří mají správný šifrovací klíč (například heslo), ho můžou dešifrovat nebo obnovení dat provést.
+V HoloLens (1. generace) můžete šifrování zařízení nástrojem BitLocker povolit ručně nebo pomocí správy mobilních zařízení (MDM). Podle těchto pokynů povolte [šifrování zařízení nástrojem BitLocker,](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption) abyste ochránili soubory a informace uložené v HoloLens. Šifrování zařízení pomáhá chránit vaše data pomocí metody šifrování AES-CBC 128, která je ekvivalentní metodě [EncryptionMethodByDriveType 3](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype) u poskytovatele konfigurační služby BitLockeru (CSP). Pracovníci, kteří mají správný šifrovací klíč (například heslo), ho mohou dešifrovat nebo provést obnovení dat.
 
 ## <a name="enable-device-encryption-using-mdm"></a>Povolení šifrování zařízení pomocí MDM
 
-Pomocí poskytovatele správy mobilních zařízení (MDM) můžete použít zásadu, která vyžaduje šifrování zařízení. Zásady, které se mají použít, jsou [nastavení zabezpečení/RequireDeviceEncryption](/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption) ve zprostředkovateli kryptografických služeb v zásadách.
+Pomocí zprostředkovatele Mobile Správa zařízení (MDM) můžete použít zásadu, která vyžaduje šifrování zařízení. Zásada, která se má použít, je [nastavení Security/RequireDeviceEncryption](/windows/client-management/mdm/policy-csp-security#security-requiredeviceencryption) v CSP zásad.
 
-[Přečtěte si pokyny pro povolení šifrování zařízení pomocí Microsoft Intune.](/intune/compliance-policy-create-windows#windows-holographic-for-business)
+[Přečtěte si pokyny k povolení šifrování zařízení pomocí Microsoft Intune.](/intune/compliance-policy-create-windows#windows-holographic-for-business)
 
-Další informace o dalších nástrojích MDM najdete v dokumentaci poskytovatele MDM. Pokud poskytovatel MDM vyžaduje pro šifrování zařízení vlastní identifikátor URI, použijte následující konfiguraci:
+Pokyny k dalším nástrojům MDM najdete v dokumentaci k poskytovateli MDM. Pokud váš poskytovatel MDM vyžaduje vlastní identifikátor URI pro šifrování zařízení, použijte následující konfiguraci:
 
-- **Název**: název dle vašeho výběru.
-- **Popis**: volitelné
-- **OMA-URI**: `./Vendor/MSFT/Policy/Config/Security/RequireDeviceEncryption`
-- **Datový typ**: celé číslo
-- **Hodnota**: `1`
+- **Name**(Název): Název podle vašeho výběru.
+- **Popis:** volitelné
+- **OMA-URI:**`./Vendor/MSFT/Policy/Config/Security/RequireDeviceEncryption`
+- **Datový typ:** celé číslo
+- **Hodnota:**`1`
 
 ## <a name="enable-device-encryption-using-a-provisioning-package"></a>Povolení šifrování zařízení pomocí zřizovacího balíčku
 
-zřizovací balíčky jsou soubory vytvořené nástrojem pro návrháře konfigurace Windows, které pro zařízení používají zadanou konfiguraci. 
+Zřizovací balíčky jsou soubory vytvořené nástrojem Windows Configuration Designer, které pro zařízení používají zadanou konfiguraci. 
 
-### <a name="create-a-provisioning-package-that-upgrades-the-windows-holographic-edition-and-enables-encryption"></a>vytvoření zřizovacího balíčku, který upgraduje Windows holografickou edici a povoluje šifrování
+### <a name="create-a-provisioning-package-that-upgrades-the-windows-holographic-edition-and-enables-encryption"></a>Vytvoření zřizovacího balíčku, který upgradu Windows edici Holographic a povolí šifrování
 
 1. [Vytvořte zřizovací balíček pro HoloLens.](hololens-provisioning.md)
-1. Přejít na **nastavení modulu runtime**  >  **zásady**  >  **zabezpečení** a vyberte **RequireDeviceEncryption**.
+1. Přejděte na **Nastavení modulu runtime**  >  **Zabezpečení**  >  **zásad** a vyberte **VyžadovatDeviceEncryption.**
 
     ![Vyžadovat nastavení šifrování zařízení nakonfigurované na Ano](images/device-encryption.png)
 
-1. Vyhledejte soubor s licencí XML, který jste zadali při nákupu komerční sady.
+1. Vyhledejte licenční soubor XML, který jste poskytli při nákupu komerční sady.
 
-1. Vyhledejte a vyberte soubor s licencí XML, který jste zadali při nákupu komerční sady.
+1. Přejděte na soubor s licencí XML, který jste poskytli při nákupu komerční sady, a vyberte ho.
     > [!NOTE]
-    > [Další nastavení můžete nakonfigurovat v balíčku zřizování](hololens-provisioning.md).
+    > Další nastavení [můžete nakonfigurovat v zřizovacím balíčku](hololens-provisioning.md).
 
 1. V nabídce **File** (Soubor) klikněte na **Save** (Uložit). 
 
-1. Přečtěte si upozornění, které vysvětluje, že soubory projektu můžou obsahovat citlivé informace a klikněte na **OK**.
+1. Přečtěte si upozornění s vysvětlením, že soubory projektu mohou obsahovat citlivé informace, a klikněte na **OK.**
 
     > [!IMPORTANT]
-    > Při vytváření zřizovacího balíčku můžete zahrnout citlivé informace do souborů projektu a soubor zřizovacího balíčku (. ppkg). I když máte možnost zašifrovat soubor. ppkg, soubory projektu nejsou šifrovány. Soubory projektu byste měli ukládat na bezpečném místě a odstraňovat soubory projektu, pokud už je nepotřebujete.
+    > Při vytváření zřizovacího balíčku můžete do souborů projektu a souboru zřizovacího balíčku (.ppkg) zahrnout citlivé informace. I když máte možnost zašifrovat soubor .ppkg, soubory projektu nejsou zašifrované. Soubory projektu byste měli uložit na bezpečném místě a soubory projektu odstranit, pokud už je nepotřebujete.
 
-1. V nabídce **exportovat** klikněte na **zřizovací balíček**.
-1. Změňte **vlastníka** na **správce IT**, který nastaví prioritu tohoto zřizovacího balíčku vyšší než zřizovací balíčky použité pro toto zařízení z jiných zdrojů a pak vyberte **Další**.
-1. Nastavte hodnotu pro **verzi balíčku**.
+1. V nabídce **Export** klikněte na **Zřizovací balíček**.
+1. Změňte **možnost Vlastník** na Správce **IT,** která nastaví prioritu tohoto zřizovacího balíčku vyšší než zřizovací balíčky použité pro toto zařízení z jiných zdrojů, a pak vyberte **Další.**
+1. Nastavte hodnotu pro **Package Version (Verze balíčku).**
 
     > [!TIP]
-    > Můžete provádět změny stávajících balíčků a změnit číslo verze na aktualizace dřív použitých balíčků.
+    > Můžete provést změny existujících balíčků a změnit číslo verze tak, aby se dříve použité balíčky aktualizují.
 
-1. V části **Vybrat podrobnosti zabezpečení pro zřizovací balíček** klikněte na **Další**.
-1. Klikněte na tlačítko **Další** a zadejte umístění výstupu, kde má zřizovací balíček přejít po sestavení. ve výchozím nastavení používá Windows ICD jako výstupní umístění složku projektu.
+1. V části **Vybrat podrobnosti zabezpečení pro zřizovací balíček** klikněte na **Další.**
+1. Klikněte **na** Další a zadejte výstupní umístění, kam má zřizovací balíček po jeho vytváření přejít. Ve výchozím nastavení Windows ICD používá složku projektu jako výstupní umístění.
 
-    Případně můžete kliknout na tlačítko Procházet a změnit výchozí umístění výstupu.
+    Volitelně můžete kliknutím na Procházet změnit výchozí umístění výstupu.
 
 1. Klikněte na **Next** (Další).
-1. Kliknutím na **sestavit** zahajte sestavování balíčku. Informace o projektu se zobrazí na stránce sestavení a indikátor průběhu indikuje stav sestavení.
-1. Po dokončení sestavení klikněte na **Dokončit**.
+1. Kliknutím **na** Build (Sestavit) začněte vytvářet balíček. Informace o projektu se zobrazí na stránce sestavení a indikátor průběhu označuje stav sestavení.
+1. Po dokončení sestavení klikněte na **Dokončit.**
 
-### <a name="apply-the-provisioning-package-to-hololens"></a>Použití zřizovacího balíčku na HoloLens
+### <a name="apply-the-provisioning-package-to-hololens"></a>Použijte zřizovací balíček pro HoloLens
 
-1. Připojení zařízení přes USB do počítače a spusťte zařízení, ale nepokračujte za stránku **přizpůsobit** úvodním nastavením (první stránka s modrým polem).
-1. Krátce stiskněte a uvolněte tlačítka **hlasitosti** a **napájení** současně.
-1. HoloLens se v průzkumníku souborů na počítači zobrazí jako zařízení.
-1. V Průzkumníku souborů přetáhněte zřizovací balíček (. ppkg) do úložiště zařízení.
-1. Krátce stiskněte a uvolněte tlačítka **hlasitosti** a **napájení** na stránce **přizpůsobit** .
-1. Zařízení vás vyzve, pokud zadáte důvěryhodný balíček a chcete ho použít. Potvrďte, že balíček důvěřujete.
-1. Zobrazí se informace o tom, zda byl balíček úspěšně použit, nebo nikoli. Pokud se nezdařila, můžete balíček opravit a akci opakujte. V případě úspěchu pokračujte v nastavení zařízení.
+1. Připojení zařízení připojte přes USB k počítači a spusťte ho,  ale neposoujte ho za stránku přizpůsobení prostředí počátečního nastavení (první stránka s modrým rámečem).
+1. Krátce stiskněte a **uvolněte tlačítka Pro snížení** hlasitosti a Napájení současně. 
+1. HoloLens se zobrazí jako zařízení v Průzkumník souborů počítači.
+1. V Průzkumník souborů přetáhněte zřizovací balíček (.ppkg) do úložiště zařízení.
+1. Krátce stiskněte a **uvolněte tlačítka Pro** snížení hlasitosti a Napájení současně na **stránce** Přizpůsobit. 
+1. Zařízení se vás zeptá, jestli balíčku důvěřujete, a chcete ho použít. Ověřte, že balíčku důvěřujete.
+1. Uvidíte, jestli se balíček úspěšně použil, nebo ne. Pokud se to nepovedlo, můžete balíček opravit a zkusit to znovu. Pokud byla úspěšná, pokračujte v nastavení zařízení.
 
 > [!NOTE]
-> Pokud se zařízení nakoupilo před 2016. srpna, budete se muset k zařízení přihlásit pomocí účet Microsoft, získat nejnovější aktualizaci operačního systému a potom obnovit operační systém, aby se zřizovací balíček mohl použít.
+> Pokud bylo zařízení zakoupené před srpnem 2016, budete se k zařízení muset přihlásit pomocí účet Microsoft, získat nejnovější aktualizaci operačního systému a pak resetovat operační systém, abyste mohli použít zřizovací balíček.
 
 ## <a name="verify-device-encryption"></a>Ověření šifrování zařízení
 
-Šifrování je v HoloLens tiché. Ověření stavu šifrování zařízení:
+Šifrování je v HoloLens. Ověření stavu šifrování zařízení:
 
-- v HoloLens se o systému **Nastavení**  >  **systém**  >  . **BitLocker** je **povolený** , pokud je zařízení zašifrované. 
+- V HoloLens přejděte na **Nastavení**  >  **o**  >  **systému.** **BitLocker** je **povolený,** pokud je zařízení zašifrované. 
 
-    ![O obrazovce s povoleným nástrojem BitLocker](images/about-encryption.png)
+    ![Obrazovka s povoleným BitLockerem](images/about-encryption.png)
