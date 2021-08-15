@@ -10,7 +10,7 @@
 ### [Edici Industrial](hololens2-options-industrial-edition.md)
 #### [Nejčastější dotazy k edici HoloLens 2 Industrial](hololens2-industrial-edition-faq.md)
 ### [Vývojová edice](hololens2-options-dev-edition.md)
-#### [Nejčastější dotazy k edici HoloLens 2 Development Edition](hololens2-development-edition-faq.yml)
+#### [Nejčastější dotazy k edici HoloLens 2 Development](hololens2-development-edition-faq.yml)
 ### [Trimble XR10 edition](hololens2-options-trimble-xr10-edition.md)
 
 # Použití HoloLens
@@ -26,7 +26,7 @@
 #### [Vyhledání, otevření a uložení souborů v HoloLens](holographic-data.md)
 #### [Vytváření fotek a videí hybridní reality](holographic-photos-and-videos.md)
 #### [Nová Nastavení aplikace](hololens-new-settings.md)
-#### [Nové Microsoft Edge](hololens-new-edge.md)
+#### [Nový Microsoft Edge](hololens-new-edge.md)
 ### Správa aplikací
 #### [Vyhledání, instalace a odinstalace aplikací](holographic-store-apps.md)
 #### [Správa vlastních aplikací pro HoloLens 2](hololens2-holographic-custom-apps.md)
@@ -34,13 +34,14 @@
 #### [Vylepšení vizuální kvality a komfortu](hololens-calibration.md)
 #### [Mapování fyzických prostorů pomocí HoloLens](hololens-spaces.md)
 #### [HoloLens prostředí](hololens-environment-considerations.md)
+#### [Moving Platforms](hololens2-moving-platform.md)
 ### Připojení vašeho HoloLens 2
 #### [Připojení HoloLens k síti](hololens-network.md)
-#### [Připojení k Bluetooth a zařízení USB-C](hololens-connect-devices.md)
+#### [Připojení na Bluetooth a zařízení USB-C](hololens-connect-devices.md)
 #### [Připojení na Mobilní a 5G](hololens-cellular.md)
-### [HoloLens 2 baterie a nabíjení](hololens2-charging.md)
-### [HoloLens nejčastější dotazy k 2 fit a komfortu](hololens2-fit-comfort-faq.md)
-### [HoloLens 2 čištění – nejčastější dotazy](hololens2-maintenance.md)
+### [HoloLens 2 baterie a napájení](hololens2-charging.md)
+### [HoloLens 2 fit a nejčastější dotazy k komfortu](hololens2-fit-comfort-faq.md)
+### [HoloLens 2 – nejčastější dotazy k čištění](hololens2-maintenance.md)
 
 # Nasazení HoloLens 2
 ## [Obvyklé scénáře nasazení](hololens-requirements.md)
@@ -94,7 +95,7 @@
 ### [Nastavení HoloLens jako beziosku](hololens-kiosk.md)
 ### [Globální přiřazený přístup – Beziosk](hololens-global-assigned-access-kiosk.md)
 ### [Windows Defender Řízení aplikací – WDAC](windows-defender-application-control-wdac.md)
-### [Nastavení Nastavení CSP a identifikátory URI pro HoloLens](settings-uri-list.md)
+### [Nastavení Nastavení csP a identifikátory URI pro HoloLens](settings-uri-list.md)
 ## Připojení & sítě
 ### [Konfigurace sítě pro HoloLens](hololens-commercial-infrastructure.md)
 ### [Příprava certifikátů a síťových profilů pro HoloLens 2](hololens-certificates-network.md)
@@ -102,42 +103,42 @@
 ### [Správce certifikátů](certificate-manager.md)
 ## [Správa HoloLens aktualizací](hololens-updates.md)
 
-# Poradce při potížích
+# Řešení potíží
 ## [Zařízení](hololens-troubleshooting.md)
 ## [Hologramy a interakce](hololens-faq.md)
 ## [Displej](hololens2-display.md)
 ## [Implementace a spravovaná zařízení](hololens2-enterprise-troubleshooting.md#)
 ## [Povolení diagnostických protokolů](hololens-diagnostic-logs.md)
-## [resetovat HoloLens 2](hololens-recovery.md)
+## [Resetování HoloLens 2](hololens-recovery.md)
 
 # Zdroje informací
-## [kde koupit HoloLens 2](hololens2-purchase.md)
+## [Kde koupit HoloLens 2](hololens2-purchase.md)
 ## [Možnosti pomoci a podpory](hololens2-support.md)
-## [Žádosti o podporu autopilotu](hololens2-autopilot-registration-support.md)
-## [poznámky k verzi HoloLens 2](hololens-release-notes.md)
-## [Insider Preview pro Microsoft HoloLens](hololens-insider.md)
+## [Žádosti o podporu Autopilotu](hololens2-autopilot-registration-support.md)
+## [HoloLens 2 k vydání verze](hololens-release-notes.md)
+## [Insider preview pro Microsoft HoloLens](hololens-insider.md)
 ## [Podporované jazyky](hololens2-language-support.md)
-## [Vývoj s využitím sítě Microsoft (Preview)](/mesh/overview)
+## [Vývoj s microsoft meshem (Preview)](/mesh/overview)
 ## HoloLens (1. generace)
-### Využití při prvním použití
-#### [o HoloLens (1. generace)](hololens1-hardware.md)
-#### [přizpůsobení a pohodlí HoloLens (1. generace)](hololens1-fit-comfort-faq.md)
-#### [Základní přehled využití](hololens1-setup.md)
-#### [nastavení HoloLens (1. generace)](hololens1-start.md)
+### První použití
+#### [Informace HoloLens (1. generace)](hololens1-hardware.md)
+#### [HoloLens (1. generace) fit a komfort](hololens1-fit-comfort-faq.md)
+#### [Přehled základního využití](hololens1-setup.md)
+#### [Nastavení HoloLens (1. generace)](hololens1-start.md)
 ### Denní využití
-#### [použití HoloLens (1. generace) – kliknutí](hololens1-clicker.md)
-#### [použití 3d vieweru na HoloLens (1. generace)](holographic-3d-viewer-beta.md)
-#### [seznámení s HoloLens (1. generace)](hololens1-basic-usage.md)
+#### [Použití HoloLens (1. generace)](hololens1-clicker.md)
+#### [Použití 3D prohlížeč v HoloLens (1. generace)](holographic-3d-viewer-beta.md)
+#### [Získání HoloLens (1. generace)](hololens1-basic-usage.md)
 #### [Správa vlastních aplikací pro HoloLens](holographic-custom-apps.md)
-#### [nainstalovat lokalizovanou verzi HoloLens (1. generace)](hololens1-install-localized.md)
-#### [odemčení funkcí Windows Holographic for Business](hololens1-upgrade-enterprise.md)
-#### [resetovat HoloLens (1. generace)](hololens1-recovery.md)
-### zabezpečení HoloLens (1. generace)
-#### [nejčastější dotazy týkající se zabezpečení HoloLens (1. generace)](hololens1-faq-security.yml)
-#### [šifrování bitlockeru HoloLens (1. generace)](hololens1-encryption.md)
-### [známé problémy a řešení pro HoloLens (1. generace)](hololens-known-issues.md)
-### [zpráva k vydání verze HoloLens (1. generace)](hololens1-release-notes.md)
+#### [Instalace lokalizované verze HoloLens (1. generace)](hololens1-install-localized.md)
+#### [Odemknutí Windows Holographic for Business funkcí](hololens1-upgrade-enterprise.md)
+#### [Resetování HoloLens (1. generace)](hololens1-recovery.md)
+### HoloLens zabezpečení (1. generace)
+#### [Nejčastější dotazy HoloLens zabezpečení (1. generace)](hololens1-faq-security.yml)
+#### [HoloLens šifrování nástrojem BitLocker (1. generace)](hololens1-encryption.md)
+### [Známé problémy a alternativní řešení HoloLens (1. generace)](hololens-known-issues.md)
+### [HoloLens (1. generace)](hololens1-release-notes.md)
 
 # Sdělte nám svůj názor
-## [Sdělte nám svůj názor prostřednictvím centra Feedback](hololens-feedback.md)
-## [příručka k HoloLensům přispívajícím k dokumentaci](contributing.md)
+## [Dejte nám svůj názor prostřednictvím Centrum Feedback](hololens-feedback.md)
+## [HoloLens průvodce přispíváním do dokumentace](contributing.md)
