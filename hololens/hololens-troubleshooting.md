@@ -13,12 +13,12 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 keywords: problémy, chyba, řešení potíží, oprava, pomoc, podpora, HoloLens, emulátor
-ms.openlocfilehash: 5501e036b5852833b7ff26445a98c3378ae6963c96114e26bf588eb33a56f6f0
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: c634b90b03468073887397b59f072258ad7a3ccc
+ms.sourcegitcommit: 5cb3230e02e703584e50358cb0f0b5f33a51b169
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662854"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121858561"
 ---
 # <a name="device-troubleshooting"></a>Řešení potíží se zařízením
 
@@ -119,13 +119,15 @@ Neexistují žádná známá řešení, protože se nám nepovedlo hlavní pří
 Při spuštění OOBE došlo k potížím, kdy uživatel zvolil pracovní nebo školní účet a zadává heslo, a snaží se přepnout na speciální znaky na klávesnici klepnutím na tlačítko &123 se nezmění na speciální znaky. Jedná se o **známý problém**.
 
 Mezipracovaná řešení:
--   Zavřete klávesnici a znovu ji otevřete klepnutím na textové pole.
--   Nesprávně zadejte heslo. Když se při příštím spuštění klávesnice znovu spustí, bude fungovat podle očekávání.
+
+- Zavřete klávesnici a znovu ji otevřete klepnutím na textové pole.
+- Nesprávně zadejte heslo. Když se při příštím spuštění klávesnice znovu spustí, bude fungovat podle očekávání.
 - Webové ověřování, zavřete klávesnici a vyberte **přihlásit z jiného zařízení**.
--   Pokud zadáváte jenom čísla, může uživatel stisknout a držet určité klávesy, aby otevřeli rozbalenou nabídku.
--   Pomocí klávesnice USB.
+- Pokud zadáváte jenom čísla, může uživatel stisknout a držet určité klávesy, aby otevřeli rozbalenou nabídku.
+- Pomocí klávesnice USB.
 
 To nemá vliv na:
+
 - Uživatelé, kteří se rozhodnou použít osobní účet.
 
 [Zpět na seznam](#list)
@@ -133,7 +135,7 @@ To nemá vliv na:
 ## <a name="downloading-locked-files-doesnt-error"></a>Stahování uzamčených souborů nechybí
 
 > [!NOTE]
-> jedná se o **známý problém** , který je opraven v Windows build Insider verze 20348,1403.
+> jedná se o **známý problém** , který byl vyřešen ve [Windows holografické verzi 21H1-červenec 2021 Update](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update).
 
 v předchozích sestaveních Windows holografické při pokusu o stažení uzamčeného souboru by výsledkem byla chybová stránka HTTP. v Windows holografické 21H1 aktualizace verze, která se pokouší stáhnout uzamčený soubor, by nedocházelo k žádnému zobrazení, soubor se nestáhne a nebude k dispozici žádná chyba.
 
@@ -141,10 +143,9 @@ v předchozích sestaveních Windows holografické při pokusu o stažení uzam�
 
 ## <a name="device-portal-file-uploaddownload-times-out"></a>Časový limit nahrávání nebo stahování souboru portálu zařízení
 > [!NOTE]
-> jedná se o **známý problém** , který je opraven v Windows build Insider verze 20348,1403. Pokud jste v rámci alternativního řešení dříve zakázali připojení SSL, důrazně doporučujeme ho znovu povolit.
+> jedná se o **známý problém** , který byl vyřešen ve [Windows holografické verzi 21H1-červenec 2021 Update](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update). Pokud jste v rámci alternativního řešení dříve zakázali připojení SSL, důrazně doporučujeme ho znovu povolit.
 
-
-Někteří zákazníci zjistili, že při pokusu o nahrání nebo stažení souborů se může zdát, že se operace zablokuje a vyprší časový limit nebo není možné ji ještě dokončit. to je oddělené od[známého problému "file locked"](#downloading-locked-files-doesnt-error) – to má vliv na Windows holografické verze 2004, 20H2 a 21H1 buildů v rámci trhu. Problém byl kořenem způsoben chybou v manipulaci s některými požadavky na portálu zařízení a při použití protokolu HTTPS, který je výchozím nastavením, se obvykle vychází. 
+Někteří zákazníci zjistili, že při pokusu o nahrání nebo stažení souborů se může zdát, že se operace zablokuje a vyprší časový limit nebo není možné ji ještě dokončit. to je oddělené od[známého problému "file locked"](#downloading-locked-files-doesnt-error) – to má vliv na Windows holografické verze 2004, 20H2 a 21H1 buildů v rámci trhu. Problém byl kořenem způsoben chybou v manipulaci s některými požadavky na portálu zařízení a při použití protokolu HTTPS, který je výchozím nastavením, se obvykle vychází.
 
 ### <a name="workaround"></a>Alternativní řešení
 
@@ -156,37 +157,37 @@ Uživatel by pak měl přejít na http://, ne https:// (IP adresa) a funkce, jak
 
 ## <a name="blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build"></a>Modrá obrazovka po zrušení registrace z insider ve verzi Preview na zařízení blikající sestavením Insider
 
-Jedná se o problém ovlivňující uživatele, kteří byli v buildu Insider ve verzi Preview, namítli svůj HoloLens 2 novým sestavením insider ve verzi Preview a pak zrušení jeho zaregistrovaní v programu Insider. Jedná se o **známý problém.**
+Jedná se o problém ovlivňující uživatele, kteří byli v buildu Insider ve verzi Preview, odmítnul svou verzi HoloLens 2 novým sestavením Insider Preview a pak zrušit jeho zrušení v programu Insider. Jedná se o **známý problém.**
 
 To nemá vliv na:
 - Uživatelé, kteří nejsou zaregistrovaní ve Windows Insider 
 - Zasvěcenci:
     - Pokud bylo zařízení zaregistrované od sestavení Insider verze 18362.x
-    - Pokud se v programu Insider blikal podepsaný build 19041.x a zůstal zaregistrovaný v programu Insider
+    - Pokud se blikajícím souborem Insider podepsal build 19041.x a zůstane zaregistrovaný v programu Insider
 
 Obchádky: 
 - Vyhněte se problému 
-    - Flash sestavení, které není zevnitř. Jedna z běžných měsíčních aktualizací.
+    - Flash sestavení, které není uvnitř. Jedna z běžných měsíčních aktualizací.
     - Zůstaňte ve verzi Insider Preview
 - Odkazování zařízení
 
-    1. Dejte [HoloLens 2 do režimu blikajícího](hololens-recovery.md) režimu ručně tím, že úplné vypnutí, zatímco se nepřipojí. Při podržíte Tlačítko napájení klepněte na tlačítko Napájení.
+    1. Dejte [HoloLens 2 do režimu blikajícího](hololens-recovery.md) režimu ručním vypnutím, zatímco se nepřipojí. Při podržíte Tlačítko napájení klepněte na tlačítko Napájení.
     
     1. Připojení k počítači a otevřete Doprovodný průvodce pokročilým obnovením.
     
-    1. Flash disk HoloLens 2 na výchozí sestavení.
+    1. Flash HoloLens 2 do výchozího sestavení.
 
 [Zpět na seznam](#list)
 
 ## <a name="onedrive-doesnt-automatically-upload-pictures"></a>OneDrive automaticky nenahraje obrázky
 
-Aplikace OneDrive pro HoloLens nepodporuje automatické nahrávání fotoaparátu pro pracovní nebo školní účty. Jedná se o **známý problém.**
+Aplikace OneDrive pro HoloLens nepodporuje automatické nahrávání fotoaparátů pro pracovní nebo školní účty. Jedná se o **známý problém.**
 
 Alternativní řešení:
 
-- Pokud je pro vaši firmu přijatelné, je u uživatelských účtů Microsoft podporováno automatické nahrávání fotoaparátu. K pracovnímu nebo školnímu účet Microsoft přihlášení se můžete přihlásit i ke svému pracovnímu nebo školnímu účtu (OneDrive podporuje duální přihlašování). Ve svém účet Microsoft v rámci OneDrive můžete povolit automatické nahrávání fotoaparátů na pozadí.
+- Pokud je pro vaši firmu přijatelné, je u uživatelských účtů Microsoft podporováno automatické nahrávání fotoaparátu. K pracovnímu nebo školnímu účtu se účet Microsoft přihlásit i ke svému pracovnímu nebo školnímu účtu (OneDrive podporuje duální přihlašování). Z vašeho účet Microsoft v rámci OneDrive můžete povolit automatické nahrávání fotoaparátů na pozadí.
 
-- Pokud nemůžete bezpečně používat uživatelský účet účet Microsoft automatické nahrávání fotek, můžete fotky ručně nahrát do pracovního nebo školního účtu z OneDrive aplikace. Pokud to chcete udělat, ujistěte se, že jste přihlášení ke svému pracovnímu nebo školnímu účtu v OneDrive aplikace. Vyberte tlačítko **+** a zvolte **Upload**. Najděte fotky nebo videa, které chcete nahrát, tak, že přejdete na Obrázky **> fotoaparátu.** Vyberte fotky nebo videa, která chcete nahrát, a pak vyberte **tlačítko** Otevřít.
+- Pokud nemůžete bezpečně používat uživatelský účet účet Microsoft automatické nahrávání fotek, můžete fotky ručně nahrát do pracovního nebo školního účtu z OneDrive aplikace. Pokud to chcete udělat, ujistěte se, že jste v aplikaci OneDrive účet. Vyberte tlačítko **+** a zvolte **Upload**. Najděte fotky nebo videa, které chcete nahrát, tak, že přejdete na Obrázky **> fotoaparátu.** Vyberte fotky nebo videa, která chcete nahrát, a pak vyberte **tlačítko** Otevřít.
 
 [Zpět na seznam](#list)
 
@@ -195,11 +196,11 @@ Alternativní řešení:
 Pokud HoloLens nespustíte:
 
 - Pokud se indikátory LED vedle tlačítka napájení nesvítí nebo krátce blikne jenom jedna dioda LED, možná budete muset zařízení [HoloLens.](hololens2-charging.md#charging-the-device)
-- Pokud se LED diody rozsvítí, když stisknete tlačítko napájení, ale na displeji se nic neuvidí, proveďte pevné [resetování zařízení.](hololens-recovery.md#hard-reset-procedure)
+- Pokud se LED diody rozsvítí, když stisknete tlačítko napájení, ale na displeji neuvidíte nic, proveďte pevné [resetování zařízení.](hololens-recovery.md#hard-reset-procedure)
 
 Pokud se HoloLens zamrzne nebo přestane reagovat:
 
-- Vypněte svůj HoloLens stisknutím tlačítka napájení, dokud se všech pět LED diod nevypne, nebo po dobu 15 sekund, pokud diody LED nereagují. Pokud chcete spustit HoloLens, znovu stiskněte tlačítko napájení.
+- Vypněte svůj HoloLens stisknutím tlačítka napájení, dokud se všechny pět led diod nevypnou, nebo po dobu 15 sekund, pokud diody LED nereagují. Pokud chcete spustit HoloLens, znovu stiskněte tlačítko napájení.
 
 Pokud tento postup nefunguje, můžete zkusit obnovit zařízení [HoloLens 2](hololens-recovery.md) nebo HoloLens [(1. generace).](hololens1-recovery.md)
 
@@ -262,7 +263,7 @@ Zařízení můžete [přetát do **režimu blikajícího režimu**](hololens-re
 
 ## <a name="windows-device-portal-isnt-working-correctly"></a>Windows Portál zařízení nefunguje správně
 
-- Funkce Live Preview v Mixed Reality může vykazovat latenci několik sekund.
+- Funkce Live Preview v zachytávání Mixed Reality může vykazovat latenci několik sekund.
 
 - Na stránce Virtuální vstup nejsou ovládací prvky Gesture a Scroll v části Virtuální gesta funkční. Jejich použití nebude mít žádný vliv. Virtuální klávesnice na stránce virtuálního vstupu funguje správně.
 
@@ -270,7 +271,7 @@ Zařízení můžete [přetát do **režimu blikajícího režimu**](hololens-re
 
 [Zpět na seznam](#list)
 
-## <a name="the-hololens-emulator-isnt-working"></a>Tento HoloLens Emulator nefunguje
+## <a name="the-hololens-emulator-isnt-working"></a>HoloLens Emulator nefunguje
 
 Informace o emulátoru HoloLens najdete v naší dokumentaci pro vývojáře.  Přečtěte si další [informace o řešení potíží HoloLens emulátoru.](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-hololens-emulator#troubleshooting)
 
@@ -283,68 +284,68 @@ Informace o emulátoru HoloLens najdete v naší dokumentaci pro vývojáře.  P
 
 ## <a name="voice-commands-arent-working"></a>Nefungují hlasové příkazy
 
-Pokud Cortana nereaguje na vaše hlasové příkazy, ujistěte se, Cortana je zapnutá. V seznamu Všechny aplikace vyberte Poznámkový blok **Cortana** nabídky a  >    >    >  **Nastavení** proveďte změny. Další informace o tom, co můžete říct, najdete v tématu Použití [hlasu s HoloLens](hololens-cortana.md).
+Pokud Cortana nereaguje na vaše hlasové příkazy, ujistěte se, Cortana je zapnutá. V seznamu Všechny aplikace vyberte **Poznámkový** blok Cortana nabídky a  >    >    >  **Nastavení** změny. Další informace o tom, co můžete říct, najdete v tématu [Použití hlasu s HoloLens](hololens-cortana.md).
 
-v HoloLens (1. generace) se integrované rozpoznávání řeči nedá konfigurovat. Je vždycky zapnutý. v HoloLens 2 se můžete rozhodnout, jestli při instalaci zařízení zapnout rozpoznávání řeči i Cortana.
+V HoloLens (1. generace) není integrované rozpoznávání řeči konfigurovatelné. Vždy je zapnutý. Na HoloLens 2 můžete zvolit, jestli se má při nastavování zařízení zapnout rozpoznávání Cortana i rozpoznávání řeči.
 
-pokud váš HoloLens 2 nereaguje na váš hlas, ujistěte se, že je zapnuté rozpoznávání řeči. přejít na **začátek**  >  **Nastavení**  >  **ochrany osobních údajů** na  >  **řeč** a zapnout **rozpoznávání řeči**
-
-[Zpět na seznam](#list)
-
-## <a name="hand-input-isnt-working"></a>Ruční vstup nefunguje.
-
-aby se zajistilo, že HoloLens uvidí vaše ruce, je potřeba je zachovat v rámečku gesta.  Domovská stránka smíšené reality poskytuje zpětnou vazbu, která vám umožní vědět, kdy jsou vaše rukou sledovány.  Zpětná vazba je odlišná na různých verzích HoloLens:
-- na HoloLens (1. generace) se ukazatel pohledu změní z tečky na prstenec.
-- na HoloLens 2 se zobrazí ukazatel myši, když se vaše ruka blíží k slat, a když se objeví až slat, zobrazí se po ruce.
-
-Mnoho moderních aplikací se řídí vstupními vzory, které se podobají domácím realitám.  přečtěte si další informace o použití ručního vstupu na [HoloLens (1. generace)](hololens1-basic-usage.md#use-hololens-with-your-hands) a [HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame).
-
-Pokud máte ochranné rukavice, pamatujte, že některé typy rukavic nefungují s ručním sledováním.  Běžným příkladem jsou černé Pryžové rukavice, které mají za následek absorpci infračerveného světla a nejsou vyzvednuty hloubkovou kamerou.  Pokud vaše práce zahrnuje Pryžové rukavice, doporučujeme vyzkoušet světlejší barvu, jako je například modrá nebo šedá.  Dalším příkladem jsou velké zavazadlové rukavice, které mají za následek překrytí tvaru ruky. Pro dosažení nejlepších výsledků doporučujeme používat rukavice, které jsou jako přizpůsobení formulářů.
-
-pokud vaše clona obsahuje otisky prstů nebo rozmazává, použijte čisticí látku microfiber, která byla dodávána se HoloLens k vyčištění hypervisoru v mírném případě.
+Pokud váš HoloLens 2 nereaguje na váš hlas, ujistěte se, že je zapnuté rozpoznávání řeči. Přejděte na **Start Nastavení** Privacy Speech a  >    >    >   zapněte **Rozpoznávání řeči.**
 
 [Zpět na seznam](#list)
 
-## <a name="cant-connect-to-wi-fi"></a>Nejde se připojit k Wi-Fi
+## <a name="hand-input-isnt-working"></a>Ruční vstup nefunguje
 
-tady je několik věcí, které můžete vyzkoušet, pokud nemůžete připojit HoloLens k síti Wi-Fi:
+Abyste měli HoloLens vidět ruce, musíte je ponechat v snímku gest.  Domovská Mixed Reality poskytuje zpětnou vazbu, která vám dá vědět, kdy jsou vaše ruce sledované.  Zpětná vazba se liší v různých verzích HoloLens:
+- Při HoloLens (1. generace) se kurzor pohledu změní z tečky na kruh.
+- Na HoloLens 2 se zobrazí kurzor prstu, když se vaše ruce nachází blízko slate, a když jsou slates dále, zobrazí se ruční paprsk.
 
-- Ujistěte se, že je zapnutá Wi-Fi. pokud chcete kontrolu ověřit, použijte gesto Start a pak vyberte **Nastavení**  >  **síť &amp; Internet**  >  **Wi-Fi**. Pokud je Wi-Fi zapnutá, zkuste ji vypnout a znovu zapnout.
-- Posuňte se blíž ke směrovači nebo přístupovému bodu.
-- Restartujte směrovač Wi-Fi a pak [znovu spusťte HoloLens](hololens-recovery.md). Zkuste se znovu připojit.
-- Pokud žádná z těchto věcí nefunguje, zkontrolujte, zda směrovač používá nejnovější firmware. Tyto informace najdete na webu výrobce.
+Řada imerzivních aplikací dodržuje vzory vstupu, které se podobají Mixed Reality Domovské obrazovce.  Další informace o použití ručního [vstupu v HoloLens (1. generace)](hololens1-basic-usage.md#use-hololens-with-your-hands) a [HoloLens 2](hololens2-basic-usage.md#the-hand-tracking-frame).
+
+Pokud máte problémy s nosem, mějte na vědomí, že některé typy choumů nefungují se sledováním rukou.  Běžným příkladem je černá guma, která obvykle absorbuje infračervené světlo a nenabírá je hloubková kamera.  Pokud vaše práce zahrnuje gumové gumy, doporučujeme, abyste si zkusili světlejší barvu, například modrou nebo šedou.  Dalším příkladem je velká nesrozumilá aplikace, která má tendenci zakrytí tvaru vaší ruky. Pro nejlepší výsledky doporučujeme použít co nejvíce tvarování.
+
+Pokud má váš vizuátor otisky prstů nebo šmouhy, použijte čisticí filtr z mikrovlákna, který se dodá HoloLens vyčistit zorný prostor.
 
 [Zpět na seznam](#list)
 
-## <a name="bluetooth-devices-arent-pairing"></a>nepárování zařízení Bluetooth
+## <a name="cant-connect-to-wi-fi"></a>Nelze se připojit k Wi-Fi
 
-pokud máte problémy [spárované Bluetooth zařízení](hololens-connect-devices.md), zkuste následující:
+Tady je několik věcí, které můžete vyzkoušet, pokud nemůžete připojit HoloLens k Wi-Fi síti:
 
-- přejít na **Nastavení**  >  **zařízení** a ujistěte se, že je zapnutá Bluetooth. Pokud je, vypněte ho a znovu ho zapněte.
-- ujistěte se, že se zařízení Bluetooth plně účtuje nebo má vybité baterie.
+- Ujistěte se, Wi-Fi je zapnuté. Kontrolu můžete provést pomocí gesta Start a pak **Nastavení**  >  **Internet &amp;**  >  **Wi-Fi sítě Wi-Fi.** Pokud Wi-Fi, zkuste ho vypnout a znovu zas.
+- Přesuňte se blíž ke směrovači nebo přístupovému bodu.
+- Restartujte svůj Wi-Fi a [pak restartujte HoloLens](hololens-recovery.md). Zkuste se připojit znovu.
+- Pokud nic z toho nefunguje, zkontrolujte, že váš směrovač používá nejnovější firmware. Tyto informace najdete na webu výrobce.
+
+[Zpět na seznam](#list)
+
+## <a name="bluetooth-devices-arent-pairing"></a>Bluetooth zařízení se ne párují
+
+Pokud máte problémy s [párem zařízení Bluetooth,](hololens-connect-devices.md)zkuste následující postup:
+
+- Přejděte na **Nastavení** Zařízení a  >  ujistěte se, Bluetooth je zapnutá. Pokud je, vypněte ho a znovu ho zapněte.
+- Ujistěte se, že Bluetooth zařízení je plně nabité nebo obsahuje čerstvé baterie.
 - Pokud se stále nemůžete připojit, [restartujte HoloLens](hololens-recovery.md).
 
 [Zpět na seznam](#list)
 
 ## <a name="usb-c-microphone-isnt-working"></a>Mikrofon USB-C nefunguje
-Uvědomte si, že někteří mikrotelefony USB-C nesprávně hlásí jako mikrofon *i* mluvčí. Jedná se o problém s mikrofonem a nikoli s HoloLens. při zapojení jednoho z těchto telefonů do HoloLens může dojít ke ztrátě zvuku. Naštěstí je jednoduchá oprava.  
+Uvědomte si, že některé mikrofony USB-C se nesprávně hlásí jako *mikrofon* i jako mluvčí. Jedná se o problém s mikrofonem, a ne s HoloLens. Když jeden z těchto mikrofonů zapojíte do HoloLens, může dojít ke ztrátě zvuku. Naštěstí existuje jednoduchá oprava.  
 
-v **Nastavení**  ->  **systémový**  ->  **zvuk** explicitně nastavte integrované reproduktory **(zvukový ovladač analogických funkcí)** jako **výchozí zařízení**. HoloLens by si toto nastavení měli pamatovat i v případě, že mikrofon odeberete a znovu připojíte později.
+V **Nastavení** System Sound explicitně nastavte vestavěné mluvčí (zvukový ovladač  ->    ->   **analogové funkce)** jako **výchozí zařízení.** HoloLens si toto nastavení zapamatovat, i když se mikrofon později odebere a znovu připojí.
 
 ![Řešení potíží s mikrofony USB-C](images/usbc-mic-4.png)
 
-## <a name="devices-listed-as-available-in-settings-dont-work"></a>zařízení uvedená jako dostupná v Nastavení nefungují
+## <a name="devices-listed-as-available-in-settings-dont-work"></a>Zařízení uvedená jako dostupná Nastavení nefungují
 
-HoloLens (1. generace) nepodporuje profily Bluetooth zvuku. Bluetooth zvuková zařízení, jako jsou například mluvčí a sluchátka, se můžou zobrazovat jako dostupná v nastaveních HoloLens, ale nejsou podporovaná.
+HoloLens (1. generace) nepodporuje Bluetooth zvukové profily. Bluetooth zvuková zařízení, jako jsou mluvčí a náhlavní soupravy, se dají zobrazit jako dostupná v HoloLens, ale nejsou podporovaná.
 
-HoloLens 2 podporuje zvukový profil Bluetooth A2DP pro přehrávání stereo. v Bluetooth je k dispozici bezplatný profil, který umožňuje zachytávání mikrofonu od Bluetooth periferního zařízení není v HoloLens 2 podporováno.
+HoloLens 2 podporuje Bluetooth zvukového profilu A2DP pro stereo přehrávání. Profil Bluetooth Hands Free, který umožňuje zachytávání mikrofonu z Bluetooth periferního zařízení, se na HoloLens 2 nepodporuje.
 
-pokud máte potíže s používáním Bluetooth zařízení, ujistěte se, že se jedná o podporované zařízení. Mezi podporovaná zařízení patří následující:
+Pokud máte potíže s používáním Bluetooth, ujistěte se, že se jedná o podporované zařízení. Mezi podporovaná zařízení patří:
 
-- jazykové verze pro angličtinu – Bluetooth klávesnice (můžete je použít kdekoli, kde používáte holografickou klávesnici).
-- Bluetooth myši.
-- [HoloLens click](hololens1-clicker.md).
+- QWERTY v angličtině Bluetooth klávesnice (můžete je použít kdekoli, kde používáte holografičnou klávesnici).
+- Bluetooth mice.
+- Na [HoloLens klikněte na .](hololens1-clicker.md)
 
-další Bluetooth zařízení HID a GATT můžete párovat spolu s HoloLens. je ale možné, že budete muset nainstalovat odpovídající doprovodné aplikace z Microsoft Store ke skutečnému používání těchto zařízení.
+Můžete spárovat jiná zařízení Bluetooth HID a PAIR s vašimi HoloLens. Je však možné, že budete muset nainstalovat odpovídající doprovodné aplikace z Microsoft Store, aby bylo možné zařízení skutečně používat.
 
 [Zpět na seznam](#list)
