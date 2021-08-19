@@ -75,7 +75,7 @@
 ### [Šifrování a ochrana dat](security-encryption-data-protection.md)
 ### [Zabezpečení sítě](security-network-security.md)
 ### [Analýza zabezpečení ](security-engineering.md)
-### [HoloLens 2 – prohlášení o zásadách ochrany osobních údajů](hololens2-compliance.md)
+### [HoloLens 2 – ochrana osobních údajů a ochrana dat](hololens2-privacy.md)
 ## Správa zařízení
 ### [správa zařízení HoloLens pomocí MDM](hololens-mdm-configure.md)
 ## Registrace zařízení
@@ -140,5 +140,5 @@
 ### [HoloLens (1. generace)](hololens1-release-notes.md)
 
 # Sdělte nám svůj názor
-## [Dejte nám svůj názor prostřednictvím Centrum Feedback](hololens-feedback.md)
+## [Dejte nám zpětnou vazbu prostřednictvím Centrum Feedback](hololens-feedback.md)
 ## [HoloLens průvodce přispíváním do dokumentace](contributing.md)
