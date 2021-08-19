@@ -53,7 +53,7 @@
 #### [Konfigurace](hololens2-cloud-connected-configure.md)
 #### [Nasazení](hololens2-cloud-connected-deploy.md)
 #### [Údržba](hololens2-cloud-connected-maintain.md)
-#### [Příručka pro nasazení prostředí připojeného k cloudu (externí klienti)](hololens2-deployment-guide.md)
+#### [Externí klienti](hololens2-deployment-guide.md)
 ### Průvodce nasazením podnikové sítě
 #### [Přehled](hololens2-corp-connected-overview.md)
 #### [Příprava](hololens2-corp-connected-prepare.md)
