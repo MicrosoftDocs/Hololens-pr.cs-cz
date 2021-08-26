@@ -16,12 +16,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: d9a0901a916ec33c076eeae33b680406a45f7feefe82442da1f346e78bc9b383
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 999e16f117e4f0838c4a0cb6d6bafcbbf72e1d5a
+ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115663571"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "122859030"
 ---
 # <a name="configure-hololens-by-using-a-provisioning-package"></a>konfigurace HoloLens pomocí zřizovacího balíčku
 
@@ -34,7 +34,7 @@ některé konfigurace HoloLens, které můžete použít v zřizovacím balíčk
 - Nastavení Wi-Fiho připojení
 - Použít certifikáty pro zařízení
 - Povolit vývojářský režim
-- Pomocí [podrobných pokynů](hololens-kiosk.md#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk)nakonfigurujte celoobrazovkový režim.
+- Pomocí [podrobných pokynů](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)nakonfigurujte celoobrazovkový režim.
 
 ## <a name="provisioning-package-hololens-wizard"></a>průvodce zřizovacím balíčkem HoloLens
 
@@ -50,7 +50,7 @@ průvodce HoloLens vám pomůže nakonfigurovat následující nastavení v bal�
 - registrace zařízení v Azure Active Directory nebo vytvoření místního účtu
 - Přidat certifikáty
 - Povolit vývojářský režim
-- Pomocí [podrobných pokynů](hololens-kiosk.md#use-a-provisioning-package-to-set-up-a-single-app-or-multi-app-kiosk)nakonfigurujte celoobrazovkový režim.
+- Pomocí [podrobných pokynů](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens)nakonfigurujte celoobrazovkový režim.
 
 > [!WARNING]
 > pro konfiguraci Azure Active Directory registrace pomocí některého z průvodců je nutné spustit Windows návrháře konfigurace na Windows 10.
@@ -123,7 +123,7 @@ Až budete hotovi, vyberte **vytvořit**. Trvá to jenom několik sekund. Po ses
 
     > [!IMPORTANT]
     > Při vytváření zřizovacího balíčku můžete zahrnout citlivé informace do souborů projektu a do souboru zřizovacího balíčku (. ppkg). I když máte možnost zašifrovat soubor. ppkg, soubory projektu nejsou šifrovány. Soubory projektu byste měli ukládat na bezpečném místě a odstraňovat soubory projektu, když už je nepotřebujete.
-    
+
 9. Vyberte **exportovat**  >  **zřizovací balíček**.
 
 10. Změňte **vlastníka** na **správce IT**. Tím se nastaví priorita tohoto zřizovacího balíčku vyšší než zřizovací balíčky použité pro toto zařízení z jiných zdrojů. Vyberte **Další**.
@@ -152,7 +152,7 @@ Až budete hotovi, vyberte **vytvořit**. Trvá to jenom několik sekund. Po ses
 
 ## <a name="apply-a-provisioning-package-to-hololens-during-setup"></a>Použití zřizovacího balíčku pro HoloLens během instalace
 
-HoloLens 2 zařízení na zařízeních Windows Holographic verze 2004 nebo [buildu 19041.1103](hololens-release-notes.md#windows-holographic-version-2004) nebo novějším může ke zřízení balíčku použít USB flash disk. Jednoduše zkopírujte soubor .ppkg do kořenového adresáře jednotky USB. Zřizovací balíčky se použijí jenom v případě, že jsou v kořenovém adresáři JEDNOTKY USB. Několik přítomných zřizovacího balíčku se použije postupně.
+HoloLens 2 zařízení na zařízeních Windows Holographic verze 2004 nebo [buildu 19041.1103](hololens-release-notes.md#windows-holographic-version-2004) nebo novějším používejte k použití zřizovacího balíčku USB flash disk. Jednoduše zkopírujte soubor .ppkg do kořenového adresáře jednotky USB. Zřizovací balíčky se použijí jenom v případě, že jsou v kořenovém adresáři JEDNOTKY USB. Několik přítomných zřizovacího balíčku se použije postupně.
 
 HoloLens 2 zařízení na Windows Holographic verze [20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo novější mají novější funkce, které vám pomůžou zjednodušit a zjednodušit automatický proces. Projděte si následující části:
 
@@ -160,17 +160,17 @@ HoloLens 2 zařízení na Windows Holographic verze [20H2](hololens-release-note
 - [Automatické potvrzení zřizovacího balíčku v OOBE](hololens-provisioning.md#auto-confirm-provisioning-packages-in-oobe)
 - [Automatické zřizování bez použití uživatelského rozhraní](hololens-provisioning.md#automatic-provisioning-without-using-ui)
 
-1. Pomocí kabelu USB připojte zařízení k počítači (nebo k jednotce USB pro HoloLens 2, jak je uvedeno výše), a pak zařízení spusťte. Neposíít se přes **stránku Prvního interagovatelného okamžiku** prvního zařízení.   
-    - V HoloLens (1. generace) obsahuje tato stránka modrý rámeček. 
+1. Pomocí kabelu USB připojte zařízení k počítači (nebo k jednotce USB pro HoloLens 2, jak je uvedeno výše), a pak zařízení spusťte. Neposíít se přes **stránku Prvního interagovatelného okamžiku** prvního zařízení.
+    - V HoloLens (1. generace) obsahuje tato stránka modrý rámeček.
     - Na HoloLens 2 obsahuje tato stránka balíček vousů.
 
-2. Krátce stiskněte a **uvolněte tlačítka Pro snížení** hlasitosti a Napájení současně.  
+2. Krátce stiskněte a **uvolněte tlačítka Pro snížení** hlasitosti a Napájení současně. 
 
 3. HoloLens se zobrazí jako zařízení v Průzkumník souborů počítači.
 
 4. V Průzkumník souborů přetáhněte zřizovací balíček (.ppkg) do úložiště zařízení.
 
-5. Krátce znovu stiskněte a uvolněte tlačítka **Volume Down** (Snížení hlasitosti) a **Power (Napájení)** na stránce **Prvního** interakce při prvním zapnutí zařízení.
+5. Krátce znovu stiskněte a uvolněte tlačítka **Volume Down**  (Snížení hlasitosti) a **Power (Napájení)** na stránce Prvního interakce při prvním zapnutí zařízení.
 
 6. Zařízení se vás zeptá, jestli balíčku důvěřujete, a chcete ho použít. Ověřte, že balíčku důvěřujete.
 
@@ -181,26 +181,26 @@ HoloLens 2 zařízení na Windows Holographic verze [20H2](hololens-release-note
 
 ### <a name="auto-launch-provisioning-from-usb"></a>Automatické spuštění zřizování z USB
 
-- Automatizované procesy umožňující menší interakci uživatelů, když se během spuštění počítače používají jednotky USB se zřizovacími balíčky.
+- Automatizované procesy, které umožňují menší interakci uživatelů, když se během spuštění počítače používají jednotky USB se zřizovacími balíčky.
 
-Před touto verzí museli uživatelé při zřizování pomocí kombinace tlačítek ručně spustit obrazovku zřizování během spuštění při spuštění počítače. Uživatelé teď mohou kombinaci tlačítek přeskočit pomocí zřizovacího balíčku na jednotce úložiště USB. 
+Před touto verzí museli uživatelé při zřizování pomocí kombinace tlačítek ručně spustit obrazovku zřizování během spuštění při spuštění počítače. Uživatelé teď mohou kombinaci tlačítek přeskočit pomocí zřizovacího balíčku na úložné jednotce USB.
 
-1. Připojte jednotku USB se zřizovacím balíčkem během prvního interagovatelného okamžiku prvního ZOBE.
-1. Až bude zařízení připravené ke zřízení, automaticky se otevře výzva se stránkou zřizování. 
+1. Připojte jednotku USB se zřizovacím balíčkem během prvního interagovatelného okamžiku prvního zařízení.
+1. Až bude zařízení připravené ke zřízení, automaticky se otevře výzva se stránkou zřizování.
 
-Poznámka: Pokud je usb flash disk při spouštění zařízení připojený k napájení, OOBE provede výčet stávajícího paměťového zařízení USB a bude sledovat, jestli se neschytí další zařízení.
+Poznámka: Pokud je usb flash disk při spouštění zařízení připojený k napájení, OOBE provede výčet stávajícího paměťového zařízení USB a bude sledovat připojení dalších zařízení.
 
 Přečtěte si informace [o použití zřizovacích balíčků během OOBE.](hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup)
 
 ### <a name="auto-confirm-provisioning-packages-in-oobe"></a>Automatické potvrzení zřizovacího balíčku v OOBE
 - Automatizovaný proces, který umožňuje menší interakci uživatelů, a když se zobrazí stránka zřizovací balíček, automaticky použije všechny uvedené balíčky.
 
-Když se zobrazí hlavní obrazovka zřizování, OOBE odpočítá 10 sekund, než automaticky začne používat všechny zřizovací balíčky. Do 10 sekund od ověření balíčků, které očekávali, mohou uživatelé stále potvrdit nebo zrušit.
+Když se zobrazí hlavní obrazovka zřizování, OOBE odpočítá 10 sekund, než automaticky začne používat všechny zřizovací balíčky. Do 10 sekund od ověření balíčků, které očekávali, je uživatelé stále mohou potvrdit nebo zrušit.
 
 ### <a name="automatic-provisioning-without-using-ui"></a>Automatické zřizování bez použití uživatelského rozhraní
-- Kombinované automatické procesy pro menší interakce zařízení pro zřizování. 
+- Kombinované automatické procesy pro menší interakce zařízení pro zřizování 
 
-Kombinací automatického spuštění zřizování ze zařízení USB a automatického potvrzení zřizovacího balíčku může uživatel zřídit zařízení HoloLens 2 automaticky bez použití uživatelského rozhraní zařízení nebo dokonce s jeho používáním. Můžete dál používat stejnou jednotku USB a zřizovací balíček pro více zařízení. To je užitečné pro nasazení více zařízení najednou ve stejné oblasti. 
+Kombinací automatického spuštění zřizování ze zařízení USB HoloLens automatického potvrzení zřizovacího balíčku může uživatel automaticky zřídit zařízení HoloLens 2 bez použití uživatelského rozhraní zařízení nebo dokonce s jeho náušty. Můžete dál používat stejnou jednotku USB a zřizovací balíček pro více zařízení. To je užitečné pro nasazení více zařízení najednou ve stejné oblasti. 
 
 1. [Pomocí nástroje Windows](hololens-provisioning.md) [Configuration Designer vytvořte zřizovací balíček.](https://www.microsoft.com/store/productId/9NBLGGH4TX22) 
 1. Zkopírujte balíček na jednotku úložiště USB.
@@ -220,12 +220,12 @@ Vaše zařízení je teď nakonfigurované a zobrazí obrazovku Zřizování byl
 Na počítači postupujte takto:
 1. Vytvořte zřizovací balíček, jak je popsáno v tématu Vytvoření zřizovacího balíčku [pro HoloLens pomocí HoloLens.](hololens-provisioning.md)
 2. Připojení HoloLens připojte zařízení k počítači pomocí kabelu USB. HoloLens se zobrazí jako zařízení v Průzkumník souborů počítači.
-3. Přetáhněte zřizovací balíček do složky Dokumenty na HoloLens.
+3. Přetáhněte zřizovací balíček do složky Dokumenty v HoloLens.
 
 Na svém HoloLens postupujte takto:
-1. Přejděte na **Nastavení**  >  **Přístup k**  >  **účtům do práce nebo do školy.** 
-2. V **části Nastavení** vyberte **Přidat nebo odebrat zřizovací balíček.**
-3. Na další stránce vyberte Přidat **balíček, aby** se spouštěl výběr souborů, a vyberte svůj zřizovací balíček. Pokud je složka prázdná, vyberte Toto **zařízení** a pak vyberte **Dokumenty.**
+1. Přejděte na **Nastavení**  >  **Účty Přístup** do práce nebo do  >  **školy.** 
+2. V **části Nastavení** prostředků vyberte Přidat nebo odebrat **zřizovací balíček.**
+3. Na další stránce vyberte **Přidat balíček, aby** se spouštěl výběr souborů, a vyberte svůj zřizovací balíček. Pokud je složka prázdná, nezapomeňte vybrat **Toto zařízení a** vybrat **Dokumenty.**
 
 Po použití se balíček zobrazí v seznamu **Nainstalované balíčky**. Pokud chcete zobrazit podrobnosti balíčku nebo odebrat balíček ze zařízení, vyberte uvedený balíček.
 
@@ -233,7 +233,7 @@ Po použití se balíček zobrazí v seznamu **Nainstalované balíčky**. Pokud
 
 Zřizovací balíčky používají poskytovatele konfiguračních služeb (CSP). Pokud poskytovatele CSP ještě nevíte, podívejte se na úvod do poskytovatelů konfiguračních služeb [(CSP) pro IT profesionály.](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers)
 
-Když v Windows Configuration Designeru vytvoříte zřizovací balíček pro Windows Holographic, nastavení v části Dostupná přizpůsobení jsou založená na csP podporovaných v [Windows Holographic.](/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices)  Následující tabulka popisuje nastavení, která můžete chtít nakonfigurovat pro HoloLens.
+Když v Windows Configuration Designeru vytvoříte zřizovací balíček pro Windows Holographic, nastavení v části Dostupná přizpůsobení jsou založená na zprostředkovatelích konfiguračních služeb podporovaných [v Windows Holographic.](/windows/client-management/mdm/configuration-service-provider-reference#csps-supported-in-hololens-devices)  Následující tabulka popisuje nastavení, která můžete chtít nakonfigurovat pro HoloLens.
 
 ![Běžná nastavení modulu runtime pro HoloLens](images/icd-settings.png)
 
@@ -242,7 +242,7 @@ Když v Windows Configuration Designeru vytvoříte zřizovací balíček pro Wi
 | **Certifikáty** | Nasaďte certifikát do HoloLens.  |
 | **Profily připojení** | Nasaďte profil Wi-Fi do HoloLens.   |
 | **Upgrade edice** | [Upgradujte na Windows Holographic for Business.](hololens1-upgrade-enterprise.md)  |
-| **Zásady** | Povolte nebo zabraňte vývojářskému režimu HoloLens. [Zásady podporované Windows Holographic for Business](/windows/client-management/mdm/policy-configuration-service-provider#hololenspolicies) |
+| **Zásady** | Povolte nebo zabraňte vývojářskému režimu na HoloLens. [Zásady podporované Windows Holographic for Business](/windows/client-management/mdm/policy-configuration-service-provider#hololenspolicies) |
 
 ## <a name="app-install-via-provisioning-package"></a>Instalace aplikace prostřednictvím zřizovacího balíčku
 
