@@ -17,12 +17,12 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: daab30a8ea5200ca145b6b0234b8bd060b8cec5f
-ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
+ms.openlocfilehash: 28c431397385c06fb94de410a0763e24e18e4509
+ms.sourcegitcommit: 749d617f3f0ce3e6363ff6cd1a03f87b9280f418
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122859103"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122979368"
 ---
 # <a name="set-up-hololens-as-a-kiosk"></a>nastavení HoloLens jako veřejného terminálu
 
@@ -44,11 +44,11 @@ V následující tabulce jsou uvedeny funkce funkcí v různých režimech veře
 |Veřejný terminál s jednou aplikací |Zakázáno |Zakázáno |Zakázáno |Zakázáno   |Zakázáno |Umožněn |
 |Veřejný terminál s více aplikacemi |Povoleno |Umožněn  |K dispozici  |K dispozici |K dispozici   |Umožněn  |
 
-další informace o povolení zakázaných funkcí nebo způsobu, jakým hlasové příkazy pracují s zakázanými funkcemi a Cortana najdete v tématu [HoloLens AUMIDs for apps](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids).
+\*další informace o povolení zakázaných funkcí nebo způsobu, jakým hlasové příkazy pracují s zakázanými funkcemi a Cortana najdete v tématu [HoloLens AUMIDs for apps](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids).
 
 ## <a name="key-general-considerations-before-configuring-kiosk-mode"></a>Obecné důležité otázky před konfigurací celoobrazovkového režimu
 
-1. určete druh uživatelského účtu, který se přihlašuje k Hololens ve vašem prostředí – HoloLens podporuje účty Azure Active Directory (AAD), účty Microsoft (MSA) a místní účty. Kromě toho jsou podporovány také dočasně vytvořené účty označované jako hosté/Návštěvníci (pouze pro zařízení s připojením AAD). Další informace najdete v informacích o [správě identity uživatelů a přihlašování pro HoloLens](hololens-identity.md).
+1. určete druh uživatelského účtu pro přihlášení do HoloLens ve vašem prostředí – HoloLens podporuje účty Azure Active Directory (AAD), účty Microsoft (MSA) a místní účty. Kromě toho jsou podporovány také dočasně vytvořené účty označované jako hosté/Návštěvníci (pouze pro zařízení s připojením AAD). Další informace najdete v informacích o [správě identity uživatelů a přihlašování pro HoloLens](hololens-identity.md).
 2. Určete cíle prostředí celoobrazovkového režimu – ať už se jedná o všechny, jednoho uživatele, určité uživatele nebo uživatele, kteří jsou členy skupin AAD atd.
 3. Pro celoobrazovkový režim více aplikací určete aplikace, které se mají zobrazit v nabídce Start. Pro každou aplikaci bude nutné mít [ID modelu uživatele aplikace (AUMID)](hololens-kiosk-reference.md#hololens-application-user-model-ids-aumids) .
 4. určete, jestli se má celoobrazovkový režim použít pro HoloLens prostřednictvím zřizovacích balíčků modulu runtime nebo serveru správy mobilních zařízení (MDM).
@@ -71,6 +71,8 @@ Platí pouze v případě, že plánujete použít balíčky zřizování za bě
 
 ## <a name="supported-scenarios-for-kiosk-mode-based-on-identity-type"></a>Podporované scénáře pro celoobrazovkový režim na základě typu identity
 
+V tématu [Referenční odkazy](hololens-kiosk-reference.md#kiosk-xml-code-samples) najdete příklady v závislosti na vašem scénáři a aktualizaci podle potřeby před kopírováním a vkládáním.
+
 > [!NOTE]
 > Použijte XML jenom v případě, že k vytvoření konfigurace veřejného terminálu nepoužíváte uživatelské rozhraní Intune.
 
@@ -88,8 +90,8 @@ Platí pouze v případě, že plánujete použít balíčky zřizování za bě
 | Všichni uživatelé, kteří se přihlásí, mají celoobrazovkový zážitek. | [Konfigurace vícenásobného přístupového profilu pro globální aplikace](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile) | • [Microsoft Intune vlastní šablonu](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Zřizování za běhu – aplikace s více aplikacemi](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Globální přiřazený přístup vyžaduje [20H2 a novější buildy](hololens-release-notes.md#windows-holographic-version-20h2) . |
 | Každý uživatel, který se přihlásí, získá celoobrazovkový zážitek s výjimkou určitých uživatelů. | [Nakonfigurujte více globálních uživatelských přidaných profilů přístupu, a to vyloučením určitých uživatelů (kteří musí být vlastníky zařízení)](hololens-kiosk-reference.md#multiple-app-global-assigned-access-profile-excluding-device-owners). | • [Microsoft Intune vlastní šablonu](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Zřizování za běhu – aplikace s více aplikacemi](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | Globální přiřazený přístup vyžaduje [20H2 a novější buildy](hololens-release-notes.md#windows-holographic-version-20h2) . |
 | Každý uživatel AAD získá samostatné možnosti veřejného terminálu pro tohoto uživatele. | [Nakonfigurujte konfiguraci přiřazeného přístupu pro každého uživatele, který určuje název svého účtu AAD.](hololens-kiosk-reference.md#multiple-app-assigned-access-profiles-for-two-aad-users-or-more) | • [Microsoft Intune vlastní šablonu](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Zřizování za běhu – aplikace s více aplikacemi](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | &nbsp; |
-| Uživatelé v různých skupinách AAD mají celoobrazovkový režim, který je určen pouze pro skupinu. | [Nakonfigurujte konfiguraci přiřazeného přístupu pro každou požadovanou skupinu AAD.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [Microsoft Intune vlastní šablonu](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Zřizování za běhu – aplikace s více aplikacemi](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • když se uživatel přihlásí a HoloLens je připojený k internetu, pokud se tento uživatel najde jako člen skupiny aad, pro který existuje konfigurace veřejného terminálu, získá uživatel pro tuto skupinu AAD možnost beznabídkového vstupu. <br> • [pokud není k dispozici internet po přihlášení uživatele, bude mít uživatel možnost HoloLens chování režimu selhání.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Pokud není zaručená dostupnost internetu i v případě, že je potřeba použít přihlášení uživatele a veřejný terminál založený na skupině AAD, [zvažte použití AADGroupMembershipCacheValidityInDayspolicy](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk). |
-| Uživatelé, kteří potřebují používat HoloLens k dočasným účelům, mají k dispozici prostředí veřejného terminálu. | [Konfigurace přiřazeného přístupu pro návštěvníky](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-visitors) | • [Microsoft Intune vlastní šablony](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Zřizování modulu runtime – Jedna aplikace](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens) | • Dočasný uživatelský účet se automaticky vytvoří HoloLens přihlášení a při odhlášení dočasného uživatele se odebere. <br> • Zvažte povolení [zásad automatického přihlášení návštěvníka.](#how-to-can-visitor-accounts-automatically-logon-into-kiosk-experience) |
+| Uživatelé v různých skupinách AAD mají celoobrazovkový režim, který je určen pouze pro skupinu. | [Nakonfigurujte konfiguraci přiřazeného přístupu pro každou požadovanou skupinu AAD.](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-two-aad-groups-or-more) | • [Microsoft Intune vlastní šablonu](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Zřizování za běhu – aplikace s více aplikacemi](hololens-kiosk.md?tabs=ppkgmak#steps-in-configuring-kiosk-mode-for-hololens) | • když se uživatel přihlásí a HoloLens je připojený k internetu, pokud se tento uživatel najde jako člen skupiny aad, pro který existuje konfigurace veřejného terminálu, získá uživatel pro tuto skupinu AAD možnost beznabídkového vstupu. <br> • [pokud není k dispozici internet po přihlášení uživatele, bude mít uživatel možnost HoloLens chování režimu selhání.](#issue---no-apps-are-shown-in-start-menu-in-kiosk-mode) <br> • Pokud není zaručena dostupnost internetu, když se uživatel přihlásí a je potřeba použít kiosk založený na skupině AAD, zvažte použití [zásady AADGroupMembershipCacheValidityInDays.](hololens-release-notes.md#cache-azure-ad-group-membership-for-offline-kiosk) |
+| Uživatelé, kteří potřebují používat HoloLens k dočasným účelům, mají k dispozici prostředí veřejného terminálu. | [Konfigurace přiřazeného přístupu pro návštěvníky](hololens-kiosk-reference.md#multiple-app-assigned-access-profile-for-visitors) | • [Microsoft Intune vlastní šablony](hololens-kiosk.md?tabs=intunecustom#steps-in-configuring-kiosk-mode-for-hololens) <br> • [Zřizování modulu runtime – Jedna aplikace](hololens-kiosk.md?tabs=ppkgsak#steps-in-configuring-kiosk-mode-for-hololens) | • Dočasný uživatelský účet se automaticky vytvoří HoloLens přihlášení a při odhlášení dočasného uživatele se odebere. <br> • Zvažte povolení [zásad automatického přihlášení návštěvníka.](#how-can-visitor-accounts-automatically-logon-to-kiosk-experience) |
 
 ## <a name="steps-in-configuring-kiosk-mode-for-hololens"></a>Postup konfigurace bezobrazovkového režimu pro HoloLens
 
@@ -110,7 +112,7 @@ Tady jsou následující způsoby konfigurace. Vyberte kartu odpovídající pro
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-### <a name="how-to-can-visitor-accounts-automatically-logon-into-kiosk-experience"></a>Jak se mohou účty návštěvníka automaticky přihlásit k prostředí veřejného terminálů?
+### <a name="how-can-visitor-accounts-automatically-logon-to-kiosk-experience"></a>Jak se mohou účty návštěvníků automaticky přihlásit k prostředí veřejného terminálů?
 
 V [buildech Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a novější:
 
@@ -118,24 +120,24 @@ V [buildech Windows Holographic verze 21H1](hololens-release-notes.md#windows-ho
 
 [!INCLUDE[](includes/kiosk-autologin.md)]
 
-### <a name="is-kiosk-experience-supported-on-hololens-1st-gen"></a>Podporuje se v Hololens (1. generace) prostředí veřejného terminálu?
+### <a name="is-kiosk-experience-supported-on-hololens-1st-gen"></a>Je prostředí veřejného terminálu podporované HoloLens (1. generace)?
 
-Bezobrazovový režim je dostupný jenom v případě, že zařízení Windows Holographic for Business. Všechna HoloLens 2 se dodá s Windows Holographic for Business a nejsou k dispozici žádné jiné edice. Každé HoloLens 2 zařízení může bez spuštění spustit bezioskový režim.
+Bezobrazovový režim je dostupný jenom v případě, že zařízení Windows Holographic for Business. Všechna HoloLens 2 se dodá s Windows Holographic for Business a žádné jiné edice. Každé HoloLens 2 zařízení může bez spuštění spustit bezioskový režim.
 
-HoloLens (1. generace) je potřeba upgradovat jak z hlediska sestavení operačního systému, tak edice operačního systému. Tady jsou další informace o aktualizaci HoloLens (1. generace) [na Windows Holographic for Business](hololens1-upgrade-enterprise.md) edici. Pokud chcete zařízení HoloLens (1. generace) tak, aby bylo v beznarovém režimu, musíte nejdřív zajistit, aby na zařízení běží Windows 10, verze 1803 nebo novější. Pokud jste k obnovení zařízení HoloLens (1. generace) použili nástroj Windows Device Recovery Tool do výchozího sestavení, nebo pokud jste nainstalovali nejnovější aktualizace, je zařízení připravené ke konfiguraci.
+HoloLens (1. generace) je potřeba upgradovat jak z hlediska sestavení operačního systému, tak edice operačního systému. Tady jsou další informace o aktualizaci HoloLens (1. generace) [na Windows Holographic for Business](hololens1-upgrade-enterprise.md) edici. Pokud chcete zařízení HoloLens (1. generace) tak, aby bylo v beznarovém režimu, musíte nejdřív zajistit, aby na zařízení běží Windows 10, verze 1803 nebo novější. Pokud jste použili nástroj Windows Device Recovery k obnovení zařízení HoloLens (1. generace) do výchozího sestavení nebo pokud jste nainstalovali nejnovější aktualizace, je zařízení připravené ke konfiguraci.
 
 ### <a name="how-to-use-device-portal-to-configure-kiosk-in-non-production-environments"></a>Jak používat portál zařízení ke konfiguraci veřejného terminálů v neprodukcích prostředí?
 
-Nastavte HoloLens [zařízení tak, aby Windows Portál zařízení.](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal) Tento Portál zařízení je webový server ve vaší HoloLens, ke které se můžete připojit z webového prohlížeče na počítači.
+Nastavte, [HoloLens zařízení bude používat Windows Portál zařízení](/windows/mixed-reality/using-the-windows-device-portal#setting-up-hololens-to-use-windows-device-portal). Tato Portál zařízení webový server ve vaší HoloLens, ke které se můžete připojit z webového prohlížeče na počítači.
 
  > [!CAUTION]
- > Když nastavíte, HoloLens používat Portál zařízení, musíte na zařízení povolit vývojářský režim. Vývojářský režim na zařízení, které Windows Holographic for Business umožňuje zkušební načtení aplikací. Toto nastavení ale vytváří riziko, že uživatel může instalovat aplikace, které nejsou certifikované Microsoft Store. Správci můžou blokovat možnost povolit režim pro vývojáře pomocí nastavení **ApplicationManagement/AllowDeveloper Unlock** v [csP zásad.](/windows/client-management/mdm/policy-configuration-service-provider) [Přečtěte si další informace o vývojářského režimu.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
+ > Když nastavíte, HoloLens používat Portál zařízení, musíte na zařízení povolit vývojářský režim. Vývojářský režim na zařízení s Windows Holographic for Business umožňuje aplikace na straně načtení. Toto nastavení ale vytváří riziko, že uživatel může instalovat aplikace, které nejsou certifikované Microsoft Store. Správci můžou blokovat možnost povolit režim pro vývojáře pomocí nastavení **ApplicationManagement/AllowDeveloper Unlock** v [csP zásad.](/windows/client-management/mdm/policy-configuration-service-provider) [Přečtěte si další informace o režimu pro vývojáře.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)
 
 Bezobrazovový režim je možné nastavit přes REST API služby Portál zařízení pomocí metody POST na /api/holographic/kioskmode/settings s jedním povinným parametrem řetězce dotazu ("kioskModeEnabled" s hodnotou "true" nebo "false") a jedním volitelným parametrem ("startupApp" s hodnotou názvu balíčku). Mějte na paměti, Portál zařízení je určená pouze pro vývojáře a neměla by být povolena na zařízeních, která nejsou vývojáři. Aktualizace REST API v budoucích aktualizacích a vydáních změnit.
 
 ## <a name="troubleshooting"></a>Řešení potíží
 
-### <a name="issue---no-apps-are-shown-in-start-menu-in-kiosk-mode"></a>Problém – V nabídce Start v bezobrazovkovém režimu se nezobrazí žádné aplikace?
+### <a name="issue---no-apps-are-shown-in-start-menu-in-kiosk-mode"></a>Problém – V nabídce Start v bezobrazovkovém režimu se nezobrazí žádné aplikace
 
 **Příznaky**
 

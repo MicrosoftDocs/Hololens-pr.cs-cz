@@ -1,7 +1,7 @@
 ---
-title: 'HoloLens 2: Přesun režimu platformy'
-description: Jak používat HoloLens na mobilních platformách
-keywords: moving platforms, dynamic motion, hololens, moving platform mode
+title: HoloLens 2 přesunutí režimu platformy
+description: jak používat HoloLens na přesunu platforem
+keywords: Přesun platforem, dynamického pohybu, HoloLens a přesunutí režimu platformy
 author: evmill
 ms.author: v-evmill
 ms.reviewer: yabahman
@@ -14,86 +14,88 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5104a489cebee56938cb1968f253e7e9447e2452
-ms.sourcegitcommit: 6b3b455f66a2b4d5b42f4674a5ff940a2a01c294
+ms.openlocfilehash: cd46e162971ea709d865b2ac998cc7a517d231ec
+ms.sourcegitcommit: 18f6c00a57a6b4608dadcec418d1970455d8ee3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122610116"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122989192"
 ---
-# <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Přesun režimu platformy na platformách s nízkým dynamickým pohybem
+# <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Pohyb režimu platformy na nízkých dynamických pohybových platformách
 
-V **buildu Insider 20348.1411** jsme přidali podporu beta verze pro sledování na platformách s pohyblivou nízkou dynamickou pohybovou platformou na HoloLens 2. Po instalaci buildu a povolení moving platformového režimu budete moct používat HoloLens 2 v dříve nepřístupných prostředích, jako jsou velké lodi a velké dechy. V současné době je tato funkce zaměřená pouze na povolení těchto konkrétních pohyblivých platforem. I když vám nic nebrání ve pokusu o použití této funkce v jiných prostředích, tato funkce se zaměřuje na přidání podpory pro tato prostředí jako první.
+v programu **Insider build 20348,1411** jsme přidali podporu beta pro sledování na vysoce dynamických pohybových platformách na HoloLens 2. po instalaci buildu a povolení režimu přesunu platforem budete moct použít HoloLens 2 v dříve nepřístupných prostředích, jako jsou velké lodě a velké mořské nádoby. V současné době je tato funkce zaměřená na povolování pouze těchto specifických přenosných platforem. I když vám nic nebrání v pokusu o použití funkce v jiných prostředích, funkce se zaměřuje na přidání podpory pro tato prostředí jako první.
 
 > [!NOTE]
-> Tato funkce je aktuálně dostupná pouze prostřednictvím [Windows Insider.](hololens-insider.md)
+> tato funkce je v tuto chvíli dostupná jenom prostřednictvím [Windows insiders](hololens-insider.md).
 
-Tento článek se věnuje:
+![Příklad přesunu platformy.](./images/mpm-compare.gif)
 
-1. [Proč je přesun platformy nezbytný](#why-moving-platform-mode-is-necessary)
-1. [Povolení přesunu režimu platformy](#enabling-moving-platform-mode)
+Tento článek popisuje:
 
-## <a name="why-moving-platform-mode-is-necessary"></a>Proč je nutný přesun režimu platformy
+1. [Proč je potřeba přesunout platformu](#why-moving-platform-mode-is-necessary)
+1. [Povoluje se režim přesunutí platformy.](#enabling-moving-platform-mode)
 
-HoloLens být schopni sledovat pozici hlavy s [6](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) stupni volnosti (X, Y, Z, překlad a rolování, sklon, rotace yaw), aby bylo možné zobrazit stabilní hologramy. Za tím HoloLens sleduje dvě podobné informace ze dvou samostatných zdrojů:
+## <a name="why-moving-platform-mode-is-necessary"></a>Proč je potřeba přesunout režim platformy
 
-1. Viditelné světlé kamery – které sledují prostředí, například fyzickou místnost, ve které používáte HoloLens
-1. Inerciální měrná jednotka (IMU), která se skládá z akcelerometru,scopeu a nakometru, který sleduje pohyb a orientaci hlavy vzhledem k Zemi
+aby bylo možné zobrazit stabilní hologramy, HoloLens musí být schopné sledovat polohu hlavní pozice pomocí [6 stupňů volnosti](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) (X, Y, Z, překladu a změn, rozteč, yaw rotace). k tomu HoloLens sleduje dvě podobné informace ze dvou samostatných zdrojů:
 
-Informace z těchto dvou zdrojů jsou složené, aby bylo možné sledovat vaši pozici hlavy s nízkou latencí a vysokou frekvencí, aby bylo možné vykreslit hladké hologramy.
+1. Viditelné lehké kamery – které sledují prostředí, například fyzickou místnost, ve které používáte HoloLens
+1. Inertial měření jednotek (IMU), která se skládá z akcelerometru, vybavený gyroskopem a magnetometer, která sleduje pohyb a orientaci hlav vzhledem k zemi
 
-Tento přístup se ale spoléhá na kritický předpoklad. Prostředí (sledované fotoaparáty) zůstává ve srovnání se Zemí neměnné (vůči kterému může IMU provádět měření). Pokud tomu tak není, může se informace z obou zdrojů navzájem kolidovat, podobně jako na misce ve vody, a způsobit tak, že se sledování ztratí. Tento konflikt vede k nesprávným informacím o pozici a vede k hologramům v plaveckých plácích nebo dokonce ke sledování ztráty.
+Informace z těchto dvou zdrojů jsou složené, aby bylo možné sledovat polohu hlavní pozice s nízkou latencí a dostatečně vysokou frekvencí, aby bylo možné vykreslovat hladké hologramy.
 
-Tento problém řeší přesun režimu platformy. Když povolíte režim Moving Platform Mode (Pohyblivá platforma), je to nápověda našeho snímače, že nemůžeme spoléhat na to, že vstupy ze snímačů se navzájem za všech okolností zcela odsouhlasí. Místo toho musíme do značné míry spoléhat na vizuální sledování a rychle identifikovat nekonstrukční inerciální data pohybu a odpovídajícím způsobem je odfiltrovat, než budeme moct použít vstup IMU.
+Tento přístup ale spoléhá na kritický předpoklad; prostředí (sledované kamerami) zůstává v klidu vzhledem k zemi (na kterou IMU může provádět měření). Pokud to není v takovém případě, jako na člunu ve vodě, mohou být informace z obou zdrojů v konfliktu s jiným zdrojem a způsobit ztrátu tohoto sledovacího procesu. Tento konflikt vytváří nesprávné informace o poloze a vede k Swimmy hologramů nebo dokonce sledování ztrát.
+
+Přemístění tohoto problému pro režim platformy Když povolíte režim přesunutí, který je nápovědou k našemu sledování, které nemůžeme na základě našich vstupů na senzory plně souhlasit. Místo toho je potřeba spoléhat na vizuální sledování a rychle identifikovat incongruous data o pohybu Inertial a vyfiltrovat je, aby bylo možné použít vstup IMU.
 
 ## <a name="supported-environments-and-known-limitations"></a>Podporovaná prostředí a známá omezení
 
-I když byl vyvinut režim moving platformy pro inteligentní zpracování případů inerciálního a vizuálního konfliktu dat, je v současné době vymezený na velké problémy s nízkým dynamickým pohybem. To znamená, že existují určitě omezení a nepodporované scénáře.
+Během přesouvání režimu platformy bylo vyvinuto Inteligentní zpracování případů Inertial a vizuálního konfliktu dat. v současné době má velký počet plavidel, u kterých dochází k nedostatečnému dynamickému pohybu. To znamená, že existují omezení na určitě a nepodporované scénáře.
 
 ### <a name="known-limitations"></a>Známá omezení
 
-- Jedinými podporovanými prostředími pro přesun režimu platformy (MPM) jsou velká prostředí s nízkým dynamickým pohybem. Jinými slovy, řada běžných prostředí/situací se zatím nepodporuje kvůli vysoké frekvenci pohybu a vysoké úrovni zrychlení a [zrychlení.](https://en.wikipedia.org/wiki/Jerk_(physics))  Například: roviny, trénování, auta, kola, auta, auta, malé výtahy, výtahy atd.
-- Hologramy povoleném MPM se může mírně zmátnout, zejména pokud je na tekoucí vody.
-- Nic nebrání uživatelům v pokusech o použití MPM v nepodporovaných prostředích, ale pokud je zařízení schopné udržovat sledování v nepodporovaném prostoru, může docházet k nežádoucím vedlejším účinkům. Například při použití MPM mohou uživatelé zjistit, že je možné použít ve výtahu při změně podlaží, zatímco to bylo dříve nemožné. Přestože MPM bohužel umožňuje zařízení udržovat sledování, v tuto chvíli nezvládá správu map. Uživatelé zjistí, že změna podlaží ve výtahu způsobí, že zařízení zmást horní a dolní podlaží a negativně ovlivní kvalitu mapy.
+- Jediným podporovaným prostředím pro režim přesouvání platforem (MPM) jsou velké mořské nádoby s nízkým dynamickým pohybem. Jinými slovy, mnoho běžných prostředí/situací **se ještě nepodporuje** kvůli jejich vysoké frekvencí a vysokému množství akcelerace a [Jerk](https://en.wikipedia.org/wiki/Jerk_(physics)). Například: roviny, vlaky, automobily, kola, autobusy, malé čluny, výtahy atd.
+- pokud je povolený MPM, může Hologramy wobble mírně, zejména v případě nestabilní vody.
+- Nic nebrání uživatelům v pokusu o použití MPM v nepodporovaných prostředích, ale pokud je zařízení schopné udržovat sledování v nepodporovaném prostoru, může docházet k nežádoucím vedlejším účinkům. Například u MPM můžou uživatelé najít možnost použít v výtahu a přitom měnit podlahu, zatímco to bylo předtím nemožné. Ale MPM umožňuje, aby zařízení udržovalo sledování, ale v tuto chvíli nezpracovává správu map. Uživatelé zjistí, že změna podlaží v výtahu způsobí, že zařízení Zaměňujte horní a dolní podlahu a negativně ovlivní kvalitu mapy.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Podpora beta verze pro přesun režimu platformy vyžaduje jenom několik požadavků:
+Podpora beta verzí pro režim přesunu platforem vyžaduje jenom několik požadavků:
 
-1. Nainstalujte build 20348.1411 nebo novější tak, že si probliká nejnovější sestavení [insiderů](hololens-insider.md#ffu-download-and-flash-directions) přes ARC nebo zaregistrujete a [aktualizujete zařízení.](hololens-insider.md#start-receiving-insider-builds)
+1. Nainstalujte Build 20348,1411 nebo novější [pomocí blikání nejnovějších buildů Insider prostřednictvím ARC](hololens-insider.md#ffu-download-and-flash-directions) nebo [registraci a aktualizace zařízení](hololens-insider.md#start-receiving-insider-builds).
 
    > [!NOTE]
-   > Toto sestavení je aktuálně k dispozici pouze na [vývojářském kanálu Insider.](hololens-insider.md#start-receiving-insider-builds)
+   > Toto sestavení je v tuto chvíli dostupné jenom na [vývojářském kanálu Insider](hololens-insider.md#start-receiving-insider-builds).
 
-2. Povolení [vývojářského režimu a Portál zařízení](/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
+2. Povolit [vývojářský režim a portál zařízení](/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
 
-## <a name="enabling-moving-platform-mode"></a>Povolení přesunu režimu platformy
+## <a name="enabling-moving-platform-mode"></a>Povoluje se režim přesunutí platformy.
 
-Pokud chcete povolit režim Přesunutí platformy, [nejprve povolte Portál zařízení](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
+Pokud chcete povolit režim přesunu platforem, nejdřív [Povolte portál zařízení](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
 
-1. Vyberte **dohodu** Systém v nabídce vlevo.
+1. V nabídce na levé straně vyberte **systém** pro přiznávání.
 
    ![První obrázek](.\images\moving-platform-1w.png)
 
-2. Vyberte stránku **Moving Platform Mode (Režim přesunu** platformy) a zaškrtněte **políčko Moving Platform Mode (Režim přesunu platformy).**
+2. Vyberte stránku **režim přesunutí platformy** a zaškrtněte políčko **režim přesunutí platformy** .
 
     ![Druhý obrázek](.\images\moving-platform-2z.png)
 
-3. Po zobrazení výzvy s upozorněním vyberte **OK.**
+3. Po zobrazení výzvy s upozorněním vyberte **OK** .
 
    ![Třetí obrázek](.\images\moving-platform-3w.png)
 
-4. Restartujte zařízení. Můžete to udělat buď prostřednictvím nabídky Portál zařízení **Power** v pravém horním rohu, nebo vydáním následujícího hlasového příkazu Restartujte zařízení a &quot; vyberte &quot; &quot; &quot; Ano.
+4. Restartujte zařízení, což lze provést buď pomocí nabídky **napájení** na portálu zařízení v pravém horním rohu, nebo vyvoláním následujícího hlasového příkazu &quot; restartujte zařízení &quot; a vyberte &quot; Ano &quot; .
 
    ![Čtvrtý obrázek](.\images\moving-platform-4z.png)
 
-Pokud se vám v aplikaci Portál zařízení možnost Moving Platform Mode (Režim přesunu platformy), pravděpodobně to znamená, že ještě nejste ve správném sestavení. Viz [část Požadavky.](#prerequisites)
+Pokud nevidíte možnost režimu přesunu platforem na portálu zařízení, pravděpodobně to znamená, že ještě nejste na správném buildu. Přečtěte si část [požadavky](#prerequisites) .
 
-## <a name="reporting-issues"></a>Hlášení problémů
+## <a name="reporting-issues"></a>Vytváření sestav – problémy
 
-Jak je uvedeno výše, tato funkce je beta verze dostupná jenom v režimu pro vývojáře, což znamená, že může dojít k problémům. Pokud k tomu dojde, můžeme produkt prozkoumat a vylepšit.
+Jak je uvedeno výše, tato funkce je beta verze dostupná jenom v režimu pro vývojáře, což znamená, že se můžete setkat s problémy. Pokud k tomu dojde, můžeme produkt prozkoumat a vylepšit, prosím
 
-1. Nahlásit problém prostřednictvím [Centrum Feedback](hololens-feedback.md) kategorii **Přesnost hologramu,** stabilita a spolehlivost a zahrňte:
-    1. Popis problému, včetně očekávaného chování a očekávaného chování
-    1. Záznam Mixed Reality [videa o](holographic-photos-and-videos.md#capture-a-mixed-reality-video) problému
-2.  Otevřete případ podpory na adrese a nasdílejte adresu URL Centrum Feedback, abychom se mohli s vámi s vámi podělit pro případ, že budeme mít [https://aka.ms/hlsupport](https://aka.ms/hlsupport) následné dotazy.
+1. Nahlaste problém prostřednictvím [centra Feedback](hololens-feedback.md) v kategorii **přesnost, stabilita a spolehlivost hologramu** a zahrňte:
+    1. Popis problému, včetně očekávaného chování a chování
+    1. [Video](holographic-photos-and-videos.md#capture-a-mixed-reality-video) o navýšení problému ve smíšené realitě
+2.  Otevřete případ podpory [https://aka.ms/hlsupport](https://aka.ms/hlsupport) a sdílejte adresu URL centra zpětné vazby, abychom se mohli obrátit na případ, kdy máme následné otázky.

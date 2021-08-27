@@ -1,6 +1,6 @@
 ---
-title: registrace HoloLens v MDM
-description: naučte se, jak zaregistrovat HoloLens ve správě mobilních zařízení (MDM) pro snazší správu více zařízení.
+title: Registrace HoloLens MDM
+description: Zjistěte, jak zaregistrovat HoloLens ve správě mobilních zařízení (MDM), abyste usnadnili správu více zařízení.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 2a9b3fca-8370-44ec-8b57-fb98b8d317b0
@@ -14,58 +14,58 @@ manager: laurawi
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 5ded375d88740b9367eec87e4e902c423f131689
-ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
+ms.openlocfilehash: a368c622c137374ea9cc544490d3492fa9d3f8c1
+ms.sourcegitcommit: 749d617f3f0ce3e6363ff6cd1a03f87b9280f418
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122858979"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122979351"
 ---
-# <a name="enroll-hololens-in-mdm"></a>registrace HoloLens v MDM
+# <a name="enroll-hololens-in-mdm"></a>Registrace HoloLens MDM
 
-pomocí řešení jako [Microsoft Intune](/intune/windows-holographic-for-business)můžete spravovat více Microsoft HoloLens zařízení současně. Budete moct spravovat nastavení, vybrat aplikace, které chcete nainstalovat, a nastavit konfigurace zabezpečení přizpůsobené potřebám vaší organizace. přečtěte si téma [správa zařízení se systémem Windows holografická s Microsoft Intune](/intune/windows-holographic-for-business), [poskytovateli konfiguračních služeb (csp), které jsou podporovány v Windowsových holografickích](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference#hololens), a [zásady podporované Windows Holographic for Business](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#hololenspolicies).
+Pomocí řešení, jako je Microsoft HoloLens , můžete spravovat několik Microsoft Intune Microsoft HoloLens zařízení [současně.](/intune/windows-holographic-for-business) Budete moct spravovat nastavení, vybrat aplikace pro instalaci a nastavení konfigurací zabezpečení přizpůsobených potřebám vaší organizace. Viz Správa zařízení se [systémem Windows Holographic](/intune/windows-holographic-for-business)s Microsoft Intune , poskytovatelé konfiguračních služeb [(CSP)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference#hololens)podporovaní ve službě Windows Holographic a zásady podporované [službou Windows Holographic for Business](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/policy-configuration-service-provider#hololenspolicies).
 
 > [!NOTE]
-> Správa mobilních zařízení (MDM), včetně funkcí sítě VPN, BitLocker a celoobrazovkového režimu, je k dispozici pouze při [upgradu na Windows Holographic for Business](hololens1-upgrade-enterprise.md).
+> Správa mobilních zařízení (MDM), včetně funkcí VPN, BitLockeru a bezobrazovkovém režimu, je dostupná jenom při upgradu na [Windows Holographic for Business](hololens1-upgrade-enterprise.md).
 
 ## <a name="requirements"></a>Požadavky
 
- aby bylo možné spravovat HoloLens zařízení, bude nutné, aby vaše organizace měla nastavenou správu mobilních zařízení (MDM). váš poskytovatel MDM může být Microsoft Intune nebo poskytovatel třetí strany, který používá rozhraní Microsoft MDM api.
+ Aby bylo možné spravovat zařízení s Správa zařízení mobilními zařízeními, musí mít vaše organizace HoloLens mobilní zařízení. Váš poskytovatel MDM může být Microsoft Intune nebo jiného poskytovatele, který používá rozhraní MICROSOFT MDM API.
 
 ## <a name="different-ways-to-enroll"></a>Různé způsoby registrace
 
-V závislosti na typu [identity](hololens-identity.md) , který jste zvolili při počátečním spuštění nebo po přihlášení, existují různé metody registrace.
+V závislosti na typu [identity zvolené](hololens-identity.md) při OOBE nebo po přihlášení existují různé metody registrace.
 
-- pokud se jedná o službu Azure AD, pak buď během počátečního nastavení, nebo v aplikaci **Nastavení**  ->  **accessového nebo školním**  ->  tlačítku **Připojení** .
-    - V případě Azure AD dojde k [automatické registraci MDM](hololens-enroll-mdm.md#auto-enrollment-in-mdm) jenom v případě, že je služba Azure AD nakonfigurovaná s adresami URL pro zápis.
+- Pokud je identitou Azure AD, pak buď během doby provozu, nebo **při Nastavení přístupu** k aplikacím do práce nebo  ->    ->  **Připojení** zařízení.
+    - Automatická registrace [MDM](hololens-enroll-mdm.md#auto-enrollment-in-mdm) v Azure AD nastane jenom v případě, že je v Azure AD nakonfigurované adresy URL pro registraci.
 
-- Pokud je identita Azure AD a u zařízení se systémem Intune MDM, ke kterému je přiřazený určitý nakonfigurovaný profil, používá předregistrovaná identita, pak při spuštění služby Azure AD-Join a [automatické registraci MDM](hololens-enroll-mdm.md#auto-enrollment-in-mdm) dojde k zápisu v rámci služby OOBE.
-    - Také označovaný jako [autopilot Flow](hololens2-autopilot.md) dostupný v [sestaveních 19041.1103 +](hololens-release-notes.md#windows-holographic-version-2004).
+- Pokud je identita Azure AD a zařízení je předem zaregistrované na serveru MdM Intune s přiřazeným konkrétním konfiguračním profilem, pak během spuštění počítače dojde k azure AD-Join a automatické registraci [MDM.](hololens-enroll-mdm.md#auto-enrollment-in-mdm)
+    - Také se nazývá [tok Autopilot](hololens2-autopilot.md) Dostupný v [buildech verze 19041.1103 nebo více.](hololens-release-notes.md#windows-holographic-version-2004)
 
 
-- pokud je identita MSAá, použijte   ->  tlačítko pro **přístup k práci nebo škole**  ->  **Připojení** aplikace Nastavení.
-    - Také se nazývá AWA (Přidat pracovní účet).
-- pokud je identita místní uživatel, pak pomocí aplikace **Nastavení**  ->  **přístup k aplikaci v pracovním nebo školním**  ->  **zápisu jenom v odkazu správa zařízení** .
-    - Označuje se taky jako čistý tok zápisu MDM.
+- Pokud je Identita MSA, pak **Nastavení tlačítko Přístup** do práce nebo  ->    ->  **Připojení** aplikace.
+    - Říká se mu také tok Přidat pracovní účet (AWA).
+- Pokud je identita místní uživatel, pak pomocí **Nastavení přístup** do aplikace nebo do školy  ->    ->  **zaregistrovat jenom v odkazu pro správu** zařízení.
+    - Říká se jim také čistý tok registrace MDM.
 
-jakmile je zařízení zaregistrované ve vašem serveru MDM, Nastavení aplikace teď odrážejí, že je zařízení zaregistrované ve správě zařízení.
+Jakmile je zařízení zaregistrované na serveru MDM, aplikace Nastavení bude odrážet, že je zařízení zaregistrované ve správě zařízení.
 
-## <a name="auto-enrollment-in-mdm"></a>Automatické registrace v MDM
+## <a name="auto-enrollment-in-mdm"></a>Automatická registrace v MDM
 
-pokud má vaše organizace [předplatné azure Premium](https://azure.microsoft.com/overview/), používá Azure Active Directory (Azure ad) a řešení MDM, které přijímá token Azure AD pro ověřování (v současné době se podporuje jenom v Microsoft Intune a sledování), může správce IT nakonfigurovat službu Azure ad tak, aby po přihlášení uživatele k účtu azure ad automaticky povolovala registraci MDM. [Přečtěte si, jak nakonfigurovat registraci Azure AD.](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
+Pokud má vaše organizace předplatné [Azure Premium](https://azure.microsoft.com/overview/), používá službu Azure Active Directory (Azure AD) a řešení MDM, které k ověřování přijímá token Azure AD (v současné době se podporuje pouze v Microsoft Intune a AirWatchu), může správce IT nakonfigurovat Službu Azure AD tak, aby po přihlášení uživatele ke svému účtu Azure AD automaticky povoluje registraci MDM. [Zjistěte, jak nakonfigurovat registraci Azure AD.](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment)
 
-Pokud je povolená Automatická registrace, nevyžaduje se žádná další ruční registrace. Když se uživatel přihlásí pomocí účtu Azure AD, zařízení se zaregistruje do MDM po dokončení prvního spuštění prostředí.
+Pokud je povolená automatická registrace, není potřeba žádná další ruční registrace. Když se uživatel přihlásí pomocí účtu Azure AD, zařízení se po dokončení prvního spuštění zapíše do MDM.
 
-Když je zařízení připojené k Azure AD, může to mít vliv na to, kdo posuzuje [vlastníka zařízení](security-adminless-os.md#device-owner).
+Pokud je zařízení připojené k Azure AD, může to mít vliv na to, kdo ho považuje [za vlastníka.](security-adminless-os.md#device-owner)
 
-## <a name="unenroll-hololens-from-intune"></a>zrušit registraci HoloLens v intune
+## <a name="unenroll-hololens-from-intune"></a>Zrušení registrace HoloLens v Intune
 
-V závislosti na metodě registrace možná nebude k dispozici zrušení registrace zařízení.
+V závislosti na metodě registrace nemusí být registrace zařízení dostupná.
 
-Pokud je vaše zařízení zaregistrované s účtem služby Azure AD nebo s automatickým pilotním, nedá se zrušit jeho registrace v Intune. pokud chcete zrušit připojení HoloLens z Azure ad nebo ho znovu připojit k jinému klientovi Azure ad, musíte zařízení [resetovat nebo znovu zablikat](hololens-recovery.md#reset-the-device) .
+Pokud bylo vaše zařízení zaregistrované pomocí účtu Azure AD nebo Autopilotu, není možné zrušit jeho registrace v Intune. Pokud se chcete ke službě Azure AD HoloLens nebo se k ní znovu připojit k jinému tenantovi Azure AD, musíte zařízení resetovat nebo na něj [odkazovat.](hololens-recovery.md#reset-the-device)
 
-Pokud bylo zařízení zaregistrováno z účtu MSA, který přidal pracovní účet, nebo z místního účtu, který byl zaregistrován pouze ve správě zařízení, můžete zrušit registraci zařízení. otevřete nabídka Start a pak klikněte na tlačítko přístup k **aplikaci Nastavení**  ->  **Work nebo School**  ->  *YourAccount*  ->  **disconnect** .
+Pokud bylo vaše zařízení zaregistrované z účtu MSA, který přidal pracovní účet, nebo z místního účtu, který se zaregistroval jenom ve správě zařízení, můžete registraci zařízení zrušit. Otevřete okno nabídka Start pak vyberte Nastavení **App**  ->  **Access Work nebo School**  ->    ->  **YourAccount Disconnect.**
 
-## <a name="ensure-that-mdm-enrollment-isnt-blocked-for-windows-devices"></a>ujistěte se, že registrace MDM není pro zařízení Windows blokovaná.
+## <a name="ensure-that-mdm-enrollment-isnt-blocked-for-windows-devices"></a>Ujistěte se, že registrace MDM není blokovaná pro Windows zařízení.
 
-aby mohl automatický pilotní postup úspěšně proběhnout, musíte zajistit, aby se zařízení HoloLens mohla zaregistrovat. vzhledem k tomu, že se HoloLens považuje za Windows zařízení, bude nutné, aby nedocházelo k omezením registrace, která by mohla blokovat nasazení. [Projděte si tento seznam omezení](/mem/intune/enrollment/enrollment-restrictions-set) a ujistěte se, že budete moci zaregistrovat svá zařízení.
+Aby byla registrace úspěšná, musíte zajistit, aby se vaše HoloLens mohli zaregistrovat. Vzhledem HoloLens, že se Windows zařízení, nebude nutné mít žádná omezení registrace, která by mohla vaše nasazení blokovat. [Zkontrolujte tento seznam omezení a](/mem/intune/enrollment/enrollment-restrictions-set) ujistěte se, že budete moct zaregistrovat zařízení.
