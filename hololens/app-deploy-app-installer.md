@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0b0de9039ce4d0c1eeab968b0f7c2f5eee8cdc34739391b6022b409325955350
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 071dfb3b211928c561fc84754dd7ed4d64886f61
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665263"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123188912"
 ---
 # <a name="install-apps-on-hololens-2-via-app-installer"></a>instalace aplikací na HoloLens 2 prostřednictvím instalačního programu aplikace
 
@@ -73,7 +73,7 @@ Aplikace, které jsou nainstalované přes tuto metodu, musí být digitálně p
 
 Nainstalovaná aplikace se automaticky spustí po dokončení instalace.
 
-![Instalace příkladů MRTK prostřednictvím instalačního programu aplikace](images/hololens-app-installer-picture.jpg)
+![Instalace příkladů MRTK prostřednictvím instalačního programu aplikace.](images/hololens-app-installer-picture.jpg)
 
 ### <a name="troubleshooting-installs"></a>Řešení potíží s instalací
 

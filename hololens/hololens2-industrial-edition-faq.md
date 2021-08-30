@@ -1,7 +1,7 @@
 ---
-title: nejčastější HoloLens 2 Industrial Edition
-description: Nejčastější dotazy k edici HoloLens 2 Industrial Edition
-keywords: HoloLens 2 možnosti nákupu, HoloLens, Industrial Edition
+title: nejčastější dotazy k HoloLens 2 pro průmyslové edice
+description: nejčastější dotazy týkající se HoloLens 2, průmyslový Edition
+keywords: HoloLens 2 možnosti nákupu, HoloLens možnosti, průmyslový edice
 author: evmill
 ms.author: v-evmill
 ms.reviewer: sekerawa
@@ -14,90 +14,90 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 1363920182107137ce3441990e429e71f7533923e066cdeaa8f9c105e453c757
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 0ac7228e4af807d709d218942c50a9b110a419c1
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659840"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189490"
 ---
-# <a name="hololens-2---industrial-edition-faq"></a>HoloLens 2 – Industrial Edition – nejčastější dotazy
+# <a name="hololens-2---industrial-edition-faq"></a>nejčastější dotazy k HoloLens 2 – průmyslové edice
 
-![Edici Industrial edition použitou v čisté místnosti](./images/industrial-sku-with-remote-assist.png)
+![Průmyslový edice používaná v čisté místnosti.](./images/industrial-sku-with-remote-assist.png)
 
-## <a name="hololens-2-industrial-edition-benefits"></a>Výhody HoloLens 2 Industrial Edition
+## <a name="hololens-2-industrial-edition-benefits"></a>výhody HoloLens 2 pro průmyslové edice
 
-### <a name="what-benefits-does-hololens-2-industrial-edition-2-include"></a>Jaké výhody přináší HoloLens 2 Industrial Edition 2?
+### <a name="what-benefits-does-hololens-2-industrial-edition-2-include"></a>jaké výhody HoloLens 2 průmyslové edice 2 zahrnují?
 
-Edice HoloLens 2 Industrial Edition je navržená tak, aby řešila problémy pro průmyslové zákazníky v prostředích čistých místností a pomáhala s provozní bezpečností v těchto prostředích. Je navržená a otestovaná pro dodržování předpisů v čisté místnosti, vnitřní bezpečnostní certifikace a je podpořená ještě robustnějším programem podpory.
+HoloLens 2 průmyslová edice je navržená tak, aby vyřešila problémy pro průmyslové zákazníky v čistých prostředích místnosti a pomáhala s provozním zabezpečením v těchto prostředích. Je navržený a testovaný pro zajištění čistého dodržování předpisů v místnosti, vnitřních bezpečnostních certifikací a zajišťuje ještě robustnější program podpory.
 
-Použití edice HoloLens 2 Industrial Edition v těchto prostředích výrazně zmenšuje cestu do oblastí čisté místnosti a z nich a také snížení obecných nákladů na práci. Když budete mít v čisté místnosti fyzicky malé nároky a stále budete mít přístup k jakékoli dokumentaci a úrovni odborných znalostí, snížíte tím náklady na práci.
+používáním HoloLens 2 průmyslových edic v těchto prostředích se bude významně snížit cestování v oblasti čistých místností a snížit celkové náklady na práci. Schopnost mít v čisté místnosti fyzicky dostatek informací a stále mít přístup k jakékoli/celé dokumentaci a úrovně odbornosti sníží náklady na práci.
 
-### <a name="what-clean-room-environments-does-hololens-2-industrial-edition-support"></a>Jaká prostředí čistých místností HoloLens 2 Industrial Edition?
+### <a name="what-clean-room-environments-does-hololens-2-industrial-edition-support"></a>jaké čisté prostředí místností HoloLens podporu 2 pro průmyslový edici?
 
-HoloLens 2 Industrial Edition podporuje regulovaná prostředí, která mají přísné požadavky a splňují standardy emisí částice pro čisté místnosti iso 14644-1 třídy 5.
+HoloLens 2 průmyslový edice podporuje vyřízená prostředí, která mají přísné požadavky, a vyhovují standardům emisí částic pro čisté místnosti ISO 14644-1 třídy 5.
 
-Další informace najdete v standardu [ISO 14644-1](https://www.iso.org/standard/53394.html) (Třídy Air air air chytění v čištěních a v čistých zónách).
+Další informace najdete v článku [ISO standard 14644-1](https://www.iso.org/standard/53394.html) (třídy čistoty částic ve světě v Cleanrooms a čisté zóny).
 
-### <a name="does-hololens-2-industrial-edition-meet-requirements-for-intrinsic-safety"></a>Splňuje HoloLens 2 Industrial Edition požadavky na vnitřní bezpečnost?
+### <a name="does-hololens-2-industrial-edition-meet-requirements-for-intrinsic-safety"></a>splňuje HoloLens 2 průmyslová edice požadavky na vnitřní zabezpečení?
 
-Edice HoloLens 2 Industrial Edition je certifikovaná pro použití v prostředích třídy I, divize 2 skupin A, B, C a D HAZLOC, kde mohou existovat plyny, plyny nebo kapaliny.
+HoloLens 2 průmyslových edicích je certifikováno pro použití ve třídě UL I, divize 2-groups a, B, C a D HAZLOC prostředí, kde mohou existovat hořlavé plyny, vapors nebo kapaliny.
 
-Další informace najdete v informacích o [certifikacích slyšitelných informací.](https://www.ul.com/services/ul-and-c-ul-hazardous-areas-certification-north-america?csrf-token=CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz&amp;Search=UL+Class+I%2C+Dev+2+&amp;search-submit=Search)
+Další informace najdete v tématu [certifikace UL](https://www.ul.com/services/ul-and-c-ul-hazardous-areas-certification-north-america?csrf-token=CIwNZNlR4XbisJF39I8yWnWX9wX4WFoz&amp;Search=UL+Class+I%2C+Dev+2+&amp;search-submit=Search).
 
-### <a name="does-the-hololens-2-industrial-edition-hold-an-atex-certification"></a>Má HoloLens 2 Industrial Edition certifikaci ATEX?
+### <a name="does-the-hololens-2-industrial-edition-hold-an-atex-certification"></a>drží HoloLens 2 průmyslový Edition certifikaci ATEX?
 
-No. Verze HoloLens 2 Industrial Edition nemá certifikaci ATEX. V HoloLens 2 Industrial Edition platí certifikace us/CAN class I, division 2-Groups A, B, C a D.
+No. HoloLens 2 průmyslový edice nemá certifikaci ATEX. HoloLens 2 průmyslový edice obsahuje US/CAN třídy I, divize 2-groups a, B, C a D.
 
-### <a name="can-the-device-be-used-in-semiconductor-and-pharmaceutical-environments"></a>Je možné zařízení používat ve farmaceutických a farmaceutických prostředích?
+### <a name="can-the-device-be-used-in-semiconductor-and-pharmaceutical-environments"></a>Může se zařízení používat v polovodičovém a farmaceutickém prostředí?
 
-Yes. Edice HoloLens 2 Industrial Edition je navržená s ohledem na toto prostředí. Na základě certifikací pro čisté místnosti a provozní bezpečnost je tato edice HoloLens 2 připravená k použití v těchto prostředích.
+Ano. HoloLens 2 průmyslový edice je navržená s ohledem na životní prostředí, s certifikací pro čisté místnosti a provozní bezpečnost. tato edice HoloLens 2 je připravená k použití v těchto prostředích.
 
-### <a name="what-is-the-hololens-2-industrial-edition-warranty"></a>Jaká je záruka HoloLens 2 Industrial Edition?
+### <a name="what-is-the-hololens-2-industrial-edition-warranty"></a>jaká je záruka HoloLens 2 pro průmyslové edice?
 
-V HoloLens 2 Industrial Edition je k dispozici 2letá záruka a program rychlé výměny.
+HoloLens 2 průmyslová edice nabízí na 2 roky záruku a rychlý nahrazující program.
 
-Informace o záruce [najdete na HoloLens stránce.](https://support.microsoft.com/warranty)
+na této stránce najdete [informace o záruce HoloLens](https://support.microsoft.com/warranty).
 
-### <a name="what39s-the-rapid-replacement-program"></a>Co&#39;je program pro rychlé nahrazování?
+### <a name="what39s-the-rapid-replacement-program"></a>Co&#39;s programem rychlým nahrazením?
 
-Kromě 2leté záruky obsahuje systém HoloLens 2 Industrial Edition program rychlé výměny, který zákazníkům umožňuje dostávat náhradní zařízení přes noc nebo zrychlit expedici (rychlejší než dostupné možnosti) před přijetím vadného zařízení společností Microsoft. Pokud chcete zahájit náhradu, [kontaktujte podporu](https://aka.ms/hololenssupport).
+kromě záruku na dvouleté úrovni HoloLens 2 průmyslový edice zahrnuje rychlý nahrazující program, který zákazníkům umožňuje přijímat náhradní zařízení v noci nebo urychlené odeslání (rychlejší z dostupných možností) před tím, než je společnost Microsoft nedostala do vadného zařízení. Pokud chcete začít s náhradou, [kontaktujte prosím podporu](https://aka.ms/hololenssupport).
 
 > [!NOTE]
-> Podpora bude potřebovat jasný popis jakékoli chyby a k potvrzení, že zařízení není možné obnovit do funkčního stavu, než bude nahrazeno.
+> Podpora bude vyžadovat jasný popis jakékoli vady a potvrzení, že se zařízení nedá obnovit do funkčního stavu, než se nahradí.
 
-### <a name="can-i-purchase-replacement-parts-for-hololens-2-industrial-edition"></a>Můžu si koupit náhradní díly pro HoloLens 2 Industrial Edition?
+### <a name="can-i-purchase-replacement-parts-for-hololens-2-industrial-edition"></a>můžu si koupit náhradní části pro HoloLens 2 průmyslovou edici?
 
-Náhradní díly a náhradní díly nejsou podporované pro HoloLens 2 Industrial Edition. Pokud zjistíte, že potřebujete náhradu, použijte náš program rychlé výměny pro HoloLens 2 Industrial Edition.
+náhradní části a refurbishments nejsou podporované pro HoloLens 2 – průmyslový edici. pokud zjistíte, že potřebujete náhradu, použijte náš rychlý nahrazující program pro HoloLens 2 průmyslový edici.
 
-### <a name="is-the-carrying-case-clean-room-approved"></a>Je schvalovat čistá místnost pro přepravní případ?
+### <a name="is-the-carrying-case-clean-room-approved"></a>Je schválená čisticí místnost ve schváleném případě?
 
-Obal je tvořený sézním materiálem a neměl by se používat v čistých místnostech.
+Transportní případ se skládá z Porous materiálu a neměl by se používat v čistých místnostech.
 
-## <a name="cleaning-the-industrial-edition"></a>Čištění edice Industrial
+## <a name="cleaning-the-industrial-edition"></a>Čištění průmyslové edice
 
-### <a name="can-i-use-the-same-cleaning-materials-for-hololens-2-industrial-edition-as-the-other-editions"></a>Můžu použít stejné čisticí materiály pro HoloLens 2 Industrial Edition jako ostatní edice?
+### <a name="can-i-use-the-same-cleaning-materials-for-hololens-2-industrial-edition-as-the-other-editions"></a>můžu použít stejné čisticí materiály pro HoloLens 2, průmyslové edice jako jiné edice?
 
-Edici HoloLens 2 Industrial Edition je možné vyčistit pomocí 70% izolace a vody, která vyčistí pevné povrchy zařízení, včetně &quot; visoru, brow padu a &quot; koulí. Další informace najdete v nejčastějších [dotazech HoloLens 2 čištění.](/hololens/hololens2-maintenance)
+HoloLens 2 průmyslovou edici je možné vyčistit řešením &quot; 70% &quot; isopropyl alkoholu a vody k vyčištění pevných povrchů zařízení, včetně clony, prohlížeč a hlavního panelu. další informace najdete v tématu [věnovaném odstraňování častých HoloLens 2](/hololens/hololens2-maintenance).
 
-### <a name="how-do-i-clean-hololens-2-industrial-edition"></a>Návody vyčistit HoloLens 2 Industrial Edition?
+### <a name="how-do-i-clean-hololens-2-industrial-edition"></a>Návody vyčistit HoloLens 2 průmyslovou edici?
 
-Velká část rad pro vyčištění standardního HoloLens 2 platí pro HoloLens 2 Industrial Edition. Prohlédněte si [nejčastější HoloLens 2 čištění.](/hololens/hololens2-maintenance)
+většina rad pro čištění standardních HoloLens 2 se vztahuje na HoloLens 2 průmyslovou edici. přečtěte si [nejčastější dotazy týkající se HoloLens 2](/hololens/hololens2-maintenance).
 
-### <a name="how-should-i-hold-hololens-2-industrial-edition-when-cleaning-it"></a>Jak mám při čištění HoloLens 2 Industrial Edition?
+### <a name="how-should-i-hold-hololens-2-industrial-edition-when-cleaning-it"></a>jak mám při čištění držet HoloLens 2 průmyslový edici?
 
-Pevně od padu pro krátka. Při podržení HoloLens 2 z oblasti vyžádáte nejmenší tlak na ruce zařízení a zajistíte jeho dlouhou životnost.
+Pevně od panelu prohlížeč držením HoloLens 2 z prohlížečové plochy nasadíte nejmenší tlak na paže zařízení a zajistěte jeho longevity.
 
 ## <a name="general-questions"></a>Obecné otázky
 
-### <a name="what-operating-system-does-the-hololens-2-industrial-edition-have"></a>Jaký operační systém má HoloLens 2 Industrial Edition?
+### <a name="what-operating-system-does-the-hololens-2-industrial-edition-have"></a>jaký operační systém má HoloLens 2 průmyslový Edition?
 
-Edice Industrial Edition má stejný operační systém jako všechny ostatní HoloLens 2 edice. Další informace o aktualizacích operačního HoloLens najdete [v poznámkách k verzi.](hololens-release-notes.md)
+průmyslový edice má stejný operační systém jako všechny ostatní edice HoloLens 2. další informace o HoloLens aktualizace operačního systému [najdete v našem poznámkách k verzi](hololens-release-notes.md).
 
-### <a name="what-apps-can-run-on-the-hololens-2-industrial-edition"></a>Jaké aplikace je možné spouštět na HoloLens 2 Industrial Edition?
+### <a name="what-apps-can-run-on-the-hololens-2-industrial-edition"></a>které aplikace se můžou spouštět – na HoloLens 2 – průmyslový edici?
 
-HoloLens 2 Industrial Edition podporuje aplikace první i třetí strany s výběrem připravených podnikových aplikací. Obchodní aplikace je možné nasadit do zařízení s využitím několika [metod nasazení aplikací.](/hololens/app-deploy-overview)
+HoloLens 2 průmyslový edice podporuje jak první, tak i aplikace třetích stran s výběrem integrovaných aplikací připravených pro podniky. Obchodní aplikace je možné nasadit do zařízení, které využívá několik  [metod nasazení aplikace](/hololens/app-deploy-overview).
 
-### <a name="can-i-upgrade-from-hololens-2-to-hololens-2-industrial-edition"></a>Můžu upgradovat z HoloLens 2 na HoloLens 2 Industrial Edition?
+### <a name="can-i-upgrade-from-hololens-2-to-hololens-2-industrial-edition"></a>můžu upgradovat z HoloLens 2 na HoloLens 2 průmyslovou edici?
 
-Nenabízíme upgrady z HoloLens 2 na HoloLens 2 Industrial Edition.
+nenabízíme upgrady od HoloLens 2 až po HoloLens 2 průmyslovou edici.

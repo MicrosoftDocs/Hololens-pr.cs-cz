@@ -14,12 +14,12 @@ ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 74b0c8b78bf6e310965f674098a883acda5ed6101f74619c2dea209beb27e47d
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 70ee881eb0c2ffaade173b31e5168371d042bbb2
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662797"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190068"
 ---
 # <a name="getting-around-hololens-1st-gen"></a>seznámení s HoloLens (1. generace)
 
@@ -45,7 +45,7 @@ Při prvním použití HoloLens Vás provedeme základy. Kurz gesta v nabídce *
 
 HoloLens má senzory, které vám mohou zobrazit několik stop na jednu stranu. když použijete ruce, budete je muset zachovat uvnitř tohoto rámce, nebo je HoloLens uvidí. Při přesunu se rámec přesouvá s vámi.  
 
-![obrázek zobrazující HoloLens snímku pro sledování zásob](./images/hololens-2-gesture-frame.png)
+![obrázek zobrazující HoloLens snímku pro sledování ruky.](./images/hololens-2-gesture-frame.png)
 
 ### <a name="open-the-start-menu-with-bloom"></a>otevřít nabídka Start s bloom
 
@@ -53,7 +53,7 @@ Otevřete nabídku **Start** :
 
 1. Podržíte ruku před vámi, takže se nachází v rámečku gesta.
 1. Bloom: spojíte všechna svoje prsty a pak otevřete svoji ruku.
-  ![Animace, která zobrazuje gesto Bloom](./images/hololens-bloom.gif)
+  ![Animace, která zobrazuje gesto Bloom.](./images/hololens-bloom.gif)
 
 ### <a name="select-holograms-with-gaze-and-air-tap"></a>Výběr hologramů pomocí pohledu a klepnutí vzduchu
 
@@ -139,5 +139,5 @@ pokud se vám nezobrazuje hologramy, které jste umístili při použití HoloLe
 
 - Ujistěte se, že se díváte do pravé oblasti &mdash; a hologramy tam, kde jste je zůstali.
 - Ujistěte se, že jste v dobře osvětlené místnosti bez přímého slunečního světla.
-- Počkej. když HoloLens má při rozpoznávání prostoru problémy, může trvat až minutu, než se znovu zobrazí.
-- pokud se problém opakuje, možná budete chtít vymazat data Hologramy úložiště v **Nastavení**  >  **systému**  >  **Hologramy** a pak vyzkoušet hologramy na domácí realitě.
+- Počkej. Pokud HoloLens potíže s rozpoznáváním prostoru, může opětovné rozpoznání dříve umístěných hologramů trvat až minutu.
+- Pokud problém přetrvává, můžete chtít vymazat data úložiště Hologramy v **Nastavení** System Hologramy a pak znovu umístit  >    >  hologramy do domova hybridní reality.

@@ -1,89 +1,89 @@
 ---
-title: Pokyny k přispívání
-description: Zjistěte, jak přispívat do HoloLens dokumentů na docs.microsoft.com platformě pomocí GitHub Markdownu.
+title: Pokyny pro přispívání
+description: naučte se, jak přispívat do HoloLens dokumentů na platformě docs.microsoft.com pomocí GitHub s charakterem markdownu.
 author: hferrone
 ms.author: mattwoj
 ms.date: 01/04/2021
 ms.topic: article
 ms.prod: hololens
-ms.openlocfilehash: cbf0b2e4b61f006d0b5d7d74d3d81a4b33cfd6d8c2e124288b17959d54a5a1ad
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: d511156d6940574deda7448a6f634c0004b8f053
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665026"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123188980"
 ---
-# <a name="contributing-to-the-hololens-documentation"></a>Přispívání do HoloLens dokumentace
+# <a name="contributing-to-the-hololens-documentation"></a>přispívání do dokumentace k HoloLens
 
-Vítá vás dokumentace [HoloLens.](https://github.com/MicrosoftDocs/Hololens) Všechny články, které v tomto repo vytvoříte nebo upravíte, **budou viditelné pro veřejnost.** 
+vítejte v [dokumentaci k HoloLens](https://github.com/MicrosoftDocs/Hololens). Všechny články, které v tomto úložišti vytváříte nebo upravujete, **budou přístupné veřejnosti.** 
 
-HoloLens dokumentace se zobrazují na docs.microsoft.com platformě, která používá GitHub Markdown s funkcemi Markdigu. Obsah, který v tomto repo budete upravovat, se naformátuje na stylizované stránky, které se zobrazí na adrese /hololens.
+dokumentace HoloLens se zobrazují na platformě docs.microsoft.com, která GitHub používá markdownu s funkcemi Markdig. Obsah, který upravíte v tomto úložišti, se naformátuje na stylizované stránky, které se zobrazují na/HoloLens.
 
-Tato stránka popisuje základní kroky a pokyny pro přispívání a odkazy na základy Markdownu. Děkujeme za váš příspěvek!
+Tato stránka obsahuje základní kroky a pokyny pro přispívání a odkazy na základy Markdownu. Děkujeme za váš příspěvek!
 
 ## <a name="available-repos"></a>Dostupná úložiště
 
 | Název úložiště | URL |
 | --- | --- |
 | HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
-| Hybridní realita | [MicrosoftDocs/hybridní realita](/windows/mixed-reality) |
-| Průvodce nadšenci VR | [MicrosoftDocs/mixed-reality/enthusiast-guide](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
+| Hybridní realita | [MicrosoftDocs/Mixed – realita](/windows/mixed-reality) |
+| Průvodce nadšenci VR | [MicrosoftDocs/smíšený – realita/patříte mezi fanoušky – příručka](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
 
 ## <a name="before-you-start"></a>Než začnete
 
-Pokud ho ještě nemáte, budete si muset vytvořit účet [GitHub .](https://github.com/join)
+pokud ho ještě nemáte, budete muset [vytvořit účet GitHub](https://github.com/join).
 
 >[!NOTE]
->Pokud jste zaměstnancem Microsoftu, propoejte svůj GitHub s aliasem Microsoftu na portálu [Microsoft Open Source.](https://repos.opensource.microsoft.com/) Připojte **se k organizacím Microsoft** a **MicrosoftDocs.**
+>pokud jste zaměstnancem microsoftu, propojte svůj účet GitHub s aliasem microsoftu na [portálu microsoft Open Source portal](https://repos.opensource.microsoft.com/). Připojte se ke organizacím **"Microsoft"** a **"MicrosoftDocs"** .
 
-Při nastavování GitHub účtu doporučujeme také tato bezpečnostní opatření:
-- Vytvořte silné [heslo pro svůj GitHub účet](https://github.com/settings/admin).
-- Povolte [dvojfaktorové ověřování](https://github.com/settings/two_factor_authentication/configure).
-- Kódy pro [obnovení uložte](https://github.com/settings/auth/recovery-codes) na bezpečném místě.
-- Aktualizujte [nastavení veřejného profilu.](https://github.com/settings/profile)
-   - Nastavte své jméno a zvažte nastavení veřejného *e-mailu* na *Nez zobrazení mé e-mailové adresy.*
-   - Doporučujeme nahrát profilový obrázek, protože miniatura se zobrazuje na stránkách dokumentace, na které přispíváte.
-- Pokud máte v plánu použít příkazový řádek, zvažte nastavení [gitu Správce přihlašovacích údajů pro Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest). Tímto způsobem nebudete muset zadávat heslo pokaždé, když přispíváte.
+při nastavování účtu GitHub doporučujeme také tato bezpečnostní opatření:
+- vytvořte [pro účet GitHub silné heslo](https://github.com/settings/admin).
+- Povolte [dvojúrovňové ověřování](https://github.com/settings/two_factor_authentication/configure).
+- Uložte si [kódy obnovení](https://github.com/settings/auth/recovery-codes) na bezpečné místo.
+- Aktualizujte [Nastavení veřejného profilu](https://github.com/settings/profile).
+   - Nastavte své jméno a zvažte nastavení *veřejného e-mailu* , aby se *nezobrazovala e-mailová adresa*.
+   - Doporučujeme nahrát profilový obrázek, protože Miniatura se zobrazuje na stránkách docs, na které přispějete.
+- Pokud plánujete použití příkazového řádku, zvažte nastavení [Správce přihlašovacích údajů Git pro Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest). Tímto způsobem nebudete muset zadávat heslo pokaždé, když provedete příspěvek.
 
-Systém publikování je svázán s GitHub, takže tyto kroky jsou důležité. Budete uvedeni jako autor nebo přispěvatel každého článku pomocí vašeho aliasu GitHub článku.
+systém publikování je vázaný na GitHub, takže tyto kroky jsou důležité. pomocí aliasu GitHub budete mít v každém článku možnost autor nebo přispěvatel.
 
 ## <a name="editing-an-existing-article"></a>Úprava existujícího článku
 
-Pomocí následujícího pracovního postupu proveďte aktualizace *existujícího* článku prostřednictvím GitHub ve webovém prohlížeči:
+pomocí následujícího pracovního postupu proveďte aktualizace *existujícího článku* prostřednictvím GitHub ve webovém prohlížeči:
 
-1. Přejděte do článku, který chcete upravit, ve složce mixed-reality-docs.
+1. Ve složce Mixed-reality-docs přejděte k článku, který chcete upravit.
 
-2. V pravém horním rohu vyberte tlačítko pro úpravy (ikona tužky).
+2. V pravém horním rohu vyberte tlačítko Upravit (ikona tužky).
 
-   ![Úprava článku](images/editpage.png)
+   ![Upravit článek.](images/editpage.png)
 
-   Tím se automaticky vytvoří fork jednodušné větve z výchozí větve _master_.
+   Tato akce automaticky rozvětvení větve mimo výchozí větev, _Hlavní_.
 
    > [!NOTE]
-   > Tento článek obsahuje odkazy na _hlavní název_, termín, který microsoft už používá. Když se termín odebere ze softwaru, odebereme ho z tohoto článku.
+   > Tento článek obsahuje odkazy na _Hlavní_, termín, který už Microsoft nepoužívá. Po odebrání termínu ze softwaru ho odebereme z tohoto článku.
    
-3. Upravte obsah článku podle základních [informací o Markdownu.](#markdown-basics)
+3. Upravte obsah článku podle [základních základů pro Markdownu](#markdown-basics).
 
 4. Aktualizujte metadata v horní části každého článku:
 
-   * **title**: Název stránky, který se zobrazí na kartě prohlížeče při prohlížení článku. Názvy stránek se používají pro SEO a indexování, proto ho neměňte, pokud to není nutné (i když je to méně důležité, než se dokumentace zveřejní).
-   * **description**: Napište stručný popis obsahu článku, který zvýší SEO a zjišťování.
-   * **author**(autor): Pokud jste primárním vlastníkem stránky, přidejte sem svůj GitHub alias.
-   * **ms.author:** Pokud jste primárním vlastníkem stránky, přidejte sem svůj alias Microsoftu (nepotřebujete @microsoft.com jenom alias).
-   * **ms.date:** Aktualizujte datum, pokud na stránku přidáváte hlavní obsah, ale ne pro opravy, jako je objasnění, formátování, gramatika nebo pravopis.
-   * **keywords**: Keywords aid in SEO (search engine optimization). Přidejte klíčová slova oddělená čárkou a mezerou, která jsou specifická pro váš článek, ale žádná interpunkce za posledním klíčovým slovem v seznamu. Nemusíte přidávat globální klíčová slova, která se vztahují na všechny články, protože se spravují jinde. 
+   * **title**: nadpis stránky, který se zobrazí na kartě prohlížeče při prohlížení článku. Nadpisy stránek se používají pro SEO a indexování, takže neměňte název, pokud není potřeba (ale to je méně důležité, než se dokumentace zveřejní).
+   * **Popis**: Napište stručný popis obsahu článku, který zvyšuje SEO a zjišťování.
+   * **autor**: pokud jste primárním vlastníkem stránky, přidejte sem svůj alias GitHub.
+   * **MS. Author**: Pokud jste primárním vlastníkem stránky, přidejte sem svůj alias Microsoftu (nepotřebujete @microsoft.com , jenom alias).
+   * **MS. Date**: aktualizujte datum, pokud přidáváte hlavní obsah stránky, ale ne pro opravy, jako je například vyjasnění, formátování, gramatika nebo pravopis.
+   * **klíčová slova**: pomocná klíčová slova v SEO (optimalizace vyhledávacích strojů). Přidejte klíčová slova, která jsou oddělená čárkou a mezerou, která jsou specifická pro váš článek, ale za poslední klíčová slova v seznamu se nezaokrouhlí žádné interpunkční znaménko. Nemusíte přidávat globální klíčová slova, která platí pro všechny články, protože jsou spravovaná jinde. 
    
-5. Po dokončení úprav článku se posuňte dolů a vyberte **Propose file change (Navrhnout změnu souboru).**
+5. Až dokončíte úpravy článků, přejděte dolů a vyberte **navrhnout změnu souboru**.
 
-6. Na další stránce vyberte Create **pull request (Vytvořit** žádost o vyžádání) a sloučí se automaticky vytvořená větev do výchozí větve _master_.
+6. Na další stránce vyberte **vytvořit žádost o získání dat** pro sloučení automaticky vytvořené větve do výchozí větve, _hlavní_.
 
 7. Opakujte výše uvedené kroky pro další článek, který chcete upravit.
 
 ## <a name="renaming-or-deleting-an-existing-article"></a>Přejmenování nebo odstranění existujícího článku
 
-Pokud vaše změna přejmenuje nebo odstraní existující článek, nezapomeňte přidat přesměrování. Každý, kdo má odkaz na existující článek, tak bude pořád na správném místě. Přesměrování spravuje soubor .openpublishing.redirection.jsv kořenovém adresáři tohoto repo.
+Pokud vaše změna přejmenuje nebo odstraní existující článek, nezapomeňte přidat přesměrování. Tím se na správném místě pořád ukončí kdokoli s odkazem na stávající článek. Přesměrování se spravují pomocí .openpublishing.redirection.jsv souboru v kořenovém adresáři úložiště.
 
-Pokud chcete přidat přesměrování .openpublishing.redirection.js, přidejte do pole `redirections` položku :
+Chcete-li přidat přesměrování na .openpublishing.redirection.jsna, přidejte do pole položku `redirections` :
 
 ```json
 {
@@ -95,35 +95,35 @@ Pokud chcete přidat přesměrování .openpublishing.redirection.js, přidejte 
         },
 ```
 
-- `source_path`je relativní cesta úložiště ke starému článku, který odebíráte. Ujistěte se, že cesta začíná na a `mixed-reality-docs` končí na `.md` .
+- `source_path`Je relativní cesta úložiště ke starému článku, který odebíráte. Ujistěte se, že cesta začíná `mixed-reality-docs` a končí na `.md` .
 
-- `redirect_url`je relativní veřejná adresa URL ze starého článku do nového článku. Ujistěte se, že **tato adresa** URL neobsahuje nebo , protože odkazuje na veřejnou `mixed-reality-docs` adresu `.md` URL, a ne na cestu k úložišti. Odkazování na oddíl v novém článku pomocí je `#section` povolené. V případě potřeby můžete také použít absolutní cestu k jiné lokalitě.
+- `redirect_url`Je relativní veřejná adresa URL od starého článku k novému článku. Ujistěte se, že tato **Adresa URL neobsahuje** `mixed-reality-docs` nebo `.md` , jak odkazuje na veřejnou adresu URL, a ne na cestu k úložišti. Odkaz na oddíl v rámci nového článku pomocí `#section` je povolen. V případě potřeby můžete také použít absolutní cestu k jinému webu.
 
-- `redirect_document_id` určuje, jestli chcete zachovat ID dokumentu z předchozího souboru. Výchozí formát je `false`. Pokud `true` chcete zachovat hodnotu atributu z `ms.documentid` přesměrovaných článku, použijte . Pokud zachováte ID dokumentu, data, jako jsou zobrazení stránek a hodnocení, se přenesou do cílového článku. Proveďte to v případě, že je přesměrování primárně přejmenování, a nikoli ukazatel na jiný článek, který pokrývá pouze část stejného obsahu.
+- `redirect_document_id` Určuje, zda chcete zachovat ID dokumentu z předchozího souboru. Výchozí formát je `false`. Použijte, `true` Pokud chcete zachovat `ms.documentid` hodnotu atributu z přesměrovaného článku. Pokud zachováte ID dokumentu, data, jako jsou například zobrazení stránky a klasifikace, budou přenesena do cílového článku. Udělejte to, pokud je přesměrování primárně přejmenováno, a ne ukazatel na jiný článek, který se vztahuje pouze na část stejného obsahu.
 
 Pokud přidáte přesměrování, nezapomeňte odstranit i starý soubor.
 
-## <a name="creating-a-new-article"></a>Vytvoření nového článku
+## <a name="creating-a-new-article"></a>Vytváření nového článku
 
-Pomocí následujícího pracovního postupu *můžete vytvářet nové články* v GitHub ve webovém prohlížeči:
+pomocí následujícího pracovního postupu můžete *vytvářet nové články* v úložišti dokumentace prostřednictvím GitHub ve webovém prohlížeči:
 
-1. Vytvořte fork z výchozí větve _master_ pro MicrosoftDocs/mixed-reality pomocí tlačítka **Fork** v pravém horním rohu.
+1. Pomocí tlačítka **rozvětvení** v pravém horním rohu vytvořte rozvětvení s výchozí větví, _Hlavní_ hodnotou MicrosoftDocs/Mixed-realitou.
 
-   ![Rozvětvení výchozí větve, aktuálně s názvem "master".](images/forkbranch.png)
+   ![Rozvětvení výchozí větve, aktuálně pojmenované "Master".](images/forkbranch.png)
 
    > [!NOTE]
-   > Tento článek obsahuje odkazy na _hlavní název_, termín, který microsoft už používá. Když se termín odebere ze softwaru, odebereme ho z tohoto článku.
+   > Tento článek obsahuje odkazy na _Hlavní_, termín, který už Microsoft nepoužívá. Po odebrání termínu ze softwaru ho odebereme z tohoto článku.
    
-2. Ve složce mixed-reality-docs vyberte **vpravo** nahoře Vytvořit nový soubor.
+2. Ve složce Mixed-reality-docs vyberte **vytvořit nový soubor** v pravém horním rohu.
 
-3. Vytvořte název stránky článku (místo mezer použijte spojovníky a nepoužívejte interpunkci ani apostrofy) a připojte ".md".
+3. Vytvořte název stránky pro článek (místo mezer použijte spojovníky a nepoužívejte interpunkci nebo apostrofy) a přidejte ". MD".
 
-   ![Pojmechte novou stránku.](images/newpagetitle.png)
+   ![Pojmenujte novou stránku.](images/newpagetitle.png)
    
    >[!IMPORTANT]
-   >Nezapomeňte vytvořit nový článek ze složky mixed-reality-docs. Můžete to ověřit tak, že na novém řádku názvu souboru najdete /mixed-reality-docs/.
+   >Ujistěte se, že jste nový článek vytvořili ze složky "Mixed-reality-docs". To můžete ověřit zaškrtnutím "/Mixed-reality-docs/" v novém řádku s názvem souboru.
 
-4. Do horní části nové stránky přidejte následující blok metadat:
+4. V horní části nové stránky přidejte následující blok metadat:
 
    ```md
    ---
@@ -137,30 +137,30 @@ Pomocí následujícího pracovního postupu *můžete vytvářet nové články
    ---
    ```
 
-5. Vyplňte příslušná pole metadat, jak je popsáno výše v [části Úprava existujícího článku.](#editing-an-existing-article)
+5. Vyplňte příslušná pole metadat, jak je popsáno výše v části [Úprava existujícího článku](#editing-an-existing-article).
 
-6. Napište obsah článku s využitím [základů Markdownu.](#markdown-basics)
+6. Zápis obsahu článků pomocí [základů Markdownu](#markdown-basics)
 
-7. Do dolní `## See also` části článku přidejte oddíl s odkazy na další relevantní články.
+7. Přidejte do `## See also` dolní části článku část s odkazy na další relevantní články.
 
-8. Po dokončení vyberte **Commit new file (Potvrdit nový soubor).**
+8. Po dokončení vyberte **Potvrdit nový soubor**.
 
-9. Vyberte **New pull request (Nová**  žádost o stažení) a sloučíte hlavní větev vašeho forku do MicrosoftDocs/mixed-reality _master_ (ujistěte se, že šipka ukazuje na správný cíl).
+9. Vyberte **Nová žádost o** přijetí změn a slučte _hlavní_ větev rozvětvení do _hlavního serveru_ MicrosoftDocs/Mixed-reality (Ujistěte se, že šipka odkazuje na správný cíl).
 
-   ![Vytvoření žádosti o stažení z forku do MicrosoftDocs/mixed-reality](images/pr-to-master.png)
+   ![Vytvořte žádost o přijetí změn z větve do MicrosoftDocs/smíšené reality.](images/pr-to-master.png)
 
 ## <a name="markdown-basics"></a>Základy formátu Markdown
 
-Následující zdroje informací vám pomůžou naučit se upravovat dokumentaci pomocí jazyka Markdown:
+Následující materiály vám pomůžou naučit se, jak upravovat dokumentaci pomocí jazyka Markdownu:
 
 - [Základy formátu Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-- [Další materiály pro psaní Markdownu pro docs.microsoft.com](/contribute/how-to-write-use-markdown)
+- [Další zdroje informací pro zápis Markdownu pro docs.microsoft.com](/contribute/how-to-write-use-markdown)
 
-### <a name="adding-tables"></a>Přidání tabulek
+### <a name="adding-tables"></a>Přidávání tabulek
 
-Vzhledem ke způsobu, docs.microsoft.com styly tabulek, nebudou mít ohraničení ani vlastní styly, i když zkusíte vložené šablony stylů CSS. Bude to vypadat, že bude fungovat po krátkou dobu, ale platforma nakonec styl z tabulky vypadne. Proto si naplánujte dopředu a udržujte tabulky jednoduché. Tady je web, který usnadňuje tabulky Markdownu: [Tables Generator]] ( https://www.tablesgenerator.com/markdown_tables) .
+Vzhledem k tomu, že tabulky stylů docs.microsoft.com, nemají ohraničení ani vlastní styly, ani když se pokusíte o vloženou šablonu stylů CSS. Zdá se, že bude fungovat po krátké době, ale nakonec bude tato platforma oddělit styly z tabulky. Proto Plánujte dopředu a udržujte své tabulky jednoduché. Tady je web, který usnadňuje Markdownu tabulek: [generátor tabulek]] ( https://www.tablesgenerator.com/markdown_tables) .
 
-Rozšíření [Docs Markdown pro Visual Studio Code](/teamblog/docs-extension) také usnadňuje generování tabulek, pokud k úpravám dokumentace používáte Visual Studio Code [(viz](#using-visual-studio-code) níže).
+[rozšíření Docs markdownu pro Visual Studio Code](/teamblog/docs-extension) také usnadňuje generování tabulek, pokud používáte [Visual Studio Code (viz níže)](#using-visual-studio-code) , chcete-li upravit dokumentaci.
 
 ### <a name="adding-images"></a>Přidávání imagí
 
@@ -226,11 +226,11 @@ K provedení změn v dokumentaci pomocí Visual Studio Code použijte následuj�
 
    1. Ve webovém prohlížeči vytvořte žádost o přijetí změn, která synchronizuje poslední změny od ostatních přispěvatelů ve výchozí větvi MicrosoftDocs/Mixed-reality, _Master_, do vašeho rozvětvení (Ujistěte se, že šipka odkazuje na správný cíl).
       
-      ![Synchronizace změn z MicrosoftDocs/smíšené reality do rozvětvení](images/sync-repos.png)
+      ![Synchronizace změn z MicrosoftDocs/smíšené reality do rozvětvení.](images/sync-repos.png)
       
    2. v Visual Studio Code vyberte tlačítko synchronizovat pro synchronizaci aktualizovaného rozvětvení s místním klonem.
       
-      ![Klikněte na obrázek tlačítka synchronizace.](images/sync-clone.png)
+      ![Klikněte na obrázek tlačítka synchronizovat.](images/sync-clone.png)
       
 2. Vytvořte nebo upravte články v klonovaném úložišti pomocí Visual Studio Code.
 
@@ -250,7 +250,7 @@ K provedení změn v dokumentaci pomocí Visual Studio Code použijte následuj�
       
 3. Ve webovém prohlížeči vytvořte žádost o přijetí změn, která synchronizuje nové změny v rozvětvení zpátky do MicrosoftDocs/Mixed _-reality (_ Ujistěte se, že šipka odkazuje na správný cíl).
 
-   ![Vytvoření žádosti o přijetí změn z větve do MicrosoftDocs/smíšené reality](images/pr-to-master.png)
+   ![Vytvořte žádost o přijetí změn z větve do MicrosoftDocs/smíšené reality.](images/pr-to-master.png)
 
 ### <a name="useful-extensions"></a>Užitečná rozšíření
 

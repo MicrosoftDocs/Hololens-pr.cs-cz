@@ -7,12 +7,12 @@ description: Mixed Reality možnosti podpory pro malé až velké podnikové zá
 ms.prod: hololens
 ms.topic: article
 ms.date: 3/19/2021
-ms.openlocfilehash: 43940fca03dec957c2afc6108e1ce77979aa000c1366bdc873056107d0b7da20
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 17aaf8627384098de240d2c2e79c1ed9b0d39165
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658752"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190442"
 ---
 # <a name="what-are-the-mixed-reality-support-and-help-options"></a>Jaké jsou Mixed Reality podpory a nápovědy?
 
@@ -23,16 +23,16 @@ Tady najdete možnosti podpory pro následující možnosti, abyste se připojil
 - [Community nápovědy pro vývojáře](#community-help-options)
 - [Získání pomoci s používáním a konfigurací zařízení HoloLens 2](#help-with-technical-support-for-your-hololens-2)
 - [Získání pomoci s nákupem zařízení HoloLens 2](#help-with-commercial-store-support-for-your-hololens-2)
-- [Získejte pomoc s programováním HoloLens 2 nebo imerzivní náhlavní soupravy](#help-with-technical-support-for-your-hololens-2) 
+- [Získejte pomoc s programováním HoloLens 2 nebo imerzivní náhlavní soupravou.](#help-with-technical-support-for-your-hololens-2) 
 - [Získání pomoci se službami Azure mixed reality](#azure-mixed-reality-services-support)
 
-## <a name="community-help-options"></a>Community nápovědy
+## <a name="community-help-options"></a>Community možnosti nápovědy
 
 ### <a name="post-a-question-on-microsoft-qa"></a>Získejte dotaz na webu Microsoft Q&A.
 <div class='icon is-large'>
     <img alt='Azure Q&A' src='/media/logos/logo_azure.svg'>
 </div><br/>
-Pokud chcete rychlé a spolehlivé odpovědi na své programovací otázky Azure Mixed Reality a HoloLens 2 od techniků Microsoftu, nejcennějších odborníků nebo naší odborné komunity, zapojte se s námi na Microsoft Q&A, který je upřednostňovaným cílem Microsoftu pro podporu komunity.
+Pokud chcete získat rychlé a spolehlivé odpovědi na své programovací otázky Azure Mixed Reality a HoloLens 2 od techniků Microsoftu, nejcennějších odborníků nebo naší odborné komunity, zapojte se s námi na Microsoft Q&A, které je upřednostňovaným cílem Microsoftu pro podporu komunity.
 
 Pokud pomocí vyhledávání nenajdete odpověď na váš problém, odešlete novou otázku do Microsoft Q&A. Při dotazech použijte jednu z následujících značek:
 
@@ -50,7 +50,7 @@ Pokud pomocí vyhledávání nenajdete odpověď na váš problém, odešlete no
 
 Pokud chcete získat odpovědi na své dotazy týkající se vývojářů z největšího ekosystému vývojářů v komunitě, položte svůj dotaz na Stack Overflow.
 
-Pokud odešlete novou otázku do Stack Overflow, při vytváření otázky použijte jednu nebo několik následujících značek:
+Pokud odešlete novou otázku k Stack Overflow, při vytváření otázky použijte jednu nebo několik následujících značek:
 
 - [HoloLens Programování](https://stackoverflow.com/questions/tagged/hololens)
 - [Windows Mixed Reality](https://stackoverflow.com/questions/tagged/windows-mixed-reality)
@@ -67,26 +67,26 @@ Pokud odešlete novou otázku do Stack Overflow, při vytváření otázky použ
 
 ## <a name="hololens-2-support"></a>HoloLens 2
 
-### <a name="help-with-technical-support-for-your-hololens-2"></a>Pomoc s technickou podporou pro HoloLens 2
+### <a name="help-with-technical-support-for-your-hololens-2"></a>Pomoc s technickou podporou pro váš HoloLens 2
 
-- Získejte HoloLens nápovědu k programování 2 od komunity na webu [Microsoft Q&A.](#post-a-question-on-microsoft-qa)
-- Přečtěte si další informace o nápovědě a podpoře a stavu služeb ve službách [hybridní reality Azure.](#azure-mixed-reality-services-support)
+- Získejte HoloLens 2 od komunity na webu [Microsoft Q&A.](#post-a-question-on-microsoft-qa)
+- Přečtěte si další informace o nápovědě a podpoře a stavu služeb [azure pro hybridní realitu.](#azure-mixed-reality-services-support)
 - Vytvoření žádosti o podporu pro HoloLens 2 nebo imerzivní náhlavní soupravu na [podporu MR](https://aka.ms/mrsupport) 
-- Vytvoření žádosti o podporu pro HoloLens 2 problémů se zařízeními, včetně hardwaru, & konfigurace zařízení [HoloLens 2](https://aka.ms/hlsupport) 
+- Vytvoření žádosti o podporu pro HoloLens 2 problémy se zařízeními, včetně hardwaru, & konfigurace zařízení [HoloLens 2](https://aka.ms/hlsupport) 
 
 
 ### <a name="help-with-commercial-store-support-for-your-hololens-2"></a>Pomoc s podporou komerčního obchodu pro váš HoloLens 2
 
 - [Nákup HoloLens 2 Pomocí](https://www.microsoft.com/hololens/buy) této možnosti získáte další informace o cenách a možnostech HoloLens 2.
-- Pokud potřebujete pomoc přes telefonickou podporu, promluvte si s kolegy z podpory komerčního obchodu v následujícím seznamu čísel obchodních stolu.
-- Pokud se jedná o nákupy mimo Microsoft Store, nahlédněte do tohoto seznamu autorizovaných prodejců [HoloLens 2](hololens2-purchase.md) prodejců a zemí, kde HoloLens 2 k dispozici.
+- Pokud potřebujete pomoc přes telefonickou podporu, podívejte se na níže uvedený seznam čísel pracovních obchodních položek, abyste si s kolegy z podpory komerčního obchodu pohotovi promluvěi.
+- Pokud se jedná o nákupy mimo Microsoft Store, nahlédněte do tohoto seznamu autorizovaných prodejců [HoloLens 2](hololens2-purchase.md) prodejců a zemí, kde HoloLens 2.
 
 ### <a name="commercial-store-support-numbers"></a>Čísla podpory pro komerční obchody
 >[!Note]
 >K dokončení nákupu použijte jedno z telefonních čísel komerční podpory níže. 
 
 >[!Note]
->Pokud voláte o podporu z trhu, který není uvedený níže, nasměruje vás na číslo našeho firemního stolu v USA.
+>Pokud voláte kvůli podpoře z trhu, který není uvedený níže, nasměruje vás na číslo našeho firemního stolu v USA.
 
 | Trhy | Číslo obchodního stolu | Provozní doba |
 |-----------------|-------------------|-----------------------|
@@ -106,63 +106,63 @@ Pokud odešlete novou otázku do Stack Overflow, při vytváření otázky použ
 | Finsko | +358 800526136 |    Po–Pá, 9:00 až 18:00 |
 | Portugalsko |    +351 800600087 |    Po–Pá, 9:00 až 18:00 |
 | USA |  866-425-4709 |  Po–Pá, 6:00 až 18:00, PST |
-| Kanada |  877-345-2661 |  Po–Pá, 6:00 až 18:00, PST |
-| Čína |   400-805-6783 |  Po–Pá, 9:00 AŽ 18:00 |
-| Japonsko |   0120-03-5241 |  Po–Pá, 9:00 až 17:30 |
-| Austrálie |   1800-217-709 |  Po–Pá, 8:00 až 20:00 |
-| Singapur |   1800 622-1816 | Po–Pá, 8:30 AŽ 17:30 |
-| Nový Zéland | 0800 471 640 |  Po–Pá, 8:00 AŽ 18:00 |
+| Kanada |  877-345-2661 |  Od do Pá, 6:00 až 18:00, PST |
+| Čína |   400-805-6783 |  Od do Pá, 9:00 až 18:00 |
+| Japonsko |   0120-03-5241 |  Od do Pá, 9:00 až 5:17:30 |
+| Austrálie |   1800-217-709 |  Od do Pá, 8:00 až 8PM |
+| Singapur |   1800 622-1816 | Od do Pá, 8:10:30 až 5:17:30 |
+| Nový Zéland | 0800 471 640 |  Od do Pá, 8:00 až 18:00 |
 
 >[!IMPORTANT]
->Pokud požadujete úplnou fakturu za DPH, měli byste se s týmem komerčního obchodu podpory se stýkat přímo a nekupovat zařízení online. Všechny nákupy provedené online dostanou jenom zjednodušenou fakturu za DPH, kterou už nebude možné později upravit.
+>Pokud potřebujete plnou fakturu DPH, měli byste se obrátit na komerčního týmu podpory přímo a nekoupit zařízení online. Všechny nákupy, které byly online, obdrží jenom zjednodušenou fakturu DPH, kterou nepůjde později upravit.
 
-## <a name="azure-mixed-reality-services-support"></a>Podpora služeb hybridní reality Azure
+## <a name="azure-mixed-reality-services-support"></a>Podpora služby Azure Mixed reality
 
-### <a name="open-an-azure-portal-technical-support-ticket"></a>Otevření lístku Azure Portal technické podpory
+### <a name="open-an-azure-portal-technical-support-ticket"></a>Otevření lístku technické podpory Azure Portal
 
-Pokud chcete otevřít lístek technické podpory na webu Azure Portal pro azure Spatial Anchors, Azure Object Anchors nebo Azure Remote Rendering:
+Pokud chcete otevřít lístek technické podpory v Azure Portal pro prostorové kotvy Azure, kotvy objektů Azure nebo vzdálené vykreslování Azure:
 
-1. Po [Azure Portal](https://azure.microsoft.com/account/) panelu nabídek vyberte ikonu nápovědy a pak vyberte tlačítko **Nápověda a** podpora.
+1. Pomocí [Azure Portal](https://azure.microsoft.com/account/) otevřít vyberte ikonu pro pomoc v horním panelu nabídek a pak vyberte tlačítko **help + Support (podpora** ).
 
-   ![Azure Portal a podpora](../hololens/images/azure-help-support.png)
+   ![Azure Portal nápovědě a podpoře.](../hololens/images/azure-help-support.png)
 
-2. Po otevření stránky Nápověda a podpora vyberte **+ Nová žádost o podporu.**
+2. Po otevření stránky pro pomoc a podporu vyberte **+ Nová žádost o podporu**.
 
-   ![Azure Portal nové žádosti o podporu](../hololens/images/azure-help-support2.png)
+   ![Azure Portal novou žádost o podporu.](../hololens/images/azure-help-support2.png)
 
 3. Při dokončování polí lístku podpory:
 
     + Typ problému: Technický
-    + Služba: Azure Spatial Anchors, Azure Remote Rendering nebo Azure Object Anchors
+    + Služba: prostorové kotvy Azure, vzdálené vykreslování Azure nebo kotvy objektů Azure
 
-    ![Azure Portal lístku podpory](../hololens/images/azure-help-support3.png)
+    ![Azure Portal pole lístků podpory.](../hololens/images/azure-help-support3.png)
 
-    1. Klikněte **na Další:** Řešení v dolní části stránky a přidejte další podrobnosti, abyste nám o problému řekli více.
+    1. Kliknutím na **Další: řešení** v dolní části stránky přidejte další podrobnosti a řekněte nám o problému víc.
 
-    2. Vyplňte formulář co nejpřesněji a nejpřesněji společně s upřednostňovaným způsobem, jak se k vám dostat.
+    2. Vyplňte formulář co nejlépe a podrobně podrobnějším způsobem a preferovaným způsobem, jak vás kontaktovat.
 
-    3. Zkontrolujte všechny informace, které jste vyplnili v předchozích částech, a teď odešlete žádost o podporu.
+    3. Zkontrolujte všechny informace, které jste vyplnili v předchozích částech, a nyní odešlete žádost o podporu.
 
 ### <a name="provide-documentation-content-feedback"></a>Poskytnutí zpětné vazby k obsahu dokumentace
 
-Na konci každého článku o obsahu je možnost otevřít problém s GitHub poskytnout zpětnou vazbu k obsahu v jakémkoli úložišti dokumentace hybridní reality. 
+v dolní části každého článku o obsahu je k dispozici možnost otevřít problém GitHub a poskytnout zpětnou vazbu k obsahu v jakémkoli úložišti dokumentace k hybridní realitě. 
 
 ### <a name="provide-product-feedback"></a>Poskytnutí zpětné vazby k produktu
 
 >[!Note]
->Poskytnutí zpětné vazby je vynikající způsob, jak váš hlas slyšet, ale zpětná vazba není způsob, jak dostat odpověď. Centrum Feedback můžete kombinovat s jinými možnostmi podpory.
+>Poskytnutí zpětné vazby je skvělým způsobem, jak slyšet váš hlas, ale zpětná vazba není způsob, jak přijmout odpověď. Centrum Feedback může být kombinováno s dalšími možnostmi podpory.
 
-Pokud chcete poskytnout zpětnou vazbu, sdílet nápady nebo návrhy pro služby hybridní reality Microsoftu nebo hlasovat o nápadech, které odeslali jiní uživatelé, navštivte: 
+Pokud chcete poskytnout zpětnou vazbu, sdílejte nápad nebo návrhy pro služby Microsoft Mixed reality nebo hlasovat o nápadech, které odeslali jiní uživatelé, navštivte: 
 
-- [HoloLens 2– zpětná vazba k produktu](/hololens/hololens-feedback)
-- [Zpětná vazba k produktu aplikace Microsoft Mesh](/hololens/hololens-feedback)
-- [Azure Remote Rendering názory](https://feedback.azure.com/forums/928696-azure-remote-rendering)
-- [Zpětná vazba Spatial Anchors Azure](https://feedback.azure.com/forums/919252-azure-spatial-anchors)
+- [HoloLens 2 – váš názor na produkt](/hololens/hololens-feedback)
+- [Váš názor na produkt sítě Microsoft pro aplikace](/hololens/hololens-feedback)
+- [Zpětná vazba na vzdálené vykreslování Azure](https://feedback.azure.com/forums/928696-azure-remote-rendering)
+- [Názory na prostorové kotvy Azure](https://feedback.azure.com/forums/919252-azure-spatial-anchors)
 
 ### <a name="faqs--troubleshooting"></a>Nejčastější dotazy & řešení potíží
 
-- HoloLens 2 najdete na stránce [řešení HoloLens potíží.](../hololens/hololens-troubleshooting.md)
-- Windows Mixed Reality najdete na stránce s nejčastějšími [dotazy.](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
-- Azure Remote Rendering najdete na stránce s nejčastějšími [dotazy.](/azure/remote-rendering/resources/troubleshoot)
-- Azure Spatial Anchors najdete na stránce s nejčastějšími [dotazy.](/azure/spatial-anchors/spatial-anchor-faq)
-- Azure Object Anchors najdete na stránce s [nejčastějšími dotazy.](/azure/object-anchors/faq)
+- HoloLens 2 najdete na stránce [věnované odstraňování potíží HoloLens](../hololens/hololens-troubleshooting.md)
+- Windows Mixed Reality najdete na stránce [nejčastější dotazy](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality) .
+- Vzdálené vykreslování Azure, viz stránka [Nejčastější dotazy](/azure/remote-rendering/resources/troubleshoot) .
+- Prostorové kotvy Azure najdete na stránce [Nejčastější dotazy](/azure/spatial-anchors/spatial-anchor-faq) .
+- Kotvy objektů Azure najdete na stránce [Nejčastější dotazy](/azure/object-anchors/faq) .

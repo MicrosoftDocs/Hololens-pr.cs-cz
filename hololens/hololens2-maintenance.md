@@ -1,6 +1,6 @@
 ---
-title: Čištění HoloLens 2 – Nejčastější dotazy
-description: Získejte aktuální odpovědi na všechny vaše nejčastější dotazy k vyčištění a údržbě zařízení HoloLens 2.
+title: HoloLens 2 – časté otázky týkající se čištění
+description: získejte aktuální odpovědi na všechny vaše nejčastější dotazy, které vám pomohou vyčistit a udržovat zařízení HoloLens 2.
 author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 4/14/2020
@@ -15,19 +15,19 @@ keywords: ''
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a110f711d402432e727be6f342156e7dee733157
-ms.sourcegitcommit: ad53ba5edd567a18f0c172578d78db3190701650
+ms.openlocfilehash: 8b14ebd9639495d2b174678518b4562a2b3c85fa
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2021
-ms.locfileid: "111377592"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189439"
 ---
-# <a name="hololens-2-cleaning-faq"></a>Čištění HoloLens 2 – Nejčastější dotazy
+# <a name="hololens-2-cleaning-faq"></a>HoloLens 2 – časté otázky týkající se čištění
 
 > [!IMPORTANT]  
 > Společnost Microsoft nemůže stanovit účinnost jakéhokoli daného dezinfekčního produktu v boji proti patogenům, jako je COVID-19. Informace o tom, jak zajistit bezpečnost před potenciálním nákazou, najdete v pokynech k vaší místní veřejné autoritě pro státní péče.  
 
-## <a name="hololens-2-use-and-care"></a>Použití a péče o HoloLens 2
+## <a name="hololens-2-use-and-care"></a>HoloLens 2, použití a péče
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwEFP]
 
@@ -48,7 +48,7 @@ ms.locfileid: "111377592"
 1. Pomocí vody a mírného, antibiotického protokolu SOAP moisten tkaninu a pak použijte moistened látku k vymazání prohlížeč panelu.
 1. Nechte panel prohlížeč zcela suchý.
 
-## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>Můžu použít nějaký čistič objektivu pro čištění hypervisoru HoloLens?
+## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>můžu použít čisticí čistič objektivu pro čištění HoloLensového hypervisoru?
 
 No. Vyčištění objektivu může být abrasive na nátěry na hypervisoru. K vyčištění hypervisoru použijte následující postup:  
 
@@ -58,10 +58,10 @@ No. Vyčištění objektivu může být abrasive na nátěry na hypervisoru. K v
 
 ## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Můžu k vyčištění zařízení použít desinfekci a vymazání?
 
-Ano, pokud vymazání neobsahují bělení. K [mírnému vymazání ploch HoloLens](#hololens-2-use-and-care)můžete použít nebělené desinfekce.  
+Ano, pokud vymazání neobsahují bělení. k [mírnému vymazání HoloLensch ploch](#hololens-2-use-and-care)můžete použít nebělené desinfekce.  
 
 > [!CAUTION]  
-> Vyhněte se použití desinfekce vymazání, která obsahují bělení pro vyčištění ploch HoloLens. Je přijatelné použít bělené vymazání v kritických situacích, pokud není k dispozici nic jiného. Bělicí však může poškodit hypervisor nebo jiné povrchy.
+> vyhněte se použití desinfekce vymazání, která obsahují bělení pro vyčištění HoloLensch ploch. Je přijatelné použít bělené vymazání v kritických situacích, pokud není k dispozici nic jiného. bělení ale můžou poškodit HoloLens hypervisor nebo jiné povrchy.
 
 ## <a name="can-i-use-alcohol-to-clean-the-device"></a>Můžu k vyčištění zařízení použít alkohol?
 
@@ -71,7 +71,7 @@ Ano. Můžete použít řešení "70%" isopropyl alkohol a vodu k vyčištění 
 
 Ano. Panel prohlížeč je magneticky připojen k zařízení. Pokud ho chcete odpojit, vyžádejte si ho mírně od HEADBAND. Chcete-li ho nahradit, přihlaste se zpátky na místo.
 
-![Odebrat nebo nahradit panel prohlížeč](images/hololens2-remove-browpad.png)
+![Odeberte nebo nahraďte panel prohlížeč.](images/hololens2-remove-browpad.png)
 
 ## <a name="how-can-i-clean-the-brow-pad"></a>Jak můžu vyčistit panel prohlížeč?
 

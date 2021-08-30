@@ -1,6 +1,6 @@
 ---
-title: Správa HoloLens aktualizací
-description: Zjistěte, jak můžou správci používat správu mobilních zařízení ke správě aktualizací HoloLens zařízení.
+title: správa aktualizací HoloLens
+description: naučte se, jak můžou správci používat správu mobilních zařízení ke správě aktualizací HoloLensch zařízení.
 ms.prod: hololens
 ms.sitesec: library
 author: Teresa-Motiv
@@ -19,116 +19,116 @@ ms.custom:
 - CI 115825
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: 635e2cc274101fcf08fd05f2b3b54ce6c2f79182011d76409a51c722ea47ecc7
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 3afe3d2aecd64c2b4724f4805571cb3c46112875
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662793"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190034"
 ---
-# <a name="manage-hololens-updates"></a>Správa HoloLens aktualizací
+# <a name="manage-hololens-updates"></a>správa aktualizací HoloLens
 
-HoloLens používá Windows Update stejným způsobem jako ostatní Windows 10 zařízení. Když je k dispozici aktualizace, automaticky se stáhne a nainstaluje při příštím připojení zařízení k internetu. Tento článek popisuje, jak spravovat aktualizace v podnikovém nebo jiném spravovaném prostředí. Informace o tom, jak spravovat aktualizace jednotlivých zařízení HoloLens, najdete v tématu [Aktualizace HoloLens](hololens-update-hololens.md).
+HoloLens používá web Windows Update stejným způsobem jako ostatní Windows 10 zařízení. Když je dostupná aktualizace, automaticky se stáhne a nainstaluje při příštím připojení zařízení k Internetu. Tento článek popisuje, jak spravovat aktualizace v podnikovém nebo jiném spravovaném prostředí. informace o tom, jak spravovat aktualizace pro jednotlivá HoloLens zařízení, najdete v části [Update HoloLens](hololens-update-hololens.md).
 
-## <a name="manage-updates-automatically"></a>Automatická správa aktualizací
+## <a name="manage-updates-automatically"></a>Spravovat aktualizace automaticky
 
-### <a name="managing-updates-by-using-windows-update-for-business"></a>Správa aktualizací pomocí Windows Update pro firmy
+### <a name="managing-updates-by-using-windows-update-for-business"></a>správa aktualizací pomocí web Windows Update pro firmy
 
-Windows Holographic for Business aktualizace [můžete Windows update for Business.](/windows/deployment/update/waas-manage-updates-wufb) Všechna HoloLens 2 zařízení používejte Windows Holographic for Business. Ujistěte se, že Windows Holographic for Business sestavení 10.0.18362.1042 nebo novější. Pokud máte HoloLens (1. generace), musíte je [](hololens1-upgrade-enterprise.md) upgradovat na Windows Holographic for Business spravovat jejich aktualizace.
+Windows Holographic for Business můžou pomocí [web Windows Update pro firmy](/windows/deployment/update/waas-manage-updates-wufb) spravovat aktualizace. všechna zařízení HoloLens 2 můžou používat Windows Holographic for Business. ujistěte se, že používají Windows Holographic for Business build 10.0.18362.1042 nebo novější. pokud máte zařízení HoloLens (1. generace), je nutné [je upgradovat na Windows Holographic for Business](hololens1-upgrade-enterprise.md) , aby bylo možné spravovat jejich aktualizace.
 
-Windows Update for Business HoloLens zařízení přímo ke službě Windows Update. Pomocí Windows Update pro firmy můžete řídit několik aspektů procesu aktualizace, což znamená, která zařízení chystá v &mdash; jaké době aktualizace. Můžete například pro účely testování zacílíte aktualizace podmnožiny zařízení a později aktualizace zbývajících zařízení. Nebo můžete definovat různé plány aktualizací pro různé typy aktualizací.
+Windows aktualizace pro firmy připojuje HoloLens zařízení přímo ke službě web Windows Update. pomocí web Windows Update pro firmy můžete řídit více aspektů procesu aktualizace, které &mdash; zařízení získávají aktualizace v daném čase. Můžete například aktualizovat podmnožinu zařízení pro testování a pak později aktualizovat zbývající zařízení. Nebo můžete definovat různé plány aktualizací pro různé typy aktualizací.
 
 > [!NOTE]  
-> Pro HoloLens zařízení můžete automaticky spravovat aktualizace funkcí (vydané dvakrát ročně) a aktualizace kvality (vydané každý měsíc nebo podle potřeby, včetně důležitých aktualizací zabezpečení). Další informace o typech aktualizací najdete v tématu [Typy aktualizací spravované službou Windows Update for Business.](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business)
+> u HoloLensch zařízení můžete automaticky spravovat aktualizace funkcí (vydaná dvakrát za rok) a aktualizace kvality (vydané měsíčně nebo podle potřeby, včetně důležitých aktualizací zabezpečení). další informace o typech aktualizací najdete v tématu [typy aktualizací, které jsou spravovány web Windows Update pro firmy](/windows/deployment/update/waas-manage-updates-wufb#types-of-updates-managed-by-windows-update-for-business).
 
-Nastavení služby Windows Update for Business pro HoloLens můžete nakonfigurovat pomocí zásad v řešení MDM (Mobile Správa zařízení), jako je Microsoft Intune.
+nastavení web Windows Update pro firmy můžete nakonfigurovat pro HoloLens pomocí zásad v řešení správy mobilních zařízení (MDM), jako je například Microsoft Intune.
 
-### <a name="managing-windows-update-for-business-by-using-microsoft-intune"></a>Správa Windows Update pro firmy pomocí Microsoft Intune
+### <a name="managing-windows-update-for-business-by-using-microsoft-intune"></a>správa web Windows Update pro firmy pomocí Microsoft Intune
 
-Podrobný popis použití Intune ke konfiguraci služby Windows Update pro firmy najdete v tématu Správa [Windows 10 aktualizací softwaru v Intune.](/intune/protect/windows-update-for-business-configure) Další informace o konkrétních funkcích Intune, které HoloLens, najdete v tématu Funkce správy aktualizací [Intune, HoloLens podporuje](#intune-update-management-functions-that-hololens-supports).
+podrobnou diskuzi o tom, jak pomocí intune nakonfigurovat web Windows Update pro firmy, najdete v tématu [správa Windows 10 aktualizací softwaru v intune](/intune/protect/windows-update-for-business-configure). další informace o konkrétních funkcích intune, které HoloLens podporuje, najdete v tématu [funkce správy aktualizací intune, které HoloLens podporuje](#intune-update-management-functions-that-hololens-supports).
 
 > [!IMPORTANT]  
-> Intune poskytuje dva typy zásad pro správu aktualizací: *Windows 10 aktualizační okruh* *a Windows 10 aktualizace funkcí*. Typ Windows 10 aktualizace funkcí je v tuto chvíli ve verzi Public Preview a nepodporuje se pro HoloLens.
+> intune nabízí dva typy zásad pro správu aktualizací: *Windows 10 aktualizace* *Windows 10 funkcí* pro aktualizace. typ zásad aktualizace funkcí Windows 10 je v současnosti ve verzi public preview a pro HoloLens se nepodporuje.
 >  
-> Zásady aktualizačního okruhu Windows 10 použít ke správě aktualizací HoloLens 2.
+> ke správě aktualizací HoloLens 2 můžete použít zásady Windows 10 update ring.
 
-### <a name="configure-update-policies-for-hololens-2-or-hololens-1st-gen"></a>Konfigurace zásad aktualizace pro HoloLens 2 nebo HoloLens (1. generace)
+### <a name="configure-update-policies-for-hololens-2-or-hololens-1st-gen"></a>konfigurace zásad aktualizace pro HoloLens 2 nebo HoloLens (1. generace)
 
-Tato část popisuje zásady, které můžete použít ke správě aktualizací pro HoloLens 2 nebo HoloLens (1. generace). Další informace o funkcích, které jsou k dispozici pro HoloLens 2, najdete v tématu Plánování a konfigurace kumulativních aktualizací [pro HoloLens 2.](#plan-and-configure-update-rollouts-for-hololens-2)
+tato část popisuje zásady, které můžete použít ke správě aktualizací pro HoloLens 2 nebo HoloLens (1. generace). další informace o funkcích, které jsou k dispozici pro HoloLens 2, najdete v tématu [plánování a konfigurace aktualizací update uvádění pro HoloLens 2](#plan-and-configure-update-rollouts-for-hololens-2).
 
-[CsP zásad – Aktualizace](/windows/client-management/mdm/policy-csp-update) definuje zásady, které konfigurují Windows Update for Business.
+[zásada CSP – aktualizace](/windows/client-management/mdm/policy-csp-update) definuje zásady, které konfigurují web Windows Update pro firmy.
 
 > [!NOTE]  
-> Seznam konkrétních poskytovatelů konfiguračních služeb (CSP) zásad podporovaných konkrétními edicemi HoloLens najdete v tématu Poskytovatelé CSP zásad podporovaní HoloLens [zařízeními.](/windows/client-management/mdm/policy-configuration-service-provider#policy-csps-supported-by-hololens-devices)
+> seznam konkrétních zprostředkovatelů konfiguračních služeb (csp), které jsou podporované konkrétními edicemi HoloLens, najdete v tématu věnovaném [zprostředkovatelům csp podporovaným pomocí HoloLens zařízení](/windows/client-management/mdm/policy-configuration-service-provider#policy-csps-supported-by-hololens-devices).
 
 #### <a name="configure-automatic-checks-for-updates"></a>Konfigurace automatických kontrol aktualizací
 
-Zásady **Update/AllowAutoUpdate** můžete použít ke správě chování automatických aktualizací, jako je kontrola, stahování a instalace aktualizací. Další informace o dostupných nastaveních pro tuto zásadu najdete v tématu [Aktualizace/AllowAutoUpdate.](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)
+Pomocí zásad **Update/AllowAutoUpdate** můžete spravovat chování automatických aktualizací, jako je skenování, stahování a instalace aktualizací. Další informace o dostupných nastaveních pro tuto zásadu najdete v tématu [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate).
 
 > [!NOTE]  
-> V Microsoft Intune můžete tuto zásadu  změnit pomocí chování automatické aktualizace. Další informace najdete v tématu [Správa Windows 10 aktualizací softwaru v Intune.](/intune/windows-update-for-business-configure)
+> v Microsoft Intune můžete pro změnu těchto zásad použít **chování funkce automatické aktualizace** . další informace najdete v tématu [správa aktualizací softwaru Windows 10 v intune](/intune/windows-update-for-business-configure).
 
-#### <a name="configure-an-update-schedule"></a>Konfigurace plánu aktualizací
+#### <a name="configure-an-update-schedule"></a>Konfigurovat plán aktualizací
 
-Pokud chcete nakonfigurovat, jak a kdy se mají aktualizace použít, použijte následující zásady:
+Pokud chcete nakonfigurovat, jak a kdy se aktualizace použijí, použijte následující zásady:
 
-- [Update/ScheduledInstallDay](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallday)  
-  - Hodnoty: **0–7**(0 = každý den, 1 = neděle, 7 = sobota)
+- [Aktualizovat/ScheduledInstallDay](/windows/client-management/mdm/policy-csp-update#update-scheduledinstallday)  
+  - Hodnoty: **0**–**7** (0 = každý den, 1 = neděle, 7 = sobota)
   - Výchozí hodnota: **0** (každý den)
-- [Update/ScheduledInstallTime](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
-  - Hodnoty: 0–23 (0 = půlnoc, 23 = 21 PM)
-  - Výchozí hodnota: 3:00
+- [Aktualizovat/ScheduledInstallTime](/windows/client-management/mdm/policy-csp-update#update-scheduledinstalltime)
+  - Hodnoty: 0 – 23 (0 = půlnoc, 23 = 11 odp)
+  - Výchozí hodnota: 3 dop.
 
-#### <a name="configure-active-hours"></a>Konfigurace aktivních hodin
-Počínaje Windows Holographic může správce IT ve verzi [20H2](hololens-release-notes.md#windows-holographic-version-20h2) určit rozsah aktivních hodin pro zařízení HoloLens 2.
+#### <a name="configure-active-hours"></a>Konfigurovat aktivní hodiny
+od [Windows holografické verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) může správce IT určit rozsah aktivních hodin pro zařízení HoloLens 2.
 
-Aktivní hodiny identifikují časové období, kdy očekáváte, že se zařízení bude používat. Automatické restartování po aktualizaci se projeví mimo aktivní hodiny. Zadaný rozsah se bude počítat od počátečního času aktivních hodin. Můžete použít MDM, jak je popsáno v tématu [Konfigurace aktivních hodin pomocí MDM.](/windows/deployment/update/waas-restart#configuring-active-hours-with-mdm) MDM používá nastavení Update/ActiveHoursStart a Update/ActiveHoursEnd a Update/ActiveHoursMaxRange v csP zásad ke konfiguraci aktivních hodin.
+Aktivní hodiny identifikují dobu, po kterou se zařízení bude používat. Automatické restartování po aktualizaci proběhne mimo aktivní hodiny. Zadaný rozsah bude počítán od počátečního času aktivní hodiny. Můžete použít MDM, jak je popsáno v tématu [Konfigurace aktivních hodin s MDM](/windows/deployment/update/waas-restart#configuring-active-hours-with-mdm). MDM používá nastavení Update/ActiveHoursStart a Update/ActiveHoursEnd a Update/ActiveHoursMaxRange v zásadách CSP ke konfiguraci aktivních hodin.
 
--   [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend) – tato hodnota nastaví čas ukončení. Od počátečního času je k dispozici maximálně 12 hodin.
-    -   Podporované hodnoty jsou 0–23, kde 0 je 12:00, 1 je 1:00 atd.
-    -   Výchozí hodnota je 17 (17:00).
--   [Update/ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange) – Tato hodnota nastaví maximální počet aktivních hodin od počátečního času.
-    -   Podporované hodnoty jsou 8 až 18.
+-   [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend) – tato hodnota nastaví čas ukončení. Od počátečního času je maximálně 12 hodin.
+    -   Podporované hodnoty jsou 0-23, kde 0 je 12 DOP, 1 je 1 dop. atd.
+    -   Výchozí hodnota je 17 (5 odp.).
+-   [Update/ActiveHoursMaxRange](/windows/client-management/mdm/policy-csp-update#update-activehoursmaxrange) – tato hodnota nastaví maximální počet aktivních hodin od počátečního času.
+    -   Podporované hodnoty jsou 8-18.
     -   Výchozí hodnota je 18 (hodiny).
--   [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart) – Tato hodnota nastaví čas spuštění. Od koncového času je k dispozici maximálně 12 hodin.
-    -   Podporované hodnoty jsou 0–23, kde 0 je 12:00, 1 je 1:00 atd.
-    -   Výchozí hodnota je 8 (8:00).
+-   [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart) – tato hodnota nastaví počáteční čas. Čas ukončení je 12 hodin.
+    -   Podporované hodnoty jsou 0-23, kde 0 je 12 DOP, 1 je 1 dop. atd.
+    -   Výchozí hodnota je 8 (ráno).
 
-#### <a name="for-devices-that-run-windows-10-version-1607-only"></a>Pro zařízení se systémem Windows 10 verze 1607
+#### <a name="for-devices-that-run-windows-10-version-1607-only"></a>pro zařízení, která používají Windows 10 verze 1607
 
-Následující zásady aktualizací můžete použít ke konfiguraci zařízení pro získání aktualizací ze služby Windows Server Update Service (WSUS), a ne ze služby Windows Update:
+pomocí následujících zásad aktualizace můžete nakonfigurovat zařízení k získání aktualizací ze služby Windows Server update Service (WSUS) místo z web Windows Update:
 
-- [Update/AllowUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
-- [Aktualizace/RequireUpdateApproval](/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
-- [Update/UpdateServiceUrl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
+- [Aktualizovat/AllowUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowupdateservice)
+- [Aktualizovat/RequireUpdateApproval](/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
+- [Aktualizovat/UpdateServiceUrl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 
-### <a name="plan-and-configure-update-rollouts-for-hololens-2"></a>Plánování a konfigurace kumulativních aktualizací pro HoloLens 2
+### <a name="plan-and-configure-update-rollouts-for-hololens-2"></a>plánování a konfigurace uvádění aktualizace pro HoloLens 2
 
-HoloLens 2 podporuje více funkcí pro automatizaci aktualizací než HoloLens (1. generace). To platí hlavně v případě, že Microsoft Intune zásady Windows Update for Business používáte. Tyto funkce usnadňují plánování a implementaci zavedení aktualizací v celé organizaci.
+HoloLens 2 podporuje více funkcí automatizace aktualizací než HoloLens (1. generace). to platí hlavně v případě, že používáte Microsoft Intune ke správě zásad web Windows Update pro firmy. Tyto funkce usnadňují plánování a implementaci uvádění aktualizací napříč vaší organizací.
 
 #### <a name="plan-the-update-strategy"></a>Plánování strategie aktualizace
 
-Windows Aktualizace pro firmy podporují zásady odložení. Po vydání aktualizace můžete pomocí zásad odložení definovat, jak dlouho se má čekat před instalací této aktualizace na zařízeních. Když přidružíte podmnožiny vašich zařízení (označované také jako aktualizační okruhy) k různým zásadám odložení, můžete koordinovat strategii pro zasouvání aktualizací pro vaši organizaci.
+Windows Aktualizace pro firmy podporují zásady odložení. Jakmile společnost Microsoft uvolní aktualizaci, můžete použít zásadu odložení a určit, jak dlouho se má čekat před instalací této aktualizace na zařízení. Tím, že přidružíte podmnožiny zařízení (označované také jako *aktualizační* kanály) s různými zásadami odložení, můžete koordinovat strategii zavedení aktualizací pro vaši organizaci.
 
-Představte si například organizaci, která má 1 000 zařízení a musí je aktualizovat v pěti vlnách. Organizace může vytvořit pět aktualizačních okruhů, jak je znázorněno v následující tabulce.
+Představte si třeba organizaci, která má 1 000 zařízení, a musí aktualizovat zařízení v pěti vlny. Organizace může vytvořit pět aktualizačních kroužků, jak je znázorněno v následující tabulce.
 
 |Group (Skupina) |Počet zařízení |Odložení (dny) |
 | ---| :---: | :---: |
-|Grp 1 (pracovníci IT) |5 |0 |
-|Grp 2 (ti, kteří si ho osvojí v rané fázi) |50 |60 |
-|Grp 3 (hlavní 1) |250 |120 |
-|Grp 4 (hlavní 2) |300 |150 |
-|Grp 5 (hlavní 3) |395 |180 |
+|GRP 1 (zaměstnanci oddělení IT) |5 |0 |
+|GRP 2 (rané státy) |50 |60 |
+|GRP 3 (hlavní 1) |250 |120 |
+|GRP 4 (hlavní 2) |300 |150 |
+|GRP 5 (hlavní 3) |395 |180 |
 
-Tady je postup, jak se bude v průběhu času zavánět do celé organizace.
+Tady je postup, jak postupovat v průběhu času na celou organizaci.
 
-![Časová osa pro nasazení aktualizací](./images/hololens-updates-timeline.png)
+![Časová osa pro nasazování aktualizací](./images/hololens-updates-timeline.png)
 
 #### <a name="configure-an-update-deferral-policy"></a>Konfigurace zásad odložení aktualizací
 
-Zásada odložení určuje počet dní mezi datem, kdy se aktualizace stane dostupnou, a datem, kdy se aktualizace zařízení nabízí.
+Zásada odložení určuje počet dní mezi datem, kdy bude aktualizace k dispozici a datum, kdy je aktualizace nabízena pro zařízení.
 
-Můžete nakonfigurovat různé odložení aktualizací funkcí a aktualizací kvality. Následující tabulka uvádí konkrétní zásady, které se mají použít pro každý typ, a maximální odložení pro každý typ.
+Pro aktualizace funkcí a aktualizace kvality můžete nakonfigurovat různé odložení. Následující tabulka uvádí konkrétní zásady, které se mají použít pro každý typ, a maximální odložení pro každý typ.
 
 |Kategorie |Zásady |Maximální odložení |
 | --- | --- | --- |
@@ -148,7 +148,7 @@ Počínaje [Windows Holographic verze 20H2](hololens-release-notes.md#windows-ho
 
 Pomocí následujících funkcí správy aktualizací Intune můžete spravovat aktualizace pro HoloLens.
 
-- **Vytvořit** a **přiřadit:** Tyto funkce přidávají aktualizační Windows 10 aktualizační okruh do seznamu aktualizačních kanálů. Další informace najdete v tématu [Vytvoření a přiřazení aktualizačních okruhů.](/mem/intune/protect/windows-update-for-business-configure#create-and-assign-update-rings)
+- **Vytvořit** a **přiřadit:** Tyto funkce Windows 10 aktualizační okruh do seznamu aktualizačních kanálů. Další informace najdete v tématu [Vytvoření a přiřazení aktualizačních okruhů.](/mem/intune/protect/windows-update-for-business-configure#create-and-assign-update-rings)
 
 - **Pozastavit:** Pokud při nasazování funkce nebo aktualizace kvality narazíte na problém, můžete aktualizaci pozastavit na 35 dnů (od zadaného data). Toto pozastavení zabrání ostatním zařízením v instalaci aktualizace, dokud problém nevyřešíte nebo nezmírníte. Pokud aktualizaci funkcí pozastavíte, budou se zařízením pořád nabízeny aktualizace kvality, aby se zajistilo jejich zabezpečení. Když je typ aktualizace pozastavený, v podokně Přehled pro tento okruh se zobrazí, kolik dní zůstává před obnovením tohoto typu aktualizace. Po uplynutí zadané doby pozastavení automaticky vyprší a proces aktualizace se obnoví.
 
@@ -178,22 +178,22 @@ V rámci možností správy jsou povolená následující nastavení, [která je
 - [DOSetHoursToLimitForegroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitforegrounddownloadbandwidth)
 - [DOSetHoursToLimitBackgroundDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dosethourstolimitbackgrounddownloadbandwidth)
 
-Několik upozornění na tuto nabídku Verze Preview:
+Několik upozornění na tuto nabídku verze Preview:
 
-- HoloLens verze Preview je omezená jenom na aktualizace operačního systému.
+- HoloLens verze Preview je omezená pouze na aktualizace operačního systému.
 - Windows Holographic for Business podporuje pouze režimy stahování HTTP a stahování z koncového [bodu microsoft Připojená mezipaměť](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache); Režimy stahování peer-to-peer a přiřazení skupin se v HoloLens zařízení nepodporují.
 - HoloLens nepodporuje optimalizaci nasazení nebo doručení pro Windows Server Update Services koncové body.
-- Řešení potíží bude vyžadovat buď diagnostiku na serveru Připojená mezipaměť, nebo shromažďování trasování pro HoloLens v HoloLens prostřednictvím služby **Nastavení**  >  **Update & Security**  >   **Troubleshooting**  >   **Windows Update.**
+- Řešení potíží bude vyžadovat buď diagnostiku na serveru Připojená mezipaměť, nebo shromažďování trasování v HoloLens na HoloLens prostřednictvím Nastavení  >  **Update & Security**  >   **Troubleshooting**  >   **Windows Update**.
 
 ## <a name="manually-check-for-updates"></a>Ruční kontrola aktualizací
 
 Přestože HoloLens pravidelně kontroluje aktualizace systému, mohou být okolnosti, za kterých budete chtít provést ruční kontrolu.
 
-Pokud chcete aktualizace vyhledat ručně, přejděte na **Nastavení**  >  **Update & Security** Check for  >  **updates**. Pokud Nastavení aplikace indikuje, že je vaše zařízení aktuální, máte k dispozici všechny aktuálně dostupné aktualizace.
+Pokud chcete aktualizace vyhledat ručně, přejděte na **Nastavení**  >  **Update & Security** Check for  >  **updates**. Pokud Nastavení aplikace indikuje, že je vaše zařízení aktuální, máte všechny aktualizace, které jsou aktuálně k dispozici.
 
 ## <a name="manually-roll-back-an-update"></a>Ruční vrácení aktualizace zpět
 
-V některých případech se můžete chtít vrátit k předchozí verzi HoloLens softwaru. Postup závisí na tom, jestli používáte HoloLens 2 nebo HoloLens (1. generace).
+V některých případech se můžete chtít vrátit k předchozí verzi HoloLens softwaru. Proces tohoto postupu závisí na tom, jestli používáte HoloLens 2 nebo HoloLens (1. generace).
 
 ### <a name="revert-to-a-previous-version-hololens-2"></a>Zpět k předchozí verzi (HoloLens 2)
 
@@ -205,16 +205,16 @@ Aktualizace můžete vrátit zpět a vrátit se k předchozí verzi HoloLens 2 p
 Pokud se chcete vrátit k předchozí verzi HoloLens 2, postupujte takto:
 
 1. Ujistěte se, že nemáte žádné telefony ani Windows zařízení připojená k počítači.
-1. Na svém počítači si z [konzoly](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) stáhněte doplněk Advanced Recovery Companion Microsoft Store.
+1. Na svém počítači si z [konzoly](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) stáhněte doprovodný program pro pokročilé Microsoft Store.
 1. Stáhněte [si nejnovější verzi HoloLens 2.](https://aka.ms/hololens2download)
-1. Po dokončení těchto stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a pak rozbalte soubor výběrem možnosti Extrahovat  >     >   vše.
+1. Po dokončení těchto stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a pak výběrem možnosti Extrahovat vše rozbalte  >     >   soubor.
 1. Pomocí kabelu USB-A na USB-C připojte HoloLens zařízení k počítači. Tento typ kabelu funguje nejlépe i v případě, že HoloLens kabely pro připojení kabely.
 1. Advanced Recovery Companion automaticky rozpozná vaše HoloLens obnovení. Vyberte **dlaždici Microsoft HoloLens.**
 1. Na další obrazovce vyberte **Ruční výběr balíčku a** pak otevřete složku, kterou jste předtím rozbalí.
 1. Vyberte instalační soubor (.ffu).
 1. Vyberte **Nainstalovat software** a pak postupujte podle pokynů.
 
-### <a name="revert-to-a-previous-version-hololens-1st-gen"></a>Zpět na předchozí verzi (HoloLens (1. generace))
+### <a name="revert-to-a-previous-version-hololens-1st-gen"></a>Zpět k předchozí verzi (HoloLens (1. generace))
 
 Aktualizace můžete vrátit zpět a vrátit se k předchozí verzi služby HoloLens (1. generace) pomocí nástroje [WDRT (Windows Device Recovery Tool)](https://support.microsoft.com/help/12379) a resetovat HoloLens na starší verzi.
 
@@ -223,23 +223,23 @@ Aktualizace můžete vrátit zpět a vrátit se k předchozí verzi služby Holo
 
 Pokud se chcete vrátit k předchozí verzi HoloLens (1. generace), postupujte takto:
 
-1. Ujistěte se, že nemáte žádné telefony ani Windows zařízení připojená k vašemu počítači.
+1. Ujistěte se, že nemáte žádné telefony ani Windows zařízení připojená k počítači.
 1. Na svém počítači si stáhněte [Windows Device Recovery Tool (WDRT).](https://support.microsoft.com/help/12379)
-1. Stáhněte [si balíček HoloLens Anniversary Update pro obnovení.](https://aka.ms/hololensrecovery)
-1. Po dokončení stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a pak rozbalte soubor výběrem možnosti Extrahovat  >     >   vše.
-1. Pomocí kabelu mikro USB, který jste dodáli společně s vaším HoloLens, připojte HoloLens zařízení k počítači. I v případě, že jste ke svému zařízení HoloLens kabely, funguje to nejlépe.
-1. WDRT automaticky zjistí vaše HoloLens zařízení. Vyberte **dlaždici Microsoft HoloLens.**
+1. Stáhněte [si balíček HoloLens Anniversary Update recovery.](https://aka.ms/hololensrecovery)
+1. Po dokončení stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a pak výběrem možnosti Extrahovat vše rozbalte  >     >   soubor.
+1. Pomocí kabelu mikro USB poskytnutého společně s vaším HoloLens připojte HoloLens zařízení k počítači. I v případě, že jste ke svému zařízení HoloLens kabely, funguje to nejlépe.
+1. WDRT automaticky rozpozná vaše HoloLens zařízení. Vyberte **dlaždici Microsoft HoloLens.**
 1. Na další obrazovce vyberte **Ruční výběr balíčku a** pak otevřete složku, kterou jste předtím rozbalí.
 1. Vyberte instalační soubor (.ffu).
 1. Vyberte **Nainstalovat software** a pak postupujte podle pokynů.
 
 **Pokud WDRT nezjistí vaše zařízení**
 
-Pokud wdrt nerozpozná vaše zařízení HoloLens, zkuste počítač restartovat. Pokud to nefunguje, vyberte **Moje zařízení** se nezjme, vyberte **Microsoft HoloLens** a postupujte podle pokynů.
+Pokud nástroj WDRT nezjistí vaše HoloLens, zkuste počítač restartovat. Pokud to nefunguje, vyberte **Moje zařízení** se nezjme, vyberte **Microsoft HoloLens** a pak postupujte podle pokynů.
 
 ## <a name="related-articles"></a>Související články
 
-- [HoloLens 2 k vydání verze](hololens-release-notes.md)
+- [HoloLens 2. verze](hololens-release-notes.md)
 - [Co je Windows Update for Business?](/windows/deployment/update/waas-manage-updates-wufb)
 - [Přiřazení zařízení k servisním kanálům pro Windows 10 aktualizace](/windows/deployment/update/waas-servicing-channels-windows-10-updates)
 - [Správa softwarových aktualizací Windows 10 v Intune](/mem/intune/protect/windows-update-for-business-configure)

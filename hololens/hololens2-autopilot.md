@@ -13,12 +13,12 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: autopilot
 manager: jarrettr
-ms.openlocfilehash: 7dbe77c8c5999d5be1a61ca9deaa8071d152c87a
-ms.sourcegitcommit: d0c7bf5b055fa1fa8ac5562eef904583a655da99
+ms.openlocfilehash: 4782b5d4d3c51038f7810c57d2144758ce0dc1ac
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "122782803"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190187"
 ---
 # <a name="windows-autopilot-for-hololens-2"></a>Windows Autopilot pro HoloLens 2
 
@@ -140,209 +140,209 @@ Existují dva způsoby, jak načíst hodnotu hash hardwaru.
     
     1. Extrahujte obsah souboru AutopilotDiagnostics.zip.
 
-    1. V extrahovaných souborech vyhledejte soubor CSV s předponou názvu souboru "DeviceHash". Zkopírujte tento soubor na jednotku v počítači, kde k němu máte přístup později.  
+    1. V extrahovaných souborech vyhledejte soubor CSV s předponou názvu souboru "DeviceHash". Zkopírujte tento soubor na jednotku v počítači, kde k ní budete později mít přístup.  
 
        > [!IMPORTANT]  
-       > Data v souboru CSV by měla používat následující formát záhlaví a čáry:
+       > Data v souboru CSV by měla používat následující hlavičku a formát řádku:
        > ```
        > Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User <serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>
        >```
 
-#### <a name="register-device-through-mem"></a>Registrovat zařízení přes MEM
+#### <a name="register-device-through-mem"></a>Registrace zařízení prostřednictvím MEM
 
-1. v [centru pro správu Microsoft Endpoint Manager](https://endpoint.microsoft.com)vyberte **zařízení**  >  **Windows**  >  **Windows registrace** a pak vyberte **zařízení**  >  **importovaná** v části **Windows Autopilot Deployment Program**.
+1. V [Microsoft Endpoint Manager pro správu](https://endpoint.microsoft.com) **vyberte** Zařízení Windows Windows registraci a potom v části Windows Autopilot Deployment Program vyberte Import  >    >     >   **zařízení.**
 
-1. v části **přidat Windows zařízení autopilotu** vyberte soubor CSV DeviceHash, vyberte **otevřít** a pak vyberte **importovat**.  
-
-   > [!div class="mx-imgBorder"]
-   > ![Pomocí příkazu Import importujte hodnotu hash hardwaru.](./images/hololens-ap-hash-import.png)
-
-1. po dokončení importu vyberte **zařízení**  >  **Windows**  >  **Windows registrace**  >  **zařízení**  >  . Dokončení procesu může trvat několik minut v závislosti na tom, kolik zařízení se synchronizuje. Pokud chcete zobrazit registrované zařízení, vyberte **aktualizovat**.  
+1. V **části Windows zařízení Autopilot** vyberte soubor CSV DeviceHash, vyberte **Otevřít** a pak vyberte **Importovat.**  
 
    > [!div class="mx-imgBorder"]
-   > ![K zobrazení seznamu zařízení použijte příkazy synchronizovat a aktualizovat.](./images/hololens-ap-devices-sync.png)  
+   > ![K importu hodnoty hash hardwaru použijte příkaz Import.](./images/hololens-ap-hash-import.png)
+
+1. Po dokončení importu vyberte Zařízení **Windows**  >    >  **Windows registrace**  >  **Zařízení**  >  **Synchronizovat.** Dokončení tohoto procesu může trvat několik minut v závislosti na tom, kolik zařízení se synchronizuje. Pokud chcete zaregistrované zařízení zobrazit, vyberte **Aktualizovat.**  
+
+   > [!div class="mx-imgBorder"]
+   > ![Seznam zařízení zobrazíte pomocí příkazů Synchronizovat a Aktualizovat.](./images/hololens-ap-devices-sync.png)  
 
 ### <a name="5-create-a-device-group"></a>5. Vytvoření skupiny zařízení
 
-1. v [centru pro správu Microsoft Endpoint Manager](https://endpoint.microsoft.com)vyberte **skupiny**  >  **nová skupina**.
+1. V [Microsoft Endpoint Manager pro správu](https://endpoint.microsoft.com)vyberte Skupiny **Nová**  >  **skupina.**
 
-1. Jako **typ skupiny** vyberte **zabezpečení** a pak zadejte název a popis skupiny.
+1. Jako **Typ skupiny** vyberte **Zabezpečení** a pak zadejte název a popis skupiny.
 
-1. V případě **typu členství** vyberte buď **přiřazené** , nebo **dynamické zařízení**.
+1. Jako **Typ členství** vyberte Přiřazené **nebo** **Dynamické zařízení.**
 
 1. Proveďte některou z následujících akcí:  
 
-   - Pokud jste v předchozím kroku vybrali **přiřazeno** k **typu členství** , vyberte **členy** a potom do skupiny přidejte zařízení autopilotu. Zařízení autopilot, která ještě nejsou zaregistrovaná, se zobrazí jako název zařízení pomocí sériového čísla zařízení.
-   - Pokud jste v předchozím kroku vybrali možnost **Dynamická zařízení** pro **typ členství** , vyberte **dynamické členy zařízení** a pak zadejte kód v **rozšířeném pravidle** , které se podobá následujícímu:
-     - Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení s vaším autopilotem, zadejte: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-     - Pole značky skupiny v Intune se mapuje na atribut **ČísloObjednávky** na zařízeních Azure AD. Pokud chcete vytvořit skupinu, která bude obsahovat všechna vaše zařízení autopilot, která mají specifickou značku skupiny (ČísloObjednávky pro zařízení Azure AD), musíte zadat: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
-     - Pokud chcete vytvořit skupinu, která zahrnuje všechna vaše zařízení autopilot, která mají konkrétní ID nákupní objednávky, zadejte: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
+   - Pokud jste v **předchozím kroku** jako Typ **členství** vybrali Přiřazeno, vyberte **Členové** a pak do skupiny přidejte zařízení Autopilot. Zařízení Autopilot, která ještě nejsou zaregistrovaná, jsou uvedena pomocí sériového čísla zařízení jako názvu zařízení.
+   - Pokud jste **v**  předchozím kroku jako Typ členství vybrali Dynamická zařízení, vyberte Dynamické členy zařízení a pak do pole **Pokročilé** pravidlo zadejte kód, který bude vypadat podobně jako v následujícím příkladu:
+     - Pokud chcete vytvořit skupinu, která obsahuje všechna vaše zařízení Autopilot, zadejte: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
+     - Pole značky skupiny Intune se mapuje na **atribut OrderID** na zařízeních Azure AD. Pokud chcete vytvořit skupinu, která obsahuje všechna vaše zařízení Autopilot, která mají konkrétní značku skupiny (OrderID zařízení Azure AD), musíte zadat: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+     - Pokud chcete vytvořit skupinu, která obsahuje všechna vaše zařízení Autopilot, která mají konkrétní ID nákupní objednávky, zadejte: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
 
      > [!NOTE]  
-     > Tato pravidla cílí na atributy, které jsou jedinečné pro zařízení autopilot.
-1. Vyberte **Uložit** a pak vyberte **vytvořit**.
+     > Tato pravidla cílí na atributy, které jsou jedinečné pro zařízení Autopilot.
+1. Vyberte **Uložit** a pak vyberte **Vytvořit.**
 
-### <a name="6-create-a-deployment-profile"></a>6. vytvoření profilu nasazení
+### <a name="6-create-a-deployment-profile"></a>6. Vytvoření profilu nasazení
 
-1. v [centru pro správu Microsoft Endpoint Manager](https://endpoint.microsoft.com)vyberte **zařízení**  >  **Windows**  >  **Windows registrace**  >  **Windows profily nasazení autopilotu**  >  **vytvořit profil**  >  **HoloLens**.
-   ![rozevírací seznam vytvořit profil obsahuje položku HoloLens.](./images/hololens-ap-enrollment-profiles.png)
+1. V [Microsoft Endpoint Manager pro správu](https://endpoint.microsoft.com)vyberte Zařízení   >  **Windows** Windows  >  **a** Windows nasazení  >  **Autopilotu** Vytvořte  >  **profil**  >  **HoloLens**.
+   ![Rozevírací seznam Vytvořit profil obsahuje HoloLens položky.](./images/hololens-ap-enrollment-profiles.png)
 
-1. Zadejte název a popis profilu a pak vyberte **Další**.  
-   Měl by se zobrazit seznam, který obsahuje **HoloLens**. Pokud tato možnost není k dispozici, kontaktujte nás pomocí jedné z možností [zpětné vazby](hololens2-autopilot.md#feedback-and-support-for-autopilot) .
+1. Zadejte název a popis profilu a pak vyberte **Další.**  
+   Měl by se zobrazit seznam, který **obsahuje HoloLens**. Pokud tato možnost není k dispozici, kontaktujte nás pomocí jedné z možností [zpětné](hololens2-autopilot.md#feedback-and-support-for-autopilot) vazby.
 
    > [!div class="mx-imgBorder"]
-   > ![Přidat název a popis profilu](./images/hololens-ap-profile-name.png)
+   > ![Přidejte název a popis profilu.](./images/hololens-ap-profile-name.png)
 
-1. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** je většina nastavení předem nakonfigurovaná, aby se pro toto vyhodnocení zjednodušilo počáteční nastavení. Volitelně můžete nakonfigurovat následující nastavení:  
+1. Většina **nastavení je předem** nakonfigurovaná tak, aby se pro toto vyhodnocení zjednodušil přístupový proces. Volitelně můžete nakonfigurovat následující nastavení:  
 
-   - **Jazyk (oblast)**: Vyberte jazyk pro OOBE. doporučujeme vybrat jazyk ze seznamu [podporovaných jazyků pro HoloLens 2](hololens2-language-support.md).
-   - **Automaticky konfigurovat klávesnici**: aby se zajistilo, že klávesnice odpovídá vybranému jazyku, vyberte **Ano**.
-   - **Použít šablonu názvu zařízení**: Pokud chcete automaticky nastavit název zařízení během spuštění OOBE, vyberte **Ano** a pak zadejte frázi šablony a zástupné symboly do pole **Zadejte název** , například zadejte předponu a `%RAND:4%` &mdash; zástupný text pro číslo se čtyřmi číslicemi.
+   - **Jazyk (oblast):** Vyberte jazyk pro OOBE. Doporučujeme vybrat jazyk ze seznamu podporovaných jazyků pro HoloLens [2.](hololens2-language-support.md)
+   - **Automaticky nakonfigurovat klávesnici:** Pokud chcete zajistit, aby klávesnice odpovídala vybranému jazyku, vyberte **Ano.**
+   - Použít **šablonu** názvu zařízení: Pokud chcete automaticky nastavit  název zařízení při spuštění počítače, vyberte Ano a potom zadejte frázi šablony **a** zástupné symboly do pole Zadejte název. Zadejte například předponu a zástupný symbol pro čtyřciferné `%RAND:4%` &mdash; náhodné číslo.
      > [!NOTE]  
-     > Pokud použijete šablonu názvu zařízení, proces OOBE znovu spustí zařízení ještě jednou, když se použije název zařízení a předtím, než se zařízení připojí k Azure AD. Tento restart umožní uplatnění nového názvu.  
+     > Pokud použijete šablonu názvu zařízení, proces OOBE restartuje zařízení ještě jednou po použití názvu zařízení a před jeho připojením ke službě Azure AD. Toto restartování umožňuje, aby se nový název projeví.  
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurace nastavení OOBE](./images/hololens-ap-profile-oobe.png)
+   > ![Nakonfigurujte nastavení OOBE.](./images/hololens-ap-profile-oobe.png)
 
-1. Po nakonfigurování nastavení vyberte **Další**.
-1. Na stránce **značky oboru** můžete volitelně přidat značky oboru, které chcete použít pro tento profil. Další informace o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](/mem/intune/fundamentals/scope-tags.md). Po dokončení vyberte **Další**.
-1. Na stránce **přiřazení** vyberte **vybrané skupiny** pro **přiřazení**.
-1. V části **vybrané skupiny** vyberte **+ Vybrat skupiny, které chcete zahrnout**.
-1. v seznamu **vybrat skupiny, které se mají zahrnout** vyberte skupinu zařízení, kterou jste vytvořili pro HoloLens zařízení autopilotu, a pak vyberte **další**.  
+1. Po konfiguraci nastavení vyberte **Další.**
+1. Na stránce **Značky** oboru můžete volitelně přidat značky oboru, které chcete pro tento profil použít. Další informace o značkách oboru najdete v tématu Použití řízení přístupu na základě role a značek [oboru pro distribuované IT](/mem/intune/fundamentals/scope-tags.md). Po dokončení vyberte **Další.**
+1. Na stránce **Přiřazení v** části Přiřadit **k** vyberte **Vybrané skupiny.**
+1. V **části VYBRANÉ SKUPINY** vyberte + Vybrat **skupiny, které se zahrnou.**
+1. V seznamu **Vybrat skupiny** k zahrnutí vyberte skupinu zařízení, kterou jste vytvořili pro zařízení Autopilot HoloLens a pak vyberte **Další.**  
   
-   Pokud chcete vyloučit jakékoli skupiny, vyberte **Vybrat skupiny, které se mají vyloučit**, a vyberte skupiny, které chcete vyloučit.
+   Pokud chcete některé skupiny vyloučit, vyberte **Vybrat skupiny, které** chcete vyloučit, a vyberte skupiny, které chcete vyloučit.
 
    > [!div class="mx-imgBorder"]
-   > ![Přiřazení skupiny zařízení k profilu.](./images/hololens-ap-profile-assign-devicegroup.png)
+   > ![Přiřazení skupiny zařízení k profilu](./images/hololens-ap-profile-assign-devicegroup.png)
 
-1. Na stránce **Revize + vytvořit** zkontrolujte nastavení a pak vyberte **vytvořit** a vytvořte profil.  
+1. Na stránce **Zkontrolovat a vytvořit** zkontrolujte nastavení a pak výběrem možnosti **Vytvořit** vytvořte profil.  
 
    > [!div class="mx-imgBorder"]
-   > ![Kontrola a vytvoření](./images/hololens-ap-profile-summ.png)
+   > ![Zkontrolujte a vytvořte.](./images/hololens-ap-profile-summ.png)
 
-### <a name="7-verify-the-esp-configuration"></a>7. Ověřte konfiguraci protokolu ESP.
+### <a name="7-verify-the-esp-configuration"></a>7. Ověření konfigurace ESP
 
-Stránka stavu registrace (ESP) zobrazuje stav kompletního procesu konfigurace zařízení, který se spustí, když se uživatel spravovaný MDM poprvé přihlásí do zařízení. Ujistěte se, že se konfigurace protokolu ESP podobá následujícímu, a ověřte, že jsou přiřazení správná.  
+Stránka stavu registrace (ESP) zobrazuje stav úplného procesu konfigurace zařízení, který se spustí při prvním přihlášení spravovaného uživatele MDM k zařízení. Ujistěte se, že vaše konfigurace ESP vypadá podobně jako v následujícím příkladu, a ověřte, že jsou přiřazení správná.  
 
 > [!div class="mx-imgBorder"]
-> ![Konfigurace ESP](./images/hololens-ap-profile-settings.png)
+> ![Konfigurace ESP.](./images/hololens-ap-profile-settings.png)
 
-### <a name="8-verify-the-profile-status-of-the-hololens-devices"></a>8. ověřte stav profilu HoloLens zařízení
+### <a name="8-verify-the-profile-status-of-the-hololens-devices"></a>8. Ověření stavu profilu zařízení HoloLens zařízení
 
-1. v centru pro správu Microsoft Endpoint Manager vyberte **zařízení**  >  **Windows**  >  **Windows registrace**  >  **zařízení**.
+1. V Microsoft Endpoint Manager Admin Center vyberte Zařízení **Windows**  >    >  **Windows registraci**  >  **zařízení.**
 
-1. ověřte, že jsou v seznamu uvedená zařízení HoloLens a že jsou jejich stav profilu **přiřazený**.  
+1. Ověřte, že HoloLens uvedená zařízení a že jejich stav profilu je **Přiřazeno.**  
 
    > [!NOTE]  
-   > Přiřazení profilu k zařízení může trvat několik minut.  
+   > Přiřazení profilu k zařízení může několik minut trvat.  
 
    > [!div class="mx-imgBorder"]
    > ![Přiřazení zařízení a profilu.](./images/hololens-ap-devices-assignments.png)
 
-## <a name="windows-autopilot-for-hololens-2-user-experience"></a>Windows autopilot pro HoloLens 2 – uživatelské prostředí
+## <a name="windows-autopilot-for-hololens-2-user-experience"></a>Windows Autopilot pro HoloLens 2 uživatelské prostředí
 
-po dokončení výše uvedených pokynů se uživatelům HoloLens 2 při zřizování svých HoloLensch zařízení projdou tyto možnosti:  
+Po dokončení výše uvedených pokynů vaši uživatelé HoloLens 2 projde následujícím prostředím a zřžou svá zařízení HoloLens zařízení:  
 
-1. Prostředí autopilotu vyžaduje přístup k Internetu. K poskytnutí přístupu k Internetu použijte jednu z následujících možností:
+1. Prostředí Autopilotu vyžaduje přístup k internetu. K zajištění přístupu k internetu použijte jednu z následujících možností:
 
-    - Připojení zařízení do Wi-Fi sítě v OOBE a pak mu umožnit automatické rozpoznávání možností automatického pilotního nasazení. Toto je jediná doba, kterou budete potřebovat k interakci s OOBE, dokud se prostředí autopilotního projektu nedokončuje sami. všimněte si, že ve výchozím nastavení HoloLens 2 čeká 10 sekund na detekci automatického pilotního projektu po zjištění internetu. Pokud se během 10 sekund nezjistí žádný profil autopilotu, vytvoří se v počátečním souboru EULA. Pokud se setkáte s tímto scénářem, restartujte prosím zařízení, aby bylo možné zjistit automatický pilotní nasazení. Všimněte si také, že počáteční nastavení může na zařízení počkat na neomezenou dobu, jenom když je na zařízení nastavené zásady TenantLockdown.
+    - Připojení zařízení do Wi-Fi v prostředí OOBE a nechat ho automaticky detekovat prostředí Autopilotu. Je to jediný čas, kdy budete potřebovat pracovat s OOBE, dokud se prostředí Autopilot samo nedokoní. Upozorňujeme, že ve výchozím HoloLens 2 po zjištění internetu počká 10 sekund na rozpoznání Autopilotu. Pokud během 10 sekund není detekován žádný profil Autopilot, zobrazí se při jeho aktivaci eula. Pokud narazíte na tento scénář, restartujte zařízení, aby bylo možné udělat další pokus o rozpoznání Autopilotu. Upozorňujeme také, že funkce při neověřené aktivaci může čekat na Autopilot po neomezenou dobu pouze v případě, že je na zařízení nastavená zásada TenantLockdown.
 
-    - Připojení zařízení pomocí sítě ethernet s použitím adaptérů USB-C do sítě ethernet pro drátové připojení k internetu a nechte HoloLens 2 dokončit automatické pilotní prostředí.
+    - Připojení připojit zařízení k síti Ethernet pomocí adaptérů USB-C na Ethernet pro připojení k drátovému internetu a nechat HoloLens 2 dokončit prostředí Autopilotu.
 
-    - Připojení zařízení pomocí adaptérů USB-C do Wi-Fi pro bezdrátové připojení k internetu a nechte HoloLens 2 dokončit automatické pilotní prostředí.
+    - Připojení připojit zařízení pomocí adaptérů USB-C na Wi-Fi pro bezdrátové připojení k internetu a nechat HoloLens 2 dokončit prostředí Autopilotu automaticky.
 
         > [!IMPORTANT]  
-       > zařízení, která se pokoušejí použít Wi-Fi sítě v OOBE pro autopiloter, musí být v [Windows holografická verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2).
+       > Zařízení, která se pokoušejí Wi-Fi v OOBE pro Autopilot, musí být na [Windows Holographic verze 20H2.](hololens-release-notes.md#windows-holographic-version-20h2)
        >
-       > Pro zařízení, která používají adaptéry Ethernet, je nutné zařízení připojit k síti před spuštěním nástroje pro počáteční prostředí (OOBE). Zařízení určí, jestli se na první obrazovce OOBE zřídí jako zařízení s autopilotem. Pokud se zařízení nemůže připojit k síti nebo pokud se rozhodnete nezřídit zařízení jako zařízení autopilotu, nemůžete ho později změnit na autopilot. Místo toho byste museli spustit tento postup za účelem zřízení zařízení jako zařízení s autopilotem.
+       > U zařízení, která používají ethernetové adaptéry, musíte zařízení připojit k síti před tím, než se spustí prostředí při spuštění počítače. Zařízení určuje, jestli se na první obrazovce OOBE zřizuje jako zařízení Autopilot. Pokud se zařízení nemůže připojit k síti nebo pokud se rozhodnete zařízení zřídit jako zařízení Autopilot, nemůžete ho později změnit na Zřizování Autopilotu. Místo toho byste muset tento postup spustit znovu, abyste mohli zařízení zřídit jako zařízení Autopilot.
 
-1. Zařízení by mělo automaticky spustit počáteční soubor. Nepoužívejte interakci s OOBE.
+1. Zařízení by mělo automaticky spustit OOBE. Nereagovat na OOBE.
 
     > [!IMPORTANT]
-    > Nepoužívejte prosím příkaz OOBE nebo stiskněte tlačítko napájení a převeďte systém do úsporného režimu nebo vypnutí, zatímco probíhá proces autopilotu. To může způsobit, že se tok autopilotního projektu nedokončil.
+    > Pokud chcete systém přenést do pohotovostního režimu nebo vypnutí, neaktivuje se prosím software při provozu ani nestiskne tlačítko napájení, zatímco probíhá Režim autopilotu. To může způsobit, že se tok Autopilotu dokončí.
 
-   umožněte HoloLens 2 detekci připojení k síti a umožněte automatickému dokončení souboru OOBE. Zařízení se může během POČÁTEČNÍho nastartu restartovat. Obrazovky OOBE by měly vypadat podobně jako následující.
+   Nechte HoloLens 2 zjistit připojení k síti a povolit automatické dokončení spuštění počítače. Zařízení se může restartovat během spuštění počítače. Obrazovky OOBE by měly vypadat podobně jako na následujícím příkladu.
 
-   ![OOBE krok 1 ](./images/autopilot-welcome.jpg)
-    ![ oobe krok 2 ](./images/autopilot-step-complete.jpg)
-    ![ oobe krok 3](./images/autopilot-device-setup.jpg)
+   ![OOBE krok 1. ](./images/autopilot-welcome.jpg)
+    ![ OOBE krok 2. ](./images/autopilot-step-complete.jpg)
+    ![ OOBE krok 3.](./images/autopilot-device-setup.jpg)
 
-1. Na konci počátečního nastavení se můžete k zařízení přihlásit pomocí uživatelského jména a hesla.
+1. Na konci OOBE se k zařízení můžete přihlásit pomocí svého uživatelského jména a hesla.
 
    <br/><img src="./images/other-user.jpg" alt="Other user" width="450" height="700" />
 
-## <a name="tenantlockdown-csp-and-autopilot"></a>Tenantlockdown CSP a autopilot
+## <a name="tenantlockdown-csp-and-autopilot"></a>Tenantlockdown CSP a Autopilot
 
-HoloLens 2 zařízení podporují zprostředkovatele CSP pro Windows holografickou verzi 20H2. Tento zprostředkovatel CSP udržuje zařízení v tenantovi organizace tím, že je zamkne do tohoto tenanta i přes resetování nebo reflash zařízení.
+HoloLens 2 podporují TenantLockdown CSP od verze Windows Holographic verze 20H2. Tento CSP udržuje zařízení v tenantovi organizace tím, že je uzamyká pro tohoto tenanta, a to i přes resetování zařízení nebo koliázku.
 
-[TenantLockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP umožňuje, aby HoloLens 2 byly vázané jenom na registraci MDM jenom pomocí autopilotu. jakmile se uzel RequireNetworkInOOBE poskytovatele TenantLockdown CSP nastaví na hodnotu true nebo false (zpočátku nastavená) na HoloLens 2, tato hodnota zůstane na zařízení bez ohledu na to, jak se provádí bliknutí, aktualizace operačního systému atd.
+[TenantLockdown](/windows/client-management/mdm/tenantlockdown-csp) CSP umožňuje, HoloLens 2 k registraci MDM pouze pomocí Autopilotu. Jakmile je u uzlu RequireNetworkInOOBE tenantaLockdown CSP nastavená hodnota true nebo false (původně nastavená) na HoloLens 2, zůstane tato hodnota v zařízení bez ohledu na kolísání, aktualizace operačního systému atd.
 
-jakmile je uzel TenantLockdown csp ' RequireNetworkInOOBE ' nastaven na hodnotu true v HoloLens 2, bude po připojení k síti znovu čekat na neomezenou dobu pro stažení a použití profilu autopilotu.
+Jakmile je u uzlu RequireNetworkInOOBE tenantaLockdown CSP nastavená hodnota true na HoloLens 2, po připojení k síti počká OOBE po neomezenou dobu na úspěšné stažení a použití profilu Autopilot.
 
-jakmile je uzel TenantLockdown csp ' RequireNetworkInOOBE ' nastaven na hodnotu true u HoloLens 2, v počátečním souboru OOBE nejsou povoleny následující operace:
+Po nastavení uzlu RequireNetworkInOOBE u tenantaLockdown CSP na úrovni HoloLens 2 jsou v OOBE zakázané následující operace:
 
-- Vytváření místního uživatele pomocí zřizování za běhu 
-- Provádění operace připojení ke službě Azure AD prostřednictvím zřizování za běhu 
-- Výběr toho, kdo zařízení vlastní v prostředí OOBE 
+- Vytvoření místního uživatele pomocí zřizování modulu runtime 
+- Provádění operace připojení k Azure AD prostřednictvím zřizování modulu runtime 
+- Výběr vlastníka zařízení v prostředí pro OOBE 
 
-#### <a name="how-to-set-this-using-intune"></a>Jak ho nastavit pomocí Intune? 
-1. Vytvořte vlastní konfigurační profil zařízení OMA URI a zadejte hodnotu true pro uzel RequireNetworkInOOBE, jak je znázorněno níže.
-Hodnota OMA-URI by měla být./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
-
-   > [!div class="mx-imgBorder"]
-   > ![Nastavení uzamčení klienta pomocí OMA-URI](images/hololens-tenant-lockdown.png)
-
-1. Vytvořte skupinu a přiřaďte k této skupině zařízení profil konfigurace zařízení.
-
-1. nastavte jako člena zařízení HoloLens 2 skupinu vytvořenou v předchozím kroku a spusťte synchronizaci.  
-
-Na portálu Intune ověřte, že se konfigurace zařízení úspěšně nastavila. jakmile se tato konfigurace zařízení úspěšně použije na zařízení HoloLens 2, projeví se aktivní účinky TenantLockdown.
-
-#### <a name="how-to-unset-tenantlockdowns-requirenetworkinoobe-on-hololens-2-using-intune"></a>jak zrušit nastavení RequireNetworkInOOBE TenantLockdown na HoloLens 2 pomocí intune?
-
-1. odeberte HoloLens 2 ze skupiny zařízení, ve které byla výše vytvořená konfigurace zařízení dříve přiřazena.
-
-1. Vytvořte vlastní konfigurační profil zařízení založený na identifikátoru URI OMA a zadejte hodnotu false pro RequireNetworkInOOBE, jak je znázorněno níže.
-Hodnota OMA-URI by měla být./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE
+#### <a name="how-to-set-this-using-intune"></a>Jak to nastavit pomocí Intune? 
+1. Vytvořte vlastní konfigurační profil zařízení OMA URI a jako uzel RequireNetworkInOOBE zadejte true, jak je znázorněno níže.
+Hodnota OMA-URI by měla být ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE.
 
    > [!div class="mx-imgBorder"]
-   > ![Snímek obrazovky s nastavením RequireNetworkInOOBE na hodnotu false prostřednictvím identifikátoru URI OMA v Intune](images/hololens-tenant-lockdown-false.png)
+   > ![Nastavení uzamykací funkce tennant přes OMA-URI](images/hololens-tenant-lockdown.png)
 
-1. Vytvořte skupinu a přiřaďte k této skupině zařízení profil konfigurace zařízení. 
+1. Vytvořte skupinu a přiřaďte k této skupině zařízení konfigurační profil zařízení.
 
-1. nastavte jako člena zařízení HoloLens 2 skupinu vytvořenou v předchozím kroku a spusťte synchronizaci.
+1. Napřed HoloLens 2 člena skupiny vytvořené v předchozím kroku a aktivujte synchronizaci.  
 
-Na portálu Intune ověřte, že se konfigurace zařízení úspěšně nastavila. jakmile se tato konfigurace zařízení úspěšně použije na zařízení HoloLens 2, účinky TenantLockdown budou neaktivní.
+Na portálu Intune ověřte, že se konfigurace zařízení úspěšně použila. Jakmile se tato konfigurace zařízení úspěšně použije na zařízení HoloLens 2, účinky tenantaLockdown budou aktivní.
 
-#### <a name="what-would-happen-during-oobe-if-autopilot-profile-is-unassigned-on-a-hololens-after-tenantlockdown-was-set-to-true"></a>co se stane při počátečním spuštění, pokud je profil autopilotu nepřiřazený u HoloLens po nastavení TenantLockdown na hodnotu true? 
-Při POČÁTEČNÍm navýšení bude profil pro autopilot čekat na neomezenou dobu stahování a zobrazí se dialogové okno. Aby se odstranily účinky TenantLockdown, musí být zařízení zaregistrované v původním tenantovi jenom pomocí jenom autopilotu a RequireNetworkInOOBE musí být nastavené tak, jak je popsané v předchozím kroku, než se odeberou omezení zavedená poskytovatelem CSP pro TenantLockdown.
+#### <a name="how-to-unset-tenantlockdowns-requirenetworkinoobe-on-hololens-2-using-intune"></a>Jak pomocí Intune zrušit nastavení nastavení TenantLockdown RequireNetworkInOOBE HoloLens 2?
 
-![Zobrazení v zařízení pro dobu, kdy se na zařízení vynutila zásada.](images/hololens-autopilot-lockdown.png)
+1. Odeberte HoloLens 2 ze skupiny zařízení, ke které byla dříve přiřazena konfigurace zařízení vytvořená výše.
 
-## <a name="known-issues--limitations"></a>Známé problémy & omezení
+1. Vytvořte vlastní konfigurační profil zařízení založený na OMA URI a jako RequireNetworkInOOBE zadejte false, jak je znázorněno níže.
+Hodnota OMA-URI by měla být ./Vendor/MSFT/TenantLockdown/RequireNetworkInOOBE.
 
-- Zkoumáme problém, kdy se instalace aplikace na základě kontextu zařízení nakonfigurovaná v programu MEM nevztahuje na HoloLens. [Přečtěte si další informace o kontextu zařízení a o instalaci kontextu uživatele.](/mem/intune/apps/apps-windows-10-app-deploy#install-apps-on-windows-10-devices)
-- Při nastavování autopilotu přes Wi-Fi může nastat instance, ve které se profil autopilotu nestáhne při prvním navázání připojení k Internetu. V tomto případě se zobrazí licenční smlouva s koncovým uživatelem (EULA) a uživatel má možnost pokračovat v instalaci bez automatického pilotního nasazení. Pokud se chcete znovu pokusit o nastavení pomocí modulu autopilot, vložte zařízení do režimu spánku a pak ho restartujte, nebo zařízení restartujte a nechte to znovu.
-- funkce převést veškerou cílovou zařízení na autopilotu není v současnosti podporovaná HoloLens.  
+   > [!div class="mx-imgBorder"]
+   > ![Snímek obrazovky s nastavením RequireNetworkInOOBE na hodnotu false prostřednictvím OMA URI v Intune](images/hololens-tenant-lockdown-false.png)
+
+1. Vytvořte skupinu a přiřaďte k této skupině zařízení konfigurační profil zařízení. 
+
+1. Napřed HoloLens 2 člena skupiny vytvořené v předchozím kroku a aktivujte synchronizaci.
+
+Na portálu Intune ověřte, že se konfigurace zařízení úspěšně použila. Jakmile se tato konfigurace zařízení úspěšně použije na zařízení HoloLens 2, účinky tenantaLockdown budou neaktivní.
+
+#### <a name="what-would-happen-during-oobe-if-autopilot-profile-is-unassigned-on-a-hololens-after-tenantlockdown-was-set-to-true"></a>Co by se stalo při OOBE, pokud profil Autopilotu není přiřazený v HoloLens po nastavení TenantLockdown na hodnotu true? 
+OOBE bude čekat po neomezenou dobu, než se profil Autopilot stáhne, a zobrazí se následující dialogové okno. Aby bylo možné odebrat účinky tenantaLockdown, musí být zařízení zaregistrované v původním tenantovi jenom pomocí Autopilotu a RequireNetworkInOOBE musí být nenastavované, jak je popsáno v předchozím kroku, než se odeberou omezení zavedená poskytovatelem csP TenantLockdown.
+
+![Zobrazení v zařízení, kdy se na zařízení vynucuje zásada](images/hololens-autopilot-lockdown.png)
+
+## <a name="known-issues--limitations"></a>Známé problémy a & omezení
+
+- Zkoumáme problém, kdy instalace aplikace na základě kontextu zařízení nakonfigurovaná v MEM neplatí pro HoloLens. [Přečtěte si další informace o instalaci kontextu zařízení a kontextu uživatele.](/mem/intune/apps/apps-windows-10-app-deploy#install-apps-on-windows-10-devices)
+- Při nastavování Autopilotu přes Wi-Fi může dojít k instanci, kdy se profil Autopilotu při prvním vytvoření připojení k internetu nestáhne. V takovém případě se zobrazí licenční smlouva s koncovým uživatelem (EULA) a uživatel má možnost pokračovat v instalaci mimo Autopilot. Pokud chcete nastavení zopakovat pomocí Autopilotu, přestavte zařízení do režimu spánku, pak ho restartujte nebo restartujte a zkuste to znovu.
+- Funkce "Převést všechna cílová zařízení na Autopilot" se v HoloLens nepodporuje.  
 
 ### <a name="troubleshooting"></a>Řešení potíží
 
-následující články můžou být užitečným prostředkem, abyste si mohli přečíst další informace a řešit problémy s výkonem pro autopilot, ale pamatujte na to, že tyto články jsou založené na Windows 10 desktopu a ne všechny informace se mohou vztahovat na HoloLens:
+Následující články mohou být užitečným zdrojem dalších informací a řešení potíží s Autopilotem. Mějte ale na paměti, že tyto články jsou založené na Windows 10 Desktopu a ne všechny informace se mohou vztahovat na HoloLens:
 
 - [Windows Autopilot – známé problémy](/mem/autopilot/known-issues)
-- [řešení potíží s registrací zařízení Windows v Microsoft Intune](/mem/intune/enrollment/troubleshoot-windows-enrollment-errors)
-- [Windows Autopilot – konflikty zásad](/mem/autopilot/policy-conflicts)
+- [Řešení Windows problémů s registrací zařízení v Microsoft Intune](/mem/intune/enrollment/troubleshoot-windows-enrollment-errors)
+- [Windows Autopilot – Konflikty zásad](/mem/autopilot/policy-conflicts)
 
-## <a name="feedback-and-support-for-autopilot"></a>Zpětná vazba a podpora pro autopilot
+## <a name="feedback-and-support-for-autopilot"></a>Zpětná vazba a podpora pro Autopilot
 
-Chcete-li poskytnout zpětnou vazbu nebo nahlásit problémy, použijte jednu z následujících metod:
+Pokud chcete poskytnout zpětnou vazbu nebo nahlásit problémy, použijte jednu z následujících metod:
 
-- Pro podporu registrace zařízení se obraťte na svého prodejce nebo distributora.
-- u obecných dotazů na podporu týkající se Windows autopilotu nebo pro problémy, jako jsou přiřazení profilů, vytváření skupin nebo ovládací prvky pro pracovní portál, [kontaktujte podporu Microsoft Endpoint Manager](/mem/get-support)  
-- pokud je zařízení zaregistrované do služby autopilot a profil se přiřadí na portále MEM, kontaktujte [podporu](/hololens/) HoloLens (viz karta podpora). Otevřete prosím lístek podpory a pokud je to možné, zahrňte snímky obrazovky a protokoly zachytáváním [offline diagnostických protokolů](hololens-diagnostic-logs.md#offline-diagnostics) během nastavování mimo prostředí (OOBE).
-- Pokud chcete ohlásit problém ze zařízení, použijte aplikaci centra Feedback na vašem HoloLens. v centru pro zpětnou vazbu vyberte kategorii zařízení **pro správu Enterprise**  >   .
-- pokud chcete získat obecnou zpětnou vazbu k autopilotu pro HoloLens, můžete odeslat tento [průzkum](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7vUmjNI0XhCp1T72ODD84xUMEM3TVJPOURBRkNVWkYwM0RWWEhJNVdJSi4u&wdLOR=cEF1F57F6-AD9B-4CCE-B919-AB5AE320A993) .
+- Pokud chcete podporu k registraci zařízení, obraťte se na prodejce nebo distributora.
+- Pokud chcete obecné dotazy ohledně podpory Windows Autopilot nebo problémy, jako jsou přiřazení profilů, vytvoření skupin nebo ovládací prvky portálu MEM, obraťte se Microsoft Endpoint Manager [podporu.](/mem/get-support)  
+- Pokud je vaše zařízení zaregistrované ve službě Autopilot a profil je přiřazený na portálu MEM, kontaktujte HoloLens [podporu](/hololens/) (viz karta Podpora). Otevřete lístek podpory, a pokud je to k dispozici, zahrřte snímky obrazovky a protokoly tím, že zachytáte [offline](hololens-diagnostic-logs.md#offline-diagnostics) diagnostické protokoly během spuštění zařízení.
+- Pokud chcete nahlásit problém ze zařízení, použijte aplikaci Centrum Feedback ve vaší HoloLens. V Centrum Feedback vyberte **kategorii Enterprise Zařízení**  >  **pro správu.**
+- Pokud chcete poskytnout obecnou zpětnou vazbu k Autopilotu pro HoloLens, můžete odeslat tento [průzkum.](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7vUmjNI0XhCp1T72ODD84xUMEM3TVJPOURBRkNVWkYwM0RWWEhJNVdJSi4u&wdLOR=cEF1F57F6-AD9B-4CCE-B919-AB5AE320A993)
 
 ## <a name="delete-autopilot-devices"></a>Odstranění zařízení Autopilot
 
-Možná budete chtít, aby zařízení už nepoužívalo k autopilotu, nebo aby se vaše zařízení zaregistrovala v jiném tenantovi. Pokud to chcete provést, přečtěte si téma[Jak odstranit zařízení autopilotu.](/mem/autopilot/add-devices#delete-autopilot-devices)
+Možná už nebudete chtít používat zařízení pro Autopilot nebo registrovat zařízení do jiného tenanta. Pokud to chcete udělat, přečtěte si o odstranění zařízení[Autopilot.](/mem/autopilot/add-devices#delete-autopilot-devices)

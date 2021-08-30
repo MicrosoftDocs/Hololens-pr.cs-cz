@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: a4e2bc30d1141fcc1c6a648ccc7c3573f6afda2ba3f5cd413a8e9a69203ea617
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: ee2b87823324f3183d86763d47b38ca0503f0aeb
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658901"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190340"
 ---
 # <a name="hololens-2-development-edition"></a>HoloLens 2 – vývojová edice
 
@@ -38,7 +38,7 @@ HoloLens 2 Development Edition zahrnuje HoloLens 2, $500 v kreditech Azure, bezp
 |  [Modul plug-in Pixyz pro Unity](https://www.pixyz-software.com/plugin/) | Most pro propojení technického &amp; světůu CAD s vývojovým světem.   |
 | [$500 v kreditech Azure pro služby Azure](https://azure.microsoft.com/resources/) | kredity Azure, které jsou součástí vývojové edice HoloLens 2, jsou rychle začínáme s vytvářením a testováním aplikací hybridní reality v Azure. |
 
-![HoloLens 2 – vývojová edice](./images/hololens-2-dev-ed.png)
+![HoloLens 2 Development Edition.](./images/hololens-2-dev-ed.png)
 
 ## <a name="redeem-your-credits"></a>Uplatnit své kredity
 

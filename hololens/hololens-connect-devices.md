@@ -13,12 +13,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 1e478e366b8ad70243f6fffc47cd62e847af837637a992ebb60fc80bf6774186
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: d9c8b813ba54edbcfef8d1a32e641dad39a7f193
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664303"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189082"
 ---
 # <a name="connect-to-bluetooth-and-usb-c-devices"></a>Připojení Bluetooth a zařízení USB-C
 
@@ -93,7 +93,7 @@ Uživatelé můžou pomocí panelu nastavení **zvuku** vybrat připojení exter
 
 otevřete aplikaci **Nastavení** a vyberte **systémový**  >  **zvuk**.
 
-![zvukový Nastavení](images/usbc-mic-1.jpg)
+![zvukový Nastavení.](images/usbc-mic-1.jpg)
 
 > [!IMPORTANT]
 > Pokud chcete používat externí mikrotelefony s nástrojem **Remote Assist**, uživatelé budou muset kliknout na hypertextový odkaz Spravovat zvuková zařízení.
@@ -102,11 +102,11 @@ otevřete aplikaci **Nastavení** a vyberte **systémový**  >  **zvuk**.
 >
 > zvolíte-li možnost **komunikace výchozí** , znamená to, že se externí mikrofon bude používat ve vzdálené pomoci a dalších komunikačních aplikacích, ale pole HoloLensho mikrofonu se může používat i pro jiné úkoly.
 
-![Správa zvukových zařízení](images/usbc-mic-2.png)
+![Správa zvukových zařízení.](images/usbc-mic-2.png)
 
 <br>
 
-![Nastavit výchozí mikrofon](images/usbc-mic-3.jpg)
+![Nastavte výchozí mikrofon.](images/usbc-mic-3.jpg)
 
 #### <a name="what-about-bluetooth-microphone-support"></a>co Bluetooth podpora mikrofonu?
 

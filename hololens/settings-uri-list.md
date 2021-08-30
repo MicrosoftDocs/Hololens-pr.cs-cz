@@ -13,34 +13,34 @@ ms.reviewer: widuff
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d2747da37ae198f7a2c051593da3ffd4cb4476dfaa7a3078a7749fa1fc912ba2
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 92040019b093c5ef63d74f095dcb3809112ae7a0
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665620"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190425"
 ---
 # <a name="page-settings-visibility"></a>Viditelnost Nastavení stránky
 
 Jednou ze spravovatelných funkcí pro HoloLens zařízení je použití zásad [Nastavení/PageVisibilityList](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) k omezení stránek, které se zobrazí v Nastavení aplikaci. PageVisibilityList je zásada, která správcům IT umožňuje zabránit zobrazení nebo přístupu konkrétních stránek v aplikaci System Nastavení, nebo to udělat pro všechny stránky kromě těch, které jsou zadané.
 
 > [!NOTE]
-> Tato funkce je k dispozici pouze [v Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo vyšší pro HoloLens 2. Ujistěte se, že jsou aktualizovaná zařízení, pro která ho chcete použít.
+> Tato funkce je cenná jenom [v Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) nebo vyšší pro HoloLens 2. Ujistěte se, že jsou aktualizovaná zařízení, pro která ho chcete použít.
 
 
 ## <a name="examples"></a>Příklady
 Stránky jsou identifikované zkrácenou verzí publikovaných identifikátorů URI, což je identifikátor URI minus předpona ms-settings:.
 
-Následující příklad ukazuje zásadu, která by umožnila přístup pouze ke stránkám about a bluetooth, které mají identifikátory URI network-wifi a bluetooth:
+Následující příklad ukazuje zásadu, která by umožnila přístup jenom ke stránkám about a bluetooth, které mají identifikátor URI network-wifi a bluetooth:
 - `showonly:network-wifi;network-proxy;bluetooth`
 
-Následující příklad ukazuje zásadu, která by skryla stránku resetování operačního systému:
+Následující příklad ukazuje zásadu, která by skryla stránku pro resetování operačního systému:
 - `hide:reset`
 
 
 ## <a name="deploying-this-policy-via-intune"></a>Nasazení této zásady přes Intune
 
-Toto jsou konfigurační hodnoty, které se dodávají do Intune:
+Toto jsou konfigurační hodnoty, které se budou do Intune zadávají:
 
 - **Name (Název):** Zobrazovaný název profilu upřednostňovaný správcem.
 - **OMA-URI:** Plně kvalifikovaný identifikátor URI stránky nastavení včetně jejího [oboru](/windows/client-management/mdm/policy-configuration-service-provider). V těchto příkladech na této stránce se používá `./Device` obor .
@@ -69,10 +69,10 @@ Toto jsou konfigurační hodnoty, které budou zadány v Windows Configuration D
 1. Zadejte řetězec: **`showonly:network-wifi;network-proxy;bluetooth`**
 1. Exportujte zřizovací balíček.
 1. Použijte balíček na zařízení.
-Úplné podrobnosti o tom, jak vytvořit a použít zřizovací balíček, najdete [na HoloLens stránky zřizování.](hololens-provisioning.md)
+Úplné podrobnosti o tom, jak vytvořit a použít zřizovací balíček, najdete [na HoloLens zřizování.](hololens-provisioning.md)
 
 
-Bez ohledu na zvolenou metodu by vaše zařízení teď mělo přijímat změny a uživatelům se zobrazí následující Nastavení App.
+Bez ohledu na zvolenou metodu by teď vaše zařízení mělo přijímat změny a uživatelům se zobrazí následující Nastavení App.
 
 ![Snímek obrazovky s úpravami aktivních hodin v Nastavení aplikaci](images/hololens-page-visibility-list.jpg)
 
@@ -80,7 +80,7 @@ Pokud chcete nakonfigurovat Nastavení, aby se na stránkách aplikace zobrazuj�
 
 ## <a name="settings-uris"></a>Nastavení Uri
 
-HoloLens zařízení a Windows 10 mají v aplikaci Nastavení jiný výběr stránek. Na této stránce najdete pouze nastavení, která existují v HoloLens.
+HoloLens zařízení Windows 10 zařízení mají v rámci aplikace Nastavení jiný výběr stránek. Na této stránce najdete pouze nastavení, která existují v HoloLens.
 
 ### <a name="accounts"></a>Účty
 | Stránka Nastavení           | Identifikátor URI                                            |
@@ -93,9 +93,9 @@ HoloLens zařízení a Windows 10 mají v aplikaci Nastavení jiný výběr str�
 | Stránka Nastavení | Identifikátor URI                          |
 |---------------|------------------------------|
 | Aplikace & funkce <sup>2</sup>     | `appsfeatures` <br> |
-| Aplikace & funkce > Upřesnit možnosti <sup>2</sup>     | `appsfeatures-app` <br> |
-| Aplikace & funkce > Offline Mapy <sup>2</sup>     | `maps-maps` <br> |
-| Aplikace & funkcemi > Offline Mapy > Stáhnout <sup>mapy 2</sup>     | `maps-downloadmaps` <br> |
+| Funkce & aplikací > Rozšířené možnosti <sup>2</sup>     | `appsfeatures-app` <br> |
+| Funkce & aplikací > offline Mapy <sup>2</sup>     | `maps-maps` <br> |
+| Aplikace & funkce > offline Mapy > Stáhnout mapy <sup>2</sup>     | `maps-downloadmaps` <br> |
 
 ### <a name="devices"></a>Zařízení
 | Stránka Nastavení | Identifikátor URI                          |
@@ -154,7 +154,7 @@ HoloLens zařízení a Windows 10 mají v aplikaci Nastavení jiný výběr str�
 | Barvy             | `colors`<br>`personalization-colors` |
 | Hologramy <sup>2</sup>  |  `holograms`  |
 | <sup>Uchýlovací 2</sup> |  `calibration` |
-| Oznámení & akcích  | `notifications`          |
+| Oznámení & akce  | `notifications`          |
 | Sdílená prostředí | `crossdevice` 
 | Zvuk <sup>2</sup>           | `sound`<br>|
 | Zvuk > Svazek aplikace a předvolba zařízení <sup>2</sup>           | `apps-volume`<br>|
@@ -182,7 +182,7 @@ HoloLens zařízení a Windows 10 mají v aplikaci Nastavení jiný výběr str�
 | Windows Aktualizace – kontroluje aktualizace. | `windowsupdate-action`          |
 
 
-- <sup>1</sup> – Ve verzích starších než Windows Holographic verze 21H1 vás následující dvě  identifikátory URI ve skutečnosti nesmídí na stránky Upřesnit možnosti nebo **Možnosti.** Zablokují nebo zobrazí jenom hlavní stránku Windows Aktualizace.
+- <sup>1</sup> – Ve verzích starších než Windows Holographic verze 21H1 vás následující dvě  identifikátory URI ve skutečnosti nesmídí na stránky Upřesnit možnosti nebo **Možnosti.** Zablokují nebo zobrazí jenom hlavní stránku Windows aktualizace.
   -  windowsupdate-options
   -  windowsupdate-restartoptions
 

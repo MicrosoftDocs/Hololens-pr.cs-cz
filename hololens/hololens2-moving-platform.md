@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: cd46e162971ea709d865b2ac998cc7a517d231ec
-ms.sourcegitcommit: 18f6c00a57a6b4608dadcec418d1970455d8ee3a
+ms.openlocfilehash: a0717524cd1f762c92a5b821ae90acb8474dafd2
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122989192"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190391"
 ---
 # <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Pohyb režimu platformy na nízkých dynamických pohybových platformách
 
@@ -75,19 +75,19 @@ Pokud chcete povolit režim přesunu platforem, nejdřív [Povolte portál zař�
 
 1. V nabídce na levé straně vyberte **systém** pro přiznávání.
 
-   ![První obrázek](.\images\moving-platform-1w.png)
+   ![První obrázek.](.\images\moving-platform-1w.png)
 
 2. Vyberte stránku **režim přesunutí platformy** a zaškrtněte políčko **režim přesunutí platformy** .
 
-    ![Druhý obrázek](.\images\moving-platform-2z.png)
+    ![Druhý obrázek.](.\images\moving-platform-2z.png)
 
 3. Po zobrazení výzvy s upozorněním vyberte **OK** .
 
-   ![Třetí obrázek](.\images\moving-platform-3w.png)
+   ![Třetí obrázek.](.\images\moving-platform-3w.png)
 
 4. Restartujte zařízení, což lze provést buď pomocí nabídky **napájení** na portálu zařízení v pravém horním rohu, nebo vyvoláním následujícího hlasového příkazu &quot; restartujte zařízení &quot; a vyberte &quot; Ano &quot; .
 
-   ![Čtvrtý obrázek](.\images\moving-platform-4z.png)
+   ![Čtvrtý obrázek.](.\images\moving-platform-4z.png)
 
 Pokud nevidíte možnost režimu přesunu platforem na portálu zařízení, pravděpodobně to znamená, že ještě nejste na správném buildu. Přečtěte si část [požadavky](#prerequisites) .
 

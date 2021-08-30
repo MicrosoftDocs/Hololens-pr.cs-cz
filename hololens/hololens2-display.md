@@ -12,19 +12,19 @@ ms.localizationpriority: high
 ms.reviewer: ''
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 3567c1f33f10240a9cacbf258669a0e3274f4c6bb3c90fc1317a57a3a415fc7f
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 38bab16d2d0d4ace5879f00c133d66b9974e4b2a
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115659941"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190357"
 ---
 # <a name="hololens-2-display-troubleshooting"></a>HoloLens 2 – řešení potíží se zobrazením
 
 ## <a name="overview"></a>Přehled
 displej HoloLens 2 je kombinací projektorů waveguides a light. Uživatelé procházejí waveguides – rozptylová skla v rámci hypervisoru – při používání náhlavní soupravy. Nejsvětlejší projektory jsou uvnitř skříně nad prohlížeč. HoloLens 2 používá laserovou světlo k osvětlení displeje.
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Řešení potíží
 
 Proveďte následující kroky, aby se zajistila nejvyšší vizuální kvalita hologramů zobrazených v zobrazení:
 
@@ -79,7 +79,7 @@ pokud si nejste spokojeni s vlastním profilem barev uloženým ve vašem HoloLe
 
 v některých případech bude HoloLens 2 zobrazovat různé vzory v levém dolním a pravém rohu displeje. Níže jsou uvedené příklady (animované soubory GIF). tento model je součástí běžné operace zařízení HoloLens 2 k kalibraci displeje pro optimální prostředí.
 
-![Vzor Biphase](./images/DAT-Biphase-Fiducial.gif) ![GEOGRAFICKÝ vzor](./images/DAT-GEO-Fiducial.gif)
+![Biphase vzor.](./images/DAT-Biphase-Fiducial.gif) ![GEOGRAFICKÝ vzor](./images/DAT-GEO-Fiducial.gif)
 
 ### <a name="why-am-i-unable-to-take-an-accurate-photograph-of-my-hololens-2-display"></a>proč mi nejde pořizovat přesnou fotografii mého HoloLens 2?
 
@@ -94,39 +94,39 @@ displej HoloLens 2 je navržený tak, aby si ho mohl prohlédnout lidské oči. 
 * **Pozice kamery.** kamery, které splňují požadavky pro zobrazení HoloLens 2, jsou větší a je obtížné umístit kameru dostatečně blízko k zobrazení HoloLens 2, aby se zobrazila barva opraveného obrázku. pokud je fotoaparát na špatném místě, může korekce barev negativně ovlivnit zachycení zobrazení HoloLens 2.
 * **Korekce obrázku** Typické digitální fotoaparáty a kamery smartphone používají křivku reprodukce tónů (TRC), která zvyšuje kontrast a barvu, aby poskytovala snappier výsledek. při použití na zobrazení HoloLens 2 se tato křivka intonace nestejnoměrně dosadí.
 
-všechny uvedené, je stále možné, aby se specializované průmyslové kamery daly zachytit reprezentativní obrázky ze zobrazení HoloLens 2. Smartphony, spotřebitelské a profesionální fotoaparáty bohužel nezachytí obrázky, které odpovídají tomu, co uživatel vidí na HoloLens 2.
+všechny uvedené, je stále možné, aby se specializované průmyslové kamery daly zachytit reprezentativní obrázky ze zobrazení HoloLens 2. kamery smartphone, consumer a professional nezachycují obrázky, které se shodují s tím, co uživatel uvidí HoloLens 2.
 
-### <a name="what-does-eye-calibration-do-to-display-image-quality"></a>Co dělá pohled na kvalitu obrázku?
+### <a name="what-does-eye-calibration-do-to-display-image-quality"></a>Co dělá kalibrace očí k zobrazení kvality obrazu?
 
-Obrazovka HoloLens 2 aktivně opravuje obrázky podle pozice očí uživatele. [Zrak poskytuje](hololens-calibration.md) dva důležité vstupy: (1) interpupilární vzdálenost uživatele (IPD) a (2) směr, který každé oko hledá. Bez zraku se systém standardně zaměřuje na nominální pozici oka bez pohybu očí. Rozdíl mezi aktivní korekcí barev a bez opravy závisí na samotné opravě uživatele. Uživatelům, kteří mají stejnou IPD jako výchozí nastavení systému, se například zobrazí méně vylepšení opravy barev. I když uživatelé, kteří mají mnohem užší nebo širší IPD než výchozí nastavení systému, uvidí více změn v obrázku zobrazení.
+HoloLens 2 zobrazuje aktivně barevně barvy obrázků na základě pozice oči uživatele. [Kalibrace očí](hololens-calibration.md) nabízí dva důležité vstupy: (1) interpupillary vzdálenost uživatele (IPD) a (2) směr hledání každého oka. Bez kalibrace očí systém standardně vyhodnotí jmenovitou polohu očí bez nutnosti přesunu očí. Rozdíl mezi aktivní korekcí barvy a bez korekce závisí na Physiology uživatele. Například uživatelé, kteří mají stejné IPD jako výchozí systém, uvidí méně vylepšení barev. Zatímco uživatelé, kteří mají mnohem užší nebo širší IPD než výchozí systém, uvidí další změny zobrazení obrázku.
 
-Poznámka: Nová funkce v [Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) začne automaticky zjišťovat [polohu oka](hololens-calibration.md#auto-eye-position-support). 
+poznámka: nová funkce ve [Windows holografické verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) začne [automaticky detekovat polohu oka](hololens-calibration.md#auto-eye-position-support). 
 
-### <a name="what-are-the-display-differences-between-hololens-1st-gen-and-hololens-2"></a>Jaké jsou rozdíly zobrazení mezi HoloLens (1. generace) a HoloLens 2?
+### <a name="what-are-the-display-differences-between-hololens-1st-gen-and-hololens-2"></a>jaké jsou rozdíly v zobrazení mezi HoloLens (1. generace) a HoloLens 2?
 
-Mezi hlavní žádosti, které zákazníci dali Microsoftu poté, co HoloLens 1 byl (1), zvýšili zorné pole a (2) zvýšili brightness. Vývoj technologií umožnil Microsoftu vytvořit vlnovce, které zdvojnásobil zorné pole a vytvářely projektory s displejem, který je až třikrát jasnější. Hardware nastaví základ pro základní kompromisy pro kvalitu obrázku displeje: (1) zorné pole, (2) jas a (3) jednotnost barev. Pokračující rozvoj technologií umožňuje vylepšování ve všech oblastech, aniž by bylo zanedbatelné jiné místo. Do této přechodného období stávající technologie nastavuje omezení, která jsou pro tyto kompromisy k dispozici.
+v rámci hlavních požadavků, které zákazníci uvedli od HoloLens 1 byl (a) zvýšení jasu a (2) zvyšuje jas. Technologický vývoj povolil Microsoftu vytvářet waveguidesy, které se zdvojnásobují v oblasti zobrazení a vytvářejí lehké projektory se zobrazením, které je až třikrát jasnější. Hardware nastaví standardní hodnotu pro trojice kompromisů pro zobrazení kvalita obrázku: (1) zobrazení, (2) jas a (3) zastejnoměrnost barev. Pokračování technologického postupu umožňuje vylepšení ve všech oblastech bez obětování jiné oblasti. V provizorním případě existující technologie nastaví omezení pro tyto kompromisy.
 
-### <a name="what-improvements-are-coming-that-will-improve-hololens-2-image-quality"></a>Jaká vylepšení se chystá, aby se zlepšila HoloLens 2 image?
+### <a name="what-improvements-are-coming-that-will-improve-hololens-2-image-quality"></a>jaká vylepšení připravujeme, aby se zlepšila HoloLens 2 kvalita obrazu?
 
-I když probíhá mnoho šetření pro zlepšení kvality obrázků, očekává se, že v nadcházejících aktualizacích dorazí následující oblasti:
+I když máme spoustu šetření na zlepšení kvality obrazu, očekává se, že následující oblasti dorazí do nadcházejících aktualizací:
 
-* **Automatická pozice oka.** Tato funkce umožní, aby se na pozadí prochytá procedury z pohledu. Aby aktivní oprava barev fungovala, uživatelé už nebudou muset spouštět plynulý pohled. Místo toho bude prostě fungovat.
-* **Vylepšení barevného zlepšování** Tato aktualizace se zaměřuje na hodnoty barev s tmavšími barvami (například tmavě šedou). Tlumení barvy teď přechytá červený tón. K tomuto problému dochází také v případě, že je celé zobrazení neaktivní – celý displej vybere červené barvy. Tento problém je výsledkem příliš velké aktivity v červeném barevném kanálu pro tyto tmavší barvy. Pro tyto tlumecí barvy jsme charakterizovali křivku osvětlení a pracujeme na tom, aby uživatelům nabídli proceduru záchytné procedury. Výsledkem bude větší přesnost barev napříč spektrem brightness. Nezmění vzhled bílých pozadí při plném jasu. V aplikacích nadále doporučujeme používat vzory návrhu tmavého režimu.
-* **Režim čtení.** Vývojáři aplikací mohou pro dosažení vyššího úhlového rozlišení vyměnit zorné pole. Vývojáři aplikací mohou přepsat projekční matici tak, aby se obsah vykresloval v rozlišení vykreslování na displeji. Výsledkem této funkce je 30% snížení zorné oblasti a odpovídající zvýšení úhlového rozlišení. Pracujeme na zavedení této funkce do [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity). Pokud je k dispozici, bude režim čtení fungovat v HoloLens operačního systému 2 – nezávisí na aktualizaci operačního systému.
+* **Automatické umístění očí.** Tato funkce umožní, aby byly na pozadí provedeny kroky kalibrace oka. Uživatelé už nebudou muset spouštět kalibraci očí, aby fungovala aktivní korekce barev. Místo toho bude fungovat jenom.
+* **Vylepšení kalibrace barev** Tato aktualizace se zaměřuje na barevné hodnoty tmavších barev (například tmavě šedá). V současné době DIMM barvy vyberou červený tón. K tomuto problému dochází také v případě, že celý displej je ztlumený – celý displej zobrazuje červené barvy. Tento problém je výsledkem příliš velkého množství aktivit v kanálu červené barvy pro tyto tmavší barvy. Na tyto barvy ztlumení jsme označili křivky laserového osvětlení a pracujeme na tom, aby nabízela postup kalibrace uživatelů. Výsledkem bude přesnější přesnost barev v rámci spektra jasu. Nezmění se tím vzhled bílých pozadí při plném jasu. V aplikacích pokračujeme v používání vzorů návrhu pro tmavé režimy.
+* **Režim čtení.** Vývojáři aplikací můžou navýšit zobrazení pole zobrazení, aby bylo možné dosáhnout vyššího úhlu rozlišení. Vývojáři aplikací můžou matrici projekce přepsat tak, aby se obsah vykreslil při vykreslování zobrazení. Výsledkem této funkce je 30% snížení v poli-zobrazení a odpovídající nárůst v úhlovém rozlišení. Práce se zavede k zavedení této možnosti do [hybridní Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity). pokud je k dispozici, režim čtení bude fungovat na jakémkoli HoloLensém operačním systému, ale není závislý na aktualizaci operačního systému.
 
-Aktualizace operačního systému se doručují automaticky. Můžete také testovat rané verze vylepšení softwaru prostřednictvím programu Insider Preview.
+Aktualizace operačního systému se doručují automaticky. V programu Insider Preview si můžete vyzkoušet také předčasné vydání vylepšení softwaru.
 
-### <a name="what-guidance-is-available-for-developers-to-apply-dark-mode-design-principles"></a>Jaké pokyny mají vývojáři k dispozici pro použití principů návrhu tmavého režimu?
+### <a name="what-guidance-is-available-for-developers-to-apply-dark-mode-design-principles"></a>Jaké doprovodné materiály můžou vývojáři použít pro návrh tmavého režimu.
 
-Uživatelé budou mít nejlepší prostředí, když se vyhnete bílým pozadím. Tmavý režim je princip návrhu, který aplikace používají k používání černé nebo tmavě barevného pozadí. Nastavení systému je ve výchozím nastavení tmavé a můžete ho upravit tak, že Nastavení  >  **Barva**  >  **systému.**
+Uživatelé budou mít k dispozici nejlepší možnosti při předcházení bílým pozadím. Tmavý režim je princip návrhu, který aplikace používá k použití černého nebo tmavého barevného pozadí. nastavení systému je ve výchozím nastavení nastavené na tmavé a dá se upravit tak, že na **Nastavení**  >  **systémové**  >  **barvy**.
 
-Vývojářům doporučujeme postupovat podle pokynů k návrhu tmavého režimu:
+Vývojářům doporučujeme postupovat podle pokynů pro návrh tmavého režimu:
 
-* [Pokyny pro návrh aplikací HoloLens zobrazení](/windows/mixed-reality/designing-content-for-holographic-display#design-guidelines)
+* [pokyny pro návrh pro vývojáře HoloLens zobrazení](/windows/mixed-reality/designing-content-for-holographic-display#design-guidelines)
 * [Doporučené velikosti písem](/windows/mixed-reality/typography#recommended-font-size)
 
-Pokud hologram vyžaduje bílé pozadí, nechte velikost hologramu menší, než je celé zorné pole zobrazení. Tato velikost umožňuje uživatelům umístit hologram do středu displeje.
+Pokud hologram vyžaduje bílé pozadí, ponechte velikost tohoto hologramu menší, než je celé pole zobrazení. Tato velikost umožňuje uživatelům umístit hologram do středu displeje.
 
-### <a name="how-do-you-clean-a-hololens-2-display"></a>Jak vyčistíte zobrazení HoloLens 2?
+### <a name="how-do-you-clean-a-hololens-2-display"></a>jak vyčistíte zobrazení HoloLens 2?
 
-K vymazání zornice použijte mikrovlákno. Pokud chcete vizuátor sanitovat, použijte 70% izoádu k odlehčení zornice a pak ho vymažte. Úplné pokyny najdete v [nejčastějších dotazech HoloLens 2 čištění.](hololens2-maintenance.md)
+K mírnému vymazání clony použijte microfiberou tkaninu. K upravování hypervisoru použijte 70% isopropyl alkoholu, aby se lehce moistená tkanina, a pak vymažte clonu. přečtěte si všechny pokyny v tématu [HoloLens 2 – nejčastější dotazy](hololens2-maintenance.md).

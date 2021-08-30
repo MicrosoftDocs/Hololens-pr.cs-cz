@@ -14,12 +14,12 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 67e34ea275ef73adda840ee4f44d9c0c3c9440ef0bd2aef48cb7aaa971219220
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 541c1080d7f5fe9491d6cb11179ea98b160f687c
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115660109"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123190170"
 ---
 # <a name="deployment-guide---corporate-connected-hololens-2-with-dynamics-365-guides---overview"></a>průvodce nasazením – firemní připojení HoloLens 2 s průvodcem Dynamics 365 – přehled
 
@@ -53,7 +53,7 @@ Následující infrastruktura by již měla být zavedena:
 - Power BI Desktop
 - Připojení k síti
 
-[![Diagram propojené sítě Corp, fáze 1 ](./images/deployment-guides-revised-scenario-b-01-1.png)](./images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
+[![Diagram propojené sítě Corp, fáze 1. ](./images/deployment-guides-revised-scenario-b-01-1.png)](./images/deployment-guides-revised-scenario-b-01-1.png#lightbox)
 
 [![Diagram propojené sítě Corp, fáze 2 ](./images/deployment-guides-revised-scenario-b-02-1.png)](./images/deployment-guides-revised-scenario-b-02-1.png#lightbox)
 

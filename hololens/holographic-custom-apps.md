@@ -16,12 +16,12 @@ ms.custom:
 - CSSTroubleshooting
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 7d564fd00567033060428d5b47b34ddf827dea2fdeeb8955c73bc22e4ba87164
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: b6769c36f821ee3619ac9b62efd637ac561192bb
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664946"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123188844"
 ---
 # <a name="manage-custom-apps-for-hololens-1st-gen"></a>Správa vlastních aplikací pro HoloLens (1. generace)
 
@@ -30,7 +30,7 @@ HoloLens podporuje mnoho existujících aplikací z Microsoft Store a také nov�
 Další informace o aplikacích pro Store najdete v tématu [Správa aplikací ve Storu.](holographic-store-apps.md)
 
 > [!IMPORTANT]
-> Následující informace byly vytvořeny pro HoloLens (1. generace) také nazývané HoloLens Developer Edition. Jako takové bylo běžné instalovat aplikace bokem přes portál zařízení a Visual Studio přes zařízení. U podnikových nasazení nedoporučujeme povolovat vývojářský režim, který obě tyto metody používají. Pokud vás zajímá metoda zabezpečeného nasazení aplikací, projděte si naši správu [aplikací: Přehled.](app-deploy-overview.md)
+> Následující informace byly vytvořeny pro HoloLens (1. generace), které se také v HoloLens Developer Edition. Jako takové bylo běžné instalovat aplikace bokem přes portál zařízení a Visual Studio přes zařízení. U podnikových nasazení nedoporučujeme povolovat vývojářský režim, který obě tyto metody používají. Pokud vás zajímá metoda zabezpečeného nasazení aplikací, projděte si naši správu [aplikací: Přehled.](app-deploy-overview.md)
 >
 > Pokud hledáte některou z metod instalace aplikací pro vývojáře HoloLens 2, přečtěte si:
 >
@@ -39,7 +39,7 @@ Další informace o aplikacích pro Store najdete v tématu [Správa aplikací v
 
 ## <a name="install-custom-apps"></a>Instalace vlastních aplikací
 
-Vlastní aplikace můžete na HoloLens nainstalovat buď pomocí Portál zařízení, nebo nasazením aplikací z Visual Studio.
+Vlastní aplikace můžete na HoloLens nainstalovat pomocí Portál zařízení nebo nasazením aplikací z Visual Studio.
 
 ### <a name="installing-an-application-package-with-the-device-portal"></a>Instalace balíčku aplikace pomocí Portál zařízení
 
@@ -55,7 +55,7 @@ Vlastní aplikace můžete na HoloLens nainstalovat buď pomocí Portál zaříz
 1. Vyberte **Přejít.**
 
    > [!div class="mx-imgBorder"]
-   > ![Instalace formuláře aplikace v Windows Portál zařízení na Microsoft HoloLens](images/deviceportal-appmanager.jpg)
+   > ![Nainstalujte formulář aplikace Windows Portál zařízení na Microsoft HoloLens.](images/deviceportal-appmanager.jpg)
 
 ### <a name="deploying-from-microsoft-visual-studio-2015"></a>Nasazení z Microsoft Visual Studio 2015
 
@@ -71,9 +71,9 @@ Vlastní aplikace můžete na HoloLens nainstalovat buď pomocí Portál zaříz
    
 1. Sestavte své řešení.
 
-1. Pokud chcete nasadit aplikaci z vývojového počítače do HoloLens vyberte **Vzdálený počítač**. Pokud již máte existující sestavení na HoloLens, vyberte **Ano** a nainstalujte tuto novější verzi.  
+1. Pokud chcete aplikaci nasadit z vývojového počítače do HoloLens, vyberte **Vzdálený počítač**. Pokud už máte na virtuálním počítači existující HoloLens, vyberte **Ano** a nainstalujte tuto novější verzi.  
 
-   ![Nasazení vzdáleného počítače pro aplikace Microsoft HoloLens v Visual Studio](images/vs2015-remotedeployment.jpg)  
+   ![Nasazení vzdáleného počítače pro aplikace Microsoft HoloLens v Visual Studio.](images/vs2015-remotedeployment.jpg)  
    
 1. Aplikace se na váš počítač nainstaluje a automaticky HoloLens.
 

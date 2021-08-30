@@ -1,6 +1,6 @@
 ---
 title: Plánování HoloLens 2 v komerčním prostředí
-description: Seznamte se se základními potřebami při nasazování a správě HoloLens podnikových prostředích, včetně infrastruktury, Azure Active Directory a správy mobilních zařízení.
+description: Seznamte se se základními potřebami pro nasazení a správu HoloLens podnikových prostředích, včetně infrastruktury, Azure Active Directory a správy mobilních zařízení.
 ms.prod: hololens
 ms.sitesec: library
 ms.assetid: 88bf50aa-0bac-4142-afa4-20b37c013001
@@ -12,31 +12,31 @@ ms.localizationpriority: medium
 ms.date: 05/21/2021
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 8273813d85c3b2df2c1a551fb0322a867a5a9c64fdd05e9a85a2097b1590fb62
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 8605d1a889fb9facdab0e9585a43a61880155952
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664348"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123188895"
 ---
 # <a name="planning-hololens-2-deployment-in-a-commercial-environment"></a>Plánování HoloLens 2 v komerčním prostředí
 
 ## <a name="overview"></a>Přehled
 
 > [!NOTE]
-> Tento přehled pomáhá IT specialistům pochopit aspekty nasazení a správy Microsoft HoloLens 2 v rámci organizace. Informace o koncových uživatelích [zařízení najdete v tématu HoloLens 2 připravené k](hololens2-setup.md) použití.
+> Tento přehled pomáhá IT specialistům pochopit aspekty nasazení a správy Microsoft HoloLens 2 v rámci organizace. Informace o koncových uživatelích [zařízení najdete v tématu HoloLens 2 začít](hololens2-setup.md) používat.
 
-HoloLens 2 běží na Windows 10 Holographic, který organizacím poskytuje robustní, flexibilní integrované technologie správy mobilních zařízení a aplikací. Windows 10 Holographic podporuje správu životního cyklu zařízení od celého zařízení, která společnostem umožňuje kontrolu nad jejich zařízeními, daty a aplikacemi. Řešení HoloLens 2 je možné snadno začlenit do standardních postupů životního cyklu, od registrace zařízení, konfigurace a správy aplikací až po údržbu a vyřazení pomocí komplexního řešení pro správu mobilních zařízení.
+HoloLens 2 běží na Windows 10 Holographic, který organizacím poskytuje robustní, flexibilní integrované technologie správy mobilních zařízení a aplikací. Windows 10 Holographic podporuje koncovou správu životního cyklu zařízení, aby společnosti nad svými zařízeními, daty a aplikacemi kontrolul. Řešení HoloLens 2 je možné snadno začlenit do standardních postupů životního cyklu, od registrace zařízení, konfigurace a správy aplikací až po údržbu a vyřazení pomocí komplexního řešení pro správu mobilních zařízení.
 
-Následující kroky a video vám můžou pomoct s procesem přechodu na HoloLens 2 v rámci vaší organizace.
+Následující kroky a video vás pomůžou provést procesem přechodu na HoloLens 2 v rámci vaší organizace.
 
 | &nbsp; | &nbsp; |
 |--|--|
-| ![Krok 1](images/1green.png)| <br/> **[Běžné scénáře nasazení:](hololens-requirements.md)** Seznamte se se scénáři nasazení a prozkoumejte základní komponenty potřebné k HoloLens 2 zařízení. |
-| ![Krok 2](images/2green.png)| <br/> **[Příprava:](#prepare)** Seznamte se se základními prvky infrastruktury potřebnými pro HoloLens 2. |
-| ![Krok 3](images/3green.png) | <br/> **[Konfigurace:](#configure)** Zjistěte, jak nakonfigurovat základní komponenty pro cloudové nasazení. |
-| ![Krok 4](images/4green.png) | <br/> **[Nasazení:](#deploy)** Zjistěte, jak bezpečně a efektivně nasadit zařízení a distribuovat aplikace. |
-| ![Krok 5](images/5green.png) | <br/> **[Údržba:](#maintain)** Zjistěte, co je potřeba ke správné údržbě stavu vašich zařízení HoloLens 2 a zajištění dodržování firemních zásad. |
+| ![Krok 1.](images/1green.png)| <br/> **[Běžné scénáře nasazení:](hololens-requirements.md)** Seznamte se se scénáři nasazení a prozkoumejte základní komponenty potřebné k HoloLens 2 zařízení. |
+| ![Krok 2.](images/2green.png)| <br/> **[Příprava:](#prepare)** Seznamte se se základními prvky infrastruktury potřebnými pro HoloLens 2. |
+| ![Krok 3.](images/3green.png) | <br/> **[Konfigurace:](#configure)** Zjistěte, jak nakonfigurovat základní komponenty pro cloudové nasazení. |
+| ![Krok 4:](images/4green.png) | <br/> **[Nasazení:](#deploy)** Zjistěte, jak bezpečně a efektivně nasadit zařízení a distribuovat aplikace. |
+| ![Krok 5.](images/5green.png) | <br/> **[Údržba:](#maintain)** Zjistěte, co je potřeba ke správné údržbě stavu vašich zařízení HoloLens 2 a zajištění dodržování firemních zásad. |
 
 <br/>
 

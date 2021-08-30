@@ -13,12 +13,12 @@ ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 6e98918c89da7e74157d8fc003e6997f1e44b8538e9006a835707e85c5fd3307
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 98ec5795974fa242225bb1048ead41892d8296e4
+ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662741"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "123189949"
 ---
 # <a name="use-the-hololens-1st-gen-clicker"></a>použití HoloLens (1. generace) – kliknutí
 
@@ -30,7 +30,7 @@ Použijte ji místo ručních gest pro výběr, posouvání, přesunutí a změn
 
 HoloLens (1. generace) kliknutí na něj má smyčku prstů, aby bylo snazší pojmout a indikátor světla.
 
-![HoloLens kliknutí](images/use-hololens-clicker-1.png)
+![HoloLens click.](images/use-hololens-clicker-1.png)
 
 ### <a name="clicker-indicator-lights"></a>Indikátory kliknutí
 
@@ -58,7 +58,7 @@ Když je vybitá baterie, indikátor baterie bude blikat žlutě. Připojte kabe
 
 Pokud ho chcete umístit na sebe, posuňte smyčku přes svůj prstenec nebo střední krok, aby se adaptér Micro USB tváře na zápěstí. Zbytek jezdce odsadíte.
 
-![Jak držet kliknutí](images/use-hololens-clicker-2.png)
+![Jak umístit klepnutím.](images/use-hololens-clicker-2.png)
 
 ### <a name="clicker-gestures"></a>Gesta kliknutí
 
