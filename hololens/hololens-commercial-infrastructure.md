@@ -15,11 +15,11 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: e23bd458e26668f1f4a9a361ffaadf8fc377933e
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189065"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428014"
 ---
 # <a name="configure-your-network-for-hololens"></a>Konfigurace sítě pro HoloLens
 
@@ -38,7 +38,7 @@ Mezi důležité cloudové služby patří:
 - Azure active directory (Azure AD)
 - Windows Aktualizace (WU)
 
-Komerční zákazníci budou potřebovat infrastrukturu správy podnikové mobility (EMM) nebo správy mobilních zařízení (MDM) ke správě HoloLens zařízení ve velkém měřítku.  V této příručce [Microsoft Intune](https://www.microsoft.com/enterprise-mobility-security/microsoft-intune) příklad, i když každý poskytovatel s plnou podporou pro Microsoft Policy může podporovat HoloLens.  Zeptejte se poskytovatele správy mobilních zařízení, jestli podporuje HoloLens 2.
+Komerční zákazníci budou potřebovat infrastrukturu správy podnikové mobility (EMM) nebo správy mobilních zařízení (MDM) HoloLens ve velkém měřítku.  V této příručce [Microsoft Intune](https://www.microsoft.com/enterprise-mobility-security/microsoft-intune) příklad, i když každý poskytovatel s plnou podporou pro Microsoft Policy může podporovat HoloLens.  Zeptejte se poskytovatele správy mobilních zařízení, jestli podporuje HoloLens 2.
 
 HoloLens podporuje omezenou sadu prostředí odpojených od cloudu.
 
@@ -64,7 +64,7 @@ Ujistěte se, [že je v](hololens-offline.md) síťové bráně firewall povolen
 1. Ujistěte se, že tyto porty a adresy URL jsou ve vaší síťové bráně firewall povolené, aby Microsoft Teams fungovaly. Nejnovější seznam portů [vám bude aktuální.](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams)
 
 - Další informace o konkrétních požadavcích [na síť pro remote assist](/dynamics365/mixed-reality/remote-assist/requirements#network-requirements). 
-- Další informace o přípravě sítě organizace [na Microsoft Teams](/MicrosoftTeams/prepare-network)
+- Další informace o přípravě [sítě organizace na Microsoft Teams](/MicrosoftTeams/prepare-network)
 
 ### <a name="guides-specific-network-requirements"></a>Průvodci konkrétními požadavky na síť
 
@@ -95,9 +95,9 @@ Pokud potřebujete přiřadit licence, postupujte podle [těchto pokynů.](/azur
 **Přihlaste se k Azure Portal jako správce.**  >  **Azure Active Directory**  >  **Zařízení**  >  **Device Nastavení**  >
  **Nastavte možnost Uživatelé smí připojovat zařízení k Azure AD na *Vše.***
 
-    1. **Možnost 2:** Udejte vybraným uživatelům nebo skupinám oprávnění připojovat zařízení k Azure AD Přihlásit se k **Azure Portal** jako správce  >  **Azure Active Directory**  >  **Devices**  >  **Device Nastavení** Set Users may join devices to Azure AD  >
- **to *Selected*** Image 
- (Konfigurace zařízení připojených k ![ Azure AD).](images/azure-ad-image.png)
+    1. **Možnost 2:** Udejte vybraným uživatelům nebo skupinám oprávnění pro připojení zařízení k Azure AD Přihlásit se k **Azure Portal** jako správce  >  **Azure Active Directory**  >  **Devices**  >  **Device Nastavení** Set Users may join devices to Azure AD to  >
+ ***Selected*** 
+ Image (Nastavení uživatelů) připojit zařízení ke službě Azure AD k vybranému obrázku, který zobrazuje konfiguraci zařízení připojených ke službě ![ Azure AD.](images/azure-ad-image.png)
 
     1. **Možnost 3:** Všem uživatelům můžete zablokovat připojení svých zařízení k doméně. To znamená, že všechna zařízení budou muset být ručně zaregistrovaná.
 
@@ -135,17 +135,17 @@ Přečtěte si další [informace o konfiguraci aktualizačních okruhů pomocí
 Správa HoloLens aplikací prostřednictvím:
 
 1. Microsoft Store  
-  Nejlepší Microsoft Store způsob distribuce a využití aplikací na HoloLens.  K dispozici je skvělá sada základních aplikací HoloLens jsou už ve Storu k dispozici, nebo můžete [publikovat vlastní](/windows/uwp/publish/).  
-  Všechny aplikace ve Storu jsou veřejně dostupné všem, ale pokud to není přijatelné, podívejte se na Microsoft Store pro firmy.  
+  The Microsoft Store is the best way to distribute and consume applications on HoloLens.  K dispozici je skvělá sada základních aplikací HoloLens jsou už ve Storu k dispozici, nebo můžete [publikovat vlastní](/windows/uwp/publish/).  
+  Všechny aplikace ve Storu jsou veřejně dostupné všem, ale pokud to není přijatelné, Microsoft Store pro firmy.  
 
 1. [Microsoft Store pro firmy](/microsoft-store/)  
-  Microsoft Store pro firmy a Education je vlastní obchod pro vaše podnikové prostředí.  Umožňuje používat integrované Microsoft Store a Windows 10 HoloLens k vyhledání, získání, distribuci a správě aplikací pro vaši organizaci.  Umožňuje také nasazovat aplikace, které jsou specifické pro vaše komerční prostředí, ale ne pro celý svět.
+  Microsoft Store pro firmy and Education je vlastní obchod pro vaše podnikové prostředí.  Umožňuje vám používat integrované Microsoft Store a Windows 10 HoloLens k vyhledání, získání, distribuci a správě aplikací pro vaši organizaci.  Umožňuje také nasazovat aplikace, které jsou specifické pro vaše komerční prostředí, ale ne pro celý svět.
 
 1. Nasazení a správa aplikací přes Intune nebo jiné řešení pro správu mobilních zařízení  
   Většina řešení pro správu mobilních zařízení, včetně Intune, poskytuje způsob, jak nasadit obchodní aplikace přímo do sady zaregistrovaných zařízení.  Informace o instalaci aplikací [Intune najdete v tomto článku.](/intune/apps-deploy)
 
 1. _nedoporučuje se_ Portál zařízení  
-  Aplikace se také instalují do HoloLens přímo pomocí Windows Portál zařízení.  To se nedoporučuje, protože pro používání portálu zařízení musí být povolený vývojářský režim.
+  Aplikace se také instalují HoloLens přímo pomocí Windows Portál zařízení.  To se nedoporučuje, protože pro používání portálu zařízení musí být povolený vývojářský režim.
 
 Přečtěte si další [informace o instalaci aplikací na HoloLens](hololens-install-apps.md).
 

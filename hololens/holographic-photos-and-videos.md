@@ -15,12 +15,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 54e9959c03b69db39ff2738e5d4f41f9740ae562b38e8d85998521a4733edad7
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: daced6fab65f779b7bd670bf1275f99ae5311d3f
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664855"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427720"
 ---
 # <a name="create-mixed-reality-photos-and-videos"></a>Vytvářejte fotky a videa ve smíšené realitě.
 
@@ -147,42 +147,42 @@ Tipy:
 
 před [Windows holografické 21H1 verze](hololens-release-notes.md#windows-holographic-version-21h1)po zaznamenání fotky nebo videa se smíšenou realitou se zobrazí náhled. Kliknutím na ikonu **sdílení** nad náhledem zobrazíte pomocníka pro sdílení. Odtud můžete vybrat koncový bod, na který chcete tuto fotografii nebo video sdílet.
 
-po zaznamenání fotky nebo videa ve smíšené realitě Windows holografická verze 21H1, zobrazí se náhled. Kliknutím na ikonu **sdílení** nad náhledem zobrazíte pomocníka pro sdílení. odtud můžete vybrat koncový bod (Mail, OneDrive atd.), na který byste chtěli sdílet tuto fotografii nebo video. Můžete také povolit sdílení HoloLens blízkými zařízeními tak, že Nastavení **-> System -> Shared Experiences**. Další podrobnosti najdete v tématu [Sdílení věcí s blízkými zařízeními v Windows 10](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9).
+po zaznamenání fotky nebo videa ve smíšené realitě Windows holografická verze 21H1, zobrazí se náhled. Kliknutím na ikonu **sdílení** nad náhledem zobrazíte pomocníka pro sdílení. odtud můžete vybrat koncový bod (Mail, OneDrive atd.), na který byste chtěli sdílet tuto fotografii nebo video. můžete také povolit, aby se HoloLens sdílela s okolními zařízeními, a to tak, že se budou **Nastavení > > sdílených prostředích systému**. Pokud chcete získat další informace, přečtěte si téma [sdílení informací v blízkosti zařízení v Windows 10](https://support.microsoft.com/windows/share-things-with-nearby-devices-in-windows-10-0efbfe40-e3e2-581b-13f4-1a0e9936c2d9).
 
 > [!TIP] 
-> Můžete také sdílet fotky a videa hybridní reality z OneDrive tím, že automaticky nahrajete fotky a videa hybridní reality. Otevřete aplikaci OneDrive na HoloLens a přihlaste se pomocí **[osobního účet Microsoft](https://account.microsoft.com)**, pokud jste to ještě neudělali. Vyberte **ikonu Nastavení** a zvolte **Nahrání fotoaparátu.** Zapněte nahrávání z fotoaparátu. Fotky a videa hybridní reality se teď budou nahrávat do OneDrive při každém spuštění aplikace na HoloLens.
+> můžete také sdílet fotky a videa ze hybridní reality z OneDrive tím, že automaticky nahrajete fotky a videa ze smíšené reality. otevřete aplikaci OneDrive v HoloLens a přihlaste se pomocí **osobního [účet Microsoft](https://account.microsoft.com)**, pokud jste to ještě neudělali. vyberte ikonu **Nastavení** a zvolte možnost **nahrávání pomocí fotoaparátu**. Zapněte nahrávání kamery. vaše fotky a videa ve smíšené realitě se teď nahrají do OneDrive pokaždé, když aplikaci spustíte v HoloLens.
 
 > [!NOTE]
-> Nahrávání fotoaparátu v aplikaci OneDrive jenom v případě, že jste přihlášení OneDrive pomocí osobního účet Microsoft. Pokud nastavíte HoloLens pracovním nebo školním účtem, můžete přidat osobní účet účet Microsoft aplikaci OneDrive tuto funkci povolit.
+> nahrávání kamery můžete povolit jenom v OneDrive, pokud jste se k OneDrive přihlásili pomocí osobního účet Microsoft. pokud jste nastavili HoloLens pomocí pracovního nebo školního účtu, můžete k povolení této funkce přidat osobní účet Microsoft v aplikaci OneDrive.
 
-## <a name="limitations-of-mixed-reality-capture"></a>Omezení zachycení hybridní reality
+## <a name="limitations-of-mixed-reality-capture"></a>Omezení pro zachycení směsné reality
 
-- Při použití zachytávání hybridní reality se frekvence snímků HoloLens na 30 Hz.
-- Rozlišení fotek a videí se může omezit, pokud ji už používá jiná aplikace, živé streamování nebo nedostatek systémových prostředků.
+- při použití hybridního zachycení realit se frekvence snímků HoloLens sníží na 30 Hz.
+- Rozlišení fotek a videí se může snížit, pokud už se fotka nebo Videokamera používá v jiné aplikaci, při živém streamování nebo v případě nízkého množství systémových prostředků.
 
 ### <a name="maximum-recording-length"></a>Maximální délka záznamu
 
-Na HoloLens 2 zařízeních před Windows Holographic verze 20H2 byla videa zaznamenaná v zařízení omezena na maximální délku pěti minut.
+na zařízeních HoloLens 2 než Windows holografická verze 20H2 byla videa zaznamenaná na zařízení omezená na maximální délku pět minut.
 
-Z důvodu zpětné vazby od zákazníků jsme zvýšili délku záznamu zachytávání [hybridní reality.](holographic-photos-and-videos.md) Zachytávání hybridní reality už nebude ve výchozím nastavení omezené na 5 minut, ale místo toho vypočítá maximální délku záznamu na základě dostupného místa na disku. Zařízení odhadne maximální dobu trvání záznamu videa na základě dostupného místa na disku až do 80 % celkového místa na disku.
+Z důvodu zpětné vazby od zákazníků jsme zvýšili délku nahrávání [hybridních zachycení realit](holographic-photos-and-videos.md). Ve výchozím nastavení se u hybridních zachycení realit neomezí na 5 minut, ale místo toho se vypočítá maximální délka nahrávání na základě dostupného místa na disku. Zařízení bude odhadnout maximální dobu trvání nahrávání videa na základě dostupného místa na disku až do 80% celkového místa na disku.
 
 > [!NOTE]
-> Pokud HoloLens jedna z následujících možností, bude aplikace používat výchozí délku záznamu videa (5 minut):
-> - Odhadovaná maximální doba trvání záznamu je menší než výchozích 5 minut.
-> - Dostupné místo na disku je méně než 20 % celkového místa na disku.
+> HoloLens použije výchozí délku nahrávání videa (5 minut), pokud dojde k jedné z následujících akcí:
+> - Odhadovaná maximální doba trvání záznamu je menší než výchozí hodnota 5 minut.
+> - Dostupné místo na disku je méně než 20% celkového místa na disku.
 
-## <a name="default-file-format-and-resolution"></a>Výchozí formát a rozlišení souboru
+## <a name="default-file-format-and-resolution"></a>Výchozí formát souboru a rozlišení
 
-### <a name="default-photo-format-and-resolution"></a>Výchozí formát a rozlišení fotografie
+### <a name="default-photo-format-and-resolution"></a>Výchozí formát a rozlišení fotek
 
 |  Zařízení  |  Formát  |  Linka  |  Řešení  |
 |----------|----------|----------|----------|
-| HoloLens 2 | [Jpeg](https://en.wikipedia.org/wiki/JPEG) | .jpg | 3904x2196px |
-| HoloLens (1. generace) | [Jpeg](https://en.wikipedia.org/wiki/JPEG) | .jpg | 1408 × 792 px |
+| HoloLens 2 | [VE](https://en.wikipedia.org/wiki/JPEG) | .jpg | 3904x2196px |
+| HoloLens (1. generace) | [VE](https://en.wikipedia.org/wiki/JPEG) | .jpg | 1408x792px |
 
 ### <a name="recorded-video-format-and-resolution"></a>Formát a rozlišení zaznamenaného videa
 
 | Zařízení | Formát | Linka | Řešení | Rychlost | Zvuk |
 |----------|----------|----------|----------|----------|----------|
-| HoloLens 2 | [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1920x1080px | 30fps | 48kHz Stereo |
-| HoloLens (1. generace) |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1216 × 684 px | 24fps | 48kHz Stereo |
+| HoloLens 2 | [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1920x1080px | 30fps | 48kHz stereo |
+| HoloLens (1. generace) |  [MPEG-4](https://en.wikipedia.org/wiki/MPEG-4) | .mp4 | 1216x684px | 24fps | 48kHz stereo |

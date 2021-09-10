@@ -1,7 +1,7 @@
 ---
-title: Intune a Portál společnosti
-description: Zjistěte, jak nastavit, přiřadit a vytvořit pohodlné uživatelské prostředí pro Intune, správu mobilních zařízení a portál společnosti.
-keywords: intune, app management, app, company portal, portal, hololens
+title: intune a Portál společnosti
+description: Naučte se, jak pomocí Intune, správy mobilních zařízení a portálu společnosti nastavit, přiřazovat a vytvářet příjemné uživatelské prostředí.
+keywords: Intune, Správa aplikací, aplikace, portál společnosti, portál, HoloLens
 author: evmill
 ms.author: v-evmill
 ms.date: 6/22/2020
@@ -17,47 +17,47 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: f1c178c940224ed3cd07c58b886b176108614caf7a8463af089e2f2357f45553
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: b192732f5e7edffaa1d0ab081454e4034c416191
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665246"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427628"
 ---
-# <a name="intune--company-portal"></a>Intune & Portál společnosti
+# <a name="intune--company-portal"></a>intune & Portál společnosti
 
-S Mobile Správa zařízení (MDM) můžete použít vlastní aplikace prostřednictvím [služby Microsoft Endpoint Manager (Intune)](/intune/windows-holographic-for-business) a nasadit je přímo do vašich HoloLens zařízení. Microsoft Intune je cloudová služba, která se zaměřuje na správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). Intune je součástí sady [Microsoftu Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)a umožňuje uživatelům být produktivní a současně chránit data vaší organizace. Další informace o Intune najdete v co [je Intune.](/mem/intune/fundamentals/what-is-intune)
+se správou mobilních zařízení (MDM) můžete pomocí [Microsoft Endpoint Manager (intune)](/intune/windows-holographic-for-business) používat vlastní aplikace, které přímo nasadíte do vašich HoloLensch zařízení. Microsoft Intune je cloudová služba, která se zaměřuje na správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). intune je součástí [sady Microsoft Enterprise Mobility + Securitye (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)a umožňuje uživatelům zvýšit produktivitu při zachování chráněných dat vaší organizace. Pokud se chcete o Intune dozvědět víc, přečtěte si téma [co je Intune](/mem/intune/fundamentals/what-is-intune).
 
 ## <a name="setup"></a>Nastavení
 
-1. Upload aplikaci do obchodního podniku nebo nahrát vlastní aplikaci do tenanta Intune. Viz také: [Enterprise správy aplikací.](/windows/client-management/mdm/enterprise-app-management)
+1. Upload aplikaci na firmu nebo nahrajte vlastní aplikaci do svého tenanta intune. viz také: [Enterprise správa aplikací](/windows/client-management/mdm/enterprise-app-management).
 
-2. [Přiřaďte aplikaci ke skupině](/mem/intune/apps/apps-deploy). Na základě typu přiřazení, který zvolíte, můžete aplikaci doručit automaticky nebo ji můžete snadno načíst, pokud máte vybrané aplikace.
+2. [Přiřaďte aplikaci ke skupině](/mem/intune/apps/apps-deploy). V závislosti na zvoleném typu přiřazení může být aplikace automaticky dodávána nebo k dispozici, aby ji bylo možné snadno vyřizovat, pokud máte výběr aplikací.
 
 > [!NOTE]
-> Při vytváření sady appx nezapomeňte zohlednit zahrnutí architektury pro zařízení, na která nasazujete. HoloLens 2 je ARM64 a HoloLens (1. generace) je x86. Pokud plánujete mít prostředí se smíšenými zařízeními, můžete obojí zahrnout do jedné sady appx.
+> Při sestavování sady appx se ujistěte, že máte na zřeteli architekturu pro zařízení, která nasazujete do nástroje. HoloLens 2 je ARM64 a HoloLens (1. generace) je x86. V případě, že máte v plánu prostředí se smíšenými zařízeními, můžete zahrnout obojí do jedné sady appx.
 
 ## <a name="assignment-types"></a>Typy přiřazení
 
-Pokud chcete, aby se vaše aplikace po registraci  automaticky nainstalovala na zařízení, měli byste pro tuto skupinu nebo skupiny vybrat Povinné.
-Pokud chcete aplikaci stáhnout do zařízení zaregistrovaná prostřednictvím portálu společnosti, vyberte **Dostupná pro zaregistrovaná zařízení.**
+Pokud chcete, aby se vaše aplikace po registraci automaticky nainstalovala do zařízení, měli byste pro tyto skupiny vybrat možnost **požadováno** .
+Pokud chcete aplikaci zpřístupnit pro stažení do zařízení zaregistrovaných prostřednictvím portálu společnosti, vyberte možnost **dostupné pro zaregistrovaná zařízení**.
 
-## <a name="end-user-experience"></a>End-User prostředí
+## <a name="end-user-experience"></a>Prostředí End-User
 
-Po nastavení konfigurace v Intune jste připraveni koncovým uživatelům přijímat vybrané aplikace.
+Po nastavení konfigurace v Intune jste připraveni na to, aby koncoví uživatelé získali vybrané aplikace.
 
-Pokud chcete automaticky získat aplikace, postupujte podle těchto kroků:
+K automatickému získání aplikací použijte následující postup:
 
-1. Zaregistrujte své zařízení v tenantovi.
+1. Zaregistrujte svoje zařízení u svého tenanta.
 2. Po dokončení registrace zařízení byste měli aplikaci obdržet na svém zařízení.
-3. Pokud aplikaci nevidíte okamžitě, přejděte do části Nastavení Accounts Work or School your account Info **(Pracovní** nebo školní informace o účtu) a posuňte se dolů, kde najdete informace o  >    >    >   stavu nainstalované aplikace.
+3. pokud vám nevidíte aplikaci hned, přejděte na **Nastavení**  >  **účty**  >  **pracovní nebo školní**  >  informace o *účtu* , a posuňte se dolů a zobrazte si informace o stavu nainstalované aplikace.
 
-Jak se dostat k aplikacím prostřednictvím Portál společnosti:
+jak získat aplikace pomocí Portál společnosti:
 
-1. Otevřete **nabídku Start a** vyberte **Microsoft Store**.
-2. Vyhledejte **Portál společnosti** a stáhněte si aplikaci.
+1. Otevřete **nabídku Start** a vyberte možnost **Microsoft Store**.
+2. vyhledejte **Portál společnosti** a stáhněte si aplikaci.
 3. Přihlaste se ke svému účtu.
-4. Vyberte aplikaci, kterou chcete obdržet, a stáhněte si ji.
+4. Vyberte aplikaci, kterou chcete přijmout, a stáhněte ji.
 
 > [!Tip]
-> Přečtěte si [další informace o automatické instalaci Portál společnosti](/mem/intune/apps/company-portal-app) a nasazení a správě aplikací v [Intune.](/mem/intune/fundamentals/windows-holographic-for-business#deploy-and-manage-apps)
+> přečtěte si další informace o [automatické instalaci Portál společnosti](/mem/intune/apps/company-portal-app) a [nasazení a správě aplikací v intune](/mem/intune/fundamentals/windows-holographic-for-business#deploy-and-manage-apps).

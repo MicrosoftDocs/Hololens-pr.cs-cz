@@ -1,9 +1,9 @@
 ---
-title: HoloLens (1. generace)
-description: Seznamte se s komponentami, které tvoří Microsoft HoloLens (1. generace), nejnovější vývoj nepouhlého holografického počítače Microsoftu s Windows 10.
+title: hardware HoloLens (1. generace)
+description: seznamte se se součástmi, které tvoří Microsoft HoloLens (1. generace), což je nejnovější vývoj nepřipojeného holografického počítače společnosti Microsoft, na kterém běží Windows 10.
 ms.assetid: 527d494e-2ab6-46ca-bd5a-bfc6b43cc833
 ms.date: 09/16/2019
-keywords: hololens
+keywords: HoloLens
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
@@ -14,126 +14,126 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 ms.openlocfilehash: 587253a7ec3d3959e7861fedc474d6a2e39dd369
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189898"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428551"
 ---
-# <a name="hololens-1st-gen-hardware"></a>HoloLens (1. generace)
+# <a name="hololens-1st-gen-hardware"></a>hardware HoloLens (1. generace)
 
 ![Microsoft HoloLens (1. generace).](images/see-through-400px.jpg)
 
-Microsoft HoloLens (1. generace) je první holografický počítač na světě. HoloLens osobní výpočetní prostředí prostřednictvím holografických prostředí, abyste měli nové možnosti. HoloLens kombinaci špičkových optických vláken a senzorů, aby doručoval 3D hologramy připnuté do reálného světa kolem vás.
+Microsoft HoloLens (1. generace) je první plně nepřipojený holografický počítač ve světě. HoloLens předefinování osobního výpočetního prostředí prostřednictvím holografického prostředí, které vám umožní nové způsoby. HoloLens blendy na špičkové optické a snímače k dodávání prostorových hologramů připnuté do reálného světa.
 
 ## <a name="hololens-components"></a>HoloLens komponenty
 
-![Obrázek znázorňuje obsah pole](images/hololens-box-contents.png)
+![Obrázek, který zobrazuje obsah boxu.](images/hololens-box-contents.png)
 
-Váš HoloLens obsahuje následující funkce:
+vaše HoloLens obsahuje následující funkce:
 
-- **Visor**. Obsahuje HoloLens senzory a displeje. Když máte na sobě zorník, můžete ho HoloLens.
-- **Headband**. Pokud chcete HoloLens roztáhnou, pomocí úpravy rozšiřte pásek. Když je HoloLens, zpřísnit kolečko pro úpravy, dokud se pásek neuchová.
-- **Tlačítka brightness** Když máte HoloLens, na levé straně zařízení jsou tlačítka brightness.
-- **Tlačítka hlasitosti**. Když máte HoloLens, jsou tlačítka hlasitosti na pravé straně zařízení.
-- **Device arms (Ruce zařízení).** Při vyzvednutí, nasuvování nebo odsuování HoloLens vždy pochopte ruce zařízení.
+- **Rozcestník**. obsahuje senzory HoloLens a displeje. V případě, že nebudete mít k disHoloLens, můžete střídat hypervisor nahoru.
+- **HEADBAND**. chcete-li umístit HoloLens na, pomocí kolečka úprav rozbalte headband. když je HoloLens zavedeno, seložte kolečko úprav, dokud headband nevyhovuje.
+- **Tlačítka pro jas** pokud nepoužíváte HoloLens, tlačítka jasu jsou na levé straně zařízení.
+- **Tlačítka hlasitosti**. pokud se vám HoloLens, jsou tlačítka hlasitosti na pravé straně zařízení.
+- **Zbraně zařízení**. když si vyberete, zadáte nebo odvoláte HoloLens, vždy ho přikládejte nebo odblokujte pomocí rukou zařízení.
 
 ## <a name="in-the-box"></a>V poli
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/c7ceb904-9d5f-4194-9e10-e8a949dbad7d]  
 
-Pole HoloLens obsahuje následující položky:
+HoloLens pole obsahuje následující položky:
 
-- **Nosové pady**. Vyberte nosný nos, který odpovídá tvaru nosu a přizpůsobí se nosu.
-- **Režijní náklady** Když máte na sobě HoloLens, zatímco se pohybujete, použijte režijní návěsí, které vám pomůžou udržet zařízení na místě. Kromě toho, pokud máte na sobě HoloLens delší dobu, může použití režijní návěsky zařízení více vyžít.
-- **Kabel Micro USB**. Pomocí kabelu mikro USB připojte HoloLens k napájecímu zdroji pro nabíjení, nebo ho použijte k připojení HoloLens k počítači.
-- **Napájecí zdroj**. Zapojte napájecí zdroj.
-- **Mikrovlákno .** Pomocí zornice vyčistěte HoloLens visor.
+- **Překladače na nos** Vyberte nos, který odpovídá tvaru svého nos a který je přizpůsoben vašemu Eyewear.
+- **Popruh režijních nákladů** pokud se vám HoloLens při přesunu, použijte k zajištění, aby zařízení zůstalo v zakroužku režijních nákladů. pokud navíc HoloLens za rozšířené období, použití popruhového popruh může zvýšit pohodlí zařízení.
+- **Kabel Micro USB**. použijte kabel micro-USB k připojení HoloLens k napájení k napájení, nebo ho použijte k připojení HoloLens k vašemu počítači.
+- Zdroj **napájení**. Připojí se k napájení z elektrické zásuvky.
+- **Microfiber tkanina**. použijte tkaninu k vyčištění HoloLensového hypervisoru.
 
 >[!TIP]
->Clicker [se](hololens1-clicker.md) dodává HoloLens (1. generace) v samostatném poli.
+>v samostatném poli se [zobrazí](hololens1-clicker.md) okno s HoloLens (1. generace).
 
 ### <a name="power-supply-details"></a>Podrobnosti o zdroji napájení
 
-Nejlépe podporovaným mechanismem pro nabíjení je napájecí zdroj a kabel USB, který je spolu se zařízením. Napájením je 18W napájení.  Dodává 9V při 2A.
+Zdroj napájení a kabel USB, který je součástí zařízení, je nejlepším podporovaným mechanismem pro zpoplatnění. Zdrojem napájení je 18W nabíječka.  Dodává 9V v 2A.
 
-Rychlost a rychlost zpoplatnění se může lišit v závislosti na prostředí, ve kterém zařízení běží.
+Rychlost nabíjení a rychlost se můžou lišit v závislosti na prostředí, ve kterém je zařízení spuštěné.
 
-Aby bylo možné udržovat/šedě udržovat interní procento poplatku za baterie, když je zařízení v pořádku, musí být připojené minimálně k 15W napájení.
+Aby se zajistilo, že interní procento poplatků za baterii v době, kdy je zařízení zapnuté, musí být připojení minimálně k 15W nabíječkě.
 
 ## <a name="device-specifications"></a>Specifikace zařízení
 
 ### <a name="display"></a>Zobrazení
 
-![HoloLens je vidět holografické objektivy.](images/displays-400px.jpg)
+![HoloLensa má vidět až holografické čočky.](images/displays-400px.jpg)
 
 | &nbsp; | &nbsp; |
 |---|---|
-| **Optika** | See-through holographic lenses (waveguides) |
-| **Holografické rozlišení** | 2 světlé motory HD 16:9 vytvářející celkový počet světlých bodů 2,3 M |
-| **Holografická hustota** | \>2,5 tis. radiánů (světlé body na radián) |
-| **Vykreslování na základě očí** | Automatická závislou vzdálenost mezi vzdáleností |
+| **Optické optiky** | Prohlédněte si holografické čočky (waveguides) |
+| **Holografické řešení** | 2 lehké moduly pro HD 16:9 produkující 2,3 M celkem světlé body |
+| **Holografická hustota** | \>2,5 k radiants (body světla na Radian) |
+| **Vykreslování na základě očí** | Automatická kalibrace vzdálenosti pupillary |
 
-### <a name="sensors"></a>Senzory
+### <a name="sensors"></a>Čidl
 
-![HoloLens senzory pro pochopení jeho prostředí a akcí uživatelů.](images/sensor-bar-400px.jpg)
+![HoloLens má senzory pro porozumění činnostem svého prostředí a uživatele.](images/sensor-bar-400px.jpg)
 
-- 1 inerciální měrné jednotka (IMU)
-- 4. Principy prostředí fotoaparátů
-- 1 hloubková kamera
-- 1 2MP fotografie / HD videokameře
-- Zachycení hybridní reality
+- 1 jednotka měření Inertial (IMU)
+- 4 prostředí pro porozumění kamerám
+- 1 hloubka kamery
+- 1 2MP fotek/HD video kamera
+- Zachycení směsné reality
 - 4 mikrofony
 - 1 senzor okolního světla
 
-### <a name="input-output-and-connectivity"></a>Vstup, výstup a možnosti připojení
+### <a name="input-output-and-connectivity"></a>Vstup, výstup a připojení
 
-- Předdefinní mluvčí
-- Konektor Audio 3.5mm
-- Zvýšení nebo snížení svazku
-- Brightness up/down
+- Integrované reproduktory
+- Zvukový konektor 3,5 mm
+- Navýšení/snížení objemu
+- Jas nahoru/dolů
 - Tlačítko napájení
-- LED diody stavu baterie
-- Wi-Fi 802.11ac
-- Micro USB 2.0
-- Bluetooth 4.1 LE
+- Stav baterie diody LED
+- Wi-Fi 802.11 AC
+- Micro USB 2,0
+- Bluetooth 4,1 LE
 
 ### <a name="power"></a>Napájení
 
-- Životnost baterie
-- 2–3 hodiny aktivního použití
-- Až 2 týdny pohotovostního režimu
-- Plně funkční při účtování
-- Pasivní chlazení (bez ventilátorů)
+- Výdrž baterie
+- 2-3 hodin aktivního použití
+- Až 2 týdny v pohotovostním čase
+- Plně funkční při zpoplatnění
+- Prochlazené (bez ventilátorů)
 
 ### <a name="processors"></a>Procesory
 
-![Základní desky pro Microsoft HoloLens.](images/motherboard-400px.jpg)
+![Základní deska pro Microsoft HoloLens.](images/motherboard-400px.jpg)
 
-- 32bitová architektura Intel s podporou TPM 2.0
-- Custom-built Microsoft Holographic Processing Unit (HPU 1.0)
+- Intel 32 – 32bitová architektura s podporou TPM 2,0
+- Vlastní sestavená jednotka pro zpracování v Microsoftu (HPU 1,0)
 
 ### <a name="memory"></a>Memory (Paměť)
 
-- 64 GB Flashe
-- 2 GB RAM
+- 64 GB flash
+- 2 GB PAMĚTI RAM
 
 ### <a name="fit"></a>Vhodnost
 
 |   | &nbsp; |
 |---|---|
-| **Velikosti** | Jedna velikost s přizpůsobitelným pruhem. Hodí se přes brýle. |
+| **Velikosti** | Jedna velikost s upravitelným pruhem Přizpůsobit přes brýle |
 | **Hmotnost** | 579 gramů |
 
 ## <a name="device-capabilities"></a>Možnosti zařízení
 
-Následující postup vám porozumí akcím uživatelů:
+Pro pochopení akcí uživatele použijte následující postup:
 
 - Sledování pohledu
-- Zadání gest
+- Vstup gesta
 - Podpora hlasu
 
-Následující informace vám porozumí prostředí:
+Pochopení prostředí pomocí následujících informací:
 
 - Prostorový zvuk
 
@@ -147,42 +147,42 @@ Následující informace vám porozumí prostředí:
 - Nastavení
 - Centrum Feedback
 - Kalibrace
-- Výuka gest
+- Naučit se gesta
 
 ## <a name="device-certifications"></a>Certifikace zařízení
 
 ### <a name="safety"></a>Bezpečnost
 
-HoloLens testovali a zjistili jsme, že vyhovují základním požadavkům na ochranu před dopady ansi Z87.1, CSA Z94.3 a EN 166.
-- [Informace SAR](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
+HoloLens byla testována a nalezena tak, aby odpovídala základním požadavkům ochrany před dopadem ANSI z 87.1, CSA z 94.3 a EN 166.
+- [Informace pro správní oblast](https://support.microsoft.com/help/12673/mobile-devices-sar-information)
 
 ## <a name="care-and-cleaning"></a>Péče a čištění
 
-Při zpracování HoloLens pečlivě. K návěsí, přenášení a úpravě HoloLens používejte ruce zařízení, a ne &mdash; režijní návěsí. Aby se zorný objekt vyhnul prachu a otiskům prstů a nedotáel se ho. Opakované čištění by mohlo poškodit zorník, a proto se pokuste zařízení udržovat v čistém prostředí.
+pořídí se HoloLens pečlivě. pokud chcete své HoloLens přenášet, přenášet a upravovat, použijte paže zařízení, které &mdash; nejsou popruhem režijních nákladů. Aby se zabránilo clonu bez prachu a otisků prstů a vyhnuli se jejich doteku. Opakované čištění může způsobit poškození hypervisoru, proto zkuste zařízení vyčistit.
 
-Nepoužívejte na svém zařízení žádné čisticí prostředky ani HoloLens a neponořujte je do vody ani na něj přímo neakuřte vodu.
+nepoužívejte na svém HoloLens žádné čisticí prostředky ani rozpouštědla a neprovádějte jejich rozpojení na vodu, nebo použijte vodu přímo na ni.
 
-Pokud chcete vyčistit zorník, odstraňte jakýkoli prach štětcem na vousy ve stylu camelu nebo kozy nebo štětkem na objektivy ve stylu žárovky. Odlehčete mikrovlákn s malým množstvím destilované vody a pak ho použijte k vymazání visoru v kruhovém pohybu.
+K vyčištění hypervisoru odstraňte všechna Prachová clona pomocí ve stylu CamelCase nebo kozího průřezu, který je ve stylu cibule. Lehce moisten Microfiber látku s malým množstvím převodné vody a pak ji použijte k tomu, aby se v kulatém pohybu vymazalo clona.
 
-K vyčištění zbytku zařízení, včetně čmeláka a plísní zařízení, použijte šedou vodu bez lintu, která je nachyscená vlajovým soapem a vodou. Než ji HoloLens znovu, nechte ji úplně vyschnout.
+K vyčištění zbytku zařízení, včetně HEADBAND a rukou zařízení, použijte lintou látku bez moistened s mírným protokolem SOAP a vodou. než ho znovu použijete, nechte se HoloLens úplně vyschnout.
 
-![Obrázek znázorňuje, jak vyčistit zorník.](images/hololens-cleaning-visor.png)
+![Obrázek, který ukazuje, jak vyčistit hypervisor.](images/hololens-cleaning-visor.png)
 
-## <a name="finding-the-serial-number"></a>Vyhledání sériového čísla
+## <a name="finding-the-serial-number"></a>Hledání sériového čísla
 
-Sériové číslo zařízení HoloLens (1. generace) se vytiskne pod správným objektivem.
-1. Podržte zařízení před sebe, jako byste ho měli na nosnou paměť. Se zařízením dopředu a ve svislém směru.
-1. Když je objektiv stále dopředu, překlopte zařízení směrem nahoru, abyste viděli jeho spodní stranu.
-1. Pravé objektivy teď budou vlevo a vytištěné pod objektivem na pásu je sériové číslo. 
+sériové číslo pro HoloLens (první gen) se tiskne pod pravým objektivem.
+1. Držte zařízení před vás, jako kdybyste ho měli na svém vedoucím. Se zařízením, které je otočené směrem nahoru a dolů.
+1. V případě, že je čočka stále otočená, překlopte zařízení směrem dolů, abyste viděli spodní stranu.
+1. Pravý čočka bude nyní na levé straně vytištěná pod objektivem na pásce je sériové číslo. 
 
-Sériové číslo najdete také na připojeném počítači:
+Sériové číslo lze také najít prostřednictvím připojeného počítače:
 
-1. Připojení zařízení
-1. V **Průzkumníku souborů přejděte na** tento počítač.
-1. Klikněte pravým tlačítkem **a vyberte Vlastnosti** HoloLens zařízení
-1. Zobrazí se číslo řady zařízení. Podobně jako na následujícím snímku obrazovky.
+1. Připojit zařízení
+1. Přejít na **Tento počítač** v Průzkumníkovi souborů
+1. klikněte pravým tlačítkem a vyberte **vlastnosti** HoloLensho zařízení.
+1. Zobrazí se číslo série zařízení. Podobně jako na tomto snímku obrazovky.
 
    <img src="images/hl1-serial-number.png" width="400" height="600" alt="Properties page in Windows 10 for HoloLens-3TNKV"/>
 
 > [!div class="nextstepaction"]
-> [Nastavení a spuštění HoloLens (1. generace)](hololens1-setup.md)
+> [nastavení a spuštění HoloLens (1. generace)](hololens1-setup.md)

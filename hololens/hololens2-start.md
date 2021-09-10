@@ -13,25 +13,25 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 8f07ed42c873b62b3b4201c2756b55bbb29707d3
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189762"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428608"
 ---
 # <a name="set-up-your-hololens-2"></a>Nastavení HoloLens 2
 
 Při prvním zapnutí zařízení HoloLens provedete nastavením zařízení, přihlášením pomocí uživatelského účtu a HoloLens na pohled.  Tato část vás provede počátečním HoloLens 2.
 
-V další části se dozvíte, jak pracovat s hologramy HoloLens pracovat s hologramy. Pokud chcete přeskočit k článku, podívejte se na článek [o přechodu HoloLens 2.](hololens2-basic-usage.md)
+V další části se dozvíte, jak pracovat s hologramy HoloLens s hologramy. Pokud chcete přeskočit na tento článek, podívejte se na [článek o přechodu HoloLens 2](hololens2-basic-usage.md).
 
 ## <a name="before-you-start"></a>Než začnete
 
 Než začnete, ujistěte se, že máte k dispozici následující:
 
-**Síťové připojení**. Abyste ho nastavili, HoloLens k síti, budete ho muset připojit k síti. S HoloLens 2 se můžete připojit k síti Wi-Fi nebo pomocí ethernetové sítě (budete potřebovat adaptér USB-C-to-Ethernet). Při prvním připojení budete potřebovat otevřenou síť nebo síť chráněnou heslem, která nevyžaduje přechod na web ani používání certifikátů pro připojení. [Přečtěte si další informace o webech, HoloLens používá](hololens-offline.md).
+**Síťové připojení**. Abyste ho nastavili, budete HoloLens k síti. S HoloLens 2 se můžete připojit pomocí Wi-Fi nebo pomocí ethernetu (budete potřebovat adaptér USB-C-to-Ethernet). Při prvním připojení budete potřebovat otevřenou síť nebo síť chráněnou heslem, která nevyžaduje přechod na web ani používání certifikátů pro připojení. [Přečtěte si další informace o webech, HoloLens používají](hololens-offline.md).
 
-**A účet Microsoft**. Budete se také muset přihlásit k HoloLens pomocí účet Microsoft (nebo pomocí pracovního účtu, pokud vaše organizace vlastní zařízení). Pokud nemáte vlastní účet Microsoft, přejděte na [account.microsoft.com](https://account.microsoft.com) a nastavte si ho zdarma.
+**A účet Microsoft**. Budete se také muset přihlásit k účtu HoloLens pomocí účet Microsoft (nebo pomocí pracovního účtu, pokud vaše organizace vlastní zařízení). Pokud nemáte vlastní účet Microsoft, přejděte na [account.microsoft.com](https://account.microsoft.com) a nastavte si ho zdarma.
 
 **Bezpečný a dobře rozsvícený prostor bez nebezpečí při vyjetí.** [Health and safety info](https://go.microsoft.com/fwlink/p/?LinkId=746661).
 
@@ -70,7 +70,7 @@ Zobrazí se tlačítko s logem Microsoftu. Stiskněte tlačítko a HoloLens 2 v�
     
     <img src="images/06-et-corners.png" width="500px" alt="Calibration selection screen">
     
-    2. Při nakalibrování se podíváte na sadu cílů (označované jako gemy). Je v pořádku, když během chouly blikne nebo zavřete oči, ale snažte se nekoukat na jiné objekty v místnosti nebo fyzickém prostoru. HoloLens tento proces používá k tomu, aby se dozvěděli o tom, jak jste v očích, aby bylo možné lépe vykreslit holografický svět. 
+    2. Při nakalibrování se podíváte na sadu cílů (označované jako gemy). Je v pořádku, když během chouly blikne nebo zavřete oči, ale snažte se nekoukat na jiné objekty v místnosti nebo fyzickém prostoru. HoloLens tento proces používá k tomu, aby se dozvěděli o pozici oka, aby bylo možné lépe vykreslit holografický svět. 
 
         <img src="images/07-adjust-eyes.png" width="500px" alt="Adjust for your eyes">
 
@@ -80,14 +80,14 @@ Zobrazí se tlačítko s logem Microsoftu. Stiskněte tlačítko a HoloLens 2 v�
 
 1. Připojení k internetu (vyberte Wi-Fi nebo ethernetové připojení).
 
-     HoloLens časové pásmo automaticky na základě informací získaných z Wi-Fi sítě. Po dokončení instalace můžete časové pásmo změnit pomocí Nastavení aplikace.
+     HoloLens časové pásmo automaticky na základě informací získaných z Wi-Fi sítě. Po dokončení instalace můžete změnit časové pásmo pomocí Nastavení aplikace.
 
     ![Připojení na Wi-Fi.](images/11-network.png)
 
     > [!NOTE] 
-    > Pokud postupíte po kroku Wi-Fi a později budete muset přepnout na jinou síť, zatímco  jste stále v nastavení, můžete se k tomuto kroku vrátit stisknutím tlačítek Snížení objemu a napájení současně, pokud používáte verzi operačního systému z října 2019 nebo novější.  U starších verzí možná [](hololens-recovery.md) budete muset resetovat zařízení nebo ho restartovat v umístění, kde není dostupná síť Wi-Fi, aby se zabránilo jeho automatickému připojení.
+    > Pokud postupíte v kroku Wi-Fi a později budete muset přepnout na jinou síť, zatímco  jste stále v nastavení, můžete se k tomuto kroku vrátit stisknutím tlačítek Snížení objemu a napájení současně, pokud používáte verzi operačního systému z října 2019 nebo novější.  U starších verzí možná [](hololens-recovery.md) budete muset resetovat zařízení nebo ho restartovat v umístění, kde není dostupná síť Wi-Fi, aby se zabránilo jeho automatickému připojení.
     > 
-    > Upozorňujeme také, že HoloLens instalačním programu došlo k časovému limitu přihlašovacích údajů dvou minut. Uživatelské jméno a heslo je potřeba zadat do dvou minut, jinak se pole uživatelského jména automaticky vymazat.
+    > Upozorňujeme také, že během HoloLens instalace došlo k časovému limitu přihlašovacích údajů dvou minut. Uživatelské jméno a heslo je potřeba zadat do dvou minut, jinak se pole uživatelského jména automaticky vymazat.
 
 1. HoloLens 2 vyhledá a použije profil Autopilot, pokud existuje. Na této obrazovce není potřeba žádná akce.
  
@@ -100,17 +100,17 @@ Zobrazí se tlačítko s logem Microsoftu. Stiskněte tlačítko a HoloLens 2 v�
 1. Přihlaste se ke svému uživatelskému účtu. Zvolíte si, jestli je můj **pracovní nebo** školní vlastnit a já **ho vlastním.**
 
     ![Nastavte uživatele.](images/13-device-owner.png)
-    - Když zvolíte **Možnost Můj pracovní nebo školní účet** vlastní , přihlásíte se pomocí účtu Azure AD. Pokud vaše organizace používá Azure AD Premium a nakonfiguroval automatickou registraci MDM, HoloLens se automaticky zaregistruje do MDM. Pokud vaše organizace tuto funkci Azure AD Premium, automatická registrace MDM není dostupná. V takovém případě je potřeba ručně zaregistrovat HoloLens [ve správě zařízení.](hololens-enroll-mdm.md#different-ways-to-enroll)
+    - Když zvolíte **Možnost Můj pracovní nebo školní účet** vlastní , přihlásíte se pomocí účtu Azure AD. Pokud vaše organizace používá Azure AD Premium a nakonfiguroval automatickou registraci MDM, HoloLens se automaticky zaregistruje do MDM. Pokud vaše organizace tuto funkci Azure AD Premium, automatická registrace MDM není dostupná. V takovém případě je potřeba ručně [zaregistrovat HoloLens ve správě zařízení.](hololens-enroll-mdm.md#different-ways-to-enroll)
 
         1. Zadejte informace o účtu organizace.
         1. Přijměte prohlášení o zásadách ochrany osobních údajů a licenční smlouvu s koncovým uživatelem.
         1. Přihlaste se pomocí svých přihlašovacích údajů azure AD. To se může přesměrovat na přihlašovací stránku vaší organizace.
         1. Pokračujte v nastavování zařízení.
 
-    - Když zvolíte **Možnost vlastnit,** přihlásíte se pomocí účet Microsoft. Po dokončení instalace můžete ručně zaregistrovat [HoloLens ve správě zařízení.](hololens-enroll-mdm.md#different-ways-to-enroll)
+    - Když zvolíte **Možnost vlastnit**, přihlásíte se pomocí účet Microsoft. Po dokončení instalace můžete ručně zaregistrovat [HoloLens ve správě zařízení.](hololens-enroll-mdm.md#different-ways-to-enroll)
 
         1. Zadejte své účet Microsoft údaje.
-        2. Zadejte svoje heslo. Pokud váš účet Microsoft vyžaduje [dvoukrokové](https://blogs.technet.microsoft.com/microsoft_blog/2013/04/17/microsoft-account-gets-more-secure/)ověřování , dokončete proces ověřování.
+        2. Zadejte svoje heslo. Pokud vaše účet Microsoft vyžaduje [dvoukrokové ověřování ,](https://blogs.technet.microsoft.com/microsoft_blog/2013/04/17/microsoft-account-gets-more-secure/)dokončete proces ověřování.
 
         
 1. Na nastavení přihlášení Iris vyberte **Další.** Projdete si podobné prostředí jako při pohledu. Po **dokončení** kontroly vyberte Hotovo. Tento krok můžete také **obejít** výběrem možnosti Přeskočit.
@@ -143,7 +143,7 @@ Zobrazí se tlačítko s logem Microsoftu. Stiskněte tlačítko a HoloLens 2 v�
     <img src="images/24-telemetry.png" width="500px" alt="Telemetry level">
 
 
-1. Přečtěte si, jak používat gesto spuštění na HoloLens 2.
+1. Přečtěte si, jak používat počáteční gesto na HoloLens 2.
 
     <img src="images/26-01-startmenu-learning.png" width="500px" alt="Learn how to use the start gesture, image 1">
 
@@ -155,7 +155,7 @@ Zobrazí se tlačítko s logem Microsoftu. Stiskněte tlačítko a HoloLens 2 v�
 
 ## <a name="next-steps"></a>Další kroky
 
-1. Začněte ihned pracovat s Mixed Reality a navigace Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** ve které se můžete podívat na návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
+1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** která vám pomůže s ručními kurzy. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
 
 1. Klikněte níže a pokračujte ve čtení o tom, jak se dostat HoloLens 2.
 

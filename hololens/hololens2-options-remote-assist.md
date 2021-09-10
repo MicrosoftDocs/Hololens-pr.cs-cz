@@ -1,7 +1,7 @@
 ---
-title: vzdálená pomoc HoloLens 2
-description: přečtěte si o HoloLens 2 Remote Assist a o tom, co dělat, když máte jednu ze svých vlastních.
-keywords: HoloLens 2 možnosti nákupu, možnosti HoloLens, vzdálená pomoc
+title: HoloLens 2 Remote Assist
+description: Přečtěte si HoloLens 2 Remote Assist a o tom, co dělat po získání vlastní pomoci.
+keywords: HoloLens 2 možnosti nákupu, HoloLens možnosti, Vzdálená pomoc
 author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
@@ -14,38 +14,38 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 24fefeb941fd75e4f6a6b18fbfd8a1c80a7bbf54dcdee233c6513338b44f9ab5
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 540bdcaefafcc50cc38d5e9a67dea3b9cb596f05
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658787"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427444"
 ---
-# <a name="hololens-2-with-remote-assist"></a>HoloLens 2 se vzdálenou asistencí
+# <a name="hololens-2-with-remote-assist"></a>HoloLens 2 s Remote Assistem
 
-začněte na jednom dni s HoloLens 2 a špičkovou komunikační aplikací ve realitě od microsoftu, která je dostupná dohromady. Pomáhat vaší celé společnosti zvýšit produktivitu a inovovat s větším účelem. S využitím Dynamics 365 a řešení od průmyslových partnerů se teď můžete setkat s Mixed realitou.
+První den s aplikací HoloLens 2 a konečná komunikační aplikace hybridní reality od Microsoftu, která je k dispozici společně. Pomozte celé společnosti být produktivnější a inovovat s vyšším účelem. Vyzkoušejte hybridní realitu s Dynamics 365 a řešeními od oborových partnerů.
 
-## <a name="learn-about-hololens-2-with-remote-assist"></a>další informace o HoloLens 2 s nástrojem Remote Assist
-- Tato zařízení můžete používat v komerčním prostředí pro vaši firmu. Seřadíte tolik, kolik potřebujete.
-- jedním z nejoblíbenějších způsobů použití HoloLens podnikových prostředí je **vzdálená pomoc**, která poskytuje jednu licenci na pracovní stanici (na jedno zařízení).
+## <a name="learn-about-hololens-2-with-remote-assist"></a>Další informace o HoloLens 2 s Remote Assistem
+- Tato zařízení můžete použít v komerčním prostředí pro vaši firmu. Objednejte si tolik, kolik potřebujete!
+- Jedním z nejoblíbenějších použití pro HoloLens podnikových prostředí je Vzdálená **pomoc,** která poskytuje jednu licenci na pracovní místo (na zařízení).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d3YT8j0yYl0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="heres-what-to-do-next-with-the-hololens-2-with-dynamics-365-remote-assist-edition"></a>tady je postup s HoloLens 2 s edicí programu Dynamics 365 Remote Assist.
+## <a name="heres-what-to-do-next-with-the-hololens-2-with-dynamics-365-remote-assist-edition"></a>Tady je seznam toho, co dál dělat s aplikací HoloLens 2 s edicí Dynamics 365 Remote Assist.
 
-vytvořili jsme konkrétní průvodce, který vám pomůže s nasazením HoloLens zařízení ve velkém měřítku. příručka obsahuje kompletní nastavení Azure Active Directory k ověřování vzdáleného volání asistence. další podrobnosti najdete [v průvodci nasazením – Cloud připojený HoloLens 2 s nástrojem Remote Assist](hololens2-cloud-connected-overview.md) .
+Vytvořili jsme konkrétní příručku, která vám pomůže nasadit HoloLens ve velkém měřítku. Tato příručka zahrnuje koncové nastavení pro Azure Active Directory ověření volání vzdálené pomoci. Další podrobnosti najdete [v našem průvodci nasazením – cloudový HoloLens 2 s asistencí](hololens2-cloud-connected-overview.md) pro vzdálený přístup.
 
 | CheckPoint  | Výsledek                                |
 |-------------|----------------------------------------|
-| [Začínáme](/dynamics365/mixed-reality/remote-assist/overview-hololens) | Začněte s nástrojem Vzdálená pomoc.        |
-| [Licence](/dynamics365/mixed-reality/remote-assist/deploy-remote-assist#add-and-assign-licenses)     | Uplatněte licenci pro vzdálenou pomoc.      |
-| [Připojit](/hololens/hololens-network)     | Připojení zařízení na Wi-Fi.       |
-| [Registrace](/hololens/hololens-enroll-mdm)      | Zaregistrujte si zařízení ve své organizaci. |
+| [Začínáme](/dynamics365/mixed-reality/remote-assist/overview-hololens) | Začínáme se vzdálenou asistencí        |
+| [Licence](/dynamics365/mixed-reality/remote-assist/deploy-remote-assist#add-and-assign-licenses)     | Uplatnění licence pro Remote Assist.      |
+| [Připojit](/hololens/hololens-network)     | Připojení zařízení k Wi-Fi.       |
+| [Registrace](/hololens/hololens-enroll-mdm)      | Zaregistrujte zařízení ve vaší organizaci. |
 
 ## <a name="next-steps"></a>Další kroky
 
-1. začněte pracovat hned se smíšenými realitami a projděte si Windows 10 v HoloLens – podívejte se na **Tipy** aplikaci, kde najdete praktická cvičení pro interakce. Použijte gesto Start, pokud chcete přejít na Start nebo vyslovit příkaz "Přejít na začátek" a vybrat Tipy.
-1. kliknutím dole můžete pokračovat v čtení HoloLens 2.
+1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** ve které se můžete podívat na návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start (Spustit) nebo řekněte "Go to Start" (Přejít na začátek) a vyberte Tipy.
+1. Klikněte níže a pokračujte ve čtení o tom, jak se dostat HoloLens 2.
 
 > [!div class="nextstepaction"]
-> [začínáme s HoloLens 2](hololens2-basic-usage.md)
+> [Začínáme s HoloLens 2](hololens2-basic-usage.md)

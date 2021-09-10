@@ -1,7 +1,7 @@
 ---
-title: Vyhledání a uložení souborů v HoloLens
-description: Naučte se používat Průzkumník souborů na HoloLens k otevření, zobrazení a správě souborů na zařízení s hybridní realitou.
-keywords: postupy, výběr souborů, soubory, fotky, videa, obrázky, OneDrive, úložiště, Průzkumník souborů, hololens
+title: Hledání a ukládání souborů na HoloLens
+description: naučte se používat průzkumníka souborů v HoloLens k otevření, zobrazení a správě souborů na zařízení se smíšenými realitami.
+keywords: postupy, výběr souborů, soubory, fotky, videa, obrázky, OneDrive, úložiště, průzkumník souborů, hololens
 ms.assetid: 77d2e357-f65f-43c8-b62f-6cd9bf37070a
 author: mattzmsft
 ms.author: mazeller
@@ -16,59 +16,59 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: ad210c9d31d8d7c226345618b6dfabf8457ee2398882935920d7b3217259a644
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 18dc962b869dafaea9ff9c605eef51fcbb35bfb2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664872"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428351"
 ---
-# <a name="find-open-and-save-files-on-hololens"></a>Vyhledání, otevření a uložení souborů v HoloLens
+# <a name="find-open-and-save-files-on-hololens"></a>Hledání, otevírání a ukládání souborů na HoloLens
 
-Soubory, které vytvoříte na HoloLens, včetně fotek a videí, se ukládají přímo do HoloLens zařízení. Můžete je zobrazit a spravovat stejným způsobem jako soubory v Windows 10:
+soubory, které vytvoříte v HoloLens, včetně fotek a videí, se ukládají přímo do vašeho zařízení HoloLens. Můžete je zobrazit a spravovat stejným způsobem, jakým byste mohli spravovat soubory na Windows 10:
 
-- Použití Průzkumník souborů pro přístup k místním složkám.
-- V úložišti aplikace.
-- Ve speciální složce (například v knihovně videí nebo hudby).
-- Použití služby úložiště, která zahrnuje aplikaci a výběr souborů (například OneDrive).
-- Použití stolního počítače připojeného k HoloLens pomocí kabelu USB s využitím podpory protokolu MTP (Media Transfer Protocol).
+- Přístup k místním složkám pomocí aplikace Průzkumník souborů
+- V rámci úložiště aplikace.
+- Ve speciální složce (například v knihovně video nebo hudba).
+- Používání služby úložiště, která zahrnuje výběr aplikace a souboru (například OneDrive).
+- použití stolního počítače připojeného k vašemu HoloLens pomocí kabelu USB pomocí podpory MTP (Media Transfer Protocol).
 
-## <a name="view-files-on-hololens-using-file-explorer"></a>Zobrazení souborů na HoloLens pomocí Průzkumník souborů
+## <a name="view-files-on-hololens-using-file-explorer"></a>zobrazení souborů v HoloLens pomocí průzkumníka souborů
 
-> Platí pro všechna HoloLens 2 a HoloLens (1. generace) od Windows 10 dubna [2018 Update (RS4) pro HoloLens](/windows/mixed-reality/release-notes-april-2018).
+> platí pro všechna zařízení HoloLens 2 a HoloLens (1. generace) Windows 10 od [dubna 2018 Update (RS4) pro HoloLens](/windows/mixed-reality/release-notes-april-2018).
 
-Pomocí Průzkumník souborů na HoloLens můžete zobrazit a spravovat soubory na zařízení, včetně 3D objektů, dokumentů a obrázků. Začněte    >  **tím, že Všechny aplikace**   >  **Průzkumník souborů** startu.
+pomocí průzkumníka souborů v HoloLens můžete zobrazit a spravovat soubory v zařízení, včetně 3d objektů, dokumentů a obrázků. Začněte tím, že přejdete na **Start**   >  **All apps**   >  **Průzkumník souborů** .
 
 > [!TIP]
-> Pokud v seznamu nejsou žádné soubory Průzkumník souborů, vyberte **Toto zařízení** v levém horním podokně.
+> Pokud v Průzkumníkovi souborů nejsou uvedené žádné soubory, vyberte v levém horním podokně **Toto zařízení** .
 
-Pokud v seznamu nevidíte žádné soubory, Průzkumník souborů filtr Poslední (v levém podokně je zvýrazněná ikona hodin). Pokud chcete tento  problém vyřešit, vyberte ikonu Dokument zařízení v levém podokně (pod ikonou hodin) nebo otevřete nabídku a vyberte **This Device (Toto zařízení).**
+Pokud v Průzkumníkovi souborů nevidíte žádné soubory, může být filtr "poslední" aktivní (v levém podokně je zvýrazněna ikona hodiny). Pokud to chcete opravit, vyberte ikonu dokumentu **Tento zařízení** v levém podokně (pod ikonou hodin), nebo otevřete nabídku a vyberte **Toto zařízení**.
 
-## <a name="find-and-view-your-photos-and-videos"></a>Vyhledání a zobrazení fotek a videí
+## <a name="find-and-view-your-photos-and-videos"></a>Hledání a zobrazování fotek a videí
 
-[Zachycení hybridní reality](holographic-photos-and-videos.md) umožňuje pořizovat fotky a videa hybridní reality na HoloLens.  Tyto fotky a videa se ukládají do složky Fotoaparát s fotoaparátem v zařízení.
+[Hybridní zachycení realit](holographic-photos-and-videos.md) umožňuje využívat fotky a videa ze směsi realit na HoloLens.  Tyto fotky a videa se uloží do složky pro fotoaparát zařízení.
 
-K fotografiím a videím pořízených pomocí HoloLens můžete přistupovat pomocí:
+k fotografiím a videím pořízeným pomocí HoloLens můžete získat následující:
 
-- přistupovat k fotoaparátu přímo prostřednictvím [aplikace Photos.](holographic-photos-and-videos.md)
-- nahrání fotek a videí do cloudového úložiště synchronizací fotek a videí do OneDrive.
-- pomocí Záznam hybridní reality stránky [Windows Portál zařízení](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture).
+- přístup ke kameře přímo přes [aplikaci Photos](holographic-photos-and-videos.md).
+- nahrávají se fotky a videa do cloudového úložiště díky synchronizaci fotek a videí s OneDrive.
+- pomocí stránky zachycení hybridních realit na [portálu zařízení Windows](/windows/mixed-reality/using-the-windows-device-portal#mixed-reality-capture).
 
-### <a name="photos-app"></a>Aplikace Photos
+### <a name="photos-app"></a>Aplikace Fotky
 
-Aplikace Photos je jednou z výchozích aplikací v **nabídce Start** a je integrovaná s HoloLens. Přečtěte si další [informace o použití aplikace Photos k zobrazení obsahu.](holographic-photos-and-videos.md)
+Aplikace Photos je jedna z výchozích aplikací v nabídce **Start** a integrovaná s HoloLens. Přečtěte si další informace o [používání aplikace fotky k zobrazení obsahu](holographic-photos-and-videos.md).
 
-Můžete také nainstalovat aplikaci [OneDrive z](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) webu Microsoft Store synchronizovat fotky s jinými zařízeními.
+můžete taky nainstalovat [aplikaci OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) z Microsoft Store a synchronizovat fotky s ostatními zařízeními.
 
-### <a name="onedrive-app"></a>OneDrive aplikace
+### <a name="onedrive-app"></a>aplikace OneDrive
 
-[OneDrive](https://onedrive.live.com/) umožňuje přístup k fotografiím a videím, jejich správu a sdílení s libovolným zařízením a s libovolným uživatelem. Pokud chcete získat přístup k fotografiím a videím HoloLens na OneDrive, stáhněte si aplikaci [OneDrive](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) z Microsoft Store na HoloLens. Po stažení otevřete aplikaci OneDrive, vyberte **Nastavení** Nahrání fotoaparátu a  >  zapněte **Nahrání fotoaparátu.**
+[OneDrive](https://onedrive.live.com/) vám umožní přístup, správu a sdílení fotek a videí pomocí libovolného zařízení a libovolného uživatele. pokud chcete získat přístup k fotografiím a videím zachyceným na HoloLens, stáhněte [OneDrive aplikaci](https://www.microsoft.com/p/onedrive/9wzdncrfj1p3) z Microsoft Store na HoloLens. po stažení otevřete aplikaci OneDrive a vyberte **Nastavení**  >  **nahrávání kamery** a zapněte **nahrávání kamery**.
 
 ### <a name="connect-to-a-pc"></a>Připojení k počítači
 
-Pokud váš HoloLens používá aktualizaci [Windows 10 z dubna 2018](/windows/mixed-reality/release-notes-april-2018) nebo novější, můžete HoloLens připojit k počítači Windows 10 pomocí kabelu USB pro procházení fotek a videí na zařízení pomocí protokolu MTP (media transfer protocol). Pokud máte na zařízení nastavený PIN kód nebo heslo, musíte zajistit odemknutí zařízení, aby bylo možné procházet soubory.  
+pokud na vašem HoloLens běží [Windows 10 aktualizace z dubna 2018](/windows/mixed-reality/release-notes-april-2018) nebo novější, můžete své HoloLens připojit k Windows 10 počítači pomocí kabelu USB a procházet fotky a videa na zařízení pomocí protokolu MTP (media transfer protocol). Pokud máte na svém zařízení nastavené PIN nebo heslo, budete se muset ujistit, že je zařízení odemčené pro procházení souborů.  
 
-Pokud jste povolili [Windows Portál zařízení](/windows/mixed-reality/using-the-windows-device-portal), můžete ho použít k procházení, načítání a správě fotek a videí uložených v zařízení.
+pokud jste povolili [Windows portál zařízení](/windows/mixed-reality/using-the-windows-device-portal), můžete ho použít k procházení, načítání a správě fotografií a videí uložených v zařízení.
 
 ## <a name="access-files-within-an-app"></a>Přístup k souborům v rámci aplikace
 
@@ -80,25 +80,25 @@ Aplikace může požádat o uložení souboru nebo otevření souboru z jiné ap
 
 ### <a name="known-folders"></a>Známé složky
 
-HoloLens podporuje řadu známých [složek, ke](/windows/mixed-reality/app-model#known-folders) které mohou aplikace žádat o oprávnění k přístupu.
+HoloLens podporuje několik [známých složek](/windows/mixed-reality/app-model#known-folders) , které můžou aplikace požádat o oprávnění k přístupu.
 
-## <a name="view-hololens-files-on-your-pc"></a>Zobrazení HoloLens souborů na počítači
+## <a name="view-hololens-files-on-your-pc"></a>zobrazit HoloLens soubory na počítači
 
-Podobně jako u jiných mobilních zařízení připojte HoloLens ke svému stolnímu počítači pomocí protokolu MTP (Media Transfer Protocol) a otevřete na počítači Průzkumník souborů pro přístup k knihovnám HoloLens pro snadný přenos.
+podobně jako u jiných mobilních zařízení připojte HoloLens k stolnímu počítači pomocí MTP (Media Transfer Protocol) a otevřete průzkumníka souborů na počítači, abyste měli přístup k vašim HoloLensm knihovnám za účelem snadného přenosu.
 
-Zobrazení souborů HoloLens v Průzkumník souborů počítači:
+chcete-li zobrazit soubory HoloLens v průzkumníkovi souborů na vašem počítači:
 
-1. Přihlaste se k HoloLens a pak ho připojte k počítači pomocí kabelu USB, který se dodá s HoloLens.
+1. přihlaste se k HoloLens a pak ho připojte k počítači pomocí kabelu USB, který jste dostali s HoloLens.
 
-1. Vyberte **Otevřít zařízení a zobrazte soubory s Průzkumník souborů**, nebo otevřete Průzkumník souborů na počítači a přejděte na zařízení.
+1. Vyberte **otevřít zařízení a zobrazte si soubory pomocí Průzkumníka souborů** nebo otevřete Průzkumníka souborů na počítači a přejděte k zařízení.
 
-Pokud chcete zobrazit informace o HoloLens zařízení, klikněte pravým tlačítkem na název zařízení v Průzkumník souborů počítači a pak vyberte **Vlastnosti**.
+pokud chcete zobrazit informace o vašem HoloLens, klikněte pravým tlačítkem myši na název zařízení v průzkumníkovi souborů na počítači a pak vyberte **vlastnosti**.
 
 > [!NOTE]
-> HoloLens (1. generace) nepodporuje připojení k externím pevným diskům nebo kartám SD.
+> HoloLens (1. generace) nepodporuje připojení k externím pevným diskům nebo SD kartám.
 
-## <a name="sync-to-the-cloud"></a>Synchronizace do cloudu
+## <a name="sync-to-the-cloud"></a>Synchronizace s cloudem
 
-Pokud chcete synchronizovat fotky a další soubory z HoloLens do cloudu, nainstalujte a nastavte OneDrive na HoloLens. Pokud chcete OneDrive, vyhledejte ho v Microsoft Store na HoloLens.
+pokud chcete synchronizovat fotky a jiné soubory z HoloLens do cloudu, nainstalujte a nastavte OneDrive na HoloLens. pokud chcete OneDrive získat, vyhledejte ho v Microsoft Store na HoloLens.
 
-HoloLens soubory a data aplikace nezá zálohuje, takže je vhodné ukládat důležité věci do OneDrive. Pokud tak resetujete zařízení nebo odinstalujete aplikaci, vaše informace se zálohují.
+HoloLens nezálohují soubory a data aplikací, takže je vhodné, abyste si ušetřili důležité věci, které byste měli OneDrive. Tímto způsobem, pokud resetujete zařízení nebo odinstalujete aplikaci, vaše informace se zálohují.

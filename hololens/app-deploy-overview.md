@@ -1,6 +1,6 @@
 ---
 title: Přehled – Správa aplikací
-description: Začínáme s přehledem správy aplikací hybridní reality pomocí správy mobilních zařízení, Microsoft Storu pro firmy a zřizovacích balíčků
+description: Seznamte se s přehledem hybridních aplikací realit pomocí správy mobilních zařízení, Microsoft Storu pro firmy a zřizovacích balíčků.
 keywords: HoloLens, uživatel, účet, aplikace, správa aplikací,
 author: evmill
 ms.author: v-evmill
@@ -14,73 +14,73 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 019700c7e35f31c234c9fe69870cae54b3364b631253c37a17d8eaa0fe3053bd
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: ca87f34718319d489b69ba33ad24731628d87fac
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665229"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428479"
 ---
 # <a name="app-management-overview"></a>Správa aplikací: Přehled
 
-Aplikace můžete nasadit do čtyř různých cest: **Mobile Správa zařízení (MDM),** **Microsoft Store pro firmy,** **Microsoft Store** nebo jejich instalací prostřednictvím **zřizování**.
+aplikace můžete nasadit na čtyři různé cesty: **správu mobilních zařízení (MDM)**, **Microsoft Store pro firmy**, **Microsoft Store** nebo jejich instalací prostřednictvím **zřizování**.
 
 ## <a name="mobile-device-management-mdm"></a>Správa mobilního zařízení (MDM)
 
-Řešení pro správu mobilních zařízení umožňuje správcům a správcům IT soukromě automaticky instalovat (nabízeně) své vlastní obchodní aplikace nebo nakupovat aplikace prostřednictvím Storu pro skupinu uživatelů. HoloLens zařízení fungují nejlépe s Microsoft Endpoint Manager (Intune) pro [správu aplikací.](app-deploy-intune.md) Intune také nabízí uživatelům přesnější kontrolu nad aplikacemi spravovanými IT prostřednictvím Portál společnosti ke stažení.
+Řešení pro správu mobilních zařízení umožňuje IT tvůrcům a správcům IT nastavovat soukromou automatickou automatickou instalaci (nabízené) podnikové aplikace nebo si koupit aplikace v obchodě pro skupinu uživatelů. HoloLens zařízení fungují nejlépe s Microsoft Endpoint Manager (intune) pro [správu aplikací](app-deploy-intune.md). intune také nabízí uživatelům citlivější kontrolu nad IT aplikacemi spravovanými prostřednictvím prostředí pro stažení Portál společnosti.
 
 > [!NOTE]
-> Následující pokyny jsou pro uživatele, kteří chtějí spravovat své aplikace pomocí Intune. Microsoft doporučuje ke správě aplikací a zařízení používat Intune.
+> Následující pokyny jsou pro uživatele, kteří chtějí spravovat své aplikace v Intune. Microsoft doporučuje používat Intune ke správě aplikací a zařízení.
 
-Mobilní Správa zařízení (MDM) se vztahuje na:
+Správa mobilních zařízení (MDM) platí pro:
 
-* Nasazená a Portál společnosti MDM
+* nasazené MDM + Portál společnosti
 * Obchodní aplikace (ne veřejné)
-* Ruční instalace dostupných aplikací prostřednictvím Portál společnosti
-* Nabízení správy prostřednictvím zásad MDM
-* Automatická aktualizace prostřednictvím MDM
+* ruční instalace dostupných aplikací prostřednictvím Portál společnosti
+* Nabízená oznámení správce prostřednictvím zásad MDM
+* Automatické aktualizace prostřednictvím MDM
 
 ## <a name="microsoft-store-for-business"></a>Microsoft Store pro firmy
 
-The [Microsoft Store pro firmy](app-deploy-store-business.md) poskytuje it it decision-makers and administrators in businesses to find, acquire, manage, and distribute free and paid apps. Správci IT můžou spravovat Microsoft Store aplikací a privátních obchodních aplikací v jednom inventáři a podle potřeby přiřazovat a opakovaně používat licence. Další informace najdete v tématu [Požadavky pro použití Microsoft Store pro firmy](/microsoft-store/prerequisites-microsoft-store-for-business).
+[Microsoft Store pro firmy](app-deploy-store-business.md) poskytuje organizacím pro rozhodování a správcům IT v podnicích, aby našli, načítat, spravují a distribuují bezplatné a placené aplikace. správci IT můžou spravovat aplikace Microsoft Store a soukromé obchodní aplikace v jednom inventáři a navíc jim přiřadit a znovu používat licence podle potřeby. další informace najdete [v části požadavky pro použití Microsoft Store pro firmy](/microsoft-store/prerequisites-microsoft-store-for-business).
 
-Tento Microsoft Store pro firmy platí pro:
+Microsoft Store pro firmy platí pro:
 
 * Veřejné nebo obchodní aplikace
 * Automatická instalace požadovaných aplikací prostřednictvím přidružení MDM
-* Uživatel stáhne aplikace ručně.
+* Uživatel ručně stáhne aplikace
 * Automatická aktualizace
 
 ## <a name="microsoft-store-apps"></a>Aplikace pro Microsoft Store
 
-The Microsoft Store poskytuje IT s rozhodovací pravomocí a správci ve firmách k vyhledání, získání, správě a distribuci veřejných aplikací.
+Microsoft Store poskytuje organizacím pro rozhodování a správcům IT v podnicích, aby našli, načítat, spravují a distribuují veřejné aplikace.
 
-Tato Microsoft Store platí pro:
+tato Microsoft Store platí pro:
 
-* Jenom veřejné aplikace
-* Uživatel stáhne aplikace ručně.
-* Automatická aktualizace při připojení k internetu
+* Pouze veřejné aplikace
+* Uživatel ručně stáhne aplikace
+* Automatická aktualizace, pokud je připojená k Internetu
 
-Další informace najdete na webu [Holographic Store Apps](/hololens/holographic-store-apps).
+Další informace najdete na webu [aplikace na holografickém obchodu](/hololens/holographic-store-apps).
 
-## <a name="install-via-provisioning-packages"></a>Instalace prostřednictvím zřizovací balíčky
+## <a name="install-via-provisioning-packages"></a>Instalace prostřednictvím zřizovacích balíčků
 
-[Zřizovací](app-deploy-provisioning-package.md) balíčky umožňují instalovat vlastní nebo obchodní aplikace, což IT profesionálům a správcům umožňuje rychle instalovat aplikace na místní zařízení přes USB. Tuto instalaci je možné provést bez připojení k internetu a libovolného typu identity.
+[Zřizovací balíčky](app-deploy-provisioning-package.md) umožňují nainstalovat vlastní nebo obchodní aplikace a umožní IT profesionálům a správcům rychle instalovat aplikace na místní zařízení přes USB. Tuto instalaci můžete provést bez připojení k Internetu a pro libovolný typ identity.
 
-Instalace prostřednictvím zřizovací balíčky se vztahuje na:
+Instalace prostřednictvím zřizovacích balíčků je platná pro:
 
-* Obchodní / samoobslužné (ne veřejné) aplikace
-* Veřejné aplikace (pokud je k dispozici offline instalační program)
-* Jenom načítání bokem přes USB
-* Žádná automatická aktualizace (vyžaduje ruční aktualizace prostřednictvím zřizovacího balíčku)
+* Obchodní/samostatně vyvinuté aplikace (ne veřejné)
+* Veřejné aplikace (Pokud je k dispozici offline instalátor)
+* Jenom USB – načítání
+* Bez automatické aktualizace (vyžaduje ruční aktualizace prostřednictvím zřizovacího balíčku)
 
-## <a name="install-apps-on-hololens-2-via-app-installer"></a>Instalace aplikací na HoloLens 2 prostřednictvím Instalační program aplikací
+## <a name="install-apps-on-hololens-2-via-app-installer"></a>instalace aplikací na HoloLens 2 prostřednictvím instalačního programu aplikace
 
-Uživatelé s [Instalační program aplikací](app-deploy-app-installer.md) mohou mít prostředí, které je jednoduché pro instalaci aplikací na místní zařízení nebo sdílení aplikace s někým jiným, kdo nemá zkušenosti s jinými metodami instalace aplikací na HoloLens. Můžete to udělat bez nutnosti povolit vývojářský režim nebo použít Portál zařízení. Jedná se o jednoduchou metodu distribuce plně sestavené aplikace. Bez ohledu na to, jestli chcete aplikaci jednoduše degradovat na jiného uživatele pomocí HoloLens, nebo chcete aplikaci nasadit, tato metoda funguje snadno.
+Používání uživatelů v [instalačním programu aplikace](app-deploy-app-installer.md) může mít prostředí, které je jednoduché pro instalaci aplikací na místní zařízení nebo sdílení aplikace s někým jiným, kdo není obeznámen s jinými metodami instalace aplikací na HoloLens. To se dá udělat, aniž byste museli povolit vývojářský režim ani používat portál zařízení. Toto je jednoduchá metoda distribuce zcela sestavené aplikace. bez ohledu na to, jestli chcete aplikaci jednoduše vyzkoušet na jiného uživatele pomocí HoloLens nebo když chcete aplikaci nasadit, tato metoda funguje snadno.
 
-Instalace prostřednictvím Instalační program aplikací se vztahuje na:
+Instalace prostřednictvím instalačního programu aplikace je platná pro:
 
-* Obchodní / samoobslužné (ne veřejné) aplikace
-* Pouze zkušební načtení
-* Nevyžaduje vývojářský režim ani portál zařízení.
-* Snadná instalace pro koncového uživatele
+* Obchodní/samoobslužné aplikace (ne veřejné)
+* Jenom po straně
+* Nevyžaduje vývojářský režim ani portál zařízení
+* Snadné instalace pro koncové uživatele

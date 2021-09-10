@@ -13,22 +13,22 @@ audience: ITPro
 ms.localizationpriority: high
 keywords: Autopilota
 manager: ylempidakis
-ms.openlocfilehash: 2304e7ec18eb531cce431fb93c7abf38f2c9a1cef30f0d6c6fcaac6c95281f8e
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: cdd2ab68905d5cc82b1c5ccc50640112e857f2f4
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115661787"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427981"
 ---
 # <a name="hololens-2-registration-support-for-autopilot"></a>HoloLens 2 Podpora registrace pro Autopilot
 
 Zákazníci a poskytovatelé CSP (Microsoft Cloud Solution Providers) si teď mohou zaregistrovat HoloLens 2 zařízení tím, že přímo Podpora Microsoftu. Tato stránka popisuje požadavky pro následující podporované scénáře registrace Autopilotu:
 
-- **HoloLens 2 Registrace Zařízení autopilotu**. Odešle žádost o registraci HoloLens 2 zařízení do Windows Autopilotu.
+- **HoloLens 2 Registrace zařízení autopilotu**. Odešle žádost o registraci HoloLens 2 zařízení do Windows Autopilotu.
 - **HoloLens 2 požadavky na hodnotu hash hardwaru zařízení.** Odešle žádost Podpora Microsoftu, aby vám poskytla hardwarové hash, které zákazníci nebo csp mohou použít k samoobslužné registraci zařízení přes Microsoft Intune nebo microsoft Partnerské centrum.
 - **HoloLens 2: Zrušení registrace Autopilotu zařízení.** Odešle žádost o odstranění zařízení z Windows Autopilot, která se obvykle používá v situacích, kdy zařízení končí životností.
 
-Následující tabulka obsahuje podrobné informace,  které budete muset shromáždit před odesláním žádostí o registraci do Podpora Microsoftu.
+Následující tabulka obsahuje podrobnosti o informacích, které budete muset shromáždit *před* odesláním žádostí o registraci Podpora Microsoftu.
 
 | Požadované informace | Description | Registrace Autopilotu  | Požadavek na hodnotu hash hardwaru | Zrušení registrace Autopilotu |
 ------------|-------------------------------|--------------------------------------------------|------------------------------|--------------------------------|

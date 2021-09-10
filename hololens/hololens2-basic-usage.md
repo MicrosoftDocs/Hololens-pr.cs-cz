@@ -13,11 +13,11 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: cf3770dd55498dbe98abf88d002247646e4db9be
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189881"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427272"
 ---
 # <a name="getting-around-hololens-2"></a>Práce s HoloLens 2
 
@@ -139,92 +139,92 @@ Nová nabídka, která uživateli umožňuje odhlásit se, vypnout a restartovat
 
 #### <a name="how-to-use"></a>Způsob použití
 
-1. otevřete HoloLens úvodní obrazovku pomocí [gesta start](hololens2-basic-usage.md#start-gesture) nebo vyslovení příkazu "přejít na začátek".
+1. Otevřete úvodní HoloLens obrazovky pomocí gesta [Start nebo](hololens2-basic-usage.md#start-gesture) rčení "Přejít na začátek".
 
-2. Všimněte si ikony tří teček (...) vedle obrázku profilu uživatele:
+2. Všimněte si ikony se třemi tečkami (...) vedle profilu uživatele:
 
    <img alt="ser context dots, ..." src="./images/powertransition_icon_default_cropped.png" width="586" height="330" />
 
-3. Vyberte si obrázek profilu uživatele pomocí vašich rukou nebo hlasového příkazu "Power".
+3. Vyberte profilový obrázek uživatele pomocí rukou nebo hlasovým příkazem Power.
 
-4. Zobrazí se nabídka s možnostmi pro odhlášení, restartování nebo vypnutí zařízení:
+4. Zobrazí se nabídka s možnostmi Odhlásit se, Restartovat nebo Vypnout zařízení:
 
    <img alt="User context menu" src="./images/powertransition_aad_options_cropped.png" width="586" height="330" />
 
-5. Vyberte možnosti nabídky pro odhlášení, restartování nebo vypnutí HoloLens. Možnost odhlášení možná není dostupná, pokud je zařízení nastavené na [jeden účet Microsoft (MSA) nebo místní účet](hololens-identity.md).
+5. Vyberte možnosti nabídky pro odhlášení, restartování nebo vypnutí HoloLens. Možnost Odhlásit se nemusí být dostupná, pokud je zařízení nastavené pro jeden účet [Microsoft (MSA) nebo místní účet](hololens-identity.md).
 
-6. zavřete nabídku tak, že se dotknete kamkoli jinde nebo zavřete nabídka Start pomocí gesta Start.
+6. Zavřete nabídku stisknutím libovolného jiného místa nebo zavřením nabídka Start pomocí gesta Start.
 
-[zde najdete další informace](holographic-home.md) o nabídka Start a hybridní realitě, včetně informací o tom, jak používat a spravovat aplikace v HoloLens 2.
+[Tady najdete další informace o](holographic-home.md) nabídka Start hybridní realitě, včetně informací o používání a správě aplikací na HoloLens 2.
 
 ## <a name="move-resize-and-rotate-holograms"></a>Přesunutí, změna velikosti a otočení hologramů
 
-V rámci smíšené reality můžete přesouvat, měnit velikost a otáčet aplikace a 3D objekty aplikací pomocí rukou, ruky a hlasových příkazů.
+V domovském prostředí hybridní reality můžete přesouvat, měnit velikost a obměna oken aplikace a 3D objektů pomocí rukou, rukou paprsku a hlasových příkazů.
 
 ### <a name="moving-holograms"></a>Přesunutí hologramů
 
-Přesuňte hologram nebo aplikaci pomocí následujících kroků:
+Hologram nebo aplikaci můžete přesunout pomocí následujících kroků:
 
-1. Potáhněte hologram pinchingm prstem na svůj index a Poznámkový odkaz na hologramu a potom na něj zavřete Fist.  Táhněte prostorový hologram kdekoli uvnitř jeho modrého ohraničovacího rámečku.  V okně aplikace přitáhněte jeho záhlaví.
-1. Aniž byste museli začít, přesuňte ruku na hologram. Při přesunutí okna aplikace tímto způsobem se okno aplikace automaticky zapne při jeho přesunutí, což usnadňuje jeho použití na nové pozici.  
-1. Uvolněte své prsty a umístěte je.
+1. Uchopte hologram tak, že schytáte ukazováček a palcem na hologram nebo si ho rozdáte a pak nad něj zavřete svůj obličej.  Uchopte 3D hologram kdekoli uvnitř modrého ohraničovacího rámečku.  V okně aplikace uchopte jeho záhlaví.
+1. Bez toho, abyste ho pustíte, přesuňte ji na pozici hologramu. Když tímto způsobem přesouváte okno aplikace, okno aplikace se při pohybu automaticky změní na tvář, což usnadňuje jeho použití na nové pozici.  
+1. Uvolněte své schůdné místo.
 
 ### <a name="resizing-holograms"></a>Změna velikosti hologramů
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE3ZYIb]
 
-Přitáhněte a použijte **úchyty pro změnu velikosti** , které se zobrazí v rozích prostorových hologramů a v oknech aplikací pro jejich změnu.
+Změňte jejich  velikost pomocí úchytů pro změnu velikosti, které se zobrazují v rozích 3D hologramů a oken aplikací.
 
-Pro okno aplikace, když se změní velikost obsahu okna, který se odpovídajícím způsobem zvětšuje a je snazší ho přečíst.
+V okně aplikace se při změně velikosti tímto způsobem odpovídajícím způsobem zvětší obsah okna a bude se snadněji číst.
 
-Pokud chcete změnit velikost okna aplikace tak, aby se v okně zobrazovalo **více obsahu** , použijte úchyty pro změnu velikosti umístěné na stranách a v dolních okrajích okna aplikace.
+Pokud chcete změnit velikost okna  aplikace tak, aby se v okně zobrazuje více obsahu, použijte úchyty pro změnu velikosti umístěné na stranách a dolních okrajích okna aplikace.
 
-Existují dva způsoby, jak změnit velikost hologramu, který je od vás dál. Můžete buď přitáhněte dva rohy hologramu, nebo použít ovládací prvky pro změnu velikosti.
+Existují dva způsoby, jak změnit velikost hologramu, který je daleko od vás. Můžete buď uchopit dva rohy hologramu, nebo použít ovládací prvky pro změnu velikosti.
 
-### <a name="rotating-holograms"></a>Rotující hologramy
+### <a name="rotating-holograms"></a>Obměně hologramů
 
-Pro prostorové hologramy vyberte a použijte táhla natočení, která se zobrazí na svislých okrajích ohraničovacího rámečku.
+U 3D hologramů uchopte a použijte úchyty otočení, které se zobrazují na svislých hranách ohraničovacího rámečku.
 
-V případě oken aplikací způsobí přesunutí okna aplikace automatické otočení a obličeje.
+Přesunutím okna aplikace do oken aplikace se automaticky obměná a zobrazí se vám tvář.
 
-Prostorový hologram nebo okno aplikace můžete také vytvořit najednou a  potom:
+Můžete také najednou uchopit 3D hologram nebo okno aplikace oběma rukou **(nebo** ručním paprskem) a pak:
 
-- Pokud chcete změnit velikost hologramu, posuňte svoji ruce společně nebo více.
-- Posuňte své ruce blíž a ještě od svého těla, abyste ho mohli otočit.
+- Při změně velikosti hologramu přesuňte ruce blíže k sobě nebo dále.
+- Dejte ruce blíž a dále od těla, aby se hologram otáčí.
 
-### <a name="follow-me-stop-following"></a>Sledovat mě, přestat sledovat
+### <a name="follow-me-stop-following"></a>Sledujte mě, zastavte sledování.
 
-Hologramy a okna aplikací zůstanou tam, kde jste je umístili na světě.  To není vždy vhodné, pokud potřebujete přejít a chcete, aby aplikace zůstala viditelná. Pokud chcete požádat o spuštění aplikace nebo zastavení za vás, vyberte **sledovat** v pravém horním rohu okna aplikace (vedle tlačítka **Zavřít** ).  Zobrazí se okno aplikace, které sledujete, a to z moderní aplikace.
+Hologramy a okna aplikací zůstanou tam, kde jste je umístili na svět.  To není vždy vhodné, pokud se potřebujete pohybovat a chcete, aby aplikace zůstala viditelná. Pokud chcete požádat aplikaci, aby  vás s zastavila nebo s tím přestala sledovat, vyberte Sledovat v pravém horním rohu okna aplikace (vedle **tlačítka Zavřít).**  Okno aplikace, které vás následuje, vás také pronásleduje do imerzivní aplikace, která je mimo aplikaci.
 
-## <a name="use-hololens-with-your-voice"></a>použití HoloLens s vaším hlasem
+## <a name="use-hololens-with-your-voice"></a>Použití HoloLens s hlasem
 
-pomocí hlasu můžete provádět většinu stejných věcí s HoloLens, jako je třeba vytvoření rychlé fotografie nebo otevření aplikace.
+Svůj hlas můžete použít k většině stejných věcí, jako je HoloLens, jako je posouníní fotku nebo otevření aplikace.
 
-| Akce | Řekněme |
+| Akce | Řekněte toto: |
 | - | - |
-| Otevření nabídky Start | "Přejít na začátek" |
-| Vyberte | Vyslovením příkazu "SELECT" zobrazíte pohledu ukazatel. Pak změňte polohu kurzoru na věc, kterou chcete vybrat, a vyslovení příkazu "vybrat". |
-| Zobrazit dostupné příkazy řeči | Co můžu říci? |
+| Otevření nabídky Start | "Go to Start" (Přejít na začátek) |
+| Vyberte | Pokud chcete zobrazit kurzor pohledu, řekněte "select". Pak otočením hlavy umístěte kurzor na to, co chcete vybrat, a znovu řekněte "select". |
+| Zobrazení dostupných příkazů řeči | "Co můžu říct?" |
 
- [Zobrazit více hlasových příkazů a způsobů použití rozpoznávání řeči s HoloLens](hololens-cortana.md)
+ [Zobrazení dalších hlasových příkazů a způsobů použití řeči s HoloLens](hololens-cortana.md)
 
-## <a name="swipe-to-type"></a>Potáhnutím na typ
+## <a name="swipe-to-type"></a>Potažením prstem zadejte
 
-Někteří zákazníci na virtuálních klávesnicích rychleji najdou na "typ", a to potáhnutím tvaru slova, které mají v úmyslu zadat. nyní s [Windows holografickou 21H1 verze](hololens-release-notes.md#windows-holographic-version-21h1)můžete přetáhnout špičku prstem přes rovinu holografické klávesnice, protáhnout tvar slova a pak vzít špičku prstu z plochy klávesnice. Potáhnutím prstů můžete přetáhnout text, aniž byste museli stisknout MEZERNÍK, a to tak, že z klávesnice odeberete prst mezi slovy. Víte, že funkce funguje v případě, že se pod pohybem prstu na klávesnici zobrazuje potáhnutí.
+Někteří zákazníci zjistí, že psaní na virtuálních klávesnicích je rychlejší, když přetápnou tvar slova, které zamýšlejí zadat. Nyní s [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)můžete potáhnutím prstu prstem rovinou holografické klávesnice, potažením tvaru slova a stažením špičky prstu z roviny klávesnice. Potažením prstem po sledu slov nepotřebujete stisknout mezerník odebráním prstu z klávesnice mezi slovy. Funkce funguje, když potažením prstem na klávesnici vidíte potažení prstem.
 
-Upozorňujeme, že tato funkce může být obtížné použít a hlavní, a to z důvodu povahy holografické klávesnice, kde nepůsobíte proti prstům odolnost (na rozdíl od zobrazení mobilního telefonu). Tuto funkci vyhodnocujeme pro veřejnou verzi, takže vaše názory jsou důležité. Ať už najdete funkci, která je užitečná, nebo máte konstruktivní zpětnou vazbu, dejte nám prosím vědět prostřednictvím [centra Feedback](hololens-feedback.md).
+Upozorňujeme, že použití a ovládání této funkce může být obtížné, protože se jedná o holografický klávesnici, u které nemáte pocit odolnosti proti prstu (na rozdíl od displeje mobilního telefonu). Tuto funkci vyhodnocujeme pro veřejné vydání, takže vaše zpětná vazba je důležitá. Ať už funkci zjistíte jako užitečnou, nebo máte konstruktivní zpětnou vazbu, dejte nám vědět [prostřednictvím Centrum Feedback](hololens-feedback.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-Gratulujeme! jste připraveni použít HoloLens 2!
+Gratulujeme! Jste připraveni k použití HoloLens 2!
 
-teď můžete HoloLens 2 nakonfigurovat tak, aby vyhovovaly vašim konkrétním potřebám.  Další věci, které byste mohli chtít vyzkoušet, jsou:
+Teď můžete nakonfigurovat vlastní HoloLens 2 tak, aby splňovala vaše konkrétní potřeby.  Mezi další věci, které můžete chtít vyzkoušet, patří:
 
 - [Připojení zařízení Bluetooth, jako je myš a klávesnice](hololens-connect-devices.md)
 - [Instalace aplikací ze Storu](holographic-store-apps.md)
-- [sdílení HoloLens s dalšími lidmi](hololens-multiple-users.md)
+- [Sdílení vašich HoloLens s ostatními](hololens-multiple-users.md)
 
 > [!TIP]
-> vyzkoušejte [návrh aplikace Hologramy](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd?rtc=1&activetab=pivot:overviewtab) .
+> Vyzkoušejte [aplikaci Hologramy](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd?rtc=1&activetab=pivot:overviewtab) návrhu.
 
-pokud jste správce IT, projděte si [běžné scénáře nasazení](hololens-requirements.md) , které vám pomůžou s nasazením HoloLens 2 do vaší organizace.
+Pokud jste správcem IT, [](hololens-requirements.md) najdete pomoc s nasazením služby HoloLens 2 do vaší organizace v části Běžné scénáře nasazení.

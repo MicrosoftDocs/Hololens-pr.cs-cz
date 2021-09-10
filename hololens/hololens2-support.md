@@ -1,111 +1,111 @@
 ---
-title: Další informace o možnostech Mixed Reality podpory
+title: Další informace o možnostech podpory hybridních realit
 ms.author: rajhawar
 author: raunakjhawar
 ms.reviewer: asergaz
-description: Mixed Reality možnosti podpory pro malé až velké podnikové zákazníky
+description: Možnosti podpory hybridních realit pro malé až velké podnikové zákazníky
 ms.prod: hololens
 ms.topic: article
 ms.date: 3/19/2021
 ms.openlocfilehash: 17aaf8627384098de240d2c2e79c1ed9b0d39165
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190442"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428973"
 ---
-# <a name="what-are-the-mixed-reality-support-and-help-options"></a>Jaké jsou Mixed Reality podpory a nápovědy?
+# <a name="what-are-the-mixed-reality-support-and-help-options"></a>Jaká je podpora hybridních realit a možnosti pomoci?
 
-Chcete se odblokovat při vývoji aplikace nebo máte problém s náhlavní soupravou HoloLens 2 nebo Windows Mixed Reality náhlavní soupravou? Možná používáte službu hybridní reality Azure a máte technický dotaz. 
+chcete se odblokovat při vývoji aplikace nebo máte problém s HoloLens 2 nebo Windows Mixed Reality sluchátka? Možná používáte službu Azure Mixed reality a máte technickou otázku. 
 
-Tady najdete možnosti podpory pro následující možnosti, abyste se připojili ke správnému místě. Prozkoumáme také komunitní zdroje informací a možnosti samoobslužných obsahu, které můžete prozkoumat:
+Tady najdete možnosti podpory pro následující možnosti, které vám pomohou připojit se k pravému místu. Také se zabýváme komunitními zdroji a samoobslužnými možnostmi obsahu, které vám pomůžeme:
 
-- [Community nápovědy pro vývojáře](#community-help-options)
-- [Získání pomoci s používáním a konfigurací zařízení HoloLens 2](#help-with-technical-support-for-your-hololens-2)
-- [Získání pomoci s nákupem zařízení HoloLens 2](#help-with-commercial-store-support-for-your-hololens-2)
-- [Získejte pomoc s programováním HoloLens 2 nebo imerzivní náhlavní soupravou.](#help-with-technical-support-for-your-hololens-2) 
-- [Získání pomoci se službami Azure mixed reality](#azure-mixed-reality-services-support)
+- [možnosti usnadnění Community pro vývojáře](#community-help-options)
+- [pomoc s používáním a konfigurací zařízení HoloLens 2](#help-with-technical-support-for-your-hololens-2)
+- [nápověda k nákupu zařízení HoloLens 2](#help-with-commercial-store-support-for-your-hololens-2)
+- [nápověda k programování zařízení HoloLens 2 nebo moderní sluchátka](#help-with-technical-support-for-your-hololens-2) 
+- [Získejte pomoc se službami Azure Mixed reality.](#azure-mixed-reality-services-support)
 
-## <a name="community-help-options"></a>Community možnosti nápovědy
+## <a name="community-help-options"></a>možnosti usnadnění Community
 
-### <a name="post-a-question-on-microsoft-qa"></a>Získejte dotaz na webu Microsoft Q&A.
+### <a name="post-a-question-on-microsoft-qa"></a>Odeslat otázku do Microsoft Q&A
 <div class='icon is-large'>
     <img alt='Azure Q&A' src='/media/logos/logo_azure.svg'>
 </div><br/>
-Pokud chcete získat rychlé a spolehlivé odpovědi na své programovací otázky Azure Mixed Reality a HoloLens 2 od techniků Microsoftu, nejcennějších odborníků nebo naší odborné komunity, zapojte se s námi na Microsoft Q&A, které je upřednostňovaným cílem Microsoftu pro podporu komunity.
+pro rychlé a spolehlivé odpovědi na Azure Mixed Reality a HoloLens 2 otázky týkající se programování od specialistů microsoftu, z nejcennějších odborníků (mvp) nebo z naší odborné komunity, spolupracujte s námi v microsoft Q&a s preferovaným cílem microsoftu pro podporu komunit.
 
-Pokud pomocí vyhledávání nenajdete odpověď na váš problém, odešlete novou otázku do Microsoft Q&A. Při dotazech použijte jednu z následujících značek:
+Pokud nemůžete najít odpověď na váš problém pomocí hledání, odešlete novou otázku do složky Microsoft Q&A. Když požádáte o svoji otázku, použijte jednu z následujících značek:
 
 - [Azure Spatial Anchors](/answers/topics/azure-spatial-anchors.html)
 - [Azure Remote Rendering](/answers/topics/azure-remote-rendering.html)
 - [Azure Object Anchors](/answers/topics/azure-object-anchors.html)
-- [HoloLens Programování](/answers/topics/hololens-development.html)
-- [Windows Produkty](/answers/products/windows)
+- [HoloLens Plánování](/answers/topics/hololens-development.html)
+- [Windows Produktech](/answers/products/windows)
 
 
-### <a name="post-a-question-on-stack-overflow"></a>Získejte dotaz na Stack Overflow
+### <a name="post-a-question-on-stack-overflow"></a>Odeslat dotaz na Stack Overflow
 <div class='icon is-large'>
     <img alt='Stack Overflow' src='/media/logos/logo_stackoverflow.svg'>
 </div><br/>
 
-Pokud chcete získat odpovědi na své dotazy týkající se vývojářů z největšího ekosystému vývojářů v komunitě, položte svůj dotaz na Stack Overflow.
+Odpovědi na otázky pro vývojáře od největšího ekosystému vývojářů komunity vám požádají o Stack Overflow.
 
-Pokud odešlete novou otázku k Stack Overflow, při vytváření otázky použijte jednu nebo několik následujících značek:
+Pokud odešlete novou otázku pro Stack Overflow, při vytváření otázky prosím použijte jednu nebo více následujících značek:
 
-- [HoloLens Programování](https://stackoverflow.com/questions/tagged/hololens)
+- [HoloLens Plánování](https://stackoverflow.com/questions/tagged/hololens)
 - [Windows Mixed Reality](https://stackoverflow.com/questions/tagged/windows-mixed-reality)
 - [Azure Spatial Anchors](https://stackoverflow.com/questions/tagged/azure-spatial-anchors)
 - [Azure Remote Rendering](https://stackoverflow.com/questions/tagged/azure-remote-rendering)
 - [Azure Object Anchors](https://stackoverflow.com/questions/tagged/azure-object-anchors)
-- [Mixed Reality Toolkit (MRTK)](https://stackoverflow.com/questions/tagged/MRTK)
+- [MRTK (Mixed Reality Toolkit)](https://stackoverflow.com/questions/tagged/MRTK)
 
 #### <a name="other-communities"></a>Další komunity:
 
 - [HoloDevelopers Slack](https://holodevelopersslack.azurewebsites.net/)
-- [Windows Mixed Reality Náhlavní soupravy Reddit](https://www.reddit.com/r/WindowsMR/)
+- [Windows Mixed Reality Reddit náhlavníers](https://www.reddit.com/r/WindowsMR/)
 - [HoloLens Reddit](https://www.reddit.com/r/HoloLens/)
 
-## <a name="hololens-2-support"></a>HoloLens 2
+## <a name="hololens-2-support"></a>podpora HoloLens 2
 
-### <a name="help-with-technical-support-for-your-hololens-2"></a>Pomoc s technickou podporou pro váš HoloLens 2
+### <a name="help-with-technical-support-for-your-hololens-2"></a>pomoc s technickou podporou pro HoloLens 2
 
-- Získejte HoloLens 2 od komunity na webu [Microsoft Q&A.](#post-a-question-on-microsoft-qa)
-- Přečtěte si další informace o nápovědě a podpoře a stavu služeb [azure pro hybridní realitu.](#azure-mixed-reality-services-support)
-- Vytvoření žádosti o podporu pro HoloLens 2 nebo imerzivní náhlavní soupravu na [podporu MR](https://aka.ms/mrsupport) 
-- Vytvoření žádosti o podporu pro HoloLens 2 problémy se zařízeními, včetně hardwaru, & konfigurace zařízení [HoloLens 2](https://aka.ms/hlsupport) 
+- získat HoloLens 2 pomoc při programování od komunity na [webu Microsoft Q&A](#post-a-question-on-microsoft-qa)
+- Další informace o podpoře a stavu služeb pro službu [Azure Mixed reality](#azure-mixed-reality-services-support)
+- vytvoření žádosti o podporu pro HoloLens 2 nebo moderní programování sluchátek v [podpoře MR](https://aka.ms/mrsupport) 
+- vytvoření žádosti o podporu pro HoloLens 2 problémy se zařízením, včetně hardwaru, využití & konfigurace při [podpoře zařízení s HoloLens 2](https://aka.ms/hlsupport) 
 
 
-### <a name="help-with-commercial-store-support-for-your-hololens-2"></a>Pomoc s podporou komerčního obchodu pro váš HoloLens 2
+### <a name="help-with-commercial-store-support-for-your-hololens-2"></a>pomoc s podporou komerčních obchodů v HoloLens 2
 
-- [Nákup HoloLens 2 Pomocí](https://www.microsoft.com/hololens/buy) této možnosti získáte další informace o cenách a možnostech HoloLens 2.
-- Pokud potřebujete pomoc přes telefonickou podporu, podívejte se na níže uvedený seznam čísel pracovních obchodních položek, abyste si s kolegy z podpory komerčního obchodu pohotovi promluvěi.
-- Pokud se jedná o nákupy mimo Microsoft Store, nahlédněte do tohoto seznamu autorizovaných prodejců [HoloLens 2](hololens2-purchase.md) prodejců a zemí, kde HoloLens 2.
+- [koupit HoloLens 2](https://www.microsoft.com/hololens/buy) tuto možnost použijte, pokud chcete získat další informace o cenách a možnostech HoloLens 2.
+- Pokud potřebujete pomoc prostřednictvím programu telefon support, přečtěte si následující seznam čísel obchodních oddělení.
+- v případě nákupů mimo Microsoft Store se na tento [seznam autorizovaných HoloLens 2 prodejců](hololens2-purchase.md) a zemích, kde je k dispozici HoloLens 2.
 
-### <a name="commercial-store-support-numbers"></a>Čísla podpory pro komerční obchody
+### <a name="commercial-store-support-numbers"></a>Čísla podpory pro komerční obchod
 >[!Note]
->K dokončení nákupu použijte jedno z telefonních čísel komerční podpory níže. 
+>K dokončení nákupu použijte jedno z komerčních firemních telefonních čísel podpory. 
 
 >[!Note]
->Pokud voláte kvůli podpoře z trhu, který není uvedený níže, nasměruje vás na číslo našeho firemního stolu v USA.
+>Pokud voláte na podporu z trhu, který níže není uvedený, nasměrujte své volání na číslo obchodního stolu v USA.
 
-| Trhy | Číslo obchodního stolu | Provozní doba |
+| Trhy | Číslo obchodního oddělení | Provozní doba |
 |-----------------|-------------------|-----------------------|
-| Spojené království | +44 800 026 0061 | Po–Pá, 9:00 až 18:00 |
-| Německo | +49 08 05 98 00 03 | Po–Pá, 9:00 až 18:00 |
-| Švédsko    | +46 20 120 3222   | Po–Pá, 9:00 až 18:00 |
-| Švýcarsko | +41 800 662006 |    Po–Pá, 9:00 až 18:00 |
-| Belgie | +32 80058153 |  Po–Pá, 9:00 až 18:00 |
-| Nizozemsko | +31 8007482055 |    Po–Pá, 9:00 až 18:00 |
-| Rakousko | +43 800 943670 |    Po–Pá, 9:00 až 18:00 |
-| Dánsko | +45 80400184 |  Po–Pá, 9:00 až 18:00 |
-| Irsko | +353 1800 832 653 | Po–Pá, 9:00 až 18:00 |
-| Itálie |   +39 800598979 | Po–Pá, 9:00 až 18:00 |
-| Lucembursko |  +352 80040425 | Po–Pá, 9:00 až 18:00 |
-| Španělsko |    +34 800 598979 |   Po–Pá, 9:00 až 18:00 |
-| Norsko |  +47 80062002 |  Po–Pá, 9:00 až 18:00 |
-| Finsko | +358 800526136 |    Po–Pá, 9:00 až 18:00 |
-| Portugalsko |    +351 800600087 |    Po–Pá, 9:00 až 18:00 |
-| USA |  866-425-4709 |  Po–Pá, 6:00 až 18:00, PST |
+| Spojené království | + 44 800 026 0061 | Od do Pá, 09AM až 18:00 |
+| Německo | + 49 08 05 98 00 03 | Od do Pá, 09AM až 18:00 |
+| Švédsko    | + 46 20 120 3222   | Od do Pá, 09AM až 18:00 |
+| Švýcarsko | + 41 800 662006 |    Od do Pá, 09AM až 18:00 |
+| Belgie | + 32 80058153 |  Od do Pá, 09AM až 18:00 |
+| Nizozemsko | + 31 8007482055 |    Od do Pá, 09AM až 18:00 |
+| Rakousko | + 43 800 943670 |    Od do Pá, 09AM až 18:00 |
+| Dánsko | + 45 80400184 |  Od do Pá, 09AM až 18:00 |
+| Irsko | + 353 1800 832 653 | Od do Pá, 09AM až 18:00 |
+| Itálie |   + 39 800598979 | Od do Pá, 09AM až 18:00 |
+| Lucembursko |  + 352 80040425 | Od do Pá, 09AM až 18:00 |
+| Španělsko |    + 34 800 598979 |   Od do Pá, 09AM až 18:00 |
+| Norsko |  + 47 80062002 |  Od do Pá, 09AM až 18:00 |
+| Finsko | + 358 800526136 |    Od do Pá, 09AM až 18:00 |
+| Portugalsko |    + 351 800600087 |    Od do Pá, 09AM až 18:00 |
+| USA |  866-425-4709 |  Od do Pá, 6:00 až 18:00, PST |
 | Kanada |  877-345-2661 |  Od do Pá, 6:00 až 18:00, PST |
 | Čína |   400-805-6783 |  Od do Pá, 9:00 až 18:00 |
 | Japonsko |   0120-03-5241 |  Od do Pá, 9:00 až 5:17:30 |

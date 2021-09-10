@@ -15,19 +15,19 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: b6c2c6c10232fb8f1817dddabebaf207e51d35d7
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123190306"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427157"
 ---
 # <a name="trimble-xr10-with-hololens-2"></a>Oříznutí XR10 s HoloLens 2
 
-Trimble XR10 s HoloLens 2, který je účelový pro pracovníky ve nečistých, hlučných a bezpečnostních prostředích, přináší hybridní realitu přímo na váš pracovní web.
+Trimble XR10 s HoloLens 2, který je účelový pro pracovníky v nečistých, hlučných a bezpečnostních prostředích, přináší hybridní realitu přímo na váš pracovní web.
 
 ## <a name="learn-about-trimble-xr10"></a>Další informace o Trimble XR10
 
-Trimble XR10 s HoloLens 2 je první zařízení vytvořené pomocí Microsoft HoloLens přizpůsobení. Zařízení integruje zařízení HoloLens 2 do pevného hat hatu, aby bylo možno vytvořit bezpečnostní řešení hybridní reality.
+Trimble XR10 with HoloLens 2 is the first device created with the Microsoft HoloLens Customization Program. Zařízení integruje zařízení HoloLens 2 do pevného sádro, aby se vytvářely bezpečnostní řešení hybridní reality.
 
 ![Oříznutí SKU](./images/trimble-ed.png)
 
@@ -35,7 +35,7 @@ Další informace o [trimble XR10](https://fieldtech.trimble.com/en/product/trim
 
 ## <a name="next-steps"></a>Další kroky
 
-1. Začněte ihned pracovat s Mixed Reality a navigace Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** ve které se můžete podívat na návody k interakcím pomocí rukou. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
+1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** která vám pomůže s ručními kurzy. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
 1. Klikněte níže a pokračujte ve čtení o tom, jak se dostat HoloLens 2.
 
 > [!div class="nextstepaction"]

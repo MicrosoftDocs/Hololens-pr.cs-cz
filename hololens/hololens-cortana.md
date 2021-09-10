@@ -15,12 +15,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 2fe7727fb05f983f56f329a6e7f7c25a627a914a1956fc65a9fc047653aae977
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: f6e3dd8f7dc90cea158d000251973ec75dc76a90
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115661081"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427753"
 ---
 # <a name="use-your-voice-to-operate-hololens"></a>Využijte svůj hlas k provozu HoloLens
 
@@ -109,37 +109,37 @@ Cortana vám může pomoci dělat všechny druhy věcí v HoloLens, ale v závis
 
 ![Hey Cortana!](images/cortana-on-hololens.png)
 
-Tady je několik věcí, které můžete zkusit říct (nezapomeňte nejprve Cortana".
+tady je několik věcí, které můžete vyzkoušet (nezapomeňte nejdřív vyslovit "Hey Cortana").
 
-**Nazýme Cortana...**
+**Hey, Cortana**...
 
 - Co mám říct?
-- Spusťte <*název>.*
+- Spusťte <*název aplikace*>.
 - Kolik je hodin?
-- Show me the latest NBA scores.
-- Řekněte mi něco.
+- Zobrazit nejnovější NBA skóre
+- Řekněte mi zábavný.
 
-Pokud používáte verzi *18362.x nebo starší,* můžete použít také tyto příkazy:
+Pokud používáte *verzi 18362. x nebo starší*, můžete použít také tyto příkazy:
 
-**Nazýme Cortana...**
+**Hey, Cortana**...
 
-- Zvyšte svazek.
+- Zvětšete svazek.
 - Snižte jas.
 - Odprejskni.
 - Restart.
 - Jdi spát.
-- Mute.
-- Přesuňte <*název* aplikace> (pohledem na místo, na které chcete aplikaci přesunout).
+- Vypnutí.
+- Přesuňte <*název aplikace*> sem (pohledu na místě, na které se má aplikace přesunout).
 - Přejděte na Start.
-- Udělejte si obrázek.
-- Spusťte záznam. (Spustí nahrávání videa.)
+- Pořídit obrázek.
+- Spustit záznam. (Spustí záznam videa.)
 - Zastavit nahrávání. (Zastaví nahrávání videa.)
-- Kolik baterie mi zbývá?
+- Kolik baterie zbývá?
 
-Některé Cortana, na které jste zvykní z Windows na počítači nebo telefonu (například připomenutí a oznámení), se v Microsoft HoloLens nepodporují a prostředí Cortana se může v jednotlivých oblastech lišit.
+některé funkce Cortana, které jste použili v Windows na vašem počítači nebo telefonu (například připomenutí a oznámení), nejsou v Microsoft HoloLens podporované a Cortana možnosti se můžou lišit od jedné oblasti k druhé.
 
-### <a name="turn-cortana-off"></a>Vypnout Cortana
+### <a name="turn-cortana-off"></a>vypnout Cortana
 
-Cortana je při prvním použití HoloLens povolíte řeč. Můžete ji vypnout v Cortana nastavení. V **Všechny aplikace** seznamu vyberte **Cortana**  >  **Nastavení**. Vypnutím tohoto Cortana návrhy, nápady, připomenutí, výstrahy a další informace.
+Cortana je při prvním použití HoloLens, když povolíte řeč. jeho vypnutí můžete vypnout v nastavení Cortana. v seznamu **všechny aplikace** vyberte **Cortana**  >  **Nastavení**. vypnutí Cortana vám může poskytnout návrhy, nápady, připomenutí, výstrahy a další.
 
-Pokud Cortana nereaguje na Cortana, zkontrolujte, že je v nabídce Start povolená řeč, přejděte do nastavení služby Cortana a zkontrolujte, že je zapnutá.
+pokud Cortana neodpovídá na "Hey Cortana", zkontrolujte, že je v nabídce Start zapnutý speech, přejít na nastavení Cortana a ověřte, jestli je zapnutý.

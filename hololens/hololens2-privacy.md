@@ -15,11 +15,11 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 74f74645a3fc1282f48cb7ce0f6f722979c91b04
-ms.sourcegitcommit: 548550f309010fa95f674a7ff688166a31cf1963
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2021
-ms.locfileid: "122336734"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428324"
 ---
 # <a name="hololens-2-privacy-and-data-protection"></a>HoloLens 2 – ochrana osobních údajů a ochrana dat
 

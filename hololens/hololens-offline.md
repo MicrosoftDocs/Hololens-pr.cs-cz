@@ -18,12 +18,12 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 63c82e5b1a953ee2f69bf4c22a8442c7bca07f073cc13f1e5e573fde0ccc1976
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: f2d9faafac2f84b727b1e10be83d4d1b53a707b4
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115662934"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427772"
 ---
 # <a name="manage-connection-endpoints-for-hololens"></a>Správa koncových bodů připojení pro HoloLens
 
@@ -152,9 +152,9 @@ kromě výše HoloLens uvedeného seznamu musí být ve vaší konfiguraci sít�
 ## <a name="references"></a>Reference
 
 > [!NOTE]
-> Pokud nasazujete D365 Remote Assist, budete muset povolit koncové body uvedené pro SharePoint Online a OneDrive pro firmy v adresách URL Office 365 a rozsahech [IP adres](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
+> Pokud nasazujete D365 Remote Assist, budete muset povolit koncové body uvedené pro SharePoint Online a OneDrive pro firmy v adresách URL Office 365 a rozsazích [IP adres](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
 
-- [Konfigurace Windows diagnostických dat ve vaší organizaci](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+- [Konfigurace Windows dat ve vaší organizaci](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - [Správa koncových bodů připojení Windows 10 Enterprise, verze 1903](/windows/privacy/manage-windows-1903-endpoints)
 - [Správa připojení z Windows 10 operačního systému k služby Microsoft](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services)
 - [Správa připojení z Windows 10 operačního systému k služby Microsoft pomocí Microsoft Intune MDM Serveru](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services-using-mdm)

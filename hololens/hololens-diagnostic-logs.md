@@ -1,6 +1,6 @@
 ---
-title: shromažďování a používání diagnostických informací z HoloLens zařízení
-description: naučte se shromažďovat, používat a uchovávat diagnostické informace z HoloLensch zařízení.
+title: Shromažďování a používání diagnostických informací z HoloLens zařízení
+description: Naučte se shromažďovat, používat a uchovávat diagnostické informace z HoloLens zařízení.
 author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 10/15/2020
@@ -18,95 +18,95 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 96fe9492da035747a22123ee1cd0c1481cd821a4f2e549b6414a21810ec268d6
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 082a263bdd7eba694c13124abf40763644c83dfa
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115665297"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428683"
 ---
-# <a name="collect-and-use-diagnostic-information-from-hololens-devices"></a>shromažďování a používání diagnostických informací z HoloLens zařízení
+# <a name="collect-and-use-diagnostic-information-from-hololens-devices"></a>Shromažďování a používání diagnostických informací z HoloLens zařízení
 
-HoloLens uživatelé a správci si můžou ze čtyř různých metod shromažďovat diagnostické informace z HoloLens:
+HoloLens mohou uživatelé a správci vybírat ze čtyř různých metod shromažďování diagnostických informací z HoloLens:
 
-- Aplikace centra Feedback
+- Centrum Feedback aplikace
 - DiagnosticLog CSP
-- aplikace Nastavení
-- Diagnostika offline
+- Nastavení aplikace
+- Offline diagnostika
 
 > [!IMPORTANT]  
-> Protokoly diagnostiky zařízení obsahují identifikovatelné osobní údaje (PII), například informace o tom, jaké procesy nebo aplikace uživatel spouští během typických operací. pokud se zařízení HoloLens sdílí více uživatelů (například se uživatelé přihlašují ke stejnému zařízení pomocí různých účtů Microsoft Azure Active Directory (Azure AD)), diagnostické protokoly mohou obsahovat informace PII, které platí pro více uživatelů. Další informace najdete v tématu [prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://privacy.microsoft.com/privacystatement).
+> Diagnostické protokoly zařízení obsahují identifikovatelné osobní údaje ( PII), například o tom, jaké procesy nebo aplikace uživatel spouští během typického provozu. Když zařízení HoloLens sdílí více uživatelů (například se uživatelé přihlašuje ke stejnému zařízení pomocí různých účtů služby Microsoft Azure Active Directory (Azure AD), mohou diagnostické protokoly obsahovat informace o PII, které platí pro více uživatelů. Další informace najdete v prohlášení [o zásadách ochrany osobních údajů společnosti Microsoft.](https://privacy.microsoft.com/privacystatement)
 
-Následující tabulka porovnává různé metody kolekce. Názvy metod odkazují na podrobnější informace v oddílech, které následují po tabulce.
+Následující tabulka porovnává různé metody shromažďování. Názvy metod odkazují na podrobnější informace v částech, které následují po tabulce.
 
-|Metoda |Požadavky |Umístění dat |Přístup k datům a jejich použití |Uchovávání dat |
+|Metoda |Požadavky |Umístění dat |Přístup k datům a jejich používání |Uchovávání dat |
 | --- | --- | --- | --- | --- |
-|[Centrum Feedback](#feedback-hub) |Připojení k síti a Internetu<br /><br />Aplikace centra Feedback<br /><br />Oprávnění k nahrání souborů do cloudu Microsoftu |Cloud Microsoftu<br /><br />zařízení HoloLens (volitelné) |Pomoc požadavky uživatelů, souhlasí s podmínkami použití a nahrává data<br /><br />Zaměstnanci Microsoftu si data zobrazí v souladu s podmínkami použití. |Data v cloudu se uchovávají po dobu, která je definovaná pomocí ochrany osobních údajů nové generace (NGP). Data se pak odstraní automaticky.<br /><br />Data v zařízení může kdykoli odstranit uživatel, který má oprávnění vlastníka nebo **správce** **zařízení** . |
-|[Nastavení Poradce při potížích](#settings-troubleshooter) |aplikace Nastavení |HoloLens zařízení<br /><br />Připojený počítač (volitelné) |Uživatel ukládá data a přistupuje k datům jenom uživatel (Pokud uživatel konkrétně nesdílí data s jiným uživatelem). |Data se na zařízení uchovávají, dokud ho uživatel neodstraní. * |
-|[DiagnosticLog CSP](#diagnosticlog-csp) |Síťové připojení<br /><br />Prostředí MDM, které podporuje zprostředkovatele CSP pro DiagnosticLog |Správce nakonfiguruje umístění úložiště. |Ve spravovaném prostředí uživatel implicitně souhlasí s přístupem správce k datům.<br /><br />Správce nakonfiguruje role přístupu a oprávnění. | Data se uchovávají v cloudovém úložišti a správce nakonfiguruje zásady uchovávání informací. |
-|[Diagnostika offline](#offline-diagnostics) |Konfigurace zařízení:<ul><li>Zapnuté a připojené k počítači</li><li>Tlačítka napájení a hlasitosti fungují</li></ul> |HoloLens zařízení<br /><br />Připojený počítač |Uživatel ukládá data a přistupuje k datům jenom uživatel (Pokud uživatel konkrétně nesdílí data s jiným uživatelem). |Data se na zařízení uchovávají, dokud ho uživatel neodstraní. |
+|[Centrum Feedback](#feedback-hub) |Síťové a internetové připojení<br /><br />Centrum Feedback aplikace<br /><br />Oprávnění k nahrávání souborů do cloudu Microsoftu |Cloud Microsoftu<br /><br />HoloLens zařízení (volitelné) |Uživatel požádá o pomoc, souhlasí s podmínkami použití a nahrává data.<br /><br />Zaměstnanci Microsoftu si data prohlížet v souladu s podmínkami použití |Data v cloudu se uchovávají po dobu definovanou ochranou osobních údajů nové generace (NGP). Data se pak odstraní automaticky.<br /><br />Data v zařízení může kdykoli odstranit uživatel, který má oprávnění vlastníka **zařízení** **nebo** správce. |
+|[Nastavení Poradce při potížích](#settings-troubleshooter) |Nastavení aplikace |HoloLens zařízení<br /><br />Připojený počítač (volitelné) |Uživatel ukládá data a k datům přistupuje pouze uživatel (pokud uživatel data výslovně neschová s jiným uživatelem). |Data se uchovávají v zařízení, dokud je uživatel nevystraní.* |
+|[DiagnosticLog CSP](#diagnosticlog-csp) |Síťové připojení<br /><br />Prostředí MDM, které podporuje csP DiagnosticLog |Správce nakonfiguruje umístění úložiště. |Ve spravovaném prostředí uživatel implicitně souhlasí s přístupem správce k datům.<br /><br />Správce konfiguruje přístupové role a oprávnění. | Data se uchovávají v cloudovém úložišti a správce nakonfiguruje zásady uchovávání informací. |
+|[Offline diagnostika](#offline-diagnostics) |Konfigurace zařízení:<ul><li>Zapnuté a připojené k počítači</li><li>Funkce tlačítek napájení a hlasitosti</li></ul> |HoloLens zařízení<br /><br />Připojený počítač |Uživatel ukládá data a k datům přistupuje pouze uživatel (pokud uživatel data výslovně neschová s jiným uživatelem). |Data se uchovávají v zařízení, dokud je uživatel nevystraní. |
 
-* Koncový uživatel zodpovídá za sdílení protokolů zodpovědnou s někým jiným. Tyto soubory jsou primárně užitečné při kontaktování zákaznických služeb a podpory.  
+* Koncový uživatel zodpovídá za zodpovědné sdílení protokolů s někým jiným. Tyto soubory jsou primárně užitečné při kontaktování služeb zákazníkům a podpory.  
 
 ## <a name="feedback-hub"></a>Centrum Feedback
 
-uživatel HoloLens může použít desktopovou aplikaci centra Feedback v Microsoft k posílání diagnostických informací do podpora Microsoftu. Podrobnosti a podrobné pokyny najdete v tématu o tom, jak [nám sdělit svůj názor](hololens-feedback.md).  
+Uživatel HoloLens může pomocí desktopové aplikace Microsoft Centrum Feedback odesílat diagnostické informace do Podpora Microsoftu. Podrobnosti a kompletní pokyny najdete v tématu [Váš názor.](hololens-feedback.md)  
 
 > [!NOTE]  
-> **Komerční nebo podnikoví uživatelé:** pokud použijete aplikaci centra Feedback k nahlášení problému, který souvisí s MDM, zřizováním nebo jakýmkoli jiným aspektem správy zařízení, změňte kategorii aplikace na **Enterprise**  >  **kategorie zařízení** pro správu.
+> **Komerční nebo podniková uživatelé:** Pokud pomocí aplikace Centrum Feedback nahlásit problém související s MDM, zřizováním nebo jiným aspektem správy zařízení, změňte kategorii aplikace na Enterprise **Správa**  >  **zařízení.**
 
 >[!IMPORTANT]
-> Abychom zajistili nejlepší možnou dostupnost dat pro řešení problémů, důrazně doporučujeme, abyste si nastavili telemetrii zařízení jako **volitelnou**. tuto hodnotu můžete nastavit během představování mimo prostředí (OOBE) nebo pomocí aplikace **Nastavení** . pokud to chcete provést pomocí Nastavení, vyberte **Start > Nastavení > ochrany osobních údajů > > diagnostiky aplikací**.
+> Pro zajištění nejlepších možných dat pro řešení problémů důrazně doporučujeme nastavit telemetrii zařízení na **Nepovinné.** Tuto hodnotu můžete nastavit během prostředí při provozu nebo pomocí **Nastavení** aplikace. Pokud to chcete provést pomocí Nastavení, vyberte **Start > Nastavení > Privacy > App Diagnostics > On .)**
 ### <a name="prerequisites"></a>Požadavky
 
 - Zařízení je připojené k síti.
-- Aplikace centra Feedback je dostupná na stolním počítači uživatele a uživatel může nahrávat soubory do cloudu Microsoftu.
+- Aplikace Centrum Feedback dostupná na stolním počítači uživatele a uživatel může nahrávat soubory do cloudu Microsoftu.
 
-### <a name="data-locations-access-and-retention"></a>Umístění dat, přístup a uchování
+### <a name="data-locations-access-and-retention"></a>Umístění dat, přístup a uchovávání
 
-Když souhlasíte s podmínkami použití centra zpětné vazby, uživatel výslovně souhlasí s uložením a využitím dat (jak je definováno v této smlouvě).
+Souhlasem s podmínkami použití služby Centrum Feedback uživatel výslovně souhlasí s ukládáním a používáním dat (jak je definováno v této smlouvě).
 
-Centrum zpětné vazby poskytuje dvě místa, kde si uživatel bude ukládat diagnostické informace:
+Na Centrum Feedback jsou dvě místa, kam může uživatel ukládat diagnostické informace:
 
-- **Cloud Microsoftu**. Data, která uživatel nahraje pomocí aplikace centra feedback, se ukládají po dobu v počtu dní, který je v souladu s požadavky nové generace ochrany osobních údajů (NGP). Zaměstnanci Microsoftu můžou k přístupu k informacím během této doby používat prohlížeč kompatibilní s NGP.
+- **Cloud Microsoftu**. Data, která uživatel nahraje pomocí aplikace Centrum Feedback, se ukládají po dobu, která odpovídá požadavkům na ochranu osobních údajů nové generace (NGP). Zaměstnanci Microsoftu mohou pro přístup k informacím během tohoto období použít prohlížeč kompatibilní s protokolem NGP.
 
    > [!NOTE]  
-   > Tyto požadavky platí pro data ve všech kategoriích centra zpětné vazby.
+   > Tyto požadavky platí pro data ve všech Centrum Feedback kategoriích.
 
-- **zařízení HoloLens**. Při ukládání sestavy do centra Feedback může uživatel vybrat možnost **Uložit místní kopii diagnostiky a přílohy vytvořené při poskytování zpětné vazby**. pokud uživatel tuto možnost vybere, centrum zpětné vazby uloží kopii diagnostických informací na zařízení HoloLens. Tyto informace zůstávají k dispozici uživateli (nebo komukoli, který používá tento účet k přihlášení do HoloLens). Aby bylo možné tyto informace odstranit, musí mít uživatel na zařízení oprávnění vlastníka nebo **správce** **zařízení** . uživatel, který má příslušná oprávnění, se může přihlásit do centra pro zpětnou vazbu, vybrat **Nastavení**  >  **zobrazit diagnostické protokoly** a odstranit informace.
+- **Zařízení HoloLens .** Při vytváření sestavy v Centrum Feedback může uživatel vybrat Možnost Uložit místní kopii diagnostiky a příloh vytvořenou při **poskytnutí zpětné vazby.** Pokud uživatel vybere tuto možnost, Centrum Feedback uloží kopii diagnostických informací na HoloLens zařízení. Tyto informace zůstanou přístupné uživateli (nebo komukoli, kdo se pomocí tohoto účtu přihlásí k HoloLens). Pokud chcete tyto informace odstranit, musí mít uživatel na **zařízení** **oprávnění** Vlastníka zařízení nebo Správce. Uživatel s příslušnými oprávněními se může přihlásit k Centrum Feedback, vybrat Nastavení Zobrazit diagnostické protokoly a  >  odstranit informace.
 
 ## <a name="settings-troubleshooter"></a>Nastavení Poradce při potížích
 
-uživatel HoloLens může pomocí aplikace **Nastavení** na zařízení řešit problémy a shromažďovat diagnostické informace. Postupujte takto:
+Uživatel HoloLens může použít aplikaci **Nastavení** zařízení k řešení problémů a shromažďování diagnostických informací. Postupujte takto:
 
-1. otevřete aplikaci Nastavení a vyberte stránku **aktualizace**  >  **řešení potíží** se zabezpečením &.
-1. Vyberte příslušnou oblast a vyberte **Spustit**.
+1. Otevřete aplikaci Nastavení a vyberte **aktualizovat & řešení potíží se**  >  **zabezpečením.**
+1. Vyberte příslušnou oblast a vyberte **Spustit.**
 1. Reprodukujte problém.
-1. po reprodukování problému se vraťte do Nastavení a pak vyberte **zastavit**.
+1. Po reprodukování problému se vraťte do Nastavení a pak vyberte **Zastavit.**
 
-uživatel může také nakonfigurovat chování záložní diagnostiky z aplikace **Nastavení** . Pokud chcete nakonfigurovat toto nastavení, přejděte na stránku **ochrany osobních údajů – > Poradce při potížích** .
+Uživatel může také nakonfigurovat chování fallback diagnostics z **Nastavení** aplikace. Toto nastavení **nakonfigurujete tak, že > ochrana** osobních údajů – > řešení potíží.
 > [!NOTE]
-> Pokud je pro zařízení nakonfigurovaná zásada MDM, uživatel nebude moct toto chování přepsat.
+> Pokud jsou pro zařízení nakonfigurované zásady MDM, uživatel nebude moct toto chování přepsat.
 
 ### <a name="os-update-troubleshooter"></a>Poradce při potížích s aktualizací operačního systému
-v sestavách [Windows holografická verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a vyšší:
-- kromě předchozích poradců při potížích v aplikaci Nastavení byla přidána nová poradce při potížích s přidáním nové aplikace Nastavení pro aktualizace operačního systému. přejděte na **Nastavení > aktualizace & zabezpečení > řešení potíží – > web Windows Update** a vyberte **spustit**. Díky tomu můžete shromažďovat trasování a při reprodukci problému s aktualizacemi operačního systému pomoct lépe při řešení problémů s vaším IT nebo podporou.
+V buildech [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1) a novější:
+- Kromě předchozích poradců při potížích v aplikaci Nastavení byl přidán nový poradce při potížích s přidáním nové aplikace Nastavení pro aktualizace operačního systému. Přejděte na **Nastavení -> Update & Security -> Troubleshoot -> Windows Update** a vyberte **Spustit.** Díky tomu můžete shromažďovat trasování a reprodukovat problém s aktualizacemi operačního systému, což vám pomůže lépe při řešení potíží s IT nebo podporou.
 ### <a name="prerequisites"></a>Požadavky
 
-- aplikace **Nastavení** je nainstalovaná na zařízení a je k dispozici pro uživatele.
+- Aplikace **Nastavení** nainstalovaná na zařízení a je dostupná pro uživatele.
 
-### <a name="data-locations-access-and-retention"></a>Umístění dat, přístup a uchování
+### <a name="data-locations-access-and-retention"></a>Umístění dat, přístup a uchovávání
 
-Vzhledem k tomu, že uživatel spustí shromažďování dat, uživatel implicitně souhlasí s úložištěm diagnostických informací. Přístup k datům může získat pouze uživatel, nebo kdokoli, se kterým uživatel sdílí data.
+Protože uživatel spustí shromažďování dat, uživatel implicitně souhlasí s uložením diagnostických informací. K datům má přístup jenom uživatel nebo kdokoli, s kým data sdílí.
 
-Diagnostické informace jsou uloženy v zařízení. Pokud je zařízení připojené k počítači uživatele, tyto informace se taky nacházejí v počítači v následujícím souboru:
+Diagnostické informace se ukládají na zařízení. Pokud je zařízení připojené k počítači uživatele, nachází se informace také v počítači v následujícím souboru:
 
-> tento počítač \\ \<*HoloLens device name*> \\ interní Storage \\ dokumenty \\ Trace \<*ddmmyyhhmmss*> . etl
+> Soubor \\ \<*HoloLens device name*> \\ \\ .etl Storage tohoto \\ interního počítače \<*ddmmyyhhmmss*>
 
 > [!NOTE]  
-> v této cestě k souboru a názvu \<*HoloLens device name*> představuje název HoloLens zařízení a \<*ddmmyyhhmmss*> představuje datum a čas vytvoření souboru.
+> V této cestě k souboru a názvu představuje název HoloLens zařízení a datum a čas vytvoření \<*HoloLens device name*> \<*ddmmyyhhmmss*> souboru.
 
-Diagnostické informace zůstanou v těchto umístěních, dokud je uživatel neodstraní.
+Diagnostické informace zůstanou v těchto umístěních, dokud je uživatel nevy odstraní.
 
 ## <a name="diagnosticlog-csp"></a>DiagnosticLog CSP
 
@@ -123,7 +123,7 @@ Další informace:
 
 ### <a name="data-locations-access-and-retention"></a>Umístění dat, přístup a uchovávání
 
-Vzhledem k tomu, že je zařízení součástí spravovaného prostředí, uživatel implicitně souhlasí s přístupem pro správu k diagnostickým informacím.
+Vzhledem k tomu, že je zařízení součástí spravovaného prostředí, uživatel implicitně souhlasí s přístupem správce k diagnostickým informacím.
 
 Správce IT používá poskytovatele CSP DiagnosticLog ke konfiguraci zásad ukládání, uchovávání a přístupu k datům, včetně zásad, které řídí následující:
 
@@ -140,11 +140,11 @@ Funguje to, když se zařízení zobrazí v Průzkumník souborů po jeho připo
 > Generování a správa offline diagnostiky se řídí různě v závislosti na verzi operačního systému. Dříve byla řízena nastavením telemetrie, ale teď je přímo řízená prostřednictvím zásad MDM. Pokud je tato možnost zakázaná nastavením nebo zásadou MDM, není možné pomocí tohoto mechanismu shromažďovat diagnostické protokoly.
 
 Chování před [Windows Holographic verze 20H2:](hololens-release-notes.md#windows-holographic-version-20h2)
- - Offline diagnostika je povolená jenom v případě, že uživatel prochází prostředím prvního spuštění počítače nebo je hodnota zásad [System\AllowTelemetry](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry) nastavená na hodnotu Úplná (základní hodnota na HoloLens). 
-- Pokud chcete zakázat offline diagnostiku, přejděte na **stránku Nastavení App > Privacy** a v části **Diagnostická data vyberte Základní.**  Na sestaveních, kde offline diagnostika závisí na nastavení telemetrie, má vliv pouze na to, jestli se shromažďují nějaké protokoly. Nemá vliv na to, jaké soubory se shromažďují.
+ - Offline diagnostika je povolená jenom v případě, že uživatel prochází prostředím prvního spuštění počítače nebo je hodnota zásad [System\AllowTelemetry](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry) nastavená na Úplná (základní hodnota je ve výchozím nastavení HoloLens). 
+- Pokud chcete zakázat offline diagnostiku, přejděte na **Nastavení App > Privacy** a v části Diagnostická data vyberte **Základní.**  Na sestaveních, kde offline diagnostika závisí na nastavení telemetrie, má vliv pouze na to, jestli se shromažďují nějaké protokoly. Nemá vliv na to, jaké soubory se shromažďují.
 - Pokud je zařízení uzamčené, protokoly se nezobrazí.
 
-V [buildech Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) a novější:
+V buildech [Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) a novější:
 - Když je povolená záložní diagnostika, bude řízena konkrétní zásadou MDM s odpovídajícím nastavením [MixedReality/FallbackDiagnostics.](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-fallbackdiagnostics)
 - Pokud je zařízení uzamčené, protokoly se nezobrazí.
 
@@ -153,11 +153,11 @@ Další informace najdete v tomto videu.
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Gathering-Diagnostic-Files-on-HoloLens2/player]
 
 Diagnostiku shromáždíte podle těchto kroků:
-1.  Připojení zařízení kabelem USB k počítači.
-2.  V Průzkumník souborů počítači přejděte na Tento **počítač \<hololens-device> \Interní Storage.**
+1.  Připojení zařízení pomocí kabelu USB k počítači.
+2.  V Průzkumník souborů počítači přejděte do složky **Tento počítač \<hololens-device> \Internal Storage.**
 3.  Pokud **se Storage** interního úložiště, zařízení čeká na přihlášení uživatele. Buď se přihlaste, nebo zacyklte napájení zařízení tak, že podržíte tlačítko POWER po dobu 10 sekund.
 4.  Stiskněte a okamžitě uvolněte **tlačítka Power + Volume Down** společně.
-5.  Chvíli počkejte, než zařízení připraví archivy ZIP. (Dočasný soubor HololensDiagnostics.temp se může zobrazit, když zařízení generuje archivy ZIP. K souboru nepřistupovat ani ho ukládat. Po dokončení procesu se nahradí archivy zip.)
+5.  Chvíli počkejte, než zařízení připraví archivy ZIP. (Dočasný soubor HololensDiagnostics.temp se může zobrazit, když zařízení generuje archivy ZIP. Nepřistupovat k souboru ani ho uložit. Po dokončení procesu se nahradí archivy zip.)
 6.  Aktualizujte Průzkumníka souborů a přejděte **do složky \Documents.**
 7.  Zkopírujte diagnostické soubory ZIP a sdílejte je s týmem podpory Microsoftu.
 

@@ -14,12 +14,12 @@ audience: HoloLens
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 4ba759dfa491725011977c39d6e51ed583a21919ea271f0c3d6482c0847938fb
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 2da84a11a8f9613999e2b376fefeb6cb2b83cd00
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115658922"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124428276"
 ---
 # <a name="compare-hololens-2-options"></a>Porovnání HoloLens 2 možností
 
@@ -29,7 +29,7 @@ Ať už jste [IT](https://www.microsoft.com/hololens/apps) profesionál [a](http
 
 <br>
 
-|                                                      | HoloLens 2 | HoloLens 2 s asistencí pro vzdálenou správu | HoloLens 2 Industrial Edition | HoloLens 2 Industrial Edition se vzdáleným asistencí | Trimble XR10 s HoloLens 2 | HoloLens 2 Development Edition |
+|                                                      | HoloLens 2 | HoloLens 2 s Remote Assistem | HoloLens 2 Industrial Edition | HoloLens 2 Industrial Edition se vzdáleným asistencí | Oříznutí XR10 s HoloLens 2 | HoloLens 2 Development Edition |
 |------------------------------------------------------|------------|-------------------------------|-------------------------------|--------------------------------------------------|------------------------------|--------------------------------|
 | **HoloLens 2 zařízení (jedno zařízení)**                       |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                ✔️               |
 | **Dynamics 365 Remote Assist (jednomístné)**                |            |               ✔️               |                               |                         ✔️                        |                              |                                |
@@ -41,22 +41,22 @@ Ať už jste [IT](https://www.microsoft.com/hololens/apps) profesionál [a](http
 | **Rapid Replacement Program <sup>2</sup>**                          |            |                               |               ✔️               |                         ✔️                        |                              |                                |
 | **Práva ke komerčnímu použití**                                |      ✔️     |               ✔️               |               ✔️               |                         ✔️                        |               ✔️              |                                |
 | [**Záruka**](hololens2-hardware.md#warranty-information)                                             |   1 rok   |             1 rok            |             2 roky            |                      2 roky                      |            1 rok <sup>3</sup>            |             1 rok             |
-| **Limit nákupu zařízení**                                |    Žádná    |              Žádná             |              Žádná             |                       Žádná                       |             Žádná             |       Jedna na transakci      |
+| **Limit nákupu zařízení**                                |    Žádné    |              Žádné             |              Žádné             |                       Žádné                       |             Žádné             |       Jedna na transakci      |
 
 - <sup>1</sup> – Zahrnuje kredit Azure ve výši 500 USD a 3měsíční zkušební verze pro Unity Pro a plug-in Pixyz.
-- <sup>2</sup> – Dostávat náhradní zařízení přes noc nebo zrychlit expedici (rychlejší z dostupných možností) před tím, než Microsoft obdrží vadné zařízení.
-- <sup>3</sup> – Pokud máte dotazy k záruce, podpoře a certifikaci pro Trimble XR10 s HoloLens 2, obraťte se na [společnost Trimble.](https://fieldtech.trimble.com/en/contact-support)
+- <sup>2</sup> – Obdržíte náhradní zařízení přes noc nebo zrychlíte expedici (rychlejší z dostupných možností) před tím, než Microsoft obdrží vadné zařízení.
+- <sup>3</sup> – Pokud máte dotazy ohledně záruky, podpory a certifikace pro Trimble XR10 s edicí HoloLens 2, obraťte se na [trimble.](https://fieldtech.trimble.com/en/contact-support)
 
 
 ## <a name="options-overview"></a>Přehled možností
 
-**[HoloLens 2 (jenom zařízení):](hololens2-options-device-only.md)** HoloLens 2 nabízí nejpohodlnější a imerzivní prostředí hybridní reality, které je vylepšené o spolehlivost, zabezpečení a škálovatelnost cloudových služeb a služeb AI od Microsoftu.
+**[HoloLens 2 (jenom](hololens2-options-device-only.md)** zařízení): HoloLens 2 nabízí nejpohodlnější a imerzivní prostředí hybridní reality, které je vylepšené o spolehlivost, zabezpečení a škálovatelnost cloudových služeb a služeb AI od Microsoftu.
 
 **[HoloLens 2 s Dynamics 365 Remote Assistem:](hololens2-options-remote-assist.md)** První den se službou HoloLens 2 a konečná komunikační aplikace hybridní reality od Microsoftu, která je k dispozici společně. Pomozte celé společnosti být produktivnější a inovovat s vyšším účelem. Vyzkoušejte hybridní realitu s Dynamics 365 a řešeními od oborových partnerů.
 
-**[HoloLens 2 Industrial Edition:](hololens2-options-industrial-edition.md)** Navržená, sestavená a otestovaná tak, aby podporovala prostředí čistých místností se standardy od ISO třídy 6 až po ISO třídu 8, HoloLens 2 Industrial Edition je třída UL I, certifikovaná divize 2 a je podporována s 2letou zárukou a programem rychlé výměny.
+**[HoloLens 2 Industrial Edition:](hololens2-options-industrial-edition.md)** Navržená, sestavená a otestovaná tak, aby podporovala prostředí čistých místností se standardy od ISO třídy 6 až po ISO třídu 8, HoloLens 2 Industrial Edition má certifikaci UL třídy I, 2. divizi a podporuje se s 2letou zárukou a programem rychlé výměny.
 
-**[Trimble XR10 s HoloLens 2:](hololens2-options-trimble-xr10-edition.md)** Účel sestavený pro pracovníky v nečistých, hlučných a bezpečnostních prostředích přináší Trimble XR10 s HoloLens 2 hybridní realitu přímo na váš pracovní web.
+**[Trimble XR10 s HoloLens 2:](hololens2-options-trimble-xr10-edition.md)** Účel sestavený pro pracovníky v nečistých, hlučných a bezpečnostních prostředích, trimble XR10 s HoloLens 2 přináší hybridní realitu přímo na váš pracovní web.
 
 **[HoloLens 2 Development Edition:](hololens2-options-dev-edition.md)** Začněte budovat pro hybridní realitu s touto nabídkou, která kombinuje HoloLens 2 s bezplatnými zkušebními verzemi softwaru Unity a kredity Azure pro cloudové služby. Zjistěte, jak přejít nad rámec základů a začít s vývojem pro hybridní realitu.
 
@@ -79,9 +79,9 @@ Prozkoumejte tato další řešení vytvořená pro HoloLens zařízení hybridn
 Pokud chcete začít, podívejte se na stránku [HoloLens 2](hololens2-setup.md) pro koncové uživatele zařízení.
 
 > [!div class="nextstepaction"]
-> [Připravte HoloLens 2 k použití.](hololens2-setup.md)
+> [Připravte si HoloLens 2 k použití.](hololens2-setup.md)
 
-Pro správce IT nasazení zařízení do vaší organizace odemkne výkonná prostředí hybridní reality. Začínáme se seznamte s HoloLens 2 požadavky a scénáři nasazení napříč celou řadou konfigurací INFRASTRUKTURY IT.
+Pro správce IT nasazení zařízení do vaší organizace odemkne výkonná prostředí hybridní reality. Začínáme se seznamte s HoloLens 2 požadavky a scénáři nasazení v celé řadě konfigurací IT infrastruktury.
 
 > [!div class="nextstepaction"]
 > [Nasazení HoloLens 2 v komerčním prostředí](hololens-requirements.md)

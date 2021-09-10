@@ -1,6 +1,6 @@
 ---
-title: HoloLens referenční informace pro veřejný terminál
-description: informace a ukázky pro veřejné terminály na zařízeních HoloLens.
+title: HoloLens referenčních informací k beziosku
+description: Informace a ukázky pro bezobrazovkové terminály na HoloLens zařízeních.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -14,126 +14,126 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 9f8cfd0013ac5b8cf85a334cbb89c458440820d9
-ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122863935"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427935"
 ---
-# <a name="hololens-kiosk-reference-information"></a>HoloLens Informace o beznabídkovém odkazu
+# <a name="hololens-kiosk-reference-information"></a>HoloLens Referenční informace k beziosku
 
-tato stránka obsahuje užitečné informace pro nastavení celoobrazovkového režimu HoloLens zařízení. Mezi tyto odkazy patří AUMIDs pro aplikace doručené pošty a hledání vašich změn a několik ukázek XML pro celoobrazovkový režim, které jsou jenom několik úprav, které je možné použít pro několik různých scénářů. Informace o nastavení veřejného terminálu najdete na [stránce Nastavení veřejného terminálu.](hololens-kiosk.md)
+Tato stránka obsahuje užitečné informace pro nastavení HoloLens zařízení v bezobrazovkovém režimu. Mezi tyto odkazy patří identifikátory AUMID pro aplikace doručené pošty a vyhledání vaší aplikace a několik ukázek XML pro beznaioskový režim, které jsou od několika úprav od toho, abyste je připravili pro několik různých scénářů. Informace o nastavení veřejného terminálu najdete na stránce Nastavení veřejného [terminálu.](hololens-kiosk.md)
 
-## <a name="hololens-application-user-model-ids-aumids"></a>HoloLens ID modelu uživatele aplikace (AUMIDs)  
+## <a name="hololens-application-user-model-ids-aumids"></a>HoloLens ID modelů uživatelů aplikací (AUMID)  
 
-Obecné informace o tom, jak zvolit aplikace na veřejném terminálu, najdete v tématu [pokyny pro výběr aplikace pro přiřazený přístup (celoobrazovkový režim)](/windows/configuration/guidelines-for-assigned-access-app).
+Obecné informace o tom, jak zvolit aplikace v bezobrazovkovém režimu, najdete v tématu Pokyny pro výběr aplikace pro přiřazený přístup [(bezioskový režim).](/windows/configuration/guidelines-for-assigned-access-app)
 
-Pokud ke konfiguraci celoobrazovkového režimu použijete systém správy mobilních zařízení (MDM) nebo zřizovací balíček, použijte k určení aplikací [poskytovatele služby AssignedAccess Configuration Service Provider (CSP)](/windows/client-management/mdm/assignedaccess-csp) . CSP používá k identifikaci aplikací [ID modelu uživatele aplikace (AUMIDs)](/windows/configuration/find-the-application-user-model-id-of-an-installed-app) . V následující tabulce je uveden seznam AUMIDs některých integrovaných aplikací, které můžete použít v terminálu s více aplikacemi.
+Pokud ke konfiguraci beziosku používáte systém Mobile Správa zařízení (MDM) nebo zřizovací balíček, použijete k určení aplikací poskytovatele konfiguračních služeb [AssignedAccess.](/windows/client-management/mdm/assignedaccess-csp) CSP používá k identifikaci aplikací ID aplikačních modelů [(AUMID).](/windows/configuration/find-the-application-user-model-id-of-an-installed-app) V následující tabulce jsou uvedené identifikátory AUMID některých aplikací, které můžete použít v beznaiosku s více aplikacemi.
 
 <a id="aumids"></a>
 
 |Název aplikace |AUMID |
 | --- | --- |
-|Prohlížeč 3D |Microsoft. Microsoft3DViewer \_ 8wekyb3d8bbwe \! Microsoft. Microsoft3DViewer |
-|Kalendář |Microsoft. windowscommunicationsapps \_ 8wekyb3d8bbwe \! Microsoft. windowslive. Calendar |
+|3D prohlížeč |Microsoft.Microsoft3DViewer \_ 8wekyb3d8bbwe \! Microsoft.Microsoft3DViewer |
+|Kalendář |microsoft.windowscommunicationsapps \_ 8wekyb3d8bbwe \! microsoft.windowslive.calendar |
 |Kamera<sup>1, 2</sup> |HoloCamera \_ cw5n1h2txyewy \! HoloCamera |
-|Cortana<sup>3</sup> |Aplikace Microsoft. 549981C3F5F10 \_ 8wekyb3d8bbwe \! |
-|výběr zařízení v HoloLens (1. generace) |HoloDevicesFlow \_ cw5n1h2txyewy \! HoloDevicesFlow |
-|výběr zařízení na HoloLens 2 |Microsoft. Windows. DevicesFlowHost \_ cw5n1h2txyewy \! Microsoft. Windows. DevicesFlowHost |
-|Příručky k Dynamics 365 |Microsoft. Dynamics365. příruček \_ 8wekyb3d8bbwe \! MicrosoftGuides |
-|Vzdálená pomoc pro Dynamics 365 |Microsoft. MicrosoftRemoteAssist \_ 8wekyb3d8bbwe \! Microsoft. RemoteAssist |
-|&nbsp;Centrum Feedback |Aplikace Microsoft. WindowsFeedbackHub \_ 8wekyb3d8bbwe \! |
-|Průzkumník souborů |c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy! Aplikace |
-|Poštovní |microsoft.windowscommunicationsapps_8wekyb3d8bbwe! Microsoft. windowslive. mail |
-|Původní Microsoft Edge |Microsoft.MicrosoftEdge_8wekyb3d8bbwe! MicrosoftEdge |
+|Cortana<sup>3</sup> |Microsoft.549981C3F5F10 \_ 8wekyb3d8bbwe \! App |
+|Výběr zařízení v HoloLens (1. generace) |HoloDevicesFlow \_ cw5n1h2txyewy \! HoloDevicesFlow |
+|Výběr zařízení na HoloLens 2 |Microsoft. Windows. DevicesFlowHost \_ cw5n1h2txyewy \! Microsoft.Windows. DevicesFlowHost |
+|Průvodci Dynamics 365 |Microsoft.Dynamics365.Guides \_ 8wekyb3d8bbwe \! MicrosoftGuides |
+|Dynamics 365 Remote Assist |Microsoft.MicrosoftRemoteAssst \_ 8wekyb3d8bbwe \! Microsoft.RemoteAssst |
+|Centrum &nbsp; feedback |Aplikace Microsoft.WindowsFeedbackHub \_ 8wekyb3d8bbwe \! |
+|Průzkumník souborů |c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy! App |
+|Poštovní |microsoft.windowscommunicationsapps_8wekyb3d8bbwe!microsoft.windowslive.mail |
+|Starý Microsoft Edge |Microsoft.MicrosoftEdge_8wekyb3d8bbwe! MicrosoftEdge |
 |Nový Microsoft Edge |Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE |
-|Microsoft Store |Microsoft.WindowsStore_8wekyb3d8bbwe! Aplikace |
+|Microsoft Store |Microsoft.WindowsStore_8wekyb3d8bbwe! App |
 |Miracast<sup>4</sup> | &nbsp; |
-|Filmy & televizor |Microsoft. ZuneVideo \_ 8wekyb3d8bbwe \! Microsoft. ZuneVideo |
-|OneDrive |aplikace Microsoft. microsoftskydrive \_ 8wekyb3d8bbwe \! |
-|Fotky |Microsoft. Windows. \_Aplikace fotek 8wekyb3d8bbwe \! |
-|původní Nastavení |HolographicSystemSettings_cw5n1h2txyewy! Aplikace |
-|nový Nastavení |BAEAEF15-9BAB-47FC-800B-ACECAD2AE94B_cw5n1h2txyewy! Aplikace |
-|Tipy |Microsoft. HoloLensTips \_ 8wekyb3d8bbwe \! HoloLensTips |
+|Movies & TV |Microsoft.ZuneVideo \_ 8wekyb3d8bbwe \! Microsoft.ZuneVideo |
+|OneDrive |microsoft.microsoftskydrive \_ 8wekyb3d8bbwe \! App |
+|Fotky |Microsoft. Windows. Aplikace Photos \_ 8wekyb3d8bbwe \! |
+|Starý Nastavení |HolographicSystemSettings_cw5n1h2txyewy! App |
+|Nové Nastavení |BAEAEF15-9BE-47FC-800B-ACECAD2AE94B_cw5n1h2txyewy! App |
+|Tipy |Microsoft.HoloLensTips \_ 8wekyb3d8bbwe \! HoloLensTips |
 
-> <sup>1</sup> Pokud chcete povolit digitalizaci fotek nebo videa, musíte aplikaci kamery povolit jako beznabídkovou aplikaci.  
-> <sup>2</sup> Pokud povolíte aplikaci kamery, pamatujte na následující podmínky:
-> - Nabídka rychlé akce obsahuje tlačítka pro fotografii a video.
-> - měli byste taky povolit aplikaci (například fotky, poštu nebo OneDrive), která může pracovat s obrázky nebo je z ní načítat.  
+> <sup>1</sup> Pokud chcete povolit zachytávání fotek nebo videí, musíte aplikaci Fotoaparát povolit jako aplikaci veřejného terminálu.  
+> <sup>2</sup> Když povolíte aplikaci Fotoaparát, je třeba mít na paměti následující podmínky:
+> - Nabídka Rychlé akce obsahuje tlačítka Fotografie a Video.
+> - Měli byste také povolit aplikaci (například Fotky, Pošta nebo OneDrive), která může pracovat s obrázky nebo načítat obrázky.  
 >  
-> <sup>3</sup> i v případě, že nepovolíte Cortana jako beznabídkovou aplikaci, jsou integrované hlasové příkazy povolené. Příkazy, které se vztahují k zakázaným funkcím, ale nemají žádný vliv.  
-> <sup>4</sup> Miracast přímo nelze povolit. Pokud chcete povolit Miracast jako beznabídkovou aplikaci, povolte aplikaci kamery a aplikaci pro výběr zařízení.
+> <sup>3</sup> I v případě, že Cortana jako aplikaci veřejného terminálu, jsou povolené integrované hlasové příkazy. Příkazy, které souvisejí se zakázanými funkcemi, ale nemají žádný vliv.  
+> <sup>4</sup> Nelze povolit Miracast. Pokud chcete Miracast jako aplikaci veřejného terminále, povolte aplikaci Fotoaparát a Aplikaci pro výběr zařízení.
 
-Kromě toho není možné nastavit domovskou stránku hybridní reality jako beznabídkovou aplikaci.
+Kromě toho Mixed Reality domovskou stránku není možné nastavit jako aplikaci veřejného terminálu.
 
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-## <a name="kiosk-xml-code-samples"></a>Ukázka kódu XML veřejného terminálu
+## <a name="kiosk-xml-code-samples"></a>Ukázky kódu XML veřejného terminálu
 
-1. [Globální přiřazený profil přístupu k více aplikacím](#multiple-app-global-assigned-access-profile)
-1. [Více aplikací globální přiřazený profil přístupu s výjimkou vlastníků zařízení](#multiple-app-global-assigned-access-profile-excluding-device-owners)
-1. [Pro místní účet nebo uživatelský účet AAD má více aplikací přiřazený profil přístupu.](#multiple-app-assigned-access-profile-for-a-local-account-or-aad-user-account)
-1. [Více přidaných profilů přístupu aplikace pro dva uživatele AAD nebo více](#multiple-app-assigned-access-profiles-for-two-aad-users-or-more)
-1. [Přidaný profil přístupu k více aplikacím pro jednu skupinu AAD](#multiple-app-assigned-access-profile-for-one-aad-group)
-1. [Více přidaný profil přístupu aplikace pro dvě skupiny AAD nebo více](#multiple-app-assigned-access-profile-for-two-aad-groups-or-more)
-1. [Pro jeden účet AAD a jednu skupinu AAD má aplikace přiřazený profil přístupu k více aplikacím.](#multiple-app-assigned-access-profile-for-one-aad-account-and-one-aad-group)
-1. [Víc přidaných profilů přístupu aplikace pro návštěvníky](#multiple-app-assigned-access-profile-for-visitors)
+1. [Více profilů přístupu přiřazených globálním aplikacím](#multiple-app-global-assigned-access-profile)
+1. [Více profilů přístupu přiřazených globálním aplikacím s výjimkou vlastníků zařízení](#multiple-app-global-assigned-access-profile-excluding-device-owners)
+1. [Více profilů přístupu přiřazených aplikací pro místní účet nebo uživatelský účet AAD](#multiple-app-assigned-access-profile-for-a-local-account-or-aad-user-account)
+1. [Více profilů přístupu přiřazených aplikacím pro dva uživatele AAD nebo více](#multiple-app-assigned-access-profiles-for-two-aad-users-or-more)
+1. [Více profilů přístupu přiřazených aplikací pro jednu skupinu AAD](#multiple-app-assigned-access-profile-for-one-aad-group)
+1. [Více profilů přístupu přiřazených aplikacím pro dvě nebo více skupin AAD](#multiple-app-assigned-access-profile-for-two-aad-groups-or-more)
+1. [Více profilů přístupu přiřazených aplikací pro jeden účet AAD a jednu skupinu AAD](#multiple-app-assigned-access-profile-for-one-aad-account-and-one-aad-group)
+1. [Více přístupových profilů přiřazených aplikacím pro návštěvníky](#multiple-app-assigned-access-profile-for-visitors)
 
 > [!NOTE]
-> Podle vašich požadavků nahraďte akce TODO.
+> Nahraďte akce TODO podle vašich požadavků.
 
-### <a name="multiple-app-global-assigned-access-profile"></a>Globální přiřazený profil přístupu k více aplikacím
+### <a name="multiple-app-global-assigned-access-profile"></a>Více profilů přístupu přiřazených globálním aplikacím
 
 :::code language="xml" source="samples/kiosk-sample-global-multiapp-for-everyone.xml" highlight="18-20":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-### <a name="multiple-app-global-assigned-access-profile-excluding-device-owners"></a>Více aplikací globální přiřazený profil přístupu s výjimkou vlastníků zařízení
+### <a name="multiple-app-global-assigned-access-profile-excluding-device-owners"></a>Více profilů přístupu přiřazených globálním aplikacím s výjimkou vlastníků zařízení
 
 :::code language="xml" source="samples/kiosk-sample-global-multiapp-for-everyone-excluding-device-owners.xml" highlight="18-20":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-### <a name="multiple-app-assigned-access-profile-for-a-local-account-or-aad-user-account"></a>Pro místní účet nebo uživatelský účet AAD má více aplikací přiřazený profil přístupu.
+### <a name="multiple-app-assigned-access-profile-for-a-local-account-or-aad-user-account"></a>Více profilů přístupu přiřazených aplikací pro místní účet nebo uživatelský účet AAD
 
 :::code language="xml" source="samples/kiosk-sample-multi-app-local-or-aad-user.xml" highlight="18-20,51,55":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-### <a name="multiple-app-assigned-access-profiles-for-two-aad-users-or-more"></a>Více přidaných profilů přístupu aplikace pro dva uživatele AAD nebo více
+### <a name="multiple-app-assigned-access-profiles-for-two-aad-users-or-more"></a>Více profilů přístupu přiřazených aplikacím pro dva uživatele AAD nebo více
 
 :::code language="xml" source="samples/kiosk-sample-multi-app-two-aad-users-or-more.xml" highlight="22-24,52,53,80,88":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-### <a name="multiple-app-assigned-access-profile-for-one-aad-group"></a>Přidaný profil přístupu k více aplikacím pro jednu skupinu AAD
+### <a name="multiple-app-assigned-access-profile-for-one-aad-group"></a>Více profilů přístupu přiřazených aplikací pro jednu skupinu AAD
 
 :::code language="xml" source="samples/kiosk-sample-multi-app-one-aad-group.xml" highlight="28":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-### <a name="multiple-app-assigned-access-profile-for-two-aad-groups-or-more"></a>Více přidaný profil přístupu aplikace pro dvě skupiny AAD nebo více
+### <a name="multiple-app-assigned-access-profile-for-two-aad-groups-or-more"></a>Více profilů přístupu přiřazených aplikacím pro dvě nebo více skupin AAD
 
 :::code language="xml" source="samples/kiosk-sample-multi-app-two-aad-groups-or-more.xml" highlight="22-24,52,53,83,94":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-### <a name="multiple-app-assigned-access-profile-for-one-aad-account-and-one-aad-group"></a>Pro jeden účet AAD a jednu skupinu AAD má aplikace přiřazený profil přístupu k více aplikacím.
+### <a name="multiple-app-assigned-access-profile-for-one-aad-account-and-one-aad-group"></a>Více profilů přístupu přiřazených aplikací pro jeden účet AAD a jednu skupinu AAD
 
 :::code language="xml" source="samples/kiosk-sample-multi-app-for-aad-user-and-aad-group.xml" highlight="22-24,52,53,80,91":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
 
-### <a name="multiple-app-assigned-access-profile-for-visitors"></a>Víc přidaných profilů přístupu aplikace pro návštěvníky
+### <a name="multiple-app-assigned-access-profile-for-visitors"></a>Více přístupových profilů přiřazených aplikacím pro návštěvníky
 
 :::code language="xml" source="samples/kiosk-sample-multi-app-visitor-user.xml" highlight="18-20":::
 
 [Zpět na seznam](#kiosk-xml-code-samples) <br>
-Návrat k [podporovaným scénářům pro celoobrazovkový režim na základě typu identity](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)
+Vraťte se [k podporovaným scénářům pro beznaioskový režim na základě typu identity.](hololens-kiosk.md#supported-scenarios-for-kiosk-mode-based-on-identity-type)

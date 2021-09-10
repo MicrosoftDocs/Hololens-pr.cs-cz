@@ -1,6 +1,6 @@
 ---
 title: Příprava nového HoloLens
-description: Zjistěte, jak poprvé připravit, upravit a HoloLens zařízení s hybridní realitou (1. generace).
+description: Zjistěte, jak poprvé připravit, upravit a nastavit HoloLens hybridní reality (1. generace).
 ms.prod: hololens
 ms.sitesec: library
 author: JesseMcCulloch
@@ -13,11 +13,11 @@ manager: jarrettr
 appliesto:
 - Hololens (1st gen)
 ms.openlocfilehash: 5918e3dcb7f2504ae6e85cb584aaf21bc87217bc
-ms.sourcegitcommit: f04f631fbe7798a82a57cc01fc56dc2edf13c5f2
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "123189252"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427744"
 ---
 # <a name="get-your-hololens-1st-gen-ready-to-use"></a>Připravte HoloLens (1. generace) k použití.
 
@@ -27,12 +27,12 @@ Postupujte podle pokynů a nastavte HoloLens (1. generace).
 
 Pokud chcete naúčtovat HoloLens, připojte napájecí zdroj k portu pro účtování pomocí přidávknutého kabelu Micro USB. Pak napájecí zdroj zapojte do napájecího zdroje. Při nabíjení zařízení se indikátor baterie rozsviní vlnovým vzorem.
 
-![Obrázek znázorňuje, jak připojit kabel Micro USB k HoloLens.](./images/hololens-charging.png)
+![Obrázek, který ukazuje, jak připojit kabel Micro USB k HoloLens.](./images/hololens-charging.png)
 
 Když je HoloLens, indikátor baterie zobrazuje stav baterie v přírůstcích. Když je jen jedna z pěti světel rozsvícená, úroveň baterie je nižší než 20 procent. Pokud je úroveň baterie kriticky nízká a pokusíte se zařízení zapnout, jedno světlo krátce blikne a pak vypadne.
 
 > [!TIP]
-> Pokud chcete získat odhad aktuální úrovně baterie, řekněte Cortana, kolik baterie mi zbývá?
+> Pokud chcete získat odhad aktuální úrovně baterie, řekněte "Cortana, kolik baterie mi zbývá?"
 
 Nejlepší způsob, jak zařízení naúčtovat, je napájecí HoloLens usb (1. generace).  Napájecí zdroj poskytuje 18 W napájení (9V 2A).
 
@@ -52,7 +52,7 @@ Rychlost a rychlost zpoplatnění se může lišit v závislosti na prostředí,
 
 ## <a name="turn-on-your-hololens"></a>Zapnutí HoloLens
 
-Pomocí tlačítka napájení zapněte a vypněte HoloLens nebo ho dejte do pohotovostního režimu.
+Pomocí tlačítka napájení můžete HoloLens a vypnout nebo ho umístit do pohotovostního režimu.
 
 ![Obrázek znázorňuje tlačítko HoloLens napájení](./images/hololens-power.png)
 
@@ -83,29 +83,29 @@ Tlačítka jasu a hlasitosti jsou na pravé straně a na pravé straně jsou tla
 
 ## <a name="hololens-indicator-lights"></a>HoloLens indikátorů
 
-![Obrázek znázorňuje indikátory HoloLens indikátorů](./images/hololens-lights.png)
+![Obrázek znázorňuje HoloLens indikátorů](./images/hololens-lights.png)
 
-Nejste si jistí, co znamenají indikátory HoloLens vašem počítači? Tady je nějaká pomoc.
+Nejste si jistí, co znamenají indikátory na HoloLens indikátoru? Tady je nějaká pomoc.
 
 |Když to světly dělají |Význam |
 |---|---|
 |Posuňte se od středu směrem ven. |HoloLens se spouští. |
 |Stay lit (all or some). |HoloLens je připravená k použití. Životnost baterie se zobrazuje v 20% přírůstcích. |
-|Posuňte se, rozsvit a pak se posuňte. |HoloLens je v a nabíjí se. Životnost baterie se zobrazuje v 20% přírůstcích. |
+|Posuňte se, rozsvit a pak se posuňte. |HoloLens je v systému a účtování. Životnost baterie se zobrazuje v 20% přírůstcích. |
 |Jednu po druhé vypněte. |HoloLens se vypíná. |
 |Vypněte vše najednou. |HoloLens se přepne do pohotovostního režimu. |
-|Všechno se rozsvítí, pak jeden krátce blikne a pak všechno vypne. |Baterie je kriticky nízká. HoloLens je potřeba účtovat poplatky. |
+|Všechno se rozsvítí, pak jeden krátce blikne a pak všechno vypne. |Baterie je kriticky nízká. HoloLens je potřeba účtovat. |
 |Všechno se posuňte, pak jeden blikne a pak vše posouvání. |Baterie je kriticky nízká. HoloLens se účtování. |
 
 ## <a name="safety-and-comfort"></a>Zabezpečení a komfort
 
 ### <a name="use-in-safe-surroundings"></a>Použití v bezpečném okolí
 
-Používejte HoloLens v bezpečném prostoru, který je bez překážek a zahlcených nebezpečí. Nepoužívejte ho, když potřebujete jasné zorné pole a úplnou pozornost, například při provozu vozidla nebo při jiných potenciálně nebezpečných aktivitách.
+Používejte HoloLens bezpečném prostoru, který je bez překážek a zahlcených nebezpečí. Nepoužívejte ho, když potřebujete jasné zorné pole a úplnou pozornost, například při provozu vozidla nebo při jiných potenciálně nebezpečných aktivitách.
 
 ### <a name="stay-comfortable"></a>Zůstaňte v dobrém pohodlí
 
-Udržujte prvních pár relací HoloLens stručné a nezapomeňte si vzít přestávky. Pokud se s tím pocítíte, zastavte se a odpočíváte, dokud se nebude cítit lépe. To může zahrnovat dočasné záchucení bolesti, pohybové onemocnění, nehybnost, deorientaci, únavu, únavu, zatěžování očí nebo suché oči.
+Udržujte prvních pár relací ve HoloLens a nezapomeňte si vzít přestávky. Pokud se s tím pocítíte, zastavte se a odpočíváte, dokud se nebude cítit lépe. To může zahrnovat dočasné záchucení bolesti, pohybové onemocnění, nehybnost, deorientaci, únavu, únavu, zatěžování očí nebo suché oči.
 
 > [!div class="nextstepaction"]
 > [Spuštění a konfigurace HoloLens (1. generace)](hololens1-start.md)

@@ -13,12 +13,12 @@ manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 0a0f26750ff6ea881babfab44af95cbbefa0574674336934ccf1443df1701a96
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 5485a4b2558a11a6c0545ec8b3405c120cff287c
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115663265"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427374"
 ---
 # <a name="using-microsofts-endpoint-manager-intune-to-manage-hololens-devices"></a>Správa zařízení s Endpoint Manager Microsoftem pomocí HoloLens Intune
 
@@ -40,7 +40,7 @@ V profilech můžete k přizpůsobení některých nastavení, vytvoření omeze
 Použití MDM ke správě zařízení poskytuje širokou škálu položek, které je možné vybrat. 
 
 ### <a name="wi-fi"></a>Wi-Fi
-[Nastavení Wi-Fi](/mem/intune/configuration/wi-fi-settings-configure) přiřadí uživatelům a zařízením nastavení bezdrátové sítě. Když přiřadíte profil Wi-Fi, uživatelé budou mít přístup k vašemu podnikovému Wi-Fi, aniž by ji museli konfigurovat sami.
+[Nastavení Wi-Fi](/mem/intune/configuration/wi-fi-settings-configure) přiřadí uživatelům a zařízením nastavení bezdrátové sítě. Když přiřadíte profil Wi-Fi, uživatelé budou mít přístup k vašemu firemnímu Wi-Fi, aniž by ji museli konfigurovat sami.
 Další informace [o konfiguraci sítě pro HoloLens](hololens-commercial-infrastructure.md)
 
 ### <a name="certificates"></a>Certifikáty
@@ -55,7 +55,7 @@ Organizace často používají síť VPN k řízení přístupu k aplikacím a p
 - Další podrobnosti o profilech VPN najdete v tématu [VPNv2 CSP.](/windows/client-management/mdm/vpnv2-csp)
 
 ### <a name="deploy-and-manage-apps"></a>Nasazení a správa aplikací
-V Intune můžete do zařízení s Windows Holographic for Business přidat aplikace. Řešení pro správu mobilních zařízení umožňuje správcům a správcům IT soukromě automaticky instalovat (nabízeně) své vlastní obchodní aplikace nebo nakupovat aplikace prostřednictvím Storu pro skupinu uživatelů. Existují různé způsoby nasazování aplikací:
+V Intune můžete do zařízení s Windows Holographic for Business přidat aplikace. Řešení pro správu mobilních zařízení umožňuje správcům a správcům IT soukromě automaticky instalovat (nabízeně) svoje vlastní obchodní aplikace nebo nakupovat aplikace prostřednictvím Storu pro skupinu uživatelů. Existují různé způsoby nasazování aplikací:
 -   [Intune a Portál společnosti]( app-deploy-intune.md)
 -   [Microsoft Store pro firmy]( app-deploy-store-business.md)
 
@@ -67,7 +67,7 @@ Přečtěte si další informace o správě aplikací prostřednictvím Intune.
 
 ### <a name="software-updates"></a>Aktualizace softwaru
 V Intune je funkce Aktualizační kanály zařízení s Windows 10. Tyto aktualizační kanály zahrnují skupinu nastavení, která určují, jak se budou aktualizace instalovat. Pro instalaci aktualizací můžete třeba vytvořit časové období údržby nebo můžete zvolit, že po instalaci aktualizací chcete zařízení restartovat. Aktualizační kanál můžete použít pro více zařízení s Windows Holographic for Business.
-Přečtěte si další informace o [správě aktualizací HoloLens a](hololens-updates.md) správě aktualizací softwaru přes [Intune.](/mem/intune/protect/windows-update-for-business-configure)
+Přečtěte si další informace o [správě aktualizací HoloLens a](hololens-updates.md) správě aktualizací softwaru prostřednictvím [Intune.](/mem/intune/protect/windows-update-for-business-configure)
 
 ### <a name="configure-kiosk-mode"></a>Konfigurace beznabídkového režimu
 Pomocí funkcí sdíleného nebo hostovaného počítače dostupných v Intune můžete na zařízeních s Windows Holographic for Business nakonfigurovat beznabídkový režim. Na těchto zařízení může běžet jen jedna aplikace (beznabídkový režim s jednou aplikací), nebo několik aplikací (beznabídkový režim s více aplikacemi). Bezobrazovový režim je uživatelské rozhraní, které řídí, které identity mají ve výchozím nastavení přístup ke kterým aplikacím.

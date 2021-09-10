@@ -1,6 +1,6 @@
 ---
 title: HoloLens prostředí
-description: Získejte nejlepší možné prostředí pomocí HoloLens při optimalizaci zařízení pro vaše oči a prostředí.
+description: Při optimalizaci zařízení pro vaše HoloLens a prostředí získejte nejlepší možné prostředí pomocí nástroje .
 author: dorreneb
 ms.author: dobrown
 manager: jarrettr
@@ -10,16 +10,16 @@ ms.topic: article
 audience: ITPro
 ms.localizationpriority: high
 keywords: holografický rám, zorné pole, fov, plynu, prostory, prostředí, postupy, HoloLens, hybridní realita, náhlavní soupravy hybridní reality
-ms.openlocfilehash: bf70641958d6f29735512182fdf33ae48f40b956f3335643faeb5edb8a26f79f
-ms.sourcegitcommit: f8e7cc2fbdcdf8962700fd50b9c017bd83d1ad65
+ms.openlocfilehash: 6976527d759e768fa5da72f96395a8b7b390cefd
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115664169"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427306"
 ---
 # <a name="hololens-environment-considerations"></a>HoloLens prostředí
 
-HoloLens holografické soubory spojuje s "skutečným" světem a umístí hologramy do okolí. Na zdi se "zablokuje" holografické okno aplikace, holografické míče se otáčí na s tabletopu a nad hlavičkou vašeho nevědomého přítele se posadí. Když používáte imerzivní hru nebo aplikaci, holografický svět se rozprostíří, aby vyplnil vaše okolí, ale stále můžete prostor vidět a pohybovat se.
+HoloLens holografického s "skutečným" světem a umístí hologramy do okolí. Na zdi se "zablokuje" holografické okno aplikace, holografické míče se otáčí na s tabletopu a nad hlavičkou vašeho nevědomého přítele se posadí. Když používáte imerzivní hru nebo aplikaci, holografický svět se rozprostíří, aby vyplnil vaše okolí, ale stále můžete prostor vidět a pohybovat se.
 
 Hologramy, které najdete, zůstanou tam, kam je dáte, i když zařízení vypnete.
 
@@ -27,7 +27,7 @@ Hologramy, které najdete, zůstanou tam, kam je dáte, i když zařízení vypn
 
 HoloLens zařízení znají, jak umístit stabilní a přesné hologramy sledováním *uživatelů* v prostoru. Bez správného sledování zařízení nerozumí prostředí ani uživateli, který je v ní. Hologramy se může zobrazit na nesprávných místech, pokaždé se na stejném místě nezobrazí nebo se vůbec nezobrazí. Data používaná ke sledování uživatelů jsou reprezentována v *prostorové mapě*.  
 
-Sledování výkonu je silně ovlivněno prostředím, ve které se uživatel nachází, a ladění prostředí tak, aby vyvolalo stabilní a konzistentní sledování, je spíše umění než věda. Mnoho různých faktorů prostředí je pro sledování směšovaných dohromady, ale jako vývojář Mixed Reality existuje několik faktorů, na které byste měli mít na paměti vyladění prostoru pro lepší sledování.
+Sledování výkonu je silně ovlivněno prostředím, ve které se uživatel nachází, a ladění prostředí pro vyvolání stabilního a konzistentního sledování je spíše umění než věda. Mnoho různých faktorů prostředí je shromaděných dohromady, aby bylo možné sledovat, ale jako vývojář Mixed Reality existuje několik faktorů, na které byste měli mít na paměti vyladění prostoru pro lepší sledování.
 
 ### <a name="lighting"></a>Osvětlení
 
@@ -41,27 +41,27 @@ Pokud máte seznam, je dobrým místem, kde začít, stabilní 500–1 000 krát
 
 #### <a name="types-of-lighting"></a>Typy osvětlení
 
-Sledování mohou ovlivnit také různé typy světla v prostoru. Žárovky prochádí elektřinu ze střídavého napětí – pokud je frekvence střídavého napětí 50 Hz, žárovka se rozsvítí na 50 Hz. Člověk si toho všimne. Tyto změny ale vidí HoloLens 30 snímků za sekundu – některé snímky budou dobře rozsvícené, některé budou špatně rozsvícené a některé budou překryté, když se fotoaparát pokusí kompenzovat světlé impulzy.  
+Sledování mohou ovlivnit také různé typy světla v prostoru. Žárovky prochádí elektřinu ze střídavého napětí – pokud je frekvence střídavého napětí 50 Hz, žárovka se rozsvítí na 50 Hz. Člověk si toho všimne. Tyto změny HoloLens vidí kamera 30 fps – některé snímky budou dobře rozsvícené, některé budou špatně rozsvícené a některé budou překryté, když se fotoaparát pokusí kompenzovat světlé impulzy.  
 
-V USA má standard frekvence elektřiny frekvenci 60 Hz, takže se žárovkové impulzy přeliší s obnovovací frekvencí HoloLens – 60Hz pulse zarovnané se snímkovou frekvencí 30 FPS HoloLens. Mnoho zemí má ale frekvenci ac standardu 50 Hz, což znamená, že některé HoloLens snímky budou pořízeny během impulzu, jiné ne. Konkrétně je známo, že osvětlení v Evropě způsobuje problémy.  
+V USA je standard frekvence elektřiny 60 Hz, takže se žárovkové impulzy přeliší s snímkovou frekvencí HoloLens – 60 Hz pulse zarovnané se snímkovou frekvencí 30 FPS HoloLens. Mnoho zemí má ale frekvenci ac standard 50 Hz, což znamená, že některé HoloLens snímky budou pořízeny během impulzu, jiné nikoli. Konkrétně je známo, že osvětlení v Evropě způsobuje problémy.  
 
 Existuje několik věcí, které můžete zkusit vyřešit při řešení blikajících problémů. Běžnými příčinami blikání teploty, stáří žárovky a zahřejení jsou cykly, které mohou pomoci při nahrazování žárovky. Můžou vám pomoct také zpřísnění žárovky a ujistěte se, že aktuální tahy jsou konstantní.  
 
 ### <a name="items-in-a-space"></a>Položky v prostoru
 
-HoloLens se v prostoru používá jedinečné orientační body prostředí, označované také jako vlastnosti .  
+HoloLens využívá jedinečné orientační body prostředí, označované také jako *funkce*, k jeho umístění v prostoru.  
 
-Zařízení téměř nikdy nemůže sledovat v oblasti s špatnými funkcemi, protože zařízení nemá žádný způsob, jak zjistit, kde se nachází v prostoru. Přidání prvků do zdí prostoru je obvykle dobrým způsobem, jak zlepšit sledování. Pomáhají plakáty, symboly při klepnutí na zeď, rostliny, jedinečné objekty nebo jiné podobné položky. Dobrým příkladem prostředí, které vede k dobrému sledování, je schůdný pracovní prostor – v jedné oblasti je spousta různých funkcí.  
+Zařízení téměř nikdy nemůže sledovat v oblasti s špatnými funkcemi, protože zařízení nemá žádný způsob, jak zjistit, kde se nachází v prostoru. Přidání prvků do zdí prostoru je obvykle dobrým způsobem, jak zlepšit sledování. Pomáhají plakáty, symboly při klepnutí na zeď, rostliny, jedinečné objekty nebo jiné podobné položky. Dobrým příkladem prostředí, které vede k dobrému sledování, je schůdný schůdný pracovní prostor – v jedné oblasti je spousta různých funkcí.  
 
-Kromě toho používejte jedinečné funkce ve stejném prostoru. Například stejný plakát, který se několikrát opakuje nad zdí, způsobí zmatky zařízení, protože HoloLens nebude vědět, na který z opakujících se plakátů se dívá. Jedním z běžných možností, jak přidat jedinečné prvky, je použití čar maskovací pásky k vytvoření jedinečných, netýkajících se vzorů podél zdí a podlahy prostoru.  
+Kromě toho používejte jedinečné funkce ve stejném prostoru. Například stejný plakát, který se několikrát opakuje nad zdí, způsobí zmatky zařízení, protože HoloLens nebude vědět, na který z opakujících se plakátů se dívá. Jedním z běžných možností, jak přidat jedinečné vlastnosti, je použít čáry maskovací pásky k vytvoření jedinečných, netýkajících se vzorů podél zdí a podlahy prostoru.  
 
-Dobrá otázka, kterou byste si měli položit: kdybyste viděli jen malé množství scény, mohli byste se v prostoru jedinečného umístění? Pokud ne, bude mít zařízení pravděpodobně také problémy se sledováním.
+Dobrá otázka, kterou byste si měli položit: kdybyste viděli jen malé množství scény, mohli byste se v prostoru jedinečně najít? Pokud ne, bude mít zařízení pravděpodobně také problémy se sledováním.
 
 #### <a name="wormholes"></a>Červí díry
 
 Pokud máte dvě oblasti nebo oblasti, které vypadají stejně, může si sledování myslet, že jsou stejné. To vede k tomu, že se zařízení ošidí, aby si myslelo, že je někde jinde. Těmto typům opakujících se oblastí říkáme *wormholes*.  
 
-Pokud chcete zabránit vzniku wormholů, zkuste zabránit identickým oblastem ve stejném prostoru. Identické oblasti mohou někdy zahrnovat stanice továrny, okna v budově, serverové racky nebo pracovní stanice. Oblasti označování nebo přidávání jedinečných funkcí do každé podobné oblasti můžou pomoct zmírnit wormholy.
+Pokud chcete zabránit vzniku wormholů, zkuste zabránit identickým oblastem ve stejném prostoru. Identické oblasti mohou někdy zahrnovat stanice továrny, okna v budově, serverové racky nebo pracovní stanice. Označování oblastí nebo přidávání jedinečných funkcí do každé podobné oblasti může pomoct zmírnit wormholy.
 
 ### <a name="movement-in-a-space"></a>Pohyb v prostoru
 
@@ -85,9 +85,9 @@ Méně blýskaných objektů se snadněji sleduje.
 
 ### <a name="wi-fi-fingerprint-considerations"></a>Wi-Fi otisků prstů
 
-Pokud je Wi-Fi povoleno, budou data mapy korelovat s otiskem prstu Wi-Fi, i když nejsou připojená ke skutečné síti nebo směrovači Wi-Fi. Bez Wi-Fi informací může být rozpoznání prostoru a hologramů o něco pomalejší. Pokud se Wi-Fi výrazně změní, může si zařízení myslet, že je zcela v jiném prostoru.
+Pokud je Wi-Fi povoleno, budou data mapy korelovat s otiskem prstu Wi-Fi, i když nejsou připojená ke skutečné síti nebo směrovači Wi-Fi. Bez Wi-Fi informací může být rozpoznání prostoru a hologramů o něco pomalejší. Pokud se Wi-Fi signály výrazně změní, může si zařízení myslet, že je zcela v jiném prostoru.
 
-Identifikace sítě (například SSID nebo MAC adresa) se microsoftu nepošla a všechny odkazy na Wi-Fi se uchovávají místně na HoloLens.
+Identifikace sítě (například SSID nebo adresa MAC) se microsoftu nepošla a všechny odkazy na Wi-Fi se uchovávají místně na HoloLens.
 
 ## <a name="mapping-new-spaces"></a>Mapování nových prostorů
 
@@ -95,9 +95,9 @@ Když zadáte novou mezeru (nebo načtete existující mezeru), uvidíte, jak se
 
 ## <a name="environment-management"></a>Správa prostředí
 
-Existují dvě nastavení, která uživatelům umožňují "vyčistit" hologramy a způsobit HoloLens že "zapomenou" prostor. Existují v **Hologramy a** prostředích v aplikaci nastavení, druhé nastavení se  také zobrazí v části Ochrana osobních údajů v aplikaci nastavení.  
+Existují dvě nastavení, která uživatelům umožňují "vyčistit" hologramy a způsobit HoloLens že "zapomenou" prostor. Existují v **Hologramy a** prostředích v aplikaci nastavení a druhé nastavení  se v aplikaci nastavení zobrazí také v části Ochrana osobních údajů.  
 
-1. **Odstraňte hologramy v okolí.** Když toto nastavení vyberete, HoloLens odstraní všechny ukotvené hologramy a všechna uložená data mapy pro "aktuální prostor", kde se zařízení nachází. Jakmile se hologramy znovu umístí do stejného prostoru, vytvoří se nový oddíl mapy, který se uloží do databáze pro toto umístění.
+1. **Odstraňte hologramy v okolí.** Když toto nastavení vyberete, HoloLens vymaže všechny ukotvené hologramy a všechna uložená data mapy pro "aktuální prostor", kde se zařízení nachází. Jakmile se hologramy znovu umístí do stejného prostoru, vytvoří se nový oddíl mapy, který se uloží do databáze pro toto umístění.
 
 1. **Odstraňte všechny hologramy**. Výběrem tohoto nastavení HoloLens všechna data mapy a ukotvené hologramy v celých databázích prostorů. Nebudou znovu zjištěny žádné hologramy a všechny hologramy musí být nově umístěny, aby bylo možné znovu ukládat oddíly mapy v databázi.
 

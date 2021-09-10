@@ -18,11 +18,11 @@ appliesto:
 - HoloLens 2
 keywords: HoloLens 2, komerční, funkce, mdm, správa mobilních zařízení, celoobrazovkový režim, aplikace, identita, Bitlocker, iris, Windows Hello, Azure se zapnutý, výkonný pilot, mixed reality, WDAC
 ms.openlocfilehash: 0c47eedad0d5a23249c48356765b74e4dbeac33e
-ms.sourcegitcommit: 58b124ba1722b2dff31d93723dd269df0f8319c4
+ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2021
-ms.locfileid: "123483190"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "124427657"
 ---
 # <a name="hololens-2-capabilities-and-solutions"></a>možnosti a řešení HoloLens 2
 
@@ -142,7 +142,7 @@ Seznamte se s [požadavky na licencování](hololens-licenses-requirements.md) p
 
 ## <a name="next-steps"></a>Další kroky
 > [!div class="nextstepaction"]
-> [prozkoumat možnosti HoloLens 2](hololens2-options.md)
+> [Prozkoumání HoloLens 2 možností](hololens2-options.md)
 
 > [!div class="nextstepaction"]
->[plánování nasazení HoloLens 2](hololens-requirements.md) 
+>[Plánování HoloLens 2](hololens-requirements.md) 
