@@ -1,7 +1,7 @@
 ### YamlMime:FAQ
 metadata:
   title: Nejčastější dotazy k edici HoloLens 2 Development Edition
-  description: Díky nejčastějším dotazům k zařízení hybridní reality HoloLens 2 Development Edition budete v aktuálních informacích.
+  description: Získejte aktuální informace o nejčastějších dotazech k zařízení hybridní reality HoloLens 2 Development Edition.
   keywords: Hololens 2 purchasing options, HoloLens options, Developer Edition
   author: evmill
   ms.author: v-evmill
@@ -16,18 +16,18 @@ metadata:
   appliesto:
   - HoloLens 2
   ms.openlocfilehash: 85631d756285f4111016e39dc946733bb1e12d3c
-  ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+  ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/10/2021
-  ms.locfileid: "124428886"
+  ms.lasthandoff: 09/13/2021
+  ms.locfileid: "126032291"
 title: Nejčastější HoloLens 2 Development Edition
 summary: ''
 sections:
 - name: Obecné otázky
   questions:
   - question: >
-      Co mám získat s verzí HoloLens 2 Development Edition?
+      Co mám získat s edicí HoloLens 2 Development Edition?
     answer: >
       Edice HoloLens 2 Development Edition zahrnuje kredity Azure HoloLens 2, 500 USD, zkušební verzi Unity Pro na 3 měsíce a zkušební verzi modulu plug-in Pixyz na 3 měsíce.
   - question: >
@@ -49,23 +49,23 @@ sections:
   - question: >
       Co je Unity Pro?
     answer: >
-      Unity Pro je 3D platforma v reálném čase pro malá/střední studia a firmy. Je určená pro týmy s kombinací technických a netechnických dovedností. [Další informace](https://store.unity.com/products/unity-pro)
+      Unity Pro je 3D platforma v reálném čase pro malá/střední studia/firmy. Je určená pro týmy s kombinací technických a netechnických dovedností. [Další informace](https://store.unity.com/products/unity-pro)
   - question: >
       Co je modul plug-in Pixyz?
     answer: >
       Modul plug-in Pixyz čte a převádí téměř jakýkoli formát, optimalizuje ho a převede v Unity a připraví ho tak, aby poskytoval prostředky připravené k použití pro aplikace v reálném čase. [Další informace](https://unity.com/products/pixyz)
   - question: >
       Je dostupná edice HoloLens 2 Development Edition?
-    answer: "Ano, [pro HoloLens 2 Development Edition](https://ms.liftforward.com/hololens?product=hololens-development-edition) je nyní k dispozici pouze v USA. \n"
+    answer: "Ano, [v případě HoloLens 2 Development Edition](https://ms.liftforward.com/hololens?product=hololens-development-edition) je nyní k dispozici pouze v USA. \n"
   - question: >
       Kdo mám dotazy ohledně nároků na HoloLens 2 Development Edition?
     answer: >
-      V případě jakýchkoli dotazů souvisejících s nároky se obraťte na svého prodejního specialistu na 866-425-4709, Po až Pátek, 6:00 až 18:00, PST.
+      S dotazy souvisejícími s nároky se obraťte na svého prodejního specialistu na 866-425-4709, Po až Pátek, 6:00 až 18:00, PST.
   - question: "Může moje společnost koupit několik zařízení HoloLens 2 Development Edition? \n"
     answer: "Toto zařízení je pro vývojáře, kteří budou vytvářet řešení hybridní reality. Omezíme jeden nákup na transakci zákazníka. Pokud vaše společnost chce koupit několik zařízení Development Edition, bude vyžadovat samostatné transakce k nákupu HoloLens 2 Development Edition jménem společnosti. \n"
   - question: "Můžu svým zákazníkům HoloLens 2 Development Edition? \n"
     answer: >
-      Ano, toto zařízení je určené k vytváření prototypů a testování řešení hybridní reality.
+      Ano, toto zařízení je určené k použití pro vytváření prototypů a testování řešení hybridní reality.
   - question: "Kde si můžu koupit HoloLens 2 Development Edition? \n"
     answer: "HoloLens 2 Development Edition se prodává výhradně na Microsoft Store.  \n"
   - question: "Můžu vrátit svou edici HoloLens 2 Development Edition?  \n"
@@ -170,24 +170,24 @@ sections:
       Pokud chcete získat pomoc s dotazy ohledně vašeho ID Unity, účtu, organizace nebo předplatných, navštivte support.unity3d.com
 
 
-      Pokud chcete podporu specifickou pro Pixyz (po uplatnění zkušební verze), navštivte [Pixyz-software.com/support](http://pixyz-software.com/support)
+      Pro podporu specifickou pro Pixyz (po uplatnění zkušební verze) navštivte [Pixyz-software.com/support](http://pixyz-software.com/support) .
 - name: Azure
   questions:
   - question: >
-      Jak můžu uplatnit svůj kredit Azure ve výši 500 USD?
+      Jak můžu uplatnit kredit $500 Azure?
     answer: >
-      Pokud chcete uplatnit 500 USD v kreditech Azure, Azure Pass propagační kód a aktivujte své předplatné. [Další informace](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
+      Pokud chcete uplatnit kredity Azure $500, uplatněte Azure Pass propagační kód a aktivujte své předplatné. [Další informace](https://www.microsoftazurepass.com/Home/HowTo?Length=5)
 
 
-      Zkontrolujte smlouvu Azure Pass [předplatného a](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) [podrobnosti o nabídce.](https://azure.microsoft.com/en-us/offers/azure-pass/)
+      Přečtěte si informace o [smlouvě o předplatném](https://azure.microsoft.com/support/legal/subscription-agreement/?country=US) Azure Pass a [o nabídkách](https://azure.microsoft.com/en-us/offers/azure-pass/).
   - question: >
-      Kdy vyprší platnost mého kreditu Azure ve výši 500 USD?
+      Kdy vyprší platnost kreditu na $500 Azure?
     answer: >
-      Platnost vašeho kreditu Azure 500 USD vyprší 90 dní po aktivaci vašeho kódu klíče Azure.
+      Po aktivaci kódu Azure Key vyprší 90 dnů platnost kreditu na $500 Azure.
   - question: >
-      Co můžu dělat s kredity Azure?
+      Co se dá dělat s kredity Azure?
     answer: >
-      S kredity Azure můžete začít vytvářet s neustále se rozšiřující&#39;cloudových služeb od Microsoftu. Kredity Azure, které jsou součástí edice HoloLens 2 Development Edition, umožňují zákazníkům rychle začít s vytvářením a testováním aplikací hybridní reality v Azure. Úplné podrobnosti o sestavování v Azure najdete v tématu [Zdroje informací o Azure.](https://azure.microsoft.com/en-us/resources/)
+      Kredity Azure vám umožní začít sestavovat s Microsoft&#39;s neustále se rozšiřující sadou cloudových služeb. kredity Azure, které jsou součástí vývojové edice HoloLens 2, umožňují zákazníkům rychle začít sestavovat a testovat smíšené aplikace realit v Azure. Úplné podrobnosti o sestavování v Azure najdete v [prostředcích Azure](https://azure.microsoft.com/en-us/resources/) .
   - question: >
-      Kde se dozvím další informace o službách Azure hybridní reality?
-    answer: Microsoft nabízí sadu služeb hybridní reality, které vývojářům umožňují vytvářet a testovat řešení hybridní reality. [Další informace](/windows/mixed-reality/develop/mixed-reality-cloud-services)
+      Kde se mohu dozvědět více o službách Azure Mixed reality?
+    answer: Microsoft nabízí sadu smíšených služeb realit, které vývojářům umožňují vytvářet a testovat hybridní řešení realit. [Další informace](/windows/mixed-reality/develop/mixed-reality-cloud-services)

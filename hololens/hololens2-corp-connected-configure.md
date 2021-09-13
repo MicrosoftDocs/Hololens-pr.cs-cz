@@ -1,5 +1,5 @@
 ---
-title: Průvodce nasazením – Průvodci podnikovým HoloLens 2 s Dynamics 365 – Konfigurace
+title: Průvodce nasazením – Průvodci podnikovými HoloLens 2 s Dynamics 365 – konfigurace
 description: Zjistěte, jak nastavit konfigurace pro nasazení HoloLens 2 přes podnikovou připojenou síť pomocí průvodců Dynamics 365.
 keywords: HoloLens, správa, firemní připojení, Průvodci Dynamics 365, AAD, Azure AD, MDM, Mobile Správa zařízení
 author: joyjaz
@@ -15,17 +15,17 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 9457acd2f53d0d3127d6c68d620b660f6e09866d
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428096"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032315"
 ---
 # <a name="configure---corporate-connected-guide"></a>Konfigurace – Průvodce připojeným podnikem
 
 ## <a name="azure-users-and-groups"></a>Uživatelé a skupiny Azure
 
-Azure a Intune tímto rozšířením používají uživatele a skupiny k přiřazení konfigurací a licencí. Kvůli ověření tohoto toku nasazení a kontrole, jestli můžete vytvořit a provozovat průvodce,&#39;uživatelský účet.
+Azure a Intune tímto rozšířením používají uživatele a skupiny k přiřazení konfigurací a licencí. Kvůli ověření tohoto toku nasazení a kontrole, jestli můžete vytvořit a provozovat průvodce,&#39;potřebovat uživatelský účet.
 
 Můžeme vytvořit jednu skupinu uživatelů speciálně pro přiřazování licencí.
 
@@ -33,20 +33,20 @@ Pokud ještě&#39;přístup ke dvěma účtům Azure AD ve skupině uživatelů,
 
 - [Jak vytvořit uživatele](/mem/intune/fundamentals/quickstart-create-user)
 - [Jak vytvořit skupinu](/mem/intune/fundamentals/quickstart-create-group)
-- [Přidání uživatelů do skupiny](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – Přidání vytvořených uživatelů k vytvoření skupiny
+- [Přidání uživatelů do skupiny](/azure/active-directory/fundamentals/active-directory-groups-members-azure-portal) – Přidání vytvořených uživatelů pro vytvoření skupiny
 - [Konfigurace Azure AD tak, aby skupině uživatelů umožnila připojovat](/azure/active-directory/devices/azureadjoin-plan#configure-your-device-settings) se k zařízením – Ujistěte se, že nová skupina uživatelů má oprávnění k registraci zařízení do Azure AD.
 
 ## <a name="auto-enrollment-on-hololens-2"></a>Automatická registrace na HoloLens 2
 
 Pokud chcete mít bezproblémové a bezproblémové prostředí, můžete použít nastavení AADJ (Azure Active Directory Join) a automatické registrace do Intune pro zařízení HoloLens 2. To umožňuje uživatelům zadat přihlašovací údaje organizace během OOBE a automaticky se zaregistrovat ve službě Azure AD a zaregistrovat zařízení do MDM.
 
-Pomocí [Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home)můžeme vybrat služby a procházet na několika stránkách, dokud nebude možné vybrat Získat Premium zkušební verzi. Můžete si všimnout, že Azure Active Directory Premium 1 a 2 – pro automatickou registraci P1 je dostačující. Můžeme vybrat Intune, vybrat obor uživatele pro automatickou registraci a vybrat skupinu, která byla vytvořena dříve.
+Pomocí [Microsoft Endpoint Manager](https://endpoint.microsoft.com/#home)můžeme vybrat služby a procházet několik stránek, dokud nebude možné vybrat Získat zkušební Premium verzi. Můžete si všimnout, že Azure Active Directory Premium 1 a 2 – pro automatickou registraci P1 je dostačující. Můžeme vybrat Intune, vybrat obor uživatele pro automatickou registraci a vybrat skupinu, která byla vytvořena dříve.
 
 Úplné podrobnosti a kroky najdete v průvodci [povolením automatické registrace pro Intune.](/mem/intune/enrollment/quickstart-setup-auto-enrollment)
 
 ## <a name="corporate-wi-fi-connectivity"></a>Připojení Wi-Fi podnikové sítě
 
-Připojení Wi-Fi podnikové sítě budou často vyžadovat ověřování pomocí certifikátů pro zákazníky, kteří používají HoloLens 2. Tyto certifikáty budete muset nasadit pomocí infrastruktury certifikátů Simple Certificate Enrollment Protocol (SCEP) nebo PKCS (Public Key Cryptography Standard), která je integrovaná s řešením MDM. Použití Intune k nasazení Wi-Fi profilů, certifikátů a nastavení proxy serveru vytváří bezproblémové prostředí pro koncové uživatele.
+Firemní Wi-Fi připojení budou často vyžadovat ověřování pomocí certifikátů pro zákazníky, kteří používají HoloLens 2. Tyto certifikáty budete muset nasadit pomocí infrastruktury certifikátů Simple Certificate Enrollment Protocol (SCEP) nebo PKCS (Public Key Cryptography Standard), která je integrovaná s řešením MDM. Použití Intune k nasazení Wi-Fi profilů, certifikátů a nastavení proxy serveru vytváří bezproblémové prostředí pro koncové uživatele.
  
 ### <a name="deploy-certificates-and-wi-fi-profiles"></a>Nasazení certifikátů a Wi-Fi profilů
 
@@ -63,9 +63,9 @@ Pokud chcete nasadit certifikáty a profily prostřednictvím Microsoft Endpoint
     > **Profily certifikátů bez data vypršení platnosti se nenasadí.**
 
     > [!Note]
-    > Vzhledem k tomu, že HoloLens 2 se považuje za sdílené zařízení, t.j. více uživatelů na zařízení, doporučuje se místo uživatelských certifikátů nasadit certifikáty zařízení pro ověřování Wi-Fi tam, kde je to možné.
+    > Vzhledem k tomu, že HoloLens 2 se považuje za sdílené zařízení, t.j. více uživatelů na zařízení, doporučujeme místo uživatelských certifikátů nasadit certifikáty zařízení, pokud je Wi-Fi možné.
 
-3. Vytvořte profil pro podnikovou síť Wi-Fi sítě (viz [Nastavení Wi-Fi pro Windows 10 a novější zařízení).](/intune/wi-fi-settings-windows) V rámci Wi-Fi můžete v rámci své organizace použít nastavení proxy serveru.
+3. Vytvořte profil pro podnikovou síť Wi-Fi sítě (viz [Nastavení Wi-Fi pro Windows 10 a novější zařízení).](/intune/wi-fi-settings-windows) V rámci Wi-Fi profilu můžete použít nastavení proxy serveru v rámci vaší organizace.
 
     Možnosti:
     - **Žádné:** nenakonfiguruje se žádné nastavení proxy.
@@ -75,7 +75,7 @@ Pokud chcete nasadit certifikáty a profily prostřednictvím Microsoft Endpoint
     Další informace o souborech PAC najdete v tématu [Soubor PAC (Proxy Auto-Configuration)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře web od jiných společností než Microsoft).
  
     > [!Note]
-    > Pokud je to možné, doporučujeme Wi-Fi zařízení přiřadit ke skupinám zařízení, a ne skupinám uživatelů.
+    > Pokud je to možné, Wi-Fi profil zařízení přiřaděl skupinám zařízení, a ne skupinám uživatelů.
      
     > [!Tip]
     > Můžete také exportovat pracovní profil Wi-Fi z Windows 10 počítače ve vaší podnikové síti. Tento export vytvoří soubor XML se všemi aktuálními nastaveními. Pak tento soubor naimportujte do Intune a použijte ho jako profil Wi-Fi pro zařízení s HoloLens 2. Viz [Import nastavení Wi-Fi pro zařízení s Windows 8.1 a novější verzí v Microsoft Intune](/mem/intune/configuration/wi-fi-settings-import-windows-8-1).
@@ -147,39 +147,39 @@ Abyste mohli [nastavit produkční prostředí,](/dynamics365/mixed-reality/guid
 
 V tomto průvodci [vytvoříte prostředí Microsoft Dataverse:](/dynamics365/mixed-reality/guides/setup-step-two)
 
-1. Začněte použitím příkazu [centrum pro správu Power Platform](https://admin.powerplatform.microsoft.com/environments) a vytvořením nového prostředí.
-2. Při vytváření **nového prostředí** pro typ, který&#39;vyberete **Produkční**. 
+1. Začněte použitím [centrum pro správu Power Platform](https://admin.powerplatform.microsoft.com/environments) a vytvořením nového prostředí.
+2. Při vytváření **nového prostředí** jako Typ **vyberete**&#39;produkční **prostředí**.
 3. Je důležité přepnout na **Vytvořit databázi pro toto prostředí?**  na **Ano.**
 4. V dialogovém  **okně Přidat**  databázi nastavte možnost Povolit aplikace  **Dynamics 365**  na  **Ano.**
 
-Budete chtít zvětšit maximální velikost souborů v DataItem. Zvýšení maximální velikosti souboru vám umožní nahrávat větší 3D modely nebo videosoubory, které budete používat později v průvodcích. Použijte krátký průvodce [pro změnu maximální velikosti souboru pro nahrání](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size).
+Maximální velikost souboru položek v datovém zdroji byste měli zvětšit. Zvýšení maximální velikosti souboru vám umožní nahrát větší 3D modely nebo videosoubory, které použijete později v průvodcích. Pokud chcete změnit maximální [velikost nahrání souboru, postupujte podle krátké příručky.](/dynamics365/mixed-reality/guides/setup-step-two#change-the-maximum-upload-file-size)
 
-Nakonec budete muset [řešení nainstalovat a nakonfigurovat](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution). V [centru pro správu Power Platform](https://admin.powerplatform.microsoft.com/environments)vyberte **prostředky** \& gt;  **Aplikace dynamics 365**, v seznamu vyberte **Průvodce Dynamics 365** a pak vyberte **nainstalovat**.  
+Nakonec budete muset řešení nainstalovat [a nakonfigurovat.](/dynamics365/mixed-reality/guides/setup-step-two#install-and-configure-the-solution) V [centrum pro správu Power Platform](https://admin.powerplatform.microsoft.com/environments)vyberte Prostředky  \& gt;  **Aplikace Dynamics 365,** v seznamu vyberte **Příručky Dynamics 365** a pak vyberte **Nainstalovat.**  
 
-Než budete moct aplikace používat, musíte [Přidat roli zabezpečení Průvodce](/dynamics365/mixed-reality/guides/assign-role) .
+Abyste [mohli aplikace používat,](/dynamics365/mixed-reality/guides/assign-role) musíte přidat roli zabezpečení Příručky.
 
-### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Vytvoření průvodce testováním na počítači pomocí vytváření obsahu
+### <a name="create-a-test-guide-on-your-pc-via-authoring"></a>Vytvoření testovací příručky na počítači prostřednictvím vytváření
 
-Při vytváření vodítek se vždycky zahájíte na svém počítači. Vytvoření kroků, výběr modelů a postup při ukotvení průvodce. za tímto se bude následovat umístění obsahu pro vaši příručku později v části v režimu vytváření na zařízení HoloLens. Pro účely tohoto průvodce doporučujeme vytvořit krátký průvodce testováním s minimálními kroky a modely.
+Při vytváření průvodců vždy začnete na svém počítači. Vytvoření kroků, výběr modelů a ukotvení průvodce Za tímto krokem umístíte obsah pro průvodce později v režimu vytváření obsahu na HoloLens zařízení. Pro účely tohoto průvodce doporučujeme, abyste si krátkého testovacího průvodce s minimálními kroky a modely.
 
-Pokud se chcete seznámit s vytvářením obsahu pro příručky, začněte tady s [přehledem vytváření](/dynamics365/mixed-reality/guides/authoring-overview). Pokud chcete získat přehled o rychlém sledování, podívejte se na toto krátké video.
+Pokud se chcete začít učit o vytváření průvodců, začněte tady s [přehledem vytváření.](/dynamics365/mixed-reality/guides/authoring-overview) Nebo pokud chcete získat rychlý přehled, podívejte se na toto krátké video.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EC24dMlAy90" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## <a name="optional-kiosk-mode"></a>Volitelné: celoobrazovkový režim
+## <a name="optional-kiosk-mode"></a>Volitelné: Bezobrazovový režim
 
-Celoobrazovkový režim je režim, který umožňuje správci IT nakonfigurovat uživatelské rozhraní nabídky Start tak, aby zobrazovalo jenom jednu aplikaci nebo výběr aplikací. Veřejný terminál se dá použít taky pro konkrétní uživatele, skupiny nebo na úrovni zařízení. a v některých případech vyloučí některé uživatele z veřejného terminálu a zároveň jim umožní přístup k běžné nabídce Start.
+Bezobrazovový režim je režim, který umožňuje správci IT nakonfigurovat uživatelské rozhraní nabídky Start tak, aby se v ní zobrazují jenom jedna aplikace nebo výběr aplikací. Beziosk se také může použít pro konkrétní uživatele, skupiny nebo na úrovni zařízení. a v některých případech některé uživatele vylučte z veřejného terminálů, aby jim stále povoloval přístup k běžné nabídce Start.
 
-Celoobrazovkový režim má mnoho různých proměnných, v oboru i konfiguracích, které lze nastavit, a také metody nasazení veřejného terminálu na HoloLens. Z důvodu všech těchto proměnných je celoobrazovkový režim ponechán jako _volitelný_ pro tento průvodce a nebude znovu navštěvovat. pokud se domníváte, že máte potřebnou firmu omezit dostupné aplikace na uživatele nebo chcete získat další informace, můžete si být jisti, jak [nastavit HoloLens jako veřejný terminál](/hololens/hololens-kiosk).
+Bezobrazovový režim má mnoho různých proměnných, a to jak v rozsahu, tak v konfiguracích, které je možné nastavit, a také metody nasazení veřejného terminálu do HoloLens. Vzhledem ke všem těmto proměnným je  režim Veřejného terminálu pro tohoto průvodce volitelný a nebude se k tomu vracet. Pokud se domníváte, že máte obchodní potřebu omezit dostupné aplikace na uživatele nebo chcete získat další informace, přečtěte si, jak nastavit HoloLens jako [beziosk](/hololens/hololens-kiosk).
 
 ## <a name="optional-wdac"></a>Volitelné: WDAC
 
-WDAC umožňuje správci IT nakonfigurovat zařízení tak, aby blokovala spuštění aplikací na zařízeních. To se liší od metod omezení zařízení, jako je například celoobrazovkový režim, kde se uživatel zobrazuje s uživatelským ROZHRANÍm, které skrývá aplikace na zařízení, ale je možné ho přesto spustit. I když je implementováno WDAC, aplikace jsou stále viditelné v seznamu všechny aplikace, ale WDAC zastaví aplikace a procesy, aby je mohl uživatel zařízení spustit.
+WdAC umožňuje správci IT nakonfigurovat svá zařízení tak, aby blokují spouštění aplikací na zařízeních. To se liší od metod omezení zařízení, jako je například režim veřejného terminála, kde se uživateli zobrazí uživatelské rozhraní, které skryje aplikace v zařízení, ale přesto je můžete spustit. I když je nástroj WDAC implementován, aplikace se stále zobrazí v seznamu Všechny aplikace, ale nástroj WDAC zastaví spuštění těchto aplikací a procesů uživatelem zařízení.
 
-další informace najdete v [WDAC Windows PowerShell a povolení nebo blokování aplikací na zařízeních HoloLens 2 pomocí Microsoft Intune](/mem/intune/configuration/custom-profile-hololens).
+Další informace najdete v referenčních informacích: Použití wdac a Windows PowerShell k povolení nebo blokování aplikací na [HoloLens 2 s Microsoft Intune](/mem/intune/configuration/custom-profile-hololens).
 
 [Windows Defender Řízení aplikací – WDAC](/hololens/windows-defender-application-control-wdac)
 
 ## <a name="next-step"></a>Další krok 
 > [!div class="nextstepaction"]
-> [Firemní připojené nasazení – nasazení](hololens2-corp-connected-deploy.md)
+> [Nasazení připojené k podnikové síti – nasazení](hololens2-corp-connected-deploy.md)

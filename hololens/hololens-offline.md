@@ -1,7 +1,7 @@
 ---
 title: Správa koncových bodů připojení pro HoloLens
-description: naučte se, jak nastavit HoloLens přes Wi-Fi síť při správě a konfiguraci koncových bodů připojení.
-keywords: HoloLens, offline, OOBE
+description: Zjistěte, jak nastavit připojení HoloLens přes Wi-Fi sítě při správě a konfiguraci koncových bodů připojení.
+keywords: hololens, offline, OOBE
 audience: ITPro
 ms.date: 07/01/2019
 ms.assetid: b86f603c-d25f-409b-b055-4bbc6edcd301
@@ -19,33 +19,33 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: f2d9faafac2f84b727b1e10be83d4d1b53a707b4
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427772"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035989"
 ---
 # <a name="manage-connection-endpoints-for-hololens"></a>Správa koncových bodů připojení pro HoloLens
 
-některé součásti HoloLens, aplikace a související služby přenášejí data do koncových bodů sítě microsoftu. Tento článek obsahuje seznam různých koncových bodů a adres URL, které je potřeba povolit ve vaší konfiguraci sítě (třeba proxy nebo bráně firewall), aby tyto součásti byly funkční.    
+Některé HoloLens, aplikace a související služby přenesou data do koncových bodů sítě Microsoftu. Tento článek uvádí různé koncové body a adresy URL, které musí být povolené v konfiguraci sítě (např. proxy server nebo brána firewall), aby tyto komponenty byly funkční.    
 
-## <a name="near-offline-setup"></a>Téměř offline instalace
+## <a name="near-offline-setup"></a>Nastavení v blízkosti offline režimu
 
-HoloLens podporuje omezené množství offline prostředí pro zákazníky, kteří mají omezení síťového prostředí. HoloLens ale potřebuje síťové připojení k přechodu prostřednictvím počátečního nastavení zařízení a musí být povolené tyto adresy url:
+HoloLens podporuje omezenou sadu offline prostředí pro zákazníky, kteří mají omezení síťového prostředí. Ale HoloLens připojení k síti, aby prošly počátečním nastavením zařízení, a musí být povolené následující adresy URL:
 
 | Účel | URL |
 |------|------|
-| ZPROSTŘEDKOVATELŮ identity | https://sdx.microsoft.com/frx/idps |
+| IDPS | https://sdx.microsoft.com/frx/idps |
 | [NCSI](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#bkmk-ncsi) |  http://www.msftconnecttest.com/connecttest.txt  |
 | AADv9 | https://login.microsoftonline.com/WebApp/CloudDomainJoin/9 |
 | AADv10 | https://login.microsoftonline.com/WebApp/CloudDomainJoin/10 |
-| PIN kód AAD | https://account.live.com/aadngc?uiflavor=win10&showSuccess=1 |
+| AAD Pin | https://account.live.com/aadngc?uiflavor=win10&showSuccess=1 |
 | MSA | https://login.live.com/ppsecure/inlineconnect.srf?id=80600 |
-| MSA kód PIN | https://account.live.com/msangc?fl=enroll |
+| MSA Pin | https://account.live.com/msangc?fl=enroll |
 
 ## <a name="endpoint-configuration"></a>Konfigurace koncového bodu
 
-kromě výše HoloLens uvedeného seznamu musí být ve vaší konfiguraci sítě povolené tyto koncové body:.
+Kromě výše uvedeného seznamu je potřeba v konfiguraci sítě HoloLens následující koncové body, aby bylo možné plně využívat funkce sítě.
 
 
 | Účel | URL |
@@ -59,7 +59,7 @@ kromě výše HoloLens uvedeného seznamu musí být ve vaší konfiguraci sít�
 |                                                     | client.wns.windows.com                                              |
 |                                                     | crl.microsoft.com/pki/crl/*                                         |
 |                                                     | ctldl.windowsupdate.com                                             |
-|                                                     | * displaycatalog.mp.microsoft.com                                    |
+|                                                     | *displaycatalog.mp.microsoft.com                                    |
 |                                                     | dm3p.wns.windows.com                                                |
 |                                                     | *microsoft.com/pkiops/*                                             |
 |                                                     | ocsp.digicert.com/*                                                 |
@@ -70,7 +70,7 @@ kromě výše HoloLens uvedeného seznamu musí být ve vaší konfiguraci sít�
 |                                                     | crl.microsoft.com/pki/crl/*                                         |
 |                                                     | ocsp.digicert.com/*                                                 |
 |                                                     | https://www.microsoft.com/pkiops/*                                          |
-| Cortana a hledání                                  | Store-images. * Microsoft. com                                         |
+| Cortana a hledání                                  | store-images.*microsoft.com                                         |
 |                                                     | www.bing.com/client                                                 |
 |                                                     | www.bing.com                                                        |
 |                                                     | www.bing.com/proactive                                              |
@@ -80,7 +80,7 @@ kromě výše HoloLens uvedeného seznamu musí být ve vaší konfiguraci sít�
 |                                                     | fp-vp.azureedge.net                                                 |
 |                                                     | odinvzc.azureedge.net                                               |
 |                                                     | spo-ring.msedge.net                                                 |
-| Ověřování zařízení                               | login.live.com *                                                     |
+| Ověřování zařízení                               | login.live.com*                                                     |
 | Metadata zařízení                                     | dmd.metaservices.microsoft.com                                      |
 | Umístění                                            | inference.location.live.net                                         |
 |                                                     | location-inference-westus.cloudapp.net                              |
@@ -90,27 +90,27 @@ kromě výše HoloLens uvedeného seznamu musí být ve vaší konfiguraci sít�
 |                                                     | co4.telecommand.telemetry.microsoft.com                             |
 |                                                     | cs11.wpc.v0cdn.net                                                  |
 |                                                     | cs1137.wpc.gammacdn.net                                             |
-|                                                     | modern.watson.data.microsoft.com *                                   |
+|                                                     | modern.watson.data.microsoft.com*                                   |
 |                                                     | watson.telemetry.microsoft.com                                      |
 | Licencování                                           | licensing.mp.microsoft.com                                          |
 | Účet Microsoft                                   | login.msa.akadns6.net                                               |
 |                                                     | us.configsvc1.live.com.akadns.net                                   |
 | Microsoft Edge                                      | iecvlist.microsoft.com                                              |
-| Služba přesměrování služby přesměrovaná přes propojení společnosti Microsoft (FWLink) | go.microsoft.com                                                    |
-| Microsoft Store                                     | *. wns.windows.com                                                   |
+| Microsoft Forward Link Redirection Service (FWLink) | go.microsoft.com                                                    |
+| Microsoft Store                                     | *.wns.windows.com                                                   |
 |                                                     | storecatalogrevocation.storequality.microsoft.com                   |
-|                                                     | IMG-prod-CMS-RT-Microsoft-com *                                      |
+|                                                     | img-prod-cms-rt-microsoft-com*                                      |
 |                                                     | store-images.microsoft.com                                          |
-|                                                     | . md.mp.microsoft.com                                                |
-|                                                     | * displaycatalog.mp.microsoft.com                                    |
+|                                                     | .md.mp.microsoft.com                                                |
+|                                                     | *displaycatalog.mp.microsoft.com                                    |
 |                                                     | pti.store.microsoft.com                                             |
 |                                                     | storeedgefd.dsx.mp.microsoft.com                                    |
 |                                                     | markets.books.microsoft.com                                         |
 |                                                     | share.microsoft.com                                                 |
-| Indikátor stavu připojení k síti (NCSI)          | www.msftconnecttest.com *                                            |
-| Office                                              | *. c-msedge.net                                                      |
-|                                                     | *. e-msedge.net                                                      |
-|                                                     | *. s-msedge.net                                                      |
+| Indikátor stavu síťového připojení (NCSI)          | www.msftconnecttest.com*                                            |
+| Office                                              | *.c-msedge.net                                                      |
+|                                                     | *.e-msedge.net                                                      |
+|                                                     | *.s-msedge.net                                                      |
 |                                                     | nexusrules.officeapps.live.com                                      |
 |                                                     | ocos-office365-s2s.msedge.net                                       |
 |                                                     | officeclient.microsoft.com                                          |

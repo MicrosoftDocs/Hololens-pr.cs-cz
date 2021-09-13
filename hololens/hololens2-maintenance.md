@@ -1,6 +1,6 @@
 ---
-title: HoloLens 2 čištění – nejčastější dotazy
-description: Získejte aktuální odpovědi na všechny nejčastější dotazy týkající se čištění a údržby zařízení HoloLens 2.
+title: HoloLens 2 – časté otázky týkající se čištění
+description: získejte aktuální odpovědi na všechny vaše nejčastější dotazy, které vám pomohou vyčistit a udržovat zařízení HoloLens 2.
 author: Teresa-Motiv
 ms.author: v-tea
 ms.date: 4/14/2020
@@ -16,18 +16,18 @@ manager: jarrettr
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 286e90fab7be0c4132cfab15306cc57c52607ccf
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427795"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032280"
 ---
-# <a name="hololens-2-cleaning-faq"></a>HoloLens 2 čištění – nejčastější dotazy
+# <a name="hololens-2-cleaning-faq"></a>HoloLens 2 – časté otázky týkající se čištění
 
 > [!IMPORTANT]  
-> Microsoft nemůže při pohánět o efektivitě jakéhokoli daného nehotantního produktu, jako je COVID-19. Informace o tom, jak zůstat v bezpečí před potenciálním onemocněním, najdete v pokynech místní veřejné zdravotní autority.  
+> Společnost Microsoft nemůže stanovit účinnost jakéhokoli daného dezinfekčního produktu v boji proti patogenům, jako je COVID-19. Informace o tom, jak zajistit bezpečnost před potenciálním nákazou, najdete v pokynech k vaší místní veřejné autoritě pro státní péče.  
 
-## <a name="hololens-2-use-and-care"></a>HoloLens 2 Použití a péče
+## <a name="hololens-2-use-and-care"></a>HoloLens 2, použití a péče
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwEFP]
 
@@ -35,59 +35,59 @@ ms.locfileid: "124427795"
 
 **Vyčištění zařízení**
 
-1. Odstraňte jakýkoli prach suchým mikrovláknem bez lintu, abyste vymazal povrch zařízení.
+1. Odstraňte jakékoli tuhé znečišťující látky pomocí suché lintové microfiberé látky, která jemně vymaže plochu zařízení.
 
-   ![Vyčistěte a přidržte ho od vysuňovací klávesnice.](images/hl2-cleaning.png)
+   ![Vyčistit při držení z panelu prohlížeč](images/hl2-cleaning.png)
 
-2. Opatrně ochlaťte misku pomocí lékařského "70%" izoádového sádře a pak použijte zdůvěru k vymazání povrchu zařízení.
+2. Lehce moisten látku pomocí lékařského "70%" isopropyl alkoholu a pak použijte moistenedou tkaninu k mírnému vymazání povrchu zařízení.
 
-3. Nechte zařízení úplně vyschnout.
+3. Nechte zařízení zcela suché.
 
-**Vyčištění padu pro brow**
+**Vyčištění panelu prohlížeč**
 
-1. K zrání misku použijte vodu a misli a pak pomocí záhonů vymazáte zoubkovaný misek.
-1. Nechte vyschnout padu vysychanou.
+1. Pomocí vody a mírného, antibiotického protokolu SOAP moisten tkaninu a pak použijte moistened látku k vymazání prohlížeč panelu.
+1. Nechte panel prohlížeč zcela suchý.
 
-## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>Můžu k vyčištění zorzoru použít nějaký čistší HoloLens objektivu?
+## <a name="can-i-use-any-lens-cleaner-for-cleaning-the-hololens-visor"></a>můžu použít čisticí čistič objektivu pro čištění HoloLensového hypervisoru?
 
-No. Čističe objektivů mohou být přichycené k michátům ve visoru. Pokud chcete vyčistit zorník, postupujte takto:  
+No. Vyčištění objektivu může být abrasive na nátěry na hypervisoru. K vyčištění hypervisoru použijte následující postup:  
 
-1. Odstraňte jakýkoli prach pomocí suchého mikrovlákna bez lintu, který vymaže zorník.
-1. Opatrně ochlaťte misku pomocí lékařského "70%" izoádového sádře a pak vymažte zorník.
-1. Nechte visor zcela vyschnout.
+1. Odstraňte jakékoli tuhé znečišťující látky pomocí suché lintové microfiberové látky, čímž jemně vymažete hypervisor.
+1. Lehce moisten látku pomocí lékařského "70%" isopropyl alkoholu a pak se hypervisoru jemně vymaže.
+1. Nechte si clonu úplně vyschnout.
 
-## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Můžu k vyčištění zařízení použít dešimovací vymazání?
+## <a name="can-i-use-disinfecting-wipes-to-clean-the-device"></a>Můžu k vyčištění zařízení použít desinfekci a vymazání?
 
-Ano, pokud vymazání neobsahují smyšlené údaje. K vymazání návrší můžete použít jiné než dešimovací [vymazání, které HoloLens povrchy.](#hololens-2-use-and-care)  
-
-> [!CAUTION]  
-> Vyhněte se čištění povrchů zařízení pomocí dešimovacího HoloLens. V kritických situacích, kdy není k dispozici nic jiného, je přijatelné používat vymazání v aplikaci. Poškozením ale může dojít k poškození HoloLens nebo jiných povrchů.
-
-## <a name="can-i-use-alcohol-to-clean-the-device"></a>Můžu k vyčištění zařízení použít nealkoholických nápojů?
-
-Ano. K vyčištění pevných povrchů zařízení, včetně visoru, můžete použít řešení 70% izolace a vody. Zlehka zemstíte misku pomocí kombinace izizlu a vody a pak vymazáte povrch zařízení.
-
-## <a name="is-the-brow-pad-replaceable"></a>Je vyměnitelná plocha za brow?
-
-Ano. Panel pro zostříní je magnetické připojené k zařízení. Odpojte ho tak, že ho odpojíte od pásky. Pokud ho chcete nahradit, přichytte ho zpět na místo.
-
-![Odeberte nebo nahraďte panel brow.](images/hololens2-remove-browpad.png)
-
-## <a name="how-can-i-clean-the-brow-pad"></a>Jak můžu vyčistit panel brow?.
-
-Pokud ho chcete vyčistit, vymažte ho pomocí misku, který je zvlhčený vodou a šedou vodou. Než ho znovu použijete, nechte ho úplně vyschnout.
-
-## <a name="can-i-use-ultraviolet-uv-light-to-sanitize-the-device"></a>Můžu k sanitizaci zařízení použít ultraviolet (UV)světlo?
-
-K sanitizaci 2 je možné použít irradianci UVC s použitím indikátoru LED UVC nebo filtrovaného řízení světla UVC, které funguje na úrovni intenzity 0,5 až 0,6 mW/cm2 a nevysílá ozón HoloLens. Postupujte podle specifikací výrobce pro zpracování a dobu vystavení.
+Ano, pokud vymazání neobsahují bělení. k [mírnému vymazání HoloLensch ploch](#hololens-2-use-and-care)můžete použít nebělené desinfekce.  
 
 > [!CAUTION]  
-> Vysoká úroveň vystavení UV-A a UV-B může snížit kvalitu displeje zařízení a poškodit visor. Při vystavení slunečnímu záření UV-A a UV-B má v pořadí podle doby trvání a intenzity vystavení následující účinky:
+> vyhněte se použití desinfekce vymazání, která obsahují bělení pro vyčištění HoloLensch ploch. Je přijatelné použít bělené vymazání v kritických situacích, pokud není k dispozici nic jiného. bělení ale můžou poškodit HoloLens hypervisor nebo jiné povrchy.
+
+## <a name="can-i-use-alcohol-to-clean-the-device"></a>Můžu k vyčištění zařízení použít alkohol?
+
+Ano. Můžete použít řešení "70%" isopropyl alkohol a vodu k vyčištění pevných povrchů zařízení, včetně hypervisoru. Lehce moisten látku pomocí směsi isopropyl alkoholu a vody a pak jemně vymažte plochu zařízení.
+
+## <a name="is-the-brow-pad-replaceable"></a>Je panel prohlížeč nahraditelný?
+
+Ano. Panel prohlížeč je magneticky připojen k zařízení. Pokud ho chcete odpojit, vyžádejte si ho mírně od HEADBAND. Chcete-li ho nahradit, přihlaste se zpátky na místo.
+
+![Odeberte nebo nahraďte panel prohlížeč.](images/hololens2-remove-browpad.png)
+
+## <a name="how-can-i-clean-the-brow-pad"></a>Jak můžu vyčistit panel prohlížeč?
+
+Pokud chcete prohlížeč plochu vyčistit, vymažte ji pomocí látky, která je moistened pomocí vody a mírného protokolu SOAP pro antibiotika. Nechte panel prohlížeč kompletně vyschnout, než ho znovu použijete.
+
+## <a name="can-i-use-ultraviolet-uv-light-to-sanitize-the-device"></a>Můžu k upravování zařízení použít ultrafialové světlo (UV)?
+
+UVC irradiance používající UVC nebo filtrovaný fluorescenční UVC světlo, který pracuje s úrovní svítivosti 0,5-0,6 mw/cm2 a negeneruje ozon, lze použít k upravení HoloLens 2. Postupujte prosím podle specifikací výrobce na základě manipulace a doby expozice.
+
+> [!CAUTION]  
+> Vysoká úroveň ozáření UV-a a UV-B může snížit kvalitu displeje zařízení a poškodit vytahování hypervisoru. Před expozicí UV-a a UV-B záření má následující účinky, a to v pořadí podle doby trvání a intenzity vystavení:
 >  
-> 1. Z vybarvené vybarvené padání a zavírání zařízení se vybarvuje.
-> 1. Vady se objevují v antireflexních systémech ve visoru a v oknech senzorů.
-> 1. Vady se objevují v základních materiálech zorzoru a v oknech senzorů.
-> 1. Zobrazení snížení výkonu.
+> 1. Odbarvení panelu prohlížeč a zavření zařízení se změní na.
+> 1. V případě, že se na základě hypervisoru a v oknech senzoru zobrazují vady, se objeví v porážet (AR).
+> 1. V základních materiálech hypervisoru a v oknech senzoru se objeví vady.
+> 1. Zobrazit snížení výkonu.
 
 ## <a name="is-the-rear-pad-replaceable"></a>Je zadní panel nahraditelný?
 

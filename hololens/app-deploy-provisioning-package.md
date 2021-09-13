@@ -1,7 +1,7 @@
 ---
 title: Zřizovací balíček
-description: přečtěte si o nasazení aplikací, zřizování, nasazení a nasazení podnikových aplikací pro zařízení HoloLens.
-keywords: aplikace, nasazení aplikace, nasazení podnikových aplikací, zřizování
+description: Seznamte se s balením, zřizováním, nasazením a nasazením podnikových aplikací pro HoloLens zařízení.
+keywords: aplikace, nasazení aplikace, nasazení podnikové aplikace, zřizování
 author: evmill
 ms.author: v-evmill
 ms.date: 6/22/2020
@@ -15,47 +15,47 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: d071f4326a35a9ea61e2069618da7107bb808f04
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428491"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032204"
 ---
 # <a name="provisioning-package"></a>Zřizovací balíček
 
-Zřizovací balíčky se dají použít k přípravě a konfiguraci zařízení v prostředí bez přístupu ke správě koncových bodů. Můžou být taky nasazené do zařízení bez ohledu na identitu uživatele, stav registrace, během funkce OOBE (out-of-box) nebo při [použití zřizovacího balíčku během instalace](/hololens/hololens-provisioning##apply-a-provisioning-package-to-hololens-during-setup).
+Zřizovací balíčky je možné použít k přípravě a konfiguraci zařízení v prostředí bez přístupu ke správě koncových bodů. Můžete je také nasadit do zařízení bez ohledu na identitu uživatele, stav registrace, prostředí při spuštění počítače nebo použití zřizovacího balíčku během [instalace](/hololens/hololens-provisioning##apply-a-provisioning-package-to-hololens-during-setup).
 
-## <a name="provisioning-packages-considerations"></a>Požadavky zřizovacích balíčků
+## <a name="provisioning-packages-considerations"></a>Důležité informace o zřizovacích balíčcích
 
-* Neveřejné aplikace
-* Jenom USB – pouze načítání
-* Žádná Automatická aktualizace (vyžaduje ruční aktualizace prostřednictvím PPKGs)
+* Ne veřejné aplikace
+* Jenom zkušební načtení USB
+* Žádná automatická aktualizace (vyžaduje ruční aktualizace prostřednictvím PPKG)
 
-Aplikace nainstalované prostřednictvím zřizovacího balíčku musí být podepsané certifikátem v úložišti místního počítače. Zřizovací balíčky můžou instalovat jenom certifikáty do úložiště zařízení (v místním počítači). Proto může být aplikace a certifikát nainstalována prostřednictvím stejného zřizovacího balíčku. Pokud certifikát nasazujete z MDM nebo ho nainstalujete přes [Správce certifikátů](certificate-manager.md), nezapomeňte nasadit certifikát do úložiště místního počítače, abyste mohli podepsat aplikace tímto způsobem.
+Aplikace nainstalované prostřednictvím zřizovacího balíčku musí být podepsané certifikátem v místním počítači. Zřizovací balíčky instaluje certifikáty jenom do úložiště zařízení (místního počítače). Aplikace a certifikát je proto možné nainstalovat prostřednictvím stejného zřizovacího balíčku. Pokud nasazujete certifikát z MDM nebo instalujete přes [Správce](certificate-manager.md)certifikátů , nezapomeňte certifikát nasadit do úložiště místního počítače, abyste aplikace nainstalovali tímto způsobem.
 
-základní informace o vytváření zřizovacího balíčku pro zařízení HoloLens najdete v [HoloLens zřizování](/hololens/hololens-provisioning). K nasazení aplikace je nutné začít s pokročilým zřizováním.
+Základní informace o vytvoření zřizovacího balíčku pro HoloLens zařízení najdete v [HoloLens zřizování.](/hololens/hololens-provisioning) Pokud chcete nasadit aplikaci, musíte začít s pokročilým zřizováním.
 
 > [!NOTE]
-> HoloLens (1. generace) má omezené podpory pro instalaci aplikací (**UniversalAppInstall**) pomocí zřizovacího balíčku. zařízení HoloLens (1. generace) podporují jenom instalaci aplikace přes PPKG jenom během spuštění OOBE a jenom s instalací kontextu uživatele.
+> HoloLens (1. generace) má omezenou podporu instalace aplikací (**UniversalAppInstall**) pomocí zřizovacího balíčku. HoloLens (1. generace) podporují instalaci aplikace přes PPKG jenom během OOBE a jenom při instalaci kontextu uživatele.
 
 ## <a name="setup"></a>Nastavení
 
-v [nástroji Windows Configuration Designer](https://www.microsoft.com/store/productId/9NBLGGH4TX22) proveďte následující čtyři kroky.
+V [Windows Configuration Designeru postupujte](https://www.microsoft.com/store/productId/9NBLGGH4TX22) podle následujících čtyř kroků.
 
-1. Nastavte ApplicationManagement/AllowAllTrustedApps na Yes. Viz: [ApplicationManagement/AllowAllTrustedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps).
+1. Nastavte ApplicationManagement/AllowAllTrustedApps na Ano. Viz: [ApplicationManagement/AllowAllTrustedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps).
 
-2. Přejděte na **UniversalAppInstall**  >  **UserContextApp** a zadejte **PackageFamilyName**. Viz [UniversalAppInstall](/windows/configuration/wcd/wcd-universalappinstall).
+2. Přejděte na **UniversalAppInstall**  >  **UserContextApp** a zadejte **PackageFamilyName**. Viz [UniversalAppInstall.](/windows/configuration/wcd/wcd-universalappinstall)
 
-   Portál zařízení můžete použít na zařízení, do kterého jste už aplikaci nainstalovali. Navštivte stránku aplikace a podívejte se na PackageRelativeID řádek, všechny informace před "!". Je vaše **PackageFamilyName**.
+   Můžete použít Portál zařízení zařízení, na které jste už aplikaci nainstalovali. Přejděte na stránku Aplikace a podívejte se na řádek PackageRelativeID, všechny informace před "!" Je váš **packageFamilyName**.
 
-3. Uvidíte, že máte novou část, **ApplicationFile**. Pomocí této oblasti nahrajte sadu appx.
+3. Pak uvidíte, že máte novou část **ApplicationFile**. Tuto oblast použijte k nahrání sady appx.
 
-4. V závislosti na tom, jestli jste si zakoupili aplikaci nebo jste vytvořili vlastní obchodní aplikaci, budete muset nahrát soubor s licencí nebo certifikát zabezpečení.
+4. V závislosti na tom, jestli jste si zakoupili aplikaci nebo jste si vlastní obchodní aplikaci koupili, budete muset nahrát licenční soubor nebo certifikát zabezpečení.
 
-    - Pro soubor s licencí: přejděte na **UniversalAppInstall**  >  **UserContextAppLicence** a zadejte ID licenčního produktu. Vytvoří se nová část <b>LicenseProductID:</b><i>yourlicenseproductid</i> , vyberte tuto novou část a přejděte do umístění vaší licence a nahrajte ji.
-        - Viz [UserContextAppLicense](/windows/configuration/wcd/wcd-universalappinstall#usercontextapplicense).
-    - Pro soubor zabezpečení přejděte na **certifikáty** a vyberte certifikát, který chcete nainstalovat společně se sadou. appx.
+    - Soubor s licencí: Přejděte na **UniversalAppInstall**  >  **UserContextAppLicence** a zadejte ID produktu licence. Vytvoří se nová část <b>LicenseProductID:</b><i>vaše ID</i> produktu licence, vyberte tuto novou část, přejděte do umístění vaší licence a nahrajte ji.
+        - Viz [UserContextAppLicense.](/windows/configuration/wcd/wcd-universalappinstall#usercontextapplicense)
+    - V případě souboru zabezpečení přejděte na **Certifikáty** a vyberte certifikát, který chcete nainstalovat společně se sadou .appx.
 
-Ujistěte se, že jste projekt uložili do zabezpečeného umístění. Pak ho **exportujte** jako **zřizovací balíček**.  
+Nezapomeňte projekt uložit do zabezpečeného umístění. Pak **ho exportujte** jako **zřizovací balíček**.  
 
-Viz také: [použití balíčku zřizování na HoloLens](/hololens/hololens-provisioning#apply-a-provisioning-package-to-hololens-during-setup).
+Viz také: [Použití zřizovacího balíčku pro HoloLens](/hololens/hololens-provisioning#apply-a-provisioning-package-to-hololens-during-setup).

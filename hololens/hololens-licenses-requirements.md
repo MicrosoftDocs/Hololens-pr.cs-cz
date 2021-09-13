@@ -14,11 +14,11 @@ manager: bradke
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 6224cd5e07794d9fca3c0a406e787d1a3fd88b43
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427390"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035994"
 ---
 # <a name="license-requirements"></a>Licenční požadavky
 
@@ -43,8 +43,8 @@ Tato stránka poskytuje základní přehled licencí a účtů potřebných k na
 | [Účet Microsoft (MSA)](/windows/security/identity-protection/access-control/microsoft-accounts)| | ✔️ |
 | [Místní účet](/windows/security/identity-protection/access-control/local-accounts)<sup>3</sup> | | ✔️ |
 - <sup>1</sup> [Automatická registrace](/mem/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment) během počátečního nastavení zařízení, která registruje a připojuje Azure Active Directory a umožňuje správu zařízení pomocí Intune.
-- <sup>2</sup> [Windows Autopilot pro HoloLens 2](hololens2-autopilot.md) zjednodušuje zřizování pro správce IT i koncové uživatele. Správci IT mohou předem HoloLens 2 zásady a při prvním spuštění se zařízení nasadí ve stavu připraveném pro firmy s nulovou interakcí koncových uživatelů.
-- <sup>3</sup> Tento účet se musí [zřídit](hololens-provisioning.md#provisioning-package-hololens-wizard) předem pomocí Windows Configuration Designer (WCD).
+- <sup>2</sup> [Windows Autopilot pro HoloLens 2](hololens2-autopilot.md) zjednodušuje zřizování pro správce IT i koncové uživatele. Správci IT mohou předem HoloLens 2 zásady a při prvním spuštění se zařízení nasadí ve stavu připraveném pro firmy s nulovou interakcí koncového uživatele.
+- <sup>3</sup> Tento účet je nutné [zřídit](hololens-provisioning.md#provisioning-package-hololens-wizard) předem pomocí Windows Configuration Designer (WCD).
 
 > [!IMPORTANT]
 > Službu Active Directory (AD) nelze použít ke správě HoloLens zařízení.

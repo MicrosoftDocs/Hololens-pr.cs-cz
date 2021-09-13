@@ -1,9 +1,9 @@
 ---
-title: Použití domova nabídka Start hybridní reality
-description: Naučte se používat nabídku Start, spravovat aplikace a přistupovat k aplikacím a procházet domovskou stránku hybridní reality v HoloLens zařízení.
+title: použití domovské stránky nabídka Start a smíšené reality
+description: naučte se používat nabídku start, spravovat aplikace a přistupovat k nim a v zařízeních HoloLens navigovat domácí realitu.
 ms.assetid: 742bc126-7996-4f3a-abb2-cf345dff730c
 ms.date: 08/07/2019
-keywords: hololens
+keywords: HoloLens
 ms.prod: hololens
 ms.sitesec: library
 author: scooley
@@ -14,95 +14,95 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: f9a6f1692df05e5fd8faec3da07cc85f7c6a32c7
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427682"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035993"
 ---
-# <a name="use-the-start-menu-and-mixed-reality-home"></a>Použití domova nabídka Start hybridní reality
+# <a name="use-the-start-menu-and-mixed-reality-home"></a>použití domovské stránky nabídka Start a smíšené reality
 
-Stejně jako Windows počítače začíná desktopem, Windows Holographic začíná domovskou stránku hybridní reality.  Pomocí nabídka Start můžete otevírat a umísťovat okna aplikací, spouštěče imerzivních aplikací a 3D obsah v domácnosti hybridní reality a jejich umístění ve fyzickém prostoru se zapamatuje.
+stejně jako Windows prostředí pro počítač se spouští s plochou, Windows holografický start se smíšeným domovem reality.  pomocí nabídka Start můžete otevřít a umístit okna aplikací, moderní spouštěče aplikací a 3d obsah na domácí realitě a jejich umístění ve fyzickém prostoru bude zapamatovatelné.
 
-## <a name="use-the-start-menu"></a>Použití nabídka Start
+## <a name="use-the-start-menu"></a>použití nabídka Start
 
-V nabídka Start na HoloLens je místo, kde můžete otevírat aplikace, zobrazit důležité stavové informace a přistupovat k nástrojům, jako je fotoaparát.
+nabídka Start v HoloLens je místo, kde budete otevírat aplikace, informace o důležitých stavech a přístup k nástrojům jako fotoaparát.
 
-Ať už jste kdekoli HoloLens, můžete kdykoli otevřít nabídka Start pomocí gesta **Start**.  V HoloLens (1. generace) je gesto Start [rozkvetlé](https://support.microsoft.com/help/12644/hololens-use-gestures). Na HoloLens 2 je gesto [Spustit klepnutím](hololens2-basic-usage.md#start-gesture) na ikonu Start, která se zobrazí na vašem zařízení.  Můžete také otevřít nabídka Start hlasem tak, že řeknete "Přejít na začátek".
-
-> [!TIP]
-> Když je nabídka Start otevřený, pomocí gesta Start ho zavřete nebo se podívejte na nabídka Start a řekněte "Zavřít".
-
-V horní části nabídka Start indikátory stavu pro Wi-Fi, baterie, svazek a hodiny. Na HoloLens 2 je také indikátor naslouchání, který ukazuje, jestli je zařízení povolené a naslouchá hlasovým příkazům. V dolní části najdete tlačítka **Photo (Fotografie)** a **Video** (Video), která vám umožní posout fotografie a videozáznamy.  K dispozici je **také tlačítko Připojení,** které umožňuje promítovat to, co vidíte, do jiného zařízení pomocí Miracast.
-
-### <a name="find-apps-on-start-menu"></a>Hledání aplikací na nabídka Start
-
-V nabídka Start seznam **Připnutých** aplikací a seznam **Všechny aplikace** aplikací.
-
-- V **seznamu Připnuté** aplikace se zobrazí připnuté aplikace. Aplikace můžete přidávat a odebírat ze seznamu **Připnuté** aplikace pomocí místní nabídky, která se zobrazí, když vyberete a **podržíte** dlaždici aplikace.
-
-- V **Všechny aplikace** se zobrazí všechny aplikace, které jsou na zařízení nainstalované.  Výběrem **Všechny aplikace** na pravé straně nabídky **Start** se dostanete do seznamu.
-
-V obou seznamech  aplikací můžete  pomocí tlačítek O stránku nahoru a O stránku dolů na pravé nabídka Start procházet všechny aplikace v seznamu.  Oba seznamy aplikací se automaticky otevřou na stránce, která se naposledy použila během relace zařízení.
+ať už jste v HoloLens, můžete nabídka Start vždy otevřít pomocí **gesta Start**.  v HoloLens (1. generace) je gesto Start [bloom](https://support.microsoft.com/help/12644/hololens-use-gestures). v HoloLens 2 se [spustí gesto pro spuštění](hololens2-basic-usage.md#start-gesture) , ve kterém se zobrazí ikona start, která se zobrazuje na zápěstí.  k otevření nabídka Start můžete také použít svůj hlas vyslovením příkazu "přejít na začátek".
 
 > [!TIP]
-> Na HoloLens 2 můžete seznamy aplikací posouvat přímo pomocí ukazováčku. Stačí, když se do seznamu táhnete prstem a přetáhnete ho nahoru nebo dolů.
+> když je nabídka Start otevřené, zavřete ho pomocí gesta Start, nebo se podívejte na nabídka Start a řekněte "close".
 
-### <a name="open-apps-from-start-menu"></a>Otevření aplikací z nabídka Start
+v horní části nabídka Start uvidíte indikátory stavu pro Wi-Fi, baterii, svazek a hodiny. v HoloLens 2 existuje také indikátor poslouchání, který ukazuje, zda je zařízení zapnuté rozpoznávání řeči a naslouchá hlasovým příkazům. V dolní části najdete tlačítka pro **fotografii** a **videa** , která vám umožní pořizovat fotky a videozáznamy.  k dispozici je také tlačítko **Připojení** , které vám umožní promítnout, co vidíte na jiném zařízení pomocí Miracast.
 
-Pokud chcete otevřít aplikaci z nabídka Start, stačí **vybrat** **dlaždici aplikace.** Můžete také říci název aplikace, kterou chcete otevřít.
+### <a name="find-apps-on-start-menu"></a>hledání aplikací na nabídka Start
 
-Když aplikaci otevřete z webu nabídka Start, stane se v závislosti na tom, jak je aplikace navržená, jedna z následujících akcí:
+nabídka Start má seznam **připnutých aplikací** a seznam **všech aplikací** .
 
-- Je **umístěno okno** aplikace. Aplikace se pak načte do okna a můžete ji použít jako dotykovou obrazovku.
-- Je **umístěný spouštěč 3D** aplikací pro imerzivní aplikaci. Pak musíte vybrat **spouštěč** a otevřít tak imerzivní aplikaci.
-- Umístí se okno aplikace, které funguje jako **spouštěč** pro imerzivní aplikaci. Imerzivní aplikace se bude spouštět automaticky.
+- Seznam **připnutých aplikací** zobrazuje připnuté aplikace. Můžete přidávat a odebírat aplikace ze seznamu **připnutých aplikací** pomocí kontextové nabídky, která se zobrazí při **výběru a blokování** na dlaždici aplikace.
 
-Okna aplikací a spouštěče aplikací umístěné na domovském serveru hybridní reality zůstanou, dokud se nerozhodníte je odebrat.  Poskytují pohodlnou klávesovou zkratku pro používání těchto oken aplikace nebo spouštění imerzivních aplikací, aniž byste je museli znovu otevírat z nabídka Start. 
+- Seznam **všechny aplikace** zobrazuje všechny aplikace, které jsou v zařízení nainstalované.  Do seznamu se dostanete tak, že vyberete tlačítko **všechny aplikace** na pravé straně nabídky **Start** .
+
+v seznamech aplikací použijte tlačítka **page up** a **page down** na pravé straně nabídka Start ke stránkám přes všechny aplikace v seznamu.  Oba seznamy aplikací se automaticky otevřou na stránce, která se naposledy používala během relace zařízení.
+
+> [!TIP]
+> v HoloLens 2 můžete v seznamech aplikací přímo přejít pomocí prstu pro index. Stačí se dotknout seznamu s tipem prstem a přetáhnout nahoru nebo dolů.
+
+### <a name="open-apps-from-start-menu"></a>otevřít aplikace z nabídka Start
+
+pokud chcete aplikaci otevřít z nabídka Start, stačí **vybrat** **dlaždici aplikace**. Můžete také vyslovit název aplikace a otevřít ji.
+
+při otevření aplikace z nabídka Start dojde k jednomu z následujících postupů v závislosti na tom, jak je aplikace navržena:
+
+- Je umístěno **okno aplikace** . Aplikace se pak načte do okna a můžete ji použít jako dotykovou obrazovku.
+- Pro moderní aplikaci se umístí **spouštěč 3D aplikace** . Pro otevření moderní aplikace je nutné **Vybrat** spouštěč.
+- Je umístěno okno aplikace, které funguje jako **spouštěč** pro moderní aplikace. Moderní aplikace bude pokračovat v automatickém spuštění.
+
+Okna aplikace a spuštění aplikací umístěné na domácím světě realit budou zůstat v ne, dokud se nerozhodnete je odebrat.  poskytují vám pohodlný zástupce v celém světě, aby mohli používat tato okna aplikací, nebo spouštět moderní aplikace bez nutnosti jejich opětovného otevření z nabídka Start. 
 
 > [!NOTE]
->Stejně jako na telefonu se systémové prostředky spravují automaticky HoloLens.  Když například otevřete novou imerzivní aplikaci, všechny ostatní spuštěné aplikace se okamžitě stanou neaktivními. Není nutné odebírat okna aplikací a spouštěče v domovské službě hybridní reality, aby se uchytly systémové prostředky. 
+>Podobně jako na telefonu se systémové prostředky spravují automaticky na HoloLens.  Když například otevřete novou moderní aplikaci, všechny ostatní běžící aplikace se okamžitě stanou neaktivní. Aby bylo možné uvolnit systémové prostředky, není nutné odebírat okna aplikací a spouštěcích programů na hybridním domácím realitě. 
 
 ## <a name="using-apps-on-hololens"></a>Používání aplikací v HoloLens
 
-Aplikace v HoloLens mohou používat zobrazení okna aplikace nebo imerzivní zobrazení. V zobrazení okna aplikace se v aplikaci jednoduše zobrazuje její obsah v okně. Díky imerzivnímu zobrazení vás aplikace odvede ze smíšeného domova, kde pak může zobrazit svůj obsah ve fyzickém prostředí kolem vás. Aplikace se také mohou rozhodnout použít obě zobrazení.
+aplikace v HoloLens můžou používat zobrazení okna aplikace nebo moderní zobrazení. V zobrazení okna aplikace aplikace jednoduše zobrazuje obsah v rámci okna. Díky modernímu zobrazení vám aplikace přebírá od smíšené Realty domů, kde si pak může zobrazit obsah ve fyzickém prostředí od sebe. Aplikace se také můžou rozhodnout použít obě zobrazení.
 
 ### <a name="use-app-windows"></a>Použití oken aplikací
 
-Na HoloLens (1. generace) se okna aplikací umístí a používají v domovském prostředí hybridní reality, kde je můžete [přesouvat,](hololens1-basic-usage.md#move-resize-and-rotate-apps) měnit jejich velikost a obměna podle vaší velikosti. Kromě používání oken aplikací s pohledem a gesty je můžete použít také s Bluetooth připojenou myší a klávesnicí.
+v HoloLens (1. generace) jsou okna aplikací umístěná a používaná v hybridním domácím realitě, kde je můžete [přesouvat, měnit jejich velikost a otáčet](hololens1-basic-usage.md#move-resize-and-rotate-apps) je, jak budete chtít. kromě používání oken aplikací pomocí pohledu a gesta je můžete také použít s Bluetooth připojenou myší a klávesnicí.
 
-Na HoloLens 2 můžete kromě použití oken aplikací v domovském prostředí hybridní reality použít také jedno okno aplikace současně v imerzivní aplikaci. Okno aplikace můžete také umístit do **režimu Sledovat** mě, kde bude při obchádování před váma. Když v imerzivní aplikaci otevřete okno aplikace, otevře se automaticky v **režimu** Sledovat mě. Okna aplikace [můžete přesouvat, měnit](hololens2-basic-usage.md#move-resize-and-rotate-holograms) jejich velikost a obměna přímo pomocí rukou v domácnosti hybridní reality i v imerzivní aplikaci.
+na HoloLens 2, kromě používání oken aplikací na domovské stránce hybridní reality, můžete také použít jedno okno aplikace v době uvnitř moderní aplikace. Můžete také umístit okno aplikace do režimu **povedené** akce, kde zůstane před tím, než začnete. Když otevřete okno aplikace, které je uvnitř moderní aplikace, otevře se v režimu **pořídit** automaticky. Okna aplikací můžete [přesouvat, měnit jejich velikost a střídat](hololens2-basic-usage.md#move-resize-and-rotate-holograms) je přímo na domovské stránce hybridní reality i uvnitř moderní aplikace.
 
 > [!NOTE]
 >
-> - V domovském prostředí hybridní reality mohou být najednou aktivní až tři okna aplikací. Můžete otevřít více, ale aktivní zůstanou jenom tři.
-> - Pokud okno aplikace není aktivní, zobrazí obsah, který vypadá v porovnání s aktivním oknem ztmavě.  Některé místo jakéhokoli obsahu jednoduše zobrazí ikonu aplikace.  Pokud chcete aktivovat neaktivní okno, stačí **ho** vybrat.
-> - Každá otevřená aplikace může mít současně jedno aktivní okno s výjimkou Microsoft Edge, které může mít až tři.
+> - Až tři okna aplikací můžou být aktivní doma ve smíšené realitě. Můžete otevřít více, ale aktivní budou jenom tři.
+> - Pokud není okno aplikace aktivní, zobrazí se v porovnání s aktivním oknem obsah, který bude tmavší.  Některé budou jednoduše zobrazovat ikonu aplikace namísto jakéhokoli obsahu.  Pokud chcete aktivovat neaktivní okno, stačí ho **Vybrat** .
+> - každá otevřená aplikace může mít jedno aktivní okno v čase, s výjimkou Microsoft Edge, která může obsahovat až tři.
 
-### <a name="close-apps"></a>Zavření aplikací
+### <a name="close-apps"></a>Zavřít aplikace
 
-Pokud chcete zavřít aplikaci, která používá okno aplikace,  jednoduše zavřete okno aplikace tlačítkem Zavřít v záhlaví.  Můžete se také podívat na okno a říci Zavřít.
+Chcete-li zavřít aplikaci, která používá okno aplikace, jednoduše zavřete okno aplikace s tlačítkem **Zavřít** v záhlaví.  Můžete se také podívat na okno a vyslovit "Zavřít".
 
-Pokud chcete ukončit aplikaci, která používá imerzivní zobrazení, pomocí gesta Start nabídka Start a pak vyberte tlačítko domů **Hybridní** realita. 
+pokud chcete aplikaci, která používá moderní zobrazení, ukončit, použijte gesto Start, aby se **nabídka Start**, a pak vyberte tlačítko **domů ve smíšené realitě** .
 
-Pokud je imerzivní aplikace v poškozeném stavu a potřebujete ji restartovat, můžete se ujistit, že je aplikace nejprve zcela vypnutá, a to tak, že zavřete její spouštěč v domovském prostředí hybridní reality a pak ji spustíte z nabídka Start.
+pokud je moderní aplikace v nefunkčním stavu a musíte ji restartovat, můžete zajistit, aby se aplikace nejdřív ukončila tím, že ukončí její spouštěč na domovské stránce hybridní reality a pak ji spouští z nabídka Start.
 
 ### <a name="default-app-picker"></a>Výchozí výběr aplikace
 
-Když u Windows Holographic verze [21H1](hololens-release-notes.md#windows-holographic-version-21h1)aktivujete hypertextový odkaz nebo otevřete typ souboru s více nainstalovanými aplikacemi, která ho podporuje, zobrazí se nové okno s výzvou k výběru toho, která nainstalovaná aplikace má soubor nebo typ odkazu zpracovat. V tomto okně se také můžete rozhodnout, že vybraná aplikace zřídí soubor nebo typ odkazu "Jednou" nebo "Vždy".
+při [Windows holografické 21H1 verze](hololens-release-notes.md#windows-holographic-version-21h1), když aktivujete hypertextový odkaz nebo otevřete typ souboru s více než jednou nainstalovanou aplikací, která ho podporuje, se otevře nové okno s výzvou, abyste vybrali, kterou aplikaci by měl zpracovat soubor nebo typ odkazu. V tomto okně můžete také zvolit, aby vybraná aplikace zpracovala soubor nebo typ odkazu "jednou" nebo "Always".
 
-![Okno pro výběr aplikace.](images/default-app-picker.png)
+![Okno pro výběr aplikace](images/default-app-picker.png)
 
-Pokud zvolíte Možnost Vždy, ale později chcete změnit, která aplikace zpracovává konkrétní soubor nebo typ odkazu, můžete uložené výchozí hodnoty resetovat v Nastavení > **Apps**. Posuňte se do dolní části stránky a vyberte tlačítko **Vymazat** v části Výchozí aplikace pro typy souborů a/nebo Výchozí aplikace pro typy odkazů. Na rozdíl od podobného nastavení na stolních počítačích nemůžete resetovat výchozí nastavení jednotlivých typů souborů.
+pokud zvolíte "vždycky", ale později chcete změnit, která aplikace zpracovává určitý typ souboru nebo propojení, můžete obnovit uložené výchozí hodnoty v **Nastavení > aplikacích**. Posuňte se do dolní části stránky a v části výchozí aplikace pro typy souborů nebo výchozí aplikace pro typy odkazů vyberte tlačítko **Vymazat** . Na rozdíl od podobných nastavení na stolních počítačích nemůžete resetovat jednotlivé výchozí hodnoty typu souboru.
 
-### <a name="per-app-volume-control"></a>Řízení objemu na aplikaci
+### <a name="per-app-volume-control"></a>Řízení hlasitosti na aplikaci
 
-Díky [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)mohou uživatelé ručně upravit úroveň svazku každé aplikace. Díky tomu se uživatelé mohou lépe soustředit na aplikace, které potřebují, nebo lépe slyšet při používání více aplikací. Například když potřebujete vypnout objem jedné aplikace a volat jinou osobu kvůli vzdálené pomoci v jiné.
+pomocí [Windows holografické verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)můžou uživatelé ručně upravovat úroveň hlasitosti každé aplikace. To uživatelům umožňuje lépe se zaměřit na aplikace, které potřebují, nebo lépe slyšet při používání více aplikací. Například nutnost vypnout objem jedné aplikace a zavolat jiné osobě na vzdálenou pomoc v jiném.
 
-Pokud chcete nastavit svazek jednotlivé aplikace, přejděte **na Nastavení** Zvuk systému a v části Pokročilé možnosti zvuku vyberte Svazek aplikace a  ->    ->   **předvolby zařízení.**
+pokud chcete nastavit hlasitost jednotlivé aplikace, přejděte na **Nastavení**  ->  **systémový**  ->  **zvuk** a v části pokročilé možnosti zvuku vyberte **předvolby aplikace a hlasitost zařízení**.
 
  <img alt="App volume and device preferences." src="./images/volume-per-app.jpg" width="500" height="250" />
 
 ## <a name="related-info"></a>Související informace
 
-[Vyhledání, instalace a odinstalace aplikací z Microsoft Store](holographic-store-apps.md)
+[Hledání, instalace a odinstalace aplikací z Microsoft Store](holographic-store-apps.md)

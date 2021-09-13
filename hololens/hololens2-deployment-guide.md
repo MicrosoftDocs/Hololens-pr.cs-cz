@@ -1,6 +1,6 @@
 ---
-title: Nasazení klienta připojeného ke cloudu HoloLens 2 do externích klientů
-description: Průvodce nasazením pro HoloLens 2 pro externí klienty (jako příklad s vzdálenou asistencí)
+title: Nasazení připojení ke cloudu HoloLens 2 k externím klientům
+description: Průvodce nasazením HoloLens 2 pro externí klienty (jako příklad s vzdálenou asistencí)
 ms.prod: hololens
 ms.sitesec: library
 author: qianw211
@@ -14,15 +14,15 @@ manager: sekerawa
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: d5cd9c380e0d276f0a8aa9efac14cf44885446e5
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428821"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032292"
 ---
-# <a name="deploy-cloud-connected-hololens-2-to-external-clients"></a>Nasazení klienta připojeného ke cloudu HoloLens 2 do externích klientů
+# <a name="deploy-cloud-connected-hololens-2-to-external-clients"></a>Nasazení připojení ke cloudu HoloLens 2 k externím klientům
 
-Tato příručka je doplňkem průvodce nasazením připojeným [ke cloudu.](hololens2-cloud-connected-overview.md) Používá se v situacích, kdy vaše organizace chce do externího klientského zařízení HoloLens do zařízení externího klienta pro krátkodobé nebo dlouhodobé použití. Externí klient se přihlásí k zařízení HoloLens 2 pomocí přihlašovacích údajů poskytnutých vaší organizací a pomocí [vzdálené](/dynamics365/mixed-reality/remote-assist/ra-overview) pomoci kontaktuje odborníky. Tato příručka obsahuje obecná [doporučení HoloLens 2,](#general-deployment-recommendations) která se vztahují na většinu [](#common-external-client-deployment-concerns) scénářů externího nasazení HoloLens 2, a běžné obavy zákazníků při nasazování vzdálené pomoci pro externí použití. 
+Tato příručka je doplňkem průvodce nasazením připojeným [ke cloudu.](hololens2-cloud-connected-overview.md) Používá se v situacích, kdy vaše organizace chce do zařízení externího klienta HoloLens do zařízení externího klienta pro krátkodobé nebo dlouhodobé použití. Externí klient se přihlásí k zařízení HoloLens 2 pomocí přihlašovacích údajů [](/dynamics365/mixed-reality/remote-assist/ra-overview) poskytnutých vaší organizací a pomocí vzdálené pomoci kontaktuje vaše odborníky. Tato příručka obsahuje obecná doporučení k nasazení [HoloLens 2,](#general-deployment-recommendations) která se vztahují [](#common-external-client-deployment-concerns) na většinu scénářů nasazení externího nasazení HoloLens 2, a běžné obavy zákazníků při nasazování vzdálené pomoci pro externí použití. 
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -55,7 +55,7 @@ Pro externí nasazení HoloLens 2 doporučujeme následující kroky:
 
 1. Jako základní [sestavení HoloLens nejnovější verzi operačního](https://aka.ms/hololens2download) systému.
 1. Přiřaďte licence na základě uživatele nebo zařízení pomocí následujícího postupu:
-    1. [Vytvořte skupinu v AAD a přidejte členy pro](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members) uživatele HoloLens/RA.
+    1. [Vytvořte skupinu v AAD a přidejte členy](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal#create-a-basic-group-and-add-members) pro uživatele HoloLens/RA.
     1. [Přiřaďte této skupině](/azure/active-directory/enterprise-users/licensing-groups-assign#:~:text=In%20this%20article%201%20Assign%20the%20required%20licenses,3%20Check%20for%20license%20problems%20and%20resolve%20them) licence na základě zařízení nebo uživatelů.
     1. (Volitelné) Cílové skupiny pro [zásady správy mobilních zařízení (MDM).](hololens-enroll-mdm.md)
 
@@ -66,11 +66,11 @@ Pro externí nasazení HoloLens 2 doporučujeme následující kroky:
 1. [Tenant zařízení](/hololens/hololens-release-notes#tenantlockdown-csp-and-autopilot) uzamkne, aby ho mohl k zařízení jenom váš tenant spojit.
     1. Viz také [Tenant lock CSP](/windows/client-management/mdm/tenantlockdown-csp).
 
-1. [Nakonfigurujte bezobrazovový režim pomocí globálního přiřazeného přístupu.](/hololens/hololens-global-assigned-access-kiosk)
+1. [Nakonfigurujte bezobrazovový režim pomocí globálního přiřazeného přístupu](/hololens/hololens-global-assigned-access-kiosk).
 
 1. Zakažte následující (volitelné) možnosti:
     1. Možnost zařízení přetát do vývojářského [režimu tady.](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
-    1. Možnost připojení zařízení HoloLens počítači pro kopírování data [zakažte USB.](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+    1. Možnost připojení zařízení HoloLens počítači, aby bylo možné kopírovat [datum, zakažte USB.](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
        > [!NOTE]
         > Pokud nechcete zakázat USB, ale chcete mít možnost použít na zařízení zřizovací balíček pomocí USB, postupujte podle pokynů k povolení instalace zřizovacího [balíčku.](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage)
 

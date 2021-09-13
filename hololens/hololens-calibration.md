@@ -15,11 +15,11 @@ appliesto:
 - HoloLens 2
 keywords: kalibrace, pohodlí, vizuály, kvalita, ipd, HoloLens, Windows Mixed Reality, náhlavní souprava VR
 ms.openlocfilehash: b3d917c71ac7441aeaf8dcbc25748ee07b9fbfa3
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427856"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035835"
 ---
 # <a name="improve-visual-quality-and-comfort"></a>Vylepšení vizuální kvality a pohodlí
 
@@ -127,39 +127,39 @@ HoloLens aplikací pomocí sledování očí sledujete, kde hledáte v reálném
 
 HoloLens (1. generace) upravuje hologram displejů podle [interpupillary vzdálenosti](https://en.wikipedia.org/wiki/Interpupillary_distance) (IPD). Pokud IPD není přesná, hologramy můžou být v nestabilní nebo nesprávné vzdálenosti. Kvalitu vizuálů můžete zlepšit kalibrací zařízení na interpupillaryou vzdálenost (IPD).
 
-při nastavování HoloLensho zařízení (1. generace) se výzva k kalibraci vizuálů po Cortana zavádí. Doporučuje se dokončit kalibrační krok během této fáze instalace. můžete ho ale přeskočit tak, že počkáte, dokud Cortana nevyzve a pak se zobrazí zpráva "přeskočit".
+při nastavování HoloLensho zařízení (1. generace) se výzva k kalibraci vizuálů po Cortana zavádí. Doporučuje se dokončit kalibrační krok během této fáze instalace. Můžete ho ale přeskočit tak, že počkáte, Cortana se zobrazí výzva a pak se zobrazí "Přeskočit".
 
-během procesu kalibrace HoloLens požádá o zarovnání prstu s řadou šesti cílů na oči. HoloLens používá tento postup k nastavení správného IPD pro vaši oči.
+Během procesu zpracování vás HoloLens, abyste zarovnaní prstu s řadou šesti cílů na oko. HoloLens pomocí tohoto procesu správně nastaví IPD pro vaše oči.
 
-![IPD prst – obrazovka zarovnání v druhém kroku.](./images/ipd-finger-alignment-300px.jpg)
+![Obrazovka pro zarovnání prstu s IPD ve druhém kroku](./images/ipd-finger-alignment-300px.jpg)
 
-### <a name="manually-start-the-calibration-process"></a>Ruční spuštění procesu kalibrace
+### <a name="manually-start-the-calibration-process"></a>Ruční spuštění procesu zpracování
 
-Pokud potřebujete aktualizovat kalibraci nebo pokud ji nový uživatel potřebuje upravit, můžete aplikaci pro kalibraci spustit kdykoli ručně. Aplikace kalibrace se nainstaluje ve výchozím nastavení. k němu můžete přistupovat buď pomocí nabídky **Start** , nebo Nastavení aplikace.
+Pokud potřebujete upravit úpravy nebo pokud ji nový uživatel potřebuje upravit, můžete kdykoli ručně spustit aplikaci Chystávku. Ve výchozím nastavení je nainstalovaná aplikace Ásek. Můžete k ní získat přístup pomocí nabídky **Start** nebo Nastavení aplikace.
 
-Chcete-li použít nabídku **Start** ke spuštění aplikace kalibrace, postupujte podle následujících kroků:
+Pokud chcete ke spuštění aplikaceČískat pomocí nabídky **Start,** postupujte takto:
 
-1. Pomocí gesta [Bloom](hololens1-basic-usage.md) otevřete nabídku **Start** .
+1. Pomocí gesta [bloom](hololens1-basic-usage.md) otevřete **nabídku Start.**
 1. Pokud chcete zobrazit všechny aplikace, vyberte **+** .
-1. Vyberte **kalibraci**.
+1. Vyberte **Možnost**.
 
-   ![Přístup k aplikaci kalibrace z prostředí.](./images/calibration-shell.png)
+   ![Přístup k aplikaci, která se nasaží z prostředí.](./images/calibration-shell.png)
 
-   ![Aplikace kalibrace zobrazená jako živá krychle po spuštění.](./images/calibration-livecube-200px.png)
+   ![Aplikace, která se zobrazí jako živá datová krychle po spuštění.](./images/calibration-livecube-200px.png)
 
-pokud chcete použít aplikaci Nastavení ke spuštění aplikace kalibrace, postupujte podle těchto kroků:
+Pokud chcete ke spuštění Nastavení aplikaci Promyšlná aplikace, postupujte takto:
 
-1. Pomocí gesta [Bloom](hololens1-basic-usage.md) otevřete nabídku **Start** .
-1. pokud není **Nastavení** připnuté na **Start**, vyberte možnost **+** zobrazit všechny aplikace.
+1. Pomocí gesta [bloom](hololens1-basic-usage.md) otevřete **nabídku Start.**
+1. Pokud **Nastavení** možnost Start připnutá,  **+** výběrem zobrazíte všechny aplikace.
 1. Vyberte **Nastavení**.
-1. Vyberte možnost **systémové**  >  **nástroje**  >  **otevřít kalibraci**.
+1. Vyberte **System**  >  **Utilities**  >  **OpenÁvna**.
 
-   ![Spouští se aplikace pro kalibraci z aplikace nastavení.](./images/calibration-settings-500px.jpg)
+   ![Spuštění aplikace pro aplikaci nastavení](./images/calibration-settings-500px.jpg)
 
-## <a name="immersive-headsets"></a>Moderní sluchátka
+## <a name="immersive-headsets"></a>Imerzivní náhlavní soupravy
 
-Některé moderní sluchátka poskytují možnost přizpůsobení nastavení IPD. chcete-li změnit IPD pro vaši náhlavní soupravu, otevřete aplikaci Nastavení a vyberte displej se **smíšenými**  >  **sluchátky** ve realitě a přesuňte ovládací prvek posuvník. Změny se zobrazí v reálném čase v rámci svých sluchátek. Pokud víte, že jste IPD, možná jste navštívili optometrist, můžete ho zadat také přímo.
+Některé imerzivní náhlavní soupravy umožňují přizpůsobit nastavení IPD. Pokud chcete změnit IPD náhlavní soupravy, otevřete aplikaci Nastavení, vyberte displej náhlavní soupravy **Mixed Reality** a potom  >  přesuňte posuvník. Změny se v reálném čase zobrazí v náhlavní soupravě. Pokud znáte svou IPD adresu, můžete ji zadat také přímo z návštěvu optometristy.
 
-toto nastavení můžete na svém počítači upravit i tak, že vyberete **Nastavení**  >  displej se **smíšenou realitou**  >  .
+Toto nastavení můžete také upravit na počítači výběrem možnosti **Nastavení**  >  **hybridní**  >  **reality .**
 
-Pokud vaše náhlavní souprava nepodporuje přizpůsobení IPD, toto nastavení se zakáže.
+Pokud náhlavní souprava přizpůsobení IPD nepodporuje, toto nastavení bude zakázané.

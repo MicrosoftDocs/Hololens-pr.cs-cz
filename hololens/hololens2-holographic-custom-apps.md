@@ -1,10 +1,10 @@
 ---
-title: Správa vlastních aplikací pro HoloLens 2
-description: Naučte se instalovat, odinstalovat a načítat vlastní holografické aplikace na zařízeních se systémem HoloLens 2 pomocí Portál zařízení a Visual Studio.
+title: správa vlastních aplikací pro HoloLens 2
+description: naučte se instalovat, odinstalaci a načítat vlastní holografické aplikace na zařízeních HoloLens 2 pomocí portálu pro zařízení a Visual Studio.
 ms.assetid: 6bd124c4-731c-4bcc-86c7-23f9b67ff616
 ms.date: 9/3/2021
 manager: sekerawa
-keywords: hololens, hololens 2, sideload, side load, side-load, store, uwp, app, install
+keywords: HoloLens, HoloLens 2, bokem, na straně zatížení, zkušební zatížení, úložiště, UWP, aplikace, instalace
 ms.prod: hololens
 ms.sitesec: library
 author: qianw211
@@ -17,26 +17,26 @@ ms.custom:
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 057d70c221bbecd060fd5650874ee6a6940ffd18
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427558"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032288"
 ---
-# <a name="manage-custom-apps-for-hololens-2"></a>Správa vlastních aplikací pro HoloLens 2
+# <a name="manage-custom-apps-for-hololens-2"></a>správa vlastních aplikací pro HoloLens 2
 
-HoloLens podporuje mnoho existujících aplikací z Microsoft Store a nové aplikace vytvořené speciálně pro HoloLens. 
+HoloLens podporuje mnoho stávajících aplikací z Microsoft Store a nové aplikace sestavené speciálně pro HoloLens. 
 
-Další informace o aplikacích pro Store najdete v tématu [Správa aplikací ve Storu.](holographic-store-apps.md)
+Další informace o aplikacích pro Store najdete v tématu [Správa aplikací ve Storu](holographic-store-apps.md).
 
 > [!IMPORTANT]
-> U podnikových nasazení nedoporučujeme povolovat vývojářský režim, který obě tyto metody používají. Pokud vás zajímá metoda zabezpečeného nasazení aplikací, projděte si naši správu [aplikací: Přehled.](app-deploy-overview.md)
+> Pro podniková nasazení nedoporučujeme povolit vývojářský režim, který obě tyto metody používají. Pokud vás zajímá metoda bezpečného nasazení aplikace, přečtěte si prosím naši [správu aplikací: Přehled](app-deploy-overview.md).
 
-Pokud hledáte některou z metod instalace aplikací pro vývojáře HoloLens 2, přečtěte si:
+pokud hledáte metodu pro vývojáře instalace aplikace pro zařízení HoloLens 2, přečtěte si:
 
-- [Portál zařízení: Instalace aplikace](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
-- [Použití Visual Studio k nasazení a ladění aplikací](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
+- [Portál zařízení: instalace aplikace](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal#installing-an-app)
+- [nasazení a ladění aplikací pomocí Visual Studio](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-visual-studio)
 
-Pokud [](holographic-custom-apps.md) chcete nasazovat vlastní aplikace do virtuálních HoloLens (1. generace), podívejte se do naší příručky.
+pokud chcete nasadit vlastní aplikace na HoloLens (1. generace), podívejte se na naše [průvodce](holographic-custom-apps.md) .
 
 

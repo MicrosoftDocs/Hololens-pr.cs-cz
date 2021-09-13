@@ -13,11 +13,11 @@ manager: jarrettr
 appliesto:
 - Hololens (1st gen)
 ms.openlocfilehash: 5918e3dcb7f2504ae6e85cb584aaf21bc87217bc
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427744"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032347"
 ---
 # <a name="get-your-hololens-1st-gen-ready-to-use"></a>Připravte HoloLens (1. generace) k použití.
 
@@ -34,7 +34,7 @@ Když je HoloLens, indikátor baterie zobrazuje stav baterie v přírůstcích. 
 > [!TIP]
 > Pokud chcete získat odhad aktuální úrovně baterie, řekněte "Cortana, kolik baterie mi zbývá?"
 
-Nejlepší způsob, jak zařízení naúčtovat, je napájecí HoloLens usb (1. generace).  Napájecí zdroj poskytuje 18 W napájení (9V 2A).
+Nejlepší způsob, jak zařízení naúčtovat, je napájecí zdroj a kabel USB, který je HoloLens (1. generace).  Napájecí zdroj poskytuje 18 W napájení (9V 2A).
 
 Rychlost a rychlost zpoplatnění se může lišit v závislosti na prostředí, ve kterém zařízení běží.
 
@@ -45,14 +45,14 @@ Rychlost a rychlost zpoplatnění se může lišit v závislosti na prostředí,
 | &nbsp; | &nbsp; |
 |:--- |:--- |
 |1. Přibližně o 20 až 30 stupňů otočením 20-30 stupňů|![Krok 1: Otočení náhonku.](./images/FitGuideStep1.png)|
-|2. Nasu te zpět hlavní pásmo. Nepřitahujte ji zpět ani manipulujte s pruhem za návazným pruhem, protože v průběhu času to může rušit pásmo.|![Krok 2: Nasu te zpět pásek.](./images/FitGuideStep2.png)|
+|2. Nasu te zpět hlavní pásmo. Nepřitahujte ji zpět ani manipulujte s pruhem za návazným pruhem, protože v průběhu času to může rušit pásmo.|![Krok 2: Nasu te zpět hlavní pásmo.](./images/FitGuideStep2.png)|
 |3. Otočením kolečka pro úpravy rozšiřte celý pásek. |![Krok 3: Pomocí kolečka pro úpravy rozšiřte pásek.](./images/FitGuideStep3.png)|
 |4. Přidržte zařízení za ruce a umístěte ho na hlavičku. Ujistěte se, že je pásek nahoře na čediči, a pak táhněte kolečko pro úpravy.|![Krok 4: Nasaďte zařízení a upravte pásek.](./images/FitGuideStep4.png)|
 |5. Nasunout zorný objekt zpět a pak zkontrolovat jeho fit. Pásek by měl být v horní části čediče těsně pod chřátovým linem a mluvčími nad vašimi chřáty. Objektivy by měly být za středem vašich očí.|![V kroku 5 nasunout zorný objekt zpět a zkontrolovat fit.](./images/FitGuideSetep5.png)|
 
 ## <a name="turn-on-your-hololens"></a>Zapnutí HoloLens
 
-Pomocí tlačítka napájení můžete HoloLens a vypnout nebo ho umístit do pohotovostního režimu.
+Pomocí tlačítka napájení zapněte a HoloLens nebo ho dejte do pohotovostního režimu.
 
 ![Obrázek znázorňuje tlačítko HoloLens napájení](./images/hololens-power.png)
 
@@ -63,7 +63,7 @@ Když je HoloLens vypnutá nebo v pohotovostním režimu, zapněte ji stisknutí
 > [!TIP]
 > Pokud chcete HoloLens, řekněte "Cortana, restartujte zařízení".
 
-### <a name="put-hololens-in-standby"></a>Dejte HoloLens do pohotovostního režimu.
+### <a name="put-hololens-in-standby"></a>Umístit HoloLens do pohotovostního režimu
 
 Pokud chcete HoloLens do pohotovostního režimu, když je zapnutý, jednou stiskněte tlačítko napájení. Indikátory baterie bliknou. Pokud ho chcete probouzet z pohotovostního režimu, znovu stiskněte tlačítko napájení.
 
@@ -71,7 +71,7 @@ HoloLens po 3 minutách nečinnosti automaticky přejde do pohotovostního reži
 
 ### <a name="shut-down-hololens"></a>Vypnutí HoloLens
 
-Pokud chcete funkci vypnout (vypnout) HoloLens, podržte tlačítko napájení po dobu čtyř sekund. Indikátory baterie vypínaly jednu po druhé a zařízení se vypnulo.
+Pokud chcete funkci vypnout (vypnout) HoloLens, podržte tlačítko napájení po dobu čtyř sekund. Indikátory baterie se vypínaly jednu po druhé a zařízení se vypne.
 
 HoloLens se automaticky vypne, když se úroveň baterie klesne na jedno procento, i když je zapojená do napájení. Po nabití baterie na tři procenta budete moct znovu zapnout HoloLens zařízení.
 
@@ -83,9 +83,9 @@ Tlačítka jasu a hlasitosti jsou na pravé straně a na pravé straně jsou tla
 
 ## <a name="hololens-indicator-lights"></a>HoloLens indikátorů
 
-![Obrázek znázorňuje HoloLens indikátorů](./images/hololens-lights.png)
+![Obrázek znázorňuje indikátory HoloLens indikátorů](./images/hololens-lights.png)
 
-Nejste si jistí, co znamenají indikátory na HoloLens indikátoru? Tady je nějaká pomoc.
+Nejste si jistí, co znamenají indikátory HoloLens vašem počítači? Tady je nějaká pomoc.
 
 |Když to světly dělají |Význam |
 |---|---|

@@ -17,17 +17,17 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: 9474774b47858003cc11363a5f325f589b0732ab
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427994"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032404"
 ---
 # <a name="configure-hololens-by-using-a-provisioning-package"></a>Konfigurace HoloLens pomocí zřizovacího balíčku
 
 [Windows zřizování usnadňuje](/windows/configuration/provisioning-packages/provisioning-packages) správcům IT konfiguraci zařízení koncových uživatelů bez vytváření bitové kopie. Windows Configuration Designer je nástroj pro konfiguraci imagí a nastavení modulu runtime, které se pak zabudují do zřizovacích balíčků.
 
-Mezi konfigurace HoloLens, které můžete použít ve zřizovacího balíčku, patří:
+Mezi konfigurace HoloLens, které můžete použít ve zřizovacím balíčku, patří:
 
 - Upgrade na [Windows Holographic for Business](hololens1-upgrade-enterprise.md)
 - Nastavení místního účtu
@@ -62,7 +62,7 @@ Zřizovací balíčky mohou zahrnovat pokyny a zásady pro správu, vlastní sí
 
 ## <a name="steps-for-creating-provisioning-packages"></a>Postup vytváření zřizovacích balíčků
 
-1. **Možnost 1:** [Z Microsoft Store](https://www.microsoft.com/store/apps/9nblggh4tx22). To zahrnuje HoloLens 2 možnosti.
+1. **Možnost 1: Z** [Microsoft Store](https://www.microsoft.com/store/apps/9nblggh4tx22). To zahrnuje HoloLens 2 možnosti.
 2. **Možnost 2:** [Ze sady ADK (Windows Assessment and Deployment Kit) pro Windows 10](https://developer.microsoft.com/windows/hardware/windows-assessment-deployment-kit). Pokud instalujete Windows Configuration Designer z Windows ADK,  v dialogovém okně Vyberte funkce, **které chcete** nainstalovat vyberte Návrhář konfigurace. Tato možnost nezahrnuje HoloLens 2.
 
 > [!NOTE]
@@ -83,16 +83,16 @@ Pomocí nástroje Windows Configuration Designer vytvořte zřizovací balíček
 4. Přečtěte si pokyny na **stránce Začínáme a** vyberte **Další.** Stránky pro zřizování desktopových aplikací vás projde následujícími kroky.
   
 > [!IMPORTANT]
-> Při vytváření zřizovacího balíčku můžete zahrnout citlivé informace do souborů projektu a do souboru zřizovacího balíčku (.ppkg). I když máte možnost zašifrovat soubor .ppkg, soubory projektu nejsou zašifrované. Soubory projektu byste měli uložit na bezpečném místě a soubory projektu odstranit, když už je nepotřebujete.
+> Při vytváření zřizovacího balíčku můžete zahrnout citlivé informace do souborů projektu a do souboru zřizovacího balíčku (.ppkg). I když máte možnost zašifrovat soubor .ppkg, soubory projektu nejsou šifrovány. Soubory projektu byste měli uložit na bezpečném místě a soubory projektu odstranit, když už je nepotřebujete.
 
 ### <a name="configure-settings"></a>Konfigurace nastavení
 
 <table>
-<tr><td style="width:45%" valign="top"><a id="one"></a><img src="images/one.png" alt="step one"/><img src="images/set-up-device.png" alt="set up device"/></br></br>Přejděte na a vyberte soubor podnikové licence a upgradujte HoloLens edici.</br></br>Pokud chcete skrýt <strong>části</strong> prvního prostředí, můžete také přepnout ano nebo ne. <strong></strong></br></br>Pokud chcete nastavit zařízení bez nutnosti připojovat se k Wi-Fi síti, přepněte Přeskočit nastavení <strong>Wi-Fi na</strong> <strong>Zapnout.</strong></br></br>Vyberte oblast a časové pásmo, ve kterém se zařízení použije. </td><td><img src="images/set-up-device-details.png" alt="Select enterprise licence file and configure OOBE"/></td></tr>
-<tr><td style="width:45%" valign="top"><a id="two"></a><img src="images/two.png" alt="step two"/>  <img src="images/set-up-network.png" alt="set up network"/></br></br>V této části můžete zadat podrobnosti o bezdrátové síti Wi-Fi, ke které by se zařízení mělo automaticky připojit. Chcete-li to provést, vyberte v systému <strong>,</strong>zadejte SSID, typ sítě (<strong>Open</strong> nebo <strong>WPA2-Personal</strong>) a (pokud <strong>WPA2-Personal)</strong>heslo bezdrátové sítě.</td><td><img src="images/set-up-network-details-desktop.png" alt="Enter network SSID and type"/></td></tr>
-<tr><td style="width:45%" valign="top"><a id="three"></a><img src="images/three.png" alt="step three"/>  <img src="images/account-management.png" alt="account management"/></br></br>Zařízení můžete zaregistrovat v Azure Active Directory nebo na zařízení vytvořit místní účet.</br></br>Před použitím průvodce návrhářem konfigurace Windows konfigurace služby Azure AD nastavte ve vaší organizaci připojení <a href="/azure/active-directory/active-directory-azureadjoin-setup" data-raw-source="[set up Azure AD join in your organization](/azure/active-directory/active-directory-azureadjoin-setup)">ke službě Azure AD.</a> Maximální <strong>počet zařízení na uživatelské</strong> nastavení v tenantovi Azure AD určuje, kolikrát se může hromadný token, který získáte v průvodci, použít. Pokud chcete zaregistrovat zařízení ve službě Azure AD, vyberte tuto možnost a zadejte popisný název hromadného tokenu, který získáte pomocí průvodce. Nastavte datum vypršení platnosti tokenu (maximálně 30 dnů od data, kdy token získáte). Vyberte <strong>Získat hromadný token</strong>. V <strong>okně&#39;přihlášení</strong> zadejte účet, který má oprávnění k připojení zařízení k Azure AD, a pak heslo. Vyberte <strong>Přijmout,</strong> abyste Windows Configuration Designeru potřebná oprávnění. </br></br>Pokud chcete vytvořit místní účet, vyberte tuto možnost a zadejte uživatelské jméno a heslo. </br></br><strong>Důležité:</strong> <br />(Pouze Windows 10 verze 1607) Pokud v zřizovacím balíčku vytvoříte místní účet, musíte každých 42 dnů změnit heslo pomocí <strong>Nastavení</strong> aplikace. Pokud během tohoto období heslo nezměníte, může být účet uzamčený a nebude se možné přihlásit.  </td><td><img src="images/account-management-details.png" alt="join  Azure AD or create a local  account"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="one"></a><img src="images/one.png" alt="step one"/><img src="images/set-up-device.png" alt="set up device"/></br></br>Přejděte na a vyberte soubor podnikové licence a upgradujte HoloLens edici.</br></br>Pokud chcete skrýt <strong>části</strong> prvního prostředí, můžete také přepnout ano nebo ne. <strong></strong></br></br>Pokud chcete nastavit zařízení bez nutnosti připojovat se k Wi-Fi síti, přepněte Přeskočit nastavení <strong>Wi-Fi</strong> na <strong>Zapnout.</strong></br></br>Vyberte oblast a časové pásmo, ve kterém se zařízení použije. </td><td><img src="images/set-up-device-details.png" alt="Select enterprise licence file and configure OOBE"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="two"></a><img src="images/two.png" alt="step two"/>  <img src="images/set-up-network.png" alt="set up network"/></br></br>V této části můžete zadat podrobnosti o bezdrátové síti Wi-Fi, ke které by se zařízení mělo automaticky připojit. Chcete-li to provést, vyberte V <strong>systému</strong>, zadejte SSID, typ sítě (<strong>Open</strong> nebo <strong>WPA2-Personal</strong>) a (pokud <strong>WPA2-Personal)</strong>heslo bezdrátové sítě.</td><td><img src="images/set-up-network-details-desktop.png" alt="Enter network SSID and type"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="three"></a><img src="images/three.png" alt="step three"/>  <img src="images/account-management.png" alt="account management"/></br></br>Zařízení můžete zaregistrovat v Azure Active Directory nebo na zařízení vytvořit místní účet.</br></br>Než použijete průvodce Windows Konfigurace konfigurace ke konfiguraci hromadné registrace Azure AD, nastavte připojení ke službě <a href="/azure/active-directory/active-directory-azureadjoin-setup" data-raw-source="[set up Azure AD join in your organization](/azure/active-directory/active-directory-azureadjoin-setup)">Azure AD ve vaší organizaci.</a> Maximální <strong>počet zařízení na uživatelské</strong> nastavení v tenantovi Azure AD určuje, kolikrát se může hromadný token, který získáte v průvodci, použít. Pokud chcete zaregistrovat zařízení ve službě Azure AD, vyberte tuto možnost a zadejte popisný název hromadného tokenu, který získáte pomocí průvodce. Nastavte datum vypršení platnosti tokenu (maximálně 30 dnů od data, kdy token získáte). Vyberte <strong>Získat hromadný token</strong>. V <strong>okně&#39;přihlášení</strong> zadejte účet, který má oprávnění k připojení zařízení ke službě Azure AD, a pak heslo. Vyberte <strong>Přijmout,</strong> abyste Windows Configuration Designeru potřebná oprávnění. </br></br>Pokud chcete vytvořit místní účet, vyberte tuto možnost a zadejte uživatelské jméno a heslo. </br></br><strong>Důležité:</strong> <br />(Pouze Windows 10 verze 1607) Pokud v zřizovacím balíčku vytvoříte místní účet, musíte každých 42 dnů změnit heslo pomocí <strong>Nastavení</strong> aplikace. Pokud během tohoto období heslo nezměníte, může být účet uzamčený a nebude se možné přihlásit.  </td><td><img src="images/account-management-details.png" alt="join  Azure AD or create a local  account"/></td></tr>
 <tr><td style="width:45%" valign="top"><a id="four"></a><img src="images/four.png" alt="step four"/> <img src="images/add-certificates.png" alt="add certificates"/></br></br>Pokud chcete pro zařízení zřídit certifikát, klikněte <strong>na Přidat certifikát.</strong> Zadejte název certifikátu, přejděte na adresu a vyberte certifikát, který se má použít.</td><td><img src="images/add-certificates-details.png" alt="add a certificate"/></td></tr> 
-<tr><td style="width:45%" valign="top"><a id="five"></a><img src="images/five.png" alt="step five"/> <img src="images/developer-setup.png" alt="Developer Setup"/></br></br>Přepněte <strong>Ano</strong> nebo <strong>Ne,</strong> pokud chcete povolit vývojářský režim na HoloLens. <a href="/windows/uwp/get-started/enable-your-device-for-development#developer-mode" data-raw-source="[Learn more about Developer Mode.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)">Přečtěte si další informace o režimu pro vývojáře.</a></td><td><img src="images/developer-setup-details.png" alt="Enable Developer Mode"/></td></tr>
+<tr><td style="width:45%" valign="top"><a id="five"></a><img src="images/five.png" alt="step five"/> <img src="images/developer-setup.png" alt="Developer Setup"/></br></br>Přepnutím <strong>ano</strong> nebo <strong>ne</strong> povolte vývojářský režim na HoloLens. <a href="/windows/uwp/get-started/enable-your-device-for-development#developer-mode" data-raw-source="[Learn more about Developer Mode.](/windows/uwp/get-started/enable-your-device-for-development#developer-mode)">Přečtěte si další informace o režimu pro vývojáře.</a></td><td><img src="images/developer-setup-details.png" alt="Enable Developer Mode"/></td></tr>
 <tr><td style="width:45%" valign="top"><a id="six"></a><img src="images/six.png" alt="step six"/> <img src="images/finish.png" alt="finished"/></br></br>Nenastavovat heslo pro ochranu zřizovacího balíčku. Pokud je zřizovací balíček chráněný heslem, zřízení HoloLens zařízení selže.</td><td><img src="images/finish-details.png" alt="Protect your package"/></td></tr>
 </table>
 
@@ -101,7 +101,7 @@ Až budete hotovi, vyberte **Vytvořit.** Trvá to jenom pár sekund. Při sesta
 ### <a name="3-create-a-provisioning-package-for-hololens-by-using-advanced-provisioning"></a>3. Vytvoření zřizovacího balíčku pro HoloLens pomocí pokročilého zřizování
 
 > [!NOTE]
-> Zřizovací balíček,  který vytvoříte v rozšířeném zřizování, nemusí zahrnovat licenci na upgrade edice na Windows Holographic for Business, aby se úspěšně vztahuje na HoloLens (1. generace). [Další informace o Windows Holographic for Business najdete HoloLens (1. generace).](hololens1-upgrade-enterprise.md)
+> Zřizovací balíček,  který vytvoříte v rozšířeném zřizování, nemusí zahrnovat licenci na upgrade edice na Windows Holographic for Business, aby se úspěšně aplikuje na HoloLens (1. generace). [Další informace o Windows Holographic for Business najdete HoloLens (1. generace).](hololens1-upgrade-enterprise.md)
 
 1. Na úvodní Windows Návrháře konfigurace vyberte **Rozšířené zřizování.**
 2. V **okně Zadejte podrobnosti** projektu zadejte název projektu a umístění projektu. Volitelně můžete zadat stručný popis projektu.
@@ -112,7 +112,7 @@ Až budete hotovi, vyberte **Vytvořit.** Trvá to jenom pár sekund. Při sesta
 
 5. Vyberte **Dokončit**.
 
-6. Rozbalte **nastavení modulu runtime** a přizpůsobte balíček pomocí libovolného nastavení [popsaného dále v tomto článku.](#what-you-can-configure)
+6. Rozbalte **položku Nastavení** modulu runtime a přizpůsobte balíček pomocí libovolného nastavení [popsaného dále v tomto článku.](#what-you-can-configure)
 
     > [!IMPORTANT]
     > (Pouze Windows 10 verze 1607) Pokud v zřizovacím balíčku vytvoříte místní účet, musíte každých 42 dnů změnit heslo pomocí **Nastavení** aplikace. Pokud během tohoto období heslo nezměníte, může být účet uzamčený a nebude se možné přihlásit. Pokud je uživatelský účet uzamčený, musíte [provést úplné obnovení zařízení.](https://developer.microsoft.com/windows/mixed-reality/reset_or_recover_your_hololens#perform_a_full_device_recovery)
@@ -122,7 +122,7 @@ Až budete hotovi, vyberte **Vytvořit.** Trvá to jenom pár sekund. Při sesta
 8. Přečtěte si upozornění, že soubory projektu mohou obsahovat citlivé informace, a vyberte **OK.**
 
     > [!IMPORTANT]
-    > Při vytváření zřizovacího balíčku můžete zahrnout citlivé informace do souborů projektu a do souboru zřizovacího balíčku (.ppkg). I když máte možnost zašifrovat soubor .ppkg, soubory projektu nejsou zašifrované. Soubory projektu byste měli uložit na bezpečném místě a soubory projektu odstranit, když už je nepotřebujete.
+    > Při vytváření zřizovacího balíčku můžete zahrnout citlivé informace do souborů projektu a do souboru zřizovacího balíčku (.ppkg). I když máte možnost zašifrovat soubor .ppkg, soubory projektu nejsou šifrovány. Soubory projektu byste měli uložit na bezpečném místě a soubory projektu odstranit, když už je nepotřebujete.
 
 9. Vyberte **Exportovat**  >  **zřizovací balíček.**
 

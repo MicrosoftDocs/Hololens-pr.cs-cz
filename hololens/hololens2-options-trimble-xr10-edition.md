@@ -1,7 +1,7 @@
 ---
-title: Oříznutí XR10 s HoloLens 2
-description: Přečtěte si o Trimble XR10 HoloLens 2 a o tom, co dělat po získání vlastní.
-keywords: HoloLens 2 možnosti nákupu, HoloLens možností, Trimble XR10
+title: Trimble XR10 s HoloLens 2
+description: přečtěte si o Trimble XR10 s HoloLens 2 a o tom, co dělat, když máte jednu ze svých vlastních.
+keywords: HoloLens 2 možnosti nákupu, možnosti HoloLens, Trimble XR10
 author: bgener
 ms.author: bogenera
 ms.reviewer: bogenera
@@ -15,28 +15,28 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: b6c2c6c10232fb8f1817dddabebaf207e51d35d7
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427157"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035923"
 ---
-# <a name="trimble-xr10-with-hololens-2"></a>Oříznutí XR10 s HoloLens 2
+# <a name="trimble-xr10-with-hololens-2"></a>Trimble XR10 s HoloLens 2
 
-Trimble XR10 s HoloLens 2, který je účelový pro pracovníky v nečistých, hlučných a bezpečnostních prostředích, přináší hybridní realitu přímo na váš pracovní web.
+Trimble XR10 s HoloLens 2 přináší do vaší pracovní lokality smíšenou realitu vytvořenou pro pracovní procesy v prostředích se systémem undirty, hlasitě a s bezpečností.
 
 ## <a name="learn-about-trimble-xr10"></a>Další informace o Trimble XR10
 
-Trimble XR10 with HoloLens 2 is the first device created with the Microsoft HoloLens Customization Program. Zařízení integruje zařízení HoloLens 2 do pevného sádro, aby se vytvářely bezpečnostní řešení hybridní reality.
+Trimble XR10 s HoloLens 2 je první zařízení vytvořené pomocí programu Microsoft HoloLens pro přizpůsobení. zařízení integruje HoloLens 2 do pevného hat a vytvoří tak řešení hybridní reality z hlediska zabezpečení.
 
-![Oříznutí SKU](./images/trimble-ed.png)
+![SKU Trimble.](./images/trimble-ed.png)
 
-Další informace o [trimble XR10](https://fieldtech.trimble.com/en/product/trimble-xr10-with-hololens-2)
+Přečtěte si další informace o [TRIMBLE XR10](https://fieldtech.trimble.com/en/product/trimble-xr10-with-hololens-2).
 
 ## <a name="next-steps"></a>Další kroky
 
-1. Začněte ihned pracovat s Mixed Reality a procházením Windows 10 na HoloLens – podívejte se na aplikaci **Tipy,** která vám pomůže s ručními kurzy. Pomocí gesta spuštění přejděte na Start nebo řekněte "Přejít na start" a vyberte Tipy.
-1. Klikněte níže a pokračujte ve čtení o tom, jak se dostat HoloLens 2.
+1. začněte pracovat hned se smíšenými realitami a projděte si Windows 10 v HoloLens – podívejte se na **Tipy** aplikaci, kde najdete praktická cvičení pro interakce. Použijte gesto Start, pokud chcete přejít na Start nebo vyslovit příkaz "Přejít na začátek" a vybrat Tipy.
+1. kliknutím dole můžete pokračovat v čtení HoloLens 2.
 
 > [!div class="nextstepaction"]
-> [Začínáme s HoloLens 2](hololens2-basic-usage.md)
+> [začínáme s HoloLens 2](hololens2-basic-usage.md)

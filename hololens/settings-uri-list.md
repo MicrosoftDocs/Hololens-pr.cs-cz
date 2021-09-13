@@ -14,11 +14,11 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 92040019b093c5ef63d74f095dcb3809112ae7a0
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427999"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126036003"
 ---
 # <a name="page-settings-visibility"></a>Nastavení viditelnost stránky
 
@@ -153,16 +153,16 @@ HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení
 | Baterie <sup>2</sup>           | `batterysaver-settings`<br>|
 | Barvy             | `colors`<br>`personalization-colors` |
 | Hologramy <sup>2</sup>  |  `holograms`  |
-| <sup>Uchýlovací 2</sup> |  `calibration` |
+| Kalibrace <sup>2</sup> |  `calibration` |
 | Oznámení & akce  | `notifications`          |
 | Sdílená prostředí | `crossdevice` 
 | Zvuk <sup>2</sup>           | `sound`<br>|
-| Zvuk > Svazek aplikace a předvolba zařízení <sup>2</sup>           | `apps-volume`<br>|
-| Sound > Správa zvukových zařízení <sup>2</sup>           | `sound-devices`<br>|
+| Zvuk >ho svazku aplikace a preference zařízení <sup>2</sup>           | `apps-volume`<br>|
+| Zvuk > Správa zvukových zařízení <sup>2</sup>           | `sound-devices`<br>|
 | Storage            | `storagesense`           |
-| Storage > konfigurace Storage Sense <sup>2</sup>           | `storagepolicies`<br>|
+| Storage > konfigurace Storageho rozpoznávání <sup>2</sup>           | `storagepolicies`<br>|
 
-### <a name="time--language"></a>Time & Language
+### <a name="time--language"></a>Čas & jazyk
 | Stránka Nastavení | Identifikátor URI                                           |
 |---------------|-----------------------------------------------|
 | Datum & čas <sup>2</sup> | `dateandtime`                  |
@@ -172,21 +172,21 @@ HoloLens zařízení a Windows 10 zařízení mají v rámci aplikace Nastavení
 | Jazyk      | `regionlanguage`<br>`regionlanguage-adddisplaylanguage`<br>`regionlanguage-setdisplaylanguage` |
 | Oblast        | `regionformatting`                  |
 
-### <a name="update--security"></a>Zabezpečení & aktualizací
+### <a name="update--security"></a>Aktualizace zabezpečení &
 | Stránka Nastavení                         | Identifikátor URI                                       |
 |---------------------------------------|-------------------------------------------|
 | Rozšířené možnosti                    | `windowsupdate-options`         |
-| Obnovení & <sup>obnovení 2</sup>      | `reset`         |
+| Resetovat & obnovení <sup>2</sup>      | `reset`         |
 | Program Windows Insider               | `windowsinsider` <br>`windowsinsider-optin`          |
-| Windows Update                        | `windowsupdate`<br> `windowsupdate-activehours`  <br> `windowsupdate-history` <br> `windowsupdate-optionalupdates` <br><sup>1</sup>`windowsupdate-options`<br><sup>1</sup>`windowsupdate-restartoptions` |
-| Windows Aktualizace – kontroluje aktualizace. | `windowsupdate-action`          |
+| Windows Update                        | `windowsupdate`<br> `windowsupdate-activehours`  <br> `windowsupdate-history` <br> `windowsupdate-optionalupdates` <br><sup>první</sup>`windowsupdate-options`<br><sup>první</sup>`windowsupdate-restartoptions` |
+| Windows Aktualizace – zkontroluje aktualizace. | `windowsupdate-action`          |
 
 
-- <sup>1</sup> – Ve verzích starších než Windows Holographic verze 21H1 vás následující dvě identifikátory URI ve skutečnosti nesmídí na stránky Upřesnit možnosti nebo **Možnosti.**  Zablokují nebo zobrazí jenom hlavní stránku Windows aktualizace.
-  -  windowsupdate-options
-  -  windowsupdate-restartoptions
+- <sup>1</sup> – ve verzích starších než Windows holografická verze 21H1, na následujících dvou identifikátorech uri se ve skutečnosti neodkazují na **pokročilé možnosti** nebo stránky **možností** ; budou blokovat nebo zobrazovat hlavní stránku web Windows Update.
+  -  windowsupdate – možnosti
+  -  windowsupdate – restartoptions
 
-- <sup>2</sup> – K dispozici Windows Holographic 21H1 nebo novějším.
+- <sup>2</sup> – k dispozici v Windows holografické 21H1 nebo novější.
 
 
-Úplný seznam identifikátorů URI Windows 10 Nastavení najdete v dokumentaci [ke spouštěcím nastavením.](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference)
+úplný seznam identifikátorů uri Windows 10 Nastavení najdete v dokumentaci k [nastavení spuštění](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference) .

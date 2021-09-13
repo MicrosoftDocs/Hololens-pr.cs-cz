@@ -1,6 +1,6 @@
 ---
-title: HoloLens Řešení potíží se zařízeními
-description: Získejte aktuální informace o nejběžnějších řešeních pro řešení HoloLens a řešení potíží.
+title: HoloLens Řešení potíží se zařízením
+description: udržujte si přehled o nejběžnějších řešeních, abyste HoloLens problémy se zařízením a techniky řešení potíží.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 12/02/2019
@@ -12,144 +12,144 @@ manager: jarrettr
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
-keywords: issues, bug, troubleshoot, fix, help, support, HoloLens, emulator
+keywords: problémy, chyba, řešení potíží, oprava, pomoc, podpora, HoloLens, emulátor
 ms.openlocfilehash: 6ac86acf85e8e4fc1b97473732ea358d3d612d12
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427922"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032383"
 ---
-# <a name="device-troubleshooting"></a>Řešení potíží se zařízeními
+# <a name="device-troubleshooting"></a>Řešení potíží se zařízením
 
-Tento článek popisuje, jak vyřešit několik běžných HoloLens problémů.
+tento článek popisuje, jak vyřešit několik běžných HoloLens problémů.
 
 >[!IMPORTANT]
-> Než začnete s řešením potíží, ujistěte se, že je vaše zařízení naúčtované **na 20 až 40** % kapacity baterie, pokud je to možné. Indikátory [baterie umístěné](hololens2-setup.md#lights-that-indicate-the-battery-level) pod tlačítkem napájení jsou rychlým způsobem, jak ověřit kapacitu baterie bez přihlášení k zařízení.
+> Než začnete s postupem řešení potíží, ujistěte se, že se na zařízení účtuje **20 až 40 procent** kapacity baterie, pokud je to možné. [Indikátory baterie](hololens2-setup.md#lights-that-indicate-the-battery-level) umístěné pod tlačítkem napájení jsou rychlým způsobem, jak ověřit kapacitu baterie bez přihlášení do zařízení.
 
 <a id="list"></a>
 
 **Známé problémy**
-- [Video remote assist se zablokuje po 20 minutách](#remote-assist-video-freezes-after-20-minutes)
-- [Automatické přihlášení žádá o přihlášení](#auto-login-asks-for-log-in)
-- [Microsoft Edge spuštění se nepovede](#microsoft-edge-fails-to-launch)
-- [Klávesnice se přepne na speciální znaky](#keyboard-doesnt-switch-to-special-characters)
-- [Při stahování uzamčených souborů se nez zobrazení chyby](#downloading-locked-files-doesnt-error)
-- [Portál zařízení nahrání nebo stažení souboru](#device-portal-file-uploaddownload-times-out)
-- [Modrá obrazovka po zrušení registrace z insider ve verzi Preview na zařízení blikající sestavením Insider](#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
-- [OneDrive automaticky nenahraje obrázky](#onedrive-doesnt-automatically-upload-pictures)
+- [Po 20 minutách se zablokuje video vzdálené pomoci.](#remote-assist-video-freezes-after-20-minutes)
+- [Automatické přihlášení vyžaduje přihlášení.](#auto-login-asks-for-log-in)
+- [spuštění Microsoft Edge se nezdařilo.](#microsoft-edge-fails-to-launch)
+- [Klávesnice neumožňuje přepnout na speciální znaky.](#keyboard-doesnt-switch-to-special-characters)
+- [Stahování uzamčených souborů nezobrazuje chybu](#downloading-locked-files-doesnt-error)
+- [Časový limit nahrávání nebo stahování souboru portálu zařízení](#device-portal-file-uploaddownload-times-out)
+- [Modrá obrazovka po odregistraci z programu Insider Preview na zařízení, které se postavilo pomocí buildu Insider](#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
+- [OneDrive neodesílá automaticky obrázky](#onedrive-doesnt-automatically-upload-pictures)
 
 **Obecné**
 - [HoloLens nereaguje nebo se nespustí](#hololens-is-unresponsive-or-wont-start)
-- [Chyba Nedostatek místa na disku](#low-disk-space-error)
-- [Selhání selhání](#calibration-fails)
-- [Nemůžu se přihlásit, protože moje HoloLens byla dříve nastavená pro někoho jiného](#cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else)
+- [Chyba "nedostatek místa na disku"](#low-disk-space-error)
+- [Neúspěšná kalibrace](#calibration-fails)
+- [nejde se přihlásit, protože můj HoloLens byl dřív nastavený pro někoho jiného.](#cant-sign-in-because-my-hololens-was-previously-set-up-for-someone-else)
 - [Unity nefunguje](#unity-isnt-working)
-- [Windows Portál zařízení nefunguje správně](#windows-device-portal-isnt-working-correctly)
-- [HoloLens Emulator nefunguje](#the-hololens-emulator-isnt-working)
+- [Windows Portál zařízení nepracuje správně.](#windows-device-portal-isnt-working-correctly)
+- [Emulator HoloLens nefunguje](#the-hololens-emulator-isnt-working)
 
 **Vstup**
-- [Nefungují hlasové příkazy](#voice-commands-arent-working)
-- [Ruční vstup nefunguje](#hand-input-isnt-working)
+- [Hlasové příkazy nefungují.](#voice-commands-arent-working)
+- [Ruční vstup nefunguje.](#hand-input-isnt-working)
 
 **Připojení**
-- [Nelze se připojit k Wi-Fi](#cant-connect-to-wi-fi)
+- [Nejde se připojit k Wi-Fi](#cant-connect-to-wi-fi)
 
 **Externí zařízení** 
-- [Bluetooth zařízení se ne pairují](#bluetooth-devices-arent-pairing)
+- [nepárování zařízení Bluetooth](#bluetooth-devices-arent-pairing)
 - [Mikrofon USB-C nefunguje](#usb-c-microphone-isnt-working)
-- [Zařízení uvedená jako dostupná v Nastavení nefungují](#devices-listed-as-available-in-settings-dont-work)
+- [zařízení uvedená jako dostupná v Nastavení nefungují](#devices-listed-as-available-in-settings-dont-work)
 
-## <a name="remote-assist-video-freezes-after-20-minutes"></a>Video remote assist se zablokuje po 20 minutách
-
-> [!NOTE]
-> K dispozici je novější verze vzdáleného nástroje Remote Assist, která obsahuje opravu tohoto problému. Aktualizujte [službu Remote Assist](holographic-store-apps.md#update-apps) na nejnovější verzi, abyste se tomuto problému vyhnuli.
+## <a name="remote-assist-video-freezes-after-20-minutes"></a>Po 20 minutách se zablokuje video vzdálené pomoci.
 
 > [!NOTE]
-> Kvůli závažnosti tohoto známého problému jsme dočasně pozastavil dostupnost Windows Holographic verze 21H1. Sestavení 21H1 je teď opět k dispozici, takže zařízení je možné znovu aktualizovat na nejnovější build 21H1.
+> Je k dispozici novější verze vzdálené pomoci, která obsahuje opravu tohoto problému. Pokud se chcete tomuto problému vyhnout, [Aktualizujte prosím vzdálenou pomoc](holographic-store-apps.md#update-apps) na nejnovější verzi.
 
-V nejnovější verzi [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)zaznamenali někteří uživatelé Remote Assistu zamrznutí videa během 20 minut. Jedná se o **známý problém.**
+> [!NOTE]
+> kvůli této závažnosti známého problému jsme dočasně pozastavili dostupnost Windows holografické verze 21H1. 21H1 Build je teď znovu dostupný, takže zařízení se možná znovu aktualizují na nejnovější sestavení 21H1.
+
+v nejnovější verzi [Windows holografické 21H1 verze](hololens-release-notes.md#windows-holographic-version-21h1), někteří uživatelé programu Remote Assist při volání po dobu 20 minut nastali zamrznutím videa. Jedná se o **známý problém**.
 
 ### <a name="workarounds"></a>Alternativní řešení
 
-Pokud nemůžete aplikaci Remote Assist aktualizovat na novější sestavení, vyzkoušejte následující postup.
+Pokud nemůžete aktualizovat vzdálenou pomoc na novější Build, zkuste následující postup vyřešit.
 
-#### <a name="restart-in-between-calls"></a>Restartování mezi voláními
+#### <a name="restart-in-between-calls"></a>Restartování během mezi voláními
 
-Pokud vaše volání přesájí 20 minut a dochází k tomuto problému, zkuste zařízení restartovat. Restartováním zařízení mezi voláními vzdálené pomoci obnovíte zařízení a vrátíte ho do dobrého stavu.
+Pokud vaše volání překročí délku 20 minut a dochází k tomuto problému, zkuste zařízení restartovat. Restartování zařízení mezi voláními vzdálené pomoci aktualizuje vaše zařízení a uloží ho zpátky do dobrého stavu.
 
-Pokud chcete rychle restartovat zařízení na Windows Holographic, otevřete nabídku Start verze [21H1,](hololens-release-notes.md#windows-holographic-version-21h1) vyberte ikonu uživatele a pak vyberte **Restartovat.**
-
-[Zpět na seznam](#list)
-
-## <a name="auto-login-asks-for-log-in"></a>Automatické přihlášení žádá o přihlášení
-
-Zařízení HoloLens 2 je možné nakonfigurovat tak, aby se automaticky přihlašoval přes **možnosti** přihlášení k účtům Nastavení -> a v části Povinné nastavovat hodnotu na  ->    ->   **Nikdy.**  Někteří uživatelé se při aktualizaci zařízení s podstatně velkou aktualizací, jako je třeba aktualizace funkcí, mohou znova přihlásit k zařízení. Jedná se o **známý problém.**
-
-Příklad, kdy k tomu může dojít:
-
-- Aktualizace zařízení z Windows Holographic verze 2004 (build 19041.xxxx) na Windows Holographic verze 21H1 (build 20346.xxxx)
-- Aktualizace zařízení tak, aby se ve stejném hlavním buildu, např. Windows Holographic, verze 2004, Windows Holographic, verze 20H2
-- Aktualizace zařízení z image továrny na nejnovější image
-
-K tomu by nemělo dojít během těchto období:
-
-- Zařízení, která mají měsíční servisní aktualizaci
-
-Alternativní metody:
-
-- Metody přihlášení, jako jsou PIN, heslo, Iris, webové ověřování nebo klíče FIDO2.
-- Pokud pin kód zařízení nelze zapamatovat a jiné metody ověřování nejsou k dispozici, může uživatel použít režim [ručního lomítka](hololens-recovery.md#manual-procedure).
+pokud chcete zařízení rychle restartovat v [Windows holografické 21H1,](hololens-release-notes.md#windows-holographic-version-21h1) otevřete nabídku start a vyberte ikonu uživatele a pak vyberte **restartovat**.
 
 [Zpět na seznam](#list)
 
-## <a name="microsoft-edge-fails-to-launch"></a>Microsoft Edge spuštění se nepovede
+## <a name="auto-login-asks-for-log-in"></a>Automatické přihlášení vyžaduje přihlášení.
+
+zařízení HoloLens 2 lze nakonfigurovat tak, aby se automaticky   ->    ->  **přihlásilo prostřednictvím možností přihlášení** Nastavení účty – > a v části **požadováno** nastavení hodnoty na hodnotu **ne**. Někteří uživatelé se můžou po aktualizaci zařízení s podstatně velkou aktualizací, jako je třeba aktualizace funkcí, přihlašovat znovu k zařízení. Jedná se o **známý problém**.
+
+Příklad, kdy by k tomu mohlo dojít:
+
+- aktualizace zařízení z Windows holografické verze 2004 (build 19041. xxxx) na Windows holografická verze 21H1 (build 20346. xxxx)
+- aktualizace zařízení, aby se mohla provést velká aktualizace na stejném hlavním buildu, např. Windows holografická verze 2004, Windows holografická verze 20H2
+- Aktualizace zařízení z image továrny na nejnovější obrázek
+
+K tomu by nemělo dojít během:
+
+- Zařízení s měsíční aktualizací pro údržbu
+
+Řešení metod:
+
+- Metody přihlašování, jako je PIN kód, heslo, Iris, webové ověřování nebo FIDO2 klíče.
+- Pokud se PIN kód zařízení nedá zapamatovat a jiné metody ověřování nejsou k dispozici, může uživatel použít [režim ručního přebliknutí](hololens-recovery.md#manual-procedure).
+
+[Zpět na seznam](#list)
+
+## <a name="microsoft-edge-fails-to-launch"></a>spuštění Microsoft Edge se nezdařilo.
 
 > [!NOTE]
-> Tento problém byl původně vytvořen s náklady na Microsoft Edge verzí. Tento problém se může vyřešit v [novém Microsoft Edge](hololens-new-edge.md). Pokud ne, zpětnou vazbu nahlaste.
+> tento problém byl původně vytvořen v rámci dodací verze Microsoft Edge na mysli. Tento problém se dá vyřešit v [novém Microsoft Edge](hololens-new-edge.md). Pokud ne, pošlete nám svůj názor.
 
-Několik zákazníků nahlásilo problém, kdy Microsoft Edge spuštění. U těchto zákazníků problém přetrvává i po restartování a nevyřeší se Windows aktualizacemi aplikací. Pokud k tomuto problému dochází a potvrdili jste, že [Windows](hololens-updates.md#manually-check-for-updates)je aktuální, zakažte chybu z aplikace [Centrum Feedback](hololens-feedback.md) s následující kategorií a podkate kategorií: Instalace a aktualizace > Stahování, instalace a konfigurace Windows Update.
+několik zákazníků oznámilo problém, kdy se Microsoft Edge nepodařilo spustit. pro tyto zákazníky se problém opakuje po restartování a nebude vyřešen pomocí Windows nebo aktualizací aplikace. pokud máte tento problém a potvrzujete, že [Windows je aktuální](hololens-updates.md#manually-check-for-updates), zaznamenejte prosím chybu z [aplikace centrum zpětné vazby](hololens-feedback.md) pomocí následující kategorie a podkategorie: nainstalujte a aktualizujte > stahování, instalace a konfigurace web Windows Update.
 
-Neexistují žádná známá alternativní řešení, protože jsme zatím nemohli hlavní příčinu problému. S vyšetřováním vám pomůže Centrum Feedback chyb prostřednictvím webu společnosti. Jedná se o **známý problém.**
+Neexistují žádná známá řešení, protože se nám nepovedlo hlavní příčinu problému. Podání chyby prostřednictvím centra Feedback vám pomůže s šetřením! Jedná se o **známý problém**.
 
 [Zpět na seznam](#list)
 
-## <a name="keyboard-doesnt-switch-to-special-characters"></a>Klávesnice se přepne na speciální znaky
+## <a name="keyboard-doesnt-switch-to-special-characters"></a>Klávesnice neumožňuje přepnout na speciální znaky.
 
-Při ooBE došlo k problému, kdy se po zvolení pracovního nebo školního účtu a zadání hesla uživatel pokouší přepnout na speciální znaky na klávesnici klepnutím na tlačítko &123, nezmění se na speciální znaky. Jedná se o **známý problém.**
+Při spuštění OOBE došlo k potížím, kdy uživatel zvolil pracovní nebo školní účet a zadává heslo, a snaží se přepnout na speciální znaky na klávesnici klepnutím na tlačítko &123 se nezmění na speciální znaky. Jedná se o **známý problém**.
 
-Obchádky:
+Mezipracovaná řešení:
 
 - Zavřete klávesnici a znovu ji otevřete klepnutím na textové pole.
-- Nesprávně zadejte heslo. Při příštím spuštění klávesnice bude klávesnice fungovat podle očekávání.
-- Webové ověřování, zavřete klávesnici a vyberte **Přihlásit se z jiného zařízení**.
-- Pokud zadáváte jenom čísla, uživatel může stisknutím a podržením určitých kláves otevřít rozbalenou nabídku.
+- Nesprávně zadejte heslo. Když se při příštím spuštění klávesnice znovu spustí, bude fungovat podle očekávání.
+- Webové ověřování, zavřete klávesnici a vyberte **přihlásit z jiného zařízení**.
+- Pokud zadáváte jenom čísla, může uživatel stisknout a držet určité klávesy, aby otevřeli rozbalenou nabídku.
 - Pomocí klávesnice USB.
 
 To nemá vliv na:
 
-- Uživatelé, kteří se rozhodnout použít osobní účet.
+- Uživatelé, kteří se rozhodnou použít osobní účet.
 
 [Zpět na seznam](#list)
 
-## <a name="downloading-locked-files-doesnt-error"></a>Při stahování uzamčených souborů se ne zobrazí chyba
+## <a name="downloading-locked-files-doesnt-error"></a>Stahování uzamčených souborů nechybí
 
 > [!NOTE]
-> Jedná se o **známý problém,** který byl opraven [Windows Holographic verze 21H1 – aktualizace z července 2021.](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update)
+> jedná se o **známý problém** , který byl vyřešen ve [Windows holografické verzi 21H1-červenec 2021 Update](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update).
 
-V předchozích sestaveních Windows Holographic by výsledkem pokusu o stažení uzamčeného souboru byla chybová stránka HTTP. Při pokusu Windows Holographic verze 21H1 se při pokusu o stažení uzamčeného souboru nic nestane – soubor se nestáhne a nezobrazí se žádná chyba.
+v předchozích sestaveních Windows holografické při pokusu o stažení uzamčeného souboru by výsledkem byla chybová stránka HTTP. v Windows holografické 21H1 aktualizace verze, která se pokouší stáhnout uzamčený soubor, by nedocházelo k žádnému zobrazení, soubor se nestáhne a nebude k dispozici žádná chyba.
 
 [Zpět na seznam](#list)
 
-## <a name="device-portal-file-uploaddownload-times-out"></a>Portál zařízení nahrání nebo stažení souboru
+## <a name="device-portal-file-uploaddownload-times-out"></a>Časový limit nahrávání nebo stahování souboru portálu zařízení
 > [!NOTE]
-> Jedná se o **známý problém,** který byl opraven [Windows Holographic verze 21H1 – aktualizace z července 2021.](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update) Pokud jste v rámci tohoto alternativního řešení dříve zakázali připojení SSL, důrazně doporučujeme ho znovu povolit.
+> jedná se o **známý problém** , který byl vyřešen ve [Windows holografické verzi 21H1-červenec 2021 Update](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update). Pokud jste v rámci alternativního řešení dříve zakázali připojení SSL, důrazně doporučujeme ho znovu povolit.
 
-Někteří zákazníci zjistili, že při pokusu o nahrání nebo stažení souborů se operace může zdát, že přestane reagovat a pak dojde k časovému limitu nebo se nikdy nedokoncuje. Tento problém je[](#downloading-locked-files-doesnt-error) oddělený od známého problému uzamčeného souboru – to má vliv na sestavení na trhu Windows Holographic, verze 2004, 20H2 a 21H1. Tento problém byl způsobený chybou při Portál zařízení zpracování určitých požadavků a konzistentně se ho dosažuje při použití protokolu https, což je výchozí nastavení.
+Někteří zákazníci zjistili, že při pokusu o nahrání nebo stažení souborů se může zdát, že se operace zablokuje a vyprší časový limit nebo není možné ji ještě dokončit. to je oddělené od[známého problému "file locked"](#downloading-locked-files-doesnt-error) – to má vliv na Windows holografické verze 2004, 20H2 a 21H1 buildů v rámci trhu. Problém byl kořenem způsoben chybou v manipulaci s některými požadavky na portálu zařízení a při použití protokolu HTTPS, který je výchozím nastavením, se obvykle vychází.
 
 ### <a name="workaround"></a>Alternativní řešení
 
-Toto alternativní řešení, které platí stejně pro Wi-Fi a UsbNcm, je zakázat možnost "povinné" v části Připojení SSL. Pokud to chcete udělat, přejděte Portál zařízení, **Systém** a vyberte **stránku** Předvolby. V části **Zabezpečení zařízení** vyhledejte Připojení **SSL a** zrušte zaškrtnutí, pokud chcete zakázat **povinné.**
+Toto alternativní řešení, které platí stejně jako Wi-Fi a UsbNcm, je zakázat možnost "požadované" v části "připojení SSL". Provedete to tak, že přejdete na portál zařízení, **systém** a vyberete stránku **Předvolby** . V části **zabezpečení zařízení** vyhledejte **připojení SSL** a zrušte kontrolu, aby se vypnulo **povinné**.
 
 Uživatel by pak měl přejít na http://, ne na https://(IP adresa) a funkce, jako je nahrání souboru, a stahování bude fungovat.
 
@@ -336,16 +336,16 @@ V **Nastavení** System Sound explicitně nastavte vestavěné mluvčí (zvukov�
 
 ## <a name="devices-listed-as-available-in-settings-dont-work"></a>Zařízení uvedená jako dostupná v Nastavení nefungují
 
-HoloLens (1. generace) nepodporuje Bluetooth zvukové profily. Bluetooth se zvuková zařízení, jako jsou mluvčí a náhlavní soupravy, mohou v nastaveních HoloLens zobrazit jako dostupná, ale nejsou podporovaná.
+HoloLens (1. generace) nepodporuje Bluetooth zvukové profily. Bluetooth zařízení, jako jsou mluvčí a náhlavní soupravy, se dají zobrazit jako dostupná v HoloLens, ale nejsou podporovaná.
 
-HoloLens 2 podporuje Bluetooth zvukového profilu A2DP pro stereo přehrávání. Profil Bluetooth Hands Free, který umožňuje zachytávání mikrofonu z Bluetooth periferního zařízení, není na HoloLens 2.
+HoloLens 2 podporuje Bluetooth zvukového profilu A2DP pro stereo přehrávání. Profil Bluetooth Hands Free, který umožňuje zachytávání mikrofonu z Bluetooth periferního zařízení, se v HoloLens 2 nepodporuje.
 
-Pokud máte potíže s používáním Bluetooth zařízení, ujistěte se, že se jedná o podporované zařízení. Mezi podporovaná zařízení patří:
+Pokud máte potíže s používáním Bluetooth, ujistěte se, že se jedná o podporované zařízení. Mezi podporovaná zařízení patří:
 
 - QWERTY v angličtině Bluetooth klávesnice (můžete je použít kdekoli, kde používáte holografičnou klávesnici).
 - Bluetooth mice.
 - Na [HoloLens klikněte na .](hololens1-clicker.md)
 
-Můžete spárovat další Bluetooth HID a PAIR s vašimi HoloLens. Je však možné, že budete muset nainstalovat odpovídající doprovodné aplikace z Microsoft Store, aby bylo možné zařízení skutečně používat.
+Můžete spárovat jiná zařízení Bluetooth HID a PAIR s vašimi HoloLens. Je však možné, že budete muset nainstalovat odpovídající doprovodné aplikace z Microsoft Store, aby bylo možné zařízení skutečně používat.
 
 [Zpět na seznam](#list)

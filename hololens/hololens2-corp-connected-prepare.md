@@ -1,7 +1,7 @@
 ---
-title: průvodce nasazením – firemní připojení HoloLens 2 s průvodcem Dynamics 365 – příprava
-description: přečtěte si, jak připravit registraci HoloLens 2 zařízení přes podnikovou síť s příručkami k Dynamics 365.
-keywords: HoloLens, správa, připojení k podnikové síti, příručky k Dynamics 365, AAD, Azure AD, MDM, správa mobilních zařízení
+title: Průvodce nasazením – Příručky pro firemní HoloLens 2 s Dynamics 365 – příprava
+description: Zjistěte, jak se připravit na registraci HoloLens 2 přes podnikovou propojenou síť pomocí průvodců Dynamics 365.
+keywords: HoloLens, správa, firemní připojení, Průvodci Dynamics 365, AAD, Azure AD, MDM, Mobile Správa zařízení
 author: joyjaz
 ms.author: v-jjaswinski
 ms.reviewer: aboeger
@@ -15,95 +15,95 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 5d8fc2eb0a8dafaae0e1b222b7451877975cf90b
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427442"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032295"
 ---
-# <a name="prepare---corporate-connected-guide"></a>Příprava – Průvodce připojenou k podnikové síti
+# <a name="prepare---corporate-connected-guide"></a>Příprava – Průvodce připojeným podnikem
 ## <a name="infrastructure-essentials"></a>Základy infrastruktury
-pro scénáře osobního i podnikového nasazení je systém správy mobilních zařízení (MDM) základní infrastrukturou, která je nutná k nasazení a správě Windows 10ch zařízení, obzvláště HoloLens 2. jako zprostředkovatel identity se doporučuje [předplatné Azure AD Premium](/azure/active-directory/fundamentals/active-directory-get-started-premium) a **vyžaduje** se pro podporu určitých možností.
+Pro osobní i firemní nasazení je systém Mobile Správa zařízení (MDM) základní infrastrukturou, která se vyžaduje k nasazení a správě zařízení Windows 10, zejména HoloLens 2. Jako [Azure AD Premium identity](/azure/active-directory/fundamentals/active-directory-get-started-premium) se doporučuje předplatné, které je potřeba **k** podpoře určitých funkcí.
 
 > [!NOTE]
-> i když je HoloLens 2 nasazené a spravované jako mobilní zařízení, obvykle se používá jako sdílené zařízení mezi mnoha uživateli.
+> Přestože je HoloLens 2 nasazená a spravovaná jako mobilní zařízení, obvykle se používá jako sdílené zařízení mezi mnoha uživateli.
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
-Azure AD je cloudová adresářová služba, která poskytuje správu identit a přístupů. organizace, které používají Microsoft Office 365 nebo intune, už používají Azure AD, které mají tři edice: Free, Premium P1 a Premium P2 (viz [edice Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-editions)). všechny edice podporují registraci zařízení Azure AD, ale Premium P1 se vyžaduje k povolení automatického zápisu MDM, který v této příručce použijeme později.
+Azure AD je cloudová adresářová služba, která poskytuje správu identit a přístupu. Organizace, které používají Microsoft Office 365 nebo Intune, už používají Azure AD se třemi edicemi: Free, Premium P1 a Premium P2 (viz Azure Active Directory [edice](https://azure.microsoft.com/documentation/articles/active-directory-editions)). Všechny edice podporují registraci zařízení Azure AD, ale Premium P1 je potřeba k povolení automatické registrace MDM, kterou budeme používat později v této příručce.
 > [!Important]
-> je nutné mít službu Azure AD jako HoloLens zařízení nepodporují místní službu AD join. Pokud ještě nemáte nastavenou službu Azure AD, začněte podle pokynů a [vytvořte nového tenanta v Azure Active Directory](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+> Je nezbytné mít Službu Azure AD, protože HoloLens zařízení nepodporují připojení k místní službě AD. Pokud ještě nemáte nastavenou službu Azure AD, postupujte podle pokynů k zahájení práce a vytvoření nového [tenanta](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant)v Azure Active Directory .
 
 ## <a name="identity-management"></a>Správa identit
-V této příručce bude použitá [Identita](/hololens/hololens-identity) účty Azure AD. Účty Azure AD mají několik výhod, například:
+V tomto průvodci budou [použitou](/hololens/hololens-identity) identitou účty Azure AD. Účty Azure AD mají několik výhod, například:
 
-- zaměstnanci používají svůj účet Azure ad k registraci zařízení v Azure ad a můžou ho automaticky zaregistrovat v řešení MDM organizace (Azure AD + MDM – vyžaduje [předplatné Azure AD Premium](/azure/active-directory/fundamentals/active-directory-get-started-premium)).
-- účty Azure AD mají další [možnosti ověřování](/hololens/hololens-identity) prostřednictvím [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-identity-verification). Kromě přihlášení Iris se uživatelé můžou přihlašovat z jiného zařízení nebo používat bezpečnostní klíče FIDO.
+- Zaměstnanci používají svůj účet Azure AD k registraci zařízení v Azure AD a mohou ho automaticky zaregistrovat v řešení MDM organizace (Azure AD + MDM – vyžaduje předplatné [Azure AD Premium předplatného).](/azure/active-directory/fundamentals/active-directory-get-started-premium)
+- Účty Azure AD mají další [možnosti ověřování](/hololens/hololens-identity) prostřednictvím Windows Hello [pro firmy.](/windows/security/identity-protection/hello-for-business/hello-identity-verification) Kromě přihlášení Iris se uživatelé mohou přihlašovat z jiného zařízení nebo používat klíče zabezpečení FIDO.
 
 > [!WARNING] 
-> Zaměstnanci můžou použít jenom jeden účet k inicializaci zařízení, aby **bylo naprosto nezbytné, aby vaše organizace měla kontrolu nad tím, který účet je povolený jako první**. Vybraný účet určí, kdo bude řídit zařízení a ovlivňuje možnosti správy.
+> Zaměstnanci mohou k inicializaci zařízení použít jenom jeden účet, takže je nezbytné, aby vaše organizace nejdřív **povolila, který účet je povolený.** Zvolený účet určí, kdo zařízení řídí, a ovlivní možnosti správy.
 
 ## <a name="mobile-device-management"></a>Správa mobilních zařízení
-Microsoft Intune, součást Enterprise Mobility + Security, je cloudový systém MDM, který spravuje zařízení připojená k vašemu tenantovi. podobně jako Office 365 intune používá službu Azure AD pro správu identit, takže zaměstnanci používají stejné přihlašovací údaje k registraci zařízení v intune, které používají pro přihlášení k Office 365. Intune také podporuje zařízení s jinými operačními systémy, jako jsou iOS a Android, a poskytuje tak kompletní řešení MDM. pro účely tohoto průvodce se zaměříme na použití intune pro povolení nasazení do interní sítě pomocí HoloLens 2.
+Microsoft Intune, který je Enterprise Mobility + Security, je cloudový systém MDM, který spravuje zařízení připojená k vašemu tenantovi. Stejně Office 365 Intune ke správě identit používá Azure AD, takže zaměstnanci používají stejné přihlašovací údaje k registraci zařízení v Intune, která používají pro přihlášení k Office 365. Intune také podporuje zařízení s jinými operačními systémy, jako je iOS a Android, a poskytuje tak kompletní řešení MDM. Pro účely této příručky se zaměříme na použití Intune k povolení nasazení do interní sítě pomocí HoloLens 2.
 > [!Important] 
-> Je nutné mít správu mobilních zařízení. Pokud ho ještě nemáte nastavené, postupujte podle pokynů v této příručce a začněte s Intune.
+> Je nezbytné mít Mobile Správa zařízení. Pokud ho ještě nemáte nastavený, postupujte podle pokynů v této příručce a v příručce Začínáme s Intune.
 
 > [!Important]
-> Aby bylo možné používat Průvodce, je třeba zadat účet služby Azure AD.
+> Abyste mohli používat příručky, vyžaduje se účet Azure AD.
 
 > [!Note] 
-> víc systémů MDM podporuje Windows 10 a podporuje i většinu scénářů nasazení osobních i podnikových zařízení. mezi poskytovatele MDM podporující Windows 10 Holographic patří: MobileIron a další. Většina špičkových dodavatelů MDM už podporuje integraci s Azure AD. Nejaktuálnější seznam dodavatelů MDM, kteří podporují Azure AD, najdete v [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps).
+> Několik systémů MDM podporuje Windows 10 většina podporuje scénáře nasazení osobních a firemních zařízení. Mezi poskytovatele MDM, Windows 10 Holographic patří: AirWatch, MobileIron a další. Většina špičkových dodavatelů MDM už integraci s Azure AD podporuje. Nejnovější seznam dodavatelů MDM, kteří podporují Azure AD, najdete v Azure Marketplace [.](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps)
 
 ## <a name="network-access"></a>Přístup k síti 
-Příručky k Dynamics 365 jsou cloudové aplikace. Pokud správce sítě obsahuje seznam schválení, může být nutné přidat IP adresy nebo koncové body, které jsou vyžadovány pro připojení k serverům Dynamics 365. [Přečtěte si další informace o odblokování IP adres a adres URL](/power-platform/admin/online-requirements#ip-addresses-and-urls).
+Příručky Dynamics 365 jsou cloudové aplikace. Pokud má správce sítě seznam schválení, může potřebovat přidat IP adresy nebo koncové body potřebné pro připojení k serverům Dynamics 365. [Přečtěte si další informace o odblokování IP adres a adres URL.](/power-platform/admin/online-requirements#ip-addresses-and-urls)
 
 ## <a name="certificates"></a>Certifikáty
-Certifikáty zlepšují zabezpečení tím, že poskytují ověřování účtu, Wi-Fi ověřování, šifrování sítě VPN a šifrování SSL webového obsahu. I když správci můžou certifikáty na zařízeních spravovat ručně prostřednictvím zřizovacích balíčků, je osvědčeným postupem použití systému MDM ke správě certifikátů v celém celém životním cyklu – od registrace po obnovení a odvolání. 
+Certifikáty pomáhají zlepšit zabezpečení tím, že poskytují ověřování účtů, Wi-Fi ověřování, šifrování sítě VPN a šifrování SSL webového obsahu. I když správci můžou spravovat certifikáty na zařízeních ručně prostřednictvím zřizování balíčků, je osvědčeným postupem používat systém MDM ke správě těchto certifikátů v průběhu celého jejich životního cyklu – od registrace až po obnovení a odvolání. 
 
-Systém MDM může tyto certifikáty po registraci automaticky nasadit do úložišť certifikátů zařízení (Pokud váš systém MDM podporuje **Simple Certificate Enrollment Protocol (SCEP)** nebo **veřejného klíče kryptografie #12 (PKCS # 12)**). [Seznamte se s typy a profily certifikátů, které používáte s Microsoft Intune](/mem/intune/protect/certificates-configure). MDM taky může dotazovat a odstraňovat zaregistrované klientské certifikáty nebo aktivovat novou žádost o registraci před vypršením platnosti aktuálního certifikátu.
+Systém MDM může tyto certifikáty automaticky nasadit do úložišť certifikátů zařízení po jejich registraci (pokud systém MDM podporuje **standardy Simple Certificate Enrollment Protocol (SCEP)** nebo **PKCS#12**( Public Key Cryptography Standards #12). [Seznamte se s typy certifikátů a profily, které používáte s Microsoft Intune](/mem/intune/protect/certificates-configure). MDM může také dotazovat a odstraňovat zaregistrované klientské certifikáty nebo aktivovat novou žádost o registraci před vypršením platnosti aktuálního certifikátu.
 
-pokud jsou vaše systémy MDM už pro certifikáty nakonfigurované, [příprava certifikátů a profilů sítě pro HoloLens 2](/hololens/hololens-certificates-network) vám umožní začít nasazovat certifikáty a profily pro zařízení HoloLens 2.
+Pokud už máte systémy MDM nakonfigurované pro certifikáty, začněte nasazovat certifikáty a profily sítě pro [HoloLens 2](/hololens/hololens-certificates-network) v tématu Příprava certifikátů a síťových profilů pro HoloLens 2.
 
 ## <a name="scep"></a>SCEP
 
-Pro nasazení SCEP se vyžadují následující služby s výjimkou proxy serveru webových aplikací.
+Pro nasazení SCEP jsou vyžadovány následující služby s výjimkou webového proxy aplikací Serveru.
 
 - [Certifikační autorita](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11))
 - [Role serveru NDES](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))
-- [Microsoft Intune Připojovací](/mem/intune/protect/certificates-scep-configure#install-the-microsoft-intune-connector)
+- [Microsoft Intune Konektor](/mem/intune/protect/certificates-scep-configure#install-the-microsoft-intune-connector)
 
-Také je nutné publikovat adresu URL služby NDES externě pro vaši podnikovou síť pomocí [proxy aplikací služby Azure AD nebo Web Access proxy serveru](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application). Můžete také použít jiný reverzní proxy server, který si vyberete.
+Musíte také publikovat adresu URL NDES mimo vaši podnikovou síť pomocí proxy aplikací [služby Azure AD nebo Web Access proxy serveru.](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application) Můžete také použít jiný reverzní proxy server podle vašeho výběru.
 
 ![Tok dat SCEP.](./images/hololens2-scep-info-flow.png)
 
-Pokud vaše síť ještě nepodporuje SCEP, nebo si nejste jistí, jestli je vaše síť správně nastavená pro SCEP s Intune, referenční informace  [ke konfiguraci infrastruktury pro podporu protokolu SCEP s Intune](/mem/intune/protect/certificates-scep-configure).
+Pokud vaše síť ještě SCEP nepodporuje nebo si nejste jistí, jestli je vaše síť správně nastavená pro SCEP s Intune, najdete informace v tématu Konfigurace infrastruktury pro podporu SCEP s [Intune.](/mem/intune/protect/certificates-scep-configure)
 
-pokud už vaše infrastruktura podporuje SCEP, budete muset [vytvořit](/mem/intune/protect/certificates-profile-scep) [profil](/mem/configmgr/protect/deploy-use/create-certificate-profiles) pro každý certifikát SCEP, který bude používat HoloLens 2. Pokud máte problémy s protokolem SCEP, pomocí [Poradce při potížích s používáním profilů certifikátů SCEP zřiďte certifikáty s Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles).
+Pokud vaše infrastruktura už SCEP podporuje, [](/mem/configmgr/protect/deploy-use/create-certificate-profiles) budete muset vytvořit profil pro každý certifikát SCEP, který bude HoloLens 2 používat. [](/mem/intune/protect/certificates-profile-scep) Pokud máte problémy s SCEP, použijte řešení potíží s používáním profilů [certifikátů SCEP](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles)ke zřízení certifikátů s Microsoft Intune .
 
 ## <a name="pkcs"></a>PKCS
-Intune také podporuje použití privátních certifikátů a certifikátů PKCS (Public Key párové). referenční informace k [použití privátních a veřejných klíčů najdete v Microsoft Intune](/mem/intune/protect/certificates-pfx-configure) .
+Intune také podporuje použití certifikátů PKCS (private and public key pair). Další [informace najdete v referenčních](/mem/intune/protect/certificates-pfx-configure) informacích Microsoft Intune certifikátů privátních a veřejných klíčů v nástroji .
 
 ## <a name="proxy"></a>Proxy server
-Většina podnikových intranetových sítí využívá proxy server ke správě externích přenosů. pomocí HoloLens 2 můžete nakonfigurovat proxy server připojení k síti ethernet, Wi-Fi a VPN.
+Většina podnikových intranetových sítí ke správě externích přenosů využívá proxy server. V HoloLens 2 můžete nakonfigurovat síť proxy server připojení k síti Ethernet, Wi-Fi sítě VPN.
 
-Existuje několik různých typů proxy serverů a způsobů konfigurace proxy serveru. Pro účely tohoto průvodce jsme se rozhodli zvolit **proxy Wi-Fi, nastavit přes adresu URL PAC a nasadit přes MDM**. To přináší výhody, které se nasazují prostřednictvím MDM automaticky, takže je možné soubor PAC aktualizovat místo použití serveru: Konfigurace portů a nakonec pomocí Wi-Fi proxy nakonfigurovat, aby se proxy server používal jenom pro jedno připojení Wi-Fi umožňující, aby se zařízení pořád používala v případě připojení k jinému umístění.
+Existuje několik různých typů proxy serveru a způsobů konfigurace proxy serveru. Pro účely této příručky volíme **proxy wi-fi,** nastavíme adresu URL PAC a nasadíme ji přes MDM. To má tu výhodu, že se automaticky nasazovat přes MDM, možnost aktualizovat soubor PAC místo použití konfigurace server:port a nakonec pomocí proxy serveru Wi-Fi nakonfigurovat proxy server tak, aby se používal jenom pro jedno připojení Wi-Fi, což umožňuje, aby se zařízení i nadále používala, pokud jsou připojená v jiném umístění.
 
-další podrobnosti o nastaveních proxy serveru pro Windows 10 najdete v tématu [vytvoření profilu Wi-Fi pro zařízení v Microsoft Intune – Azure](/mem/intune/configuration/wi-fi-settings-configure).
+Další podrobnosti o nastavení proxy serveru pro Windows 10 najdete v tématu Vytvoření profilu Wi-Fi pro zařízení v [Microsoft Intune – Azure.](/mem/intune/configuration/wi-fi-settings-configure)
 
 ## <a name="line-of-business-apps"></a>Obchodní aplikace 
-přestože je možné nainstalovat několik aplikací prostřednictvím Microsoft Store, je pravděpodobně vaše vlastní aplikace, kterou jste vytvořili speciálně pro použití ve smíšené realitě. Tyto vlastní aplikace distribuované v celé organizaci pro vaši firmu se nazývají obchodní aplikace (LOB).
+I když se několik aplikací může nainstalovat prostřednictvím Microsoft Store, je pravděpodobné, že máte vlastní aplikaci, kterou jste vytvořili speciálně pro použití v hybridní realitě. Tyto vlastní aplikace distribuované ve vaší organizaci pro vaši firmu se nazývají obchodní aplikace.
   
-existuje několik způsobů, jak nasadit aplikace do zařízení HoloLens 2. aplikace se dají nasadit přímo přes MDM, Microsoft Store pro firmy (MSfB) nebo zkušebně načtené prostřednictvím zřizovacího balíčku. Pro účely tohoto průvodce budeme nasazovat aplikace přes MDM prostřednictvím použití požadované instalace aplikace. to umožní, aby se vaše obchodní aplikace po registraci automaticky stáhly do zařízení HoloLens.
+Existuje několik způsobů, jak nasadit aplikace do HoloLens 2 zařízení. Aplikace je možné nasadit přímo prostřednictvím MDM, Microsoft Store pro firmy (MSfB) nebo bokem načtené prostřednictvím zřizovacího balíčku. Pro potřeby této příručky budeme nasazovat aplikace přes MDM pomocí požadované instalace aplikace. To umožní, aby se vaše obchodní aplikace po dokončení registrace automaticky stáhly HoloLens zařízení.
 
-Pro ty, které nemají vlastní objekt LOB, vám poskytneme ukázkovou aplikaci pro otestování tohoto toku nasazení. Tato aplikace bude MRTK s [Příklady](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App) aplikace a už je předem sestavená a zabalená pro testování konceptu.
+Pro ty z vás, kteří nemají vlastní obchodní objekt, poskytneme ukázkovou aplikaci pro testování tohoto toku nasazení. Tato aplikace bude [ukázková aplikace MRTK](https://aka.ms/HoloLensDocs-Sample-MRTK-Examples-App) a už je předem sestavená a zabalená pro testování konceptu.
 
-Další podrobnosti týkající se nasazení aplikace najdete v článku [Správa aplikací: Přehled](/hololens/app-deploy-overview).
+Další podrobnosti o nasazení aplikací najdete v tématu [Správa aplikací: Přehled](/hololens/app-deploy-overview).
 
 > [!NOTE]
-> HoloLens 2 podporuje pouze spouštění aplikací ARM64 pro UWP.
+> HoloLens 2 podporuje jenom spouštění aplikací ARM64 pro UPW.
 
-## <a name="guides-playbook"></a>PlayBook vodítek
-Příručky používají prostředí Microsoft datatext jako úložiště dat pro aplikace průvodců. Je důležité porozumět většímu přehledu o tom, jak vaše datavzhledové prostředí komunikuje s vašimi aplikacemi a vaším klientem. V této příručce se nebudeme řídit, jak spravovat váš datatext, ale Přečtěte si [základní koncepty pro nasazení příruček dynamics 365 – dynamics 365 Mixed reality](/dynamics365/mixed-reality/guides/admin-deployment-playbook).
+## <a name="guides-playbook"></a>Playbook průvodců
+Příručky používají prostředí Microsoft Dataverse jako úložiště dat pro vaše aplikace guides. Je důležité pochopit širší obrázek toho, jak vaše prostředí Dataverse komunikuje s vašimi aplikacemi Guides a vaším tenantem. V této příručce nebudeme prohazovat, jak spravovat dataverse, ale projděte si základní koncepty nasazení průvodců [Dynamics 365 – Dynamics 365 Mixed Reality](/dynamics365/mixed-reality/guides/admin-deployment-playbook).
 
 ## <a name="next-step"></a>Další krok 
 > [!div class="nextstepaction"]
-> [Firemní připojené nasazení – konfigurace](hololens2-corp-connected-configure.md)
+> [Nasazení připojené k podnikové síti – Konfigurace](hololens2-corp-connected-configure.md)

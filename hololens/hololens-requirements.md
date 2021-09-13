@@ -13,11 +13,11 @@ ms.date: 11/04/2020
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 5a4f251f3ca6eae5e85e4d763074e035039159cb
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428077"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032387"
 ---
 # <a name="common-deployment-scenarios"></a>Běžné scénáře nasazení
 
@@ -37,7 +37,7 @@ Můžete být pracovníkem s rozhodovací pravomocí v oblasti obchodu, IT profe
 
 ## <a name="scenario-a-deploy-to-cloud-connected-devices"></a>Scénář A: Nasazení do zařízení připojených ke cloudu
 
-Tento scénář je srovnatelný s nasazením spravovaných mobilních zařízení v rámci společnosti. HoloLens 2 se nasazovat pro použití primárně v prostředích mimo podnikovou síť. K podnikovým prostředkům se přistupuje nebo je možné, že budou omezené prostřednictvím sítě VPN.
+Tento scénář je srovnatelný s nasazením spravovaných mobilních zařízení v rámci společnosti. HoloLens 2 se nasazovat pro použití primárně v prostředích mimo podnikovou síť. Firemní prostředky nejsou přístupné nebo mohou být omezené prostřednictvím sítě VPN.
 
 [![Diagram scénáře A](images/deployment-guides-revised-scenario-a.png)](images/deployment-guides-revised-scenario-a.png#lightbox)
 
@@ -84,7 +84,7 @@ Tento scénář je stejný jako u klasického nasazení pro většinu Windows 10
 Vezměte v úvahu tento model nasazení pro:
 
 * Interní uživatelé
-* Nasazení ve velkém měřítku (pilotní a produkční) v rámci podnikového prostředí
+* Nasazení ve velkém měřítku (pilotní a produkční) v podnikovém prostředí
 
 ### <a name="basic-common-configurations"></a>Základní běžné konfigurace
 
@@ -98,7 +98,7 @@ Vezměte v úvahu tento model nasazení pro:
 
 ### <a name="common-challenges"></a>Běžné problémy
 
-* HoloLens 2 nepodporuje připojení k místní službě AD ani System Center Configuration Manager (SCCM). K MDM se připojuje jenom Azure AD. Mnoho společností v tomto scénáři stále nasazovat počítače Windows 10 jako místní zařízení připojená k AD, spravovaná pomocí SCCM a nemusí mít nasazenou nebo nakonfigurovanou infrastrukturu pro správu interních zařízení Windows 10 prostřednictvím cloudových řešení MDM.
+* HoloLens 2 nepodporuje připojení k místní službě AD ani System Center Configuration Manager (SCCM). Pouze připojení k Azure AD pomocí MDM. Mnoho společností v tomto scénáři stále nasazovat počítače Windows 10 jako místní zařízení připojená k AD, spravovaná pomocí SCCM a nemusí mít nasazenou nebo nakonfigurovanou infrastrukturu pro správu interních zařízení Windows 10 prostřednictvím cloudových řešení MDM.
 * Protože HoloLens 2 je první zařízení v cloudu, při ověřování uživatelů, aktualizacích operačního systému, správě MDM atd. do značné míry spoléhá na služby připojené k internetu a cloudu. Při připojování k podnikové síti bude pravděpodobně potřeba upravit pravidla proxy serveru nebo brány firewall, aby byl povolen přístup pro HoloLens 2 a aplikace, které na ní běží.
 * Podnikové Wi-Fi připojení obvykle vyžaduje certifikáty k ověření zařízení nebo uživatele v síti. Konfigurace požadované infrastruktury nebo nastavení pro nasazení certifikátů Windows 10 zařízení prostřednictvím MDM může být náročná.
 

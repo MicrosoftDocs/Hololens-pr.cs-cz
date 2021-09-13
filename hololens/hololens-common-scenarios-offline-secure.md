@@ -1,6 +1,6 @@
 ---
-title: běžné scénáře – Offline zabezpečené HoloLens 2
-description: přečtěte si, jak nastavit offline nasazení zabezpečeného nasazení a nasazení aplikací se zřizováním pro HoloLens zařízení.
+title: Běžné scénáře – Zabezpečení offline HoloLens 2
+description: Zjistěte, jak nastavit scénář offline zabezpečeného nasazení a nasazení aplikací se zřizováním pro HoloLens zařízení.
 keywords: HoloLens, správa, offline, offline zabezpečení
 ms.date: 9/25/2020
 manager: yannisle
@@ -15,108 +15,108 @@ ms.localizationpriority: medium
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 10d1955249630202a05fbf2057e1d175855ce0b5
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428160"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032176"
 ---
-# <a name="common-scenarios--offline-secure-hololens-2"></a>běžné scénáře – Offline zabezpečené HoloLens 2
+# <a name="common-scenarios--offline-secure-hololens-2"></a>Běžné scénáře – Zabezpečení offline HoloLens 2
 
 ## <a name="overview"></a>Přehled
 
-tato příručka poskytuje pokyny pro použití ukázkového zřizovacího balíčku, který bude uzamknout HoloLens 2 pro použití v zabezpečených prostředích s těmito omezeními:
+Tato příručka obsahuje pokyny k použití ukázkového zřizovacího balíčku, který uzamkne HoloLens 2 pro použití v zabezpečených prostředích s následujícími omezeními:
 
--   Zakáže Wi-Fi.
--   Zakáže BlueTooth.
--   Zakáže mikrofony.
--   Znemožní přidávání nebo odebírání zřizovacích balíčků.
--   Žádný uživatel nemůže povolit žádnou z výše uvedených součástí s omezením.
+-   Zakažte WiFi.
+-   Zakažte BlueTooth.
+-   Zakažte Mikrofony.
+-   Zabraňuje přidávání nebo odebírání zřizovacích balíčků.
+-   Žádný uživatel nemůže povolit žádnou z výše uvedených omezených komponent.
 
-[![Zabezpečený scénář offline. ](./images/deployment-guides-revised-scenario-c-01.png)](./images/deployment-guides-revised-scenario-c-01.png#lightbox)
+[![Scénář zabezpečení offline: ](./images/deployment-guides-revised-scenario-c-01.png)](./images/deployment-guides-revised-scenario-c-01.png#lightbox)
 
 ## <a name="prepare"></a>Příprava
 
-Windows 10 Instalace počítače
-1. [stáhněte si nejnovější soubor HoloLens 2 OS](https://aka.ms/hololens2download) přímo do počítače. 
-   1. Podpora této konfigurace je součástí buildu 19041,1117 a vyššího.
-1. stáhněte si nebo nainstalujte nástroj průvodce pro pokročilou obnovu (oblouk) [z Microsoft Store](https://www.microsoft.com/store/productId/9P74Z35SFRS8) do počítače.
-1. stáhněte si nebo nainstalujte nejnovější nástroj [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?activetab=pivot:overviewtab) z Microsoft Store do vašeho počítače.
-1. [Stáhněte složku OfflineSecureHL2_Sample se soubory projektu](https://aka.ms/HoloLensDocs-SecureOfflineSample) pro sestavení ppkg.
-1. Připravte svou online [obchodní aplikaci pro nasazení ppkg](app-deploy-provisioning-package.md). 
+Windows 10 Nastavení počítače
+1. [Stáhněte si nejnovější HoloLens 2 operačního systému](https://aka.ms/hololens2download) přímo do počítače. 
+   1. Podpora této konfigurace je součástí buildu 19041.1117 a vyššího.
+1. Stažení nebo instalace nástroje Advanced Recovery Companion(ARC) [z Microsoft Store](https://www.microsoft.com/store/productId/9P74Z35SFRS8) do počítače
+1. Stáhněte a nainstalujte [si nejnovější Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?activetab=pivot:overviewtab) z Microsoft Store počítače.
+1. [Stáhněte složku OfflineSecureHL2_Sample se soubory projektu a](https://aka.ms/HoloLensDocs-SecureOfflineSample) sestavte PPKG.
+1. Příprava offline [obchodní aplikace pro nasazení PPKG](app-deploy-provisioning-package.md) 
 
 
 ## <a name="configure"></a>Konfigurace
 
-Vytvoření balíčku pro zřizování zabezpečené konfigurace
+Vytvoření zřizovacího balíčku zabezpečené konfigurace
 
-1. Spusťte na svém počítači nástroj WCD.
-1. Vyberte **soubor – > otevřít projekt**.
-  1. Přejděte do umístění dříve uložené složky OfflineSecureHL2_Sample a vyberte: OfflineSecureHL2_Sample.icdproj.xml
-1. Projekt by se měl otevřít a teď byste měli mít k dispozici seznam dostupných úprav:
+1. Na počítači spusťte nástroj WCD.
+1. Vyberte **Soubor -> Otevřít projekt.**
+  1. Přejděte do umístění dříve uložené OfflineSecureHL2_Sample složky a vyberte: OfflineSecureHL2_Sample.icdproj.xml
+1. Projekt by se měl otevřít a teď byste měli mít seznam dostupných přizpůsobení:
 
    > [!div class="mx-imgBorder"]
-   > ![Snímek obrazovky konfiguračního balíčku otevřený v WCD](images/offline-secure-sample-wcd.png)
+   > ![Snímek obrazovky s konfiguračním balíčkem otevřeným ve WCD](images/offline-secure-sample-wcd.png)
 
-   Konfigurace nastavené v tomto zřizovacím balíčku:
+   Konfigurace nastavené v tomto zřizovacího balíčku:
    
    |     Položka                                                |     Nastavení                       |     Popis                                                                                                                    |
    |---------------------------------------------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-   |     Účty/uživatelé                                    |     Místní uživatelské jméno & heslo    |     U těchto offline zařízení bude nutné nastavit a sdílet jedno uživatelské jméno a heslo všemi uživateli zařízení.          |
-   |     první zkušenosti/HoloLens/SkipCalibration       |     Ano                          |     Při počátečním nastavení zařízení přeskočí kalibraci.                                                                             |
-   |     první zkušenosti/HoloLens/SkipTraining          |     Ano                          |     Při počátečním nastavení zařízení přeskočí školení zařízení.                                                                              |
-   |     první zkušenosti/HoloLens/wi-fi                  |     Ano                          |     Při počátečním nastavení zařízení přeskočí Wi-Fi config.                                                                                 |
-   |     Zásady/připojení/AllowBluetooth                |     No                            |     Zakáže Bluetooth                                                                                                             |
-   |     Zásady/zkušenosti/AllowCortana                    |     No                            |     zakáže Cortana (aby se vyloučily potenciální problémy, protože mikrofony jsou zakázané).                                          |
+   |     Účty a uživatelé                                    |     Místní uživatelské jméno & heslo    |     U těchto offline zařízení musí všichni uživatelé zařízení nastavit a sdílet jedno uživatelské jméno a heslo.          |
+   |     První prostředí / HoloLens / SkipCalibration       |     Ano                          |     Přeskočí jen počáteční nastavení zařízení.                                                                             |
+   |     První zkušenosti / HoloLens / SkipTraining          |     Ano                          |     Přeskočí trénování zařízení během počátečního nastavení zařízení.                                                                              |
+   |     První prostředí / HoloLens / Wi-Fi                  |     Ano                          |     Přeskočí Wi-Fi konfigurace během počátečního nastavení zařízení.                                                                                 |
+   |     Zásady/Připojení/AllowBluetooth                |     No                            |     Zakáže Bluetooth                                                                                                             |
+   |     Zásady/Prostředí/AllowCortana                    |     No                            |     Zakáže Cortana (aby se eliminly potenciální problémy, protože mikrofony jsou zakázané).                                          |
    |     Zásady/MixedReality/MicrophoneDisabled            |     Yes                           |     Zakáže mikrofon.                                                                                                            |
-   |     Zásady/ochrana osobních údajů/LetAppsAccessLocation              |     Vynutit odepření                    |     Zabraňuje aplikacím v pokusu o přístup k datům o poloze (aby se vyloučily potenciální problémy, protože sledování umístění je zakázané).    |
-   |     Zásady/ochrana osobních údajů/LetAppsAccessMicrophone            |     Vynutit odepření                    |     Zabraňuje aplikacím v pokusu o přístup k mikrotelefonům (aby se vyloučily potenciální problémy, protože mikrofony jsou zakázané).           |
-   |     Zásady/zabezpečení/AllowAddProvisioningPackage       |     No                            |     Zabrání komukoli v přidávání zřizovacích balíčků, které se můžou pokusit přepsat uzamčené zásady.                         |
-   |     Zásady/zabezpečení/AllowRemoveProvisioningPackage    |     No                            |     Znemožní komukoli odebrat tento uzamčený zřizovací balíček.                                                           |
-   |     Zásady/systém/AllowLocation                       |     No                            |     Zabrání zařízení v pokusu o sledování dat o poloze.                                                                        |
-   |     Zásady/Wi-Fi/AllowWiFi                             |     No                            |     Zakáže Wi-Fi                                                                                                                 |
+   |     Zásady/Ochrana osobních údajů/LetAppsAccessLocation              |     Vynutit odepření                    |     Brání aplikacím v pokusu o přístup k datům o poloze (aby se eliminly potenciální problémy, protože sledování polohy je zakázané).    |
+   |     Zásady/Ochrana osobních údajů/LetAppsAccessMicrophone            |     Vynutit odepření                    |     Brání aplikacím v pokusu o přístup k mikrofonům (aby se eliminly potenciální problémy, protože mikrofony jsou zakázané).           |
+   |     Zásady/Zabezpečení/AllowAddProvisioningPackage       |     No                            |     Zabrání komukoli v přidávání zřizovacích balíčků, které by se mohly pokusit přepsat zásady uzamčení.                         |
+   |     Zásady/Zabezpečení/AllowRemoveProvisioningPackage    |     No                            |     Zabrání komukoli v odebrání tohoto uzamčeného zřizovacího balíčku.                                                           |
+   |     Zásady/Systém/AllowLocation                       |     No                            |     Zabrání zařízení v pokusu o sledování dat o poloze.                                                                        |
+   |     Zásady/Wi-Fi/PovolitWiFi                             |     No                            |     Zakáže Wi-Fi                                                                                                                 |
 
-1. v části modul Runtime Nastavení vyberte **účty/uživatelé/uživatelské jméno: Holo/heslo**.
+1. V části Nastavení modulu runtime vyberte **Účty / uživatelé / Uživatelské jméno: Holo / Heslo.**
 
-   Poznamenejte si heslo a v případě potřeby ho obnovte.
+   Poznamenejte si heslo a v případě potřeby resetujte.
 
-1. Přejděte na UniversalAppInstall/UserContextApp a [nakonfigurujte obchodní aplikaci](app-deploy-provisioning-package.md) , kterou budete nasazovat do těchto zařízení.
-
-   > [!div class="mx-imgBorder"]
-   > ![Snímek obrazovky s přidáním aplikace v WCD](images/offline-secure-sample-wcd-usercontextapp2.png)
-
-1. Po dokončení klikněte na tlačítko Exportovat a proveďte všechny výzvy, dokud nebude vytvořen zřizovací balíček.
+1. Přejděte na UniversalAppInstall / UserContextApp a nakonfigurujte [obchodní aplikaci,](app-deploy-provisioning-package.md) kterou nasazujete do těchto zařízení.
 
    > [!div class="mx-imgBorder"]
-   > ![Snímek obrazovky s tlačítkem exportovat pro tento balíček v WCD](images/offline-secure-sample-wcd-export.png)
+   > ![Snímek obrazovky s přidáním aplikace do WCD](images/offline-secure-sample-wcd-usercontextapp2.png)
+
+1. Po dokončení vyberte tlačítko Exportovat a postupujte podle všech výtek, dokud se nevytácí zřizovací balíček.
+
+   > [!div class="mx-imgBorder"]
+   > ![Snímek obrazovky s tlačítkem Exportovat pro tento balíček v WCD](images/offline-secure-sample-wcd-export.png)
 
 ## <a name="deploy"></a>Nasadit
 
-1. Připojení HL2 k počítači s Windows 10 prostřednictvím kabelu USB.
-1. spusťte nástroj ARC a vyberte **HoloLens 2** .
+1. Připojení KABELEM USB připojte HL2 Windows 10 počítači.
+1. Spusťte nástroj ARC a vyberte **HoloLens 2.**
 
-   ![úvodní obrazovka HoloLens 2 čistého formátu](images/ARC2.png)
+   ![HoloLens 2 úvodní obrazovky čistého zpětného lomítka.](images/ARC2.png)
 
-1. Na další obrazovce vyberte možnost **Manuální výběr balíčku**.
+1. Na další obrazovce vyberte **Ruční výběr balíčku.**
 
-   ![HoloLens 2 – obrazovka s informacemi o ARC](images/arc_device_info.png)
+   ![HoloLens s informacemi o 2 ARC.](images/arc_device_info.png)
 
-1. Přejděte na dříve stažený soubor. FFU a vyberte **otevřít**.
-1. Na stránce s upozorněním vyberte **pokračovat**.
+1. Přejděte na dříve stažený soubor .ffu a vyberte **Otevřít.**
+1. Na stránce Upozornění vyberte **Pokračovat.**
 
-   ![HoloLens 2 výstražná obrazovka ARC.](images/arc_warning.png)
+   ![HoloLens upozornění 2 ARC.](images/arc_warning.png)
 
-1. počkejte, než nástroj ARC dokončí instalaci operačního systému HoloLens 2.
-1. Jakmile zařízení dokončí zálohování instalace a spuštění, přejděte z počítače na příkaz Průzkumník souborů a zkopírujte dříve uložený soubor PPKG do složky zařízení.
+1. Počkejte, až nástroj ARC dokončí instalaci HoloLens 2 operačního systému.
+1. Po dokončení instalace a spuštění zařízení přejděte z počítače do složky Průzkumník souborů a zkopírujte dříve uložený soubor PPKG do složky zařízení.
 
    > [!div class="mx-imgBorder"]
-   > ![Soubor PPKG na počítači v okně Průzkumníka souborů.](images/offline-secure-file-explorer.png)
+   > ![Soubor PPKG na počítači v Průzkumník souborů okně.](images/offline-secure-file-explorer.png)
 
-1. v HoloLens 2 stiskněte následující rozevírací seznam pro spuštění zřizovacího balíčku: klepněte na tlačítko **snížit hlasitost** a **napájení** .
-1. Zobrazí se výzva k použití zřizovacího balíčku, vyberte **Potvrdit** .
-1. Po dokončení zřizovacího balíčku vyberte **OK**.
-1. Pak se zobrazí výzva, abyste se přihlásili do zařízení pomocí sdíleného místního účtu a hesla.
+1. Na obrazovce HoloLens 2 spusťte stisknutím následující kombinace tlačítek zřizovací  balíček: **Klepněte** současně na Snížení objemu a tlačítko napájení.
+1. Zobrazí se výzva k použití zřizovacího balíčku a vyberte **Potvrdit.**
+1. Po dokončení zřizovacího balíčku vyberte **OK.**
+1. Pak byste měli být vyzváni k přihlášení k zařízení pomocí sdíleného místního účtu a hesla.
 
 ## <a name="maintain"></a>Údržba
 
-V této konfiguraci se doporučuje restartovat proces výše a znovu ho rozsvítit pomocí nástroje ARC a použít nový PPKG k provedení jakékoli aktualizace operačního systému nebo aplikací.
+S touto konfigurací se doporučuje restartovat výše uvedený proces a zařízení znovu zobrazit v nástroji ARC a použít nový PPKG k provádění aktualizací operačního systému nebo aplikací.

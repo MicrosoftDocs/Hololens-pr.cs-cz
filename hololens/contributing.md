@@ -7,17 +7,17 @@ ms.date: 01/04/2021
 ms.topic: article
 ms.prod: hololens
 ms.openlocfilehash: d511156d6940574deda7448a6f634c0004b8f053
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428367"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032172"
 ---
 # <a name="contributing-to-the-hololens-documentation"></a>Přispívání do HoloLens dokumentace
 
 Vítá vás dokumentace [HoloLens.](https://github.com/MicrosoftDocs/Hololens) Všechny články, které v tomto repo vytvoříte nebo upravíte, **budou viditelné pro veřejnost.** 
 
-HoloLens se zobrazují na platformě docs.microsoft.com, která používá markdown GitHub markdown s funkcemi Markdigu. Obsah, který v tomto repo upravíte, se naformátuje na stylizované stránky, které se zobrazí na /hololens.
+HoloLens dokumentace se zobrazují na docs.microsoft.com platformě, která používá GitHub Markdown s funkcemi Markdigu. Obsah, který v tomto repo upravíte, se naformátuje na stylizované stránky, které se zobrazí na /hololens.
 
 Tato stránka popisuje základní kroky a pokyny pro přispívání a odkazy na základy Markdownu. Děkujeme za váš příspěvek!
 
@@ -37,11 +37,11 @@ Pokud ho ještě nemáte, budete si muset vytvořit účet [GitHub .](https://gi
 >Pokud jste zaměstnancem Microsoftu, propoejte svůj GitHub s aliasem Microsoftu na portálu [Microsoft Open Source.](https://repos.opensource.microsoft.com/) Připojte **se k organizacím Microsoft** a **MicrosoftDocs.**
 
 Při nastavování GitHub účtu doporučujeme také tato bezpečnostní opatření:
-- Vytvořte silné [heslo pro účet GitHub.](https://github.com/settings/admin)
+- Vytvořte silné [heslo pro svůj GitHub účet](https://github.com/settings/admin).
 - Povolte [dvojfaktorové ověřování](https://github.com/settings/two_factor_authentication/configure).
 - Kódy pro [obnovení uložte](https://github.com/settings/auth/recovery-codes) na bezpečném místě.
 - Aktualizujte [nastavení veřejného profilu.](https://github.com/settings/profile)
-   - Nastavte své jméno a zvažte nastavení veřejného *e-mailu* na *Nez zobrazení mé e-mailové adresy.*
+   - Nastavte své jméno a zvažte nastavení veřejného *e-mailu* na *Nez zobrazení mé e-mailové adresy*.
    - Doporučujeme nahrát profilový obrázek, protože se na stránkách dokumentace, na které přispíváte, zobrazuje miniatura.
 - Pokud máte v plánu použít příkazový řádek, zvažte nastavení [gitu Správce přihlašovacích údajů pro Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest). Tímto způsobem nebudete muset zadávat heslo pokaždé, když přispíváte.
 
@@ -49,7 +49,7 @@ Systém publikování je svázán s GitHub, takže tyto kroky jsou důležité. 
 
 ## <a name="editing-an-existing-article"></a>Úprava existujícího článku
 
-Pomocí následujícího pracovního postupu proveďte aktualizace *existujícího* článku prostřednictvím GitHub ve webovém prohlížeči:
+Pomocí následujícího pracovního postupu můžete provádět aktualizace *existujícího* článku GitHub ve webovém prohlížeči:
 
 1. Přejděte do článku, který chcete upravit, ve složce mixed-reality-docs.
 
@@ -60,7 +60,7 @@ Pomocí následujícího pracovního postupu proveďte aktualizace *existující
    Tím se automaticky vytvoří fork jednodušné větve z výchozí větve _master_.
 
    > [!NOTE]
-   > Tento článek obsahuje odkazy na _hlavní název_, termín, který microsoft už používá. Když se termín odebere ze softwaru, odebereme ho z tohoto článku.
+   > Tento článek obsahuje odkazy na _hlavní výraz_, který microsoft už používá. Když se termín odebere ze softwaru, odebereme ho z tohoto článku.
    
 3. Upravte obsah článku podle základních [informací o Markdownu.](#markdown-basics)
 
@@ -81,9 +81,9 @@ Pomocí následujícího pracovního postupu proveďte aktualizace *existující
 
 ## <a name="renaming-or-deleting-an-existing-article"></a>Přejmenování nebo odstranění existujícího článku
 
-Pokud vaše změna přejmenuje nebo odstraní existující článek, nezapomeňte přidat přesměrování. Každý, kdo má odkaz na existující článek, tak bude pořád na správném místě. Přesměrování spravuje soubor .openpublishing.redirection.jsv kořenovém adresáři tohoto repo.
+Pokud vaše změna přejmenuje nebo odstraní existující článek, nezapomeňte přidat přesměrování. Každý, kdo má odkaz na existující článek, tak bude pořád na správném místě. Přesměrování spravuje soubor .openpublishing.redirection.json v kořenovém adresáři repo.
 
-Pokud chcete přidat přesměrování .openpublishing.redirection.jsdál, přidejte do pole `redirections` položku:
+Pokud chcete přidat přesměrování na .openpublishing.redirection.json, přidejte do pole `redirections` záznam:
 
 ```json
 {
@@ -97,7 +97,7 @@ Pokud chcete přidat přesměrování .openpublishing.redirection.jsdál, přide
 
 - `source_path`je relativní cesta úložiště ke starému článku, který odebíráte. Ujistěte se, že cesta začíná na a `mixed-reality-docs` končí na `.md` .
 
-- `redirect_url`je relativní veřejná adresa URL ze starého článku do nového článku. Ujistěte se, že **tato adresa** URL neobsahuje nebo , protože odkazuje na veřejnou `mixed-reality-docs` adresu `.md` URL, a ne na cestu k úložišti. Odkazování na oddíl v novém článku pomocí je `#section` povolené. V případě potřeby můžete také použít absolutní cestu k jiné lokalitě.
+- `redirect_url`je relativní veřejná adresa URL ze starého článku do nového článku. Ujistěte se, **že tato adresa** URL neobsahuje nebo , protože odkazuje na veřejnou adresu `mixed-reality-docs` `.md` URL, a ne cestu k úložišti. Odkazování na oddíl v novém článku pomocí je `#section` povolené. V případě potřeby můžete také použít absolutní cestu k jiné lokalitě.
 
 - `redirect_document_id` určuje, jestli chcete zachovat ID dokumentu z předchozího souboru. Výchozí formát je `false`. Tuto `true` možnost použijte, pokud chcete zachovat `ms.documentid` hodnotu atributu z přesměrovaných článku. Pokud zachováte ID dokumentu, data, jako jsou zobrazení stránek a hodnocení, se přenesou do cílového článku. Proveďte to v případě, že je přesměrování primárně přejmenování, a nikoli ukazatel na jiný článek, který pokrývá pouze část stejného obsahu.
 
@@ -107,18 +107,18 @@ Pokud přidáte přesměrování, nezapomeňte odstranit i starý soubor.
 
 Pomocí následujícího pracovního postupu *můžete vytvářet nové články* v GitHub ve webovém prohlížeči:
 
-1. Vytvořte fork z výchozí větve _master_ z MicrosoftDocs/mixed-reality pomocí tlačítka **Fork** v pravém horním rohu.
+1. Vytvořte fork z výchozí větve _master_ pro MicrosoftDocs/mixed-reality pomocí tlačítka **Fork** v pravém horním rohu.
 
    ![Rozvětvení výchozí větve, aktuálně s názvem "master".](images/forkbranch.png)
 
    > [!NOTE]
-   > Tento článek obsahuje odkazy na _hlavní název_, termín, který microsoft už používá. Když se termín odebere ze softwaru, odebereme ho z tohoto článku.
+   > Tento článek obsahuje odkazy na _hlavní výraz_, který microsoft už používá. Když se termín odebere ze softwaru, odebereme ho z tohoto článku.
    
 2. Ve složce mixed-reality-docs vyberte **vpravo** nahoře Vytvořit nový soubor.
 
 3. Vytvořte název stránky článku (místo mezer použijte spojovníky a nepoužívejte interpunkci ani apostrofy) a připojte ".md".
 
-   ![Pojmechte novou stránku.](images/newpagetitle.png)
+   ![Pojmete novou stránku.](images/newpagetitle.png)
    
    >[!IMPORTANT]
    >Nezapomeňte vytvořit nový článek ze složky mixed-reality-docs. Můžete to ověřit tak, že na novém řádku názvu souboru najdete /mixed-reality-docs/.
@@ -141,7 +141,7 @@ Pomocí následujícího pracovního postupu *můžete vytvářet nové články
 
 6. Napište obsah článku s využitím [základů Markdownu.](#markdown-basics)
 
-7. V dolní `## See also` části článku přidejte oddíl s odkazy na další relevantní články.
+7. Do dolní `## See also` části článku přidejte oddíl s odkazy na další relevantní články.
 
 8. Po dokončení vyberte **Commit new file (Potvrdit nový soubor).**
 
@@ -158,7 +158,7 @@ Následující zdroje informací vám pomůžou naučit se upravovat dokumentaci
 
 ### <a name="adding-tables"></a>Přidání tabulek
 
-Vzhledem ke způsobu, jakým docs.microsoft.com styly tabulek, nebudou mít ohraničení ani vlastní styly, i když zkusíte vložené šablony stylů CSS. Bude se zdát, že bude fungovat po krátkou dobu, ale platforma nakonec styl z tabulky vypadne. Proto si naplánujte dopředu a udržujte tabulky jednoduché. Tady je web, který usnadňuje tabulky Markdownu: [Tables Generator]] ( https://www.tablesgenerator.com/markdown_tables) .
+Vzhledem ke způsobu, docs.microsoft.com styly tabulek, nebudou mít ohraničení ani vlastní styly, i když zkusíte vložené šablony stylů CSS. Bude se zdát, že bude fungovat po krátkou dobu, ale platforma nakonec styl z tabulky vypadne. Proto si naplánujte dopředu a udržujte tabulky jednoduché. Tady je web, který usnadňuje tabulky Markdownu: [Tables Generator]] ( https://www.tablesgenerator.com/markdown_tables) .
 
 Rozšíření [Docs Markdown pro Visual Studio Code](/teamblog/docs-extension) také usnadňuje generování tabulek, pokud k úpravám dokumentace používáte Visual Studio Code [(viz](#using-visual-studio-code) níže).
 
@@ -167,7 +167,7 @@ Rozšíření [Docs Markdown pro Visual Studio Code](/teamblog/docs-extension) t
 Obrázky budete muset nahrát do složky mixed-reality-docs/images v tomto umístění a pak na ně odpovídajícím způsobem odkazovat v článku. Obrázky se automaticky zobrazí v plné velikosti, což znamená, že velké obrázky vyplní celou šířku článku. Před nahráním obrázků doporučujeme předem nastavit jejich velikost. Doporučená šířka je 600 až 700 pixelů, ale pokud se jedná o hustotu snímku obrazovky nebo zlomek snímku obrazovky, měli byste velikost nahoru nebo dolů.
 
 >[!IMPORTANT]
->Obrázky můžete do svého forku uložit jenom před sloučením. Pokud tedy plánujete přidat obrázky do článku, budete muset obrázky nejprve přidat do složky images forku pomocí nástroje [Visual Studio Code](#using-visual-studio-code) nebo se ujistit, že jste ve webovém prohlížeči provedli následující:
+>Obrázky můžete do svého forku uložit jenom před sloučením. Pokud tedy plánujete přidat obrázky do článku, budete muset pomocí [nástroje Visual Studio Code](#using-visual-studio-code) nejprve přidat obrázky do složky "images" forku nebo se ujistit, že jste ve webovém prohlížeči provedli následující:
 >
 >1. Fork v repo MicrosoftDocs/mixed-reality.
 >2. Upravoval jste článek ve forku.
@@ -176,12 +176,12 @@ Obrázky budete muset nahrát do složky mixed-reality-docs/images v tomto umís
 >
 >Pokud chcete zjistit, jak nastavit vlastní roz fork, postupujte podle pokynů k [vytvoření nového článku.](#creating-a-new-article)
 
-## <a name="previewing-your-work"></a>Náhled vaší práce
+## <a name="previewing-your-work"></a>Náhled práce
 
 Při úpravách GitHub ve webovém prohlížeči můžete vybrat kartu **Náhled** v horní části stránky a před potvrzením zobrazit náhled své práce. 
 
 >[!NOTE]
->Náhled změn v aplikaci review.docs.microsoft.com k dispozici pouze zaměstnancům Microsoftu.
+>Náhled změn na webu review.docs.microsoft.com je k dispozici pouze zaměstnancům Microsoftu.
 
 Zaměstnanci Microsoftu: Když se vaše příspěvky sloučí do výchozí větve _master,_ můžete obsah zkontrolovat předtím, než se zveřejní na adrese </hololens?branch=master>. Článek najdete pomocí obsahu v levém sloupci.
 
@@ -190,7 +190,7 @@ Zaměstnanci Microsoftu: Když se vaše příspěvky sloučí do výchozí větv
 Úpravy v prohlížeči jsou nejjednodušším způsobem, jak provést rychlé změny, ale má to několik nevýhod:
 
 - Kontrola pravopisu se vám neschová.
-- S jinými články nemáte žádné inteligentní propojení (název souboru článku musíte zadat ručně).
+- Inteligentní propojení s jinými články se nezískající (název souboru článku musíte zadat ručně).
 - Nahrávání obrázků a odkazování na obrázky může být obměná.
 
 Pokud se těmto problémům těmto problémům chytáte, použijte desktopového klienta, jako [je Visual Studio Code](https://code.visualstudio.com/) s [několika](#useful-extensions) užitečnými rozšířeními při přispívání.
@@ -228,11 +228,11 @@ Pomocí následujícího pracovního postupu můžete provádět změny v dokume
       
       ![Synchronizace změn z MicrosoftDocs/hybridní reality do forku](images/sync-repos.png)
       
-   2. V Visual Studio Code tlačítko Synchronizovat, aby se nový aktualizovaný fork synchronizoval s místním klonem.
+   2. V Visual Studio Code tlačítkem Synchronizovat synchronizujte aktuální fork s místním klonem.
       
       ![Klikněte na obrázek tlačítka Synchronizovat.](images/sync-clone.png)
       
-2. Vytvářejte nebo upravovat články v naklonovaném Visual Studio Code.
+2. Články můžete vytvářet nebo upravovat v naklonovaném Visual Studio Code.
 
    1. Upravte jeden nebo více článků (v případě potřeby přidejte obrázky do složky images).
    
@@ -256,9 +256,9 @@ Pomocí následujícího pracovního postupu můžete provádět změny v dokume
 
 Při úpravách Visual Studio Code jsou užitečná následující rozšíření:
 
-- [Rozšíření Docs Markdown pro Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) – pomocí **kombinace alt+M** zobrazíte nabídku možností vytváření na docs, jako jsou:
+- [Rozšíření Docs Markdown pro Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) – pomocí **kombinace alt+M** zobrazíte nabídku možností vytváření dokumentů, jako jsou:
    - Prohledat a odkazovat na obrázky, které jste nahráli.
    - Přidejte formátování, jako jsou seznamy, tabulky a volání specifická pro docs, jako `>[!NOTE]` je .
    - Můžete vyhledávat interní odkazy a záložky a odkazovat na je (odkazy na konkrétní oddíly na stránce).
-   - Chyby formátování jsou zvýrazněné (pokud se chcete dozvědět více, najeďte myší na chybu).
-- [Kontrola pravopisu kódu](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) – chybně napsaná slova budou podtržena. Klikněte pravým tlačítkem na slovo s překlepem a změňte ho nebo ho uložte do slovníku.
+   - Chyby formátování jsou zvýrazněné (pokud se chcete dozvědět víc, najeďte myší na chybu).
+- [Kontrola pravopisu kódu](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) – chybně napsaná slova budou podtržena. klikněte pravým tlačítkem na chybně napsané slovo a změňte ho nebo ho uložte do slovníku.

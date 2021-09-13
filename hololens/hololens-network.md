@@ -1,64 +1,64 @@
 ---
 title: Připojení HoloLens k síti
-description: Zjistěte, jak nastavit a připojit se k internetu HoloLens a jak identifikovat IP adresu zařízení.
+description: naučte se, jak nastavit a připojit se k internetu pomocí HoloLens a jak identifikovat IP adresu zařízení.
 ms.assetid: 0895606e-96c0-491e-8b1c-52e56b00365d
 author: mattzmsft
 ms.author: mazeller
-keywords: HoloLens, wifi, wireless, internet, ip, IP adresa
+keywords: HoloLens, wi-fi, bezdrátové sítě, internet, ip adresa, ip adresa
 ms.prod: hololens
 ms.sitesec: library
 ms.localizationpriority: high
 ms.reviewer: ''
 manager: jarrettr
 ms.openlocfilehash: fe1c47de48e413a6f45921ba1e247016873ca996
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428832"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035992"
 ---
 # <a name="connect-hololens-to-a-network"></a>Připojení HoloLens k síti
 
-Pokud chcete na svém počítači HoloLens, musíte být připojení k síti. HoloLens obsahuje přepínač s podporou 802.11ac, 2x2 Wi-Fi a jeho připojení k síti je podobné jako připojení zařízení Windows 10 Desktop nebo Mobile k Wi-Fi síti. Tato příručka vám pomůže:
+k provedení většiny věcí v HoloLens musíte být připojeni k síti. HoloLens obsahuje síť s podporou standardu standardu standardu (Wi-Fi 2x2) a připojení k síti je podobná připojení Windows 10 počítače nebo mobilního zařízení k Wi-Fi síti. Tato příručka vám pomůže:
 
-- Připojení k síti pomocí Wi-Fi nebo pouze pro HoloLens 2, Wi-Fi Direct nebo Ethernet přes USB-C
-- Zakázání a opětovné povolení Wi-Fi
+- Připojení k síti pomocí Wi-Fi nebo jenom HoloLens 2, Wi-Fi Direct nebo Ethernet over USB-C
+- Zakázat a znovu povolit Wi-Fi
 
-Přečtěte si další [informace o HoloLens offline.](hololens-offline.md)
+přečtěte si další informace o [použití HoloLens offline](hololens-offline.md).
 
 ## <a name="connecting-for-the-first-time"></a>První připojení
 
-Při prvním použití HoloLens vás provedeme připojením k Wi-Fi síti. Pokud máte potíže s připojením Wi-Fi během instalace, ujistěte se, že je vaše síť otevřená síť chráněná heslem nebo místní síť portálu. Ověřte také, že síť nevyžaduje připojení pomocí certifikátu. Po instalaci se můžete připojit k jiným typům Wi-Fi sítí.
+při prvním použití HoloLens vás provedete připojením k Wi-Fi síti. Pokud máte potíže s připojením k Wi-Fi během instalace, ujistěte se, že je vaše síť buď otevřená, chráněná heslem, nebo síť s jedním portálem. Ověřte také, že síť nevyžaduje, abyste k připojení použili certifikát. Po instalaci se můžete připojit k jiným typům Wi-Fi sítí.
 
-Na HoloLens 2 může uživatel použít také adaptér [USB-C na Ethernet,](hololens-connect-devices.md#hololens-2-connect-usb-c-devices) aby se mohl připojit přímo k Wi-Fi, který vám pomůže s nastavením zařízení. Po nastavení zařízení může uživatel adaptér dál používat nebo ho může odpojit od adaptéru a připojit se k [wi-fi po nastavení](hololens-network.md#connecting-to-wi-fi-after-setup). 
+na zařízeních HoloLens 2 může uživatel [použít také adaptér USB-C pro ethernetové](hololens-connect-devices.md#hololens-2-connect-usb-c-devices) připojení přímo k Wi-Fi, který vám pomůže při nastavení zařízení. Jakmile zařízení nastaví uživatel, může ho i nadále používat, jinak může odpojit zařízení od adaptéru a [po nastavení se připojit k síti Wi-Fi](hololens-network.md#connecting-to-wi-fi-after-setup). 
 
-## <a name="connecting-to-wi-fi-after-setup"></a>Připojení k Wi-Fi po nastavení
+## <a name="connecting-to-wi-fi-after-setup"></a>Připojení k Wi-Fi po instalaci
 
-1. Předem vytyčte **gesto Spustit** a vyberte **Nastavení**. Aplikace Nastavení se automaticky umístí před vás.
-1. Vyberte **Network & Internet**  >  **Wi-Fi.** Zkontrolujte, jestli je zapnuté Wi-Fi. Pokud síť nevidíte, posuňte se v seznamu dolů.
-1. Vyberte síť a pak vyberte **Připojení**.
-1. Pokud se zobrazí výzva k zadání hesla k síti, zadejte ho a pak vyberte **Další.**
+1. předformátujte **gesto Start** a vyberte **Nastavení**. aplikace Nastavení bude automaticky umístěna před vás.
+1. Vyberte **Network & Internet**  >  **Wi-Fi**. Zkontrolujte, jestli je zapnuté Wi-Fi. Pokud síť nevidíte, přejděte v seznamu dolů.
+1. vyberte síť a pak vyberte **Připojení**.
+1. Pokud se zobrazí výzva k zadání hesla k síti, zadejte ho a pak vyberte **Další**.
 
-![HoloLens Wi-Fi nastavení.](./images/hololens-2-wifi-settings.jpg)
+![nastavení Wi-Fi HoloLens.](./images/hololens-2-wifi-settings.jpg)
 
-Pokud chcete ověřit, že jste připojení Wi-Fi síti, zkontrolujte stav Wi-Fi v **nabídce Start:**
+Pokud chcete ověřit, že jste připojení k síti Wi-Fi, zkontrolujte stav Wi-Fi v nabídce **Start** :
 
-1. Otevřete **nabídku** Start.
-1. V levém horním rohu nabídky **Start vyhledejte** Wi-Fi stavu. Zobrazí se stav Wi-Fi a SSID připojené sítě.
+1. Otevřete nabídku **Start** .
+1. Podívejte se do levého horního rohu nabídky **Start** pro stav Wi-Fi. Zobrazí se stav Wi-Fi a bude zobrazen identifikátor SSID připojené sítě.
 
 > [!TIP]
-> Pokud Wi-Fi dostupná, můžete se také připojit k mobilním sítím a [sítím 5G.](hololens-cellular.md)
+> Pokud Wi-Fi není k dispozici, můžete [se také připojit k mobilním a 5g sítím](hololens-cellular.md).
 
 > [!IMPORTANT]
-> Uživatelé nemohou vyladit chování roamingu Wi-Fi HoloLens 2 – jediným způsobem, jak aktualizovat seznam **Wi-Fi,** je přepnout Wi-Fi vypnout a zapnout. Zabrání se tak mnoha problémům, jako je například to, že zařízení může zůstat "zablokované" na přístupové bodu, když je mimo rozsah.
+> uživatelé nemůžou sestavovat Wi-Fi roamingu HoloLens 2 – jediným způsobem, jak **seznam Wi-Fi aktualizovat, je přepnout Wi-Fi vypnuto a zapnuto**. Tím se zabrání hodně problémům, třeba když zařízení zůstane zablokované na přístupový bod, jakmile je mimo rozsah.
 
-## <a name="connect-hololens-to-enterprise-wi-fi-network"></a>Připojení HoloLens k Enterprise Wi-Fi síti
+## <a name="connect-hololens-to-enterprise-wi-fi-network"></a>Připojení HoloLens na Enterprise Wi-Fi síti
 
-Enterprise Wi-Fi profily používají k ověřování připojení protokol EAP (Extensible Authentication ProtocolWi-Fi připojení. HoloLens Enterprise Wi-Fi profil je možné nakonfigurovat prostřednictvím MDM nebo zřizovacího balíčku vytvořeného [Windows Configuration Designeru.](/windows/configuration/provisioning-packages/provisioning-packages)
+profily Wi-Fi Enterprise používají k ověřování Wi-Fi připojení protokol eap (Extensible authentication Protocol). profil HoloLens Enterprise Wi-Fi můžete nakonfigurovat prostřednictvím správy mobilních zařízení (MDM) nebo zřizovacího balíčku vytvořeného pomocí [návrháře konfigurace Windows](/windows/configuration/provisioning-packages/provisioning-packages).
 
-Pokyny Microsoft Intune spravovaném zařízení [najdete v Intune.](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile)
+pokud Microsoft Intune spravované zařízení, přečtěte si pokyny pro konfiguraci v [intune](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile) .
 
-Pokud chcete ve Wi-Fi WCD vytvořit zřizovací balíček, je Wi-Fi nakonfigurovaný .xml souboru. Tady je ukázkový profil Wi-Fi pro WPA2-Enterprise s ověřováním EAP-TLS:
+Chcete-li vytvořit Wi-Fi zřizovací balíček v WCD, je vyžadován předem nakonfigurovaný Wi-Fi profil .xml souboru. Tady je ukázkový profil Wi-Fi pro WPA2-Enterprise s ověřováním EAP-TLS:
 
 ``` xml
 <?xml version="1.0"?> 
@@ -120,129 +120,129 @@ Pokud chcete ve Wi-Fi WCD vytvořit zřizovací balíček, je Wi-Fi nakonfigurov
 ```
 
 
-Certifikát kořenové certifikační autority serveru a klientský certifikát může být potřeba zřídit v zařízení v závislosti na typu protokolu EAP.
+Certifikát kořenové certifikační autority serveru a klientský certifikát může být potřeba v zařízení zřídit v závislosti na typu protokolu EAP.
 
 Další prostředky:
 
-- Schéma WLANv1Profile: [[MS-GPWL]: Profil bezdrátové sítě LAN v1 | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/34054c93-cfcd-44df-89d8-5f2ba7532b67)
-- Schéma EAP-TLS: [[MS-GPWL]: Schéma protokolu EAP | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/9590925c-cba2-4ac5-b9a1-1e5292bb72cb)
+- WLANv1Profile schéma: [[MS-GPWL]: Wireless LAN Profile v1 Schema | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/34054c93-cfcd-44df-89d8-5f2ba7532b67)
+- EAP-TLS – schéma: [[MS-GPWL]: schéma Microsoft EAP TLS | Microsoft Docs](/openspecs/windows_protocols/ms-gpwl/9590925c-cba2-4ac5-b9a1-1e5292bb72cb)
 
-Pokud máte [problémy](hololens2-enterprise-troubleshooting.md#) s připojením k Wi-Fi, podívejte se na naši stránku řešení potíží.
+Pokud máte problémy s připojením k síti Wi-Fi, Projděte si naši stránku [řešení potíží](hololens2-enterprise-troubleshooting.md#) .
 
 ## <a name="configure-network-proxy"></a>Konfigurace síťového proxy serveru
 
-Tato část se věnuje proxy serveru sítě pro HoloLens operačního systému a aplikace pro Univerzální platformu Windows platformy (UPW) využívající Windows zásobníku HTTP. Aplikace používající jiné než Windows zásobníku HTTP mohou mít vlastní konfiguraci a zpracování proxy serveru. 
+tato část se zabývá síťovým proxy serverem pro aplikace HoloLens OS a Univerzální platforma Windows (UWP) pomocí Windows zásobníku HTTP. aplikace, které používají non-Windows zásobník HTTP, můžou mít vlastní konfiguraci a manipulaci s proxy serverem. 
 
-### <a name="proxy-configurations"></a>Konfigurace proxy serveru 
+### <a name="proxy-configurations"></a>Konfigurace proxy 
 
-- Skript PAC (Proxy Auto-Config): Soubor [PAC](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) (otevře web jiné společnosti než Microsoft) obsahuje funkci Jazyka JavaScript FindProxyForURL(adresa URL, hostitel). 
-- Statický proxy server: ve tvaru Server:Port.  
-- Protokol WPAD (Web Proxy Auto-Discovery Protocol): Zadejte adresu URL konfiguračního souboru proxy serveru prostřednictvím DHCP nebo DNS. 
+- Skript automatické konfigurace proxy serveru (PAC): [soubor PAC](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) (otevře se na webu, který není Microsoft) obsahuje funkci JavaScriptu FindProxyForURL (URL, hostitel). 
+- Statický proxy server: ve formě serveru: port.  
+- Protokol WPAD (Web Proxy Auto-Discovery Protocol): zadejte adresu URL konfiguračního souboru proxy serveru prostřednictvím protokolu DHCP nebo DNS. 
 
-### <a name="proxy-provisioning-methods"></a>Metody zřizování proxy serveru 
+### <a name="proxy-provisioning-methods"></a>Metody zřizování proxy 
 Existují tři způsoby, jak zřídit proxy:
 
  
 
-1.  **Nastavení UI:** 
-    1. Proxy server pro uživatele (20H2 nebo starší):
-        1. Otevřete nabídka Start a vyberte Nastavení.
-        2. Vyberte Network & Internet a pak v nabídce vlevo vyberte Proxy.
-        3. Posuňte se dolů na Manual proxy setup (Ruční nastavení proxy serveru) a přepněte Use a proxy server (Použít proxy server) na On (Zapnout).
+1.  **Nastavení ROZHRANÍ** 
+    1. Proxy pro jednotlivé uživatele (20H2 nebo starší):
+        1. otevřete nabídka Start a vyberte Nastavení.
+        2. V nabídce vlevo vyberte Network & Internet a pak proxy.
+        3. Přejděte dolů na ruční nastavení proxy serveru a přepínač použít proxy server na zapnuto.
         4. Zadejte IP adresu proxy server.
         5. Zadejte číslo portu.
         6. Klikněte na Uložit.
-      1. Proxy připojení WiFi (21H1 nebo vyšší):
-          1. Otevřete nabídka Start a přejděte na Wi-Fi Vlastnosti vaší sítě.
-          1. Posuňte se dolů na Proxy.
-          1. Změna na ruční nastavení
+      1. Proxy Wi-Fi (21H1 nebo vyšší):
+          1. otevřete nabídka Start a přejdete na stránku vlastností vaší sítě Wi-Fi.
+          1. Posunout dolů na proxy
+          1. Změnit na ruční instalaci
           1. Zadejte IP adresu proxy server.
           1. Zadejte číslo portu.
-          1. Klikněte na Použít.
+          1. Klikněte na použít.
         
  2. **MDM** 
-     1. Intune – Pomocí těchto [kroků můžete](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile) nakonfigurovat proxy server v Intune. Budete se muset posunout do dolní části oddílu.
-     1. Jiná řešení MDM třetích stran – Použijte [WiFi CSP.](/windows/client-management/mdm/wifi-csp)
+     1. Intune – pomocí těchto [kroků](/mem/intune/configuration/wi-fi-settings-windows#enterprise-profile) nakonfigurujete proxy server v Intune. Budete se muset posunout k dolní části oddílu.
+     1. Další řešení MDM třetí strany – použijte [zprostředkovatele CSP pro Wi-Fi](/windows/client-management/mdm/wifi-csp).
 
 3. **PPKG** 
-    1. Otevřete Windows Configuration Designer.
-    1. Klikněte na Rozšířené zřizování, zadejte název nového virtuálního počítače Project klikněte na Další.
-    1. Vyberte Windows Holographic (HoloLens 2) a klikněte na Další.
+    1. otevřít Windows návrháře konfigurace
+    1. klikněte na rozšířené zřizování, zadejte název pro nový Project a klikněte na další.
+    1. vyberte Windows holografické (HoloLens 2) a klikněte na další.
     1. Importujte PPKG (volitelné) a klikněte na Dokončit.
-    1. Rozbalte položku Nastavení -> Profily připojení -> WLAN -> Proxy WLAN.
-    1. Zadejte SSID vaší Wi-Fi sítě a klikněte na Přidat.
-    1. V levém Wi-Fi vyberte požadovanou síť a zadejte požadovaná vlastní nastavení. Povolená vlastní nastavení se v nabídce vlevo zobrazí tučně.
+    1. rozbalte modul Runtime Nastavení-> profily připojení – Proxy > wlan-> wlan.
+    1. Zadejte identifikátor SSID vaší Wi-Fi sítě a klikněte na Přidat.
+    1. V levém okně vyberte svou Wi-Fiovou síť a zadejte požadované vlastní nastavení. Povolená přizpůsobení se zobrazí tučně v levé nabídce.
     1. Klikněte na Uložit a ukončit.
-    1. [Použijte](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup) zřizovací balíček pro HoloLens.
+    1. [Použijte](hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup) zřizovací balíček na HoloLens.
 
-[Poskytovatelé cloudových](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) služeb jsou za mnoha úkoly a zásadami správy pro Windows 10, a to jak v Microsoft Intune, tak u jiných poskytovatelů služeb než Microsoft MDM. Pomocí Návrháře konfigurace [Windows můžete](/windows/configuration/provisioning-packages/provisioning-install-icd) také vytvořit zřizovací balíček a použít ho na HoloLens 2. [](/windows/configuration/provisioning-packages/provisioning-packages)
-Nejpravděpodobnějšími csP, které se použijí na HoloLens 2:
+poskytovatelé [csp](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) jsou za mnoha úlohami správy a zásadami pro Windows 10, a to jak v Microsoft Intune, tak i v jiných poskytovatelích služeb Microsoft MDM. pomocí [nástroje Windows Configuration Designer](/windows/configuration/provisioning-packages/provisioning-install-icd) můžete také vytvořit [zřizovací balíček](/windows/configuration/provisioning-packages/provisioning-packages) a použít ho pro HoloLens 2.
+nejpravděpodobnější csp, které budou aplikovány na vaše HoloLens 2:
 
-- [WiFi CSP:](/windows/client-management/mdm/wifi-csp)proxy pro Wi-Fi profilu 
+- [Zprostředkovatel](/windows/client-management/mdm/wifi-csp)připojení k Wi-Fi: pro profil Wi-Fi proxy 
 
-[Další csP podporovaní v HoloLens zařízeních](/windows/client-management/mdm/configuration-service-provider-reference#hololens)
+[další zprostředkovatelé csp podporované v zařízeních HoloLens](/windows/client-management/mdm/configuration-service-provider-reference#hololens)
 
 
 
 
 
 ## <a name="vpn"></a>Síť VPN
-Připojení VPN může pomoct zajistit bezpečnější připojení a přístup k firemní síti a internetu. HoloLens 2 podporuje integrovaného klienta VPN a modul plug-in VPN universal Windows platformy (UPW). 
+Připojení VPN vám může pomáhat zajistit bezpečnější připojení a přístup k síti vaší společnosti a k Internetu. HoloLens 2 podporuje integrovaný modul plug-in vpn klienta a Univerzální platforma Windows (UWP). 
 
-Podporované integrované protokoly VPN:
+Podporované integrované protokoly sítě VPN:
 - IKEv2
 - L2TP
 - PPTP
 
-Pokud se certifikát používá k ověřování pro integrovaného klienta VPN, je potřeba požadovaný klientský certifikát přidat do úložiště uživatelských certifikátů. Pokud chcete zjistit, jestli modul plug-in VPN třetí strany podporuje HoloLens 2, přejděte do Storu, vyhledejte aplikaci VPN a zkontrolujte, jestli je HoloLens uvedený jako podporované zařízení, a na stránce Požadavky na systém aplikace podporuje architekturu ARM nebo ARM64. HoloLens podporuje pouze aplikace univerzální Windows platformy pro síť VPN třetí strany.
+Pokud se certifikát používá k ověřování integrovaného klienta VPN, musí se požadovaný klientský certifikát přidat do úložiště certifikátů uživatele. pokud chcete zjistit, jestli modul plug-in VPN třetí strany podporuje HoloLens 2, přejděte do storu a vyhledejte aplikaci vpn a ověřte, jestli je HoloLens uvedená jako podporované zařízení, a na stránce požadavky na systém aplikace podporuje architekturu ARM nebo ARM64. HoloLens podporuje jenom Univerzální platforma Windows aplikace pro VPN třetích stran.
 
- Síť VPN je možné spravovat pomocí MDM [Nastavení/AllowVPN](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)a nastavit ji prostřednictvím zásad [Vpnv2-csp.](/windows/client-management/mdm/vpnv2-csp)
+ síť VPN může spravovat MDM prostřednictvím [Nastavení/AllowVPN](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn)a nastavuje se prostřednictvím [zásad podpora vpnv2-csp](/windows/client-management/mdm/vpnv2-csp).
 
-Další informace o [konfiguraci sítě VPN najdete v](https://support.microsoft.com/help/20510/windows-10-connect-to-vpn) těchto [příručkách.](/windows/security/identity-protection/vpn/vpn-guide)  
+Přečtěte si další informace o [tom, jak nakonfigurovat síť VPN](https://support.microsoft.com/help/20510/windows-10-connect-to-vpn) pomocí [těchto průvodců](/windows/security/identity-protection/vpn/vpn-guide).  
 
-### <a name="vpn-via-ui"></a>VPN přes uživatelské rozhraní
+### <a name="vpn-via-ui"></a>VPN prostřednictvím uživatelského rozhraní
 
-Síť VPN není ve výchozím nastavení povolená, ale můžete ji povolit ručně tak, že otevřete aplikaci **Nastavení** a přejdete na **Síť & Internet -> VPN.**
+síť vpn není ve výchozím nastavení povolená, můžete ji ale povolit ručně otevřením **Nastavení** aplikace a přechodem na **síť & Internet-> VPN**.
 1. Vyberte poskytovatele sítě VPN.
 1. Vytvořte název připojení. 
-1. Zadejte název nebo adresu serveru.
+1. Zadejte název nebo adresu svého serveru.
 1. Vyberte typ sítě VPN.
 1. Vyberte typ přihlašovacích údajů. 
-1. Volitelně přidejte uživatelské jméno a heslo.
+1. Volitelně můžete přidat uživatelské jméno a heslo.
 1. Použijte nastavení sítě VPN. 
 
 ![HoloLens Nastavení sítě VPN.](./images/vpn-settings-ui.jpg)
 
-### <a name="vpn-set-via-provisioning-package"></a>Síť VPN nastavená prostřednictvím zřizovacího balíčku
+### <a name="vpn-set-via-provisioning-package"></a>Nastavení sítě VPN prostřednictvím zřizovacího balíčku
 
 > [!TIP] 
-> V našem Windows Holographic verze 20H2 jsme opravili problém s konfigurací proxy serveru pro připojení VPN. Pokud chcete tento tok používat, zvažte upgrade zařízení na toto sestavení.
+> v naší Windows holografické verzi 20H2 jsme vyřešili problém s konfigurací proxy serveru pro připojení k síti VPN. Pokud máte v úmyslu tento tok používat, zvažte možnost upgradovat zařízení na toto sestavení.
 
-1. Spusťte Windows Configuration Designer.
-1. Klikněte **na HoloLens zařízení a** pak vyberte cílové zařízení a **Další.**
+1. spusťte Windows návrháře konfigurace.
+1. klikněte na **zřídit HoloLens zařízení** a pak vyberte cílové zařízení a **další**.
 1. Zadejte název a cestu balíčku.
-1. Klikněte **na Přepnout do rozšířeného editoru.**
-1. Otevřete **Nastavení modulu runtime**  ->  **PřipojeníProfily** VPN  ->    ->  **VPNNastavení**.
+1. Klikněte na **Přepnout do rozšířeného editoru**.
+1. Otevřete **nastavení modulu runtime**  ->  **ConnectivityProfiles**  ->  **VPN**  ->  **VPNSettings**.
 1. Konfigurace VPNProfileName
-1. Vyberte ProfileType (Typ profilu): **Native (Nativní)** **nebo Third Party (Třetí strana).**
-    1. V části Nativní profil vyberte **NativeProtocolType** a pak nakonfigurujte server, zásady směrování, typ ověřování a další nastavení.
-    1. Pro profil třetí strany nakonfigurujte adresu URL serveru, název rodiny balíčků aplikací modulů plug-in VPN (jenom 3 předdefinované) a vlastní konfigurace.
+1. Vyberte typ souboru: **nativní** nebo **třetí strana**.
+    1. V případě nativního profilu vyberte **NativeProtocolType** a pak nakonfigurujte server, zásady směrování, typ ověřování a další nastavení.
+    1. Pro profil třetí strany nakonfigurujte adresu URL serveru, modul plug-in aplikace VPN název sady balíčků (jenom 3 předdefinované) a vlastní konfigurace.
 1. Exportujte balíček.
-1. Připojení HoloLens a zkopírujte do zařízení soubor .ppkg. 
-1. Na HoloLens použijte soubor VPN .ppkg tak, že otevřete **nabídka Start a** vyberete přístup k účtu Nastavení do práce nebo do školy. Přidejte nebo odeberte zřizovací balíček –> Vyberte balíček  ->    ->    ->   VPN.
+1. Připojení HoloLens a zkopírujte soubor. ppkg do zařízení. 
+1. v HoloLens použijte VPN. ppkg tak, že otevřete nabídka Start a vyberete **Nastavení**  ->    ->  **přístup k účtu, nebo**  ->  **přidat nebo odebrat zřizovací balíček** – > vyberte balíček VPN.
 
 
 ### <a name="setting-up-vpn-via-intune"></a>Nastavení sítě VPN přes Intune
-Pokud chcete začít, postupujte podle dokumentů Intune. Při použití těchto kroků mějte na paměti integrované protokoly VPN, které HoloLens zařízení podporují. 
+Stačí postupovat podle dokumentů Intune a začít. pokud budete postupovat podle těchto kroků, pamatujte na integrované protokoly sítě VPN, které HoloLens zařízení podporují. 
 
-[Vytvořte profily VPN pro připojení k serverům VPN v Intune.](/mem/intune/configuration/vpn-settings-configure)
+[Vytvořte profily sítě VPN pro připojení k SERVERŮM VPN v Intune](/mem/intune/configuration/vpn-settings-configure).
 
-[Windows 10 a Windows zařízení Holographic přidejte připojení VPN pomocí Intune.](/mem/intune/configuration/vpn-settings-windows-10)
+pokud [chcete přidat připojení VPN pomocí intune, Windows 10 a Windows holografické nastavení zařízení](/mem/intune/configuration/vpn-settings-windows-10).
 
-Až to bude hotové, [nezapomeňte profil přiřadit](/mem/intune/configuration/device-profile-assign).
+Po dokončení prosím nezapomeňte [profil přiřadit](/mem/intune/configuration/device-profile-assign).
 
-### <a name="vpn-via-3rd-party-mdm-solutions"></a>Síť VPN prostřednictvím řešení MDM třetích stran
-Příklad připojení VPN třetí strany:
+### <a name="vpn-via-3rd-party-mdm-solutions"></a>VPN prostřednictvím řešení MDM jiného výrobce
+Příklad připojení k síti VPN třetí strany:
 ```xml
 <!-- Configure VPN Server Name or Address (PhoneNumber=) [Comma Separated]-->
       <Add>
@@ -277,7 +277,7 @@ Příklad připojení VPN třetí strany:
       </Add>
 ```
 
-Příklad nativní sítě IKEv2 VPN:
+Příklad nativní IKEv2 VPN:
 ```xml
       <Add>
         <CmdID>10001</CmdID>
@@ -331,58 +331,58 @@ Příklad nativní sítě IKEv2 VPN:
         </Item>
       </Add>
 ```
-## <a name="disabling-wi-fi-on-hololens-1st-gen"></a>Zakázání Wi-Fi na HoloLens (1. generace)
+## <a name="disabling-wi-fi-on-hololens-1st-gen"></a>zákaz Wi-Fi na HoloLens (1. generace)
 
-### <a name="using-the-settings-app-on-hololens"></a>Použití Nastavení aplikace na HoloLens
+### <a name="using-the-settings-app-on-hololens"></a>použití aplikace Nastavení v HoloLens
 
-1. Otevřete **nabídku** Start.
-1. V **Nastavení** **Start** nebo v seznamu **Všechny** aplikace na pravé straně nabídky Start vyberte **požadovanou** aplikaci. Aplikace **Nastavení** se automaticky umístí před vás.
+1. Otevřete nabídku **Start** .
+1. vyberte aplikaci **Nastavení** v nabídce **start** nebo ze seznamu **všechny aplikace** na pravé straně nabídky **Start** . aplikace **Nastavení** bude automaticky umístěna před vás.
 1. Vyberte **Network & Internet**.
-1. Výběrem přepínače Wi-Fi přesuňte přepínač do pozice **Vypnuto.** Tím vypnete součásti RF rádia Wi-Fi a zakážete všechny funkce Wi-Fi na HoloLens.
+1. Vyberte přepínač posuvníku Wi-Fi, který chcete přesunout do **vypnuté** pozice. Tato akce vypne součásti RF Wi-Fi přepínači a zakáže všechny funkce Wi-Fi na HoloLens.
 
     > [!WARNING]
-    > Pokud je Wi-Fi přepínač vypnutý, HoloLens nebudou moct automaticky načíst [mezery.](hololens-spaces.md)
+    > pokud je přepínač Wi-Fi zakázán, HoloLens nebude moci automaticky načíst vaše [mezery](hololens-spaces.md).
 
-1. Přepínač posuvníku **přesuňte** do polohy Zap. a zapněte přepínač Wi-Fi přepínač a obnovte Wi-Fi na Microsoft HoloLens. Vybraný přepínač Wi-Fi (**On** nebo **Off**) se zachová mezi restartováními.
+1. Přesunutím posuvníku **na pozici zapněte funkci** Wi-Fi Radio and restore Wi-Fi na Microsoft HoloLens. Vybraný stav přepínačů Wi-Fi (**zapnuto** nebo **vypnuto**) bude v průběhu restartování zachován.
 
-## <a name="identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network"></a>Identifikace IP adresy vaší HoloLens v Wi-Fi síti
+## <a name="identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network"></a>Určení IP adresy vašeho HoloLens v síti Wi-Fi
 
-### <a name="by-using-the-settings-app"></a>Pomocí Nastavení aplikace
+### <a name="by-using-the-settings-app"></a>pomocí aplikace Nastavení
 
-1. Otevřete **nabídku** Start.
-1. V **Nastavení** **Start** nebo v seznamu **Všechny** aplikace na pravé straně nabídky Start vyberte **požadovanou** aplikaci. Aplikace **Nastavení** se automaticky umístí před vás.
+1. Otevřete nabídku **Start** .
+1. vyberte aplikaci **Nastavení** v nabídce **start** nebo ze seznamu **všechny aplikace** na pravé straně nabídky **Start** . aplikace **Nastavení** bude automaticky umístěna před vás.
 1. Vyberte **Network & Internet**.
-1. Posuňte se dolů pod seznam dostupných virtuálních sítí Wi-Fi vyberte **Hardwarové vlastnosti**.
+1. Posuňte se dolů k seznamu dostupných Wi-Fi sítí a vyberte **vlastnosti hardwaru**.
 
-    ![Vlastnosti hardwaru v Wi-Fi nastavení.](./images/wifi-hololens-hwdetails.jpg)
+    ![Vlastnosti hardwaru v nastaveních Wi-Fi.](./images/wifi-hololens-hwdetails.jpg)
 
-   IP adresa se zobrazí vedle **IPv4 adresy**.
+   IP adresa se zobrazí vedle pole **adresa IPv4**.
 
 ### <a name="by-using-voice-commands"></a>Pomocí hlasových příkazů
 
-V závislosti na sestavení zařízení můžete k zobrazení IP adresy použít předdefinované hlasové příkazy nebo Cortana příkaz . V buildech po [roce 19041.1103](hololens-release-notes.md#windows-holographic-version-2004) vyslovte "What's my IP address?" (Jaká je moje IP adresa?) a zobrazí se. U předchozích buildů nebo HoloLens (1. generace) řekněte "Cortana, jaká je moje IP adresa?" a Cortana zobrazí a přečte vaši IP adresu.
+v závislosti na tom, jaká zařízení máte vytvořená, můžete k zobrazení vaší IP adresy použít předdefinované hlasové příkazy nebo Cortana. Na buildy po [19041,1103](hololens-release-notes.md#windows-holographic-version-2004) mluvit "Co je moje IP adresa?" a zobrazí se. pro dřívější buildy nebo HoloLens (1. generace) říká "Hey Cortana", co je moje IP adresa? a Cortana zobrazí a přečte vaši IP adresu.
 
-### <a name="by-using-windows-device-portal"></a>Pomocí Windows Portál zařízení
+### <a name="by-using-windows-device-portal"></a>pomocí Windows portálu zařízení
 
-1. Ve webovém prohlížeči na počítači otevřete portál [zařízení](/windows/mixed-reality/using-the-windows-device-portal.md#networking).
-1. Přejděte do **části** Sítě.  
-   V této části se zobrazí vaše IP adresa a další informace o síti. Pomocí této metody můžete zkopírovat a vložit IP adresu na vývojovém počítači.
+1. Ve webovém prohlížeči na počítači otevřete [portál zařízení](/windows/mixed-reality/using-the-windows-device-portal.md#networking).
+1. Přejděte do části **sítě** .  
+   V této části se zobrazuje vaše IP adresa a další informace o síti. Pomocí této metody můžete zkopírovat a vložit IP adresu na svém vývojovém počítači.
 
-## <a name="change-ip-address-to-static-address"></a>Změna IP adresy na statickou adresu
-### <a name="by-using-settings"></a>Pomocí Nastavení
+## <a name="change-ip-address-to-static-address"></a>Změnit IP adresu na statickou adresu
+### <a name="by-using-settings"></a>pomocí Nastavení
  
-1. Otevřete **nabídku** Start.
-1. V **Nastavení** **Start** nebo v seznamu **Všechny** aplikace na pravé straně nabídky Start vyberte **požadovanou** aplikaci. Aplikace **Nastavení** se automaticky umístí před vás.
+1. Otevřete nabídku **Start** .
+1. vyberte aplikaci **Nastavení** v nabídce **start** nebo ze seznamu **všechny aplikace** na pravé straně nabídky **Start** . aplikace **Nastavení** bude automaticky umístěna před vás.
 1. Vyberte **Network & Internet**.
-1. Posuňte se dolů pod seznam dostupných virtuálních sítí Wi-Fi vyberte **Hardwarové vlastnosti**.
-1. V okně **Upravit nastavení IP** adresy změňte první pole na **Ruční**.
-1. Do zbývajících polí zadejte požadovanou konfiguraci IP adresy a pak klikněte na **Uložit.**
+1. Posuňte se dolů k seznamu dostupných Wi-Fi sítí a vyberte **vlastnosti hardwaru**.
+1. V okně **Upravit nastavení protokolu IP** změňte první pole na **Ruční**.
+1. Do zbývajících polí zadejte požadovanou konfiguraci protokolu IP a pak klikněte na **Uložit**.
 
-### <a name="by-using-windows-device-portal"></a>Pomocí Windows Portál zařízení
+### <a name="by-using-windows-device-portal"></a>pomocí Windows portálu zařízení
 
-1. Ve webovém prohlížeči na počítači otevřete portál [zařízení](/windows/mixed-reality/using-the-windows-device-portal.md#networking).
-1. Přejděte do **části** Sítě.
-1. Vyberte tlačítko **Konfigurace IPv4.**
-1. Vyberte **Použít následující IP adresu a** zadejte požadovanou konfiguraci protokolu TCP/IP.
-1. Vyberte **Použít následující adresy serveru DNS** a v případě potřeby zadejte adresy upřednostňovaného a alternativního serveru DNS.
+1. Ve webovém prohlížeči na počítači otevřete [portál zařízení](/windows/mixed-reality/using-the-windows-device-portal.md#networking).
+1. Přejděte do části **sítě** .
+1. Vyberte tlačítko **Konfigurace protokolu IPv4** .
+1. Vyberte **použít následující IP adresu** a zadejte požadovanou konfiguraci protokolu TCP/IP.
+1. Vyberte **použít následující adresy serverů DNS** a v případě potřeby zadejte upřednostňovanou a alternativní adresu serveru DNS.
 1. Klikněte na **Uložit**. 

@@ -1,5 +1,5 @@
 ---
-title: HoloLens 2. Režim přesunutí platformy
+title: 'HoloLens 2: Přesun režimu platformy'
 description: Jak používat HoloLens na mobilních platformách
 keywords: moving platforms, dynamic motion, hololens, moving platform mode
 author: evmill
@@ -15,11 +15,11 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 81b3231827fce9a2ae2d5e3105800685fedb917b
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428689"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035934"
 ---
 # <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Přesun režimu platformy na platformách s nízkým dynamickým pohybem
 
@@ -39,24 +39,24 @@ Tento článek se věnuje:
 
 HoloLens být schopni sledovat pozici hlavy s [6](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) stupni volnosti (X, Y, Z, překlad a rolování, sklon, rotace yaw), aby bylo možné zobrazit stabilní hologramy. Za tím HoloLens sleduje dva podobné informace ze dvou samostatných zdrojů:
 
-1. Viditelné světlé kamery – které sledují prostředí, například fyzickou místnost, ve které používáte HoloLens
+1. Viditelné světlé kamery – sledují prostředí, například fyzickou místnost, ve které používáte HoloLens
 1. Inerciální měrná jednotka (IMU), která se skládá z akcelerometru,scopeu a nakometru, který sleduje pohyb a orientaci hlavy vzhledem k Zemi
 
 Informace z těchto dvou zdrojů jsou složené, aby bylo možné sledovat vaši pozici hlavy s nízkou latencí a vysokou frekvencí, aby bylo možné vykreslit hladké hologramy.
 
-Tento přístup se ale spoléhá na kritický předpoklad. Prostředí (sledované fotoaparáty) zůstává ve srovnání se Zemí neměnné (vůči kterému může IMU provádět měření). Pokud tomu tak není, mohou být informace z obou zdrojů v konfliktu mezi sebou, podobně jako na tesařce ve vody, a způsobit tak ztrátu sledování. Tento konflikt vede k nesprávným informacím o poloze a vede k hologramům v plaveckých plácích nebo dokonce ke sledování ztráty.
+Tento přístup se ale spoléhá na kritický předpoklad. Prostředí (sledované fotoaparáty) zůstává ve srovnání se Zemí neměnné (vůči kterému může IMU provádět měření). Pokud tomu tak není, může se informace z obou zdrojů navzájem kolidovat, podobně jako na misce ve vody, a způsobit tak, že se sledování ztratí. Tento konflikt vede k nesprávným informacím o poloze a vede k hologramům v plaveckých plácích nebo dokonce ke sledování ztráty.
 
-Přesunutí režimu platformy tento problém řeší. Když povolíte režim Moving Platform Mode (Pohyblivá platforma), je to nápověda našeho snímače, že nemůžeme spoléhat na to, že vstupy ze snímačů se navzájem za všech okolností zcela odsouhlasí. Místo toho musíme do značné míry spoléhat na vizuální sledování a rychle identifikovat nekonstrukční inerciální data pohybu a odpovídajícím způsobem je odfiltrovat, než budeme moct použít vstup IMU.
+Tento problém řeší přesun režimu platformy. Když povolíte režim Moving Platform Mode (Pohyblivá platforma), je to nápověda našeho snímače, že nemůžeme spoléhat na to, že vstupy ze snímačů se navzájem za všech okolností zcela odsouhlasí. Místo toho musíme do značné míry spoléhat na vizuální sledování a rychle identifikovat nekonstrukční inerciální data pohybu a odpovídajícím způsobem je odfiltrovat, než budeme moct použít vstup IMU.
 
 ## <a name="supported-environments-and-known-limitations"></a>Podporovaná prostředí a známá omezení
 
-I když byl vývoj režimu moving platformy pro inteligentní zpracování případů inerciálního a vizuálního konfliktu dat, je v současné době vymezený na velké problémy s nízkým dynamickým pohybem. To znamená, že existují určitě omezení a nepodporované scénáře.
+I když byl vyvinut režim moving platformy pro inteligentní zpracování případů inerciálního a vizuálního konfliktu dat, je v současné době vymezený na velké problémy s nízkým dynamickým pohybem. To znamená, že existují určitě omezení a nepodporované scénáře.
 
 ### <a name="known-limitations"></a>Známá omezení
 
 - Jedinými podporovanými prostředími pro přesun režimu platformy (MPM) jsou velká prostředí s nízkým dynamickým pohybem. Jinými slovy, řada běžných prostředí/situací se zatím nepodporuje kvůli vysoké frekvenci pohybu a vysoké úrovni zrychlení a [zrychlení.](https://en.wikipedia.org/wiki/Jerk_(physics))  Například: roviny, trénování, auta, kola, auta, auta, malé výtahy, výtahy atd.
 - Hologramy povoleném MPM se může mírně zmátnout, zejména pokud je na tekoucí vody.
-- Nic nebrání uživatelům v pokusech o použití MPM v nepodporovaných prostředích, ale pokud je zařízení schopné udržovat sledování v nepodporovaném prostoru, může docházet k nežádoucím vedlejším účinkům. Například u MPM mohou uživatelé zjistit, že je možné použít ve výtahu při změně podlaží, zatímco to bylo dříve nemožné. Přestože MPM bohužel umožňuje zařízení udržovat sledování, v tuto chvíli správu map nezvládá. Uživatelé zjistí, že změna podlaží ve výtahu způsobí, že zařízení zmást horní a dolní podlaží a negativně ovlivní kvalitu mapy.
+- Nic nebrání uživatelům v pokusech o použití MPM v nepodporovaných prostředích, ale pokud je zařízení schopné udržovat sledování v nepodporovaném prostoru, může docházet k nežádoucím vedlejším účinkům. Například u MPM mohou uživatelé zjistit, že je možné použít ve výtahu při změně podlaží, zatímco to bylo dříve nemožné. Přestože MPM bohužel umožňuje zařízení udržovat sledování, v tuto chvíli nezvládá správu map. Uživatelé zjistí, že změna podlaží ve výtahu způsobí, že zařízení zmást horní a dolní podlaží a negativně ovlivní kvalitu mapy.
 
 ## <a name="prerequisites"></a>Požadavky
 

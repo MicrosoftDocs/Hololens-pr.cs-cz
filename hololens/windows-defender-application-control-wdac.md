@@ -1,6 +1,6 @@
 ---
 title: Windows Defender Řízení aplikací (WDAC)
-description: Přehled toho, co Windows Defender řízení aplikací je a jak ho používat ke správě HoloLens zařízení hybridní reality
+description: Přehled toho, Windows Defender řízení aplikací je a jak ho používat ke správě HoloLens hybridní realitou.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -13,26 +13,26 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: b5c3b55273346f330580b07e5294e7e8e65ea12d
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124428651"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032416"
 ---
 # <a name="windows-defender-application-control---wdac"></a>Windows Defender Řízení aplikací – WDAC
 
 ## <a name="overview"></a>Přehled
 
-WdAC umožňuje nakonfigurovat HoloLens blokování spouštění aplikací. Liší se od bezobrazovkového režimu, kde uživatelské rozhraní skryje aplikace, ale přesto je můžete spustit. V nástroji WDAC vidíte aplikace, ale ne je možné je spustit.
+WdAC umožňuje nakonfigurovat HoloLens blokování spouštění aplikací. Liší se od bezobrazovkového režimu, kdy uživatelské rozhraní skryje aplikace, ale přesto je můžete spustit. V nástroji WDAC vidíte aplikace, ale ne je možné je spustit.
 
 > [!NOTE]
-> Když se koncoví uživatelé pokusí spustit aplikaci blokovanou wdac na HoloLens, nebudou upozorněni na to, že aplikaci není možné spustit.
+> Když se koncoví uživatelé pokusí spustit aplikaci blokovanou wdAC na HoloLens, nebudou upozorněni na to, že aplikaci není možné spustit.
 
 Zařízení může mít přiřazeno více než jednu zásadu WDAC. Pokud je v systému nastaveno více zásad WDAC, projeví se většina omezujících zásad. 
 
-Následuje průvodce, který uživatelům pomůže naučit se používat funkce WDAC a Windows PowerShell k povolení nebo blokování aplikací na zařízeních [se systémem HoloLens 2](/mem/intune/configuration/custom-profile-hololens)s Microsoft Intune .
+Následuje průvodce, který uživatelům pomůže naučit se používat wdac a Windows PowerShell k povolení nebo blokování aplikací na zařízeních [HoloLens 2](/mem/intune/configuration/custom-profile-hololens)s Microsoft Intune .
 
-Když uživatelé vyhledájí aplikace nainstalované v počítači Windows 10 počítači pomocí prvního příkladu, možná budou muset provést několik pokusů o zúžení výsledků.
+Když uživatelé vyhledájí aplikace nainstalované na svém počítači Windows 10 počítači pomocí prvního příkladu, možná budou muset provést několik pokusů o zúžení výsledků.
 
 ```powershell
 $package1 = Get-AppxPackage -name *<applicationname>*
@@ -50,7 +50,7 @@ Get-AppxPackage -name *edge*
 
 V průvodci propojeném výše můžete ručně upravit newPolicy.xml a přidat pravidla pro aplikace, které jsou nainstalované jenom v HoloLens s názvy jejich skupin balíčků. Někdy můžete použít aplikace, které nejsou na vašem stolním počítači a které chcete přidat do zásad.
 
-Tady je seznam běžně používaných a In-Box aplikací pro HoloLens 2.
+Tady je seznam běžně používaných a In-Box aplikací pro HoloLens 2 zařízení.
 
 | Název aplikace                   | Název rodiny balíčků                                |
 |----------------------------|----------------------------------------------------|
@@ -75,10 +75,10 @@ Tady je seznam běžně používaných a In-Box aplikací pro HoloLens 2.
 
 ### <a name="how-to-find-a-package-family-name"></a>Jak najít název rodiny balíčků
 
-Pokud aplikace není v tomto seznamu, může uživatel použít Portál zařízení připojený k aplikaci HoloLens 2, která má nainstalovanou aplikaci, která má být blokovaná, k určení PackageRelativeID a odtud pak získat PackageFamilyName.
+Pokud aplikace není v tomto seznamu, může uživatel použít Portál zařízení připojený k serveru HoloLens 2, který má nainstalovanou aplikaci, kterou chcete blokovat, k určení PackageRelativeID a odtud získat PackageFamilyName.
 
 1. Nainstalujte aplikaci na zařízení HoloLens 2. 
-1. Otevřete Nastavení -> Updates & Security -> For developers (Zabezpečení –> Pro vývojáře) a povolte Developer mode (Vývojářský **režim)** a **potom Device Portal (Portál zařízení).** 
+1. Otevřete Nastavení -> Updates & Security -> For developers (Zabezpečení –> Pro vývojáře) a povolte Developer **mode** (Vývojářský režim) a **potom Device Portal (Portál zařízení).** 
     1. Další podrobnosti najdete v tématu další informace o [nastavení a používání portálu zařízení.](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
 1. Po Portál zařízení připojení přejděte na **Zobrazení a** pak na **Aplikace.** 
 1. Na panelu Nainstalované aplikace vyberte pomocí rozevíracího seznamu nainstalovanou aplikaci. 

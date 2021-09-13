@@ -1,6 +1,6 @@
 ---
-title: Nejčastější dotazy týkající se HoloLens zařízení a hologramů
-description: Máte rychlý dotaz ohledně HoloLens s hologramy?  Tento článek obsahuje rychlou odpověď a další zdroje informací.
+title: Nejčastější dotazy k HoloLens zařízení a hologramům
+description: Máte rychlý dotaz ohledně HoloLens s hologramy?  Tento článek poskytuje rychlou odpověď a další zdroje informací.
 keywords: hololens, nejčastější dotazy, známý problém, nápověda
 ms.prod: hololens
 ms.sitesec: library
@@ -19,11 +19,11 @@ appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
 ms.openlocfilehash: ae44ae1d9a2e088a1ef746f4e929e8fae73880bf
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427165"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126032210"
 ---
 # <a name="holograms-and-interactions-troubleshooting"></a>Hologramy a interakce
 
@@ -36,13 +36,13 @@ Vždy, když máte problémy, ujistěte se, že:
 
 Pomocí aplikace Feedback nám pošlete informace o problému. Aplikaci Feedback najdete v nabídce [ **Start**](holographic-home.md). 
 
-Tipy k ošitřování HoloLens najdete v [tématu Přizpůsobení přizpůsobení.](hololens2-setup.md#adjust-fit)
+Tipy k ošitřování HoloLens najdete v [tématu Úprava fitování.](hololens2-setup.md#adjust-fit)
 
 <a id="list"></a>
 - [Není možné vytvořit nové mezery.](#new-spaces-cant-be-created)
 - [Prostory není možné identifikovat ani načíst](#spaces-cant-be-identified-or-loaded)
 - [Návody odstranit všechny mezery?](#how-do-i-delete-all-spaces)
-- [Hologramy, že nevypadáte správně nebo se pohybujete](#holograms-dont-look-right-or-are-moving-around)
+- [Hologramy, že nevycítáte správně nebo se pohybujete](#holograms-dont-look-right-or-are-moving-around)
 - [Zpráva "Finding your space" (Vyhledání místa)](#finding-your-space-message)
 - [Očekávané hologramy se v mém prostoru nezobrazují](#expected-holograms-arent-showing-in-my-space)
 - [Nelze umístit hologramy nebo zobrazit dříve umístěné hologramy.](#cant-place-holograms-or-see-previously-placed-holograms)
@@ -85,7 +85,7 @@ Pokud vaše hologramy nevypadnou správně (jsou například zamyšlné nebo nes
 - Zkuste se po okolí koukat a dívat se na okolí, abyste HoloLens mohli naskenovat úplněji.
 - Pokud jste umístili hodně hologramů, zkuste některé z těchto hologramů odebrat.
 
-Pokud stále máte problémy, pokuste se o spuštění aplikace Uchem. Tato aplikace nakalibruje HoloLens jen pro vás, abyste hologramům pomohli, aby vaše hologramy hledaly co nejlépe. Pokud to chcete udělat, přejděte **na Nastavení**  >  **nástroje**  >  . V části Chysoce vyberte **Open Uchovat.** 
+Pokud stále máte problémy, pokuste se o spuštění aplikace Uchem. Tato aplikace nakalibruje HoloLens jen pro vás, aby vaše hologramy vycítili co nejlépe. Pokud to chcete udělat, přejděte **na Nastavení**  >  **nástroje**  >  . V části Chysoce vyberte **Open Uchovat.** 
 
 [Zpět na seznam](#list)
 
@@ -93,13 +93,13 @@ Pokud stále máte problémy, pokuste se o spuštění aplikace Uchem. Tato apli
 
 Když HoloLens učí nebo načítá prostor, může se zobrazit krátká zpráva s textem "Vyhledání místa". Pokud se tato zpráva zobrazí déle než několik sekund, zobrazí se pod nabídka Start zpráva "Stále hledáte místo".
 
-Tyto zprávy znamenají, HoloLens potíže s mapováním vašeho prostoru. Když k tomu dojde, můžete aplikace otevřít, ale nemůžete hologramy umístit do svého prostředí.
+Tyto zprávy znamenají, že HoloLens potíže s mapováním vašeho prostoru. Když k tomu dojde, můžete aplikace otevřít, ale nemůžete hologramy umístit do svého prostředí.
 
 Pokud se tyto zprávy často zobrazí, zkuste jednu nebo několik z následujících oprav:
 
 - Ujistěte se, že jste v dobře zasněcené místnosti, která nemá velké množství přímého osvětlení.
 - Ujistěte se, že je váš vizuátor zařízení čistý. [Zjistěte, jak vyčistit zorník.](hololens1-hardware.md#care-and-cleaning)
-- Ujistěte se, že máte silný Wi-Fi signál. Pokud zadáte nové prostředí, které nemá žádný Wi-Fi nebo slabý Wi-Fi, HoloLens prostor nenajde. Zkontrolujte své Wi-Fi tak, že **Nastavení**  >  **Internet &amp; Wi-Fi** v  >  **síti Wi-Fi.**
+- Ujistěte se, že máte silný Wi-Fi signál. Pokud zadáte nové prostředí, které nemá žádný Wi-Fi nebo slabý Wi-Fi, HoloLens prostor nenajde. Zkontrolujte své Wi-Fi tak, že **Nastavení**  >  **Network &amp; Internet**  >  **Wi-Fi**.
 - Zkuste se pohybovat pomaleji.
 
 [Zpět na seznam](#list)
@@ -147,35 +147,35 @@ Hologramy mohou být zablokovány nebo zachytány jinými hologramy nebo objekty
 
 Pokud jste velmi blízko zdi nebo pokud HoloLens ještě nenaskenovali zeď, uvidíte hologramy, které jsou v další místnosti. Pokud chcete naskenovat zeď, stojí mezi jedním a třemi metry od zdi a pohledem na ní.
 
-Černý nebo reflektivní objekt (například černá skříňka nebo chýše u zdi) může způsobovat problémy, HoloLens se pokusí naskenovat zeď. Pokud takový objekt existuje, naskenujte druhou stranu zdi.
+Černý nebo reflektivní objekt (například černá zmáčka nebo chýše u zdi) může způsobovat problémy, HoloLens se pokusí naskenovat zeď. Pokud takový objekt existuje, naskenujte druhou stranu zdi.
 
 [Zpět na seznam](#list)
 
 ## <a name="after-placing-a-hologram-on-a-wall-it-seems-to-float"></a>Po umístění hologramu na zeď se zdá, že plová
 
-Hologram, který umístěte na zeď, se obvykle jeví jako 1 palec od zdi. Pokud se zdá, že je daleko, zkuste použít jednu nebo několik následujících oprav:
+Hologram, který umístěte na zeď, se obvykle jeví jako 1 palec od zdi. Pokud se zdá, že je daleko, vyzkoušejte jednu nebo několik následujících oprav:
 
 - Při umístění hologramu na zeď stojíte mezi jedním a třemi metry od zdi a přistupte přímo ke zdi.
 - Klepnutím ve vzduchu na zeď zobrazíte grafiku mapové sítě. Ujistěte se, že se síť zarovná se zdí. Pokud tomu tak není, odeberte hologram, znovu prohledat zeď a zkuste to znovu.
-- Pokud problém přetrvává, spusťte aplikaci Uchem. Najdete ho v **Nastavení**  >    >  **nástroje**.
+- Pokud problém přetrvává, spusťte aplikaci Uchem. Najdete ho v části **Nastavení**  >    >  **System Utilities**.
 
 [Zpět na seznam](#list)
 
 ## <a name="apps-appear-too-close-after-moving-them"></a>Aplikace se po přesunutí zobrazují příliš blízko
 
-Zkuste se po okolí a prohlédněte si oblast, kam aplikaci umístíte, HoloLens prohledá oblast z různých úhlů. [Může vám pomoct také vyčištění visoru](hololens1-hardware.md#care-and-cleaning) zařízení.
+Zkuste se po okolí a prohlédněte si oblast, kam aplikaci umístíte, abyste HoloLens prohledání oblasti z různých úhlů. [Může vám pomoct také vyčištění visoru](hololens1-hardware.md#care-and-cleaning) zařízení.
 
 [Zpět na seznam](#list)
 
 ## <a name="reporting-issues-with-unstable-or-inexact-holograms"></a>Hlášení problémů s nestabilními nebo neexaktními hologramy
  
 1. Nahrajte a [Záznam hybridní reality video](holographic-photos-and-videos.md#capture-a-mixed-reality-video) o problému. Toto video můžete později nahrát prostřednictvím Centrum Feedback jako připojený soubor.  
-1. Povolte úplnou telemetrii prostřednictvím **zpětné** vazby diagnostiky ochrany osobních údajů > -Nastavení & a v části Volitelná diagnostická data se ujistěte, že je přepínač nastavený  ->   na Hodnotu **On (Zapnout).** 
+1. Povolte úplnou telemetrii prostřednictvím **zpětné** vazby diagnostiky ochrany > údajů Nastavení aplikace Nastavení & **a** v části Volitelná diagnostická data se ujistěte, že je přepínač nastavený  ->   na Hodnotu **On (Zapnout).** 
 1. Nejnovější opravy škálování a stability hologramu získáte aktualizací na nejnovější verzi [Windows Holographic OS (20H2 nebo vyšší).](hololens-release-notes.md#windows-holographic-version-20h2) Po aktualizaci proveďte následující:
-    1. Odeberte všechny Hologramy přes **Nastavení** -> **System** Hologramy -> pak vyberte Odebrat všechny  ->   **hologramy** a začněte novou mapou.
+    1. Odeberte Hologramy všechny **Nastavení** -> **System** Hologramy -> pak vyberte Odebrat všechny  ->   **hologramy** a začněte novou mapou.
     1. Vytvořte novou mapu svého prostoru tím, že HoloLens, prochádíte místnost a podíváme se na všechny oblasti a povrchy v prostoru. Proveďte to po dobu 2 až 3 minut.
     1. Provádět ipdáky. Přejděte na **Nastavení**  >  **Nástroje**  >  **systému.** V části Chysoce vyberte **Open Uchovat.** 
     1. Znovu scénář otestujte a podívejte se, jestli pořád přetrvává.
-1. Pokud aktualizace tento problém nevypraví, zadejte Centrum Feedback [problému.](hololens-feedback.md) Po odeslání zpětné vazby můžete  použít tlačítko Sdílet a vytvořit snadno sdílet odkaz, který můžete odeslat při kontaktování podpory.
+1. Pokud aktualizace tento problém nevypraví, nahlédněte do [Centrum Feedback problému.](hololens-feedback.md) Po odeslání zpětné vazby můžete  použít tlačítko Sdílet a vytvořit snadno sdílet odkaz, který můžete odeslat při kontaktování podpory.
 
 [Zpět na seznam](#list)

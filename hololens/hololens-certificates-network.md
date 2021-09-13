@@ -1,6 +1,6 @@
 ---
-title: Příprava certifikátů a síťových profilů pro HoloLens 2
-description: Naučte se konfigurovat, používat, nasazovat a řešit potíže s certifikáty pro síť na HoloLens 2 zařízeních hybridní reality.
+title: příprava certifikátů a profilů sítě pro HoloLens 2
+description: naučte se konfigurovat, používat, nasazovat a řešit potíže s certifikáty pro síť na zařízeních HoloLens 2 mixed reality.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -14,57 +14,57 @@ manager: yannisle
 appliesto:
 - HoloLens 2
 ms.openlocfilehash: 62eedd0c05bb23f11a4e17a97b4ab5441a2931cf
-ms.sourcegitcommit: 05537014d27d9cb60d5485ce93654371d914d5e3
+ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "124427036"
+ms.lasthandoff: 09/13/2021
+ms.locfileid: "126035841"
 ---
-# <a name="prepare-certificates-and-network-profiles-for-hololens-2"></a>Příprava certifikátů a síťových profilů pro HoloLens 2
+# <a name="prepare-certificates-and-network-profiles-for-hololens-2"></a>příprava certifikátů a profilů sítě pro HoloLens 2
 
-Ověřování pomocí certifikátů je běžným požadavkem pro zákazníky, kteří používají HoloLens 2. Pro přístup k Wi-Fi, připojení k řešením VPN nebo pro přístup k interním prostředkům ve vaší organizaci můžete vyžadovat certifikáty.
+ověřování založené na certifikátech je běžný požadavek pro zákazníky, kteří používají HoloLens 2. Možná budete vyžadovat, aby se certifikáty pro přístup k Wi-Fi připojovaly k řešením VPN nebo pro přístup k interním prostředkům ve vaší organizaci.
 
-Vzhledem k tomu, že zařízení HoloLens 2 jsou obvykle připojená k službě Azure Active Directory (Azure AD) a spravuje je Intune nebo jiný poskytovatel MDM, budete muset tyto certifikáty nasadit pomocí infrastruktury certifikátů Simple Certificate Enrollment Protocol (SCEP) nebo PKCS (Public Key Cryptography Standard), která je integrovaná s vaším řešením MDM. 
+vzhledem k tomu, že zařízení HoloLens 2 jsou obvykle připojená k Azure Active Directory (Azure AD) a spravovaná službou intune nebo jiným poskytovatelem mdm, bude nutné tyto Simple Certificate Enrollment Protocol certifikáty nasadit pomocí infrastruktury certifikátů (SCEP) nebo klíče PKCS (Public Key Cryptography standard), která je integrovaná s vaším řešením mdm. 
 
 >[!NOTE]
-> Pokud poskytovatele MDM nemáte, můžete certifikáty nasadit prostřednictvím [](hololens-provisioning.md#steps-for-creating-provisioning-packages) zřizovacího balíčku v nástroji [](certificate-manager.md) [Windows Configuration Designer](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?rtc=1&activetab=pivot:regionofsystemrequirementstab) nebo prostřednictvím Správce certifikátů tak, že Nastavení > Update & Security **> Certificate Manager**.
+> pokud nemáte poskytovatele MDM, můžete i nadále nasazovat certifikáty prostřednictvím [zřizovacího balíčku](hololens-provisioning.md#steps-for-creating-provisioning-packages) v [nástroji Windows Configuration Designer](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22?rtc=1&activetab=pivot:regionofsystemrequirementstab) nebo prostřednictvím [správce certifikátů](certificate-manager.md) , a to tak, že na **Nastavení > Update & Security > certificate manager**.
 
 ## <a name="certificate-requirements"></a>Požadavky na certifikáty
-Kořenové certifikáty jsou nutné k nasazení certifikátů prostřednictvím infrastruktury SCEP nebo PKCS. Jiné aplikace a služby ve vaší organizaci můžou vyžadovat nasazení kořenových certifikátů HoloLens 2. 
+K nasazení certifikátů prostřednictvím infrastruktury SCEP nebo PKCS se vyžadují kořenové certifikáty. další aplikace a služby ve vaší organizaci můžou vyžadovat, aby se kořenové certifikáty nasadily i na vaše zařízení HoloLens 2. 
 
-## <a name="wi-fi-connectivity-requirements"></a>Wi-Fi připojení
-Pokud chcete, aby zařízení bylo automaticky poskytnuto s požadovanou konfigurací Wi-Fi pro podnikovou síť, budete potřebovat Wi-Fi konfigurace. Intune nebo jiného poskytovatele MDM můžete nakonfigurovat tak, aby tyto profily nasadil do vašich zařízení. Pokud zabezpečení sítě vyžaduje, aby zařízení byla součástí místní domény, možná budete také muset vyhodnotit síťovou infrastrukturu Wi-Fi, abyste se ujistili, že jsou kompatibilní se zařízeními HoloLens 2 (zařízení HoloLens 2 jsou připojená jenom ke službě Azure AD).
+## <a name="wi-fi-connectivity-requirements"></a>Požadavky na připojení Wi-Fi
+Pokud chcete, aby se zařízení automaticky poskytovalo s požadovanou konfigurací Wi-Fi pro vaši podnikovou síť, budete potřebovat konfigurační profil Wi-Fi. Pro nasazení těchto profilů do zařízení můžete nakonfigurovat Intune nebo jiného poskytovatele MDM. pokud zabezpečení vaší sítě vyžaduje, aby zařízení byla součástí místní domény, možná budete muset vyhodnotit Wi-Fi síťovou infrastrukturu, abyste měli jistotu, že je kompatibilní se zařízeními HoloLens 2 (zařízení HoloLens 2 jsou jenom připojená k Azure AD).
 
 ## <a name="deploy-certificate-infrastructure"></a>Nasazení infrastruktury certifikátů
-Pokud ještě neexistuje žádná infrastruktura SCEP ani PKCS, budete si ji muset připravit. Pro podporu použití certifikátů SCEP nebo PKCS k ověřování vyžaduje Intune použití Certificate [Connectoru.](/mem/intune/protect/certificate-connectors)
+Pokud už žádná infrastruktura SCEP nebo PKCS neexistuje, budete ji muset připravit. Aby bylo možné podporovat používání certifikátů SCEP nebo PKCS pro ověřování, vyžaduje Intune použití [Certificate Connectoru](/mem/intune/protect/certificate-connectors).
 
 > [!NOTE]
-> Pokud používáte SCEP s certifikační autoritou Microsoftu, musíte také nakonfigurovat Služba zápisu síťových zařízení [(NDES).](/mem/intune/protect/certificates-scep-configure#set-up-ndes)
+> Pokud používáte SCEP s certifikační autoritou Microsoftu, musíte taky nakonfigurovat [službu zápisu síťových zařízení (NDES)](/mem/intune/protect/certificates-scep-configure#set-up-ndes) .
 
-Další informace najdete v tématu [Konfigurace profilu certifikátu pro zařízení v Microsoft Intune.](/intune/certificates-configure)
+Další informace najdete v tématu [Konfigurace profilu certifikátu pro vaše zařízení v Microsoft Intune.](/intune/certificates-configure)
 
-## <a name="deploy-certificates-and-wi-fivpn-profile"></a>Nasazení certifikátů a profilu Sítě Wi-Fi/VPN
-Certifikáty a profily nasadíte takto:
-1.  Vytvořte profil pro každý kořenový a zprostředkující certifikát (viz [Vytvoření profilů důvěryhodných certifikátů).)](/intune/protect/certificates-configure#create-trusted-certificate-profiles) Každý z těchto profilů musí mít popis, který obsahuje datum vypršení platnosti ve formátu DD/MM/RRRR. **Profily certifikátů bez data vypršení platnosti se nenasadí.**
-1.  Vytvořte profil pro každý certifikát SCEP nebo PKCS (viz Vytvoření profilu certifikátu SCEP nebo Vytvoření profilu certifikátu [PKCS](/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)) Každý z těchto profilů musí mít popis, který obsahuje datum vypršení platnosti ve formátu DD/MM/RRRR. **Profily certifikátů bez data vypršení platnosti se nenasadí.**
+## <a name="deploy-certificates-and-wi-fivpn-profile"></a>Nasazení certifikátů a profilu sítě Wi-Fi/VPN
+K nasazení certifikátů a profilů použijte následující postup:
+1.  Vytvořte profil pro každý kořenový a zprostředkující certifikát (viz [Vytvoření profilů důvěryhodných certifikátů](/intune/protect/certificates-configure#create-trusted-certificate-profiles)). Každý z těchto profilů musí mít popis, který obsahuje datum vypršení platnosti ve formátu DD/MM/RRRR. **Profily certifikátů bez data vypršení platnosti nebudou nasazeny.**
+1.  Vytvořte profil pro každý certifikát SCEP nebo PKCS (viz [Vytvoření profilu certifikátu SCEP nebo vytvoření profilu certifikátu PKCS](/intune/protect/certficates-pfx-configure#create-a-pkcs-certificate-profile)) každý z těchto profilů musí mít popis, který obsahuje datum vypršení platnosti ve formátu dd/mm/rrrr. **Profily certifikátů bez data vypršení platnosti nebudou nasazeny.**
 
     > [!NOTE]
-    > Vzhledem k tomu, že HoloLens 2 se považuje za sdílené zařízení, více uživatelů na zařízení, doporučujeme místo uživatelských certifikátů nasadit certifikáty zařízení pro ověřování Wi-Fi, pokud je to možné.
+    > vzhledem k tomu, že HoloLens 2 se považuje za sdílené zařízení, více uživatelů na zařízení se doporučuje nasadit certifikáty zařízení místo uživatelských certifikátů pro ověřování Wi-Fi, pokud to jde.
 
-3.  Vytvořte profil pro každou podnikovou síť Wi-Fi sítě (viz [Nastavení Wi-Fi pro Windows 10 a novější zařízení).](/intune/wi-fi-settings-windows) 
+3.  vytvořte profil pro každou podnikovou Wi-Fi síť (viz [nastavení Wi-Fi pro zařízení Windows 10 a novější](/intune/wi-fi-settings-windows)). 
     > [!NOTE]
-    > Pokud je to možné, doporučujeme [](/mem/intune/configuration/device-profile-assign) Wi-Fi zařízení přiřadit ke skupinám zařízení, a ne skupinám uživatelů. 
+    > Doporučuje se, aby byl profil Wi-Fi [přiřazen](/mem/intune/configuration/device-profile-assign) skupinám zařízení, nikoli skupinám uživatelů, pokud je to možné. 
 
     > [!TIP]
-    > Můžete také exportovat pracovní profil Wi-Fi z Windows 10 počítače ve vaší podnikové síti. Tento export vytvoří soubor XML se všemi aktuálními nastaveními. Pak tento soubor naimportujte do Intune a použijte ho jako profil Wi-Fi pro zařízení s HoloLens 2. Viz [Export a import Wi-Fi nastavení pro Windows zařízení.](/mem/intune/configuration/wi-fi-settings-import-windows-8-1)
+    > pracovní Wi-Fi profil můžete také exportovat ze Windows 10 počítače v podnikové síti. Tento export vytvoří soubor XML se všemi aktuálními nastaveními. pak tento soubor importujte do intune a použijte ho jako profil Wi-Fi pro zařízení HoloLens 2. viz [nastavení exportu a importu Wi-Fi pro Windows zařízení.](/mem/intune/configuration/wi-fi-settings-import-windows-8-1)
 
-4.  Vytvořte profil pro každou podnikovou síť VPN (informace o přidání připojení VPN pomocí Intune Windows 10 a [Windows holografického](/intune/vpn-settings-windows-10)zařízení).
+4.  vytvořte si profil pro každou podnikovou síť VPN (další informace najdete v tématu [Windows 10 a Windows holografické zařízení pro přidání připojení k síti vpn pomocí intune](/intune/vpn-settings-windows-10)).
 
 ## <a name="troubleshooting-certificates"></a>Řešení potíží s certifikáty
 
-V případě, že potřebujete ověřit, že je certifikát [](certificate-manager.md) správně nasazený, použijte správce certifikátů v zařízení a ověřte, že je váš certifikát k dispozici.  
+V případě, že potřebujete ověřit, jestli je certifikát nasazený správně, použijte prosím [Správce certifikátů](certificate-manager.md) na zařízení a ověřte, jestli je certifikát přítomný.  
 
 >[!WARNING]
-> I když můžete zobrazit certifikáty nasazené v MDM ve Správci certifikátů, nemůžete je odinstalovat ve Správci certifikátů. Musíte je odinstalovat prostřednictvím MDM.
+> I když můžete zobrazit certifikáty nasazené v MDM ve Správci certifikátů, nemůžete je odinstalovat ve Správci certifikátů. Musíte je odinstalovat přes MDM.
 
 
