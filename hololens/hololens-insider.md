@@ -11,17 +11,17 @@ ms.custom:
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 09/10/2021
+ms.date: 09/14/2021
 ms.reviewer: ''
 manager: ranjibb
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 84ec45a4bb05eb28106e4bfdc915a18ae6330767
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: e3b067987fb339bc070fcb64ed01c28dee21ec35
+ms.sourcegitcommit: 20ea1ed37772655504ccb11a7e185ed19d85f336
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126032260"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "127833535"
 ---
 # <a name="insider-preview-for-microsoft-hololens"></a>Insider preview pro Microsoft HoloLens
 
@@ -35,38 +35,50 @@ Toto je o vylepšených řešeních potíží a sestavách zařízení, někter�
 
 | Funkce                 | Popis                | Uživatel nebo scénář | Zavedené sestavení |
 |-------------------------|----------------------------|--------------|------------------|
-| [Přesun režimu platformy](#moving-platform-mode) | Představuje režim moving platformy beta, který při konfiguraci umožňuje použití funkce HoloLens 2 u velkých chřasků, u kterých dochází k nízkému dynamickému pohybu. | Vše | 20348.1411 |
+| [Přesun režimu platformy](#moving-platform-mode) | Představuje režim moving platformy beta, který při konfiguraci umožňuje použití funkce HoloLens 2 u velkých chřastečků, u kterých dochází k nízkému dynamickému pohybu. | Vše | 20348.1411 |
 | [Podpora souborů PFX pro Správce certifikátů](#pfx-file-support-for-certificate-manager) | Přidání certifikátu PFX prostřednictvím Nastavení uživatelského rozhraní | Koncový uživatel | 20348.1405 |
 | [Zobrazení rozšířené diagnostické sestavy v Nastavení na HoloLens](#view-advanced-diagnostic-report-in-settings-on-hololens) | Zobrazení diagnostických protokolů MDM na zařízení | Řešení potíží | 20348.1405 |
 | [Offline diagnostická oznámení](#offline-diagnostics-notifications) | Zpětná vazba k shromažďování protokolů | Řešení potíží | 20348.1405 |
 | [Vylepšení shromažďování protokolů s nízkým úložištěm](#low-storage-log-collection-improvements) | Vylepšení scénářů shromažďování protokolů v situacích s nízkým úložištěm | Řešení potíží | 20348.1412 |
-| [Změny CSP pro podrobnosti HoloLens sestav](#csp-changes-for-reporting-hololens-details) | Noví csp pro dotazování dat | Správci IT    | 20348.1403                 |
+| [Změny CSP pro generování HoloLens sestav](#csp-changes-for-reporting-hololens-details) | Noví csp pro dotazování dat | Správci IT    | 20348.1403                 |
 | [Zásady automatického přihlášení řízené poskytovatelem CSP](#auto-login-policy-controlled-by-csp) | Slouží k automatickému přihlášení účtu. | Správci IT | 20348.1405 |
 | [Vylepšená detekce restartování aktualizací a oznámení](#improved-update-restart-detection-and-notifications) | Nové povolené zásady a uživatelské prostředí pro aktualizace | Správci IT | 20348.1405 |
 | [Inteligentní opakování pro aktualizace aplikací](#smart-retry-for-app-updates) | Umožňuje správcům IT naplánovat opakování aktualizací aplikací. | Správci IT | 20348.1405 |
 | [Používejte jenom aplikace privátního Storu pro Microsoft Store](#use-only-private-store-apps-for-microsoft-store) | Konfigurace aplikace pro Store tak, aby se v aplikaci zobrazují jenom aplikace z organizace | Správce IT | 20348.1408 |
 | [Použití aplikací WDAC a LOB](#use-wdac-and-lob-apps) | Umožňuje správcům IT používat vlastní aplikace a pořád používat WDAC k blokování jiných aplikací. | Správci IT | 20348.1405 |
-| [Opravy a vylepšení](#fixes-and-improvements) | Opravy a vylepšení HoloLens. | Vše | 20348.1411 |
+| [Opravy a vylepšení](#fixes-and-improvements) | Opravy a vylepšení pro HoloLens. | Vše | 20348.1411 |
 
 ### <a name="it-admin-insider-feature-checklist"></a>Kontrolní seznam funkcí insiderského správce IT
 
 ✔️ Pokud chcete nastavit jeden účet Azure AD pro automatické přihlášení, [nakonfigurujte tohoto nového poskytovatele CSP.](#auto-login-policy-controlled-by-csp) <br>
-✔️ Pokud chcete nakonfigurovat, aby se vaše aplikace po neúspěchu aktualizace automaticky pokusily o aktualizaci, nastavte tohoto nového poskytovatele [CSP pro inteligentní opakování.](#smart-retry-for-app-updates) <br>
-✔️ pokud chcete mít větší kontrolu nad aktualizacemi operačního systému, podívejte se na tyto nově [povolené zásady aktualizací.](#improved-update-restart-detection-and-notifications) <br>
-✔️ Pokud potřebujete, aby aplikace vaší organizace mohly být dostupné v obchodě společnosti přes Microsoft Store, ale chcete povolit přístup jenom k aplikacím vaší organizace, a ne k úplnému obchodu, [nastavte tuto zásadu.](#use-only-private-store-apps-for-microsoft-store) <br>
-✔️ pokud chcete znát volný prostor úložiště, SSID nebo BSSID vašich HoloLens si tyto csP pro [generování sestav.](#csp-changes-for-reporting-hololens-details) <br>
+✔️ chcete nakonfigurovat, aby se vaše aplikace po neúspěchu aktualizace automaticky pokusily o aktualizaci, nastavte tohoto nového poskytovatele [CSP pro inteligentní opakování.](#smart-retry-for-app-updates) <br>
+✔️ Pokud chcete mít větší kontrolu nad aktualizacemi operačního systému, podívejte se na tyto nově [povolené zásady aktualizací.](#improved-update-restart-detection-and-notifications) <br>
+✔️ Pokud potřebujete, aby aplikace vaší organizace mohly být dostupné v obchodě společnosti přes Microsoft Store, ale chcete povolit přístup jenom k aplikacím vaší organizace, a ne k úplnému obchodu, [nastavte](#use-only-private-store-apps-for-microsoft-store)tuto zásadu. <br>
+✔️ chcete znát volný prostor úložiště, SSID nebo BSSID vašich HoloLens csP pro [generování sestav.](#csp-changes-for-reporting-hololens-details) <br>
 ✔️ Pokud chcete pomocí nástroje WDAC blokovat spouštění aplikací nebo procesů, ale potřebujete také použít vlastní řadu aplikací pro obchodní aplikace, můžete teď v zásadách [WDAC](#use-wdac-and-lob-apps)povolit lob.
 
 ### <a name="moving-platform-mode"></a>Přesun režimu platformy
 
-Od **buildu Insider 20348.1411** jsme přidali podporu beta verze pro sledování na platformách s pohyblivou nízkou dynamickou pohybu na HoloLens 2. Po instalaci buildu a povolení moving platformového režimu budete moct používat HoloLens 2 v dříve nepřístupných prostředích, jako jsou velké lodi a velké lodi. V současné době je tato funkce zaměřená pouze na povolení těchto konkrétních pohyblivých platforem. I když vám nic nebrání ve pokusu o použití této funkce v jiných prostředích, tato funkce se zaměřuje nejprve na přidání podpory těchto prostředí.
+Od **buildu Insider 20348.1411** jsme přidali beta podporu pro sledování na platformách s pohyblivou nízkou dynamickou pohyblivou verzí na HoloLens 2. Po instalaci buildu a povolení moving platformového režimu budete moct používat HoloLens 2 v dříve nepřístupných prostředích, jako jsou velké lodi a velké lodi. V současné době je tato funkce zaměřená pouze na povolení těchto konkrétních pohyblivých platforem. I když vám nic nebrání ve pokusu o použití této funkce v jiných prostředích, tato funkce se zaměřuje nejprve na přidání podpory těchto prostředí.
 
 Další informace o tom, co je podporováno a jak tuto novou funkci povolit, najdete [na stránce s pohyblivou platformou.](hololens2-moving-platform.md)
 
+#### <a name="overview-to-try-out-moving-platform-mode"></a>Přehled pro vyzkoušejte přesun režimu platformy
+
+1. [Povolte vývojářský režim a portál zařízení.](/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
+1. [Povolte přesouvání režimu platformy prostřednictvím portálu zařízení.](hololens2-moving-platform.md#enabling-moving-platform-mode)
+1. Převezměte své zařízení na velkou pohyblivý platformu a podívejte se, jak jsou stabilní hologramy.
+
 ### <a name="pfx-file-support-for-certificate-manager"></a>Podpora souborů PFX pro Správce certifikátů
 
-Zavedeno v Windows Insider buildu 20348.1405. Do Správce certifikátů jsme přidali podporu pro [použití](certificate-manager.md) certifikátů .pfx. Když uživatelé **přecházou Nastavení** Update & Security Certificates a vyberou Install a certificate (Nainstalovat certifikát), uživatelské rozhraní teď podporuje soubor certifikátu  >    >    .pfx.
+Zavedeno v Windows Insider buildu 20348.1405. Do Správce certifikátů jsme přidali [podporu](certificate-manager.md) pro použití certifikátů .pfx. Když uživatelé **přecházou Nastavení** Update & Security Certificates a vyberou Install a certificate (Nainstalovat certifikát), uživatelské rozhraní teď podporuje soubor certifikátu  >    >    .pfx.
 Uživatelé mohou importovat certifikát .pfx s privátním klíčem do uživatelského úložiště nebo do úložiště počítače.
+
+#### <a name="overview-to-try-out-pfx-files-in-certificate-manager"></a>Přehled pro vyzkoušejte soubory PFX ve Správci certifikátů
+
+1. Připravte soubor PFX.
+1. Zkopírujte soubor do zařízení pomocí kabelu USB-C.
+1. Otevřete aplikaci Nastavení, přejděte do [Správce certifikátů](certificate-manager.md) a použijte certifikát.
 
 ### <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Zobrazení rozšířené diagnostické sestavy v Nastavení na HoloLens
 
@@ -76,10 +88,16 @@ Teď můžete diagnostiku MDM zobrazit na zařízení pomocí prohlížeče Edge
 
 ![Zobrazení rozšířené diagnostické sestavy v Nastavení aplikaci](./images/view-advanced-diagnostic-report.jpg)
 
+#### <a name="overview-to-try-out-the-advanced-diagnostic-report"></a>Přehled pro vyzkoušejte pokročilou diagnostickou sestavu
+
+1. Otevřete aplikaci Nastavení.
+1. Přejděte na stránku Účty a klikněte na nový odkaz **Export protokolů správy.**
+1. Zobrazení rozšířených informací o konfiguracích zařízení
+
 ### <a name="offline-diagnostics-notifications"></a>Offline diagnostická oznámení
 
 Tato aktualizace pro existující funkci s názvem [Offline diagnostika](hololens-diagnostic-logs.md#offline-diagnostics). Dříve se uživatelům nespouštěl jasný indikátor, že aktivoval shromažďování diagnostických dat nebo že se dokončilo.
-V buildech Windows Insider jsou teď k dispozici dvě formy zpětné vazby k offline diagnostice. První jsou informační zprávy, které se zobrazují při spuštění a dokončení shromažďování. Ty se zobrazí, když je uživatel přihlášený a má vizuály.
+V buildech Windows Insider jsou teď k dispozici dvě formy zpětné vazby k offline diagnostice. Prvními jsou informační zprávy, které se zobrazují při spuštění a dokončení shromažďování. Ty se zobrazí, když je uživatel přihlášený a má vizuály.
 
 ![Informační zprávy pro shromažďování protokolů](./images/logcollection1.jpg)
 
@@ -91,11 +109,23 @@ Tato nová funkce se povolí při aktualizaci zařízení a nemusí být povolen
 
 Doufáme, že s tímto novějším přidáním zpětné vazby k zákazníkům je snazší shromáždit diagnostická data a rychleji vyřešit vaše problémy.
 
+#### <a name="overview-to-try-out-the-diagnostics-notifications"></a>Přehled pro vyzkoušejte si diagnostická oznámení
+
+1. Odemkněte zařízení a ošetřte ho.
+1. Stisknutím kombinace **tlačítka Napájení** **a snížení** objemu shromážděte [diagnostiku offline.](hololens-diagnostic-logs.md#offline-diagnostics)
+1. Prohlédněte si informační zprávy a poslechu zvukových upozornění, kdy se zařízení spustí a dokončí shromažďování protokolů.
+
 ### <a name="low-storage-log-collection-improvements"></a>Vylepšení shromažďování protokolů s nízkým úložištěm
 
 Ve scénářích, kdy se zdá, že zařízení má při shromážděných diagnostických protokolech nedostatek místa na disku, vytvoří se **StorageDiagnostics.zip** sestava s názvem . Prahovou hodnotu nízkého úložiště určuje automaticky Windows [úložiště.](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)
 
-### <a name="csp-changes-for-reporting-hololens-details"></a>Změny CSP pro podrobnosti HoloLens sestav
+#### <a name="overview-to-try-out-the-low-storage-improvements"></a>Přehled pro vyzkoušejte vylepšení nízkého úložiště
+
+1. Vyplňte prostor úložiště zařízení.
+1. Stisknutím kombinace **tlačítka Napájení** **a snížení** objemu shromážděte [diagnostiku offline.](hololens-diagnostic-logs.md#offline-diagnostics)
+1. Všimněte si, že v kolekci protokolů je nový soubor uložený ve složce Documents (Dokumenty) HoloLens.
+
+### <a name="csp-changes-for-reporting-hololens-details"></a>Změny CSP pro generování HoloLens sestav
 
 - Zavedeno v Windows Insider, 20348.1403
 
@@ -103,7 +133,7 @@ Následující csP se aktualizovali o nové způsoby hlášení informací z va�
 
 #### <a name="devdetail-csp---free-storage"></a>DevDetail CSP – Bezplatná Storage
 
-DevDetail CSP teď také hlásí volné místo v HoloLens zařízení. Tato hodnota by se měla přibližně shodovat s hodnotou Nastavení na stránce Storage aplikace. Následuje konkrétní uzel, který obsahuje tyto informace.
+DevDetail CSP teď také hlásí volné místo úložiště na HoloLens zařízení. Tato hodnota by se měla přibližně shodovat s hodnotou Nastavení na stránce Storage aplikace. Následuje konkrétní uzel, který obsahuje tyto informace.
 
 - ./DevDetail/Ext/Microsoft/FreeStorage (pouze operace GET)
 
@@ -136,7 +166,7 @@ Příklad objektu blob syncml (pro dodavatele MDM) pro dotaz na NetworkIdentifie
 
 ### <a name="auto-login-policy-controlled-by-csp"></a>Zásady automatického přihlášení řízené poskytovatelem CSP
 
-Tato nová zásada AutoLogonUser určuje, jestli se uživatel automaticky přihlásí. Někteří zákazníci chtějí nastavit zařízení, která jsou svázaná s identitou, ale nechcete žádné přihlašovací prostředí. Imagine zařízení a okamžité použití vzdálené pomoci. Nebo můžete mít výhodu, že dokážete rychle distribuovat HoloLens zařízení a umožnit koncovým uživatelům urychlit přihlášení.
+Tato nová zásada AutoLogonUser určuje, jestli se uživatel automaticky přihlásí. Někteří zákazníci chtějí nastavit zařízení, která jsou svázaná s identitou, ale nechcete žádné přihlašovací prostředí. Imagine vyzvednutí zařízení a okamžité použití vzdálené pomoci. Nebo můžete mít výhodu, že dokážete rychle distribuovat HoloLens zařízení a umožnit koncovým uživatelům urychlit přihlášení.
 
 Pokud je zásada nastavená na neprázdnou hodnotu, určuje e-mailovou adresu uživatele s automatickým přihlášením. Zadaný uživatel se musí alespoň jednou přihlásit k zařízení, aby se umožnilo automatické přihlášení.
 
@@ -151,9 +181,16 @@ Na zařízení, kde je tato zásada nakonfigurovaná, se musí uživatel zadaný
 > - Některé události, jako jsou hlavní aktualizace operačního systému, mohou vyžadovat, aby se zadaný uživatel k zařízení znovu přihlásit, aby obnovoval chování automatického přihlášení.
 > - Automatické přihlášení se podporuje jenom pro uživatele MSA a AAD.
 
+#### <a name="overview-to-try-auto-logon-csp"></a>Přehled pokusu o automatické přihlášení poskytovatele CSP
+
+1. Nakonfigurujte nového poskytovatele CSP pro požadovaného uživatele [pomocí vlastních zásad:](/mem/intune/configuration/custom-settings-windows-10)`./Device/Vendor/MSFT/Policy/Config/MixedReality/AutoLogonUser`
+1. Použijte poskytovatele CSP na zařízení prostřednictvím [zřizovacího balíčku](hololens-provisioning.md) nebo [MDM.](hololens-mdm-configure.md)
+1. Přihlaste se k zadanému účtu.
+1. Restartujte zařízení a sledujte, jak se uživatel automaticky přihlásí.
+
 ### <a name="improved-update-restart-detection-and-notifications"></a>Vylepšená detekce restartování aktualizací a oznámení
 
-Mezi aktivními hodinami a zásadami doby instalace je možné se vyhnout restartování HoloLens zařízení, když se používají. Pokud ale nedojde k restartování, instalace požadované aktualizace by také pozdrží přijetí aktualizací. Přidali jsme zásady, které IT umožňují vynutit konečné termíny a požadovaná restartování a zajistit, aby se instalace aktualizace dokončila včas. Uživatelé mohou být upozorněni před zahájením restartování a mohou restartování zpozdit v souladu se zásadami IT.
+Mezi aktivními hodinami a zásadami doby instalace je možné se vyhnout restartování HoloLens zařízení, když se používají. Pokud ale nedojde k restartování, instalace požadované aktualizace by také pozdrží přijetí aktualizací. Přidali jsme zásady, které IT umožňují vynucovat konečné termíny a požadovaná restartování a zajistit, aby se instalace aktualizace dokončila včas. Uživatelé mohou být upozorněni před zahájením restartování a mohou restartování zpozdit v souladu se zásadami IT.
 
 Byly přidány následující zásady aktualizace:
 
@@ -167,106 +204,137 @@ Byly přidány následující zásady aktualizace:
 - [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
 - [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
 
+#### <a name="overview-to-try-new-update-notifications"></a>Přehled pro pokusy o oznámení o nových aktualizacích
+
+1. Nakonfigurujte jednoho z nových aktualizačních csP prostřednictvím [zřizovacího balíčku](hololens-provisioning.md) nebo [MDM](hololens-mdm-configure.md) (viz výše uvedený seznam odkazů a vyberte jednoho).
+1. Během naplánovaného času zařízení používejte.
+1. Všimněte si, že uživatel je na aktualizaci upozorněn a že je potřeba zařízení \* restartovat.
+
+\* Vaše výsledky se můžou lišit v závislosti na použitých zásadách aktualizace.
+
 ### <a name="smart-retry-for-app-updates"></a>Inteligentní opakování pro aktualizace aplikací
 
 Nově povolená pro HoloLens je nová zásada, která správcům IT umožňuje nastavit opakované nebo jedno časové datum pro restartování aplikací, jejichž aktualizace selhala kvůli tomu, že se aplikace používá a umožňuje instalaci aktualizace. Můžete je nastavit na základě několika různých triggerů, jako je naplánovaný čas nebo přihlášení. Další informace o použití této zásady najdete v tématu [ApplicationManagement/ScheduleForceRestartForUpdateFailures.](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
+#### <a name="overview-to-try-smart-retry-for-app-updates"></a>Přehled pro pokus o inteligentní opakování aktualizací aplikací
+
+1. Nakonfigurujte novou funkci inteligentního opakování.
+1. Na zařízení, které ještě vaši aplikaci nepřijímá a je správně nakonfigurované, se přihlaste do online prostředí.
+1. Zajistěte, aby zařízení nemohlo stáhnout aplikaci vypnutím nebo odpojením.
+1. Během aktivované doby musí být zařízení zapnuté a připojené k internetu, aby se pokus o stažení zopakovat.
+
 ### <a name="use-only-private-store-apps-for-microsoft-store"></a>Pro Microsoft Store používejte jenom aplikace pro privátní Microsoft Store
 
-Zásady RequirePrivateStoreOnly jsou povolené pro HoloLens. Tato zásada umožňuje konfiguraci Microsoft Store, aby se v aplikaci nakonfiguroval jenom privátní obchod nakonfigurovaný pro vaši organizaci. Omezení přístupu pouze na aplikace, které jste k dispozici.
+Zásady RequirePrivateStoreOnly jsou povolené pro HoloLens. Tato zásada umožňuje konfiguraci Microsoft Store aplikace tak, aby se v aplikaci nakonfiguroval jenom privátní obchod nakonfigurovaný pro vaši organizaci. Omezení přístupu pouze na aplikace, které jste k dispozici.
 
-Další informace o [ApplicationManagement/RequirePrivateStoreOnly](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+Další informace o [ApplicationManagement/RequirePrivateStoreOnly.](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+
+#### <a name="overview-to-try-only-private-store-apps"></a>Přehled pokusů o použití jenom aplikací privátního Storu
+
+1. Nakonfigurujte nové zásady pro vaše zařízení přes [MDM.](hololens-mdm-configure.md)
+1. Přihlaste se k zařízení, které má zásady.
+1. Otevřete Microsoft Store a sledujte, jak vidíte jenom aplikace vaší organizace.
 
 ### <a name="use-wdac-and-lob-apps"></a>Použití aplikací WDAC a LOB
 
-Pomocí nástroje WDAC teď můžete aplikacím nebo procesům zablokovat spouštění a dál používat vlastní řadu aplikací pro pohotové prostředí. Teď je můžete povolit v zásadách WDAC. Použití této zásady zahrnuje spuštění dodatečného řádku kódu v PowerShellu při vytváření zásad WDAC. [Postup najdete tady.](/mem/intune/configuration/custom-profile-hololens)
+Teď můžete pomocí WDAC blokovat spouštění aplikací nebo procesů a dál používat vlastní řádek aplikací bushiness. Teď je můžete v zásadách WDAC zapnout. Použití těchto zásad zahrnuje při vytváření zásad WDAC spuštění dalšího řádku kódu v PowerShellu. [Projděte si tento postup](/mem/intune/configuration/custom-profile-hololens).
+
+#### <a name="overview-to-try-your-own-apps-while-using-wdac-to-block-others"></a>Přehled, jak vyzkoušet vlastní aplikace při použití WDAC k blokování dalších uživatelů
+
+1. Shromážděte AUMIDs aplikace LOB a aplikace, které chcete blokovat.
+1. [Vytvořte novou zásadu WDAC](/mem/intune/configuration/custom-profile-hololens) podle nového postupu.
+1. [Nasaďte zásady pomocí MDM](hololens-mdm-configure.md) do svého zařízení.
+1. Přihlaste se k zařízení a sledujte, jak můžete spustit aplikaci a zablokovat ostatním.
 
 ### <a name="fixes-and-improvements"></a>Opravy a vylepšení
 
-- Byl opraven známý problém s Portál zařízení, kdy se při stahování uzamčených souborů nic [nestahuje.](hololens-troubleshooting.md#downloading-locked-files-doesnt-error)
-- Opravili [jsme známý problém s Portál zařízení s časovými limity nahrávání a stahování souborů.](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out)
-- Řeší problémy související s hlášením vlastností dodržování předpisů HoloLens zařízeními. K aktivaci správných sestav v sestaveních Insider může být nutné restartovat počítač.  
-- Povolili [jste rozhraní API pro](/uwp/api/windows.system.userprofile.assignedaccesssettings?view=winrt-20348&preserve-view=true) přiřazený přístup, aby aplikace teď pro uživatele přihlášeného k HoloLens mohli určit, jestli je spuštěná HoloLens.
-- Aktualizace dodácí verze Remote Assistu, která je nainstalovaná na aktuálních flash serverech.
-- Zpracování Gamepadu pro 2D aplikace bylo ve buildech Insider zakázané. Když je odeberete, aplikace teď mohou rozhraní GAMEPAD API používat přímo a mají přístup k celé sadě ovládacích prvků a mohou dělat, co chtějí. Vývojáři by měli ke vstupu Gamepadu používat rozhraní API Gamepadu. Tady je ukázka třídy [Gamepad (Windows. Gaming.Input) – Windows aplikace pro UPW](/uwp/api/windows.gaming.input.gamepad?view=winrt-20348&preserve-view=true)
-- Opravili jsme problém, kdy se po prvním přihlášení uživatele oOBE ukončuje ve scénářích, kdy se používaly konfigurace veřejného terminálů založené na skupině AAD.
-- Opravil se problém se zobrazováním oznámení o aktualizacích a dialogových vý okno s výzvou k restartování zařízení.
+- Opravili [jsme známý problém s portálem zařízení, kde se nestáhly uzamčené soubory](hololens-troubleshooting.md#downloading-locked-files-doesnt-error).
+- Opravili jsme [známý problém s portálem zařízení s časovým limitem nahrávání a stahování souborů](hololens-troubleshooting.md#device-portal-file-uploaddownload-times-out).
+- řeší problémy při vytváření sestav vlastností dodržování předpisů z HoloLens zařízení; pro spuštění správných sestav na buildech Insider může být nutné restartovat počítač.  
+- povolili jste [přiřazené přístupové rozhraní API](/uwp/api/windows.system.userprofile.assignedaccesssettings?view=winrt-20348&preserve-view=true) , takže aplikace teď můžou určit, jestli HoloLens běží v celoobrazovkovém režimu pro uživatele přihlášeného k HoloLens.
+- Aktualizace integrované verze vzdálené pomoci, která je nainstalovaná na nových bliknutích
+- Zpracování přes Gamepad pro 2D aplikace bylo v buildech Insider zakázáno. Když je odeberete, aplikace teď můžou používat rozhraní API pro Gamepad přímo a mít přístup k celé sadě ovládacích prvků a dělat vše, co chtějí. Vývojáři by měli používat rozhraní API Gamepad pro využívání vstupu přes Gamepad. Tady je ukázka pro [třídu Gamepad (Windows. hraní her. Input) – Windows aplikací UWP](/uwp/api/windows.gaming.input.gamepad?view=winrt-20348&preserve-view=true).
+- Opravili jsme problém, když se po prvním přihlášení uživatele ve scénářích, kde se používají konfigurace veřejného terminálu na základě skupin AAD, ukončilo počáteční nastavení.
+- Byl opraven problém s zobrazením oznámení o aktualizacích a výzev k restartování zařízení.
 
-## <a name="start-receiving-insider-builds"></a>Zahájení přijímání sestavení Insider
-
-> [!NOTE]
-> Pokud jste to ještě neudělali, restartujte zařízení, abyste aktualizovali stav a získejte nejnovější build.
->
-> - Hlasový příkaz Restartovat zařízení funguje dobře.
-> - Můžete také zvolit tlačítko restartování v Nastavení/Windows Insider Program.
->
-> Na back-endu jsme měli chybu, se kterou jste se mohli setkat, a tím se vrátíte na cestu.
-
-Na zařízení HoloLens 2 přejděte na **Nastavení**  >  **Update & Security**  >  **Windows Insider Program** a vyberte **Začínáme.** Propojte účet, který jste použili k registraci, Windows Insider.
-
-Windows insider se teď přesouvá na Kanály. Kanál **Fast** se stane vývojový **kanál,** kanál **Slow** se stane **kanálem Beta kanál** a kanál release **preview** se stane **kanálem Release Preview**. Toto mapování vypadá takhle:
-
-![Windows Vysvětlení kanálů insider.](images/WindowsInsiderChannels.png)
-
-Další informace najdete v tématu [Představení kanálů Windows Insider na](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) Windows blogech.
-Pak vyberte **Aktivní vývoj Windows,** zvolte, jestli chcete dostávat Dev **Channel** nebo Beta kanál **buildy,** a prohlédněte si podmínky programu.
-Dokončete **> Potvrdit a** restartovat. Po restartování zařízení přejděte do Nastavení > **Update & Security >** Vyhledejte aktualizace a získejte nejnovější sestavení.
-
-### <a name="update-error-0x80070490-work-around"></a>Aktualizace 0x80070490 obchádky
-
-Pokud při aktualizaci na kanálu pro 0x80070490 nebo beta verzi dojde k chybě aktualizace, vyzkoušejte následující krátkodobé řešení. Zahrnuje přesunutí kanálu insider, vyzvednutí aktualizace a pak přesunutí kanálu Insider zpět.
-
-#### <a name="stage-one---release-preview"></a>Fáze 1 – Verze Preview
-
-1. Nastavení, & Security a Windows Insider Program vyberte **Kanál Release Preview.**
-
-2. Nastavení, Aktualizace & Security, Windows Update, Kontrola **aktualizací**. Po aktualizaci pokračujte fází 2.
-
-#### <a name="stage-two---dev-channel"></a>Fáze 2 – Vývojový kanál
-
-1. Nastavení, Aktualizovat & Security, Windows Insider Program vyberte **Dev Channel**.
-
-2. Nastavení, Aktualizace & Security, Windows Update, **Kontrola aktualizací**.
-
-## <a name="ffu-download-and-flash-directions"></a>Pokyny ke stažení ffu a flash
-
-Pokud chcete testovat pomocí ffu podepsaného letem, musíte nejprve letět s odemknutým zařízením před flash flash diskem ffu.
-
-1. Na počítači:
-    1. Stáhněte si ffu do počítače z [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
-
-    1. Nainstalujte ARC (Advanced Recovery Companion) z Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
-
-1. Na HoloLens – Letové odemčení: Otevřete **Nastavení** Update & Security Windows Insider Program a pak se zaregistrujte a  >    >   restartujte zařízení.
-
-1. Flash FFU – Nyní můžete flash diskem podepsaného letem FFU použít ARC.
-
-### <a name="provide-feedback-and-report-issues"></a>Poskytnutí zpětné vazby a hlášení problémů
-
-Pokud chcete [poskytnout zpětnou Centrum Feedback a nahlásit problémy,](hololens-feedback.md) HoloLens aplikaci na svém počítači. Pomocí Centrum Feedback zajistíte, že se zahrnou všechny potřebné diagnostické informace, které našim technikům pomůžou rychle ladit a vyřešit problém.  Problémy s čínským a japonském HoloLens by měly být hlášeny stejným způsobem.
+## <a name="start-receiving-insider-builds"></a>Zahájit přijímání buildů Insider
 
 > [!NOTE]
-> Přijměte výzvu s dotazem, jestli chcete Centrum Feedback ke složce  Dokumenty (po zobrazení výzvy vyberte Ano).
+> Pokud jste se neaktualizovali v poslední době, restartujte prosím své zařízení, aby se aktualizovaly stav, a získejte nejnovější Build.
+>
+> - Hlasový příkaz "restartovat zařízení" dobře funguje.
+> - můžete také zvolit tlačítko restartovat v programu Nastavení/Windows Insider.
+>
+> Na back-endu jsme narazili na chybu, která se vám mohla vyskytnout, a získáte zpět sledování.
+
+na zařízení HoloLens 2 přejít do **Nastavení**  >  **Update & Security**  >  **Windows Program Insider** a vyberte začínáme . propojte účet, který jste použili k registraci jako Windows Insider.
+
+> [!NOTE]
+> Aby bylo možné zaregistrovat zařízení v buildech Insider, budete muset povolit volitelnou telemetrii. pokud jste to ještě neudělali, otevřete aplikaci Nastavení a vyberte možnost diagnostika **osobních údajů**  ->  **& zpětná vazba** a pak vyberte **volitelná diagnostická data**.
+
+Windows insider se teď přesouvá na kanály. **Rychlý** prstenec se stane **kanálem pro vývoj**, **pomalé** vyzvánění se stane **kanálem beta verze** a prstenec **verze Preview** se stane **kanálem verze Preview**. Toto mapování vypadá takto:
+
+![Windows Vysvětlení kanálů Insider.](images/WindowsInsiderChannels.png)
+
+další informace najdete v tématu [představení Windowsch kanálů Insider](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) na Windows blogů.
+pak vyberte možnost **aktivní vývoj Windows**, zvolte, jestli chcete dostávat buildy pro **vývoj** nebo **Beta kanál** , a podívejte se na licenční program.
+Kliknutím na tlačítko **potvrdit > restartovat nyní** dokončete instalaci. po restartování zařízení přejít na **Nastavení > Update & Security > vyhledat aktualizace** a získat nejnovější build.
+
+### <a name="update-error-0x80070490-work-around"></a>Chyba aktualizace 0x80070490 práce
+
+Pokud narazíte na chybu aktualizace 0x80070490 při aktualizaci na vývojovém nebo beta kanálu, zkuste následující krátkodobé řešení. Zahrnuje přesun kanálu služby Insider, aktualizaci a přesun kanálu Insider zpátky.
+
+#### <a name="stage-one---release-preview"></a>Fáze verze Preview 1
+
+1. Nastavení, Update & Security Windows programu Insider vyberte **kanál verze preview**.
+
+2. Nastavení, aktualizujte & zabezpečení, web Windows Update vyhledejte **aktualizace**. Po aktualizaci pokračujte do fáze 2.
+
+#### <a name="stage-two---dev-channel"></a>Fáze – dva vývojové kanály
+
+1. Nastavení, aktualizovat & zabezpečení Windows programu Insider vyberte možnost **vývojového kanálu**.
+
+2. Nastavení, aktualizujte & zabezpečení, web Windows Update vyhledejte **aktualizace**.
+
+## <a name="ffu-download-and-flash-directions"></a>FFU stažení a pokyny pro Flash
+
+Pokud chcete otestovat ffuem podepsaným letem, musíte nejdřív zařízení odemknout a před zavedením ffuého letu podepsaného.
+
+1. V počítači:
+    1. Stáhněte si FFU do počítače z [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
+
+    1. Nainstalujte oblouk (Průvodce pokročilým obnovením) z Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
+
+1. při HoloLensovém odemknutí: otevřít **Nastavení**  >  **aktualizace & zabezpečení**  >  **Windows programu Insider** , zaregistrujte se a restartujte zařízení.
+
+1. FFU Flash – nyní můžete FFU podepsaný pro let pomocí ARC.
+
+### <a name="provide-feedback-and-report-issues"></a>Poskytněte zpětnou vazbu a nahlásit problémy
+
+k poskytnutí zpětné vazby a hlášení problémů použijte prosím [aplikaci centra Feedback](hololens-feedback.md) v HoloLens. Pomocí centra Feedback zajišťujeme, aby byly k dispozici všechny potřebné diagnostické informace, které nám pomohly rychle ladit a řešit potíže.  problémy s čínskou a japonskou verzí HoloLens by měly být hlášeny stejným způsobem.
+
+> [!NOTE]
+> Nezapomeňte přijmout výzvu s dotazem, jestli chcete, aby měl centrum zpětné vazby přístup ke složce dokumentů (po zobrazení výzvy vyberte **Ano** ).
 
 ## <a name="note-for-developers"></a>Poznámka pro vývojáře
 
-Vítá vás a doporučujeme, abyste si zkusili vyvíjet aplikace pomocí sestavení Insider HoloLens.  Pokud chcete [začít, HoloLens si prohlédněte dokumentaci pro](https://developer.microsoft.com/windows/mixed-reality/development) vývojáře. Stejné pokyny fungují i se sestaveními insider HoloLens.  Můžete použít stejná sestavení Unity a Visual Studio, které už používáte pro HoloLens vývoj.
+Jste připraveni a doporučujeme vyzkoušet vývoj aplikací pomocí buildů Insider HoloLens.  pokud chcete začít, podívejte se na [dokumentaci pro vývojáře HoloLens](https://developer.microsoft.com/windows/mixed-reality/development) . Stejné pokyny fungují s buildy Insider HoloLens.  můžete použít stejná sestavení Unity a Visual Studio, která už používáte pro HoloLens vývoj.
 
-## <a name="stop-receiving-insider-builds"></a>Zastavení přijímání sestavení Insider
+## <a name="stop-receiving-insider-builds"></a>Zastavit příjem buildů Insider
 
-Pokud už nechcete dostávat buildy Insider služby Windows Holographic, můžete to vyjádřit výslovně, když HoloLens [](hololens-recovery.md) používá produkční build, nebo můžete obnovit své zařízení pomocí doplňku Advanced Recovery Companion a obnovit zařízení na verzi Windows Holographic, která není součástí programu Windows.
+pokud už nechcete dostávat buildy Insider Windows holografické, můžete se odhlásit, když HoloLens spouští výrobní sestavení, nebo můžete [zařízení obnovit](hololens-recovery.md) pomocí průvodce pokročilým obnovením a obnovit zařízení do verze programu Windows holografické v jiné verzi než Insider.
 
 > [!CAUTION]
-> Existuje známý problém, kdy se uživatelům, kteří po ruční přeinstalaci nové verze Preview buildu ruší registraci ve verzi Insider Preview, zobrazí modrá obrazovka. Potom musí zařízení obnovit ručně. Úplné podrobnosti o tom, jestli by vás to ovlivnilo nebo ne, najdete v části Další informace o tomto [známém problému.](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
+> Došlo k známému problému, při kterém se uživatelé, kteří zruší registraci v buildu Insider Preview po ruční instalaci nového buildu Preview, zobrazí modrá obrazovka. Potom musí zařízení ručně obnovit. Podrobné informace o tom, jestli by se to ovlivnilo, najdete v tomto [známém problému](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build).
 
-Pokud chcete ověřit, HoloLens vaše aplikace používá produkční sestavení:
+chcete-li ověřit, zda HoloLens spouští výrobní sestavení:
 
-1. Přejděte na Nastavení > System > About (O **produktu)** a vyhledejte číslo sestavení.
+1. přejít na **Nastavení > systému > o** a najít číslo sestavení.
 
-1. [Podívejte se na poznámky k verzi pro čísla produkčních buildů](hololens-release-notes.md).
+1. [Přečtěte si poznámky k verzi pro výrobní čísla buildu](hololens-release-notes.md).
 
-Odhlášení sestavení Insider:
+Odhlášení od buildů Insider:
 
-1. Na HoloLens produkčním sestavení přejděte na **Nastavení > Update & Security > Windows Insider Program** a vyberte Zastavit sestavení **Insider.**
+1. na HoloLens, na kterém běží výrobní sestavení, navštivte **Nastavení > Update & Security > Windows Insider** a vyberte zastavit buildy **Insider**.
 
-1. Postupujte podle pokynů a odhlásit zařízení.
+1. Pokud chcete zařízení odhlásit, postupujte podle pokynů.
