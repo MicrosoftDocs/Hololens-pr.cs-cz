@@ -12,12 +12,12 @@ ms.localizationpriority: medium
 ms.date: 11/04/2020
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 5a4f251f3ca6eae5e85e4d763074e035039159cb
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 4b8975d8eb362212eaf91966f4efa0bc22236327
+ms.sourcegitcommit: 3f21b692be2f1b7f9c382f2b735b4c10339d4a78
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126032387"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "127934064"
 ---
 # <a name="common-deployment-scenarios"></a>Běžné scénáře nasazení
 
@@ -25,9 +25,9 @@ ms.locfileid: "126032387"
 
 Zjištění, jak nasadit nové zařízení, může být při prvním pokusu o jeho nasazení problém. Tady sdílíme různé způsoby nasazení a správy Microsoft HoloLens 2 zařízení v rámci organizace.
 
-Chcete řešení nasadit ve velkém měřítku. Chceme vás tam dostat. Nejprve si promluvme o postupu nasazení zařízení, tedy hologramů k dosažení hodnoty pro váš cílový scénář hybridní reality, ať už používáte D365 Remote Assist, příručky nebo aplikaci s povolenou službou Azure mixed reality, kterou jste vytvořili.
+Chcete řešení nasadit ve velkém měřítku. Chceme vás tam dostat. Nejprve si promluvme o krocích pro nasazení zařízení, tedy hologramů, aby bylo možné dosáhnout hodnoty pro váš cílový scénář hybridní reality. Ať už používáte D365 Remote Assist, příručky nebo aplikaci s povolenou službou Azure mixed reality, kterou jste vytvořili, naše běžné scénáře nasazení vás provede.
 
-Můžete být pracovníkem s rozhodovací pravomocí v oblasti obchodu, IT profesionálem nebo týmem pro inovace, který se HoloLens ve vaší organizaci. Jak budete stavět od důkazu konceptu až po škálované nasazení, naši průvodci nasazením HoloLens v rámci vaší IT infrastruktury – bez ohledu na to, jak velká nebo malá. Nejběžnější jsou následující scénáře nasazení:
+Můžete být pracovníkem s rozhodovací pravomocí, IT profesionálem nebo týmem pro inovace, který se HoloLens ve vaší organizaci. Jak budete stavět od důkazu konceptu až po škálované nasazení, naši průvodci nasazením HoloLens v rámci vaší IT infrastruktury – bez ohledu na to, jak velká nebo malá. Nejběžnější jsou následující scénáře nasazení:
 
 | Scenario |Využití | Klíčové body |
 |---------|---------|---------|
@@ -98,11 +98,11 @@ Vezměte v úvahu tento model nasazení pro:
 
 ### <a name="common-challenges"></a>Běžné problémy
 
-* HoloLens 2 nepodporuje připojení k místní službě AD ani System Center Configuration Manager (SCCM). Pouze připojení k Azure AD pomocí MDM. Mnoho společností v tomto scénáři stále nasazovat počítače Windows 10 jako místní zařízení připojená k AD, spravovaná pomocí SCCM a nemusí mít nasazenou nebo nakonfigurovanou infrastrukturu pro správu interních zařízení Windows 10 prostřednictvím cloudových řešení MDM.
-* Protože HoloLens 2 je první zařízení v cloudu, při ověřování uživatelů, aktualizacích operačního systému, správě MDM atd. do značné míry spoléhá na služby připojené k internetu a cloudu. Při připojování k podnikové síti bude pravděpodobně potřeba upravit pravidla proxy serveru nebo brány firewall, aby byl povolen přístup pro HoloLens 2 a aplikace, které na ní běží.
-* Podnikové Wi-Fi připojení obvykle vyžaduje certifikáty k ověření zařízení nebo uživatele v síti. Konfigurace požadované infrastruktury nebo nastavení pro nasazení certifikátů Windows 10 zařízení prostřednictvím MDM může být náročná.
+* HoloLens 2 nepodporuje připojení k místní službě AD ani System Center Configuration Manager (SCCM). K MDM se připojuje jenom Azure AD. Mnoho společností v tomto scénáři stále nasazovat počítače Windows 10 jako místní zařízení připojená k AD, spravovaná pomocí SCCM a nemusí mít nasazenou nebo nakonfigurovanou infrastrukturu pro správu interních zařízení Windows 10 prostřednictvím cloudových řešení MDM.
+* Protože HoloLens 2 je první zařízení v cloudu, spoléhá do značné míry na internetové a cloudové služby pro ověřování uživatelů, aktualizace operačního systému, správu MDM atd. Při připojování k podnikové síti bude pravděpodobně potřeba upravit pravidla proxy serveru nebo brány firewall, aby byl povolen přístup pro HoloLens 2 a aplikace, které na ní běží.
+* Připojení Wi-Fi podnikové sítě obvykle vyžaduje certifikáty k ověření zařízení nebo uživatele v síti. Konfigurace požadované infrastruktury nebo nastavení pro nasazení certifikátů Windows 10 zařízení prostřednictvím MDM může být náročná.
 
-Odpovídající příručka Pro podnikové připojení instruuje, jak zaregistrovat HoloLens 2 do stávající správy zařízení, jak podle potřeby použít licence a ověřit, že koncoví uživatelé mohou po nastavení zařízení používat příručku Dynamics 365 a také používat vlastní obchodní aplikace.
+Odpovídající příručka Podnikové připojení instruuje, jak zaregistrovat HoloLens 2 do stávající správy zařízení, jak podle potřeby použít licence a ověřit, jestli koncoví uživatelé po nastavení zařízení mohou používat příručku Dynamics 365 a také používat vlastní obchodní aplikace.
 
 > [!div class="nextstepaction"]
 > [Průvodce nasazením připojení k podnikové síti](hololens2-corp-connected-overview.md)
@@ -133,7 +133,7 @@ Vezměte v úvahu tento model nasazení pro:
 ### <a name="common-challenges"></a>Běžné problémy
 
 * Prostřednictvím zřizovacích balíčků je k dispozici omezená sada konfigurací.
-* Cloudové služby není možné používat, a proto je možné omezit HoloLens 2.
+* Cloudové služby není možné použít, a proto je možné omezit HoloLens 2.
 * Vyšší režijní náklady na správu, protože tato zařízení musí být nastavená, nakonfigurovaná a aktualizovaná ručně.
 
 Odpovídající průvodce zabezpečením offline poskytuje pokyny pro použití ukázkového zřizovacího balíčku, který uzamkne HoloLens 2 pro použití v zabezpečených prostředích.
