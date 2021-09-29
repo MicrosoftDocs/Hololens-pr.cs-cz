@@ -1,44 +1,44 @@
 ---
-ms.openlocfilehash: 7a7122790d3e0257c07cdd8bc8c7f658b3a0e279
-ms.sourcegitcommit: 6ce962ede986ebfab21d1665722694eaee13c280
+ms.openlocfilehash: 3d6b36124cd50dcc9f420227cb7787f0d787c013
+ms.sourcegitcommit: c73cdefbdb4411f6a187cc38bb2570dadeb156bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2021
-ms.locfileid: "122859216"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "129220636"
 ---
 # <a name="microsoft-intune-single-app-kiosk-template"></a>[Microsoft Intune veřejného terminálu s jednou aplikací](#tab/uisak)
 
-## <a name="microsoft-intune-single-app-kiosk-template"></a>Microsoft Intune veřejného terminálu s jednou aplikací
+### <a name="microsoft-intune-single-app-kiosk-template"></a>Microsoft Intune veřejného terminálu s jednou aplikací
 
-1. Vytvoření konfiguračního profilu <br> 
+1. Vytvoření konfiguračního profilu <br>
 <kbd>
     <img alt="Create a configuration profile" src="../images/kiosk-steps/kiosk-template-sa-1.png"/>
 </kbd>
 
 <br>
 
-2. Volba šablony veřejného terminálu <br> 
+2. Volba šablony veřejného terminálu <br>
 <kbd>
     <img alt="Create a kiosk profile" src="../images/kiosk-steps/kiosk-template-sa-2.png" width="415" height="530" />
 </kbd>
 
 <br>
 
-3. Zvolte, jestli se má v bezobrazovkovém režimu vybrat jedna nebo více aplikací, a také zvolit druh cílení na uživatele v bezobrazovkovém režimu. <br> 
+3. Zvolte, jestli se jedná o jednu nebo více bezobrazovkové aplikace, a také zvolte druh cílení na uživatele pro bezobrazovový režim. <br>
 <kbd>
     <img alt="Select single app kiosk mode" src="../images/kiosk-steps/kiosk-template-sa-3.png"/>
 </kbd>
 
 <br>
 
-4. Volba aplikace, která se má spustit v bezobrazovkovém režimu <br> 
+4. Volba aplikace, která se má spustit v bezobrazovkovém režimu <br>
 <kbd>
     <img alt="Choose the app" src="../images/kiosk-steps/kiosk-template-sa-4.png"/>
 </kbd>
 
 <br>
 
-5. Zbývající možnosti ponechte tak, jak jsou. <br> 
+5. Zbývající možnosti ponechte tak, jak jsou. <br>
 <kbd>
     <img alt="Leave options" src="../images/kiosk-steps/kiosk-template-sa-5.png"/>
 </kbd>
@@ -51,42 +51,42 @@ ms.locfileid: "122859216"
 </kbd>
 
 7. Zkontrolujte a vytvořte konfigurační profil a uložte ho.
-8. Proveďte synchronizaci MDM počínaje zařízením nebo Intune, abyste na zařízení aplikují konfiguraci. [Synchronizace](/mem/intune/remote-actions/device-sync#sync-a-device) zařízení z Intune nebo na zařízení přes **Nastavení -> Účty -> Pracovní** nebo školní –>vyberte připojený účet **-> -> Sync**
+8. Proveďte synchronizaci MDM počínaje zařízením nebo Intune, abyste na zařízení aplikují konfiguraci. [Synchronizace zařízení z Intune](/mem/intune/remote-actions/device-sync#sync-a-device) nebo na zařízení prostřednictvím **účtů Nastavení -> -> Pracovní** nebo školní ->vyberte připojený účet **-> -> Sync**
 9. Přihlaste se jako cílový uživatel a vyzkoušejte si bezobrazovkové prostředí.
 
 # <a name="microsoft-intune-multi-app-kiosk-template"></a>[Microsoft Intune veřejného terminálu s více aplikacemi](#tab/uimak)
 
-## <a name="microsoft-intune-multi-app-kiosk-template"></a>Microsoft Intune veřejného terminálu s více aplikacemi
+### <a name="microsoft-intune-multi-app-kiosk-template"></a>Microsoft Intune veřejného terminálu s více aplikacemi
 
-1. Vytvoření konfiguračního profilu <br> 
+1. Vytvoření konfiguračního profilu <br>
 <kbd>
     <img alt="Create a configuration profile" src="../images/kiosk-steps/kiosk-template-sa-1.png"/>
 </kbd>
 
 <br>
 
-2. Volba šablony veřejného terminálu <br> 
+2. Volba šablony veřejného terminálu <br>
 <kbd>
     <img alt="Create a kiosk profile" src="../images/kiosk-steps/kiosk-template-sa-2.png" width="415" height="530" />
 </kbd>
 
 <br>
 
-3. Zvolte, jestli se má v bezobrazovkovém režimu vybrat jedna nebo více aplikací, a také zvolit druh cílení na uživatele v bezobrazovkovém režimu. <br> 
+3. Zvolte, jestli se jedná o jednu nebo více bezobrazovkové aplikace, a také zvolte druh cílení na uživatele pro bezobrazovový režim. <br>
 <kbd>
     <img alt="Select single app kiosk mode" src="../images/kiosk-steps/kiosk-template-mak-3.png"/>
 </kbd>
 
 <br>
 
-4. Zvolte aplikace, které se spustí v bezobrazovkovém režimu. <br> 
+4. Zvolte aplikace, které se spustí v bezobrazovkovém režimu. <br>
 <kbd>
     <img alt="Choose the app(s)" src="../images/kiosk-steps/kiosk-template-mak-4.png"/>
 </kbd>
 
 <br>
 
-5. Zbývající možnosti ponechte tak, jak jsou. <br> 
+5. Zbývající možnosti ponechte tak, jak jsou. <br>
 <kbd>
     <img alt="Leave options" src="../images/kiosk-steps/kiosk-template-sa-5.png"/>
 </kbd>
@@ -101,14 +101,14 @@ ms.locfileid: "122859216"
 <br>
 
 7. Zkontrolujte a vytvořte konfigurační profil a uložte ho.
-8. Proveďte synchronizaci MDM počínaje zařízením nebo Intune, abyste na zařízení aplikují konfiguraci. [Synchronizace](/mem/intune/remote-actions/device-sync#sync-a-device) zařízení z Intune nebo na zařízení přes **Nastavení -> Účty -> Pracovní** nebo školní –>vyberte připojený účet **-> -> Sync**
+8. Proveďte synchronizaci MDM počínaje zařízením nebo Intune, abyste na zařízení aplikují konfiguraci. [Synchronizace zařízení z Intune](/mem/intune/remote-actions/device-sync#sync-a-device) nebo na zařízení prostřednictvím **účtů Nastavení -> -> Pracovní** nebo školní ->vyberte připojený účet **-> -> Sync**
 9. Přihlaste se jako cílový uživatel a vyzkoušejte si bezobrazovkové prostředí.
 
 # <a name="microsoft-intune-custom-template"></a>[Microsoft Intune vlastní šablony](#tab/intunecustom)
 
-## <a name="microsoft-intune-custom-template"></a>Microsoft Intune vlastní šablony
+### <a name="microsoft-intune-custom-template"></a>Microsoft Intune vlastní šablony
 
-1. Vytvořte konfiguraci XML pro požadované prostředí veřejného terminálu. Začněte [tím,](../hololens-kiosk-reference.md#kiosk-xml-code-samples) že si prohlédněte příklady.
+1. Vytvořte konfiguraci XML pro požadované prostředí veřejného terminálu. Začněte [příklady,](../hololens-kiosk-reference.md#kiosk-xml-code-samples) které najdete tady.
 
 1. Vytvoření vlastního konfiguračního profilu <br>
 <kbd>
@@ -145,14 +145,14 @@ ms.locfileid: "122859216"
 <br>
 
 6. Zkontrolujte a vytvořte a uložte konfigurační profil.
-1. Proveďte synchronizaci MDM počínaje zařízením nebo Intune, abyste na zařízení aplikují konfiguraci. [Synchronizace](/mem/intune/remote-actions/device-sync#sync-a-device) zařízení z Intune nebo na zařízení přes **Nastavení -> Účty -> Pracovní** nebo školní –>vyberte připojený účet **-> -> Sync**
+1. Proveďte synchronizaci MDM počínaje zařízením nebo Intune, abyste na zařízení aplikují konfiguraci. [Synchronizace zařízení z Intune](/mem/intune/remote-actions/device-sync#sync-a-device) nebo na zařízení prostřednictvím **účtů Nastavení -> -> Pracovní** nebo školní ->vyberte připojený účet **-> -> Sync**
 1. Přihlaste se jako cílový uživatel a vyzkoušejte si bezobrazovkové prostředí.
 
 # <a name="runtime-provisioning---multi-app"></a>[Zřizování za běhu – Více aplikací](#tab/ppkgmak)
 
-## <a name="runtime-provisioning---multi-app"></a>Zřizování za běhu – Více aplikací
+### <a name="runtime-provisioning---multi-app"></a>Zřizování za běhu – Více aplikací
 
-1. Vytvořte konfiguraci XML pro požadované prostředí veřejného terminálu. Začněte [tím,](../hololens-kiosk-reference.md#kiosk-xml-code-samples) že si prohlédněte příklady.
+1. Vytvořte konfiguraci XML pro požadované prostředí veřejného terminálu. Začněte [příklady,](../hololens-kiosk-reference.md#kiosk-xml-code-samples) které najdete tady.
 
 1. Otevřete [Windows Configuration Designer.](https://www.microsoft.com/store/apps/9nblggh4tx22)
 
@@ -210,13 +210,13 @@ ms.locfileid: "122859216"
 
 12. Po sestavení zřizovacího balíčku otevřete složku Umístění výstupu. Soubor .ppkg je váš zřzřídit balíček. Volitelný krok: Uložte projekt.
 
-13. Teď můžete použít zřizovací balíček. Můžete buď použít [zřizovací balíček pro HoloLens během](../hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup) instalace, nebo použít zřizovací balíček pro HoloLens po [instalaci](../hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup).
+13. Teď můžete použít zřizovací balíček. Můžete buď použít [zřizovací balíček](../hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup) pro HoloLens během instalace, nebo použít zřizovací balíček pro [HoloLens po instalaci](../hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup).
 
 14. Přihlaste se jako cílový uživatel a vyzkoušejte si bezobrazovkové prostředí.
 
 # <a name="runtime-provisioning---single-app"></a>[Zřizování za běhu – Jedna aplikace](#tab/ppkgsak)
 
-## <a name="runtime-provisioning---single-app"></a>Zřizování za běhu – Jedna aplikace
+### <a name="runtime-provisioning---single-app"></a>Zřizování za běhu – Jedna aplikace
 
 1. Otevřete [Windows Configuration Designer.](https://www.microsoft.com/store/apps/9nblggh4tx22)
 
@@ -277,4 +277,4 @@ ms.locfileid: "122859216"
 
 11. Po sestavení zřizovacího balíčku otevřete složku Umístění výstupu. Soubor .ppkg je váš zřzřídit balíček. Volitelný krok: Uložte projekt.
 
-12. Teď můžete použít zřizovací balíček. Můžete buď použít [zřizovací balíček pro HoloLens během](../hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup) instalace, nebo použít zřizovací balíček pro HoloLens po [instalaci](../hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup).
+12. Teď můžete použít zřizovací balíček. Můžete buď použít [zřizovací balíček](../hololens-provisioning.md#apply-a-provisioning-package-to-hololens-during-setup) pro HoloLens během instalace, nebo použít zřizovací balíček pro [HoloLens po instalaci](../hololens-provisioning.md#applyremove-a-provisioning-package-to-hololens-after-setup).

@@ -15,7 +15,7 @@
 
 # Použití HoloLens
 ## První použití
-### [Připravte HoloLens 2 k použití.](hololens2-setup.md)
+### [Připravte si HoloLens 2 k použití.](hololens2-setup.md)
 ### [Nastavení HoloLens 2](hololens2-start.md)
 ### [Práce s HoloLens 2](hololens2-basic-usage.md)
 ### [Aktualizace HoloLens](hololens-update-hololens.md)
@@ -23,12 +23,12 @@
 ### Navigace v Windows Holographic
 #### [Použití domova nabídka Start hybridní reality](holographic-home.md)
 #### [Použití hlasu k ovládání HoloLens](hololens-cortana.md)
-#### [Vyhledání, otevření a uložení souborů v HoloLens](holographic-data.md)
+#### [Vyhledání, otevření a uložení souborů na HoloLens](holographic-data.md)
 #### [Vytváření fotek a videí hybridní reality](holographic-photos-and-videos.md)
 #### [Nová Nastavení aplikace](hololens-new-settings.md)
 #### [Nový Microsoft Edge](hololens-new-edge.md)
 ### Správa aplikací
-#### [Vyhledání, instalace a odinstalace aplikací](holographic-store-apps.md)
+#### [Vyhledání, instalace a odinstalace aplikací ze Storu](holographic-store-apps.md)
 #### [Správa vlastních aplikací pro HoloLens 2](hololens2-holographic-custom-apps.md)
 ### Optická vlákna hologramu a umístění do prostoru
 #### [Vylepšení vizuální kvality a komfortu](hololens-calibration.md)
@@ -77,7 +77,7 @@
 ### [Bezpečnostní inženýrství ](security-engineering.md)
 ### [HoloLens 2: Ochrana osobních údajů a ochrana dat](hololens2-privacy.md)
 ## Registrace zařízení
-### [Registrace HoloLens v MDM](hololens-enroll-mdm.md)
+### [Registrace HoloLens MDM](hololens-enroll-mdm.md)
 ### [Windows Autopilot pro HoloLens 2](hololens2-autopilot.md) 
 ### [Registrace v prostředí s omezenými adresami MAC Wi-Fi prostředí](mac-address-options.md)
 ## Nasazení aplikací
@@ -87,7 +87,7 @@
 ### [Zřizovací balíček](app-deploy-provisioning-package.md)
 ### [Instalační program aplikací](app-deploy-app-installer.md)
 ## Zásady (CSP)
-### [Konfigurace CSP a Správa zařízení konfigurace](hololens-csp-policy-overview.md)
+### [Konfigurace CSP a Správa zařízení služby](hololens-csp-policy-overview.md)
 ### [Použití MDM ke správě HoloLens zařízení](hololens-mdm-configure.md)
 ### [Konfigurace HoloLens pomocí zřizovací balíčky](hololens-provisioning.md)
 ### [Běžná omezení zařízení](hololens-common-device-restrictions.md)
@@ -100,7 +100,7 @@
 ### [Příprava certifikátů a síťových profilů pro HoloLens 2](hololens-certificates-network.md)
 ### [Správa koncových bodů připojení pro HoloLens](hololens-offline.md)
 ### [Správce certifikátů](certificate-manager.md)
-## [Správa HoloLens aktualizací](hololens-updates.md)
+## [Správa HoloLens souborů](hololens-updates.md)
 
 # Řešení potíží
 ## [Zařízení](hololens-troubleshooting.md)
@@ -108,36 +108,36 @@
 ## [Displej](hololens2-display.md)
 ## [Implementace a spravovaná zařízení](hololens2-enterprise-troubleshooting.md#)
 ## [Povolení diagnostických protokolů](hololens-diagnostic-logs.md)
-## [Resetování HoloLens 2](hololens-recovery.md)
+## [resetovat HoloLens 2](hololens-recovery.md)
 
 # Zdroje informací
-## [Kde koupit HoloLens 2](hololens2-purchase.md)
+## [kde koupit HoloLens 2](hololens2-purchase.md)
 ## [Možnosti pomoci a podpory](hololens2-support.md)
 ## [Žádosti o podporu autopilotu](hololens2-autopilot-registration-support.md)
-## [HoloLens verze 2](hololens-release-notes.md)
-## [Insider preview pro Microsoft HoloLens](hololens-insider.md)
+## [poznámky k verzi HoloLens 2](hololens-release-notes.md)
+## [Insider Preview pro Microsoft HoloLens](hololens-insider.md)
 ## [Podporované jazyky](hololens2-language-support.md)
-## [Vývoj s microsoft meshem (Preview)](/mesh/overview)
+## [Vývoj s využitím sítě Microsoft (Preview)](/mesh/overview)
 ## HoloLens (1. generace)
-### První použití
-#### [Informace HoloLens (1. generace)](hololens1-hardware.md)
-#### [HoloLens (1. generace) fit a komfort](hololens1-fit-comfort-faq.md)
-#### [Přehled základního využití](hololens1-setup.md)
-#### [Nastavení HoloLens (1. generace)](hololens1-start.md)
+### Využití při prvním použití
+#### [o HoloLens (1. generace)](hololens1-hardware.md)
+#### [přizpůsobení a pohodlí HoloLens (1. generace)](hololens1-fit-comfort-faq.md)
+#### [Základní přehled využití](hololens1-setup.md)
+#### [nastavení HoloLens (1. generace)](hololens1-start.md)
 ### Denní využití
-#### [Použití HoloLens (1. generace)](hololens1-clicker.md)
-#### [Použití 3D prohlížeč v HoloLens (1. generace)](holographic-3d-viewer-beta.md)
-#### [Získání HoloLens (1. generace)](hololens1-basic-usage.md)
+#### [použití HoloLens (1. generace) – kliknutí](hololens1-clicker.md)
+#### [použití 3d vieweru na HoloLens (1. generace)](holographic-3d-viewer-beta.md)
+#### [seznámení s HoloLens (1. generace)](hololens1-basic-usage.md)
 #### [Správa vlastních aplikací pro HoloLens](holographic-custom-apps.md)
-#### [Instalace lokalizované verze HoloLens (1. generace)](hololens1-install-localized.md)
-#### [Odemknutí Windows Holographic for Business funkcí](hololens1-upgrade-enterprise.md)
-#### [Resetování HoloLens (1. generace)](hololens1-recovery.md)
-### HoloLens zabezpečení (1. generace)
-#### [Nejčastější dotazy HoloLens zabezpečení (1. generace)](hololens1-faq-security.yml)
-#### [HoloLens nástroje BitLocker (1. generace)](hololens1-encryption.md)
-### [Známé problémy a alternativní řešení HoloLens (1. generace)](hololens-known-issues.md)
-### [HoloLens (1. generace)](hololens1-release-notes.md)
+#### [nainstalovat lokalizovanou verzi HoloLens (1. generace)](hololens1-install-localized.md)
+#### [odemčení funkcí Windows Holographic for Business](hololens1-upgrade-enterprise.md)
+#### [resetovat HoloLens (1. generace)](hololens1-recovery.md)
+### zabezpečení HoloLens (1. generace)
+#### [nejčastější dotazy týkající se zabezpečení HoloLens (1. generace)](hololens1-faq-security.yml)
+#### [šifrování bitlockeru HoloLens (1. generace)](hololens1-encryption.md)
+### [známé problémy a řešení pro HoloLens (1. generace)](hololens-known-issues.md)
+### [zpráva k vydání verze HoloLens (1. generace)](hololens1-release-notes.md)
 
 # Sdělte nám svůj názor
-## [Dejte nám zpětnou vazbu prostřednictvím Centrum Feedback](hololens-feedback.md)
-## [HoloLens průvodce přispíváním do dokumentace](contributing.md)
+## [Sdělte nám svůj názor prostřednictvím centra Feedback](hololens-feedback.md)
+## [příručka k HoloLensům přispívajícím k dokumentaci](contributing.md)
