@@ -1,11 +1,11 @@
 ---
-title: Hledání, instalace a odinstalace aplikací
-description: Microsoft Store je váš zdroj pro aplikace a hry, které pracují s HoloLens.  Přečtěte si další informace o hledání, instalaci a odinstalaci holografických aplikací.
+title: Vyhledání, instalace a odinstalace aplikací
+description: Tento Microsoft Store je zdrojem pro aplikace a hry, které pracují s HoloLens.  Přečtěte si další informace o hledání, instalaci a odinstalaci holografických aplikací.
 ms.assetid: cbe9aa3a-884f-4a92-bf54-8d4917bc3435
 ms.reviewer: v-miegge
 ms.date: 9/7/2021
 manager: jarrettr
-keywords: HoloLens, Store, UWP, aplikace, instalace
+keywords: hololens, store, uwp, app, install
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
@@ -15,134 +15,156 @@ ms.localizationpriority: high
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 3442da500e7554d7f97db2178cbaceeecad143ac
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: f7d4ddf41f02b083000c1e57f5140c38527826d7
+ms.sourcegitcommit: b9cd7ed5edb98249c609b547b90587863ea1cb9e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126035843"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "129364411"
 ---
-# <a name="find-install-and-uninstall-applications-from-the-microsoft-store"></a>Hledání, instalace a odinstalace aplikací z Microsoft Store
+# <a name="find-install-and-uninstall-applications-from-the-microsoft-store"></a>Vyhledání, instalace a odinstalace aplikací z Microsoft Store
 
-Microsoft Store je váš zdroj přechodu na aplikace a hry, které pracují s HoloLens. když přejdete na obchod na svém HoloLens, všechny aplikace, které vidíte, se na něm spustí.
+Hlavní Microsoft Store je vaším zdrojem informací pro aplikace a hry, které pracují s HoloLens. Když ve svém zařízení ve Storu HoloLens, spustí se na ní všechny aplikace, které tam vidíte.
 
-aplikace na HoloLens používají 2d zobrazení nebo holografické zobrazení. Aplikace, které používají 2D zobrazení, vypadají jako Windows a můžou se po celém světě umístit. Aplikace, které používají Holografické zobrazení, se dostanou jenom na aplikaci, kterou vidíte.
+Aplikace v HoloLens používají buď 2D zobrazení, nebo holografické zobrazení. Aplikace, které používají 2D zobrazení, vypadají jako okna a můžete je umístit kolem sebe. Aplikace, které používají holografické zobrazení, vás obklopují a stanou se jedinou aplikací, kterou vidíte.
 
-HoloLens podporuje mnoho stávajících aplikací z Microsoft Store a nové aplikace sestavené speciálně pro HoloLens.  Tento článek se zaměřuje na holografické aplikace z Microsoft Store.
+HoloLens podporuje mnoho existujících aplikací z Microsoft Store a nové aplikace vytvořené speciálně pro HoloLens.  Tento článek se zaměřuje na holografické aplikace z Microsoft Store.
 
-Pokud chcete získat další informace o instalaci a spouštění vlastních aplikací, přečtěte si [vlastní holografické aplikace](holographic-custom-apps.md).
+Další informace o instalaci a spouštění vlastních aplikací najdete v tématu [Vlastní holografické aplikace.](holographic-custom-apps.md)
 
-## <a name="find-apps"></a>Najít aplikace
+## <a name="find-apps"></a>Hledání aplikací
 
-otevřete Microsoft Store v nabídce **Start** . Pak vyhledejte aplikace a hry. Pomocí [hlasových příkazů](hololens-cortana.md) můžete hledat vyslovením "hledání", jakmile se otevře okno hledání "zahájení diktování" a pak když se zobrazí výzva, začne dočínat hledané výrazy.
+Otevřete Microsoft Store z nabídky **Start.** Pak vyhledejte aplikace a hry. Hlasové příkazy [můžete](hololens-cortana.md) použít k vyhledávání tak, že řeknete "Hledat", jakmile se okno hledání otevře, řekne "Start dictating" (Začít diktovat) a po zobrazení výzvy začne hledaný výraz říkat.
 
 > [!NOTE]
-> požadavky na systém pro HoloLens zařízení jsou založené na architektuře buildu aplikace. pokud se sestavení aplikace pro HoloLens (1. generace) neaktualizovalo na novější UWP v úložišti, aby zahrnovalo balíček architektury ARM, nebude k dispozici pro zařízení HoloLens 2. podobně platí, že pokud aplikace HoloLens 2 neobsahuje balíček architektury x86, nebude k dispozici pro zařízení HoloLens (1. generace). HoloLens architektury zařízení:
+> Požadavky na systém pro HoloLens zařízení jsou založené na architektuře sestavení aplikace. Pokud nebylo sestavení aplikace pro HoloLens (1. generace) aktualizováno na novější UPW ve Storu tak, aby zahrnovalo balíček architektury ARM, nebude dostupné pro zařízení HoloLens 2. Podobně platí, že pokud aplikace HoloLens 2 neobsahuje balíček architektury x86, nebude k dispozici pro zařízení HoloLens (1. generace). HoloLens architektury zařízení:
 >
 > - x86 = HoloLens (1. generace)
 > - ARM = HoloLens 2
 
 > [!NOTE]
-> 12. ledna 2021 budou tyto aplikace dostupné na konci podpory HoloLensch zařízení. Pro použití webové verze aplikace doporučujeme na svém zařízení použít následující odkaz.
+> 12. ledna 2021 se následující aplikace dostanou na konec podpory na HoloLens zařízení. Pokud chcete používat webovou verzi aplikace, doporučujeme na svém zařízení použít následující odkaz.
 
 | Aplikace        | Odkaz                                          |
 |------------|-----------------------------------------------|
-| Excel mobilní zařízení      | [https://office.live.com/start/Excel.aspx](https://office.live.com/start/Excel.aspx)      |
-| Mobilní aplikace Word       | [https://office.live.com/start/Word.aspx](https://office.live.com/start/Word.aspx)       |
-| PowerPoint mobilní zařízení | [https://office.live.com/start/PowerPoint.aspx](https://office.live.com/start/PowerPoint.aspx) |
+| Excel Mobile      | [https://office.live.com/start/Excel.aspx](https://office.live.com/start/Excel.aspx)      |
+| Word Mobile       | [https://office.live.com/start/Word.aspx](https://office.live.com/start/Word.aspx)       |
+| PowerPoint Mobile | [https://office.live.com/start/PowerPoint.aspx](https://office.live.com/start/PowerPoint.aspx) |
 
 > [!NOTE]
-> aplikace OneDrive se v současnosti pro účty Azure AD v HoloLens nepodporuje. doporučujeme stáhnout aplikaci Microsoft OneDrive PWA. [Pomocí těchto kroků stáhněte aplikaci.]
+> Aplikace OneDrive se v současné době nepodporuje pro účty Azure AD na HoloLens. Doporučujeme stáhnout si Microsoft OneDrive PWA aplikaci. [Aplikaci stáhnete pomocí těchto kroků.]
 
 ## <a name="install-apps"></a>Instalace aplikací
 
-Chcete-li stáhnout aplikace, budete muset být přihlášeni pomocí účet Microsoft. Některé aplikace jsou bezplatné a dají se hned stáhnout. Pro aplikace, které vyžadují nákup, musíte být přihlášení do obchodu s vaším účet Microsoft a mít platný způsob platby.
+Pokud si chcete stáhnout aplikace, musíte být přihlášeni pomocí účet Microsoft. Některé aplikace jsou zdarma a můžete si je hned stáhnout. U aplikací, které vyžadují nákup, musíte být přihlášeni ke Storu pomocí účet Microsoft a mít platný způsob platby.
 
 > [!NOTE]
-> účet, který používáte v Microsoft Store, nemusí být stejný jako účet, pomocí kterého jste se přihlásili. pokud na svém HoloLens používáte pracovní nebo školní účet, možná se budete muset přihlásit pomocí osobního účtu v aplikaci Store a koupit si ho.
+> Účet, který používáte v Microsoft Store, nemusí být stejný jako účet, pod nímž jste přihlášení. Pokud na svém účtu používáte pracovní nebo školní účet HoloLens možná se budete muset přihlásit pomocí svého osobního účtu v aplikaci pro Store a provést nákup.
 
 > [!TIP]
-> Pokud chcete nastavit způsob platby, klikněte na [account.Microsoft.com](https://account.microsoft.com/) a vyberte možnost platební **& platby faktury**  >    >  **Přidat možnost platby**.
+> Pokud chcete nastavit způsob platby, přejděte do části [account.microsoft.com](https://account.microsoft.com/) vyberte **Payment & billing Payment**  >  **options**  >  **(Způsoby platby) Add a payment option**(Přidat možnost platby).
 
-1. chcete-li otevřít [nabídku **start**](holographic-home.md), proveďte v HoloLens gesto [začátku](/hololens/hololens2-basic-usage#start-gesture) nebo [bloom](hololens1-basic-usage.md) (1. generace).
+1. Pokud chcete otevřít [ **nabídku Start,**](holographic-home.md)proveďte [gesto Start nebo](/hololens/hololens2-basic-usage#start-gesture) [bloom](hololens1-basic-usage.md) na HoloLens (1. generace).
 
-1. vyberte aplikaci Microsoft Store. Po otevření aplikace ze Storu:
-   1. Vyhledejte aplikace pomocí panelu hledání.
-   1. vyberte základní aplikace nebo aplikace, které jsou určené speciálně pro HoloLens z jedné z kategorií, které byly v kategorii.
-   1. V pravém horním rohu aplikace pro Store vyberte tlačítko **"..."** a pak výběrem možnosti **Moje knihovna** zobrazíte všechny dříve zakoupené aplikace.
+1. Vyberte aplikaci Microsoft Store. Po otevření aplikace pro Store:
+   1. Pomocí panelu hledání vyhledejte aplikace.
+   1. Vyberte základní aplikace nebo aplikace speciálně pro HoloLens z jedné z kurátorovaných kategorií.
+   1. V pravém horním rohu aplikace pro Store vyberte **tlačítko "..."** a pak vyberte **Moje** knihovna. Zobrazí se všechny dříve zakoupené aplikace.
 
-1. Na stránce aplikace vyberte **získat** nebo **nainstalovat** (může se vyžadovat nákup).
+1. Na  stránce **aplikace** vyberte Získat nebo Nainstalovat (může být nutné koupit).
 
-### <a name="install-microsoft-onedrive-pwa-app"></a>instalace aplikace Microsoft OneDrive PWA
+### <a name="install-microsoft-onedrive-pwa-app"></a>Instalace Microsoft OneDrive PWA app
 
-předpoklady: uživatel již připojil zařízení HoloLens 2 ke svému pracovnímu tenantovi.
+Předpoklady: Uživatel už připojil zařízení HoloLens 2 ke svému pracovnímu tenantovi.
 
 1. Otevřete nabídku Start a spusťte prohlížeč Edge.
 
     ![Nabídka Start](images/office-pwa-1.jpg)
 
-1. v HoloLens přejděte na [https://onedrive.live.com/about/signin](https://onedrive.live.com/about/signin) a zadejte své přihlašovací údaje k pracovnímu účtu.
+1. Na své HoloLens na a [https://onedrive.live.com/about/signin](https://onedrive.live.com/about/signin) zadejte přihlašovací údaje k pracovnímu účtu.
 
-    ![Pracovní přihlášení](images/office-pwa-2.jpg)
+    ![Přihlášení do práce](images/office-pwa-2.jpg)
 
-1. po úspěšném přihlášení k OneDrive webový portál počkejte na 30 až 60 sekund, než se tlačítko pro stažení PWA pro stažení zobrazí.
+1. Po úspěšném přihlášení k webovému OneDrive portálu počkejte 30 až 60 sekund, než se PWA tlačítko pro stažení.
 
-    ![PWA – tlačítko nainstalovat](images/office-pwa-3.jpg)
+    ![PWA tlačítko Nainstalovat](images/office-pwa-3.jpg)
 
-1. vyberte PWA tlačítko stáhnout a nainstalujte aplikaci.
+1. Vyberte tlačítko PWA stáhnout a nainstalujte aplikaci.
 
     ![Výzva k instalaci](images/office-pwa-4.jpg)
 
-1. zavřete prohlížeč Edge a z nabídka Start vyberte tlačítko **všechny aplikace** a spusťte aplikaci OneDrive PWA s označením **Microsoft OneDrive**
+1. Zavřete prohlížeč Edge a v nabídka Start vyberte tlačítko Všechny **aplikace** a spusťte aplikaci OneDrive PWA označenou **Microsoft OneDrive**
 
-    ![Všechny aplikace, které zobrazují obě aplikace](images/office-pwa-5.jpg)
+    ![Všechny aplikace obě aplikace.](images/office-pwa-5.jpg)
 
-> [!NOTE]
-> "Microsoft OneDrive" je PWA aplikace, kde "OneDrive" je starší UWP.
+    > [!NOTE]
+    > "Microsoft OneDrive" je PWA, kde jako "OneDrive" je starší UPW.
 
-1. pak budete moci zobrazit soubory OneDrive.
+1. Pak budete moci zobrazit své OneDrive soubory.
 
     ![OneDrive PWA](images/office-pwa-6.jpg)
 
-viz také: [povolení automatického nahrávání OneDrive pro firmy](hololens-release-notes.md#onedrive-for-work-or-school-camera-roll-upload) .
+Viz také: [Povolení automatického nahrávání do OneDrive pro firmy](hololens-release-notes.md#onedrive-for-work-or-school-camera-roll-upload)
 
-## <a name="update-apps"></a>Aktualizovat aplikace
+## <a name="update-apps"></a>Aktualizace aplikací
 
-pokud chcete aktualizovat aplikaci, kterou jste nainstalovali z Microsoft Store, můžete aplikaci aktualizovat z aplikace Microsoft Store. pro aplikace nainstalované pro Microsoft Store pro firmy můžete tyto aplikace aktualizovat taky z Microsoft Store pro firmy.
+### <a name="manual-updates"></a>Ruční aktualizace
 
-1. chcete-li otevřít [nabídku **start**](holographic-home.md), proveďte v HoloLens gesto [začátku](/hololens/hololens2-basic-usage#start-gesture) nebo [bloom](hololens1-basic-usage.md) (1. generace).
+Pokud chcete aktualizovat aplikaci, kterou jste nainstalovali z Microsoft Store, můžete ji aktualizovat z Microsoft Store aplikace. U aplikací nainstalovaných pro Microsoft Store pro firmy můžete tyto aplikace také aktualizovat z Microsoft Store pro firmy.
 
-1. Vyberte aplikaci ze Storu.
+1. Pokud chcete otevřít [ **nabídku Start,**](holographic-home.md)proveďte [gesto Start nebo](/hololens/hololens2-basic-usage#start-gesture) [bloom](hololens1-basic-usage.md) na HoloLens (1. generace).
 
-1. Podívejte se do pravé horní části aplikace pro Store.
+1. Vyberte aplikaci pro Store.
 
-1. Vyberte tlačítko **"..."** nebo "Zobrazit další".
+1. Podívejte se do pravého horního rohu aplikace Store.
 
-   > [!div class="mx-imgBorder"]
-   > ![snímek obrazovky aplikace Microsoft Store](images/store-update-1.png)
-
-1. Vyberte **soubory ke stažení a aktualizace**.
-    1. Pokud zařízení obsahuje dříve identifikované aktualizace, může se jednat o šipku dolů a číslo, které představuje nedokončené aktualizace.
-
-1. Vyberte **získat aktualizace**. Vaše zařízení teď bude vyhledávat aktualizace a nastavit je ke stažení a instalaci.
+1. Vyberte **tlačítko "..."** nebo "Zobrazit další".
 
    > [!div class="mx-imgBorder"]
-   > ![snímek obrazovky aplikace Microsoft Store pro získávání aktualizací...](images/store-update-2.png.jpg)
+   > ![Microsoft Store snímku obrazovky aplikace](images/store-update-1.png)
+
+1. Vyberte **Položky ke stažení a aktualizace.**
+    1. Pokud zařízení dříve identifikovalo aktualizace, může se zobrazit šipka dolů a číslo, které představuje čekající aktualizace.
+
+1. Vyberte **Získat aktualizace.** Zařízení teď bude hledat aktualizace a nastavovat je tak, aby se stáhly a instalují.
+
+   > [!div class="mx-imgBorder"]
+   > ![Microsoft Store snímku obrazovky aplikace se získáním aktualizací.](images/store-update-2.png.jpg)
 
 > [!NOTE]
-> Pokud byly aplikace v zařízení distribuovány vaší organizací, je možné je aktualizovat prostřednictvím stejné metody správy komerčních aplikací. Pokud se to týká vaší situace, přečtěte si další [informace prostřednictvím našeho přehledu nasazení komerční aplikace.](app-deploy-overview.md)
+> Pokud vaše organizace distribuuje aplikace na vašem zařízení, můžete je aktualizovat stejnými komerčními metodami správy aplikací. Pokud se to týká vaší situace, přečtěte si další informace v [přehledu nasazení komerčních aplikací.](app-deploy-overview.md)
 >
-> Pokud chcete aktualizovat vlastní aplikaci, která byla zkušebně načtené nebo nasazená, budete muset použít stejnou metodu s aktualizovanou verzí vaší aplikace. Pokud chcete získat další informace o instalaci a spouštění vlastních aplikací, přečtěte si [vlastní holografické aplikace](holographic-custom-apps.md).
+> Pokud chcete aktualizovat vlastní aplikaci, která se nasadila bokem nebo bokem, budete muset použít stejnou metodu s aktualizovanou verzí aplikace. Další informace o instalaci a spouštění vlastních aplikací najdete v tématu [o vlastních holografických aplikacích.](holographic-custom-apps.md)
+
+### <a name="automatic-app-updates"></a>Automatické aktualizace aplikací
+
+Automatické aktualizace se Microsoft Store nebo Microsoft Store pro firmy aplikací a instalují se automaticky jenom v případě, že byly nainstalovány přímo ze Storu. Pokud je aplikace nainstalovaná z Intune, může IT posunout aktualizace z MDM tak, že synchronizuje s Microsoft Store pro firmy nejnovější dostupnou verzi aplikace.
+
+> [!NOTE]
+> U aplikací, které jsou Microsoft Store pro firmy, musíte být přihlášeni do Storu a ověřovat pomocí stejného tenanta, který je přidružený Microsoft Store pro firmy katalogu použitému na zařízení.
+
+#### <a name="how-automatic-updates-work"></a>Jak fungují automatické aktualizace
+
+Automatické aktualizace aplikací se plánují každý den (přibližně každých 24 hodin) v závislosti na dostupnosti sítě. Pokud chcete dostávat aktualizace, nechte zařízení aktivní nebo zapojené do střídavého napětí. I když se aktualizace aplikace stahují během aktivního denního využití, použijí se jenom v případě, že se aplikace, která se má aktualizovat, už se nebude používat.
+
+> [!TIP]
+> Pokud je to možné, účtuje zařízení přes noc, když je připojené k podnikové síti. Pokud je možné aktualizace stáhnout a nainstalovat přes noc, je méně pravděpodobné, že přeruší aktivní používání zařízení.
+
+#### <a name="how-it-administrators-can-control-automatic-updates"></a>Jak můžou správci IT řídit automatické aktualizace
+
+Správci IT můžou řídit automatické aktualizace aplikací prostřednictvím [zásad ApplicationManagement/AllowAppStoreAutoUpdate.](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate) Tato zásada jim umožňuje povolit nebo zakázat automatické aktualizace aplikací úplně, ale nesnížuje, kdy k aktualizacím dojde.
+
+Od [verze 21H2](hololens-release-notes.md#windows-holographic-version-21h1)můžou správci IT také pomocí zásad [ScheduleForceRestartForUpdateFailures](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures) řídit, kdy se aplikace, které se používají, ale v předchozích pokusech se neaktualizace nepomáhaly, měly vynucovat restartování.
 
 ## <a name="uninstall-apps"></a>Odinstalovat aplikace
 
-Existují tři způsoby, jak odinstalovat aplikace. aplikace můžete odinstalovat prostřednictvím Microsoft Store, nabídka Start nebo z Nastavení.
+Existují tři způsoby odinstalace aplikací. Aplikace můžete odinstalovat prostřednictvím Microsoft Store, nabídka Start nebo z Nastavení.
 
 > [!WARNING]
-> nemůžete odinstalovat systémovou aplikaci ani Microsoft Store sebe sama.
+> Systémovou aplikaci ani samotnou aplikaci Microsoft Store odinstalovat.
 
 > [!IMPORTANT]
-> pokud má HoloLens 2 více uživatelů, musíte být přihlášeni jako uživatel, který aplikaci nainstaloval, a odinstalovat ji.
+> Pokud váš HoloLens 2 obsahuje více uživatelů, musíte být přihlášeni jako uživatel, který aplikaci nainstaloval, abyste ji odinstaloval.
 
 ### <a name="uninstall-from-the-microsoft-store"></a>Odinstalace z Microsoft Store
 
