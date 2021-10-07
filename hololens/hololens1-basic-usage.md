@@ -2,24 +2,24 @@
 title: Získání HoloLens (1. generace)
 description: Začněme stručným průvodcem rozhraním HoloLens (1. generace), funkcemi pro sledování rukou a používáním holografických aplikací.
 ms.assetid: 064f7eb0-190e-4643-abeb-ed3b09312042
-ms.date: 9/16/2019
-ms.reviewer: jarrettr
-manager: jarrettr
+ms.date: 8/9/2021
+ms.reviewer: sean-kerawala
+manager: sean-kerawala
 keywords: hololens
 ms.prod: hololens
 ms.sitesec: library
-author: v-miegge
-ms.author: v-miegge
+author: qianw211
+ms.author: v-qianwen
 ms.topic: article
 ms.localizationpriority: medium
 appliesto:
 - HoloLens (1st gen)
-ms.openlocfilehash: 70ee881eb0c2ffaade173b31e5168371d042bbb2
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 3723a30499c0237f19d85b48109b40ca643c6bdb
+ms.sourcegitcommit: be1393d24a98381e37bd1f56183c1f381f87cbd4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126032380"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "129600742"
 ---
 # <a name="getting-around-hololens-1st-gen"></a>Získání HoloLens (1. generace)
 
@@ -35,7 +35,7 @@ Holografický rám umístí hologramy tam, kde jsou vaše oči nejcitlivější 
 
 ## <a name="use-hololens-with-your-hands"></a>Použití HoloLens s rukou
 
-Práce s HoloLens je velmi podobná používání vašeho inteligentního telefonu. Pomocí rukou můžete manipulovat s holografickými okny, nabídkami a tlačítky.  Místo toho, abyste ukázali, klikávali nebo klepnete, použijete svůj pohled, hlas a gesta k výběru aplikací a hologramů a k ovládání HoloLens. [](hololens-cortana.md)
+Práce s HoloLens je velmi podobná použití vašeho inteligentního telefonu. Pomocí rukou můžete manipulovat s holografickými okny, nabídkami a tlačítky.  Místo toho, abyste ukázali, klikávali nebo klepnete, použijete svůj pohled, hlas a gesta k výběru aplikací a hologramů a k ovládání HoloLens. [](hololens-cortana.md)
 
 Když tyto základní interakce znáte, bude HoloLens pohotová.
 
@@ -51,8 +51,8 @@ HoloLens senzory, které vidíte na obou stranách několik stop. Když použije
 
 Otevření nabídky **Start:**
 
-1. Držte ruce před mnou, aby byla v snímku gesta.
-1. Bloom: Sesuvte všechny vaše smyšly a otevřete si ruce.
+1. Drž ruce před mnou, aby byla v rámečku gest.
+1. Bloom: Svešte všechny vaše květiny dohromady a otevřete si ruce.
   ![Animace znázorňuje gesto bloomu](./images/hololens-bloom.gif)
 
 ### <a name="select-holograms-with-gaze-and-air-tap"></a>Výběr hologramů pohledem a klepnutím ve vzduchu
@@ -61,7 +61,7 @@ Pokud chcete vybrat aplikaci nebo jiný hologram, klepněte na něj ve vzduchu p
 
 1. Pohled na hologram, který chcete vybrat
 1. Nasměřte ukazováček směrem ke stropu.
-1. Klepnutí ve vzduchu: z dolní části prstu a pak ho rychle zvýšíte.
+1. Klepnutí ve vzduchu: snižte prst a rychle ho zvyšte.
    ![Animace gest klepnutí ve vzduchu](./images/hololens-air-tap.gif)
 
 ### <a name="select-a-hologram-by-using-your-voice"></a>Výběr hologramu pomocí hlasu
@@ -78,13 +78,13 @@ Nainstalované aplikace najdete v nabídka Start [](holographic-home.md) a v Hol
 
 Otevřete **nabídku Start** a vyberte aplikaci.
 
-Použití aplikací v HoloLens se trochu liší od aplikací na počítači: Některé aplikace používají 2D zobrazení a vypadají podobně jako jiné Windows aplikace. Jiné aplikace (imerzivní aplikace) používají 3D zobrazení a když je spustíte, stanou se jedinou aplikací, kterou vidíte.
+Používání aplikací v HoloLens se trochu liší od aplikací na počítači: Některé aplikace používají 2D zobrazení a vypadají podobně jako jiné Windows aplikace. Ostatní aplikace (imerzivní aplikace) používají 3D zobrazení a když je spustíte, stanou se jedinou aplikací, kterou vidíte.
 
 Když dáte okno aplikace nebo spouštěč aplikací, zůstane v umístění, dokud ho neodeberete. Tyto hologramy můžete kdykoli přesunout nebo změnit jejich velikost v domácnosti hybridní reality.
 
 ## <a name="move-resize-and-rotate-apps"></a>Přesunutí, změna velikosti a otočení aplikací
 
-Přesunutí a změna velikosti aplikací HoloLens funguje trochu jinak než na počítači. Místo přetažení aplikace použijete pohled společně s gestem [nebo](https://support.microsoft.com/help/12644/hololens-use-gestures) [klikem](hololens1-clicker.md). Můžete také obměna okna aplikace ve 3D prostoru.
+Přesunutí a změna velikosti aplikací HoloLens funguje trochu jinak než na počítači. Místo přetažení aplikace použijete pohled společně s gestem [nebo](https://support.microsoft.com/help/12644/hololens-use-gestures) [klikem](hololens1-clicker.md). Můžete také otočením okna aplikace ve 3D prostoru.
 
 > [!TIP]
 > Přeuspořádejte aplikace podle svého hlasu – upřete pohled na aplikaci a řekněte "Tvář mi", "Větší" nebo "Menší". Nebo vám Cortana přesunout aplikaci: řekněte "Cortana, přesuňte \* *název \* aplikace* sem".
@@ -94,7 +94,7 @@ Přesunutí a změna velikosti aplikací HoloLens funguje trochu jinak než na p
 Nahlédněte do aplikace (v záhlaví okna aplikace) a pak proveďte jednu z následujících akcí.
 
 - Klepněte a podržte a vyberte aplikaci. Umístěte aplikaci rukou a posunout ji prstem.
-- Vyberte **Upravit,** klepněte na aplikaci a podržte ji a přesuňte ji do pozice. Chytěte prstem, umístěte ho a pak vyberte **Hotovo.**
+- Vyberte **Upravit,** klepněte na a podržte aplikaci a přesuňte ji do pozice. Chytěte prstem, umístěte ho a pak vyberte **Hotovo.**
 - Vyberte **Upravit,** klikněte na kliknutí a podržte na něj a přesuňte ruce do pozice aplikace. Uvolněte kliknutí a pak vyberte **Hotovo.**
 
 > [!TIP]
@@ -106,7 +106,7 @@ Nahlédněte do aplikace a pak proveďte jednu z následujících akcí.
 
 - Pohled do rohu nebo okraje okna aplikace a klepnutí a podržení Posunout ruce, abyste změnili velikost aplikace, a až budete hotovi, hněte prstem.
 - Vyberte **Upravit.** Pohledem na jeden z modrých čtverců v rozích aplikace klepněte a podržte ji a pak posouněte rukou, abyste aplikaci přizpůsobíte změně velikosti. Uvolněte ho prstem a pak vyberte **Hotovo.**
-- Vyberte **Upravit.** Pohledem na jeden z modrých čtverců v rozích aplikace klikněte a podržte kliknutí a pak přesuňte svou rukou a změňte velikost aplikace. Uvolněte kliknutí a pak vyberte **Hotovo.**
+- Vyberte **Upravit.** Pohled do jednoho z modrých čtverců v rozích aplikace, kliknutí a podržení kliknutí a přesunutím ruky změňte velikost aplikace. Uvolněte kliknutí a pak vyberte **Hotovo.**
 
 > [!TIP]
 > V režimu Upravit můžete přesunout nebo změnit velikost libovolného hologramu.
@@ -118,6 +118,35 @@ Pohledem na aplikaci ji vyberte klepnutím a podržením oběma rukou. Obměnou 
 ### <a name="scroll-content-in-an-app-window"></a>Posouvání obsahu v okně aplikace
 
 Prohlédněte si obsah okna aplikace. Klepnutím a podržením posouváním rukou mírně nahoru nebo dolů.
+
+## <a name="share-your-hololens-with-multiple-people"></a>Sdílení vašich HoloLens s více lidmi
+
+Je běžné sdílet jeden HoloLens s mnoha lidmi nebo mít mnoho lidí, kteří sdílejí sadu zařízení HoloLens zařízení.  
+
+### <a name="share-with-multiple-people-each-using-their-own-account"></a>Sdílení s více lidmi, z nichž každá používá svůj vlastní účet
+
+**Požadavek:** HoloLens (1. generace) musí být [upgradován na Windows Holographic for Business](hololens-upgrade-enterprise.md).
+
+Když používají vlastní účty Azure Active Directory (Azure AD), může si několik uživatelů na zařízení zachovat vlastní uživatelská nastavení a uživatelská data.
+
+Pokud chcete mít jistotu, že více lidí může ve vašem účtu používat HoloLens, postupujte takto:
+
+1. Při nastavení zařízení vyberte Můj pracovní nebo **školní** účet vlastní a přihlaste se pomocí účtu Azure AD.
+1. Po dokončení nastavení se ujistěte, že nastavení účtu (**Nastavení**  >  **Účty**) zahrnují **ostatní uživatele**.
+
+Pokud chcete HoloLens, musí každý uživatel postupovat takto:
+
+1. Pokud zařízení používá jiný uživatel, jednou stiskněte tlačítko napájení a přejděte do pohotovostního režimu. Pak se znovu stiskněte tlačítko napájení a vraťte se na zamykací obrazovku.
+
+1. Pomocí přihlašovacích údajů účtu Azure AD se přihlaste k zařízení. Pokud zařízení používáte poprvé, budete muset rozhraní HoloLens na [](hololens-calibration.md) vlastní oči.
+
+Pokud chcete zobrazit seznam uživatelů zařízení nebo uživatele ze zařízení odebrat, přejděte na stránku **Nastavení**  >    >  **Účty Ostatní uživatelé.**
+
+### <a name="share-with-multiple-people-all-using-the-same-account"></a>Sdílení s více lidmi pomocí stejného účtu
+
+Několik uživatelů může také sdílet HoloLens zařízení při použití jednoho uživatelského účtu.
+
+Uživatelé, kteří sdílejí stejný účet, budou muset znovu HoloLens v **Nastavení**.  Přečtěte si další informace o [systému](hololens-calibration.md).
 
 ## <a name="meet-the-hololens-1st-gen-clicker"></a>Splnění HoloLens (1. generace) Clicker
 
@@ -139,5 +168,5 @@ Pokud nevidíte hologramy, které jste umístili při používání HoloLens, vy
 
 - Mějte na paměti, že se díváte do pravé &mdash; oblasti. Hologramy zůstanou tam, kde jste je opustili.
 - Ujistěte se, že jste v dobře rozsvícené místnosti, aniž byste řeholili přímo.
-- Počkej. když HoloLens má při rozpoznávání prostoru problémy, může trvat až minutu, než se znovu zobrazí.
-- pokud se problém opakuje, možná budete chtít vymazat data Hologramy úložiště v **Nastavení**  >  **systému**  >  **Hologramy** a pak vyzkoušet hologramy na domácí realitě.
+- Počkej. Pokud HoloLens potíže s rozpoznáváním vašeho prostoru, může opětovné rozpoznání dříve umístěných hologramů trvat až minutu.
+- Pokud problém přetrvává, můžete chtít vymazat data úložiště Hologramy v **Nastavení** System Hologramy a potom znovu umístit  >    >  hologramy do domova hybridní reality.
