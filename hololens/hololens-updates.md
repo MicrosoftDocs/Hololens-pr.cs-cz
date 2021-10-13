@@ -8,7 +8,7 @@ ms.author: v-tea
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: high
-ms.date: 10/13/2020
+ms.date: 10/12/2021
 ms.reviewer: jarrettr
 manager: jarrettr
 appliesto:
@@ -19,12 +19,12 @@ ms.custom:
 - CI 115825
 - CI 111456
 - CSSTroubleshooting
-ms.openlocfilehash: 3afe3d2aecd64c2b4724f4805571cb3c46112875
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 854e867238de6c87732970fba75abdc8e1fb2c64
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126035983"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924336"
 ---
 # <a name="manage-hololens-updates"></a>správa aktualizací HoloLens
 
@@ -102,6 +102,24 @@ pomocí následujících zásad aktualizace můžete nakonfigurovat zařízení 
 - [Aktualizovat/RequireUpdateApproval](/windows/client-management/mdm/policy-csp-update#update-requireupdateapproval)
 - [Aktualizovat/UpdateServiceUrl](/windows/client-management/mdm/policy-csp-update#update-updateserviceurl)
 
+#### <a name="improved-update-restart-detection-and-notifications"></a>Vylepšené zjišťování a oznámení o aktualizacích
+
+- zavedeno v [Windows holografické verzi 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+mezi aktivními hodinami a zásadami času instalace je možné zabránit restartování HoloLens zařízení, když se používají. Nicméně by také zpozdil přijetí aktualizací, pokud k restartování nedojde k dokončení instalace požadované aktualizace. Nyní jsme přidali zásady, které jim umožní vymáhat termíny a požadovaná restartování a zajistit, aby byla instalace aktualizace dokončena včas. Uživatelé můžou být upozorňováni před zahájením restartování a můžou zpozdit restart v souladu se zásadami IT.
+
+Byly přidány následující zásady aktualizace:
+
+- [Aktualizovat/AutoRestartNotificationSchedule](/windows/client-management/mdm/policy-csp-update#update-autorestartnotificationschedule)
+- [Aktualizovat/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+- [Aktualizovat/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)
+- [Aktualizovat/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+- [Aktualizovat/ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+- [Aktualizovat/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+- [Aktualizovat/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)
+- [Aktualizovat/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)
+- [Aktualizovat/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+
 ### <a name="plan-and-configure-update-rollouts-for-hololens-2"></a>plánování a konfigurace uvádění aktualizace pro HoloLens 2
 
 HoloLens 2 podporuje více funkcí automatizace aktualizací než HoloLens (1. generace). to platí hlavně v případě, že používáte Microsoft Intune ke správě zásad web Windows Update pro firmy. Tyto funkce usnadňují plánování a implementaci uvádění aktualizací napříč vaší organizací.
@@ -116,19 +134,19 @@ Představte si třeba organizaci, která má 1 000 zařízení, a musí aktualiz
 | ---| :---: | :---: |
 |GRP 1 (zaměstnanci oddělení IT) |5 |0 |
 |GRP 2 (rané státy) |50 |60 |
-|GRP 3 (hlavní 1) |250 |120 |
-|GRP 4 (hlavní 2) |300 |150 |
-|GRP 5 (hlavní 3) |395 |180 |
+|Grp 3 (hlavní 1) |250 |120 |
+|Grp 4 (hlavní 2) |300 |150 |
+|Grp 5 (hlavní 3) |395 |180 |
 
-Tady je postup, jak postupovat v průběhu času na celou organizaci.
+Tady je postup, jak se bude v průběhu času zavánět do celé organizace.
 
-![Časová osa pro nasazování aktualizací](./images/hololens-updates-timeline.png)
+![Časová osa pro nasazení aktualizací](./images/hololens-updates-timeline.png)
 
 #### <a name="configure-an-update-deferral-policy"></a>Konfigurace zásad odložení aktualizací
 
-Zásada odložení určuje počet dní mezi datem, kdy bude aktualizace k dispozici a datum, kdy je aktualizace nabízena pro zařízení.
+Zásada odložení určuje počet dní mezi datem, kdy se aktualizace stane dostupnou, a datem, kdy se aktualizace zařízení nabízí.
 
-Pro aktualizace funkcí a aktualizace kvality můžete nakonfigurovat různé odložení. Následující tabulka uvádí konkrétní zásady, které se mají použít pro každý typ, a maximální odložení pro každý typ.
+Můžete nakonfigurovat různé odložení aktualizací funkcí a aktualizací kvality. Následující tabulka uvádí konkrétní zásady, které se mají použít pro každý typ, a maximální odložení pro každý typ.
 
 |Kategorie |Zásady |Maximální odložení |
 | --- | --- | --- |
@@ -137,7 +155,7 @@ Pro aktualizace funkcí a aktualizace kvality můžete nakonfigurovat různé od
 
 #### <a name="pause-updates-via-device"></a>Pozastavení aktualizací přes zařízení
 
-Pokud uživatel nemá přístup k MDM, může na zařízení se HoloLens 2 na buildu Windows [Holographic, verze 2004](hololens-release-notes.md#windows-holographic-version-2004) nebo novější, pozastavit aktualizace po dobu až 35 dnů ručně. Uživatelé se k tomuto nastavení dostanou tak, že přechádnou Nastavení > Update &  Security > Upřesnit možnosti. Posuňte se dolů na Pozastavit aktualizace **a** vyberte datum, do kterého aktualizace pozastaví. Jakmile uživatel dosáhne limitu pozastavení, bude muset zařízení získat nové aktualizace, než se bude moci znovu pozastavit. 
+Pokud uživatel nemá přístup k MDM, může aktualizace na zařízení HoloLens 2 na buildu Windows [Holographic verze 2004](hololens-release-notes.md#windows-holographic-version-2004) nebo novější pozastavit na dobu až 35 dnů ručně. Uživatelé se k tomuto nastavení dostanou tak, že přechádnou Nastavení > Update &  Security > Upřesnit možnosti. Posuňte se dolů na Pozastavit aktualizace **a** vyberte datum, do kterého aktualizace pozastaví. Jakmile uživatel dosáhne limitu pozastavení, bude muset zařízení získat nové aktualizace, než se bude moci znovu pozastavit. 
 
 Počínaje [Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2)se tato funkce pozastavení aktualizací může spravovat pro HoloLens 2 zařízení. 
 - [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess).
@@ -148,14 +166,14 @@ Počínaje [Windows Holographic verze 20H2](hololens-release-notes.md#windows-ho
 
 Pomocí následujících funkcí správy aktualizací Intune můžete spravovat aktualizace pro HoloLens.
 
-- **Vytvořit** a **přiřadit:** Tyto funkce Windows 10 aktualizační okruh do seznamu aktualizačních kanálů. Další informace najdete v tématu [Vytvoření a přiřazení aktualizačních okruhů.](/mem/intune/protect/windows-update-for-business-configure#create-and-assign-update-rings)
+- **Create** and **Assign**(Vytvořit a přiřadit): Tyto funkce Windows 10 aktualizační okruh do seznamu aktualizačních kanálů. Další informace najdete v tématu [Vytvoření a přiřazení aktualizačních okruhů.](/mem/intune/protect/windows-update-for-business-configure#create-and-assign-update-rings)
 
 - **Pozastavit:** Pokud při nasazování funkce nebo aktualizace kvality narazíte na problém, můžete aktualizaci pozastavit na 35 dnů (od zadaného data). Toto pozastavení zabrání ostatním zařízením v instalaci aktualizace, dokud problém nevyřešíte nebo nezmírníte. Pokud aktualizaci funkcí pozastavíte, budou se zařízením pořád nabízeny aktualizace kvality, aby se zajistilo jejich zabezpečení. Když je typ aktualizace pozastavený, v podokně Přehled pro tento okruh se zobrazí, kolik dní zůstává před obnovením tohoto typu aktualizace. Po uplynutí zadané doby pozastavení automaticky vyprší a proces aktualizace se obnoví.
 
   Zatímco je aktualizační okruh pozastavený, můžete vybrat jednu z následujících možností:
 
   - **Prodloužení:** Prodloužení doby pozastavení pro typ aktualizace o 35 dnů.
-  - **Obnovit:** Obnoví aktualizace pro tento okruh na aktivní operaci. Aktualizační okruh můžete v případě potřeby znovu pozastavit.
+  - **Obnovení:** Obnovte aktualizace pro tento okruh na aktivní operaci. Aktualizační okruh můžete v případě potřeby znovu pozastavit.
 
   > [!NOTE]  
   > Operace **odinstalace** aktualizačních okruhů není podporována pro HoloLens 2.
@@ -183,13 +201,13 @@ Několik upozornění na tuto nabídku verze Preview:
 - HoloLens verze Preview je omezená pouze na aktualizace operačního systému.
 - Windows Holographic for Business podporuje pouze režimy stahování HTTP a stahování z koncového [bodu microsoft Připojená mezipaměť](/mem/configmgr/core/plan-design/hierarchy/microsoft-connected-cache); Režimy stahování peer-to-peer a přiřazení skupin se v HoloLens zařízení nepodporují.
 - HoloLens nepodporuje optimalizaci nasazení nebo doručení pro Windows Server Update Services koncové body.
-- Řešení potíží bude vyžadovat buď diagnostiku na serveru Připojená mezipaměť, nebo shromažďování trasování v HoloLens na serveru HoloLens prostřednictvím řešení potíží se zabezpečením Windows Update & služby **Nastavení Windows**  >    >     >   **Update.**
+- Řešení potíží bude vyžadovat buď diagnostiku na serveru Připojená mezipaměť, nebo shromažďování trasování v HoloLens v HoloLens prostřednictvím Nastavení  >  **Update & Security**  >   **Troubleshooting** Windows  >   **Update.**
 
 ## <a name="manually-check-for-updates"></a>Ruční kontrola aktualizací
 
-Přestože HoloLens pravidelně kontroluje aktualizace systému, mohou se zobrazit okolnosti, za kterých budete chtít provést ruční kontrolu.
+Přestože HoloLens pravidelně kontroluje aktualizace systému, mohou být okolnosti, za kterých budete chtít provést ruční kontrolu.
 
-Pokud chcete aktualizace vyhledat ručně, přejděte na **Nastavení**  >  **Update & Security** Check for  >  **updates**. Pokud Nastavení aplikace indikuje, že je vaše zařízení aktuální, máte všechny aktualizace, které jsou aktuálně k dispozici.
+Pokud chcete aktualizace vyhledat ručně, přejděte na **Nastavení**  >  **Update & Security** Check for  >  **updates**. Pokud Nastavení aplikace indikuje, že je zařízení aktuální, máte k dispozici všechny aktuálně dostupné aktualizace.
 
 ## <a name="manually-roll-back-an-update"></a>Ruční vrácení aktualizace zpět
 
@@ -207,10 +225,10 @@ Pokud se chcete vrátit k předchozí verzi HoloLens 2, postupujte takto:
 1. Ujistěte se, že nemáte žádné telefony ani Windows zařízení připojená k počítači.
 1. Na svém počítači si z [konzoly](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) stáhněte doplněk Advanced Recovery Companion Microsoft Store.
 1. Stáhněte [si nejnovější verzi HoloLens 2.](https://aka.ms/hololens2download)
-1. Po dokončení těchto stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a pak výběrem možnosti Extrahovat vše rozbalte  >     >   soubor.
+1. Po dokončení těchto stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a pak rozbalte soubor výběrem možnosti Extrahovat  >     >   vše.
 1. Pomocí kabelu USB-A na USB-C připojte HoloLens zařízení k počítači. Tento typ kabelu funguje nejlépe i v případě, že HoloLens kabely pro připojení kabely.
 1. Advanced Recovery Companion automaticky rozpozná vaše HoloLens obnovení. Vyberte **dlaždici Microsoft HoloLens.**
-1. Na další obrazovce vyberte **Ruční výběr balíčku a** pak otevřete složku, kterou jste předtím rozbalí.
+1. Na další obrazovce vyberte **Ruční výběr balíčku** a pak otevřete složku, kterou jste předtím rozbalí.
 1. Vyberte instalační soubor (.ffu).
 1. Vyberte **Nainstalovat software** a pak postupujte podle pokynů.
 
@@ -225,21 +243,21 @@ Pokud se chcete vrátit k předchozí verzi HoloLens (1. generace), postupujte t
 
 1. Ujistěte se, že nemáte žádné telefony ani Windows zařízení připojená k počítači.
 1. Na svém počítači si stáhněte [Windows Device Recovery Tool (WDRT).](https://support.microsoft.com/help/12379)
-1. Stáhněte [si balíček HoloLens Anniversary Update recovery.](https://aka.ms/hololensrecovery)
-1. Po dokončení stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a pak rozbalte soubor výběrem možnosti Extrahovat  >     >   vše.
-1. Pomocí kabelu s mikro USB, který jste dodáli společně s HoloLens zařízení, připojte HoloLens zařízení k počítači. I v případě, že jste ke svému zařízení HoloLens kabely, funguje to nejlépe.
-1. WDRT automaticky rozpozná vaše HoloLens zařízení. Vyberte **dlaždici Microsoft HoloLens.**
-1. Na další obrazovce vyberte **Ruční výběr balíčku a** pak otevřete složku, kterou jste předtím rozbalí.
-1. Vyberte instalační soubor (.ffu).
-1. Vyberte **Nainstalovat software** a pak postupujte podle pokynů.
+1. Stáhněte [si balíček HoloLens Anniversary Update pro obnovení.](https://aka.ms/hololensrecovery)
+1. Po dokončení stahování otevřete Průzkumníka souborů Stažené soubory, klikněte pravým tlačítkem na komprimovanou složku (.zip), kterou jste právě stáhli, a potom rozbalte soubor výběrem možnosti Extrahovat  >     >   vše.
+1. Pomocí kabelu mikro USB, který jste dodáli společně s vaším HoloLens, připojte HoloLens zařízení k počítači. I v případě, že ke svému zařízení HoloLens používáte jiné kabely, funguje to nejlépe.
+1. WDRT automaticky detekuje vaše zařízení HoloLens. vyberte dlaždici **Microsoft HoloLens** .
+1. Na další obrazovce vyberte možnost **Ruční výběr balíčku** a pak otevřete složku, kterou jste dříve rozbalili.
+1. Vyberte soubor instalace (. FFU).
+1. Vyberte **instalovat software** a pak postupujte podle pokynů.
 
-**Pokud WDRT nezjistí vaše zařízení**
+**Pokud WDRT nerozpozná vaše zařízení**
 
-Pokud nástroj WDRT nezjistí vaše HoloLens, zkuste počítač restartovat. Pokud to nefunguje, vyberte **Moje zařízení** se nezjme, vyberte **Microsoft HoloLens** a pak postupujte podle pokynů.
+pokud WDRT zařízení neHoloLens rozpozná, zkuste restartovat počítač. pokud to nepomůže, vyberte **moje zařízení se nezjistilo**, vyberte **Microsoft HoloLens** a pak postupujte podle pokynů.
 
 ## <a name="related-articles"></a>Související články
 
-- [HoloLens verze 2](hololens-release-notes.md)
-- [Co je Windows Update pro firmy?](/windows/deployment/update/waas-manage-updates-wufb)
-- [Přiřazení zařízení k servisním kanálům pro Windows 10 aktualizace](/windows/deployment/update/waas-servicing-channels-windows-10-updates)
+- [poznámky k verzi HoloLens 2](hololens-release-notes.md)
+- [co je web Windows Update pro firmy?](/windows/deployment/update/waas-manage-updates-wufb)
+- [přiřazení zařízení pro údržbu kanálů pro Windows 10 aktualizace](/windows/deployment/update/waas-servicing-channels-windows-10-updates)
 - [Správa softwarových aktualizací Windows 10 v Intune](/mem/intune/protect/windows-update-for-business-configure)

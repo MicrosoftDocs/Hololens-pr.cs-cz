@@ -3,7 +3,7 @@ title: shromažďování a používání diagnostických informací z HoloLens z
 description: naučte se shromažďovat, používat a uchovávat diagnostické informace z HoloLensch zařízení.
 author: Teresa-Motiv
 ms.author: v-tea
-ms.date: 10/15/2020
+ms.date: 9/12/2021
 ms.prod: hololens
 ms.mktglfcycl: manage
 ms.sitesec: library
@@ -18,12 +18,12 @@ manager: jarrettr
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: e977d0d42831760749bb5c6c469d2482e2ca72e7
-ms.sourcegitcommit: 20ea1ed37772655504ccb11a7e185ed19d85f336
+ms.openlocfilehash: 4f62a70430d78087157b3adcdf76af53183db708
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2021
-ms.locfileid: "127833518"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924401"
 ---
 # <a name="collect-and-use-diagnostic-information-from-hololens-devices"></a>shromažďování a používání diagnostických informací z HoloLens zařízení
 
@@ -113,7 +113,7 @@ Diagnostické informace zůstanou v těchto umístěních, dokud je uživatel ne
 
 ### <a name="view-diagnostic-report"></a>Zobrazení diagnostické sestavy
 
-Pokud chcete zobrazit diagnostiku MDM na počítači HoloLens 2, vyberte ikonu WiFi, přejděte na **Nastavení**  ->  **Accounts**  >  **Access (Přístup** k účtům MDM) do práce nebo do školy a vyberte **Export protokolů pro správu.** HoloLens odešle soubory protokolu do vašeho účtu a zobrazí jejich umístění na vašem stolním počítači.
+Pokud chcete zobrazit diagnostiku MDM na počítači HoloLens 2, vyberte ikonu WiFi, přejděte na Nastavení Accounts Access (Přístup k účtům **MDM)** do práce nebo do školy a vyberte  ->    >   Export protokolů **pro správu.** HoloLens odešle soubory protokolu do vašeho účtu a zobrazí jejich umístění na stolním počítači.
 
 ## <a name="diagnosticlog-csp"></a>DiagnosticLog CSP
 
@@ -148,11 +148,11 @@ Funguje to, když se zařízení zobrazí v Průzkumník souborů po jeho připo
 > Generování a správa offline diagnostiky se řídí různě v závislosti na verzi operačního systému. Dříve byla řízena nastavením telemetrie, ale teď je přímo řízená prostřednictvím zásad MDM. Pokud je tato možnost zakázaná nastavením nebo zásadou MDM, není možné pomocí tohoto mechanismu shromažďovat diagnostické protokoly.
 
 Chování před [Windows Holographic verze 20H2:](hololens-release-notes.md#windows-holographic-version-20h2)
- - Offline diagnostika je povolená jenom v případě, že uživatel prochází prostředím prvního spuštění počítače nebo je hodnota zásad [System\AllowTelemetry](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry) nastavená na Úplná (základní hodnota je výchozí hodnota v HoloLens). 
-- Pokud chcete zakázat offline diagnostiku, přejděte na **stránku Nastavení App > Privacy** a v části **Diagnostická data vyberte Základní.**  Na sestaveních, kde offline diagnostika závisí na nastavení telemetrie, má vliv pouze na to, jestli se shromažďují nějaké protokoly. Nemá vliv na to, jaké soubory se shromažďují.
+ - Offline diagnostika je povolená jenom v případě, že uživatel prochází prostředím prvního spuštění počítače nebo je hodnota zásad [System\AllowTelemetry](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry) nastavená na hodnotu Úplná (základní hodnota je na HoloLens). 
+- Pokud chcete zakázat offline diagnostiku, přejděte na **Nastavení App > Privacy** a v části **Diagnostická data vyberte Základní.**  Na sestaveních, kde offline diagnostika závisí na nastavení telemetrie, má vliv pouze na to, jestli se shromažďují nějaké protokoly. Nemá vliv na to, jaké soubory se shromažďují.
 - Pokud je zařízení uzamčené, protokoly se nezobrazí.
 
-Na buildech [Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) a novější:
+V [buildech Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) a novější:
 - Když je povolená záložní diagnostika, bude řízena konkrétní zásadou MDM s odpovídajícím nastavením [MixedReality/FallbackDiagnostics.](/windows/client-management/mdm/policy-csp-mixedreality#mixedreality-fallbackdiagnostics)
 - Pokud je zařízení uzamčené, protokoly se nezobrazí.
 
@@ -166,7 +166,7 @@ Diagnostiku shromáždíte podle těchto kroků:
 
 2.  V Průzkumník souborů počítači přejděte na Tento **počítač \<hololens-device> \Interní Storage.**
 
-3.  Pokud **se Storage** interního úložiště, zařízení čeká na přihlášení uživatele. Buď se přihlaste, nebo zacyklte napájení zařízení tak, že podržíte tlačítko POWER po dobu 10 sekund.
+3.  Pokud **se Storage** interního úložiště, zařízení čeká, až se uživatel přihlásí. Buď se přihlaste, nebo zacyklte napájení zařízení tak, že podržíte tlačítko POWER po dobu 10 sekund.
 
 4.  Stiskněte a okamžitě uvolněte **tlačítka Power + Volume Down** společně.
 
@@ -176,5 +176,38 @@ Diagnostiku shromáždíte podle těchto kroků:
 
 7.  Zkopírujte diagnostické soubory ZIP a sdílejte je s týmem podpory Microsoftu.
 
-    > [!NOTE]
-    > Některé z diagnostických souborů ZIP mohou obsahovat PII.
+> [!NOTE]
+> Některé z diagnostických souborů ZIP mohou obsahovat PII.
+
+### <a name="offline-diagnostics-notifications"></a>Offline diagnostická oznámení
+
+- Zavedená v [Windows Holographic verze 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+Tato aktualizace pro existující funkci s názvem [Offline diagnostika](hololens-diagnostic-logs.md#offline-diagnostics). Dříve se uživatelům nespouštěl jasný indikátor, že aktivoval shromažďování diagnostických dat nebo že se dokončilo.
+V buildech Windows Insider jsou teď k dispozici dvě formy zpětné vazby k offline diagnostice. Prvními jsou informační zprávy, které se zobrazují při spuštění a dokončení shromažďování. Ty se zobrazí, když je uživatel přihlášený a má vizuály.
+
+![Informační zprávy pro shromažďování protokolů](./images/logcollection1.jpg)
+
+![Informační zpráva po dokončení shromažďování protokolů](./images/logcollection2.jpg)
+
+Vzhledem k tomu, že uživatelé často používají offline diagnostiku jako záložní mechanismus shromažďování protokolů, když nemají přístup k zobrazení, nelze se přihlásit nebo jsou stále v OOBE, bude se při shromažďování protokolů přehrávat také zvukové signály. Tento zvuk se přehraje spolu s informační zprávou.
+
+Tato nová funkce se povolí při aktualizaci zařízení a nemusí být povolená ani spravovaná. Offline diagnostika se bude generovat i v případě, že tuto novou zpětnou vazbu nelze zobrazit ani slyšet.
+
+Doufáme, že s tímto novějším přidáním zpětné vazby k zákazníkům je snazší shromáždit diagnostická data a rychleji vyřešit vaše problémy.
+
+### <a name="low-storage-log-collection-improvements"></a>Vylepšení shromažďování protokolů s nízkým úložištěm
+
+- Zavedená v [Windows Holographic verze 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+Ve scénářích, kdy se zdá, že zařízení má při shromážděných diagnostických protokolech nedostatek místa na disku, vytvoří se **StorageDiagnostics.zip** sestava s názvem . Prahovou hodnotu nízkého úložiště určuje automaticky Windows [úložiště.](https://support.microsoft.com/office/use-onedrive-and-storage-sense-in-windows-10-to-manage-disk-space-de5faa9a-6108-4be1-87a6-d90688d08a48)
+
+## <a name="view-advanced-diagnostic-report-in-settings-on-hololens"></a>Zobrazení rozšířené diagnostické sestavy v Nastavení na HoloLens
+
+- Zavedená v [Windows Holographic verze 21H2](hololens-release-notes.md#windows-holographic-version-21h2).
+
+Pro spravovaná zařízení při řešení potíží je důležitým krokem potvrzení, že se používá očekávaná konfigurace zásad. Dříve se tato nová funkce musela po exportu diagnostických protokolů MDM shromážděných přes přístup k účtům Nastavení do práce nebo do školy provést mimo zařízení přes MDM nebo blízko zařízení a vybrat Export protokolů správy a zobrazit se na okolním  ->    >  počítači. 
+
+Teď můžete diagnostiku MDM zobrazit na zařízení pomocí prohlížeče Edge. Pokud chcete sestavu diagnostiky MDM snadněji zobrazit, přejděte na stránku Přístup do práce nebo do školy a vyberte **Zobrazit pokročilou diagnostickou sestavu.** Tím se sestava vygeneruje a otevře v novém okně Edge.
+
+![Zobrazení rozšířené diagnostické sestavy v Nastavení aplikaci](./images/view-advanced-diagnostic-report.jpg)

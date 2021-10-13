@@ -1,54 +1,64 @@
 ---
 title: Běžná omezení zařízení
-description: udržujte si aktuální omezení a nastavení zařízení pro zařízení HoloLens mixed reality.
+description: Udržujte si aktuální informace o běžných omezeních a nastaveních zařízení pro HoloLens hybridní realitou.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
 ms.author: v-evmill
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 10/13/2020
-ms.reviewer: ''
+ms.date: 10/13/2021
+ms.reviewer: aboeger
 manager: yannisle
 appliesto:
 - HoloLens (1st gen)
 - HoloLens 2
-ms.openlocfilehash: 769cacc1803af9d9e9bf1079f8cd5671f194c3bc
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 12dd061565c88fed65d1152c224be9ebbc7185d4
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126032236"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924299"
 ---
-# <a name="common-device-restrictions"></a>Běžná omezení zařízení 
+# <a name="common-device-restrictions"></a>Běžná omezení zařízení
 
-tato příručka pomáhá odborníkům v oblasti IT pochopit nejčastěji používané možnosti správy, které jsou dostupné pro Windows 10 Holographic operační systém v podniku. Informace o tom, jak jsou tyto zásady povolené vaším dodavatelem MDM, najdete v dokumentaci k systému MDM. Ne všechny systémy MDM podporují všechna nastavení popsaná v této příručce. Některé podporují vlastní zásady prostřednictvím souborů XML OMA-URI. další informace najdete v tématu [podpora Microsoft Intune pro vlastní zásady](/mem/intune/configuration/custom-settings-windows-10). Konvence pojmenování se můžou taky měnit mezi dodavateli MDM.
+Tato příručka pomáhá IT specialistům pochopit nejčastěji používané možnosti správy dostupné pro Windows 10 Holographic operační systém v podniku. Informace o tom, jak tyto zásady povolil váš dodavatel MDM, najdete v dokumentaci k systému MDM. Ne všechny systémy MDM podporují všechna nastavení popsaná v tomto průvodci. Některé podporují vlastní zásady prostřednictvím souborů XML OMA-URI. Viz [Microsoft Intune podpory vlastních zásad.](/mem/intune/configuration/custom-settings-windows-10) Zásady vytváření názvů se také můžou u jednotlivých dodavatelů MDM lišit.
 
-## <a name="prevent-changing-of-settings"></a>Zabránit změně nastavení
-Zaměstnanci obvykle můžou měnit určitá nastavení osobních zařízení, která můžete chtít uzamknout v podnikových zařízeních. zaměstnanci můžou interaktivně upravovat určitá nastavení HoloLens prostřednictvím uživatelského rozhraní nastavení. Pomocí MDM můžete omezit, co můžou uživatelé měnit. následující seznam běžně používá nastavení MDM, které Windows 10 Holographic podporuje ke konfiguraci omezení nastavení:
--   [Povolení sítě VPN:](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn) Povolí uživateli změnit nastavení sítě VPN.
--   [Povolení ruční konfigurace Wi-Fi:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowmanualwificonfiguration) Umožňuje uživatelům vytvářet Wi-Fi připojení mimo zřízené sítě MDM.
--   [Povolení ručního zrušení registrace MDM](/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment) Jestli mají uživatelé povoleno odstranit pracovní účet (tj. zrušit registraci zařízení ze systému MDM)
+## <a name="prevent-changing-of-settings"></a>Zabránění změně nastavení
 
-přidáno do [Windows holografické verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) pro zařízení HoloLens 2:
-- [Povolení přidávání zřizovacího balíčku:](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage) Přepínač, pokud uživatelé mohou přidávat nové zřizovací balíčky a přepsat je novými hodnotami.
-- [Povolení odebrání zřizovacího balíčku:](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) Přepínač, pokud uživatelé mohou odebrat zřizovací balíčky, což jim umožní přepnout dříve zamčená nastavení.
+Zaměstnanci mají obvykle povoleno změnit určitá nastavení osobních zařízení, která můžete chtít uzamknout na firemních zařízeních. Zaměstnanci mohou interaktivně upravovat určitá nastavení HoloLens prostřednictvím uživatelského rozhraní nastavení. Pomocí MDM můžete omezit, co mohou uživatelé měnit.
+Následující seznam uvádí běžně používaná nastavení MDM, Windows 10 Holographic podporuje ke konfiguraci omezení nastavení:
 
-přečtěte si další podrobnosti o možnostech zásad v HoloLens podporovaných [zásadách csp](/windows/client-management/mdm/policy-csps-supported-by-hololens2) .
+- [Povolit síť VPN:](/windows/client-management/mdm/policy-csp-settings#settings-allowvpn) Umožňuje uživateli změnit nastavení sítě VPN.
+- [Povolit ruční konfiguraci WiFi:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowmanualwificonfiguration) Umožňuje uživatelům vytvářet Wi-Fi mimo zřízené sítě MDM.
+- [Povolit ruční zrušení registrace MDM](/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment) Jestli mají uživatelé povoleno odstranit pracovní účet (tj. zrušit registraci zařízení v systému MDM)
 
-## <a name="hardware-restrictions"></a>Omezení hardwaru
-Windows 10 Holographic zařízení využívají špičkovou technologii, která zahrnuje oblíbené funkce hardwaru, jako jsou kamery, mikrofony, reproduktory, rozhraní USB, Bluetooth rozhraní a Wi-Fi. K řízení dostupnosti těchto funkcí můžete použít hardwarová omezení.
-následující seznam obsahuje běžně používaná nastavení MDM, která Windows 10 Holographic podporuje ke konfiguraci omezení hardwaru:
+Přidáno [Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) pro HoloLens 2:
+
+- [Povolit přidání zřizovacího balíčku:](/windows/client-management/mdm/policy-csp-security#security-allowaddprovisioningpackage) Přepněte, pokud uživatelé mohou přidat nové zřizovací balíčky a přepsat je novými hodnotami.
+- [Povolit odebrání zřizovacího balíčku:](/windows/client-management/mdm/policy-csp-security#security-allowremoveprovisioningpackage) Přepněte, pokud uživatelé mohou odebrat zřizovací balíčky, což jim umožní přepínat dříve uzamčená nastavení.
+
+Přidání do [Windows Holographic verze 21H2:](hololens-release-notes.md#windows-holographic-version-21h2)
+
+- [Zásady RequirePrivateStoreOnly](http://windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly) umožňují aplikaci Microsoft Store nakonfigurovat tak, aby se pro vaši organizaci otevíraly jenom privátní obchody nakonfigurované. Omezí se tak přístup jenom na aplikace, které jste k dispozici.
+
+Další podrobnosti o možnostech zásad najdete v tématu HoloLens [csP zásad.](/windows/client-management/mdm/policy-csps-supported-by-hololens2)
+
+## <a name="hardware-restrictions"></a>Hardwarová omezení
+
+Windows 10 Holographic zařízení používají moderní technologii, která zahrnuje oblíbené hardwarové funkce, jako jsou fotoaparáty, mikrofony, mluvčí, rozhraní USB, Bluetooth rozhraní a Wi-Fi. K řízení dostupnosti těchto funkcí můžete použít hardwarová omezení.
+Následující seznam uvádí běžně používaná nastavení MDM, Windows 10 Holographic konfigurace hardwarových omezení podporuje:
 
 > [!NOTE]
-> Některá z těchto hardwarových omezení mají vliv na připojení a pomáhají v ochraně dat.
+> Některá z těchto hardwarových omezení ovlivňují připojení a pomáhají při ochraně dat.
 
--   [Povolení Wi-Fi:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowwifi) Určuje, jestli uživatelé můžou na svých zařízeních povolit a používat radiostanici Wi-Fi.
--   [Povolení připojení USB:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) Zda je povoleno připojení USB (neovlivňuje zpoplatnění přes rozhraní USB)
--   [Povolení Bluetooth:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth) zda uživatelé mohou na svých zařízeních povolit a použít přepínač Bluetooth.
--   [Omezit fotoaparát:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesscamera) určuje, jestli aplikace Windows mají přístup ke kameře.
--   [Omezit mikrofony:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccessmicrophone) určuje, jestli aplikace Windows mají přístup k mikrofonu.
+- [Povolit Wi-Fi:](/windows/client-management/mdm/policy-csp-wifi#wifi-allowwifi) Určuje, jestli uživatelé mohou na svých zařízeních povolit a používat přepínač Wi-Fi.
+- [Povolit připojení USB:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection) Jestli je povolené připojení USB (nemá vliv na usb flash disk)
+- [Povolit Bluetooth:](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth) Určuje, jestli uživatelé na svých zařízeních Bluetooth používat přepínač.
+- [Omezit kameru:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccesscamera) Určuje, jestli Windows budou mít aplikace přístup k fotoaparátu.
+- [Omezit mikrofony:](/windows/client-management/mdm/policy-csp-privacy#privacy-letappsaccessmicrophone) Určuje, jestli Windows aplikace mají přístup k mikrofonu.
 
-přidáno v [Windows holografické verze virtualizačního 20H2](hololens-release-notes.md#windows-holographic-version-20h2) pro zařízení HoloLens 2. 
-- [DisplayOffTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery) Nastavte dobu, po které se zobrazení vypne, a vypnutím displeje zamkne zařízení. 
-- [DisplayOffTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin) Nastavte dobu, po které se zobrazení vypne, a vypnutím displeje zamkne zařízení. 
+Přidáno [Windows Holographic verze 20H2](hololens-release-notes.md#windows-holographic-version-20h2) pro HoloLens 2:
+
+- [DisplayOffTimeoutOnBattery](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutonbattery) Nastavte dobu, po kterou se displej vypne, a vypnutím displeje zařízení uzamkne.
+- [DisplayOffTimeoutPluggedIn](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin) Nastavte dobu, po kterou se displej vypne, a vypnutím displeje zařízení uzamkne.

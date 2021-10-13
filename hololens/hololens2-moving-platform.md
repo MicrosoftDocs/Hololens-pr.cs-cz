@@ -5,7 +5,7 @@ keywords: moving platforms, dynamic motion, hololens, moving platform mode
 author: evmill
 ms.author: v-evmill
 ms.reviewer: yabahman
-ms.date: 8/10/2021
+ms.date: 10/12/2021
 ms.prod: hololens
 ms.topic: article
 ms.sitesec: library
@@ -14,19 +14,16 @@ audience: HoloLens
 manager: yannisle
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 81b3231827fce9a2ae2d5e3105800685fedb917b
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 7c636cd97e31c74d4976e71ec3f41ac5afe5bdcc
+ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126035934"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "129924432"
 ---
 # <a name="moving-platform-mode-on-low-dynamic-motion-moving-platforms"></a>Přesun režimu platformy na platformách s nízkým dynamickým pohybem
 
-V **buildu Insider 20348.1411** jsme přidali podporu beta verze pro sledování na platformách s pohyblivou nízkou dynamickou pohybu na HoloLens 2. Po instalaci buildu a povolení moving platformového režimu budete moct používat HoloLens 2 v dříve nepřístupných prostředích, jako jsou velké lodi a velké dechy. V současné době je tato funkce zaměřená pouze na povolení těchto konkrétních pohyblivých platforem. I když vám nic nebrání ve pokusu o použití této funkce v jiných prostředích, tato funkce se zaměřuje nejprve na přidání podpory těchto prostředí.
-
-> [!NOTE]
-> Tato funkce je aktuálně dostupná pouze prostřednictvím [Windows Insider.](hololens-insider.md)
+V Windows Holographic jsme ve verzi [21H2](hololens-release-notes.md#windows-holographic-version-21h2) přidali podporu beta verze pro sledování na platformách s pohyblivou nízkou dynamickou pohybovou topicí na HoloLens 2. Po instalaci buildu a povolení moving platformového režimu budete moct používat HoloLens 2 v dříve nepřístupných prostředích, jako jsou velké lodi nebo velké lodi. V současné době je tato funkce zaměřená pouze na povolení těchto konkrétních pohyblivých platforem. I když vám nic nebrání ve pokusu o použití této funkce v jiných prostředích, tato funkce se zaměřuje nejprve na přidání podpory těchto prostředí.
 
 ![Příklad přesunu platformy](./images/mpm-compare.gif)
 
@@ -37,10 +34,10 @@ Tento článek se věnuje:
 
 ## <a name="why-moving-platform-mode-is-necessary"></a>Proč je nutný přesun režimu platformy
 
-HoloLens být schopni sledovat pozici hlavy s [6](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) stupni volnosti (X, Y, Z, překlad a rolování, sklon, rotace yaw), aby bylo možné zobrazit stabilní hologramy. Za tím HoloLens sleduje dva podobné informace ze dvou samostatných zdrojů:
+HoloLens být schopni sledovat pozici hlavy s [6](https://en.wikipedia.org/wiki/Six_degrees_of_freedom) stupni volnosti (X, Y, Z, překlad a rolování, sklon, rotace yaw), aby bylo možné zobrazit stabilní hologramy. Za tím HoloLens sleduje dvě podobné informace ze dvou samostatných zdrojů:
 
-1. Viditelné světlé kamery – sledují prostředí, například fyzickou místnost, ve které používáte HoloLens
-1. Inerciální měrná jednotka (IMU), která se skládá z akcelerometru,scopeu a nakometru, který sleduje pohyb a orientaci hlavy vzhledem k Zemi
+1. **Viditelné světlé kamery.** Tyto kamery sledují prostředí, například fyzickou místnost, ve které používáte HoloLens
+1. **Inerciální měrné jednotka (IMU).** IMU se skládá z akcelerometru,scopeu a nakilometru, který sleduje pohyb a orientaci hlavy vzhledem k Zemi.
 
 Informace z těchto dvou zdrojů jsou složené, aby bylo možné sledovat vaši pozici hlavy s nízkou latencí a vysokou frekvencí, aby bylo možné vykreslit hladké hologramy.
 
@@ -62,10 +59,7 @@ I když byl vyvinut režim moving platformy pro inteligentní zpracování pří
 
 Podpora beta verze pro přesun režimu platformy vyžaduje jenom několik požadavků:
 
-1. Nainstalujte build 20348.1411 nebo novější tím, že flash disk s nejnovějšími buildy [Insider](hololens-insider.md#ffu-download-and-flash-directions) sestaví přes ARC nebo zaregistrujete a [aktualizujete zařízení.](hololens-insider.md#start-receiving-insider-builds)
-
-   > [!NOTE]
-   > Toto sestavení je aktuálně k dispozici pouze na [vývojářském kanálu Insider.](hololens-insider.md#start-receiving-insider-builds)
+1. Nainstalujte [Windows Holographic verze 21H2](hololens-release-notes.md#windows-holographic-version-21h2) nebo novější aktualizací nebo blikajícím [nejnovějším sestavením](https://aka.ms/hololens2download) [přes ARC.](hololens-recovery.md#clean-reflash-the-device)
 
 2. Povolení [vývojářského režimu a Portál zařízení](/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal)
 
@@ -93,9 +87,9 @@ Pokud se vám možnost Moving Platform Mode (Režim přesunu platformy) v Portá
 
 ## <a name="reporting-issues"></a>Hlášení problémů
 
-Jak je uvedeno výše, tato funkce je beta verze dostupná jenom v režimu pro vývojáře, což znamená, že může dojít k problémům. Pokud k tomu dojde, můžeme produkt prozkoumat a vylepšit.
+Jak je uvedeno výše, tato funkce je beta verze dostupná jenom v režimu pro vývojáře, což znamená, že může dojít k problémům. Pokud k tomu dojde, můžeme produkt prozkoumat a vylepšit:
 
-1. Nahlásit problém prostřednictvím [Centrum Feedback](hololens-feedback.md) kategorii Přesnost, stabilita **a spolehlivost hologramu a** zahrňte:
+1. Nahlásit problém prostřednictvím [Centrum Feedback](hololens-feedback.md) kategorii **Přesnost hologramu,** stabilita a spolehlivost a zahrňte:
     1. Popis problému, včetně očekávaného chování a chování
     1. Záznam Mixed Reality [videa o](holographic-photos-and-videos.md#capture-a-mixed-reality-video) problému
 2.  Otevřete případ podpory na adrese a nasdílejte adresu URL Centrum Feedback, abychom se mohli s vámi podělit pro případ, že budeme mít [https://aka.ms/hlsupport](https://aka.ms/hlsupport) následné dotazy.
