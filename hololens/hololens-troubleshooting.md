@@ -13,12 +13,12 @@ ms.custom:
 - CI 111456
 - CSSTroubleshooting
 keywords: issues, bug, troubleshoot, fix, help, support, HoloLens, emulator
-ms.openlocfilehash: 247cf9d34da723e587f6796178ad9a917b93ac08
-ms.sourcegitcommit: 39accbc8e35728969c500da052035af4fd317a65
+ms.openlocfilehash: 5c79e119352146ac249ef02ab888141391c9cea1
+ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129964560"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130034191"
 ---
 # <a name="device-troubleshooting"></a>Řešení potíží se zařízeními
 
@@ -88,13 +88,13 @@ Požadavek: Zákazníci mohou použít Microsoft Edge a operační systém zař�
 Pokud k tomuto problému dochází, zkuste jednu z následujících možností:
 
 - Uživatelé mají přímý přístup OneDrive For Business z Microsoft Edge a pracovat se soubory na webu ze svého prohlížeče.
-- Uživatelé si mohou OneDrive PWA aplikaci nainstalovat HoloLens stažením z Microsoft Edge. To uživatelům umožní znovu zobrazit a spravovat soubory v zařízení. Přečtěte si tyto [pokyny a postupujte podle OneDrive PWA aplikace na HoloLens.](holographic-store-apps.md#install-microsoft-onedrive-pwa-app)
+- Uživatelé mohou aplikaci OneDrive PWA nainstalovat HoloLens stažením z Microsoft Edge. To uživatelům umožní znovu zobrazit a spravovat soubory v zařízení. Přečtěte si tyto pokyny a postupujte podle [OneDrive PWA aplikace na HoloLens.](holographic-store-apps.md#install-microsoft-onedrive-pwa-app)
 
 [Zpět na seznam](#list)
 
-## <a name="why-do-i-see-0x80180014-during-autopilot"></a>Proč se během 0x80180014 zobrazí další informace?
+## <a name="why-do-i-see-0x80180014-during-autopilot"></a>Proč se během 0x80180014 zobrazí?
 
-K této chybě obvykle dojde při resetování zařízení a opětovném použití toků, kdy HoloLens zařízení alespoň jednou prošlo autopilotem. Pokud chcete tento problém vyřešit, [odstraňte](/mem/autopilot/troubleshoot-device-enrollment#error-code-0x80180014-when-re-enrolling-using-self-deployment-or-pre-provisioning-mode) zařízení z Microsoft Intune a znovu ho resetujte, aby se dokončil tok Autopilotu.
+K této chybě obvykle dojde při resetování zařízení a opětovném používání toků, kdy HoloLens zařízení alespoň jednou prošlo autopilotem. Pokud chcete tento problém vyřešit, [odstraňte](/mem/autopilot/troubleshoot-device-enrollment#error-code-0x80180014-when-re-enrolling-using-self-deployment-or-pre-provisioning-mode) zařízení z Microsoft Intune a znovu ho resetujte, aby se dokončil tok Autopilotu.
 
 Další informace najdete v postupu při [řešení potíží na stránce Autopilotu.](hololens2-autopilot.md#why-do-i-see-0x80180014-during-autopilot)
 
@@ -109,11 +109,11 @@ U některých uživatelů může docházet Microsoft Store, že nefunguje podle 
 
 Tým HoloLens pracuje na přidání podpory pro další oblasti.
 
-Země, [ve které si můžete koupit HoloLens 2, najdete tady.](hololens2-purchase.md)
+Země, [kde si můžete koupit HoloLens 2, najdete tady.](hololens2-purchase.md)
 
 ## <a name="microsoft-edge-fails-to-start-the-microphone"></a>Microsoft Edge se nepodařilo spustit mikrofon
 
-Pokud se Microsoft Edge s mikrofonem spustit, takže nebude možné s Edgem pracovat v HoloLens. Tento známý problém souvisí s verzí aplikace Microsoft Edge. Nepřidáte prosím své zařízení na starší verzi, protože tím se tento problém nevypraví.
+Pokud se Microsoft Edge s mikrofonem spustit, takže nebude možné s Edgem pracovat v HoloLens. Tento známý problém souvisí s verzí aplikace Microsoft Edge. Nepřidáte své zařízení na starší verzi, protože tím se tento problém nevypraví.
 
 ### <a name="who-is-affected"></a>Kdo to má vliv?
 
@@ -122,7 +122,7 @@ Pomocí aplikace Microsoft Store můžete zkontrolovat, kterou verzi Microsoft E
 
 ### <a name="work-around"></a>Obchádky
 
-Aktuální oprava je ve verzi 96, která je dostupná pro uživatele, kteří se zaregistrovali v Microsoft Edge Insider. To se liší od registrace zařízení jako Windows Insider. Přečtěte si tyto [pokyny, kde najdete podrobnosti o tom, jak se](hololens-new-edge.md#microsoft-edge-insider-channels) zaregistrovat do programu Edge insider.
+Aktuální oprava je ve verzi 96, která je dostupná pro uživatele, kteří se zaregistrovali v Microsoft Edge Insider. To se liší od registrace zařízení jako Windows Insider. Přečtěte si tyto [pokyny, kde najdete podrobnosti o tom, jak se zaregistrovat do programu Edge insider.](hololens-new-edge.md#microsoft-edge-insider-channels)
 
 ## <a name="remote-assist-video-freezes-after-20-minutes"></a>Video remote assist se zablokuje po 20 minutách
 
@@ -132,7 +132,7 @@ Aktuální oprava je ve verzi 96, která je dostupná pro uživatele, kteří se
 > [!NOTE]
 > Kvůli závažnosti tohoto známého problému jsme dočasně pozastavil dostupnost Windows Holographic verze 21H1. Sestavení 21H1 je teď opět k dispozici, takže zařízení je možné znovu aktualizovat na nejnovější build 21H1.
 
-V nejnovější verzi Windows Holographic verze [21H1](hololens-release-notes.md#windows-holographic-version-21h1)zaznamenali někteří uživatelé Vzdálené pomoci zamrznutí videa během 20 minut. Jedná se o **známý problém.**
+V nejnovější verzi [Windows Holographic verze 21H1](hololens-release-notes.md#windows-holographic-version-21h1)zaznamenali někteří uživatelé Vzdálené pomoci zamrznutí videa během 20 minut. Jedná se o **známý problém.**
 
 ### <a name="workarounds"></a>Alternativní řešení
 
@@ -140,7 +140,7 @@ Pokud nemůžete aplikaci Remote Assist aktualizovat na novější sestavení, v
 
 #### <a name="restart-in-between-calls"></a>Restartování mezi voláními
 
-Pokud vaše volání přecházují 20 minut a dochází k tomuto problému, zkuste zařízení restartovat. Restartováním zařízení mezi voláními vzdálené pomoci obnovíte zařízení a vrátíte ho do dobrého stavu.
+Pokud vaše volání přesájí 20 minut a dochází k tomuto problému, zkuste zařízení restartovat. Restartováním zařízení mezi voláními vzdálené pomoci obnovíte zařízení a vrátíte ho do dobrého stavu.
 
 Pokud chcete rychle restartovat zařízení na Windows Holographic, otevřete nabídku Start verze [21H1,](hololens-release-notes.md#windows-holographic-version-21h1) vyberte ikonu uživatele a pak vyberte **Restartovat.**
 
@@ -148,7 +148,7 @@ Pokud chcete rychle restartovat zařízení na Windows Holographic, otevřete na
 
 ## <a name="auto-login-asks-for-log-in"></a>Automatické přihlášení žádá o přihlášení
 
-Zařízení HoloLens 2 je možné nakonfigurovat tak, aby se automaticky přihlašuje přes **možnosti** přihlášení k účtům Nastavení -> a v části Povinné nastavovat hodnotu  ->    ->   **na Nikdy.**  Někteří uživatelé se při aktualizaci zařízení s podstatně velkou aktualizací, jako je třeba aktualizace funkcí, mohou znova přihlásit k zařízení. Jedná se o **známý problém.**
+Zařízení HoloLens 2 je možné nakonfigurovat tak, aby se automaticky přihlašoval přes **možnosti** přihlášení k účtům Nastavení -> a v části Povinné nastavit hodnotu na  ->    ->   **Nikdy.**  Někteří uživatelé se při aktualizaci zařízení s podstatně velkou aktualizací, jako je třeba aktualizace funkcí, mohou znova přihlásit k zařízení. Jedná se o **známý problém.**
 
 Příklad, kdy k tomu může dojít:
 
@@ -163,7 +163,7 @@ K tomu by nemělo dojít během těchto období:
 Alternativní metody:
 
 - Metody přihlášení, jako jsou PIN, heslo, Iris, webové ověřování nebo klíče FIDO2.
-- Pokud pin kód zařízení nelze zapamatovat a jiné metody ověřování nejsou k dispozici, může uživatel použít režim [ručního lomítka](hololens-recovery.md#manual-procedure).
+- Pokud pin kód zařízení nelze zapamatovat a jiné metody ověřování nejsou k dispozici, může uživatel použít režim [ručního lomítka](hololens-recovery.md#manual-flashing-mode-procedure).
 
 [Zpět na seznam](#list)
 
@@ -172,7 +172,7 @@ Alternativní metody:
 > [!NOTE]
 > Tento problém byl původně vytvořen s náklady na Microsoft Edge verzí. Tento problém se může vyřešit v [nové Microsoft Edge](hololens-new-edge.md). Pokud ne, zpětnou vazbu nahlaste.
 
-Několik zákazníků nahlásilo problém, kdy Microsoft Edge spuštění. U těchto zákazníků problém přetrvává i po restartování a nevyřeší se Windows aktualizacemi aplikací. Pokud k tomuto problému dochází a potvrdili jste, že [Windows](hololens-updates.md#manually-check-for-updates)je aktuální, zakažte chybu z aplikace [Centrum Feedback](hololens-feedback.md) s následující kategorií a podkate kategorií: Instalace a aktualizace > Stahování, instalace a konfigurace Windows Update.
+Několik zákazníků nahlásilo problém, kdy Microsoft Edge spuštění. U těchto zákazníků problém přetrvává i po restartování a nevyřeší se Windows aktualizacemi aplikací. Pokud k tomuto problému dochází a potvrdili jste, že [Windows](hololens-updates.md#manually-check-for-updates)je aktuální, zakažte chybu z aplikace [Centrum Feedback](hololens-feedback.md) s následující kategorií a podkate kategorií: Instalace a aktualizace > Stažení, instalace a konfigurace Windows Update.
 
 Neexistují žádná známá alternativní řešení, protože jsme zatím nemohli hlavní příčinu problému. S vyšetřováním vám pomůže Centrum Feedback chyb prostřednictvím tohoto webu. Jedná se o **známý problém.**
 
@@ -180,7 +180,7 @@ Neexistují žádná známá alternativní řešení, protože jsme zatím nemoh
 
 ## <a name="keyboard-doesnt-switch-to-special-characters"></a>Klávesnice se přepne na speciální znaky
 
-Při ooBE dochází k problému, kdy se po zvolení pracovního nebo školního účtu a zadání hesla uživatel pokouší přepnout na speciální znaky na klávesnici klepnutím na tlačítko &123, nezmění se na speciální znaky. Jedná se o **známý problém.**
+Při ooBE dochází k problému, kdy se po zvolení pracovního nebo školního účtu a zadání hesla uživatel pokouší přepnout na speciální znaky na klávesnici klepnutím na tlačítko &123, se nezmění na speciální znaky. Jedná se o **známý problém.**
 
 Obchádky:
 
@@ -209,7 +209,7 @@ V předchozích sestaveních Windows Holographic by výsledkem pokusu o stažen�
 > [!NOTE]
 > Jedná se o **známý problém,** který byl opraven [Windows Holographic verze 21H1 – aktualizace z července 2021.](hololens-release-notes.md#windows-holographic-version-21h1---july-2021-update) Pokud jste v rámci tohoto alternativního řešení dříve zakázali připojení SSL, důrazně doporučujeme ho znovu povolit.
 
-Někteří zákazníci zjistili, že při pokusu o nahrání nebo stažení souborů se operace může zdát, že přestane reagovat a pak dojde k časovému limitu nebo se nikdy nedokoncuje. Tento problém je[](#downloading-locked-files-doesnt-error) oddělený od známého problému uzamčeného souboru – to má vliv na sestavení na trhu Windows Holographic, verze 2004, 20H2 a 21H1. Problém byl způsobený chybou při Portál zařízení zpracování určitých požadavků a při použití protokolu https, což je výchozí nastavení, dochází nejčastěji k tomuto problému.
+Někteří zákazníci zjistili, že při pokusu o nahrání nebo stažení souborů se operace může zdát, že přestane reagovat a pak dojde k časovému limitu nebo se nikdy nedokoncuje. Tento problém je[](#downloading-locked-files-doesnt-error) oddělený od známého problému uzamčeného souboru – to má vliv na sestavení na trhu Windows Holographic, verze 2004, 20H2 a 21H1. Problém byl způsobený chybou při Portál zařízení zpracování určitých požadavků a při použití protokolu https, který je výchozí, se nejčastěji používá.
 
 ### <a name="workaround"></a>Alternativní řešení
 
@@ -221,14 +221,14 @@ Uživatel by pak měl přejít na http://, ne https:// (IP adresa) a funkce, jak
 
 ## <a name="blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build"></a>Modrá obrazovka po zrušení registrace z insider ve verzi Preview na zařízení blikající sestavením Insider
 
-Jedná se o problém ovlivňující uživatele, kteří byli v buildu Insider ve verzi Preview, odmítal svůj HoloLens 2 novým buildem insider ve verzi Preview a pak zrušit jeho zrušení v programu Insider. Jedná se o **známý problém.**
+Jedná se o problém, který ovlivňuje uživatele, kteří byli v buildu Insider ve verzi Preview, odmítal svůj HoloLens 2 novým buildem insider ve verzi Preview a pak zrušení jeho zapsání z programu Insider. Jedná se o **známý problém.**
 
 To nemá vliv na:
 
 - Uživatelé, kteří nejsou zaregistrovaní ve Windows Insider
 - Zasvěcenci:
     - Pokud bylo zařízení zaregistrované od sestavení Insider verze 18362.x
-    - Pokud se v programu Insider blikal podepsaný build 19041.x a zůstal zaregistrovaný v programu Insider
+    - Pokud se blikajícím souborem Insider podepsal build 19041.x a zůstane zaregistrovaný v programu Insider
 
 Obchádky:
 
@@ -241,34 +241,34 @@ Obchádky:
 
     1. Připojení k počítači a otevřete Doprovodný průvodce pokročilým obnovením.
 
-    1. Flash HoloLens 2 do výchozího sestavení.
+    1. Flash HoloLens 2 na výchozí sestavení.
 
 [Zpět na seznam](#list)
 
 ## <a name="onedrive-doesnt-automatically-upload-pictures"></a>OneDrive automaticky nenahraje obrázky
 
-Aplikace OneDrive pro HoloLens nepodporuje automatické nahrávání z fotoaparátu pro pracovní nebo školní účty. Jedná se o **známý problém.**
+Aplikace OneDrive pro HoloLens nepodporuje automatické nahrávání fotoaparátu pro pracovní nebo školní účty. Jedná se o **známý problém.**
 
 Alternativní řešení:
 
-- Pokud je pro vaši firmu přijatelné, je u uživatelských účtů Microsoft podporováno automatické nahrávání fotoaparátu. Ke svému pracovnímu nebo školnímu účet Microsoft přihlášení (aplikace OneDrive podporuje duální přihlašování) se můžete přihlásit i ke svému pracovnímu nebo školnímu účtu. Ve svém účet Microsoft v rámci OneDrive můžete povolit automatické nahrávání fotoaparátů na pozadí.
+- Pokud je pro vaši firmu přijatelné, je u uživatelských účtů Microsoft podporováno automatické nahrávání fotoaparátu. K pracovnímu nebo školnímu účet Microsoft přihlášení se můžete přihlásit i ke svému pracovnímu nebo školnímu účtu (OneDrive podporuje duální přihlašování). Ve svém účet Microsoft v rámci OneDrive můžete povolit automatické nahrávání fotoaparátů na pozadí.
 
-- Pokud nemůžete bezpečně používat uživatelský účet účet Microsoft automatické nahrávání fotek, můžete fotky ručně nahrát do pracovního nebo školního účtu z OneDrive aplikace. Pokud to chcete udělat, ujistěte se, že jste přihlášení ke svému pracovnímu nebo školnímu účtu v OneDrive aplikace. Vyberte tlačítko **+** a zvolte **Upload**. Fotky nebo videa, která chcete nahrát, najdete tak, že přejdete na Obrázky **> fotoaparátu.** Vyberte fotky nebo videa, která chcete nahrát, a pak vyberte **tlačítko** Otevřít.
+- Pokud nemůžete bezpečně používat uživatelský účet účet Microsoft automatické nahrávání fotek, můžete fotky ručně nahrát do pracovního nebo školního účtu z OneDrive aplikace. Pokud to chcete udělat, ujistěte se, že jste v aplikaci OneDrive účet. Vyberte tlačítko **+** a zvolte **Upload**. Fotky nebo videa, které chcete nahrát, najdete tak, že přejdete na Obrázky **> fotoaparátu.** Vyberte fotky nebo videa, která chcete nahrát, a pak vyberte **tlačítko** Otevřít.
 
 [Zpět na seznam](#list)
 
 ## <a name="hololens-is-unresponsive-or-wont-start"></a>HoloLens nereaguje nebo se nespustí
 
-Pokud HoloLens nezačáte:
+Pokud HoloLens nespustíte:
 
 - Pokud se indikátory LED vedle tlačítka napájení nesvítí nebo krátce blikne jenom jedna dioda LED, možná budete muset zařízení [HoloLens.](hololens2-charging.md#charging-the-device)
-- Pokud se LED diody rozsvítí, když stisknete tlačítko napájení, ale na displeji se nic neuvidí, proveďte pevné [resetování zařízení.](hololens-recovery.md#hard-reset-procedure)
+- Pokud se LED diody rozsvítí, když stisknete tlačítko napájení, ale na displeji neuvidíte nic, proveďte pevné [resetování zařízení.](hololens-recovery.md#hard-restart-procedure)
 
 Pokud se HoloLens zamrzne nebo přestane reagovat:
 
 - Vypněte svůj HoloLens stisknutím tlačítka napájení, dokud se všechny pěti diody LED nevypnou, nebo po dobu 15 sekund, pokud diody LED nereagují. Pokud chcete spustit HoloLens, znovu stiskněte tlačítko napájení.
 
-Pokud tento postup nefunguje, můžete zkusit obnovit zařízení [HoloLens 2](hololens-recovery.md) nebo [HoloLens (1. generace).](hololens1-recovery.md)
+Pokud tento postup nefunguje, můžete zkusit obnovit zařízení [HoloLens 2](hololens-recovery.md) nebo HoloLens [(1. generace).](hololens1-recovery.md)
 
 [Zpět na seznam](#list)
 
@@ -276,7 +276,7 @@ Pokud tento postup nefunguje, můžete zkusit obnovit zařízení [HoloLens 2](h
 
 Budete muset některé místo úložiště volná jedním nebo více z následujících způsobů:
 
-- Odstraňte některé nepoužívané mezery. Přejděte do **Nastavení**  >    >  **prostorů** systému, vyberte mezeru, kterou už nepotřebujete, a pak vyberte **Odebrat.**
+- Odstraňte některé nepoužívané mezery. Přejděte do **Nastavení**  >    >  **Prostory** systému, vyberte mezeru, kterou už nepotřebujete, a pak vyberte **Odebrat.**
 - Odeberte některé hologramy, které jste umístili.
 - Odstraňte z aplikace Fotky některé obrázky a videa.
 - Odinstalujte některé aplikace z HoloLens. V seznamu **všechny aplikace** klepněte na aplikaci, kterou chcete odinstalovat, a pak vyberte **odinstalovat**.

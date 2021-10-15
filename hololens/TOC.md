@@ -15,7 +15,7 @@
 
 # Použití HoloLens
 ## První použití
-### [Připravte si HoloLens 2 k použití.](hololens2-setup.md)
+### [Připravte HoloLens 2 k použití.](hololens2-setup.md)
 ### [Nastavení HoloLens 2](hololens2-start.md)
 ### [Práce s HoloLens 2](hololens2-basic-usage.md)
 ### [Aktualizace HoloLens](hololens-update-hololens.md)
@@ -23,7 +23,7 @@
 ### Navigace v Windows Holographic
 #### [Použití domova nabídka Start hybridní reality](holographic-home.md)
 #### [Použití hlasu k ovládání HoloLens](hololens-cortana.md)
-#### [Vyhledání, otevření a uložení souborů na HoloLens](holographic-data.md)
+#### [Vyhledání, otevření a uložení souborů v HoloLens](holographic-data.md)
 #### [Vytváření fotek a videí hybridní reality](holographic-photos-and-videos.md)
 #### [Nová Nastavení aplikace](hololens-new-settings.md)
 #### [Nový Microsoft Edge](hololens-new-edge.md)
@@ -77,7 +77,7 @@
 ### [Bezpečnostní inženýrství ](security-engineering.md)
 ### [HoloLens 2: Ochrana osobních údajů a ochrana dat](hololens2-privacy.md)
 ## Registrace zařízení
-### [Registrace HoloLens MDM](hololens-enroll-mdm.md)
+### [Registrace HoloLens v MDM](hololens-enroll-mdm.md)
 ### [Windows Autopilot pro HoloLens 2](hololens2-autopilot.md) 
 ### [Registrace v prostředí s omezenými adresami MAC Wi-Fi prostředí](mac-address-options.md)
 ## Nasazení aplikací
@@ -100,7 +100,7 @@
 ### [Příprava certifikátů a síťových profilů pro HoloLens 2](hololens-certificates-network.md)
 ### [Správa koncových bodů připojení pro HoloLens](hololens-offline.md)
 ### [Správce certifikátů](certificate-manager.md)
-## [Správa HoloLens souborů](hololens-updates.md)
+## [Správa HoloLens aktualizací](hololens-updates.md)
 
 # Řešení potíží
 ## [Zařízení](hololens-troubleshooting.md)
@@ -117,7 +117,7 @@
 ## [poznámky k verzi HoloLens 2](hololens-release-notes.md)
 ## [Insider Preview pro Microsoft HoloLens](hololens-insider.md)
 ## [Podporované jazyky](hololens2-language-support.md)
-## [Vývoj s využitím sítě Microsoft (Preview)](/mesh/overview)
+## [Další informace o síti Microsoft (Preview)](/mesh/overview)
 ## HoloLens (1. generace)
 ### Využití při prvním použití
 #### [o HoloLens (1. generace)](hololens1-hardware.md)

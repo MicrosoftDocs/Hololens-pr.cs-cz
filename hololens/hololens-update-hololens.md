@@ -5,21 +5,21 @@ keywords: postupy, aktualizace, vrácení zpět, HoloLens, kontrola sestavení, 
 ms.prod: hololens
 ms.sitesec: library
 author: qianw211
-ms.author: v-qianwen
+ms.author: v-beehanson
 ms.topic: article
 ms.localizationpriority: medium
-ms.date: 9/3/2021
+ms.date: 10/11/2021
 audience: ITPro
 ms.reviewer: ''
 manager: sekerawa
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: f39fc2c6c0aaf16f304f38216a424c3811eb439d
-ms.sourcegitcommit: e9f746aa41139859edc12fbc21f926c9461da4b3
+ms.openlocfilehash: 49036135ba13a93d2e8be97a7f3a95d50785c5c5
+ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2021
-ms.locfileid: "126032384"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "130034259"
 ---
 # <a name="update-hololens-2"></a>Aktualizace HoloLens 2
 
@@ -29,13 +29,13 @@ Vždy pracujeme na nových funkcích, opravách chyb a aktualizacích zabezpeče
 
 Na základě vašich preferencí bude váš HoloLens automaticky stahovat a instalovat aktualizace systému při každém připojení k napájení, připojení k internetu a dokonce i v pohotovostním režimu.
 
-Pokud chcete mít HoloLens, že je vždy aktualizovaný, nechejte ho připojený ke zdroji, který s ním přišel. Chcete také, aby HoloLens připojili k internetu. Tímto způsobem automaticky stáhne a nainstaluje aktualizace systému. 
+Aby se zajistilo HoloLens váš počítač vždy aktualizovaný, nechte ho připojený ke zdroji, který s ním přišel. Chcete také, aby HoloLens připojili k internetu. Tímto způsobem automaticky stáhne a nainstaluje aktualizace systému. 
 
-S Windows Update budete řídit několik aspektů procesu aktualizace, například to, která zařízení chystá aktualizace v jaké době. Tento ovládací prvek je užitečný, protože můžete pro účely testování HoloLens aktualizace podmnožiny zařízení. Pak zakašla aktualizace zbývajících aktualizací. Nebo můžete definovat různé plány aktualizací pro různé typy aktualizací.
+S Windows Update budete řídit několik aspektů procesu aktualizace, například to, která zařízení chystá aktualizace v jaké době. Tento ovládací prvek je užitečný, protože pro účely testování můžete do podmnožiny zařízení HoloLens aktualizace. Pak zakašla aktualizace zbývajících aktualizací. Nebo můžete definovat různé plány aktualizací pro různé typy aktualizací.
 
 ## <a name="types-of-updates"></a>Typy aktualizací
 
-Například HoloLens automaticky spravovat dva typy aktualizací. 
+Například HoloLens automaticky spravovat dva typy aktualizací.
 
 - Aktualizace funkcí: vydaná dvakrát ročně.
 - Aktualizace kvality: Zahrnují důležité aktualizace zabezpečení. Vydaná měsíčně nebo podle potřeby.
@@ -46,13 +46,13 @@ Pomocí **možnosti** / **Povolit aktualizaciAutoUpdate** můžete spravovat kon
 
 Můžete také nastavit plán aktualizace. Může to být v konkrétní den nebo každý den v konkrétním čase. Například v 17:00 nebo mimo aktivní dobu.
 
-Nakonec pár slov o plánování strategie aktualizací. Podporujeme odložení aktualizací. Můžete se tedy rozhodnout, jak dlouho počkáte, než Microsoft uvolní aktualizaci, aby se tato aktualizace na zařízeních instaluje.
+Nakonec pár slov o plánování strategie aktualizací. Podporujeme odložení aktualizací, takže se můžete rozhodnout, jak dlouho počkáte, než Microsoft uvolní aktualizaci pro instalaci této aktualizace na zařízeních.
 
-Někdy má společnost rádi, když si nejprve vyzkoušejí všechny nové funkce, aby se ujistila, že všechno funguje, a jsou obeznámeni s novými aktualizacemi, aby byl jejich tým podpory připravený. Jakmile potvrdí, že je vše v pořádku, zak budou zasažovat aktualizace pro celou společnost. Když přidružíte podmnožiny zařízení k různým zásadám odložení, označované jako aktualizační okruhy, můžete koordinovat strategii pro zasouvání aktualizací pro vaši organizaci.
+Někdy má společnost ráda, když si nejprve vyzkoušejí všechny nové funkce, aby se ujistila, že všechno funguje, a jsou obeznámeni s novými aktualizacemi, aby byl jejich tým podpory připravený. Jakmile potvrdí, že je vše v pořádku, zak budou zasažovat aktualizace pro celou společnost. Když přidružíte podmnožiny zařízení k různým zásadám odložení, označované jako aktualizační okruhy, můžete koordinovat strategii pro zasouvání aktualizací pro vaši organizaci.
 
 ## <a name="hololens-update-tools"></a>HoloLens nástroje pro aktualizaci
 
-Tato část vás provede těmito HoloLens nástroje pro:
+Tato část vás provede těmito HoloLens pro:
 
 - kontrola aktualizací
 - ruční aktualizace HoloLens
@@ -69,9 +69,9 @@ Aktualizace můžete vyhledat kdykoli v nastavení.  Zobrazení dostupných aktu
 
 Pokud je k dispozici aktualizace, začne stahovat novou verzi. Po dokončení stahování aktivujte  instalaci výběrem tlačítka Restartovat. Pokud je vaše zařízení nižší než 40 % a není zapojené do napájení, restartování se nespustí při instalaci aktualizace.
 
-Zatímco HoloLens aktualizace instaluje, zobrazí se rotující ozubené kolo a indikátor průběhu. Během této doby nevynulová HoloLens nevypnout. Po dokončení instalace se automaticky restartuje.
+Zatímco HoloLens aktualizace instaluje, zobrazí se rotující ozubené kolo a indikátor průběhu. Během této doby nevy vypnutou HoloLens počítač. Po dokončení instalace se automaticky restartuje.
 
-HoloLens aktualizace po jedné.  Pokud je HoloLens více než jedna verze za nejnovější verzí, možná budete muset proces aktualizace spustit vícekrát, abyste ji mohli plně aktualizovat.
+HoloLens aktualizace po jedné.  Pokud je HoloLens více než jedna verze za nejnovější verzí, možná budete muset proces aktualizace spustit vícekrát, abyste ji plně aktualizační.
 
 ### <a name="check-your-operating-system-version-build-number"></a>Kontrola verze operačního systému (číslo sestavení)
 
@@ -83,21 +83,10 @@ V některých případech se můžete chtít vrátit k předchozí verzi HoloLen
 
 1. Kontaktujte podporu a podívejte se, jestli váš problém vyřešit vyřešit.
     1. Ujistěte **se,** **že** je povolená volitelná nebo úplná telemetrie – díky tomu bude vaše chyba lépe itelná a pro techniky bude snazší ji diagnostikovat.
-    1. [Zpětná vazba](hololens-feedback.md) k souborům je co nejvíce popisná. Poznamenejte si název nebo použijte funkci sdílení, abyste mohli chybu sdílet s podporou.
+    1. V [části Zpětná vazba](hololens-feedback.md) k souborům musí být co nej popisnější. Poznamenejte si název nebo použijte funkci sdílení, abyste mohli chybu sdílet s podporou.
     1. Kontaktujte [podporu](https://aka.ms/hlsupport). Pokud je vaším problémem problém, který je potřeba vyřešit návratem k předchozí verzi, může vám poskytnout ffu pro flash disk vašeho zařízení.
 
-1. Pokud to nefunguje, obnovte nebo navracení proti HoloLens [2 pomocí možnosti Advanced Recovery Companion.](hololens-recovery.md)
-    1. Na svém počítači si z webu [stáhněte](https://www.microsoft.com/p/advanced-recovery-companion/9p74z35sfrs8?activetab=pivot:overviewtab) doprovodný průvodce pokročilým obnovením Microsoft Store.
-    1. Ujistěte se, že nemáte žádné telefony ani Windows zařízení připojená k počítači.
-    1. Zvolte verzi, na kterou chcete flash disk použít:
-        1. Můžete si stáhnout [nejnovější verzi HoloLens 2.](https://aka.ms/hololens2download)
-        1. Můžete použít výchozí sestavení, které arc hostuje. (Pokud zvolíte tuto možnost, přeskočte další krok.)
-        1. Můžete použít podporu sestavení, kterou máte k dispozici.
-    1. Po dokončení těchto stahování otevřete soubor **Průzkumník souborů**  >  **ke stažení.** Klikněte pravým tlačítkem na staženou složku zip a rozbalte ji výběrem **možnosti Extrahovat** vše  >   extrahovat.
-    1. Připojení připojte HoloLens k počítači pomocí kabelu USB-A na USB-C. (I v případě, že pro připojení svého zařízení používáte HoloLens kabely, funguje to nejlépe.)
-    1. Advanced Recovery Companion automaticky rozpozná vaše HoloLens. Vyberte **dlaždici Microsoft HoloLens.**
-    1. Na další obrazovce vyberte **Ruční výběr** balíčku a pak vyberte instalační soubor obsažený ve složce, kterou jste rozbalili v kroku 4. (Vyhledejte soubor s `.ffu` příponou .)
-    1. Vyberte **Nainstalovat software** a postupujte podle pokynů.
+1. Pokud to nefunguje, odmítnutí hesla [HoloLens 2 pomocí možnosti Advanced Recovery Companion](hololens-recovery.md#clean-reflash-the-device).
 
 > [!NOTE]
 > Po návratu ke starší verzi se odstraní vaše osobní soubory a nastavení.
