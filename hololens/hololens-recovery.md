@@ -1,13 +1,13 @@
 ---
-title: Restartování, resetování nebo obnovení HoloLens
+title: Restartování, resetování nebo obnovení HoloLens 2
 ms.reviewer: Follow along with our basic and advanced instructions for rebooting or resetting your HoloLens 2 device.
-description: Jak použít Advanced Recovery Companion k zobrazení flash obrázku na HoloLens 2.
+description: Jak použít Advanced Recovery Companion k zobrazení flash obrázku HoloLens 2.
 keywords: how-to, reboot, reset, recover, hard reset, soft reset, power cycle, HoloLens, shut down, arc, advanced recovery companion
 ms.prod: hololens
 ms.sitesec: library
 author: mattzmsft
-ms.author: mazeller
-ms.date: 08/30/2021
+ms.author: v-beehanson
+ms.date: 10/15/2021
 ms.custom:
 - CI 111456
 - CSSTroubleshooting
@@ -16,12 +16,12 @@ ms.localizationpriority: high
 manager: jarrettr
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 0efcfd0adf9bd380007e5ed4f905cb130b76d4b8
-ms.sourcegitcommit: 19d1abb7589cebf14ba45e830f49224f7b4fcfe9
+ms.openlocfilehash: 9f8969d018059a3b38d2b3001f8bc983b72d58c7
+ms.sourcegitcommit: f105a770814ccd61e88b650448902a03c95b7a3c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "130034216"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "130151652"
 ---
 # <a name="restart-reset-or-recover-hololens-2"></a>Restartování, resetování nebo obnovení HoloLens 2
 
@@ -41,16 +41,16 @@ Pokud je zařízení správně spuštěné a spuštěné, existují tři způsob
     - Když je HoloLens, indikátor baterie zobrazí stav baterie v pěti přírůstcích.
     - Když je jen jedna z pěti světel rozsvícená, úroveň baterie je nižší než 20 procent.
     - Pokud je úroveň baterie kriticky nízká a pokusíte se zařízení zapnout, jedno světlo krátce blikne a pak vypadne.
-- Na hostitelském počítači otevřete **Průzkumník souborů** vyhledejte své zařízení HoloLens 2 na levé straně pod **položkou Tento počítač.** Klikněte pravým tlačítkem na zařízení a vyberte **Vlastnosti**. V dialogovém okně se zobrazí úroveň baterie.
+- Na hostitelském počítači otevřete **Průzkumník souborů** a vyhledejte své zařízení HoloLens 2 na levé straně pod **položkou Tento počítač.** Klikněte pravým tlačítkem na zařízení a vyberte **Vlastnosti**. V dialogovém okně se zobrazí úroveň baterie.
 
    ![Obrazovka HoloLens 2 vlastností zobrazuje úroveň změny baterie.](images/ResetRecovery2.png)
 
-Pokud se zařízení nemůže spustit do spouštěcí nabídky, všimněte si vzhledu indikátoru LED a výčtu zařízení na hostitelském počítači. Pak postupujte podle průvodce [odstraňováním potíží.](hololens-troubleshooting.md) Pokud stav zařízení neodpovídá žádnému stavu uvedenému v průvodci odstraňováním potíží, proveďte postup pevného resetování se zařízením připojeným k napájecímu zdroji, ne s hostitelským počítačem. [](hololens-recovery.md#hard-restart-procedure) Počkejte alespoň jednu hodinu, než se zařízení bude účtovat.
+Pokud se zařízení nemůže spustit do spouštěcí nabídky, všimněte si vzhledu indikátoru LED a výčtu zařízení na hostitelském počítači. Pak postupujte podle průvodce [odstraňováním potíží.](hololens-troubleshooting.md) Pokud stav zařízení neodpovídá žádnému stavu uvedenému v průvodci odstraňováním potíží, proveďte postup pevného restartování se zařízením připojeným k napájení, ne s hostitelským počítačem. [](hololens-recovery.md#hard-restart-procedure) Počkejte alespoň jednu hodinu, než se zařízení bude účtovat.
 
 > [!NOTE]
 > Začáteč tím, že definujeme pojmy.\
 > "Restart" jednoduše znamená vypnout a zapnout zařízení.\
-> "Resetovat" znamená obnovit zařízení do výchozího nastavení Nastavení uživatelského rozhraní a přeinstalovat aktuální image.\
+> "Resetovat" znamená obnovit zařízení do výchozího nastavení Nastavení uživatelského rozhraní a znovu nainstalovat aktuální image.\
 > "Odkazovat" znamená, že zařízení je připojené k počítači a nainstaluje se nový obrázek (volitelně jiný).
 
 ## <a name="restart-the-device"></a>Restartujte zařízení.
@@ -65,13 +65,13 @@ Za určitých okolností může být nutné zařízení restartovat ručně bez 
 
 3. Počkejte 2–3 sekundy a pak krátce stiskněte **tlačítko napájení.** Led diody blízko tlačítka napájení se rozsvítí a zařízení se začne svítit.
 
-4. Připojení zařízení k hostitelskému počítači a pak otevřete Správce zařízení. (Windows 10 stiskněte klávesu **Windows,** pak **klávesu X** a pak vyberte **Správce zařízení**.) Ujistěte se, že se zařízení správně *Microsoft HoloLens,* jak je znázorněno na následujícím obrázku:
+4. Připojení zařízení k hostitelskému počítači a pak otevřete Správce zařízení. (Například Windows 10 stiskněte klávesu **Windows,** pak klávesu **X** a pak **vyberte Správce zařízení**.) Ujistěte se, že se zařízení správně *Microsoft HoloLens,* jak je znázorněno na následujícím obrázku:
 
-   ![HoloLens 2: Devive manager microsoftholoLensRecovery.](images/MicrosoftHoloLens_DeviceManager.png)
+   ![HoloLens 2: Správce zařízení MicrosoftHoloLensRecovery.](images/MicrosoftHoloLens_DeviceManager.png)
 
 ### <a name="hard-restart-procedure"></a>Postup pevného restartování
 
-Pokud standardní postup resetování nefunguje, použijte tento postup:
+Pokud standardní postup resetování nefunguje, použijte postup pevného restartování:
 
 1. Odpojte kabel typu C a odpojte zařízení od napájení nebo hostitelského počítače.
 
@@ -81,7 +81,15 @@ Pokud standardní postup resetování nefunguje, použijte tento postup:
 
 1. Otevřete Správce zařízení (Windows 10 stiskněte klávesu **Windows** a potom klávesu **X** a pak **vyberte Správce zařízení**). Ujistěte se, že se zařízení správně *Microsoft HoloLens,* jak je znázorněno na následujícím obrázku:
 
-   ![HoloLens 2 MicrosoftHoloLensRecovery device maanger 2.](images/MicrosoftHoloLens_DeviceManager.png)
+   ![HoloLens 2 Správce zařízení MicrosoftHoloLensRecovery 2.](images/MicrosoftHoloLens_DeviceManager.png)
+
+## <a name="reset-the-device"></a>Resetování zařízení
+
+Zařízení můžete resetovat přímo z náhlavní soupravy. Vyberte **Nastavení** a pak vyberte **Aktualizovat & Security > Resetovat & obnovení > Resetovat toto zařízení.**
+
+   ![HoloLens náhlavní soupravy resetujte.](images/headset-reset-recovery.png)
+
+Při resetování tímto způsobem se odstraní všechny uživatelské účty a vymažou se všechna data.
 
 ## <a name="clean-reflash-the-device"></a>Vyčištění zařízení před reflash
 
@@ -144,11 +152,11 @@ Zařízení možná budete muset přetát do režimu obnovení v případě, že
 
 1. Zkontrolujte, že je zařízení odemčené.
 
-1. Zkontrolujte, že je zařízení přímo připojené k hostitelskému počítači, a ne k rozbočovači.
+1. Ověřte, že je zařízení zapojené přímo do hostitelského počítače, ne z rozbočovače.
 
-1. Pokud se vaše zařízení nezobrazuje jako zařízení HoloLens/HoloLens Recovery v části Ovladače universal serial bus, zkontrolujte:
-    1. **Porty** jako zařízení Qualcomm HS-USB
-    1. **Jiná zařízení**, jako QUSB_BULK zařízení – na hostitelském počítači chybí potřebné ovladače pro detekci HoloLens. Klikněte pravým tlačítkem a vyberte Update Driver (Aktualizovat ovladač) a vyhledejte ovladače online nebo zaškrtněte políčko Optional Updates (Volitelné aktualizace) Windows Update settings (Aktualizovat [nastavení).](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/improving-the-update-discoverability-experience/ba-p/1585674) Po stažení ovladače by měl být oblouk schopný ho detekovat.
+1. pokud se zařízení nezobrazuje jako zařízení pro obnovení HoloLens/HoloLens v části ovladače Universal Serial Bus, zaškrtněte:
+    1. **Porty** jako zařízení s rozhraním Qualcomm HS – USB
+    1. **Jiná zařízení**, jako QUSB_BULK zařízení – v hostitelském počítači chybí ovladače potřebné k detekci HoloLens. klikněte pravým tlačítkem a vyberte aktualizovat ovladač a vyhledejte ovladače online nebo [zaškrtněte volitelné aktualizace v nastaveních web Windows Update](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/improving-the-update-discoverability-experience/ba-p/1585674). Po stažení ovladače by měl být oblouk schopný ho detekovat.
 
 1. Pokud ARC zařízení nerozpozná, ujistěte se, že se k němu můžete připojit pomocí Průzkumníka souborů na svém počítači. Pokud nemůžete;
 
