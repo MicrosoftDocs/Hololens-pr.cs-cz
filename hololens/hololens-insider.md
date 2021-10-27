@@ -1,6 +1,6 @@
 ---
-title: Insider Preview pro Microsoft HoloLens
-description: Naučte se, jak začít s buildy Insider, a poskytněte vám užitečnou zpětnou vazbu k naší další aktualizaci operačního systému HoloLens.
+title: Insider preview pro Microsoft HoloLens
+description: Zjistěte, jak začít se sestaveními Insider a poskytnout cennou zpětnou vazbu pro naši další velkou aktualizaci operačního systému pro HoloLens.
 ms.prod: hololens
 ms.sitesec: library
 author: evmill
@@ -11,104 +11,123 @@ ms.custom:
 - CSSTroubleshooting
 ms.localizationpriority: medium
 audience: ITPro
-ms.date: 10/12/2021
+ms.date: 10/19/2021
 ms.reviewer: ''
 manager: ranjibb
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 080eb5949bc80d1ce922d57f099c375668f5633f
-ms.sourcegitcommit: 9574db58592b7302bd2386bdf7fda3f6721de818
+ms.openlocfilehash: 382c979138068ab1d9682ee4e84831accc9e4553
+ms.sourcegitcommit: 73a1555fb8b84f3d20c480282c648d8d800a6c98
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "129924354"
+ms.lasthandoff: 10/26/2021
+ms.locfileid: "130351639"
 ---
-# <a name="insider-preview-for-microsoft-hololens"></a>Insider Preview pro Microsoft HoloLens
+# <a name="insider-preview-for-microsoft-hololens"></a>Insider preview pro Microsoft HoloLens
 
-Vítejte v nejnovějších buildech Insider Preview pro HoloLens! Je jednoduché začít a poskytnout cennou zpětnou [vazbu k naší](hololens-insider.md#start-receiving-insider-builds) další hlavní aktualizaci operačního systému pro HoloLens.
+Vítá vás nejnovější sestavení Insider Preview pro HoloLens! Začít a poskytnout cennou [zpětnou vazbu](hololens-insider.md#start-receiving-insider-builds) pro naši další velkou aktualizaci operačního systému pro HoloLens.
 
-## <a name="windows-insider-release-notes"></a>Windows Poznámky k verzi programu Insider
+## <a name="windows-insider-release-notes"></a>Windows Poznámky k verzi Insider
 
-Jsme si zajímáme, že všechny nejnovější funkce programu Insider zmizely jako veřejné! Pokud se o těchto informací chcete seznámit, přečtěte si [stránku poznámky k verzi](hololens-release-notes.md) .
+Co je nového a na horizontu pro HoloLens? Podívejte se na tyto nové aktualizace, které HoloLens!
 
-## <a name="start-receiving-insider-builds"></a>Zahájit přijímání buildů Insider
+### <a name="colorblind-mode"></a>Colorblind mode (Barevný režim)
+
+Přidání v buildu Insider 20348.1463
+
+Barevně podtržený režim je užitečnou funkcí, díky které HoloLens přístupnější. Nový režim barví se nachází v aplikaci Nastavení v části Nastavení  ->  **Usnadnění přístupu**  ->  **Filtry barev**. K dispozici je několik nových filtrů. Tady je příklad některých dostupných filtrů.
+
+| Vypnout | Stupně šedi | Tritanopia |
+|-----|-----------|------------|
+| ![Vypnutý filtr barev](images/colorblind-off.png)   | ![Barevné filtry ve šedě](images/colorblind-greyscale.png)         | ![Tritanopia filtru barev](images/colorblind-tritanopia.png)          |
+
+### <a name="fixes-and-improvements"></a>Opravy a vylepšení
+
+- Byl opraven známý problém, kdy se při každém [18%](hololens-troubleshooting.md#every-time-the-power-goes-to-18-percent-the-device-suddenly-shuts-down-automatically)výkonu zařízení náhle automaticky vypnulo .
+- Vylepšení přesunu režimu platformy při zjišťování směru dolů
+- Opravili jsme problém s dialogy aktualizací.
+- Aktualizovaná doručená Microsoft Edge verze prohlížeče.
+- Opravili jsme problém, kdy přepínání volitelných diagnostických dat nezachovávalo zvolené nastavení na stránce nastavení telemetrie po restartování.
+- Opravili jsme problém, kdy se nerozpoznaly kódy QR, když byly otáčíny v úhlu 45 stupňů vzhledem k zařízení.
+
+## <a name="start-receiving-insider-builds"></a>Zahájení přijímání sestavení Insider
 
 > [!NOTE]
-> Pokud jste se neaktualizovali v poslední době, restartujte prosím své zařízení, aby se aktualizovaly stav, a získejte nejnovější Build.
+> Pokud jste to ještě neudělali, restartujte zařízení, abyste aktualizovali stav a získejte nejnovější build.
 >
-> - Hlasový příkaz "restartovat zařízení" dobře funguje.
-> - můžete také zvolit tlačítko restartovat v programu Nastavení/Windows Insider.
+> - Hlasový příkaz Restartovat zařízení funguje dobře.
+> - Můžete také zvolit tlačítko pro restartování v Nastavení/Windows Insider Program.
 >
-> Na back-endu jsme narazili na chybu, která se vám mohla vyskytnout, a získáte zpět sledování.
+> Na back-endu jsme měli chybu, se kterou jste se mohli setkat, a tím se vrátíte na cestu.
 
-na zařízení HoloLens 2 přejít do **Nastavení**  >  **Update & Security**  >  **Windows Program Insider** a vyberte začínáme . propojte účet, který jste použili k registraci jako Windows Insider.
-
-> [!NOTE]
-> Aby bylo možné zaregistrovat zařízení v buildech Insider, budete muset povolit volitelnou telemetrii. pokud jste to ještě neudělali, otevřete aplikaci Nastavení a vyberte možnost diagnostika **osobních údajů**  ->  **& zpětná vazba** a pak vyberte **volitelná diagnostická data**.
-
-Windows insider se teď přesouvá na kanály. **Rychlý** prstenec se stane **kanálem pro vývoj**, **pomalé** vyzvánění se stane **kanálem beta verze** a prstenec **verze Preview** se stane **kanálem verze Preview**. Toto mapování vypadá takto:
-
-![Windows Vysvětlení kanálů Insider.](images/WindowsInsiderChannels.png)
-
-další informace najdete v tématu [představení Windowsch kanálů Insider](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) na Windows blogů.
-pak vyberte možnost **aktivní vývoj Windows**, zvolte, jestli chcete dostávat buildy pro **vývoj** nebo **Beta kanál** , a podívejte se na licenční program.
-Kliknutím na tlačítko **potvrdit > restartovat nyní** dokončete instalaci. po restartování zařízení přejít na **Nastavení > Update & Security > vyhledat aktualizace** a získat nejnovější build.
-
-### <a name="update-error-0x80070490-work-around"></a>Chyba aktualizace 0x80070490 práce
-
-Pokud narazíte na chybu aktualizace 0x80070490 při aktualizaci na vývojovém nebo beta kanálu, zkuste následující krátkodobé řešení. Zahrnuje přesun kanálu služby Insider, aktualizaci a přesun kanálu Insider zpátky.
-
-#### <a name="stage-one---release-preview"></a>Fáze verze Preview 1
-
-1. Nastavení, Update & Security Windows programu Insider vyberte **kanál verze preview**.
-
-2. Nastavení, aktualizujte & zabezpečení, web Windows Update vyhledejte **aktualizace**. Po aktualizaci pokračujte do fáze 2.
-
-#### <a name="stage-two---dev-channel"></a>Fáze – dva vývojové kanály
-
-1. Nastavení, aktualizovat & zabezpečení Windows programu Insider vyberte možnost **vývojového kanálu**.
-
-2. Nastavení, aktualizujte & zabezpečení, web Windows Update vyhledejte **aktualizace**.
-
-## <a name="ffu-download-and-flash-directions"></a>FFU stažení a pokyny pro Flash
-
-Pokud chcete otestovat ffuem podepsaným letem, musíte nejdřív zařízení odemknout a před zavedením ffuého letu podepsaného.
-
-1. V počítači:
-    1. Stáhněte si FFU do počítače z [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
-
-    1. Nainstalujte oblouk (Průvodce pokročilým obnovením) z Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
-
-1. při HoloLensovém odemknutí: otevřít **Nastavení**  >  **aktualizace & zabezpečení**  >  **Windows programu Insider** , zaregistrujte se a restartujte zařízení.
-
-1. FFU Flash – nyní můžete FFU podepsaný pro let pomocí ARC.
-
-### <a name="provide-feedback-and-report-issues"></a>Poskytněte zpětnou vazbu a nahlásit problémy
-
-k poskytnutí zpětné vazby a hlášení problémů použijte prosím [aplikaci centra Feedback](hololens-feedback.md) v HoloLens. Pomocí centra Feedback zajišťujeme, aby byly k dispozici všechny potřebné diagnostické informace, které nám pomohly rychle ladit a řešit potíže.  problémy s čínskou a japonskou verzí HoloLens by měly být hlášeny stejným způsobem.
+Na zařízení HoloLens 2 přejděte na **Nastavení** Update & Security Windows Insider Program a  >    >   vyberte **Začínáme.** Propojte účet, který jste použili k registraci, Windows Insider.
 
 > [!NOTE]
-> Nezapomeňte přijmout výzvu s dotazem, jestli chcete, aby měl centrum zpětné vazby přístup ke složce dokumentů (po zobrazení výzvy vyberte **Ano** ).
+> Pokud chcete své zařízení zaregistrovat v buildech Insider, budete muset povolit volitelnou telemetrii. Pokud jste to ještě neudělali, otevřete aplikaci Nastavení, vyberte Diagnostika ochrany osobních údajů & názory a pak   ->   vyberte **Volitelná diagnostická data**.
+
+Windows insider se teď přesouvá na Kanály. Kanál **Fast** se stane **vývojový** kanál, kanál **Slow** se stane **kanálem Beta kanál** a kanál release **preview** se stane **kanálem Release Preview**. Toto mapování vypadá takhle:
+
+![Windows Vysvětlení kanálů insider.](images/WindowsInsiderChannels.png)
+
+Další informace najdete v článku [Představení kanálů Windows Insider na](https://blogs.windows.com/windowsexperience/2020/06/15/introducing-windows-insider-channels) Windows blogech.
+Pak vyberte **Aktivní vývoj Windows,** zvolte, jestli chcete dostávat Dev **Channel** nebo Beta kanál **buildy,** a zkontrolujte podmínky programu.
+Dokončete **> Potvrdit a** restartovat. Po restartování zařízení přejděte na stránku Nastavení > **Update & Security >** Vyhledejte aktualizace a získejte nejnovější sestavení.
+
+### <a name="update-error-0x80070490-work-around"></a>Aktualizace 0x80070490 obchádky
+
+Pokud při aktualizaci na kanálu pro 0x80070490 nebo beta verzi dojde k chybě aktualizace, vyzkoušejte následující krátkodobé řešení. Zahrnuje přesunutí kanálu insider, vyzvednutí aktualizace a pak přesunutí kanálu Insider zpět.
+
+#### <a name="stage-one---release-preview"></a>Fáze 1 – Verze Preview
+
+1. Nastavení, & Security a Windows Insider Program vyberte Kanál Release **Preview.**
+
+2. Nastavení, aktualizace &, aktualizace Windows, **kontrola aktualizací**. Po aktualizaci pokračujte fází 2.
+
+#### <a name="stage-two---dev-channel"></a>Fáze 2 – Vývojový kanál
+
+1. Nastavení, & Security a Windows Insider Program vyberte **Dev Channel**.
+
+2. Nastavení, aktualizace &, aktualizace Windows, **kontrola aktualizací**.
+
+## <a name="ffu-download-and-flash-directions"></a>Pokyny ke stažení ffu a flash
+
+Pokud chcete testovat pomocí ffu podepsaného letem, musíte nejprve letět s odemknutým zařízením před flash flash diskem ffu.
+
+1. Na počítači:
+    1. Stáhněte si ffu do počítače z [https://aka.ms/hololenspreviewdownload](https://aka.ms/hololenspreviewdownload) .
+
+    1. Nainstalujte ARC (Advanced Recovery Companion) z Microsoft Store: [https://www.microsoft.com/store/productId/9P74Z35SFRS8](https://www.microsoft.com/store/productId/9P74Z35SFRS8) .
+
+1. Na HoloLens – Letové odemčení: Otevřete **Nastavení** Update & Security Windows Insider Program a pak se zaregistrujte a  >    >   restartujte zařízení.
+
+1. Flash FFU – Nyní můžete flash diskem podepsaného letem FFU použít ARC.
+
+### <a name="provide-feedback-and-report-issues"></a>Poskytnutí zpětné vazby a hlášení problémů
+
+Pokud chcete [poskytnout zpětnou vazbu a Centrum Feedback problémy,](hololens-feedback.md) použijte aplikaci HoloLens na svém počítači. Pomocí Centrum Feedback zajistíte, že se zahrnou všechny potřebné diagnostické informace, které našim technikům pomůžou rychle ladit a vyřešit problém.  Problémy s čínštinou a japonštinou HoloLens by měly být hlášeny stejným způsobem.
+
+> [!NOTE]
+> Nezapomeňte přijmout výzvu s dotazem, jestli chcete Centrum Feedback ke složce  Dokumenty (po zobrazení výzvy vyberte Ano).
 
 ## <a name="note-for-developers"></a>Poznámka pro vývojáře
 
-Jste připraveni a doporučujeme vyzkoušet vývoj aplikací pomocí buildů Insider HoloLens.  pokud chcete začít, podívejte se na [dokumentaci pro vývojáře HoloLens](https://developer.microsoft.com/windows/mixed-reality/development) . Stejné pokyny fungují s buildy Insider HoloLens.  můžete použít stejná sestavení Unity a Visual Studio, která už používáte pro HoloLens vývoj.
+Vítá vás a doporučujeme, abyste si zkusili vyvíjet aplikace pomocí buildů insider HoloLens.  Pokud chcete [začít, HoloLens si prohlédněte dokumentaci pro](https://developer.microsoft.com/windows/mixed-reality/development) vývojáře. Stejné pokyny fungují i se sestaveními insider HoloLens.  Můžete použít stejná sestavení Unity a Visual Studio, které už používáte pro HoloLens vývoj.
 
-## <a name="stop-receiving-insider-builds"></a>Zastavit příjem buildů Insider
+## <a name="stop-receiving-insider-builds"></a>Zastavení přijímání sestavení Insider
 
-pokud už nechcete dostávat buildy Insider Windows holografické, můžete se odhlásit, když HoloLens spouští výrobní sestavení, nebo můžete [zařízení obnovit](hololens-recovery.md) pomocí průvodce pokročilým obnovením a obnovit zařízení do verze programu Windows holografické v jiné verzi než Insider.
+Pokud už nechcete dostávat buildy Insider systému Windows Holographic, můžete to vyjádřit výslovně, když HoloLens [](hololens-recovery.md) používá produkční build, nebo můžete obnovit zařízení pomocí doplňku Advanced Recovery Companion a obnovit zařízení na verzi Windows Holographic, která není z programu Insider.
 
 > [!CAUTION]
-> Došlo k známému problému, při kterém se uživatelé, kteří zruší registraci v buildu Insider Preview po ruční instalaci nového buildu Preview, zobrazí modrá obrazovka. Potom musí zařízení ručně obnovit. Podrobné informace o tom, jestli by se to ovlivnilo, najdete v tomto [známém problému](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build).
+> Existuje známý problém, kdy se uživatelům, kteří po ruční přeinstalaci nové verze Preview buildu ruší registraci ve verzi Insider Preview, zobrazí modrá obrazovka. Potom musí zařízení obnovit ručně. Úplné podrobnosti o tom, jestli by vás to ovlivnilo nebo ne, najdete v části Další informace o tomto [známém problému.](hololens-troubleshooting.md#blue-screen-after-unenrolling-from-insider-preview-on-a-device-flashed-with-an-insider-build)
 
-chcete-li ověřit, zda HoloLens spouští výrobní sestavení:
+Pokud chcete ověřit, HoloLens vaše aplikace používá produkční sestavení:
 
-1. přejít na **Nastavení > systému > o** a najít číslo sestavení.
+1. Přejděte na **Nastavení > System > About** a vyhledejte číslo sestavení.
 
-1. [Přečtěte si poznámky k verzi pro výrobní čísla buildu](hololens-release-notes.md).
+1. [Podívejte se na poznámky k verzi pro čísla produkčních buildů](hololens-release-notes.md).
 
-Odhlášení od buildů Insider:
+Odhlášení sestavení Insider:
 
-1. na HoloLens, na kterém běží výrobní sestavení, navštivte **Nastavení > Update & Security > Windows Insider** a vyberte zastavit buildy **Insider**.
+1. Na HoloLens produkčním sestavení přejděte na Nastavení > **Update & Security > Windows Insider Program** a vyberte Zastavit sestavení **Insider.**
 
-1. Pokud chcete zařízení odhlásit, postupujte podle pokynů.
+1. Postupujte podle pokynů a odhlásit zařízení.
